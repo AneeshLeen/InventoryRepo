@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5d332450ec48413f8966e6ac82a9ab83" Name="Diagram1">
+        <EntityTypeShape EntityType="DEWSRMModel.Bank" Width="1.5" PointX="11.75" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DEWSRMModel.BankTransaction" Width="1.5" PointX="14" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DEWSRMModel.Branch" Width="1.5" PointX="5.75" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DEWSRMModel.CardType" Width="1.5" PointX="14.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DEWSRMModel.CardTypeSetup" Width="1.5" PointX="17" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DEWSRMModel.CashCollection" Width="1.5" PointX="14" PointY="22.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DEWSRMModel.Category" Width="1.5" PointX="0.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DEWSRMModel.Color" Width="1.5" PointX="9" PointY="31.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DEWSRMModel.Company" Width="1.5" PointX="0.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DEWSRMModel.CreditSaleProduct" Width="1.5" PointX="5.25" PointY="20.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DEWSRMModel.CreditSale" Width="1.5" PointX="3" PointY="29.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DEWSRMModel.CreditSalesDetail" Width="1.5" PointX="5.25" PointY="49.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DEWSRMModel.Customer" Width="1.5" PointX="0.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DEWSRMModel.DamageProduct" Width="1.5" PointX="5.25" PointY="27.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DEWSRMModel.Designation" Width="1.5" PointX="0.75" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DEWSRMModel.Employee" Width="1.5" PointX="3" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DEWSRMModel.EmpSalary" Width="1.5" PointX="5.25" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DEWSRMModel.Expenditure" Width="1.5" PointX="16" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DEWSRMModel.ExpenseItem" Width="1.5" PointX="13.75" PointY="15.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DEWSRMModel.MenuPermission" Width="1.5" PointX="9" PointY="36.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DEWSRMModel.Menu" Width="1.5" PointX="6.75" PointY="45.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DEWSRMModel.Model" Width="1.5" PointX="0.75" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DEWSRMModel.MonthlyStock" Width="1.5" PointX="5.25" PointY="31.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DEWSRMModel.POProductDetail" Width="1.5" PointX="8.25" PointY="23.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DEWSRMModel.POrderDetail" Width="1.5" PointX="8.25" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DEWSRMModel.POrder" Width="1.5" PointX="6" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DEWSRMModel.PrevBalance" Width="1.5" PointX="2.75" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DEWSRMModel.Product" Width="1.5" PointX="3" PointY="20.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DEWSRMModel.ReturnDetail" Width="1.5" PointX="8.25" PointY="27.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DEWSRMModel.Return" Width="1.5" PointX="6" PointY="39.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DEWSRMModel.Role" Width="1.5" PointX="6.75" PointY="36.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DEWSRMModel.ShareInvestmentHead" Width="1.5" PointX="11.75" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DEWSRMModel.ShareInvestment" Width="1.5" PointX="14" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DEWSRMModel.SOrderDetail" Width="1.5" PointX="11.25" PointY="21.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DEWSRMModel.SOrder" Width="1.5" PointX="9" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DEWSRMModel.StockDetail" Width="1.5" PointX="11.25" PointY="16.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DEWSRMModel.Stock" Width="1.5" PointX="11.25" PointY="28.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DEWSRMModel.Supplier" Width="1.5" PointX="3.75" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DEWSRMModel.SystemInformation" Width="1.5" PointX="7.75" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DEWSRMModel.UserRole" Width="1.5" PointX="9" PointY="40.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DEWSRMModel.User" Width="1.5" PointX="3.75" PointY="39.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DEWSRMModel.vw_CustomerLedger" Width="1.5" PointX="0.75" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DEWSRMModel.vw_StockCheck" Width="1.5" PointX="0.75" PointY="16.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DEWSRMModel.vw_SupplierLedger" Width="1.5" PointX="16.75" PointY="8.125" IsExpanded="true" />
+        <AssociationConnector Association="DEWSRMModel.FK_BankTransaction_Banks" ManuallyRouted="false" />
+        <AssociationConnector Association="DEWSRMModel.FK_CardTypeSetups_Banks" ManuallyRouted="false" />
+        <AssociationConnector Association="DEWSRMModel.FK_Branches_Branches" ManuallyRouted="false" />
+        <AssociationConnector Association="DEWSRMModel.FK_CardTypeSetups_CardTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="DEWSRMModel.FK_CashCollections_Customers" ManuallyRouted="false" />
+        <AssociationConnector Association="DEWSRMModel.FK_CashCollections_Suppliers" ManuallyRouted="false" />
+        <AssociationConnector Association="DEWSRMModel.FK_Products_Categorys" ManuallyRouted="false" />
+        <AssociationConnector Association="DEWSRMModel.FK_CreditSaleProducts_ColorInfos" ManuallyRouted="false" />
+        <AssociationConnector Association="DEWSRMModel.FK_POProductDetails_Colors" ManuallyRouted="false" />
+        <AssociationConnector Association="DEWSRMModel.FK_POrderDetails_ColorInfos" ManuallyRouted="false" />
+        <AssociationConnector Association="DEWSRMModel.FK_SOrderDetails_ColorInfos" ManuallyRouted="false" />
+        <AssociationConnector Association="DEWSRMModel.FK_Stocks_ColorInfos" ManuallyRouted="false" />
+        <AssociationConnector Association="DEWSRMModel.FK_Products_Companies" ManuallyRouted="false" />
+        <AssociationConnector Association="DEWSRMModel.FK_CreditSaleProducts_CreditSales" ManuallyRouted="false" />
+        <AssociationConnector Association="DEWSRMModel.FK_CreditSaleProducts_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="DEWSRMModel.FK_CreditSaleProducts_StockDetails" ManuallyRouted="false" />
+        <AssociationConnector Association="DEWSRMModel.FK_CreditSales_Customers" ManuallyRouted="false" />
+        <AssociationConnector Association="DEWSRMModel.FK_CreditSalesDetails_CreditSales" ManuallyRouted="false" />
+        <AssociationConnector Association="DEWSRMModel.FK_Returns_Customers" ManuallyRouted="false" />
+        <AssociationConnector Association="DEWSRMModel.FK_SOrders_Customers" ManuallyRouted="false" />
+        <AssociationConnector Association="DEWSRMModel.FK_DamageProducts_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="DEWSRMModel.FK_Employees_Designations" ManuallyRouted="false" />
+        <AssociationConnector Association="DEWSRMModel.FK_EmpSalaries_Employees" ManuallyRouted="false" />
+        <AssociationConnector Association="DEWSRMModel.FK_Expenditures_ExpenseItems" ManuallyRouted="false" />
+        <AssociationConnector Association="DEWSRMModel.FK_MenuPermissions_Menus" ManuallyRouted="false" />
+        <AssociationConnector Association="DEWSRMModel.FK_MenuPermissions_Roles" ManuallyRouted="false" />
+        <AssociationConnector Association="DEWSRMModel.FK_MonthlyStocks_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="DEWSRMModel.FK_POProductDetails_POrderDetails" ManuallyRouted="false" />
+        <AssociationConnector Association="DEWSRMModel.FK_POProductDetails_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="DEWSRMModel.FK_POrderDetails_POrders" ManuallyRouted="false" />
+        <AssociationConnector Association="DEWSRMModel.FK_POrderDetails_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="DEWSRMModel.FK_POrders_Suppliers" ManuallyRouted="false" />
+        <AssociationConnector Association="DEWSRMModel.FK_ReturnDetails_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="DEWSRMModel.FK_SOrderDetails_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="DEWSRMModel.FK_StockDetails_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="DEWSRMModel.FK_Stocks_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="DEWSRMModel.FK_ReturnDetails_Returns" ManuallyRouted="false" />
+        <AssociationConnector Association="DEWSRMModel.FK_Returns_Suppliers" ManuallyRouted="false" />
+        <AssociationConnector Association="DEWSRMModel.FK_Returns_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="DEWSRMModel.FK_UserRoles_Roles" ManuallyRouted="false" />
+        <AssociationConnector Association="DEWSRMModel.FK_ShareInvestment_ShareInvestmentHeads" ManuallyRouted="false" />
+        <AssociationConnector Association="DEWSRMModel.FK_SOrderDetails_SOrders" ManuallyRouted="false" />
+        <AssociationConnector Association="DEWSRMModel.FK_SOrderDetails_StockDetails" ManuallyRouted="false" />
+        <AssociationConnector Association="DEWSRMModel.FK_StockDetails_Stocks" ManuallyRouted="false" />
+        <AssociationConnector Association="DEWSRMModel.FK_UserRoles_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="DEWSRMModel.FK_StockDetails_POrderDetails" />
+        <AssociationConnector Association="DEWSRMModel.FK_SOrders_Users" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

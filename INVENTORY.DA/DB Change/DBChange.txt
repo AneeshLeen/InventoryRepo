@@ -1,0 +1,242 @@
+------------------------------------------Date:13 Jan 19-----------------------------------------------------
+
+
+CREATE TABLE [dbo].[CardTypes](
+	[CardTypeID] [int] IDENTITY(1,1) NOT NULL,
+	[Code] [varchar](50) NOT NULL,
+	[Description] [varchar](550) NOT NULL,
+	[Status] [int] NOT NULL,
+	[Sequence] [int] NOT NULL,
+ CONSTRAINT [PK_CardTypes] PRIMARY KEY CLUSTERED 
+(
+	[CardTypeID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+ALTER TABLE [dbo].[CardTypes] ADD  CONSTRAINT [DF_CardTypes_Status]  DEFAULT ((0)) FOR [Status]
+GO
+
+ALTER TABLE [dbo].[CardTypes] ADD  CONSTRAINT [DF_CardTypes_Sequence]  DEFAULT ((0)) FOR [Sequence]
+GO
+
+
+------------------------------------------------------------------------------------------------------------
+
+
+CREATE TABLE [dbo].[CardTypeSetups](
+	[CardTypeSetupID] [int] NOT NULL,
+	[Code] [varchar](50) NOT NULL,
+	[BankID] [int] NOT NULL,
+	[CardTypeID] [int] NOT NULL,
+	[Percentage] [int] NOT NULL,
+ CONSTRAINT [PK_CardTypeSetups] PRIMARY KEY CLUSTERED 
+(
+	[CardTypeSetupID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+ALTER TABLE [dbo].[CardTypeSetups] ADD  CONSTRAINT [DF_CardTypeSetups_Percentage]  DEFAULT ((0)) FOR [Percentage]
+GO
+
+ALTER TABLE [dbo].[CardTypeSetups]  WITH CHECK ADD  CONSTRAINT [FK_CardTypeSetups_Banks] FOREIGN KEY([BankID])
+REFERENCES [dbo].[Banks] ([BankID])
+GO
+
+ALTER TABLE [dbo].[CardTypeSetups] CHECK CONSTRAINT [FK_CardTypeSetups_Banks]
+GO
+
+ALTER TABLE [dbo].[CardTypeSetups]  WITH CHECK ADD  CONSTRAINT [FK_CardTypeSetups_CardTypes] FOREIGN KEY([CardTypeID])
+REFERENCES [dbo].[CardTypes] ([CardTypeID])
+GO
+
+ALTER TABLE [dbo].[CardTypeSetups] CHECK CONSTRAINT [FK_CardTypeSetups_CardTypes]
+GO
+
+
+
+
+
+
+------------------------------------For Invstment------------------------------------------------------------
+
+
+drop table [ShareInvestments]
+drop table [ShareInvestmentHeads]
+
+CREATE TABLE [dbo].[ShareInvestmentHeads](
+	[SIHID] [int] IDENTITY(1,1) NOT NULL,
+	[Code] [varchar](250) NOT NULL,
+	[Name] [varchar](250) NOT NULL,
+	[ParentId] [int] NOT NULL,
+ CONSTRAINT [PK_InvestmentHeads] PRIMARY KEY CLUSTERED 
+(
+	[SIHID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+---------------------------------------------------------------------------------------------------------------------
+
+
+CREATE TABLE [dbo].[ShareInvestments](
+	[SIID] [int] NOT NULL,
+	[EntryDate] [datetime] NOT NULL,
+	[Purpose] [varchar](250) NOT NULL,
+	[Amount] [decimal](18, 2) NOT NULL,
+	[SIHID] [int] NOT NULL,
+	[TransactionType] [int] NOT NULL,
+	[CreatedBy] [int] NOT NULL,
+	[CreateDate] [datetime] NOT NULL,
+	[ModifiedBy] [int] NULL,
+	[ModifiedDate] [datetime] NULL,
+ CONSTRAINT [PK_ShareInvestment] PRIMARY KEY CLUSTERED 
+(
+	[SIID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+ALTER TABLE [dbo].[ShareInvestments] ADD  CONSTRAINT [DF_ShareInvestment_InvestmentAmt]  DEFAULT ((0)) FOR [Amount]
+GO
+
+ALTER TABLE [dbo].[ShareInvestments] ADD  CONSTRAINT [DF_ShareInvestment_InvestmentType]  DEFAULT ((0)) FOR [SIHID]
+GO
+
+ALTER TABLE [dbo].[ShareInvestments]  WITH CHECK ADD  CONSTRAINT [FK_ShareInvestment_ShareInvestmentHeads] FOREIGN KEY([SIHID])
+REFERENCES [dbo].[ShareInvestmentHeads] ([SIHID])
+GO
+
+ALTER TABLE [dbo].[ShareInvestments] CHECK CONSTRAINT [FK_ShareInvestment_ShareInvestmentHeads]
+GO
+
+
+----------------------------------------------------------------------------------------------------------
+
+DELETE FROM ShareInvestmentHeads;
+DBCC CHECKIDENT ('ShareInvestmentHeads', RESEED, 0);
+
+
+INSERT INTO dbo.ShareInvestmentHeads (Code, Name, ParentId)
+VALUES ('00001', 'Asset', 0)
+GO
+
+INSERT INTO dbo.ShareInvestmentHeads (Code, Name, ParentId)
+VALUES ('00002', 'Current', 1)
+GO
+
+INSERT INTO dbo.ShareInvestmentHeads (Code, Name, ParentId)
+VALUES ('00003', 'Fixed', 1)
+GO
+
+INSERT INTO dbo.ShareInvestmentHeads (Code, Name, ParentId)
+VALUES ('00004', 'Liability', 0)
+GO
+
+------------------------------------------------------------------------------------------------------------------
+-------------------------------------------For Purchase Return Purpose--------------------------------------------
+
+drop table ReturnDetails
+drop table [Returns]
+
+
+CREATE TABLE [dbo].[Returns](
+	[ReturnID] [int] NOT NULL,
+	[InvoiceNo] [varchar](150) NOT NULL,
+	[ReturnDate] [datetime] NOT NULL,
+	[GrandTotal] [decimal](18, 2) NOT NULL,
+	[CustomerID] [int] NULL,
+	[SupplierID] [int] NULL,
+	[PaidAmount] [decimal](18, 2) NOT NULL,
+	[TDAmt] [decimal](18, 2) NULL,
+	[CreatedBy] [int] NOT NULL,
+	[CreatedDate] [datetime] NOT NULL,
+	[ModifiedBy] [int] NULL,
+	[ModifiedDate] [datetime] NULL,
+ CONSTRAINT [PK_Returns] PRIMARY KEY CLUSTERED 
+(
+	[ReturnID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+ALTER TABLE [dbo].[Returns] ADD  CONSTRAINT [DF_Returns_GrandTotal]  DEFAULT ((0)) FOR [GrandTotal]
+GO
+
+ALTER TABLE [dbo].[Returns]  WITH CHECK ADD  CONSTRAINT [FK_Returns_Customers] FOREIGN KEY([CustomerID])
+REFERENCES [dbo].[Customers] ([CustomerID])
+GO
+
+ALTER TABLE [dbo].[Returns] CHECK CONSTRAINT [FK_Returns_Customers]
+GO
+
+ALTER TABLE [dbo].[Returns]  WITH CHECK ADD  CONSTRAINT [FK_Returns_Suppliers] FOREIGN KEY([SupplierID])
+REFERENCES [dbo].[Suppliers] ([SupplierID])
+GO
+
+ALTER TABLE [dbo].[Returns] CHECK CONSTRAINT [FK_Returns_Suppliers]
+GO
+
+ALTER TABLE [dbo].[Returns]  WITH CHECK ADD  CONSTRAINT [FK_Returns_Users] FOREIGN KEY([CreatedBy])
+REFERENCES [dbo].[Users] ([UserID])
+GO
+
+ALTER TABLE [dbo].[Returns] CHECK CONSTRAINT [FK_Returns_Users]
+GO
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+CREATE TABLE [dbo].[ReturnDetails](
+	[ReturnDetailsID] [int] NOT NULL,
+	[ReturnID] [int] NOT NULL,
+	[ProductID] [int] NOT NULL,
+	[Quantity] [decimal](18, 0) NOT NULL,
+	[UnitPrice] [decimal](18, 2) NOT NULL,
+	[UTAmount] [decimal](18, 2) NOT NULL,
+	[SDetailID] [int] NOT NULL,
+ CONSTRAINT [PK_ReturnDetails] PRIMARY KEY CLUSTERED 
+(
+	[ReturnDetailsID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+ALTER TABLE [dbo].[ReturnDetails]  WITH CHECK ADD  CONSTRAINT [FK_ReturnDetails_Products] FOREIGN KEY([ProductID])
+REFERENCES [dbo].[Products] ([ProductID])
+GO
+
+ALTER TABLE [dbo].[ReturnDetails] CHECK CONSTRAINT [FK_ReturnDetails_Products]
+GO
+
+ALTER TABLE [dbo].[ReturnDetails]  WITH CHECK ADD  CONSTRAINT [FK_ReturnDetails_Returns] FOREIGN KEY([ReturnID])
+REFERENCES [dbo].[Returns] ([ReturnID])
+GO
+
+ALTER TABLE [dbo].[ReturnDetails] CHECK CONSTRAINT [FK_ReturnDetails_Returns]
+GO
+
+--------------------------------------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,1884 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DEWSRMModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Bank">
+    <Key>
+      <PropertyRef Name="BankID" />
+    </Key>
+    <Property Name="BankID" Type="Int32" Nullable="false" />
+    <Property Name="Code" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BankName" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AccountNo" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BranchName" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="OpeningBalance" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="TotalAmount" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="AccountName" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="BankTransactions" Relationship="Self.FK_BankTransaction_Banks" FromRole="Banks" ToRole="BankTransactions" />
+    <NavigationProperty Name="CardTypeSetups" Relationship="Self.FK_CardTypeSetups_Banks" FromRole="Banks" ToRole="CardTypeSetups" />
+  </EntityType>
+  <EntityType Name="BankTransaction">
+    <Key>
+      <PropertyRef Name="BankTranID" />
+    </Key>
+    <Property Name="BankTranID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TranDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="TransactionNo" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TransactionType" Type="Int32" Nullable="false" />
+    <Property Name="Amount" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="BankID" Type="Int32" Nullable="false" />
+    <Property Name="CustomerID" Type="Int32" />
+    <Property Name="SupplierID" Type="Int32" />
+    <Property Name="AnotherBankID" Type="Int32" />
+    <Property Name="ChecqueNo" Type="String" MaxLength="250" FixedLength="true" Unicode="true" />
+    <Property Name="Remarks" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="CusDealerID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Bank" Relationship="Self.FK_BankTransaction_Banks" FromRole="BankTransactions" ToRole="Banks" />
+  </EntityType>
+  <EntityType Name="Branch">
+    <Key>
+      <PropertyRef Name="BranchID" />
+    </Key>
+    <Property Name="BranchID" Type="Int32" Nullable="false" />
+    <Property Name="Code" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BranchName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Address" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="AccountNo" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="OpeningBalance" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="TotalAmount" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="BankID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Branches1" Relationship="Self.FK_Branches_Branches" FromRole="Branches" ToRole="Branches1" />
+    <NavigationProperty Name="Branch1" Relationship="Self.FK_Branches_Branches" FromRole="Branches1" ToRole="Branches" />
+  </EntityType>
+  <EntityType Name="CardType">
+    <Key>
+      <PropertyRef Name="CardTypeID" />
+    </Key>
+    <Property Name="CardTypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="550" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Status" Type="Int32" Nullable="false" />
+    <Property Name="Sequence" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="CardTypeSetups" Relationship="Self.FK_CardTypeSetups_CardTypes" FromRole="CardTypes" ToRole="CardTypeSetups" />
+  </EntityType>
+  <EntityType Name="CardTypeSetup">
+    <Key>
+      <PropertyRef Name="CardTypeSetupID" />
+    </Key>
+    <Property Name="CardTypeSetupID" Type="Int32" Nullable="false" />
+    <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BankID" Type="Int32" Nullable="false" />
+    <Property Name="CardTypeID" Type="Int32" Nullable="false" />
+    <Property Name="Percentage" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <NavigationProperty Name="Bank" Relationship="Self.FK_CardTypeSetups_Banks" FromRole="CardTypeSetups" ToRole="Banks" />
+    <NavigationProperty Name="CardType" Relationship="Self.FK_CardTypeSetups_CardTypes" FromRole="CardTypeSetups" ToRole="CardTypes" />
+  </EntityType>
+  <EntityType Name="CashCollection">
+    <Key>
+      <PropertyRef Name="CashCollectionID" />
+    </Key>
+    <Property Name="CashCollectionID" Type="Int32" Nullable="false" />
+    <Property Name="PaymentType" Type="Int32" />
+    <Property Name="BankName" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="BranchName" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="EntryDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Amount" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="AccountNo" Type="String" MaxLength="350" FixedLength="false" Unicode="false" />
+    <Property Name="MBAccountNo" Type="String" MaxLength="350" FixedLength="false" Unicode="false" />
+    <Property Name="BKashNo" Type="String" MaxLength="350" FixedLength="false" Unicode="false" />
+    <Property Name="TransactionType" Type="Int32" />
+    <Property Name="CustomerID" Type="Int32" />
+    <Property Name="CompanyID" Type="Int32" />
+    <Property Name="CheckNo" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="IssueDate" Type="DateTime" Precision="3" />
+    <Property Name="AdjustAmt" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="ReceiptNo" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BalanceDue" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="RemindDate" Type="DateTime" Precision="0" />
+    <Property Name="RemindPeriod" Type="Int32" Nullable="false" />
+    <Property Name="RemindStatus" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Customer" Relationship="Self.FK_CashCollections_Customers" FromRole="CashCollections" ToRole="Customers" />
+    <NavigationProperty Name="Supplier" Relationship="Self.FK_CashCollections_Suppliers" FromRole="CashCollections" ToRole="Suppliers" />
+  </EntityType>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="CategoryID" />
+    </Key>
+    <Property Name="CategoryID" Type="Int32" Nullable="false" />
+    <Property Name="Code" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Products" Relationship="Self.FK_Products_Categorys" FromRole="Categorys" ToRole="Products" />
+    <Property Name="CategoryType" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Age" Type="String" Nullable="false" MaxLength="5" Unicode="false" FixedLength="false" />
+    <Property Name="BackColor" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ForeColor" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Inactive" Type="Boolean" Nullable="false" />
+    <Property Name="IsVat" Type="Boolean" Nullable="false" />
+    <Property Name="VAT" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="IsPayOut" Type="Boolean" Nullable="false" />
+    <Property Name="IsSeperateSale" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Color">
+    <Key>
+      <PropertyRef Name="ColorID" />
+    </Key>
+    <Property Name="ColorID" Type="Int32" Nullable="false" />
+    <Property Name="Code" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Colors1" Relationship="Self.FK_Colors_Colors" FromRole="Colors" ToRole="Colors1" />
+    <NavigationProperty Name="Color1" Relationship="Self.FK_Colors_Colors" FromRole="Colors1" ToRole="Colors" />
+    <NavigationProperty Name="CreditSaleProducts" Relationship="Self.FK_CreditSaleProducts_Colors" FromRole="Colors" ToRole="CreditSaleProducts" />
+    <NavigationProperty Name="POProductDetails" Relationship="Self.FK_POProductDetails_Colors" FromRole="Colors" ToRole="POProductDetails" />
+    <NavigationProperty Name="POrderDetails" Relationship="Self.FK_POrderDetails_ColorInfos" FromRole="Colors" ToRole="POrderDetails" />
+    <NavigationProperty Name="Stocks" Relationship="Self.FK_Stocks_ColorInfos" FromRole="Colors" ToRole="Stocks" />
+  </EntityType>
+  <EntityType Name="Company">
+    <Key>
+      <PropertyRef Name="CompanyID" />
+    </Key>
+    <Property Name="CompanyID" Type="Int32" Nullable="false" />
+    <Property Name="Code" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Products" Relationship="Self.FK_Products_Companies" FromRole="Companies" ToRole="Products" />
+    <Property Name="IsHO" Type="Boolean" />
+    <Property Name="HoId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="CreditSaleProduct">
+    <Key>
+      <PropertyRef Name="CreditSaleProductsID" />
+    </Key>
+    <Property Name="CreditSaleProductsID" Type="Int32" Nullable="false" />
+    <Property Name="ProductID" Type="Int32" Nullable="false" />
+    <Property Name="UnitPrice" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Quantity" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="UTAmount" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="CreditSalesID" Type="Int32" Nullable="false" />
+    <Property Name="MPRateTotal" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="MPRate" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="ColorInfoID" Type="Int32" Nullable="false" />
+    <Property Name="StockDetailID" Type="Int32" Nullable="false" />
+    <Property Name="InterestRate" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="TotalInterest" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="PRate" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="SRate" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="CompressorWarrenty" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="PanelWarrenty" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="MotorWarrenty" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="SparePartsWarrenty" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="ServiceWarrenty" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Color" Relationship="Self.FK_CreditSaleProducts_Colors" FromRole="CreditSaleProducts" ToRole="Colors" />
+    <NavigationProperty Name="CreditSale" Relationship="Self.FK_CreditSaleProducts_CreditSales" FromRole="CreditSaleProducts" ToRole="CreditSales" />
+    <NavigationProperty Name="Product" Relationship="Self.FK_CreditSaleProducts_Products" FromRole="CreditSaleProducts" ToRole="Products" />
+    <NavigationProperty Name="StockDetail" Relationship="Self.FK_CreditSaleProducts_StockDetails" FromRole="CreditSaleProducts" ToRole="StockDetails" />
+    <Property Name="GSTPerc" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="CGSTPerc" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="SGSTPerc" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="IGSTPerc" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="GSTAmt" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="CGSTAmt" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="SGSTAmt" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="IGSTAmt" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="GodownID" Type="Int32" />
+    <NavigationProperty Name="CreditSaleProducts1" Relationship="DEWSRMModel.FK_CreditSaleProducts_CreditSaleProducts" FromRole="CreditSaleProduct" ToRole="CreditSaleProduct1" />
+    <NavigationProperty Name="CreditSaleProduct1" Relationship="DEWSRMModel.FK_CreditSaleProducts_CreditSaleProducts" FromRole="CreditSaleProduct1" ToRole="CreditSaleProduct" />
+    <NavigationProperty Name="Godown" Relationship="DEWSRMModel.FK_CreditSaleProducts_Godowns" FromRole="CreditSaleProduct" ToRole="Godown" />
+  </EntityType>
+  <EntityType Name="CreditSale">
+    <Key>
+      <PropertyRef Name="CreditSalesID" />
+    </Key>
+    <Property Name="CreditSalesID" Type="Int32" Nullable="false" />
+    <Property Name="InvoiceNo" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="CustomerID" Type="Int32" Nullable="false" />
+    <Property Name="TSalesAmt" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="NoOfInstallment" Type="Int32" Nullable="false" />
+    <Property Name="IntallmentPrinciple" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="IssueDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UserName" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Remaining" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="InterestRate" Type="Int32" Nullable="false" />
+    <Property Name="SalesDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DownPayment" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="WInterestAmt" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="FixedAmt" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="IsStatus" Type="Int32" />
+    <Property Name="UnExInstallment" Type="Int32" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <Property Name="Discount" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="NetAmount" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="ISUnexpected" Type="Boolean" />
+    <Property Name="Remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" Nullable="false" />
+    <Property Name="SerialNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FirstInterestRate" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="FirstTotalInterest" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="MergeTotalSales" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="BankTranID" Type="Int32" Nullable="false" />
+    <Property Name="CardPaidAmount" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="CardTypeSetupID" Type="Int32" Nullable="false" />
+    <Property Name="DepositChargePercent" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="ISWeeekly" Type="Int32" Nullable="false" />
+    <Property Name="VATPercentage" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="VATAmount" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="CreditSaleProducts" Relationship="Self.FK_CreditSaleProducts_CreditSales" FromRole="CreditSales" ToRole="CreditSaleProducts" />
+    <NavigationProperty Name="Customer" Relationship="Self.FK_CreditSales_Customers" FromRole="CreditSales" ToRole="Customers" />
+    <NavigationProperty Name="CreditSalesDetails" Relationship="DEWSRMModel.FK_CreditSalesDetails_CreditSales" FromRole="CreditSale" ToRole="CreditSalesDetail" />
+  </EntityType>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="CustomerID" />
+    </Key>
+    <Property Name="CustomerID" Type="Int32" Nullable="false" />
+    <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ContactNo" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="EmailID" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="NID" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PhotoPath" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="TotalDue" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="RefName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RefContact" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="RefFName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RefAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CustomerType" Type="Int32" Nullable="false" />
+    <Property Name="OpeningDue" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="CreditDue" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <NavigationProperty Name="CashCollections" Relationship="Self.FK_CashCollections_Customers" FromRole="Customers" ToRole="CashCollections" />
+    <NavigationProperty Name="CreditSales" Relationship="Self.FK_CreditSales_Customers" FromRole="Customers" ToRole="CreditSales" />
+    <NavigationProperty Name="Returns" Relationship="Self.FK_Returns_Customers" FromRole="Customers" ToRole="Returns" />
+    <NavigationProperty Name="SOrders" Relationship="Self.FK_SOrders_Customers" FromRole="Customers" ToRole="SOrders" />
+  </EntityType>
+  <EntityType Name="DamageProduct">
+    <Key>
+      <PropertyRef Name="DamageProID" />
+    </Key>
+    <Property Name="DamageProID" Type="Int32" Nullable="false" />
+    <Property Name="EntryDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ProductID" Type="Int32" Nullable="false" />
+    <Property Name="Qty" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="UnitPrice" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="TotalPrice" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="SDetailID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Product" Relationship="Self.FK_DamageProducts_Products" FromRole="DamageProducts" ToRole="Products" />
+    <NavigationProperty Name="StockDetail" Relationship="Self.FK_DamageProducts_StockDetails" FromRole="DamageProducts" ToRole="StockDetails" />
+  </EntityType>
+  <EntityType Name="Designation">
+    <Key>
+      <PropertyRef Name="DesignationID" />
+    </Key>
+    <Property Name="DesignationID" Type="Int32" Nullable="false" />
+    <Property Name="Code" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Employees" Relationship="Self.FK_Employees_Designations" FromRole="Designations" ToRole="Employees" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="EmployeeID" />
+    </Key>
+    <Property Name="EmployeeID" Type="Int32" Nullable="false" />
+    <Property Name="Code" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ContactNo" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="EmailID" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="NID" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="BloodGroup" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="JoiningDate" Type="DateTime" Precision="3" />
+    <Property Name="PresentAdd" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PermanentAdd" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DesignationID" Type="Int32" Nullable="false" />
+    <Property Name="GrossSalary" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="PhotoPath" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Designation" Relationship="Self.FK_Employees_Designations" FromRole="Employees" ToRole="Designations" />
+    <NavigationProperty Name="EmpSalaries" Relationship="Self.FK_EmpSalaries_Employees" FromRole="Employees" ToRole="EmpSalaries" />
+  </EntityType>
+  <EntityType Name="EmpSalary">
+    <Key>
+      <PropertyRef Name="EmpSalaryID" />
+    </Key>
+    <Property Name="EmpSalaryID" Type="Int32" Nullable="false" />
+    <Property Name="SalaryMonth" Type="DateTime" Precision="3" />
+    <Property Name="GrossSalary" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="RecAmt" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="RemainingAmt" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="EmployeeID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Employee" Relationship="Self.FK_EmpSalaries_Employees" FromRole="EmpSalaries" ToRole="Employees" />
+  </EntityType>
+  <EntityType Name="Expenditure">
+    <Key>
+      <PropertyRef Name="ExpenditureID" />
+    </Key>
+    <Property Name="ExpenditureID" Type="Int32" Nullable="false" />
+    <Property Name="EntryDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Purpose" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Amount" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="ExpenseItemID" Type="Int32" Nullable="false" />
+    <Property Name="VoucherName" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="Int32" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="Remarks" Type="String" MaxLength="450" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ExpenseItem" Relationship="Self.FK_Expenditures_ExpenseItems" FromRole="Expenditures" ToRole="ExpenseItems" />
+  </EntityType>
+  <EntityType Name="ExpenseItem">
+    <Key>
+      <PropertyRef Name="ExpenseItemID" />
+    </Key>
+    <Property Name="ExpenseItemID" Type="Int32" Nullable="false" />
+    <Property Name="Code" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Expenditures" Relationship="Self.FK_Expenditures_ExpenseItems" FromRole="ExpenseItems" ToRole="Expenditures" />
+  </EntityType>
+  <EntityType Name="MenuPermission">
+    <Key>
+      <PropertyRef Name="MenuPermissionID" />
+    </Key>
+    <Property Name="MenuPermissionID" Type="Int32" Nullable="false" />
+    <Property Name="RoleID" Type="Int32" Nullable="false" />
+    <Property Name="MenuID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Menu" Relationship="Self.FK_MenuPermissions_Menus" FromRole="MenuPermissions" ToRole="Menus" />
+    <NavigationProperty Name="Role" Relationship="Self.FK_MenuPermissions_Roles" FromRole="MenuPermissions" ToRole="Roles" />
+  </EntityType>
+  <EntityType Name="Menu">
+    <Key>
+      <PropertyRef Name="MenuID" />
+    </Key>
+    <Property Name="MenuID" Type="Int32" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ParentID" Type="Int32" />
+    <Property Name="PageLink" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="MenuKey" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MenuType" Type="Int32" Nullable="false" />
+    <Property Name="Status" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="MenuPermissions" Relationship="Self.FK_MenuPermissions_Menus" FromRole="Menus" ToRole="MenuPermissions" />
+  </EntityType>
+  <EntityType Name="Model">
+    <Key>
+      <PropertyRef Name="ModelID" />
+    </Key>
+    <Property Name="ModelID" Type="Int32" Nullable="false" />
+    <Property Name="Code" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MonthlyStock">
+    <Key>
+      <PropertyRef Name="MonthlyStockID" />
+    </Key>
+    <Property Name="MonthlyStockID" Type="Int32" Nullable="false" />
+    <Property Name="ProductID" Type="Int32" Nullable="false" />
+    <Property Name="Month" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Opening" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Closing" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <NavigationProperty Name="Product" Relationship="Self.FK_MonthlyStocks_Products" FromRole="MonthlyStocks" ToRole="Products" />
+  </EntityType>
+  <EntityType Name="POProductDetail">
+    <Key>
+      <PropertyRef Name="POPDID" />
+    </Key>
+    <Property Name="POPDID" Type="Int32" Nullable="false" />
+    <Property Name="ProductID" Type="Int32" Nullable="false" />
+    <Property Name="IMENo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="POrderDetailID" Type="Int32" Nullable="false" />
+    <Property Name="ColorID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Color" Relationship="Self.FK_POProductDetails_Colors" FromRole="POProductDetails" ToRole="Colors" />
+    <NavigationProperty Name="POrderDetail" Relationship="Self.FK_POProductDetails_POrderDetails" FromRole="POProductDetails" ToRole="POrderDetails" />
+    <NavigationProperty Name="Product" Relationship="Self.FK_POProductDetails_Products" FromRole="POProductDetails" ToRole="Products" />
+  </EntityType>
+  <EntityType Name="POrderDetail">
+    <Key>
+      <PropertyRef Name="POrderDetailID" />
+    </Key>
+    <Property Name="POrderDetailID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductID" Type="Int32" Nullable="false" />
+    <Property Name="Quantity" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="UnitPrice" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="TAmount" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="POrderID" Type="Int32" Nullable="false" />
+    <Property Name="PPDISPer" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="PPDISAmt" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="MRPRate" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="ColorID" Type="Int32" Nullable="false" />
+    <Property Name="StockHistory" Type="String" MaxLength="350" FixedLength="false" Unicode="false" />
+    <Property Name="SalesRate" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <NavigationProperty Name="Color" Relationship="Self.FK_POrderDetails_ColorInfos" FromRole="POrderDetails" ToRole="Colors" />
+    <NavigationProperty Name="POProductDetails" Relationship="Self.FK_POProductDetails_POrderDetails" FromRole="POrderDetails" ToRole="POProductDetails" />
+    <NavigationProperty Name="POrder" Relationship="Self.FK_POrderDetails_POrders" FromRole="POrderDetails" ToRole="POrders" />
+    <NavigationProperty Name="Product" Relationship="Self.FK_POrderDetails_Products" FromRole="POrderDetails" ToRole="Products" />
+    <NavigationProperty Name="StockDetails" Relationship="Self.FK_StockDetails_POrderDetails" FromRole="POrderDetails" ToRole="StockDetails" />
+    <Property Name="GSTPerc" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="CGSTPerc" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="SGSTPerc" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="IGSTPerc" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="GSTAmt" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="CGSTAmt" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="SGSTAmt" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="IGSTAmt" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="GodownID" Type="Int32" />
+    <NavigationProperty Name="Godown" Relationship="DEWSRMModel.FK_POrderDetails_Godowns" FromRole="POrderDetail" ToRole="Godown" />
+  </EntityType>
+  <EntityType Name="POrder">
+    <Key>
+      <PropertyRef Name="POrderID" />
+    </Key>
+    <Property Name="POrderID" Type="Int32" Nullable="false" />
+    <Property Name="OrderDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ChallanNo" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SupplierID" Type="Int32" Nullable="false" />
+    <Property Name="GrandTotal" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="TDiscount" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="TotalAmt" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="RecAmt" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="PaymentDue" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="TotalDue" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Status" Type="Int32" Nullable="false" />
+    <Property Name="PPDisAmt" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="NetDiscount" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="TDPer" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="LaborCost" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="Adjustment" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="TransportCost" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <NavigationProperty Name="POrderDetails" Relationship="Self.FK_POrderDetails_POrders" FromRole="POrders" ToRole="POrderDetails" />
+    <NavigationProperty Name="Supplier" Relationship="Self.FK_POrders_Suppliers" FromRole="POrders" ToRole="Suppliers" />
+    <NavigationProperty Name="User" Relationship="Self.FK_POrders_Users" FromRole="POrders" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="PrevBalance">
+    <Key>
+      <PropertyRef Name="PevBalanceID" />
+    </Key>
+    <Property Name="PevBalanceID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Amount" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="ProductID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ProductName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PicturePath" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="CategoryID" Type="Int32" Nullable="false" />
+    <Property Name="SalesRate" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="PurchaseRate" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="CompanyID" Type="Int32" Nullable="false" />
+    <Property Name="PackSize" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="WarningQty" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="ModelID" Type="Int32" Nullable="false" />
+    <Property Name="UnitType" Type="Int32" Nullable="false" />
+    <Property Name="ShortQty" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="PhotoPath" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="BoxQty" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="ProductType" Type="Int32" Nullable="false" />
+    <Property Name="CompressorWarrenty" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="PanelWarrenty" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="MotorWarrenty" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="SparePartsWarrenty" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="ServiceWarrenty" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Category" Relationship="Self.FK_Products_Categorys" FromRole="Products" ToRole="Categorys" />
+    <NavigationProperty Name="Company" Relationship="Self.FK_Products_Companies" FromRole="Products" ToRole="Companies" />
+    <NavigationProperty Name="CreditSaleProducts" Relationship="Self.FK_CreditSaleProducts_Products" FromRole="Products" ToRole="CreditSaleProducts" />
+    <NavigationProperty Name="DamageProducts" Relationship="Self.FK_DamageProducts_Products" FromRole="Products" ToRole="DamageProducts" />
+    <NavigationProperty Name="MonthlyStocks" Relationship="Self.FK_MonthlyStocks_Products" FromRole="Products" ToRole="MonthlyStocks" />
+    <NavigationProperty Name="POProductDetails" Relationship="Self.FK_POProductDetails_Products" FromRole="Products" ToRole="POProductDetails" />
+    <NavigationProperty Name="POrderDetails" Relationship="Self.FK_POrderDetails_Products" FromRole="Products" ToRole="POrderDetails" />
+    <NavigationProperty Name="ReturnDetails" Relationship="Self.FK_ReturnDetails_Products" FromRole="Products" ToRole="ReturnDetails" />
+    <NavigationProperty Name="SOrderDetails" Relationship="Self.FK_SOrderDetails_Products" FromRole="Products" ToRole="SOrderDetails" />
+    <NavigationProperty Name="StockDetails" Relationship="Self.FK_StockDetails_Products" FromRole="Products" ToRole="StockDetails" />
+    <NavigationProperty Name="Stocks" Relationship="Self.FK_Stocks_Products" FromRole="Products" ToRole="Stocks" />
+    <Property Name="GSTPerc" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="CGSTPerc" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="SGSTPerc" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="IGSTPerc" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Tax" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="MaxQty" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="BarCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CostPrice" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="RetailPrice" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="ReturnDetail">
+    <Key>
+      <PropertyRef Name="ReturnDetailsID" />
+    </Key>
+    <Property Name="ReturnDetailsID" Type="Int32" Nullable="false" />
+    <Property Name="ReturnID" Type="Int32" Nullable="false" />
+    <Property Name="ProductID" Type="Int32" Nullable="false" />
+    <Property Name="Quantity" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="UnitPrice" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="UTAmount" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="SDetailID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Product" Relationship="Self.FK_ReturnDetails_Products" FromRole="ReturnDetails" ToRole="Products" />
+    <NavigationProperty Name="Return" Relationship="Self.FK_ReturnDetails_Returns" FromRole="ReturnDetails" ToRole="Returns" />
+  </EntityType>
+  <EntityType Name="Return">
+    <Key>
+      <PropertyRef Name="ReturnID" />
+    </Key>
+    <Property Name="ReturnID" Type="Int32" Nullable="false" />
+    <Property Name="InvoiceNo" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ReturnDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="GrandTotal" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="CustomerID" Type="Int32" />
+    <Property Name="SupplierID" Type="Int32" />
+    <Property Name="PaidAmount" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="TDAmt" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Customer" Relationship="Self.FK_Returns_Customers" FromRole="Returns" ToRole="Customers" />
+    <NavigationProperty Name="ReturnDetails" Relationship="Self.FK_ReturnDetails_Returns" FromRole="Returns" ToRole="ReturnDetails" />
+    <NavigationProperty Name="Supplier" Relationship="Self.FK_Returns_Suppliers" FromRole="Returns" ToRole="Suppliers" />
+    <NavigationProperty Name="User" Relationship="Self.FK_Returns_Users" FromRole="Returns" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="RoleID" />
+    </Key>
+    <Property Name="RoleID" Type="Int32" Nullable="false" />
+    <Property Name="RoleName" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="MenuPermissions" Relationship="Self.FK_MenuPermissions_Roles" FromRole="Roles" ToRole="MenuPermissions" />
+    <NavigationProperty Name="UserRoles" Relationship="Self.FK_UserRoles_Roles" FromRole="Roles" ToRole="UserRoles" />
+  </EntityType>
+  <EntityType Name="ShareInvestmentHead">
+    <Key>
+      <PropertyRef Name="SIHID" />
+    </Key>
+    <Property Name="SIHID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Code" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ParentId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="ShareInvestments" Relationship="Self.FK_ShareInvestment_ShareInvestmentHeads" FromRole="ShareInvestmentHeads" ToRole="ShareInvestments" />
+  </EntityType>
+  <EntityType Name="ShareInvestment">
+    <Key>
+      <PropertyRef Name="SIID" />
+    </Key>
+    <Property Name="SIID" Type="Int32" Nullable="false" />
+    <Property Name="EntryDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Purpose" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Amount" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="SIHID" Type="Int32" Nullable="false" />
+    <Property Name="TransactionType" Type="Int32" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="ShareInvestmentHead" Relationship="Self.FK_ShareInvestment_ShareInvestmentHeads" FromRole="ShareInvestments" ToRole="ShareInvestmentHeads" />
+  </EntityType>
+  <EntityType Name="SOrderDetail">
+    <Key>
+      <PropertyRef Name="SOrderDetailID" />
+    </Key>
+    <Property Name="SOrderDetailID" Type="Int32" Nullable="false" />
+    <Property Name="ProductID" Type="Int32" Nullable="false" />
+    <Property Name="UnitPrice" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="PPDPercentage" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="PPDAmount" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Quantity" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="UTAmount" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="SOrderID" Type="Int32" Nullable="false" />
+    <Property Name="MPRateTotal" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="MPRate" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="ColorInfoID" Type="Int32" Nullable="false" />
+    <Property Name="PRate" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="PRateTotal" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="StockDetailID" Type="Int32" Nullable="false" />
+    <Property Name="IsFree" Type="Int32" Nullable="false" />
+    <Property Name="SRate" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="CompressorWarrenty" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="PanelWarrenty" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="MotorWarrenty" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="SparePartsWarrenty" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="ServiceWarrenty" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Product" Relationship="Self.FK_SOrderDetails_Products" FromRole="SOrderDetails" ToRole="Products" />
+    <NavigationProperty Name="SOrder" Relationship="Self.FK_SOrderDetails_SOrders" FromRole="SOrderDetails" ToRole="SOrders" />
+    <NavigationProperty Name="StockDetail" Relationship="Self.FK_SOrderDetails_StockDetails" FromRole="SOrderDetails" ToRole="StockDetails" />
+    <Property Name="GSTPerc" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="CGSTPerc" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="SGSTPerc" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="IGSTPerc" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="GSTAmt" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="CGSTAmt" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="SGSTAmt" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="IGSTAmt" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="GodownID" Type="Int32" />
+    <NavigationProperty Name="Godown" Relationship="DEWSRMModel.FK_SOrderDetails_Godowns" FromRole="SOrderDetail" ToRole="Godown" />
+  </EntityType>
+  <EntityType Name="SOrder">
+    <Key>
+      <PropertyRef Name="SOrderID" />
+    </Key>
+    <Property Name="SOrderID" Type="Int32" Nullable="false" />
+    <Property Name="InvoiceNo" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="InvoiceDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="SubTotal" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="VATPercentage" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="VATAmount" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="GrandTotal" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="PPDiscountAmt" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="TDPercentage" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="TDAmount" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="TotalAmount" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="PaymentDue" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="RecAmount" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="BackAmount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Remarks" Type="String" MaxLength="350" FixedLength="false" Unicode="false" />
+    <Property Name="CustomerID" Type="Int32" Nullable="false" />
+    <Property Name="TotalDue" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Status" Type="Int32" Nullable="false" />
+    <Property Name="SerialNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Adjustment" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="NetDiscount" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="RemindDate" Type="DateTime" Precision="3" />
+    <Property Name="RemindPeriod" Type="Int32" Nullable="false" />
+    <Property Name="RemindStatus" Type="Int32" Nullable="false" />
+    <Property Name="BankTranID" Type="Int32" Nullable="false" />
+    <Property Name="CardPaidAmount" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="CardTypeSetupID" Type="Int32" Nullable="false" />
+    <Property Name="DepositChargePercent" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <NavigationProperty Name="Customer" Relationship="Self.FK_SOrders_Customers" FromRole="SOrders" ToRole="Customers" />
+    <NavigationProperty Name="SOrderDetails" Relationship="Self.FK_SOrderDetails_SOrders" FromRole="SOrders" ToRole="SOrderDetails" />
+    <NavigationProperty Name="User" Relationship="Self.FK_SOrders_Users" FromRole="SOrders" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="StockDetail">
+    <Key>
+      <PropertyRef Name="SDetailID" />
+    </Key>
+    <Property Name="SDetailID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StockCode" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ProductID" Type="Int32" Nullable="false" />
+    <Property Name="IMENO" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="StockID" Type="Int32" />
+    <Property Name="Status" Type="Int32" Nullable="false" />
+    <Property Name="ColorID" Type="Int32" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="SalesRate" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="PRate" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="POrderDetailID" Type="Int32" />
+    <Property Name="Quantity" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <NavigationProperty Name="CreditSaleProducts" Relationship="Self.FK_CreditSaleProducts_StockDetails" FromRole="StockDetails" ToRole="CreditSaleProducts" />
+    <NavigationProperty Name="DamageProduct" Relationship="Self.FK_DamageProducts_StockDetails" FromRole="StockDetails" ToRole="DamageProducts" />
+    <NavigationProperty Name="POrderDetail" Relationship="Self.FK_StockDetails_POrderDetails" FromRole="StockDetails" ToRole="POrderDetails" />
+    <NavigationProperty Name="Product" Relationship="Self.FK_StockDetails_Products" FromRole="StockDetails" ToRole="Products" />
+    <NavigationProperty Name="SOrderDetails" Relationship="Self.FK_SOrderDetails_StockDetails" FromRole="StockDetails" ToRole="SOrderDetails" />
+    <NavigationProperty Name="Stock" Relationship="Self.FK_StockDetails_Stocks" FromRole="StockDetails" ToRole="Stocks" />
+    <Property Name="GodownID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Stock">
+    <Key>
+      <PropertyRef Name="StockID" />
+    </Key>
+    <Property Name="StockID" Type="Int32" Nullable="false" />
+    <Property Name="StockCode" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EntryDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Quantity" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="ProductID" Type="Int32" Nullable="false" />
+    <Property Name="PMPrice" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="LPPrice" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="ColorID" Type="Int32" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Color" Relationship="Self.FK_Stocks_ColorInfos" FromRole="Stocks" ToRole="Colors" />
+    <NavigationProperty Name="Product" Relationship="Self.FK_Stocks_Products" FromRole="Stocks" ToRole="Products" />
+    <NavigationProperty Name="StockDetails" Relationship="Self.FK_StockDetails_Stocks" FromRole="Stocks" ToRole="StockDetails" />
+    <Property Name="GodownID" Type="Int32" />
+    <NavigationProperty Name="Godown" Relationship="DEWSRMModel.FK_Stocks_Godowns" FromRole="Stock" ToRole="Godown" />
+  </EntityType>
+  <EntityType Name="Supplier">
+    <Key>
+      <PropertyRef Name="SupplierID" />
+    </Key>
+    <Property Name="SupplierID" Type="Int32" Nullable="false" />
+    <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="OwnerName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ContactNo" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PhotoPath" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="TotalDue" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="OpeningDue" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="CashCollections" Relationship="Self.FK_CashCollections_Suppliers" FromRole="Suppliers" ToRole="CashCollections" />
+    <NavigationProperty Name="POrders" Relationship="Self.FK_POrders_Suppliers" FromRole="Suppliers" ToRole="POrders" />
+    <NavigationProperty Name="Returns" Relationship="Self.FK_Returns_Suppliers" FromRole="Suppliers" ToRole="Returns" />
+  </EntityType>
+  <EntityType Name="SystemInformation">
+    <Key>
+      <PropertyRef Name="SystemInfoID" />
+    </Key>
+    <Property Name="SystemInfoID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="TelephoneNo" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="EmailAddress" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="WebAddress" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="SystemStartDate" Type="DateTime" Precision="3" />
+    <Property Name="ProductPhotoPath" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="SupplierPhotoPath" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="CustomerPhotoPath" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="CustomerNIDPatht" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="SupplierDocPath" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="EmployeePhotoPath" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="SMSServiceEnable" Type="Int32" Nullable="false" />
+    <Property Name="InsuranceContactNo" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="UserRole">
+    <Key>
+      <PropertyRef Name="UserRoleID" />
+    </Key>
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="RoleID" Type="Int32" Nullable="false" />
+    <Property Name="UserRoleID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Role" Relationship="Self.FK_UserRoles_Roles" FromRole="UserRoles" ToRole="Roles" />
+    <NavigationProperty Name="User" Relationship="Self.FK_UserRoles_Users" FromRole="UserRoles" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UserPassword" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ContactNo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EmailAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="UserType" Type="Int32" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="Status" Type="Int32" Nullable="false" />
+    <Property Name="ISEditable" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="POrders" Relationship="Self.FK_POrders_Users" FromRole="Users" ToRole="POrders" />
+    <NavigationProperty Name="Returns" Relationship="Self.FK_Returns_Users" FromRole="Users" ToRole="Returns" />
+    <NavigationProperty Name="SOrders" Relationship="Self.FK_SOrders_Users" FromRole="Users" ToRole="SOrders" />
+    <NavigationProperty Name="UserRoles" Relationship="Self.FK_UserRoles_Users" FromRole="Users" ToRole="UserRoles" />
+    <NavigationProperty Name="SMSStatuses" Relationship="DEWSRMModel.FK_SMSStatuses_Users" FromRole="User" ToRole="SMSStatus" />
+  </EntityType>
+  <EntityType Name="vw_CustomerLedger">
+    <Key>
+      <PropertyRef Name="CustomerID" />
+      <PropertyRef Name="OpeningDue" />
+      <PropertyRef Name="SalesGrandTotal" />
+      <PropertyRef Name="TotalDiscount" />
+      <PropertyRef Name="RecAmount" />
+      <PropertyRef Name="AdjustInSales" />
+      <PropertyRef Name="BackAmount" />
+      <PropertyRef Name="CreditSalesDue" />
+      <PropertyRef Name="CashRecAmt" />
+      <PropertyRef Name="AdjustInCashRec" />
+      <PropertyRef Name="SystemDue" />
+      <PropertyRef Name="Remarks" />
+    </Key>
+    <Property Name="CustomerID" Type="Int32" Nullable="false" />
+    <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="OpeningDue" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="SalesGrandTotal" Type="Decimal" Precision="38" Scale="2" Nullable="false" />
+    <Property Name="TotalDiscount" Type="Decimal" Precision="38" Scale="2" Nullable="false" />
+    <Property Name="RecAmount" Type="Decimal" Precision="38" Scale="2" Nullable="false" />
+    <Property Name="AdjustInSales" Type="Decimal" Precision="38" Scale="2" Nullable="false" />
+    <Property Name="BackAmount" Type="Decimal" Precision="38" Scale="2" Nullable="false" />
+    <Property Name="CreditSalesDue" Type="Decimal" Precision="38" Scale="2" Nullable="false" />
+    <Property Name="CashRecAmt" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="AdjustInCashRec" Type="Decimal" Precision="38" Scale="2" Nullable="false" />
+    <Property Name="ActualDue" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="SystemDue" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Diff" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="Remarks" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="vw_StockCheck">
+    <Key>
+      <PropertyRef Name="StockID" />
+      <PropertyRef Name="ProductID" />
+      <PropertyRef Name="ColorID" />
+      <PropertyRef Name="Purchase" />
+      <PropertyRef Name="TotalSales" />
+      <PropertyRef Name="CreditSales" />
+      <PropertyRef Name="Salereturns" />
+      <PropertyRef Name="Purchasereturns" />
+      <PropertyRef Name="Remarks" />
+    </Key>
+    <Property Name="StockID" Type="Int32" Nullable="false" />
+    <Property Name="ProductID" Type="Int32" Nullable="false" />
+    <Property Name="ColorID" Type="Int32" Nullable="false" />
+    <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ProductName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ColorCode" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Purchase" Type="Decimal" Precision="38" Scale="2" Nullable="false" />
+    <Property Name="TotalSales" Type="Decimal" Precision="38" Scale="2" Nullable="false" />
+    <Property Name="CreditSales" Type="Decimal" Precision="38" Scale="2" Nullable="false" />
+    <Property Name="Salereturns" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="Purchasereturns" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="SystemStock" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="StockShouldBe" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="Remarks" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="vw_SupplierLedger">
+    <Key>
+      <PropertyRef Name="SupplierID" />
+      <PropertyRef Name="GrandTotal" />
+      <PropertyRef Name="TotalDiscount" />
+      <PropertyRef Name="PaidAmt" />
+      <PropertyRef Name="AdjustInCashDelivery" />
+      <PropertyRef Name="CashDelivery" />
+      <PropertyRef Name="SystemDue" />
+      <PropertyRef Name="Remarks" />
+    </Key>
+    <Property Name="SupplierID" Type="Int32" Nullable="false" />
+    <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="GrandTotal" Type="Decimal" Precision="38" Scale="2" Nullable="false" />
+    <Property Name="TotalDiscount" Type="Decimal" Precision="38" Scale="2" Nullable="false" />
+    <Property Name="PaidAmt" Type="Decimal" Precision="38" Scale="2" Nullable="false" />
+    <Property Name="AdjustInCashDelivery" Type="Decimal" Precision="38" Scale="2" Nullable="false" />
+    <Property Name="CashDelivery" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="ActualDue" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="SystemDue" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Diff" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="Remarks" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_BankTransaction_Banks">
+    <End Role="Banks" Type="Self.Bank" Multiplicity="1" />
+    <End Role="BankTransactions" Type="Self.BankTransaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Banks">
+        <PropertyRef Name="BankID" />
+      </Principal>
+      <Dependent Role="BankTransactions">
+        <PropertyRef Name="BankID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CardTypeSetups_Banks">
+    <End Role="Banks" Type="Self.Bank" Multiplicity="1" />
+    <End Role="CardTypeSetups" Type="Self.CardTypeSetup" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Banks">
+        <PropertyRef Name="BankID" />
+      </Principal>
+      <Dependent Role="CardTypeSetups">
+        <PropertyRef Name="BankID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Branches_Branches">
+    <End Role="Branches" Type="Self.Branch" Multiplicity="1" />
+    <End Role="Branches1" Type="Self.Branch" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Branches">
+        <PropertyRef Name="BranchID" />
+      </Principal>
+      <Dependent Role="Branches1">
+        <PropertyRef Name="BranchID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CardTypeSetups_CardTypes">
+    <End Role="CardTypes" Type="Self.CardType" Multiplicity="1" />
+    <End Role="CardTypeSetups" Type="Self.CardTypeSetup" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CardTypes">
+        <PropertyRef Name="CardTypeID" />
+      </Principal>
+      <Dependent Role="CardTypeSetups">
+        <PropertyRef Name="CardTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CashCollections_Customers">
+    <End Role="Customers" Type="Self.Customer" Multiplicity="0..1" />
+    <End Role="CashCollections" Type="Self.CashCollection" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customers">
+        <PropertyRef Name="CustomerID" />
+      </Principal>
+      <Dependent Role="CashCollections">
+        <PropertyRef Name="CustomerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CashCollections_Suppliers">
+    <End Role="Suppliers" Type="Self.Supplier" Multiplicity="0..1" />
+    <End Role="CashCollections" Type="Self.CashCollection" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Suppliers">
+        <PropertyRef Name="SupplierID" />
+      </Principal>
+      <Dependent Role="CashCollections">
+        <PropertyRef Name="CompanyID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Products_Categorys">
+    <End Role="Categorys" Type="Self.Category" Multiplicity="1" />
+    <End Role="Products" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categorys">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="Products">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Colors_Colors">
+    <End Role="Colors" Type="Self.Color" Multiplicity="1" />
+    <End Role="Colors1" Type="Self.Color" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Colors">
+        <PropertyRef Name="ColorID" />
+      </Principal>
+      <Dependent Role="Colors1">
+        <PropertyRef Name="ColorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CreditSaleProducts_Colors">
+    <End Role="Colors" Type="Self.Color" Multiplicity="1" />
+    <End Role="CreditSaleProducts" Type="Self.CreditSaleProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Colors">
+        <PropertyRef Name="ColorID" />
+      </Principal>
+      <Dependent Role="CreditSaleProducts">
+        <PropertyRef Name="ColorInfoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_POProductDetails_Colors">
+    <End Role="Colors" Type="Self.Color" Multiplicity="1" />
+    <End Role="POProductDetails" Type="Self.POProductDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Colors">
+        <PropertyRef Name="ColorID" />
+      </Principal>
+      <Dependent Role="POProductDetails">
+        <PropertyRef Name="ColorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_POrderDetails_ColorInfos">
+    <End Role="Colors" Type="Self.Color" Multiplicity="1" />
+    <End Role="POrderDetails" Type="Self.POrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Colors">
+        <PropertyRef Name="ColorID" />
+      </Principal>
+      <Dependent Role="POrderDetails">
+        <PropertyRef Name="ColorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Stocks_ColorInfos">
+    <End Role="Colors" Type="Self.Color" Multiplicity="1" />
+    <End Role="Stocks" Type="Self.Stock" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Colors">
+        <PropertyRef Name="ColorID" />
+      </Principal>
+      <Dependent Role="Stocks">
+        <PropertyRef Name="ColorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Products_Companies">
+    <End Role="Companies" Type="Self.Company" Multiplicity="1" />
+    <End Role="Products" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Companies">
+        <PropertyRef Name="CompanyID" />
+      </Principal>
+      <Dependent Role="Products">
+        <PropertyRef Name="CompanyID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CreditSaleProducts_CreditSales">
+    <End Role="CreditSales" Type="Self.CreditSale" Multiplicity="1" />
+    <End Role="CreditSaleProducts" Type="Self.CreditSaleProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CreditSales">
+        <PropertyRef Name="CreditSalesID" />
+      </Principal>
+      <Dependent Role="CreditSaleProducts">
+        <PropertyRef Name="CreditSalesID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CreditSaleProducts_Products">
+    <End Role="Products" Type="Self.Product" Multiplicity="1" />
+    <End Role="CreditSaleProducts" Type="Self.CreditSaleProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="CreditSaleProducts">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CreditSaleProducts_StockDetails">
+    <End Role="StockDetails" Type="Self.StockDetail" Multiplicity="1" />
+    <End Role="CreditSaleProducts" Type="Self.CreditSaleProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StockDetails">
+        <PropertyRef Name="SDetailID" />
+      </Principal>
+      <Dependent Role="CreditSaleProducts">
+        <PropertyRef Name="StockDetailID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CreditSales_Customers">
+    <End Role="Customers" Type="Self.Customer" Multiplicity="1" />
+    <End Role="CreditSales" Type="Self.CreditSale" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customers">
+        <PropertyRef Name="CustomerID" />
+      </Principal>
+      <Dependent Role="CreditSales">
+        <PropertyRef Name="CustomerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Returns_Customers">
+    <End Role="Customers" Type="Self.Customer" Multiplicity="0..1" />
+    <End Role="Returns" Type="Self.Return" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customers">
+        <PropertyRef Name="CustomerID" />
+      </Principal>
+      <Dependent Role="Returns">
+        <PropertyRef Name="CustomerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SOrders_Customers">
+    <End Role="Customers" Type="Self.Customer" Multiplicity="1" />
+    <End Role="SOrders" Type="Self.SOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customers">
+        <PropertyRef Name="CustomerID" />
+      </Principal>
+      <Dependent Role="SOrders">
+        <PropertyRef Name="CustomerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DamageProducts_Products">
+    <End Role="Products" Type="Self.Product" Multiplicity="1" />
+    <End Role="DamageProducts" Type="Self.DamageProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="DamageProducts">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DamageProducts_StockDetails">
+    <End Role="StockDetails" Type="Self.StockDetail" Multiplicity="1" />
+    <End Role="DamageProducts" Type="Self.DamageProduct" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="StockDetails">
+        <PropertyRef Name="SDetailID" />
+      </Principal>
+      <Dependent Role="DamageProducts">
+        <PropertyRef Name="DamageProID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Employees_Designations">
+    <End Role="Designations" Type="Self.Designation" Multiplicity="1" />
+    <End Role="Employees" Type="Self.Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Designations">
+        <PropertyRef Name="DesignationID" />
+      </Principal>
+      <Dependent Role="Employees">
+        <PropertyRef Name="DesignationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmpSalaries_Employees">
+    <End Role="Employees" Type="Self.Employee" Multiplicity="1" />
+    <End Role="EmpSalaries" Type="Self.EmpSalary" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="EmpSalaries">
+        <PropertyRef Name="EmployeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Expenditures_ExpenseItems">
+    <End Role="ExpenseItems" Type="Self.ExpenseItem" Multiplicity="1" />
+    <End Role="Expenditures" Type="Self.Expenditure" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ExpenseItems">
+        <PropertyRef Name="ExpenseItemID" />
+      </Principal>
+      <Dependent Role="Expenditures">
+        <PropertyRef Name="ExpenseItemID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MenuPermissions_Menus">
+    <End Role="Menus" Type="Self.Menu" Multiplicity="1" />
+    <End Role="MenuPermissions" Type="Self.MenuPermission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Menus">
+        <PropertyRef Name="MenuID" />
+      </Principal>
+      <Dependent Role="MenuPermissions">
+        <PropertyRef Name="MenuID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MenuPermissions_Roles">
+    <End Role="Roles" Type="Self.Role" Multiplicity="1" />
+    <End Role="MenuPermissions" Type="Self.MenuPermission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="RoleID" />
+      </Principal>
+      <Dependent Role="MenuPermissions">
+        <PropertyRef Name="RoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MonthlyStocks_Products">
+    <End Role="Products" Type="Self.Product" Multiplicity="1" />
+    <End Role="MonthlyStocks" Type="Self.MonthlyStock" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="MonthlyStocks">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_POProductDetails_POrderDetails">
+    <End Role="POrderDetails" Type="Self.POrderDetail" Multiplicity="1" />
+    <End Role="POProductDetails" Type="Self.POProductDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="POrderDetails">
+        <PropertyRef Name="POrderDetailID" />
+      </Principal>
+      <Dependent Role="POProductDetails">
+        <PropertyRef Name="POrderDetailID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_POProductDetails_Products">
+    <End Role="Products" Type="Self.Product" Multiplicity="1" />
+    <End Role="POProductDetails" Type="Self.POProductDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="POProductDetails">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_POrderDetails_POrders">
+    <End Role="POrders" Type="Self.POrder" Multiplicity="1" />
+    <End Role="POrderDetails" Type="Self.POrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="POrders">
+        <PropertyRef Name="POrderID" />
+      </Principal>
+      <Dependent Role="POrderDetails">
+        <PropertyRef Name="POrderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_POrderDetails_Products">
+    <End Role="Products" Type="Self.Product" Multiplicity="1" />
+    <End Role="POrderDetails" Type="Self.POrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="POrderDetails">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StockDetails_POrderDetails">
+    <End Role="POrderDetails" Type="Self.POrderDetail" Multiplicity="0..1" />
+    <End Role="StockDetails" Type="Self.StockDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="POrderDetails">
+        <PropertyRef Name="POrderDetailID" />
+      </Principal>
+      <Dependent Role="StockDetails">
+        <PropertyRef Name="POrderDetailID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_POrders_Suppliers">
+    <End Role="Suppliers" Type="Self.Supplier" Multiplicity="1" />
+    <End Role="POrders" Type="Self.POrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Suppliers">
+        <PropertyRef Name="SupplierID" />
+      </Principal>
+      <Dependent Role="POrders">
+        <PropertyRef Name="SupplierID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_POrders_Users">
+    <End Role="Users" Type="Self.User" Multiplicity="1" />
+    <End Role="POrders" Type="Self.POrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="POrders">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReturnDetails_Products">
+    <End Role="Products" Type="Self.Product" Multiplicity="1" />
+    <End Role="ReturnDetails" Type="Self.ReturnDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="ReturnDetails">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SOrderDetails_Products">
+    <End Role="Products" Type="Self.Product" Multiplicity="1" />
+    <End Role="SOrderDetails" Type="Self.SOrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="SOrderDetails">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StockDetails_Products">
+    <End Role="Products" Type="Self.Product" Multiplicity="1" />
+    <End Role="StockDetails" Type="Self.StockDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="StockDetails">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Stocks_Products">
+    <End Role="Products" Type="Self.Product" Multiplicity="1" />
+    <End Role="Stocks" Type="Self.Stock" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="Stocks">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReturnDetails_Returns">
+    <End Role="Returns" Type="Self.Return" Multiplicity="1" />
+    <End Role="ReturnDetails" Type="Self.ReturnDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Returns">
+        <PropertyRef Name="ReturnID" />
+      </Principal>
+      <Dependent Role="ReturnDetails">
+        <PropertyRef Name="ReturnID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Returns_Suppliers">
+    <End Role="Suppliers" Type="Self.Supplier" Multiplicity="0..1" />
+    <End Role="Returns" Type="Self.Return" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Suppliers">
+        <PropertyRef Name="SupplierID" />
+      </Principal>
+      <Dependent Role="Returns">
+        <PropertyRef Name="SupplierID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Returns_Users">
+    <End Role="Users" Type="Self.User" Multiplicity="1" />
+    <End Role="Returns" Type="Self.Return" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="Returns">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserRoles_Roles">
+    <End Role="Roles" Type="Self.Role" Multiplicity="1" />
+    <End Role="UserRoles" Type="Self.UserRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="RoleID" />
+      </Principal>
+      <Dependent Role="UserRoles">
+        <PropertyRef Name="RoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ShareInvestment_ShareInvestmentHeads">
+    <End Role="ShareInvestmentHeads" Type="Self.ShareInvestmentHead" Multiplicity="1" />
+    <End Role="ShareInvestments" Type="Self.ShareInvestment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ShareInvestmentHeads">
+        <PropertyRef Name="SIHID" />
+      </Principal>
+      <Dependent Role="ShareInvestments">
+        <PropertyRef Name="SIHID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SOrderDetails_SOrders">
+    <End Role="SOrders" Type="Self.SOrder" Multiplicity="1" />
+    <End Role="SOrderDetails" Type="Self.SOrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SOrders">
+        <PropertyRef Name="SOrderID" />
+      </Principal>
+      <Dependent Role="SOrderDetails">
+        <PropertyRef Name="SOrderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SOrderDetails_StockDetails">
+    <End Role="StockDetails" Type="Self.StockDetail" Multiplicity="1" />
+    <End Role="SOrderDetails" Type="Self.SOrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StockDetails">
+        <PropertyRef Name="SDetailID" />
+      </Principal>
+      <Dependent Role="SOrderDetails">
+        <PropertyRef Name="StockDetailID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SOrders_Users">
+    <End Role="Users" Type="Self.User" Multiplicity="1" />
+    <End Role="SOrders" Type="Self.SOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="SOrders">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StockDetails_Stocks">
+    <End Role="Stocks" Type="Self.Stock" Multiplicity="0..1" />
+    <End Role="StockDetails" Type="Self.StockDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stocks">
+        <PropertyRef Name="StockID" />
+      </Principal>
+      <Dependent Role="StockDetails">
+        <PropertyRef Name="StockID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserRoles_Users">
+    <End Role="Users" Type="Self.User" Multiplicity="1" />
+    <End Role="UserRoles" Type="Self.UserRole" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="UserRoles">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DEWSRMEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Banks" EntityType="Self.Bank" />
+    <EntitySet Name="BankTransactions" EntityType="Self.BankTransaction" />
+    <EntitySet Name="Branches" EntityType="Self.Branch" />
+    <EntitySet Name="CardTypes" EntityType="Self.CardType" />
+    <EntitySet Name="CardTypeSetups" EntityType="Self.CardTypeSetup" />
+    <EntitySet Name="CashCollections" EntityType="Self.CashCollection" />
+    <EntitySet Name="Categorys" EntityType="Self.Category" />
+    <EntitySet Name="Colors" EntityType="Self.Color" />
+    <EntitySet Name="Companies" EntityType="Self.Company" />
+    <EntitySet Name="CreditSaleProducts" EntityType="Self.CreditSaleProduct" />
+    <EntitySet Name="CreditSales" EntityType="Self.CreditSale" />
+    <EntitySet Name="Customers" EntityType="Self.Customer" />
+    <EntitySet Name="DamageProducts" EntityType="Self.DamageProduct" />
+    <EntitySet Name="Designations" EntityType="Self.Designation" />
+    <EntitySet Name="Employees" EntityType="Self.Employee" />
+    <EntitySet Name="EmpSalaries" EntityType="Self.EmpSalary" />
+    <EntitySet Name="Expenditures" EntityType="Self.Expenditure" />
+    <EntitySet Name="ExpenseItems" EntityType="Self.ExpenseItem" />
+    <EntitySet Name="MenuPermissions" EntityType="Self.MenuPermission" />
+    <EntitySet Name="Menus" EntityType="Self.Menu" />
+    <EntitySet Name="Models" EntityType="Self.Model" />
+    <EntitySet Name="MonthlyStocks" EntityType="Self.MonthlyStock" />
+    <EntitySet Name="POProductDetails" EntityType="Self.POProductDetail" />
+    <EntitySet Name="POrderDetails" EntityType="Self.POrderDetail" />
+    <EntitySet Name="POrders" EntityType="Self.POrder" />
+    <EntitySet Name="PrevBalances" EntityType="Self.PrevBalance" />
+    <EntitySet Name="Products" EntityType="Self.Product" />
+    <EntitySet Name="ReturnDetails" EntityType="Self.ReturnDetail" />
+    <EntitySet Name="Returns" EntityType="Self.Return" />
+    <EntitySet Name="Roles" EntityType="Self.Role" />
+    <EntitySet Name="ShareInvestmentHeads" EntityType="Self.ShareInvestmentHead" />
+    <EntitySet Name="ShareInvestments" EntityType="Self.ShareInvestment" />
+    <EntitySet Name="SOrderDetails" EntityType="Self.SOrderDetail" />
+    <EntitySet Name="SOrders" EntityType="Self.SOrder" />
+    <EntitySet Name="StockDetails" EntityType="Self.StockDetail" />
+    <EntitySet Name="Stocks" EntityType="Self.Stock" />
+    <EntitySet Name="Suppliers" EntityType="Self.Supplier" />
+    <EntitySet Name="SystemInformations" EntityType="Self.SystemInformation" />
+    <EntitySet Name="UserRoles" EntityType="Self.UserRole" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <EntitySet Name="vw_CustomerLedger" EntityType="Self.vw_CustomerLedger" />
+    <EntitySet Name="vw_StockCheck" EntityType="Self.vw_StockCheck" />
+    <EntitySet Name="vw_SupplierLedger" EntityType="Self.vw_SupplierLedger" />
+    <AssociationSet Name="FK_BankTransaction_Banks" Association="Self.FK_BankTransaction_Banks">
+      <End Role="Banks" EntitySet="Banks" />
+      <End Role="BankTransactions" EntitySet="BankTransactions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CardTypeSetups_Banks" Association="Self.FK_CardTypeSetups_Banks">
+      <End Role="Banks" EntitySet="Banks" />
+      <End Role="CardTypeSetups" EntitySet="CardTypeSetups" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Branches_Branches" Association="Self.FK_Branches_Branches">
+      <End Role="Branches" EntitySet="Branches" />
+      <End Role="Branches1" EntitySet="Branches" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CardTypeSetups_CardTypes" Association="Self.FK_CardTypeSetups_CardTypes">
+      <End Role="CardTypes" EntitySet="CardTypes" />
+      <End Role="CardTypeSetups" EntitySet="CardTypeSetups" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CashCollections_Customers" Association="Self.FK_CashCollections_Customers">
+      <End Role="Customers" EntitySet="Customers" />
+      <End Role="CashCollections" EntitySet="CashCollections" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CashCollections_Suppliers" Association="Self.FK_CashCollections_Suppliers">
+      <End Role="Suppliers" EntitySet="Suppliers" />
+      <End Role="CashCollections" EntitySet="CashCollections" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Products_Categorys" Association="Self.FK_Products_Categorys">
+      <End Role="Categorys" EntitySet="Categorys" />
+      <End Role="Products" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Colors_Colors" Association="Self.FK_Colors_Colors">
+      <End Role="Colors" EntitySet="Colors" />
+      <End Role="Colors1" EntitySet="Colors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CreditSaleProducts_Colors" Association="Self.FK_CreditSaleProducts_Colors">
+      <End Role="Colors" EntitySet="Colors" />
+      <End Role="CreditSaleProducts" EntitySet="CreditSaleProducts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_POProductDetails_Colors" Association="Self.FK_POProductDetails_Colors">
+      <End Role="Colors" EntitySet="Colors" />
+      <End Role="POProductDetails" EntitySet="POProductDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_POrderDetails_ColorInfos" Association="Self.FK_POrderDetails_ColorInfos">
+      <End Role="Colors" EntitySet="Colors" />
+      <End Role="POrderDetails" EntitySet="POrderDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Stocks_ColorInfos" Association="Self.FK_Stocks_ColorInfos">
+      <End Role="Colors" EntitySet="Colors" />
+      <End Role="Stocks" EntitySet="Stocks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Products_Companies" Association="Self.FK_Products_Companies">
+      <End Role="Companies" EntitySet="Companies" />
+      <End Role="Products" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CreditSaleProducts_CreditSales" Association="Self.FK_CreditSaleProducts_CreditSales">
+      <End Role="CreditSales" EntitySet="CreditSales" />
+      <End Role="CreditSaleProducts" EntitySet="CreditSaleProducts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CreditSaleProducts_Products" Association="Self.FK_CreditSaleProducts_Products">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="CreditSaleProducts" EntitySet="CreditSaleProducts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CreditSaleProducts_StockDetails" Association="Self.FK_CreditSaleProducts_StockDetails">
+      <End Role="StockDetails" EntitySet="StockDetails" />
+      <End Role="CreditSaleProducts" EntitySet="CreditSaleProducts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CreditSales_Customers" Association="Self.FK_CreditSales_Customers">
+      <End Role="Customers" EntitySet="Customers" />
+      <End Role="CreditSales" EntitySet="CreditSales" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Returns_Customers" Association="Self.FK_Returns_Customers">
+      <End Role="Customers" EntitySet="Customers" />
+      <End Role="Returns" EntitySet="Returns" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SOrders_Customers" Association="Self.FK_SOrders_Customers">
+      <End Role="Customers" EntitySet="Customers" />
+      <End Role="SOrders" EntitySet="SOrders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DamageProducts_Products" Association="Self.FK_DamageProducts_Products">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="DamageProducts" EntitySet="DamageProducts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DamageProducts_StockDetails" Association="Self.FK_DamageProducts_StockDetails">
+      <End Role="StockDetails" EntitySet="StockDetails" />
+      <End Role="DamageProducts" EntitySet="DamageProducts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Employees_Designations" Association="Self.FK_Employees_Designations">
+      <End Role="Designations" EntitySet="Designations" />
+      <End Role="Employees" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmpSalaries_Employees" Association="Self.FK_EmpSalaries_Employees">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="EmpSalaries" EntitySet="EmpSalaries" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Expenditures_ExpenseItems" Association="Self.FK_Expenditures_ExpenseItems">
+      <End Role="ExpenseItems" EntitySet="ExpenseItems" />
+      <End Role="Expenditures" EntitySet="Expenditures" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MenuPermissions_Menus" Association="Self.FK_MenuPermissions_Menus">
+      <End Role="Menus" EntitySet="Menus" />
+      <End Role="MenuPermissions" EntitySet="MenuPermissions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MenuPermissions_Roles" Association="Self.FK_MenuPermissions_Roles">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="MenuPermissions" EntitySet="MenuPermissions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MonthlyStocks_Products" Association="Self.FK_MonthlyStocks_Products">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="MonthlyStocks" EntitySet="MonthlyStocks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_POProductDetails_POrderDetails" Association="Self.FK_POProductDetails_POrderDetails">
+      <End Role="POrderDetails" EntitySet="POrderDetails" />
+      <End Role="POProductDetails" EntitySet="POProductDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_POProductDetails_Products" Association="Self.FK_POProductDetails_Products">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="POProductDetails" EntitySet="POProductDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_POrderDetails_POrders" Association="Self.FK_POrderDetails_POrders">
+      <End Role="POrders" EntitySet="POrders" />
+      <End Role="POrderDetails" EntitySet="POrderDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_POrderDetails_Products" Association="Self.FK_POrderDetails_Products">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="POrderDetails" EntitySet="POrderDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StockDetails_POrderDetails" Association="Self.FK_StockDetails_POrderDetails">
+      <End Role="POrderDetails" EntitySet="POrderDetails" />
+      <End Role="StockDetails" EntitySet="StockDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_POrders_Suppliers" Association="Self.FK_POrders_Suppliers">
+      <End Role="Suppliers" EntitySet="Suppliers" />
+      <End Role="POrders" EntitySet="POrders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_POrders_Users" Association="Self.FK_POrders_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="POrders" EntitySet="POrders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReturnDetails_Products" Association="Self.FK_ReturnDetails_Products">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="ReturnDetails" EntitySet="ReturnDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SOrderDetails_Products" Association="Self.FK_SOrderDetails_Products">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="SOrderDetails" EntitySet="SOrderDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StockDetails_Products" Association="Self.FK_StockDetails_Products">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="StockDetails" EntitySet="StockDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Stocks_Products" Association="Self.FK_Stocks_Products">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="Stocks" EntitySet="Stocks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReturnDetails_Returns" Association="Self.FK_ReturnDetails_Returns">
+      <End Role="Returns" EntitySet="Returns" />
+      <End Role="ReturnDetails" EntitySet="ReturnDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Returns_Suppliers" Association="Self.FK_Returns_Suppliers">
+      <End Role="Suppliers" EntitySet="Suppliers" />
+      <End Role="Returns" EntitySet="Returns" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Returns_Users" Association="Self.FK_Returns_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Returns" EntitySet="Returns" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserRoles_Roles" Association="Self.FK_UserRoles_Roles">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="UserRoles" EntitySet="UserRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ShareInvestment_ShareInvestmentHeads" Association="Self.FK_ShareInvestment_ShareInvestmentHeads">
+      <End Role="ShareInvestmentHeads" EntitySet="ShareInvestmentHeads" />
+      <End Role="ShareInvestments" EntitySet="ShareInvestments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SOrderDetails_SOrders" Association="Self.FK_SOrderDetails_SOrders">
+      <End Role="SOrders" EntitySet="SOrders" />
+      <End Role="SOrderDetails" EntitySet="SOrderDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SOrderDetails_StockDetails" Association="Self.FK_SOrderDetails_StockDetails">
+      <End Role="StockDetails" EntitySet="StockDetails" />
+      <End Role="SOrderDetails" EntitySet="SOrderDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SOrders_Users" Association="Self.FK_SOrders_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="SOrders" EntitySet="SOrders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StockDetails_Stocks" Association="Self.FK_StockDetails_Stocks">
+      <End Role="Stocks" EntitySet="Stocks" />
+      <End Role="StockDetails" EntitySet="StockDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserRoles_Users" Association="Self.FK_UserRoles_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="UserRoles" EntitySet="UserRoles" />
+    </AssociationSet>
+    <EntitySet Name="CreditSalesDetails" EntityType="DEWSRMModel.CreditSalesDetail" />
+    <AssociationSet Name="FK_CreditSalesDetails_CreditSales" Association="DEWSRMModel.FK_CreditSalesDetails_CreditSales">
+      <End Role="CreditSale" EntitySet="CreditSales" />
+      <End Role="CreditSalesDetail" EntitySet="CreditSalesDetails" />
+    </AssociationSet>
+    <EntitySet Name="SMSFormates" EntityType="DEWSRMModel.SMSFormate" />
+    <EntitySet Name="SMSStatuses" EntityType="DEWSRMModel.SMSStatus" />
+    <AssociationSet Name="FK_SMSStatuses_SMSFormates" Association="DEWSRMModel.FK_SMSStatuses_SMSFormates">
+      <End Role="SMSFormate" EntitySet="SMSFormates" />
+      <End Role="SMSStatus" EntitySet="SMSStatuses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SMSStatuses_Users" Association="DEWSRMModel.FK_SMSStatuses_Users">
+      <End Role="User" EntitySet="Users" />
+      <End Role="SMSStatus" EntitySet="SMSStatuses" />
+    </AssociationSet>
+    <EntitySet Name="Godowns" EntityType="DEWSRMModel.Godown" />
+    <AssociationSet Name="FK_CreditSaleProducts_CreditSaleProducts" Association="DEWSRMModel.FK_CreditSaleProducts_CreditSaleProducts">
+      <End Role="CreditSaleProduct" EntitySet="CreditSaleProducts" />
+      <End Role="CreditSaleProduct1" EntitySet="CreditSaleProducts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CreditSaleProducts_Godowns" Association="DEWSRMModel.FK_CreditSaleProducts_Godowns">
+      <End Role="Godown" EntitySet="Godowns" />
+      <End Role="CreditSaleProduct" EntitySet="CreditSaleProducts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_POrderDetails_Godowns" Association="DEWSRMModel.FK_POrderDetails_Godowns">
+      <End Role="Godown" EntitySet="Godowns" />
+      <End Role="POrderDetail" EntitySet="POrderDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SOrderDetails_Godowns" Association="DEWSRMModel.FK_SOrderDetails_Godowns">
+      <End Role="Godown" EntitySet="Godowns" />
+      <End Role="SOrderDetail" EntitySet="SOrderDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Stocks_Godowns" Association="DEWSRMModel.FK_Stocks_Godowns">
+      <End Role="Godown" EntitySet="Godowns" />
+      <End Role="Stock" EntitySet="Stocks" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="CreditSalesDetail">
+    <Key>
+      <PropertyRef Name="CSDetailsID" />
+    </Key>
+    <Property Name="CSDetailsID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MonthDate" Type="DateTime" Precision="3" />
+    <Property Name="Balance" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="InstallmentAmt" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PaymentDate" Type="DateTime" Precision="3" />
+    <Property Name="CreditSalesID" Type="Int32" Nullable="false" />
+    <Property Name="PaymentStatus" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="InterestAmount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ClosingBalance" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ScheduleNo" Type="Int32" />
+    <Property Name="Remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsUnExpected" Type="Int32" Nullable="false" />
+    <Property Name="HireValue" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="NetValue" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="LastPayAdjustment" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="CardPaidAmount" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="CardTypeSetupID" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="DepositChargePercent" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="BankTranID" Type="Int32" Nullable="false" />
+    <Property Name="RemindDateForInstallment" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="CreditSale" Relationship="DEWSRMModel.FK_CreditSalesDetails_CreditSales" FromRole="CreditSalesDetail" ToRole="CreditSale" />
+  </EntityType>
+  <Association Name="FK_CreditSalesDetails_CreditSales">
+    <End Type="DEWSRMModel.CreditSale" Role="CreditSale" Multiplicity="1" />
+    <End Type="DEWSRMModel.CreditSalesDetail" Role="CreditSalesDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CreditSale">
+        <PropertyRef Name="CreditSalesID" />
+      </Principal>
+      <Dependent Role="CreditSalesDetail">
+        <PropertyRef Name="CreditSalesID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="SMSFormate">
+    <Key>
+      <PropertyRef Name="SMSFormateID" />
+    </Key>
+    <Property Name="SMSFormateID" Type="Int32" Nullable="false" />
+    <Property Name="Code" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SMSDescription" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SMSType" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="SMSStatuses" Relationship="DEWSRMModel.FK_SMSStatuses_SMSFormates" FromRole="SMSFormate" ToRole="SMSStatus" />
+  </EntityType>
+  <EntityType Name="SMSStatus">
+    <Key>
+      <PropertyRef Name="SMSStatusID" />
+    </Key>
+    <Property Name="SMSStatusID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Code" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SMSFormateID" Type="Int32" Nullable="false" />
+    <Property Name="SendingStatus" Type="Int32" Nullable="false" />
+    <Property Name="NoOfSMS" Type="Int32" Nullable="false" />
+    <Property Name="CustomerID" Type="Int32" />
+    <Property Name="ContactNo" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="EntryDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="SMS" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="ResponseMsg" Type="String" Nullable="false" MaxLength="350" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="SMSFormate" Relationship="DEWSRMModel.FK_SMSStatuses_SMSFormates" FromRole="SMSStatus" ToRole="SMSFormate" />
+    <NavigationProperty Name="User" Relationship="DEWSRMModel.FK_SMSStatuses_Users" FromRole="SMSStatus" ToRole="User" />
+  </EntityType>
+  <Association Name="FK_SMSStatuses_SMSFormates">
+    <End Type="DEWSRMModel.SMSFormate" Role="SMSFormate" Multiplicity="1" />
+    <End Type="DEWSRMModel.SMSStatus" Role="SMSStatus" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SMSFormate">
+        <PropertyRef Name="SMSFormateID" />
+      </Principal>
+      <Dependent Role="SMSStatus">
+        <PropertyRef Name="SMSFormateID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SMSStatuses_Users">
+    <End Type="DEWSRMModel.User" Role="User" Multiplicity="1" />
+    <End Type="DEWSRMModel.SMSStatus" Role="SMSStatus" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="SMSStatus">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Godown">
+    <Key>
+      <PropertyRef Name="GodownID" />
+    </Key>
+    <Property Name="GodownID" Type="Int32" Nullable="false" />
+    <Property Name="GodownCode" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="GodownName" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="CreditSaleProducts" Relationship="DEWSRMModel.FK_CreditSaleProducts_Godowns" FromRole="Godown" ToRole="CreditSaleProduct" />
+    <NavigationProperty Name="POrderDetails" Relationship="DEWSRMModel.FK_POrderDetails_Godowns" FromRole="Godown" ToRole="POrderDetail" />
+    <NavigationProperty Name="SOrderDetails" Relationship="DEWSRMModel.FK_SOrderDetails_Godowns" FromRole="Godown" ToRole="SOrderDetail" />
+    <NavigationProperty Name="Stocks" Relationship="DEWSRMModel.FK_Stocks_Godowns" FromRole="Godown" ToRole="Stock" />
+  </EntityType>
+  <Association Name="FK_CreditSaleProducts_CreditSaleProducts">
+    <End Type="DEWSRMModel.CreditSaleProduct" Role="CreditSaleProduct" Multiplicity="1" />
+    <End Type="DEWSRMModel.CreditSaleProduct" Role="CreditSaleProduct1" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="CreditSaleProduct">
+        <PropertyRef Name="CreditSaleProductsID" />
+      </Principal>
+      <Dependent Role="CreditSaleProduct1">
+        <PropertyRef Name="CreditSaleProductsID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CreditSaleProducts_Godowns">
+    <End Type="DEWSRMModel.Godown" Role="Godown" Multiplicity="0..1" />
+    <End Type="DEWSRMModel.CreditSaleProduct" Role="CreditSaleProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Godown">
+        <PropertyRef Name="GodownID" />
+      </Principal>
+      <Dependent Role="CreditSaleProduct">
+        <PropertyRef Name="GodownID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_POrderDetails_Godowns">
+    <End Type="DEWSRMModel.Godown" Role="Godown" Multiplicity="0..1" />
+    <End Type="DEWSRMModel.POrderDetail" Role="POrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Godown">
+        <PropertyRef Name="GodownID" />
+      </Principal>
+      <Dependent Role="POrderDetail">
+        <PropertyRef Name="GodownID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SOrderDetails_Godowns">
+    <End Type="DEWSRMModel.Godown" Role="Godown" Multiplicity="0..1" />
+    <End Type="DEWSRMModel.SOrderDetail" Role="SOrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Godown">
+        <PropertyRef Name="GodownID" />
+      </Principal>
+      <Dependent Role="SOrderDetail">
+        <PropertyRef Name="GodownID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Stocks_Godowns">
+    <End Type="DEWSRMModel.Godown" Role="Godown" Multiplicity="0..1" />
+    <End Type="DEWSRMModel.Stock" Role="Stock" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Godown">
+        <PropertyRef Name="GodownID" />
+      </Principal>
+      <Dependent Role="Stock">
+        <PropertyRef Name="GodownID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

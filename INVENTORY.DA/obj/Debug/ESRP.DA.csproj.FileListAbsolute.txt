@@ -1,0 +1,55 @@
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.DA\bin\Debug\ESRP.DA.dll.config
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.DA\bin\Debug\ESRP.DA.dll
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.DA\bin\Debug\ESRP.DA.pdb
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.DA\bin\Debug\EntityFramework.dll
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.DA\bin\Debug\EntityFramework.SqlServer.dll
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.DA\bin\Debug\SpellNumber.dll
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.DA\bin\Debug\EntityFramework.xml
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.DA\bin\Debug\EntityFramework.SqlServer.xml
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.DA\obj\Debug\ESRP.DA.csprojResolveAssemblyReference.cache
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.DA\obj\Debug\ESRP.DA.dll
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.DA\obj\Debug\ESRP.DA.pdb
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.DA\bin\Debug\ESRP.DA.dll.config
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.DA\bin\Debug\ESRP.DA.dll
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.DA\bin\Debug\ESRP.DA.pdb
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.DA\bin\Debug\EntityFramework.dll
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.DA\bin\Debug\EntityFramework.SqlServer.dll
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.DA\bin\Debug\SpellNumber.dll
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.DA\bin\Debug\EntityFramework.xml
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.DA\bin\Debug\EntityFramework.SqlServer.xml
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.DA\obj\Debug\ESRP.DA.csprojResolveAssemblyReference.cache
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.DA\obj\Debug\ESRP.DA.dll
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.DA\obj\Debug\ESRP.DA.pdb
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.DA\bin\Debug\ESRP.DA.dll.config
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.DA\bin\Debug\ESRP.DA.dll
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.DA\bin\Debug\ESRP.DA.pdb
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.DA\bin\Debug\EntityFramework.dll
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.DA\bin\Debug\EntityFramework.SqlServer.dll
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.DA\bin\Debug\SpellNumber.dll
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.DA\bin\Debug\EntityFramework.xml
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.DA\bin\Debug\EntityFramework.SqlServer.xml
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.DA\obj\Debug\ESRP.DA.dll
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.DA\obj\Debug\ESRP.DA.pdb
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.DA\obj\Debug\ESRP.DA.csprojResolveAssemblyReference.cache
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.DA\bin\Debug\ESRP.DA.dll.config
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.DA\bin\Debug\ESRP.DA.dll
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.DA\bin\Debug\ESRP.DA.pdb
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.DA\bin\Debug\EntityFramework.dll
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.DA\bin\Debug\EntityFramework.SqlServer.dll
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.DA\bin\Debug\SpellNumber.dll
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.DA\bin\Debug\EntityFramework.xml
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.DA\bin\Debug\EntityFramework.SqlServer.xml
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.DA\obj\Debug\ESRP.DA.csprojResolveAssemblyReference.cache
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.DA\obj\Debug\ESRP.DA.dll
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.DA\obj\Debug\ESRP.DA.pdb
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.DA\bin\Debug\ESRP.DA.dll.config
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.DA\bin\Debug\ESRP.DA.dll
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.DA\bin\Debug\ESRP.DA.pdb
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.DA\bin\Debug\EntityFramework.dll
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.DA\bin\Debug\EntityFramework.SqlServer.dll
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.DA\bin\Debug\SpellNumber.dll
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.DA\bin\Debug\EntityFramework.xml
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.DA\bin\Debug\EntityFramework.SqlServer.xml
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.DA\obj\Debug\ESRP.DA.csprojResolveAssemblyReference.cache
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.DA\obj\Debug\ESRP.DA.dll
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.DA\obj\Debug\ESRP.DA.pdb

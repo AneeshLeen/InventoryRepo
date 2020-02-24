@@ -1,0 +1,695 @@
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\ESRP.UI.exe.config
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\ESRP.UI.exe
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\ESRP.UI.pdb
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\DevExpress.XtraBars.v15.2.dll
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\EntityFramework.dll
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\EntityFramework.SqlServer.dll
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\ESRP.DA.dll
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\SpellNumber.dll
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\ESRP.DA.pdb
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\DevExpress.XtraBars.v15.2.xml
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\EntityFramework.xml
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\EntityFramework.SqlServer.xml
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\de\DevExpress.XtraBars.v15.2.resources.dll
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\es\DevExpress.XtraBars.v15.2.resources.dll
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\ja\DevExpress.XtraBars.v15.2.resources.dll
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\ru\DevExpress.XtraBars.v15.2.resources.dll
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.csprojResolveAssemblyReference.cache
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fBankControl.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fColorControl.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCustomerControl.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fInvestmentControl.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fItemControl.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fNewProductControl.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fStockDetailControl.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fProductControl.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.ctlCustomControl.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fBackUpDB.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.FNewMainForm3.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.FNewMainForm2.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCardTpyeSetups.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCardTypeSetup.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCashCollection.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCashCollections.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fBank.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fBanks.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fBankTransaction.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fBankTransactions.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCashDelivery.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCashDeliverys.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fColorInfo.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fColorInfos.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCompanies.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCompany.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.FCreditSale.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.FCreditSales.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fEmployeeSalaries.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fEmployeeSalary.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fEncryptor.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fExpenditure.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fExpenditureAndIncome.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fExpenditureAndIncomes.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fExpenditures.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fExpenseItem.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fExpenseItems.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fInvestment.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fInvestmentHead.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fInvestmentHeads.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fInvestments.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fModel.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fModels.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fPReturn.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fPReturns.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fReturn.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fReturns.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fDailyCashStatment.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fDefaultingCustomer.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fSupplierDueRpt.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fUserRole.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fBalanceSheet.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCollectionRpt.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCustomerDueReport.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCustomerDueRpt.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCustomerWiseReturnDetails.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCustomerWseBenefit.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fDailyCreditSales.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fDailyLedger.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fPPurchaseDetails.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fProfitAndLoss.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fPSalesDetails.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fPWSalesRpt.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fStockVSSalesSummary.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fSummaryReport.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fDailyCollection.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fDamageProduct.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fDamageProducts.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fDesignation.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fDesignations.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fEmployee.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fEmployees.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.FNewMainForm.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fSOrder.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fPurchaseOrder.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fProduct.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCustomer.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCategory.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCategorys.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fProducts.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCustomers.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fLogIn.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fSOrders.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fPurchaseOrders.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fReportViewer.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.FSplash.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fBenefitRpt.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCustomerWiseSales.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fMISRpt.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fMonthlyBenefitShow.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fMonthlyCreditSales.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fStockRpt.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fSuppliers.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fSupplier.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fSystemInformation.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fUser.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fUsers.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.Properties.Resources.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fDailyPurchaseRpt.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fExpenditureReport.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fDailySaleReport.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fPurchaseMonthly.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fPurchaseYearly.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fSupplierWisePurchase.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fTrialBalance.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fUpComingSchedule.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fYearlyBenefitShow.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fYearlySaleReport.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fOrderMonthlyReport.resources
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.csproj.GenerateResource.Cache
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.exe.licenses
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\RdlCompile.cache
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\RdlCompile.compiled
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.exe
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.pdb
+E:\CodeCan\Desktop\Electronics-desktop07112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fStocks.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\ESRP.UI.exe.config
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.exe
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.pdb
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\ESRP.UI.exe
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\ESRP.UI.pdb
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\DevExpress.XtraBars.v15.2.dll
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\EntityFramework.dll
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\EntityFramework.SqlServer.dll
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\ESRP.DA.dll
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\SpellNumber.dll
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\ESRP.DA.pdb
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\DevExpress.XtraBars.v15.2.xml
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\EntityFramework.xml
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\EntityFramework.SqlServer.xml
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\de\DevExpress.XtraBars.v15.2.resources.dll
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\es\DevExpress.XtraBars.v15.2.resources.dll
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\ja\DevExpress.XtraBars.v15.2.resources.dll
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\ru\DevExpress.XtraBars.v15.2.resources.dll
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.csprojResolveAssemblyReference.cache
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fBankControl.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fColorControl.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCustomerControl.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fInvestmentControl.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fItemControl.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fNewProductControl.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fStockDetailControl.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fProductControl.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.ctlCustomControl.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fBackUpDB.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.FNewMainForm3.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.FNewMainForm2.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCardTpyeSetups.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCardTypeSetup.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCashCollection.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCashCollections.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fBank.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fBanks.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fBankTransaction.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fBankTransactions.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCashDelivery.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCashDeliverys.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fColorInfo.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fColorInfos.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCompanies.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCompany.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.FCreditSale.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.FCreditSales.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fEmployeeSalaries.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fEmployeeSalary.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fEncryptor.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fExpenditure.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fExpenditureAndIncome.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fExpenditureAndIncomes.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fExpenditures.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fExpenseItem.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fExpenseItems.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fInvestment.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fInvestmentHead.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fInvestmentHeads.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fInvestments.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fModel.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fModels.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fPReturn.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fPReturns.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fStocks.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fReturn.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fReturns.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fDailyCashStatment.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fDefaultingCustomer.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fSupplierDueRpt.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fUserRole.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fBalanceSheet.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCollectionRpt.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCustomerDueReport.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCustomerDueRpt.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCustomerWiseReturnDetails.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCustomerWseBenefit.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fDailyCreditSales.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fDailyLedger.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fPPurchaseDetails.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fProfitAndLoss.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fPSalesDetails.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fPWSalesRpt.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fStockVSSalesSummary.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fSummaryReport.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fDailyCollection.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fDamageProduct.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fDamageProducts.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fDesignation.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fDesignations.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fEmployee.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fEmployees.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.FNewMainForm.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fSOrder.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fPurchaseOrder.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fProduct.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCustomer.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCategory.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCategorys.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fProducts.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCustomers.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fLogIn.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fSOrders.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fPurchaseOrders.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fReportViewer.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.FSplash.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fBenefitRpt.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCustomerWiseSales.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fMISRpt.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fMonthlyBenefitShow.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fMonthlyCreditSales.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fStockRpt.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fSuppliers.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fSupplier.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fSystemInformation.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fUser.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fUsers.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.Properties.Resources.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fDailyPurchaseRpt.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fExpenditureReport.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fDailySaleReport.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fPurchaseMonthly.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fPurchaseYearly.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fSupplierWisePurchase.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fTrialBalance.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fUpComingSchedule.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fYearlyBenefitShow.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fYearlySaleReport.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fOrderMonthlyReport.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.csproj.GenerateResource.Cache
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.exe.licenses
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\RdlCompile.cache
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop10112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\RdlCompile.compiled
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\ESRP.UI.exe.config
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\ESRP.UI.exe
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\ESRP.UI.pdb
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\DevExpress.XtraBars.v15.2.dll
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\EntityFramework.dll
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\EntityFramework.SqlServer.dll
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\ESRP.DA.dll
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\Jil.dll
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\Sigil.dll
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\SpellNumber.dll
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\ESRP.DA.pdb
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\DevExpress.XtraBars.v15.2.xml
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\EntityFramework.xml
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\EntityFramework.SqlServer.xml
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\de\DevExpress.XtraBars.v15.2.resources.dll
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\es\DevExpress.XtraBars.v15.2.resources.dll
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\ja\DevExpress.XtraBars.v15.2.resources.dll
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\ru\DevExpress.XtraBars.v15.2.resources.dll
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.csprojResolveAssemblyReference.cache
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fBankControl.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fColorControl.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCustomerControl.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fInvestmentControl.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fItemControl.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fNewProductControl.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fStockDetailControl.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fProductControl.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.ctlCustomControl.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fBackUpDB.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.FNewMainForm3.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.FNewMainForm2.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCardTpyeSetups.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCardTypeSetup.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCashCollection.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCashCollections.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fBank.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fBanks.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fBankTransaction.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fBankTransactions.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCashDelivery.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCashDeliverys.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fColorInfo.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fColorInfos.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCompanies.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCompany.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.FCreditSale.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.FCreditSales.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fEmployeeSalaries.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fEmployeeSalary.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fEncryptor.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fExpenditure.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fExpenditureAndIncome.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fExpenditureAndIncomes.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fExpenditures.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fExpenseItem.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fExpenseItems.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fInvestment.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fInvestmentHead.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fInvestmentHeads.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fInvestments.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fModel.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fModels.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fPReturn.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fPReturns.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fSOrderRetailSale.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fStocks.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fReturn.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fReturns.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fDailyCashStatment.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fDefaultingCustomer.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fSupplierDueRpt.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fUserRole.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fBalanceSheet.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCollectionRpt.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCustomerDueReport.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCustomerDueRpt.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCustomerWiseReturnDetails.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCustomerWseBenefit.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fDailyCreditSales.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fDailyLedger.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fPPurchaseDetails.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fProfitAndLoss.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fPSalesDetails.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fPWSalesRpt.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fStockVSSalesSummary.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fSummaryReport.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fDailyCollection.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fDamageProduct.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fDamageProducts.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fDesignation.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fDesignations.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fEmployee.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fEmployees.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.FNewMainForm.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fSOrder.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fPurchaseOrder.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fProduct.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCustomer.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCategory.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCategorys.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fProducts.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCustomers.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fLogIn.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fSOrders.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fPurchaseOrders.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fReportViewer.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.FSplash.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fBenefitRpt.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCustomerWiseSales.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fMISRpt.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fMonthlyBenefitShow.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fMonthlyCreditSales.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fStockRpt.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fSuppliers.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fSupplier.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fSystemInformation.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fUser.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fUsers.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.Properties.Resources.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fDailyPurchaseRpt.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fExpenditureReport.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fDailySaleReport.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fPurchaseMonthly.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fPurchaseYearly.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fSupplierWisePurchase.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fTrialBalance.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fUpComingSchedule.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fYearlyBenefitShow.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fYearlySaleReport.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fOrderMonthlyReport.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.csproj.GenerateResource.Cache
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.exe.licenses
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\RdlCompile.cache
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\RdlCompile.compiled
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.exe
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.pdb
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fMultipleSelectControl.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fSendSMS.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fSMSFormate.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fSMSFormates.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop11112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fSMSStatus.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\ESRP.UI.exe.config
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.exe
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.pdb
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\ESRP.UI.exe
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\ESRP.UI.pdb
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\DevExpress.XtraBars.v15.2.dll
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\EntityFramework.dll
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\EntityFramework.SqlServer.dll
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\ESRP.DA.dll
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\Jil.dll
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\Sigil.dll
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\SpellNumber.dll
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\ESRP.DA.pdb
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\DevExpress.XtraBars.v15.2.xml
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\EntityFramework.xml
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\EntityFramework.SqlServer.xml
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\de\DevExpress.XtraBars.v15.2.resources.dll
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\es\DevExpress.XtraBars.v15.2.resources.dll
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\ja\DevExpress.XtraBars.v15.2.resources.dll
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\ru\DevExpress.XtraBars.v15.2.resources.dll
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.csprojResolveAssemblyReference.cache
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fBankControl.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fColorControl.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCustomerControl.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fInvestmentControl.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fItemControl.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fMultipleSelectControl.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fNewProductControl.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fStockDetailControl.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fProductControl.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.ctlCustomControl.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fBackUpDB.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.FNewMainForm3.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.FNewMainForm2.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCardTpyeSetups.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCardTypeSetup.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCashCollection.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCashCollections.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fBank.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fBanks.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fBankTransaction.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fBankTransactions.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCashDelivery.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCashDeliverys.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fColorInfo.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fColorInfos.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCompanies.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCompany.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.FCreditSale.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.FCreditSales.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fEmployeeSalaries.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fEmployeeSalary.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fEncryptor.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fExpenditure.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fExpenditureAndIncome.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fExpenditureAndIncomes.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fExpenditures.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fExpenseItem.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fExpenseItems.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fInvestment.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fInvestmentHead.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fInvestmentHeads.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fInvestments.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fModel.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fModels.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fPReturn.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fPReturns.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fSOrderRetailSale.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fStocks.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fReturn.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fReturns.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fDailyCashStatment.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fDefaultingCustomer.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fSupplierDueRpt.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fSendSMS.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fSMSFormate.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fSMSFormates.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fSMSStatus.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fUserRole.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fBalanceSheet.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCollectionRpt.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCustomerDueReport.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCustomerDueRpt.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCustomerWiseReturnDetails.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCustomerWseBenefit.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fDailyCreditSales.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fDailyLedger.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fPPurchaseDetails.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fProfitAndLoss.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fPSalesDetails.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fPWSalesRpt.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fStockVSSalesSummary.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fSummaryReport.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fDailyCollection.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fDamageProduct.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fDamageProducts.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fDesignation.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fDesignations.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fEmployee.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fEmployees.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.FNewMainForm.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fSOrder.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fPurchaseOrder.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fProduct.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCustomer.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCategory.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCategorys.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fProducts.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCustomers.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fLogIn.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fSOrders.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fPurchaseOrders.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fReportViewer.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.FSplash.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fBenefitRpt.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCustomerWiseSales.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fMISRpt.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fMonthlyBenefitShow.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fMonthlyCreditSales.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fStockRpt.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fSuppliers.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fSupplier.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fSystemInformation.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fUser.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fUsers.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.Properties.Resources.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fDailyPurchaseRpt.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fExpenditureReport.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fDailySaleReport.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fPurchaseMonthly.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fPurchaseYearly.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fSupplierWisePurchase.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fTrialBalance.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fUpComingSchedule.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fYearlyBenefitShow.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fYearlySaleReport.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fOrderMonthlyReport.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.csproj.GenerateResource.Cache
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.exe.licenses
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\RdlCompile.cache
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop19112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\RdlCompile.compiled
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\ESRP.UI.exe.config
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.exe
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.pdb
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\ESRP.UI.exe
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\ESRP.UI.pdb
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\DevExpress.XtraBars.v15.2.dll
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\EntityFramework.dll
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\EntityFramework.SqlServer.dll
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\ESRP.DA.dll
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\Jil.dll
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\Sigil.dll
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\SpellNumber.dll
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\ESRP.DA.pdb
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\DevExpress.XtraBars.v15.2.xml
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\EntityFramework.xml
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\EntityFramework.SqlServer.xml
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\de\DevExpress.XtraBars.v15.2.resources.dll
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\es\DevExpress.XtraBars.v15.2.resources.dll
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\ja\DevExpress.XtraBars.v15.2.resources.dll
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\ru\DevExpress.XtraBars.v15.2.resources.dll
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.csprojResolveAssemblyReference.cache
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fBankControl.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fColorControl.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCustomerControl.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fInvestmentControl.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fItemControl.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fMultipleSelectControl.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fNewProductControl.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fStockDetailControl.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fProductControl.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.ctlCustomControl.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fBackUpDB.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.FNewMainForm3.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.FNewMainForm2.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCardTpyeSetups.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCardTypeSetup.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCashCollection.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCashCollections.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fBank.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fBanks.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fBankTransaction.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fBankTransactions.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCashDelivery.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCashDeliverys.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fColorInfo.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fColorInfos.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCompanies.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCompany.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.FCreditSale.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.FCreditSales.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fEmployeeSalaries.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fEmployeeSalary.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fEncryptor.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fExpenditure.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fExpenditureAndIncome.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fExpenditureAndIncomes.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fExpenditures.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fExpenseItem.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fExpenseItems.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fInvestment.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fInvestmentHead.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fInvestmentHeads.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fInvestments.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fModel.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fModels.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fPReturn.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fPReturns.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fSOrderRetailSale.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fStocks.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fReturn.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fReturns.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fDailyCashStatment.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fDefaultingCustomer.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fSupplierDueRpt.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fSendSMS.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fSMSFormate.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fSMSFormates.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fSMSStatus.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fUserRole.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fBalanceSheet.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCollectionRpt.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCustomerDueReport.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCustomerDueRpt.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCustomerWiseReturnDetails.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCustomerWseBenefit.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fDailyCreditSales.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fDailyLedger.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fPPurchaseDetails.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fProfitAndLoss.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fPSalesDetails.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fPWSalesRpt.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fStockVSSalesSummary.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fSummaryReport.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fDailyCollection.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fDamageProduct.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fDamageProducts.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fDesignation.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fDesignations.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fEmployee.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fEmployees.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.FNewMainForm.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fSOrder.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fPurchaseOrder.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fProduct.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCustomer.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCategory.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCategorys.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fProducts.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCustomers.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fLogIn.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fSOrders.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fPurchaseOrders.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fReportViewer.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.FSplash.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fBenefitRpt.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fCustomerWiseSales.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fMISRpt.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fMonthlyBenefitShow.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fMonthlyCreditSales.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fStockRpt.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fSuppliers.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fSupplier.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fSystemInformation.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fUser.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fUsers.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.Properties.Resources.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fDailyPurchaseRpt.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fExpenditureReport.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fDailySaleReport.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fPurchaseMonthly.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fPurchaseYearly.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fSupplierWisePurchase.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fTrialBalance.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fUpComingSchedule.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fYearlyBenefitShow.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fYearlySaleReport.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.fOrderMonthlyReport.resources
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.csproj.GenerateResource.Cache
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.exe.licenses
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\RdlCompile.cache
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop20112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\RdlCompile.compiled
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc\Main_Files\Software\AliyaLibrary.UI\bin\Debug\ESRP.UI.exe.config
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.exe
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.pdb
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\bin\Debug\ESRP.UI.exe.config
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.exe
+G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\ESRP.UI.pdb

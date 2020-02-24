@@ -1,0 +1,534 @@
+
+-------------------------------------------
+----------Date: 23-01-19-------------------
+-------------------------------------------
+--exec Daily_Return_Report_Details '2018-12-05 17:27:54.833','2020-12-10 17:27:54.833'
+
+ALTER Procedure [dbo].[Daily_Return_Report_Details]
+
+(
+	@FromDate DATETIME,
+	@ToDate DATETIME
+)
+As
+
+
+select 'RT' as 'SalesType',
+        RT.ReturnID 'SOrderID',
+		Convert(Datetime,  Convert(date ,RT.ReturnDate)) 'InvoiceDate',
+		RT.InvoiceNo,
+		CUS.CustomerType as 'CusType',
+		CUS.Name as 'CustomerName',
+		p.ProductID,
+		p.ProductType,
+		P.ProductName,
+		C.Description as 'CategoryName',
+		com.Description 'Company',
+		col.ColorID,
+		col.Description 'Color',
+		sd.IMENO,
+		RTD.Quantity,
+		RTD.UnitPrice,
+		RTD.UTAmount 
+from ReturnDetails  RTD  
+		join Returns RT on RTD.ReturnID=RT.ReturnID
+		join Products P on P.ProductID=RTD.ProductID
+		join Categorys C on C.CategoryID=P.CategoryID
+		join Customers CUS on CUS.CustomerID=RT.CustomerID
+		join StockDetails sd on RTD.SDetailID = sd.SDetailID
+		join Colors col on sd.ColorID = col.ColorID
+		join Companies com on P.ComapnyID=com.CompanyID
+where RT.ReturnDate>=@FromDate and RT.ReturnDate<=@ToDate 
+
+-------------------------------------------
+--exec Daily_Sales_Report_Details '2018-12-05 17:27:54.833','2020-12-10 17:27:54.833'
+
+ALTER Procedure [dbo].[Daily_Sales_Report_Details]
+
+(
+@FromDate DATETIME,
+@ToDate DATETIME
+)
+As
+
+
+select 'SO' as 'SalesType', 
+SO.SOrderID,
+SO.InvoiceDate,
+SO.InvoiceNo,
+CUS.CustomerID,
+CUS.CustomerType as 'CusType',
+CUS.Name as 'CustomerName',
+p.ProductType,
+p.ProductID,
+P.ProductName,
+C.Description as 'CategoryName',
+com.Description 'Company',
+col.ColorID,
+col.Description 'Color',
+sd.IMENO,
+SOD.Quantity,
+SOD.UnitPrice,
+ 
+SOD.UnitPrice*SOD.Quantity  as 'UTAmount' ,
+SOD.Quantity*(SOD.PPDAmount+( (SO.TDAmount+SO.Adjustment)/(SO.GrandTotal-SO.NetDiscount+SO.TDAmount))* (SOD.UnitPrice-SOD.PPDAmount))  as 'PPDAmount' ,
+0 as 'HirePrice',
+SOD.Quantity*(SOD.UnitPrice -(SOD.PPDAmount+( (SO.TDAmount+SO.Adjustment)/(SO.GrandTotal-SO.NetDiscount+SO.TDAmount))* (SOD.UnitPrice-SOD.PPDAmount)) ) as 'NetPrice' 
+--(-SOD.PPDAmount)
+from SOrderDetails SOD  
+join SOrders SO on SO.SOrderID=SOD.SOrderID  
+join Products P on P.ProductID=SOD.ProductID 
+join Categorys C on C.CategoryID=P.CategoryID 
+join Customers CUS on CUS.CustomerID=So.CustomerID
+join StockDetails sd on SOD.StockDetailID = sd.SDetailID
+join Colors col on sd.ColorID = col.ColorID  
+join Companies com on P.ComapnyID=com.CompanyID
+where So.InvoiceDate>=@FromDate and So.InvoiceDate<=@ToDate and SO.Status=1
+
+union all
+
+select  'CS' as 'SalesType', 
+CS.CreditSalesID 'SOrderID',
+CS.SalesDate as 'InvoiceDate', 
+CS.InvoiceNo,
+CUS.CustomerID,
+CUS.CustomerType as 'CusType', 
+CUS.Name as 'CustomerName',
+p.ProductType,
+p.ProductID,
+P.ProductName,
+C.Description as 'CategoryName',
+com.Description 'Company',
+col.ColorID,
+col.Description 'Color',
+sd.IMENO,
+CSP.Quantity ,
+CSP.UnitPrice,
+CSP.UnitPrice * CSP.Quantity as 'UTAmount',
+ case when  ( ((CS.Discount)/(CS.TSalesAmt-CS.FirstTotalInterest))* (CSP.UnitPrice * CSP.Quantity)-CSP.TotalInterest )>0 then
+ 
+ ( ((CS.Discount)/(CS.TSalesAmt-CS.FirstTotalInterest))* (CSP.UnitPrice * CSP.Quantity)-CSP.TotalInterest )
+ else
+ 0 end
+ 
+ 
+  as 'PPDAmount', 
+CSP.TotalInterest-((CS.Discount)/(CS.TSalesAmt-CS.FirstTotalInterest))* (CSP.UnitPrice * CSP.Quantity) as 'HirePrice',  
+CSP.UnitPrice * CSP.Quantity +(CSP.TotalInterest-((CS.Discount)/(CS.TSalesAmt-CS.FirstTotalInterest))* (CSP.UnitPrice * CSP.Quantity))as 'NetPrice' 
+from  CreditSaleProducts CSP 
+join CreditSales CS on CS.CreditSalesID =CSP.CreditSalesID  
+join Products P on CSP.ProductID=P.ProductID 
+join Categorys C on C.CategoryID=P.CategoryID  
+join  Customers CUS on CUS.CustomerID=CS.CustomerID 
+join StockDetails sd on CSP.StockDetailID = sd.SDetailID
+join Colors col on sd.ColorID = col.ColorID
+join Companies com on P.ComapnyID=com.CompanyID
+where CS.SalesDate>=@FromDate and CS.SalesDate<=@ToDate and CS.Status=1
+
+
+-------------------------------------------
+----------Date: 16-01-19-------------------
+-------------------------------------------
+/* To prevent any potential data loss issues, you should review this script in detail before running it outside the context of the database designer.*/
+BEGIN TRANSACTION
+SET QUOTED_IDENTIFIER ON
+SET ARITHABORT ON
+SET NUMERIC_ROUNDABORT OFF
+SET CONCAT_NULL_YIELDS_NULL ON
+SET ANSI_NULLS ON
+SET ANSI_PADDING ON
+SET ANSI_WARNINGS ON
+COMMIT
+BEGIN TRANSACTION
+GO
+ALTER TABLE dbo.SOrders ADD
+	BankTranID int NOT NULL CONSTRAINT DF_SOrders_BankTranID DEFAULT 0,
+	CardPaidAmount decimal(18, 2) NOT NULL CONSTRAINT DF_SOrders_CardPaidAmount DEFAULT ((0)),
+	CardTypeSetupID int NOT NULL CONSTRAINT DF_SOrders_CardTypeSetupID DEFAULT ((0)),
+	DepositChargePercent decimal(18, 2) NOT NULL CONSTRAINT DF_SOrders_DepositChargePercent DEFAULT ((0))
+GO
+ALTER TABLE dbo.SOrders SET (LOCK_ESCALATION = TABLE)
+GO
+COMMIT
+
+-------------------------------------------
+/* To prevent any potential data loss issues, you should review this script in detail before running it outside the context of the database designer.*/
+BEGIN TRANSACTION
+SET QUOTED_IDENTIFIER ON
+SET ARITHABORT ON
+SET NUMERIC_ROUNDABORT OFF
+SET CONCAT_NULL_YIELDS_NULL ON
+SET ANSI_NULLS ON
+SET ANSI_PADDING ON
+SET ANSI_WARNINGS ON
+COMMIT
+BEGIN TRANSACTION
+GO
+ALTER TABLE dbo.CreditSalesDetails ADD
+	BankTranID int NOT NULL CONSTRAINT DF_CreditSalesDetails_BankTranID DEFAULT 0
+GO
+ALTER TABLE dbo.CreditSalesDetails SET (LOCK_ESCALATION = TABLE)
+GO
+COMMIT
+
+-------------------------------------------
+/* To prevent any potential data loss issues, you should review this script in detail before running it outside the context of the database designer.*/
+BEGIN TRANSACTION
+SET QUOTED_IDENTIFIER ON
+SET ARITHABORT ON
+SET NUMERIC_ROUNDABORT OFF
+SET CONCAT_NULL_YIELDS_NULL ON
+SET ANSI_NULLS ON
+SET ANSI_PADDING ON
+SET ANSI_WARNINGS ON
+COMMIT
+BEGIN TRANSACTION
+GO
+ALTER TABLE dbo.CreditSalesDetails ADD
+	CardPaidAmount decimal(18, 2) NOT NULL CONSTRAINT DF_CreditSalesDetails_CardPaidAmount DEFAULT 0,
+	CardTypeSetupID decimal(18, 2) NOT NULL CONSTRAINT DF_CreditSalesDetails_CardTypeSetupID DEFAULT 0,
+	DepositChargePercent decimal(18, 2) NOT NULL CONSTRAINT DF_CreditSalesDetails_DepositChargePercent DEFAULT 0
+GO
+ALTER TABLE dbo.CreditSalesDetails SET (LOCK_ESCALATION = TABLE)
+GO
+COMMIT
+
+-------------------------------------------
+----------Date: 15-01-19-------------------
+-------------------------------------------
+
+-------------------------------------------
+/* To prevent any potential data loss issues, you should review this script in detail before running it outside the context of the database designer.*/
+BEGIN TRANSACTION
+SET QUOTED_IDENTIFIER ON
+SET ARITHABORT ON
+SET NUMERIC_ROUNDABORT OFF
+SET CONCAT_NULL_YIELDS_NULL ON
+SET ANSI_NULLS ON
+SET ANSI_PADDING ON
+SET ANSI_WARNINGS ON
+COMMIT
+BEGIN TRANSACTION
+GO
+ALTER TABLE dbo.BankTransactions
+	DROP CONSTRAINT FK_BankTransaction_Banks
+GO
+ALTER TABLE dbo.Banks SET (LOCK_ESCALATION = TABLE)
+GO
+COMMIT
+BEGIN TRANSACTION
+GO
+ALTER TABLE dbo.BankTransactions
+	DROP CONSTRAINT DF_BankTransactions_CusDealerID
+GO
+CREATE TABLE dbo.Tmp_BankTransactions
+	(
+	BankTranID int NOT NULL IDENTITY (1, 1),
+	TranDate date NOT NULL,
+	TransactionNo varchar(250) NOT NULL,
+	TransactionType int NOT NULL,
+	Amount decimal(18, 2) NOT NULL,
+	BankID int NOT NULL,
+	CustomerID int NULL,
+	SupplierID int NULL,
+	AnotherBankID int NULL,
+	ChecqueNo nchar(250) NULL,
+	Remarks nvarchar(250) NULL,
+	CusDealerID int NOT NULL
+	)  ON [PRIMARY]
+GO
+ALTER TABLE dbo.Tmp_BankTransactions SET (LOCK_ESCALATION = TABLE)
+GO
+ALTER TABLE dbo.Tmp_BankTransactions ADD CONSTRAINT
+	DF_BankTransactions_CusDealerID DEFAULT ((0)) FOR CusDealerID
+GO
+SET IDENTITY_INSERT dbo.Tmp_BankTransactions ON
+GO
+IF EXISTS(SELECT * FROM dbo.BankTransactions)
+	 EXEC('INSERT INTO dbo.Tmp_BankTransactions (BankTranID, TranDate, TransactionNo, TransactionType, Amount, BankID, CustomerID, SupplierID, AnotherBankID, ChecqueNo, Remarks, CusDealerID)
+		SELECT BankTranID, TranDate, TransactionNo, TransactionType, Amount, BankID, CustomerID, SupplierID, AnotherBankID, ChecqueNo, Remarks, CusDealerID FROM dbo.BankTransactions WITH (HOLDLOCK TABLOCKX)')
+GO
+SET IDENTITY_INSERT dbo.Tmp_BankTransactions OFF
+GO
+DROP TABLE dbo.BankTransactions
+GO
+EXECUTE sp_rename N'dbo.Tmp_BankTransactions', N'BankTransactions', 'OBJECT' 
+GO
+ALTER TABLE dbo.BankTransactions ADD CONSTRAINT
+	PK_BankTransaction PRIMARY KEY CLUSTERED 
+	(
+	BankTranID
+	) WITH( STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+
+GO
+ALTER TABLE dbo.BankTransactions ADD CONSTRAINT
+	FK_BankTransaction_Banks FOREIGN KEY
+	(
+	BankID
+	) REFERENCES dbo.Banks
+	(
+	BankID
+	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION 
+	
+GO
+COMMIT
+
+-------------------------------------------
+----------Date: 14-01-19-------------------
+-------------------------------------------
+/* To prevent any potential data loss issues, you should review this script in detail before running it outside the context of the database designer.*/
+BEGIN TRANSACTION
+SET QUOTED_IDENTIFIER ON
+SET ARITHABORT ON
+SET NUMERIC_ROUNDABORT OFF
+SET CONCAT_NULL_YIELDS_NULL ON
+SET ANSI_NULLS ON
+SET ANSI_PADDING ON
+SET ANSI_WARNINGS ON
+COMMIT
+BEGIN TRANSACTION
+GO
+ALTER TABLE dbo.CreditSales ADD
+	BankTranID int NOT NULL CONSTRAINT DF_CreditSales_BankTranID DEFAULT 0,
+	CardPaidAmount decimal(18, 2) NOT NULL CONSTRAINT DF_CreditSales_CardPaidAmount DEFAULT 0,
+	CardTypeSetupID int NOT NULL CONSTRAINT DF_CreditSales_CardTypeSetupID DEFAULT 0,
+	DepositChargePercent decimal(18, 2) NOT NULL CONSTRAINT DF_CreditSales_DepositChargePercent DEFAULT 0
+GO
+ALTER TABLE dbo.CreditSales SET (LOCK_ESCALATION = TABLE)
+GO
+COMMIT
+
+-------------------------------------------
+/* To prevent any potential data loss issues, you should review this script in detail before running it outside the context of the database designer.*/
+BEGIN TRANSACTION
+SET QUOTED_IDENTIFIER ON
+SET ARITHABORT ON
+SET NUMERIC_ROUNDABORT OFF
+SET CONCAT_NULL_YIELDS_NULL ON
+SET ANSI_NULLS ON
+SET ANSI_PADDING ON
+SET ANSI_WARNINGS ON
+COMMIT
+BEGIN TRANSACTION
+GO
+ALTER TABLE dbo.SOrderDetails
+	DROP CONSTRAINT DF_SOrderDetails_WStatus
+GO
+ALTER TABLE dbo.SOrderDetails
+	DROP COLUMN WPeriod, WDate, WStatus
+GO
+ALTER TABLE dbo.SOrderDetails SET (LOCK_ESCALATION = TABLE)
+GO
+COMMIT
+
+-------------------------------------------
+/* To prevent any potential data loss issues, you should review this script in detail before running it outside the context of the database designer.*/
+BEGIN TRANSACTION
+SET QUOTED_IDENTIFIER ON
+SET ARITHABORT ON
+SET NUMERIC_ROUNDABORT OFF
+SET CONCAT_NULL_YIELDS_NULL ON
+SET ANSI_NULLS ON
+SET ANSI_PADDING ON
+SET ANSI_WARNINGS ON
+COMMIT
+BEGIN TRANSACTION
+GO
+ALTER TABLE dbo.CreditSaleProducts
+	DROP CONSTRAINT DF_CreditSaleProducts_WPeriod
+GO
+ALTER TABLE dbo.CreditSaleProducts
+	DROP CONSTRAINT DF_CreditSaleProducts_WStatus
+GO
+ALTER TABLE dbo.CreditSaleProducts
+	DROP COLUMN WPeriod, WDate, WStatus
+GO
+ALTER TABLE dbo.CreditSaleProducts SET (LOCK_ESCALATION = TABLE)
+GO
+COMMIT
+
+-------------------------------------------
+/* To prevent any potential data loss issues, you should review this script in detail before running it outside the context of the database designer.*/
+BEGIN TRANSACTION
+SET QUOTED_IDENTIFIER ON
+SET ARITHABORT ON
+SET NUMERIC_ROUNDABORT OFF
+SET CONCAT_NULL_YIELDS_NULL ON
+SET ANSI_NULLS ON
+SET ANSI_PADDING ON
+SET ANSI_WARNINGS ON
+COMMIT
+BEGIN TRANSACTION
+GO
+EXECUTE sp_rename N'dbo.SOrderDetails.CompressorWarrentyMonth', N'Tmp_CompressorWarrenty_20', 'COLUMN' 
+GO
+EXECUTE sp_rename N'dbo.SOrderDetails.PanelWarrentyMonth', N'Tmp_PanelWarrenty_21', 'COLUMN' 
+GO
+EXECUTE sp_rename N'dbo.SOrderDetails.MotorWarrentyMonth', N'Tmp_MotorWarrenty_22', 'COLUMN' 
+GO
+EXECUTE sp_rename N'dbo.SOrderDetails.SparePartsWarrentyMonth', N'Tmp_SparePartsWarrenty_23', 'COLUMN' 
+GO
+EXECUTE sp_rename N'dbo.SOrderDetails.ServiceWarrentyMonth', N'Tmp_ServiceWarrenty_24', 'COLUMN' 
+GO
+EXECUTE sp_rename N'dbo.SOrderDetails.Tmp_CompressorWarrenty_20', N'CompressorWarrenty', 'COLUMN' 
+GO
+EXECUTE sp_rename N'dbo.SOrderDetails.Tmp_PanelWarrenty_21', N'PanelWarrenty', 'COLUMN' 
+GO
+EXECUTE sp_rename N'dbo.SOrderDetails.Tmp_MotorWarrenty_22', N'MotorWarrenty', 'COLUMN' 
+GO
+EXECUTE sp_rename N'dbo.SOrderDetails.Tmp_SparePartsWarrenty_23', N'SparePartsWarrenty', 'COLUMN' 
+GO
+EXECUTE sp_rename N'dbo.SOrderDetails.Tmp_ServiceWarrenty_24', N'ServiceWarrenty', 'COLUMN' 
+GO
+ALTER TABLE dbo.SOrderDetails SET (LOCK_ESCALATION = TABLE)
+GO
+COMMIT
+
+-------------------------------------------
+/* To prevent any potential data loss issues, you should review this script in detail before running it outside the context of the database designer.*/
+BEGIN TRANSACTION
+SET QUOTED_IDENTIFIER ON
+SET ARITHABORT ON
+SET NUMERIC_ROUNDABORT OFF
+SET CONCAT_NULL_YIELDS_NULL ON
+SET ANSI_NULLS ON
+SET ANSI_PADDING ON
+SET ANSI_WARNINGS ON
+COMMIT
+BEGIN TRANSACTION
+GO
+EXECUTE sp_rename N'dbo.CreditSaleProducts.CompressorWarrentyMonth', N'Tmp_CompressorWarrenty_10', 'COLUMN' 
+GO
+EXECUTE sp_rename N'dbo.CreditSaleProducts.PanelWarrentyMonth', N'Tmp_PanelWarrenty_11', 'COLUMN' 
+GO
+EXECUTE sp_rename N'dbo.CreditSaleProducts.MotorWarrentyMonth', N'Tmp_MotorWarrenty_12', 'COLUMN' 
+GO
+EXECUTE sp_rename N'dbo.CreditSaleProducts.SparePartsWarrentyMonth', N'Tmp_SparePartsWarrenty_13', 'COLUMN' 
+GO
+EXECUTE sp_rename N'dbo.CreditSaleProducts.ServiceWarrentyMonth', N'Tmp_ServiceWarrenty_14', 'COLUMN' 
+GO
+EXECUTE sp_rename N'dbo.CreditSaleProducts.Tmp_CompressorWarrenty_10', N'CompressorWarrenty', 'COLUMN' 
+GO
+EXECUTE sp_rename N'dbo.CreditSaleProducts.Tmp_PanelWarrenty_11', N'PanelWarrenty', 'COLUMN' 
+GO
+EXECUTE sp_rename N'dbo.CreditSaleProducts.Tmp_MotorWarrenty_12', N'MotorWarrenty', 'COLUMN' 
+GO
+EXECUTE sp_rename N'dbo.CreditSaleProducts.Tmp_SparePartsWarrenty_13', N'SparePartsWarrenty', 'COLUMN' 
+GO
+EXECUTE sp_rename N'dbo.CreditSaleProducts.Tmp_ServiceWarrenty_14', N'ServiceWarrenty', 'COLUMN' 
+GO
+ALTER TABLE dbo.CreditSaleProducts SET (LOCK_ESCALATION = TABLE)
+GO
+COMMIT
+
+-------------------------------------------
+/* To prevent any potential data loss issues, you should review this script in detail before running it outside the context of the database designer.*/
+BEGIN TRANSACTION
+SET QUOTED_IDENTIFIER ON
+SET ARITHABORT ON
+SET NUMERIC_ROUNDABORT OFF
+SET CONCAT_NULL_YIELDS_NULL ON
+SET ANSI_NULLS ON
+SET ANSI_PADDING ON
+SET ANSI_WARNINGS ON
+COMMIT
+BEGIN TRANSACTION
+GO
+EXECUTE sp_rename N'dbo.Products.CompressorWarrentyMonth', N'Tmp_CompressorWarrenty', 'COLUMN' 
+GO
+EXECUTE sp_rename N'dbo.Products.PanelWarrentyMonth', N'Tmp_PanelWarrenty_1', 'COLUMN' 
+GO
+EXECUTE sp_rename N'dbo.Products.MotorWarrentyMonth', N'Tmp_MotorWarrenty_2', 'COLUMN' 
+GO
+EXECUTE sp_rename N'dbo.Products.SparePartsWarrentyMonth', N'Tmp_SparePartsWarrenty_3', 'COLUMN' 
+GO
+EXECUTE sp_rename N'dbo.Products.ServiceWarrentyMonth', N'Tmp_ServiceWarrenty_4', 'COLUMN' 
+GO
+EXECUTE sp_rename N'dbo.Products.Tmp_CompressorWarrenty', N'CompressorWarrenty', 'COLUMN' 
+GO
+EXECUTE sp_rename N'dbo.Products.Tmp_PanelWarrenty_1', N'PanelWarrenty', 'COLUMN' 
+GO
+EXECUTE sp_rename N'dbo.Products.Tmp_MotorWarrenty_2', N'MotorWarrenty', 'COLUMN' 
+GO
+EXECUTE sp_rename N'dbo.Products.Tmp_SparePartsWarrenty_3', N'SparePartsWarrenty', 'COLUMN' 
+GO
+EXECUTE sp_rename N'dbo.Products.Tmp_ServiceWarrenty_4', N'ServiceWarrenty', 'COLUMN' 
+GO
+ALTER TABLE dbo.Products SET (LOCK_ESCALATION = TABLE)
+GO
+COMMIT
+
+-------------------------------------------
+----------Date: 13-01-19-------------------
+-------------------------------------------
+/* To prevent any potential data loss issues, you should review this script in detail before running it outside the context of the database designer.*/
+BEGIN TRANSACTION
+SET QUOTED_IDENTIFIER ON
+SET ARITHABORT ON
+SET NUMERIC_ROUNDABORT OFF
+SET CONCAT_NULL_YIELDS_NULL ON
+SET ANSI_NULLS ON
+SET ANSI_PADDING ON
+SET ANSI_WARNINGS ON
+COMMIT
+BEGIN TRANSACTION
+GO
+ALTER TABLE dbo.CreditSaleProducts ADD
+	CompressorWarrentyMonth varchar(250) NULL,
+	PanelWarrentyMonth varchar(250) NULL,
+	MotorWarrentyMonth varchar(250) NULL,
+	SparePartsWarrentyMonth varchar(250) NULL,
+	ServiceWarrentyMonth varchar(250) NULL
+GO
+ALTER TABLE dbo.CreditSaleProducts SET (LOCK_ESCALATION = TABLE)
+GO
+COMMIT
+
+-------------------------------------------
+/* To prevent any potential data loss issues, you should review this script in detail before running it outside the context of the database designer.*/
+BEGIN TRANSACTION
+SET QUOTED_IDENTIFIER ON
+SET ARITHABORT ON
+SET NUMERIC_ROUNDABORT OFF
+SET CONCAT_NULL_YIELDS_NULL ON
+SET ANSI_NULLS ON
+SET ANSI_PADDING ON
+SET ANSI_WARNINGS ON
+COMMIT
+BEGIN TRANSACTION
+GO
+ALTER TABLE dbo.SOrderDetails ADD
+	CompressorWarrentyMonth varchar(250) NULL,
+	PanelWarrentyMonth varchar(250) NULL,
+	MotorWarrentyMonth varchar(250) NULL,
+	SparePartsWarrentyMonth varchar(250) NULL,
+	ServiceWarrentyMonth varchar(250) NULL
+GO
+ALTER TABLE dbo.SOrderDetails SET (LOCK_ESCALATION = TABLE)
+GO
+COMMIT
+
+-------------------------------------------
+/* To prevent any potential data loss issues, you should review this script in detail before running it outside the context of the database designer.*/
+BEGIN TRANSACTION
+SET QUOTED_IDENTIFIER ON
+SET ARITHABORT ON
+SET NUMERIC_ROUNDABORT OFF
+SET CONCAT_NULL_YIELDS_NULL ON
+SET ANSI_NULLS ON
+SET ANSI_PADDING ON
+SET ANSI_WARNINGS ON
+COMMIT
+BEGIN TRANSACTION
+GO
+ALTER TABLE dbo.Products ADD
+	CompressorWarrentyMonth varchar(250) NULL,
+	PanelWarrentyMonth varchar(250) NULL,
+	MotorWarrentyMonth varchar(250) NULL,
+	SparePartsWarrentyMonth varchar(250) NULL,
+	ServiceWarrentyMonth varchar(250) NULL
+GO
+ALTER TABLE dbo.Products SET (LOCK_ESCALATION = TABLE)
+GO
+COMMIT

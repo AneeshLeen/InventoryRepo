@@ -1,0 +1,850 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DEWSRMModelStoreContainer" CdmEntityContainer="DEWSRMEntities">
+    <EntitySetMapping Name="Banks">
+      <EntityTypeMapping TypeName="DEWSRMModel.Bank">
+        <MappingFragment StoreEntitySet="Banks">
+          <ScalarProperty Name="BankID" ColumnName="BankID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="BankName" ColumnName="BankName" />
+          <ScalarProperty Name="AccountNo" ColumnName="AccountNo" />
+          <ScalarProperty Name="BranchName" ColumnName="BranchName" />
+          <ScalarProperty Name="OpeningBalance" ColumnName="OpeningBalance" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BankTransactions">
+      <EntityTypeMapping TypeName="DEWSRMModel.BankTransaction">
+        <MappingFragment StoreEntitySet="BankTransactions">
+          <ScalarProperty Name="BankTranID" ColumnName="BankTranID" />
+          <ScalarProperty Name="TranDate" ColumnName="TranDate" />
+          <ScalarProperty Name="TransactionNo" ColumnName="TransactionNo" />
+          <ScalarProperty Name="TransactionType" ColumnName="TransactionType" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="BankID" ColumnName="BankID" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+          <ScalarProperty Name="AnotherBankID" ColumnName="AnotherBankID" />
+          <ScalarProperty Name="ChecqueNo" ColumnName="ChecqueNo" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="CusDealerID" ColumnName="CusDealerID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Branches">
+      <EntityTypeMapping TypeName="DEWSRMModel.Branch">
+        <MappingFragment StoreEntitySet="Branches">
+          <ScalarProperty Name="BranchID" ColumnName="BranchID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="BranchName" ColumnName="BranchName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="AccountNo" ColumnName="AccountNo" />
+          <ScalarProperty Name="OpeningBalance" ColumnName="OpeningBalance" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="BankID" ColumnName="BankID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CardTypes">
+      <EntityTypeMapping TypeName="DEWSRMModel.CardType">
+        <MappingFragment StoreEntitySet="CardTypes">
+          <ScalarProperty Name="CardTypeID" ColumnName="CardTypeID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Sequence" ColumnName="Sequence" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CardTypeSetups">
+      <EntityTypeMapping TypeName="DEWSRMModel.CardTypeSetup">
+        <MappingFragment StoreEntitySet="CardTypeSetups">
+          <ScalarProperty Name="CardTypeSetupID" ColumnName="CardTypeSetupID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="BankID" ColumnName="BankID" />
+          <ScalarProperty Name="CardTypeID" ColumnName="CardTypeID" />
+          <ScalarProperty Name="Percentage" ColumnName="Percentage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CashCollections">
+      <EntityTypeMapping TypeName="DEWSRMModel.CashCollection">
+        <MappingFragment StoreEntitySet="CashCollections">
+          <ScalarProperty Name="CashCollectionID" ColumnName="CashCollectionID" />
+          <ScalarProperty Name="PaymentType" ColumnName="PaymentType" />
+          <ScalarProperty Name="BankName" ColumnName="BankName" />
+          <ScalarProperty Name="BranchName" ColumnName="BranchName" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="AccountNo" ColumnName="AccountNo" />
+          <ScalarProperty Name="MBAccountNo" ColumnName="MBAccountNo" />
+          <ScalarProperty Name="BKashNo" ColumnName="BKashNo" />
+          <ScalarProperty Name="TransactionType" ColumnName="TransactionType" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+          <ScalarProperty Name="CheckNo" ColumnName="CheckNo" />
+          <ScalarProperty Name="IssueDate" ColumnName="IssueDate" />
+          <ScalarProperty Name="AdjustAmt" ColumnName="AdjustAmt" />
+          <ScalarProperty Name="ReceiptNo" ColumnName="ReceiptNo" />
+          <ScalarProperty Name="BalanceDue" ColumnName="BalanceDue" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="RemindDate" ColumnName="RemindDate" />
+          <ScalarProperty Name="RemindPeriod" ColumnName="RemindPeriod" />
+          <ScalarProperty Name="RemindStatus" ColumnName="RemindStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Categorys">
+      <EntityTypeMapping TypeName="DEWSRMModel.Category">
+        <MappingFragment StoreEntitySet="Categorys">
+          <ScalarProperty Name="IsSeperateSale" ColumnName="IsSeperateSale" />
+          <ScalarProperty Name="IsPayOut" ColumnName="IsPayOut" />
+          <ScalarProperty Name="VAT" ColumnName="VAT" />
+          <ScalarProperty Name="IsVat" ColumnName="IsVat" />
+          <ScalarProperty Name="Inactive" ColumnName="Inactive" />
+          <ScalarProperty Name="ForeColor" ColumnName="ForeColor" />
+          <ScalarProperty Name="BackColor" ColumnName="BackColor" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="CategoryType" ColumnName="CategoryType" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Colors">
+      <EntityTypeMapping TypeName="DEWSRMModel.Color">
+        <MappingFragment StoreEntitySet="Colors">
+          <ScalarProperty Name="ColorID" ColumnName="ColorID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Companies">
+      <EntityTypeMapping TypeName="DEWSRMModel.Company">
+        <MappingFragment StoreEntitySet="Companies">
+          <ScalarProperty Name="HoId" ColumnName="HoId" />
+          <ScalarProperty Name="IsHO" ColumnName="IsHO" />
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CreditSaleProducts">
+      <EntityTypeMapping TypeName="DEWSRMModel.CreditSaleProduct">
+        <MappingFragment StoreEntitySet="CreditSaleProducts">
+          <ScalarProperty Name="GodownID" ColumnName="GodownID" />
+          <ScalarProperty Name="IGSTAmt" ColumnName="IGSTAmt" />
+          <ScalarProperty Name="SGSTAmt" ColumnName="SGSTAmt" />
+          <ScalarProperty Name="CGSTAmt" ColumnName="CGSTAmt" />
+          <ScalarProperty Name="GSTAmt" ColumnName="GSTAmt" />
+          <ScalarProperty Name="IGSTPerc" ColumnName="IGSTPerc" />
+          <ScalarProperty Name="SGSTPerc" ColumnName="SGSTPerc" />
+          <ScalarProperty Name="CGSTPerc" ColumnName="CGSTPerc" />
+          <ScalarProperty Name="GSTPerc" ColumnName="GSTPerc" />
+          <ScalarProperty Name="CreditSaleProductsID" ColumnName="CreditSaleProductsID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="UTAmount" ColumnName="UTAmount" />
+          <ScalarProperty Name="CreditSalesID" ColumnName="CreditSalesID" />
+          <ScalarProperty Name="MPRateTotal" ColumnName="MPRateTotal" />
+          <ScalarProperty Name="MPRate" ColumnName="MPRate" />
+          <ScalarProperty Name="ColorInfoID" ColumnName="ColorInfoID" />
+          <ScalarProperty Name="StockDetailID" ColumnName="StockDetailID" />
+          <ScalarProperty Name="InterestRate" ColumnName="InterestRate" />
+          <ScalarProperty Name="TotalInterest" ColumnName="TotalInterest" />
+          <ScalarProperty Name="PRate" ColumnName="PRate" />
+          <ScalarProperty Name="SRate" ColumnName="SRate" />
+          <ScalarProperty Name="CompressorWarrenty" ColumnName="CompressorWarrenty" />
+          <ScalarProperty Name="PanelWarrenty" ColumnName="PanelWarrenty" />
+          <ScalarProperty Name="MotorWarrenty" ColumnName="MotorWarrenty" />
+          <ScalarProperty Name="SparePartsWarrenty" ColumnName="SparePartsWarrenty" />
+          <ScalarProperty Name="ServiceWarrenty" ColumnName="ServiceWarrenty" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CreditSales">
+      <EntityTypeMapping TypeName="DEWSRMModel.CreditSale">
+        <MappingFragment StoreEntitySet="CreditSales">
+          <ScalarProperty Name="CreditSalesID" ColumnName="CreditSalesID" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="TSalesAmt" ColumnName="TSalesAmt" />
+          <ScalarProperty Name="NoOfInstallment" ColumnName="NoOfInstallment" />
+          <ScalarProperty Name="IntallmentPrinciple" ColumnName="IntallmentPrinciple" />
+          <ScalarProperty Name="IssueDate" ColumnName="IssueDate" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Remaining" ColumnName="Remaining" />
+          <ScalarProperty Name="InterestRate" ColumnName="InterestRate" />
+          <ScalarProperty Name="SalesDate" ColumnName="SalesDate" />
+          <ScalarProperty Name="DownPayment" ColumnName="DownPayment" />
+          <ScalarProperty Name="WInterestAmt" ColumnName="WInterestAmt" />
+          <ScalarProperty Name="FixedAmt" ColumnName="FixedAmt" />
+          <ScalarProperty Name="IsStatus" ColumnName="IsStatus" />
+          <ScalarProperty Name="UnExInstallment" ColumnName="UnExInstallment" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="NetAmount" ColumnName="NetAmount" />
+          <ScalarProperty Name="ISUnexpected" ColumnName="ISUnexpected" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="SerialNo" ColumnName="SerialNo" />
+          <ScalarProperty Name="FirstInterestRate" ColumnName="FirstInterestRate" />
+          <ScalarProperty Name="FirstTotalInterest" ColumnName="FirstTotalInterest" />
+          <ScalarProperty Name="MergeTotalSales" ColumnName="MergeTotalSales" />
+          <ScalarProperty Name="BankTranID" ColumnName="BankTranID" />
+          <ScalarProperty Name="CardPaidAmount" ColumnName="CardPaidAmount" />
+          <ScalarProperty Name="CardTypeSetupID" ColumnName="CardTypeSetupID" />
+          <ScalarProperty Name="DepositChargePercent" ColumnName="DepositChargePercent" />
+          <ScalarProperty Name="ISWeeekly" ColumnName="ISWeeekly" />
+          <ScalarProperty Name="VATPercentage" ColumnName="VATPercentage" />
+          <ScalarProperty Name="VATAmount" ColumnName="VATAmount" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="DEWSRMModel.Customer">
+        <MappingFragment StoreEntitySet="Customers">
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="FName" ColumnName="FName" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+          <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+          <ScalarProperty Name="NID" ColumnName="NID" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="PhotoPath" ColumnName="PhotoPath" />
+          <ScalarProperty Name="TotalDue" ColumnName="TotalDue" />
+          <ScalarProperty Name="RefName" ColumnName="RefName" />
+          <ScalarProperty Name="RefContact" ColumnName="RefContact" />
+          <ScalarProperty Name="RefFName" ColumnName="RefFName" />
+          <ScalarProperty Name="RefAddress" ColumnName="RefAddress" />
+          <ScalarProperty Name="CustomerType" ColumnName="CustomerType" />
+          <ScalarProperty Name="OpeningDue" ColumnName="OpeningDue" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreditDue" ColumnName="CreditDue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DamageProducts">
+      <EntityTypeMapping TypeName="DEWSRMModel.DamageProduct">
+        <MappingFragment StoreEntitySet="DamageProducts">
+          <ScalarProperty Name="DamageProID" ColumnName="DamageProID" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="SDetailID" ColumnName="SDetailID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Designations">
+      <EntityTypeMapping TypeName="DEWSRMModel.Designation">
+        <MappingFragment StoreEntitySet="Designations">
+          <ScalarProperty Name="DesignationID" ColumnName="DesignationID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="DEWSRMModel.Employee">
+        <MappingFragment StoreEntitySet="Employees">
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="FName" ColumnName="FName" />
+          <ScalarProperty Name="MName" ColumnName="MName" />
+          <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+          <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+          <ScalarProperty Name="NID" ColumnName="NID" />
+          <ScalarProperty Name="BloodGroup" ColumnName="BloodGroup" />
+          <ScalarProperty Name="JoiningDate" ColumnName="JoiningDate" />
+          <ScalarProperty Name="PresentAdd" ColumnName="PresentAdd" />
+          <ScalarProperty Name="PermanentAdd" ColumnName="PermanentAdd" />
+          <ScalarProperty Name="DesignationID" ColumnName="DesignationID" />
+          <ScalarProperty Name="GrossSalary" ColumnName="GrossSalary" />
+          <ScalarProperty Name="PhotoPath" ColumnName="PhotoPath" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmpSalaries">
+      <EntityTypeMapping TypeName="DEWSRMModel.EmpSalary">
+        <MappingFragment StoreEntitySet="EmpSalaries">
+          <ScalarProperty Name="EmpSalaryID" ColumnName="EmpSalaryID" />
+          <ScalarProperty Name="SalaryMonth" ColumnName="SalaryMonth" />
+          <ScalarProperty Name="GrossSalary" ColumnName="GrossSalary" />
+          <ScalarProperty Name="RecAmt" ColumnName="RecAmt" />
+          <ScalarProperty Name="RemainingAmt" ColumnName="RemainingAmt" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Expenditures">
+      <EntityTypeMapping TypeName="DEWSRMModel.Expenditure">
+        <MappingFragment StoreEntitySet="Expenditures">
+          <ScalarProperty Name="ExpenditureID" ColumnName="ExpenditureID" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="Purpose" ColumnName="Purpose" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="ExpenseItemID" ColumnName="ExpenseItemID" />
+          <ScalarProperty Name="VoucherName" ColumnName="VoucherName" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ExpenseItems">
+      <EntityTypeMapping TypeName="DEWSRMModel.ExpenseItem">
+        <MappingFragment StoreEntitySet="ExpenseItems">
+          <ScalarProperty Name="ExpenseItemID" ColumnName="ExpenseItemID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MenuPermissions">
+      <EntityTypeMapping TypeName="DEWSRMModel.MenuPermission">
+        <MappingFragment StoreEntitySet="MenuPermissions">
+          <ScalarProperty Name="MenuPermissionID" ColumnName="MenuPermissionID" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="MenuID" ColumnName="MenuID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Menus">
+      <EntityTypeMapping TypeName="DEWSRMModel.Menu">
+        <MappingFragment StoreEntitySet="Menus">
+          <ScalarProperty Name="MenuID" ColumnName="MenuID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+          <ScalarProperty Name="PageLink" ColumnName="PageLink" />
+          <ScalarProperty Name="MenuKey" ColumnName="MenuKey" />
+          <ScalarProperty Name="MenuType" ColumnName="MenuType" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Models">
+      <EntityTypeMapping TypeName="DEWSRMModel.Model">
+        <MappingFragment StoreEntitySet="Models">
+          <ScalarProperty Name="ModelID" ColumnName="ModelID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MonthlyStocks">
+      <EntityTypeMapping TypeName="DEWSRMModel.MonthlyStock">
+        <MappingFragment StoreEntitySet="MonthlyStocks">
+          <ScalarProperty Name="MonthlyStockID" ColumnName="MonthlyStockID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="Opening" ColumnName="Opening" />
+          <ScalarProperty Name="Closing" ColumnName="Closing" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="POProductDetails">
+      <EntityTypeMapping TypeName="DEWSRMModel.POProductDetail">
+        <MappingFragment StoreEntitySet="POProductDetails">
+          <ScalarProperty Name="POPDID" ColumnName="POPDID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="IMENo" ColumnName="IMENo" />
+          <ScalarProperty Name="POrderDetailID" ColumnName="POrderDetailID" />
+          <ScalarProperty Name="ColorID" ColumnName="ColorID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="POrderDetails">
+      <EntityTypeMapping TypeName="DEWSRMModel.POrderDetail">
+        <MappingFragment StoreEntitySet="POrderDetails">
+          <ScalarProperty Name="GodownID" ColumnName="GodownID" />
+          <ScalarProperty Name="IGSTAmt" ColumnName="IGSTAmt" />
+          <ScalarProperty Name="SGSTAmt" ColumnName="SGSTAmt" />
+          <ScalarProperty Name="CGSTAmt" ColumnName="CGSTAmt" />
+          <ScalarProperty Name="GSTAmt" ColumnName="GSTAmt" />
+          <ScalarProperty Name="IGSTPerc" ColumnName="IGSTPerc" />
+          <ScalarProperty Name="SGSTPerc" ColumnName="SGSTPerc" />
+          <ScalarProperty Name="CGSTPerc" ColumnName="CGSTPerc" />
+          <ScalarProperty Name="GSTPerc" ColumnName="GSTPerc" />
+          <ScalarProperty Name="POrderDetailID" ColumnName="POrderDetailID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="TAmount" ColumnName="TAmount" />
+          <ScalarProperty Name="POrderID" ColumnName="POrderID" />
+          <ScalarProperty Name="PPDISPer" ColumnName="PPDISPer" />
+          <ScalarProperty Name="PPDISAmt" ColumnName="PPDISAmt" />
+          <ScalarProperty Name="MRPRate" ColumnName="MRPRate" />
+          <ScalarProperty Name="ColorID" ColumnName="ColorID" />
+          <ScalarProperty Name="StockHistory" ColumnName="StockHistory" />
+          <ScalarProperty Name="SalesRate" ColumnName="SalesRate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="POrders">
+      <EntityTypeMapping TypeName="DEWSRMModel.POrder">
+        <MappingFragment StoreEntitySet="POrders">
+          <ScalarProperty Name="POrderID" ColumnName="POrderID" />
+          <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+          <ScalarProperty Name="ChallanNo" ColumnName="ChallanNo" />
+          <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+          <ScalarProperty Name="GrandTotal" ColumnName="GrandTotal" />
+          <ScalarProperty Name="TDiscount" ColumnName="TDiscount" />
+          <ScalarProperty Name="TotalAmt" ColumnName="TotalAmt" />
+          <ScalarProperty Name="RecAmt" ColumnName="RecAmt" />
+          <ScalarProperty Name="PaymentDue" ColumnName="PaymentDue" />
+          <ScalarProperty Name="TotalDue" ColumnName="TotalDue" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="PPDisAmt" ColumnName="PPDisAmt" />
+          <ScalarProperty Name="NetDiscount" ColumnName="NetDiscount" />
+          <ScalarProperty Name="TDPer" ColumnName="TDPer" />
+          <ScalarProperty Name="LaborCost" ColumnName="LaborCost" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="Adjustment" ColumnName="Adjustment" />
+          <ScalarProperty Name="TransportCost" ColumnName="TransportCost" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PrevBalances">
+      <EntityTypeMapping TypeName="DEWSRMModel.PrevBalance">
+        <MappingFragment StoreEntitySet="PrevBalance">
+          <ScalarProperty Name="PevBalanceID" ColumnName="PevBalanceID" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="DEWSRMModel.Product">
+        <MappingFragment StoreEntitySet="Products">
+          <ScalarProperty Name="RetailPrice" ColumnName="RetailPrice" />
+          <ScalarProperty Name="CostPrice" ColumnName="CostPrice" />
+          <ScalarProperty Name="BarCode" ColumnName="BarCode" />
+          <ScalarProperty Name="MaxQty" ColumnName="MaxQty" />
+          <ScalarProperty Name="Tax" ColumnName="Tax" />
+          <ScalarProperty Name="IGSTPerc" ColumnName="IGSTPerc" />
+          <ScalarProperty Name="SGSTPerc" ColumnName="SGSTPerc" />
+          <ScalarProperty Name="CGSTPerc" ColumnName="CGSTPerc" />
+          <ScalarProperty Name="GSTPerc" ColumnName="GSTPerc" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="PicturePath" ColumnName="PicturePath" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="SalesRate" ColumnName="SalesRate" />
+          <ScalarProperty Name="PurchaseRate" ColumnName="PurchaseRate" />
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+          <ScalarProperty Name="PackSize" ColumnName="PackSize" />
+          <ScalarProperty Name="WarningQty" ColumnName="WarningQty" />
+          <ScalarProperty Name="ModelID" ColumnName="ModelID" />
+          <ScalarProperty Name="UnitType" ColumnName="UnitType" />
+          <ScalarProperty Name="ShortQty" ColumnName="ShortQty" />
+          <ScalarProperty Name="PhotoPath" ColumnName="PhotoPath" />
+          <ScalarProperty Name="BoxQty" ColumnName="BoxQty" />
+          <ScalarProperty Name="ProductType" ColumnName="ProductType" />
+          <ScalarProperty Name="CompressorWarrenty" ColumnName="CompressorWarrenty" />
+          <ScalarProperty Name="PanelWarrenty" ColumnName="PanelWarrenty" />
+          <ScalarProperty Name="MotorWarrenty" ColumnName="MotorWarrenty" />
+          <ScalarProperty Name="SparePartsWarrenty" ColumnName="SparePartsWarrenty" />
+          <ScalarProperty Name="ServiceWarrenty" ColumnName="ServiceWarrenty" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReturnDetails">
+      <EntityTypeMapping TypeName="DEWSRMModel.ReturnDetail">
+        <MappingFragment StoreEntitySet="ReturnDetails">
+          <ScalarProperty Name="ReturnDetailsID" ColumnName="ReturnDetailsID" />
+          <ScalarProperty Name="ReturnID" ColumnName="ReturnID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="UTAmount" ColumnName="UTAmount" />
+          <ScalarProperty Name="SDetailID" ColumnName="SDetailID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Returns">
+      <EntityTypeMapping TypeName="DEWSRMModel.Return">
+        <MappingFragment StoreEntitySet="Returns">
+          <ScalarProperty Name="ReturnID" ColumnName="ReturnID" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="ReturnDate" ColumnName="ReturnDate" />
+          <ScalarProperty Name="GrandTotal" ColumnName="GrandTotal" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+          <ScalarProperty Name="PaidAmount" ColumnName="PaidAmount" />
+          <ScalarProperty Name="TDAmt" ColumnName="TDAmt" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="DEWSRMModel.Role">
+        <MappingFragment StoreEntitySet="Roles">
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ShareInvestmentHeads">
+      <EntityTypeMapping TypeName="DEWSRMModel.ShareInvestmentHead">
+        <MappingFragment StoreEntitySet="ShareInvestmentHeads">
+          <ScalarProperty Name="SIHID" ColumnName="SIHID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ShareInvestments">
+      <EntityTypeMapping TypeName="DEWSRMModel.ShareInvestment">
+        <MappingFragment StoreEntitySet="ShareInvestments">
+          <ScalarProperty Name="SIID" ColumnName="SIID" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="Purpose" ColumnName="Purpose" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="SIHID" ColumnName="SIHID" />
+          <ScalarProperty Name="TransactionType" ColumnName="TransactionType" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SOrderDetails">
+      <EntityTypeMapping TypeName="DEWSRMModel.SOrderDetail">
+        <MappingFragment StoreEntitySet="SOrderDetails">
+          <ScalarProperty Name="GodownID" ColumnName="GodownID" />
+          <ScalarProperty Name="IGSTAmt" ColumnName="IGSTAmt" />
+          <ScalarProperty Name="SGSTAmt" ColumnName="SGSTAmt" />
+          <ScalarProperty Name="CGSTAmt" ColumnName="CGSTAmt" />
+          <ScalarProperty Name="GSTAmt" ColumnName="GSTAmt" />
+          <ScalarProperty Name="IGSTPerc" ColumnName="IGSTPerc" />
+          <ScalarProperty Name="SGSTPerc" ColumnName="SGSTPerc" />
+          <ScalarProperty Name="CGSTPerc" ColumnName="CGSTPerc" />
+          <ScalarProperty Name="GSTPerc" ColumnName="GSTPerc" />
+          <ScalarProperty Name="SOrderDetailID" ColumnName="SOrderDetailID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="PPDPercentage" ColumnName="PPDPercentage" />
+          <ScalarProperty Name="PPDAmount" ColumnName="PPDAmount" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="UTAmount" ColumnName="UTAmount" />
+          <ScalarProperty Name="SOrderID" ColumnName="SOrderID" />
+          <ScalarProperty Name="MPRateTotal" ColumnName="MPRateTotal" />
+          <ScalarProperty Name="MPRate" ColumnName="MPRate" />
+          <ScalarProperty Name="ColorInfoID" ColumnName="ColorInfoID" />
+          <ScalarProperty Name="PRate" ColumnName="PRate" />
+          <ScalarProperty Name="PRateTotal" ColumnName="PRateTotal" />
+          <ScalarProperty Name="StockDetailID" ColumnName="StockDetailID" />
+          <ScalarProperty Name="IsFree" ColumnName="IsFree" />
+          <ScalarProperty Name="SRate" ColumnName="SRate" />
+          <ScalarProperty Name="CompressorWarrenty" ColumnName="CompressorWarrenty" />
+          <ScalarProperty Name="PanelWarrenty" ColumnName="PanelWarrenty" />
+          <ScalarProperty Name="MotorWarrenty" ColumnName="MotorWarrenty" />
+          <ScalarProperty Name="SparePartsWarrenty" ColumnName="SparePartsWarrenty" />
+          <ScalarProperty Name="ServiceWarrenty" ColumnName="ServiceWarrenty" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SOrders">
+      <EntityTypeMapping TypeName="DEWSRMModel.SOrder">
+        <MappingFragment StoreEntitySet="SOrders">
+          <ScalarProperty Name="SOrderID" ColumnName="SOrderID" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="InvoiceDate" ColumnName="InvoiceDate" />
+          <ScalarProperty Name="SubTotal" ColumnName="SubTotal" />
+          <ScalarProperty Name="VATPercentage" ColumnName="VATPercentage" />
+          <ScalarProperty Name="VATAmount" ColumnName="VATAmount" />
+          <ScalarProperty Name="GrandTotal" ColumnName="GrandTotal" />
+          <ScalarProperty Name="PPDiscountAmt" ColumnName="PPDiscountAmt" />
+          <ScalarProperty Name="TDPercentage" ColumnName="TDPercentage" />
+          <ScalarProperty Name="TDAmount" ColumnName="TDAmount" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="PaymentDue" ColumnName="PaymentDue" />
+          <ScalarProperty Name="RecAmount" ColumnName="RecAmount" />
+          <ScalarProperty Name="BackAmount" ColumnName="BackAmount" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="TotalDue" ColumnName="TotalDue" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="SerialNo" ColumnName="SerialNo" />
+          <ScalarProperty Name="Adjustment" ColumnName="Adjustment" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="NetDiscount" ColumnName="NetDiscount" />
+          <ScalarProperty Name="RemindDate" ColumnName="RemindDate" />
+          <ScalarProperty Name="RemindPeriod" ColumnName="RemindPeriod" />
+          <ScalarProperty Name="RemindStatus" ColumnName="RemindStatus" />
+          <ScalarProperty Name="BankTranID" ColumnName="BankTranID" />
+          <ScalarProperty Name="CardPaidAmount" ColumnName="CardPaidAmount" />
+          <ScalarProperty Name="CardTypeSetupID" ColumnName="CardTypeSetupID" />
+          <ScalarProperty Name="DepositChargePercent" ColumnName="DepositChargePercent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StockDetails">
+      <EntityTypeMapping TypeName="DEWSRMModel.StockDetail">
+        <MappingFragment StoreEntitySet="StockDetails">
+          <ScalarProperty Name="GodownID" ColumnName="GodownID" />
+          <ScalarProperty Name="SDetailID" ColumnName="SDetailID" />
+          <ScalarProperty Name="StockCode" ColumnName="StockCode" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="IMENO" ColumnName="IMENO" />
+          <ScalarProperty Name="StockID" ColumnName="StockID" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ColorID" ColumnName="ColorID" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="SalesRate" ColumnName="SalesRate" />
+          <ScalarProperty Name="PRate" ColumnName="PRate" />
+          <ScalarProperty Name="POrderDetailID" ColumnName="POrderDetailID" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Stocks">
+      <EntityTypeMapping TypeName="DEWSRMModel.Stock">
+        <MappingFragment StoreEntitySet="Stocks">
+          <ScalarProperty Name="GodownID" ColumnName="GodownID" />
+          <ScalarProperty Name="StockID" ColumnName="StockID" />
+          <ScalarProperty Name="StockCode" ColumnName="StockCode" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="PMPrice" ColumnName="PMPrice" />
+          <ScalarProperty Name="LPPrice" ColumnName="LPPrice" />
+          <ScalarProperty Name="ColorID" ColumnName="ColorID" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Suppliers">
+      <EntityTypeMapping TypeName="DEWSRMModel.Supplier">
+        <MappingFragment StoreEntitySet="Suppliers">
+          <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+          <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="PhotoPath" ColumnName="PhotoPath" />
+          <ScalarProperty Name="TotalDue" ColumnName="TotalDue" />
+          <ScalarProperty Name="OpeningDue" ColumnName="OpeningDue" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SystemInformations">
+      <EntityTypeMapping TypeName="DEWSRMModel.SystemInformation">
+        <MappingFragment StoreEntitySet="SystemInformations">
+          <ScalarProperty Name="InsuranceContactNo" ColumnName="InsuranceContactNo" />
+          <ScalarProperty Name="SMSServiceEnable" ColumnName="SMSServiceEnable" />
+          <ScalarProperty Name="SystemInfoID" ColumnName="SystemInfoID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="TelephoneNo" ColumnName="TelephoneNo" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="WebAddress" ColumnName="WebAddress" />
+          <ScalarProperty Name="SystemStartDate" ColumnName="SystemStartDate" />
+          <ScalarProperty Name="ProductPhotoPath" ColumnName="ProductPhotoPath" />
+          <ScalarProperty Name="SupplierPhotoPath" ColumnName="SupplierPhotoPath" />
+          <ScalarProperty Name="CustomerPhotoPath" ColumnName="CustomerPhotoPath" />
+          <ScalarProperty Name="CustomerNIDPatht" ColumnName="CustomerNIDPatht" />
+          <ScalarProperty Name="SupplierDocPath" ColumnName="SupplierDocPath" />
+          <ScalarProperty Name="EmployeePhotoPath" ColumnName="EmployeePhotoPath" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserRoles">
+      <EntityTypeMapping TypeName="DEWSRMModel.UserRole">
+        <MappingFragment StoreEntitySet="UserRoles">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="UserRoleID" ColumnName="UserRoleID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="DEWSRMModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserPassword" ColumnName="UserPassword" />
+          <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="UserType" ColumnName="UserType" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ISEditable" ColumnName="ISEditable" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_CustomerLedger">
+      <EntityTypeMapping TypeName="DEWSRMModel.vw_CustomerLedger">
+        <MappingFragment StoreEntitySet="vw_CustomerLedger">
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="OpeningDue" ColumnName="OpeningDue" />
+          <ScalarProperty Name="SalesGrandTotal" ColumnName="SalesGrandTotal" />
+          <ScalarProperty Name="TotalDiscount" ColumnName="TotalDiscount" />
+          <ScalarProperty Name="RecAmount" ColumnName="RecAmount" />
+          <ScalarProperty Name="AdjustInSales" ColumnName="AdjustInSales" />
+          <ScalarProperty Name="BackAmount" ColumnName="BackAmount" />
+          <ScalarProperty Name="CreditSalesDue" ColumnName="CreditSalesDue" />
+          <ScalarProperty Name="CashRecAmt" ColumnName="CashRecAmt" />
+          <ScalarProperty Name="AdjustInCashRec" ColumnName="AdjustInCashRec" />
+          <ScalarProperty Name="ActualDue" ColumnName="ActualDue" />
+          <ScalarProperty Name="SystemDue" ColumnName="SystemDue" />
+          <ScalarProperty Name="Diff" ColumnName="Diff" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_StockCheck">
+      <EntityTypeMapping TypeName="DEWSRMModel.vw_StockCheck">
+        <MappingFragment StoreEntitySet="vw_StockCheck">
+          <ScalarProperty Name="StockID" ColumnName="StockID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ColorID" ColumnName="ColorID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="ColorCode" ColumnName="ColorCode" />
+          <ScalarProperty Name="Purchase" ColumnName="Purchase" />
+          <ScalarProperty Name="TotalSales" ColumnName="TotalSales" />
+          <ScalarProperty Name="CreditSales" ColumnName="CreditSales" />
+          <ScalarProperty Name="Salereturns" ColumnName="Salereturns" />
+          <ScalarProperty Name="Purchasereturns" ColumnName="Purchasereturns" />
+          <ScalarProperty Name="SystemStock" ColumnName="SystemStock" />
+          <ScalarProperty Name="StockShouldBe" ColumnName="StockShouldBe" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_SupplierLedger">
+      <EntityTypeMapping TypeName="DEWSRMModel.vw_SupplierLedger">
+        <MappingFragment StoreEntitySet="vw_SupplierLedger">
+          <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="GrandTotal" ColumnName="GrandTotal" />
+          <ScalarProperty Name="TotalDiscount" ColumnName="TotalDiscount" />
+          <ScalarProperty Name="PaidAmt" ColumnName="PaidAmt" />
+          <ScalarProperty Name="AdjustInCashDelivery" ColumnName="AdjustInCashDelivery" />
+          <ScalarProperty Name="CashDelivery" ColumnName="CashDelivery" />
+          <ScalarProperty Name="ActualDue" ColumnName="ActualDue" />
+          <ScalarProperty Name="SystemDue" ColumnName="SystemDue" />
+          <ScalarProperty Name="Diff" ColumnName="Diff" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CreditSalesDetails">
+      <EntityTypeMapping TypeName="DEWSRMModel.CreditSalesDetail">
+        <MappingFragment StoreEntitySet="CreditSalesDetails">
+          <ScalarProperty Name="RemindDateForInstallment" ColumnName="RemindDateForInstallment" />
+          <ScalarProperty Name="BankTranID" ColumnName="BankTranID" />
+          <ScalarProperty Name="DepositChargePercent" ColumnName="DepositChargePercent" />
+          <ScalarProperty Name="CardTypeSetupID" ColumnName="CardTypeSetupID" />
+          <ScalarProperty Name="CardPaidAmount" ColumnName="CardPaidAmount" />
+          <ScalarProperty Name="LastPayAdjustment" ColumnName="LastPayAdjustment" />
+          <ScalarProperty Name="NetValue" ColumnName="NetValue" />
+          <ScalarProperty Name="HireValue" ColumnName="HireValue" />
+          <ScalarProperty Name="IsUnExpected" ColumnName="IsUnExpected" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="ScheduleNo" ColumnName="ScheduleNo" />
+          <ScalarProperty Name="ClosingBalance" ColumnName="ClosingBalance" />
+          <ScalarProperty Name="InterestAmount" ColumnName="InterestAmount" />
+          <ScalarProperty Name="PaymentStatus" ColumnName="PaymentStatus" />
+          <ScalarProperty Name="CreditSalesID" ColumnName="CreditSalesID" />
+          <ScalarProperty Name="PaymentDate" ColumnName="PaymentDate" />
+          <ScalarProperty Name="InstallmentAmt" ColumnName="InstallmentAmt" />
+          <ScalarProperty Name="Balance" ColumnName="Balance" />
+          <ScalarProperty Name="MonthDate" ColumnName="MonthDate" />
+          <ScalarProperty Name="CSDetailsID" ColumnName="CSDetailsID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SMSFormates">
+      <EntityTypeMapping TypeName="DEWSRMModel.SMSFormate">
+        <MappingFragment StoreEntitySet="SMSFormates">
+          <ScalarProperty Name="SMSType" ColumnName="SMSType" />
+          <ScalarProperty Name="SMSDescription" ColumnName="SMSDescription" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="SMSFormateID" ColumnName="SMSFormateID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SMSStatuses">
+      <EntityTypeMapping TypeName="DEWSRMModel.SMSStatus">
+        <MappingFragment StoreEntitySet="SMSStatuses">
+          <ScalarProperty Name="ResponseMsg" ColumnName="ResponseMsg" />
+          <ScalarProperty Name="SMS" ColumnName="SMS" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="EntryDate" ColumnName="EntryDate" />
+          <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="NoOfSMS" ColumnName="NoOfSMS" />
+          <ScalarProperty Name="SendingStatus" ColumnName="SendingStatus" />
+          <ScalarProperty Name="SMSFormateID" ColumnName="SMSFormateID" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="SMSStatusID" ColumnName="SMSStatusID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Godowns">
+      <EntityTypeMapping TypeName="DEWSRMModel.Godown">
+        <MappingFragment StoreEntitySet="Godowns">
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="GodownName" ColumnName="GodownName" />
+          <ScalarProperty Name="GodownCode" ColumnName="GodownCode" />
+          <ScalarProperty Name="GodownID" ColumnName="GodownID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,1829 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DEWSRMModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Banks">
+    <Key>
+      <PropertyRef Name="BankID" />
+    </Key>
+    <Property Name="BankID" Type="int" Nullable="false" />
+    <Property Name="Code" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="BankName" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="AccountNo" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="BranchName" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="OpeningBalance" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="TotalAmount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="AccountName" Type="varchar" MaxLength="250" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BankTransactions">
+    <Key>
+      <PropertyRef Name="BankTranID" />
+    </Key>
+    <Property Name="BankTranID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TranDate" Type="date" Nullable="false" />
+    <Property Name="TransactionNo" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="TransactionType" Type="int" Nullable="false" />
+    <Property Name="Amount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="BankID" Type="int" Nullable="false" />
+    <Property Name="CustomerID" Type="int" />
+    <Property Name="SupplierID" Type="int" />
+    <Property Name="AnotherBankID" Type="int" />
+    <Property Name="ChecqueNo" Type="nchar" MaxLength="250" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="250" />
+    <Property Name="CusDealerID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Branches">
+    <Key>
+      <PropertyRef Name="BranchID" />
+    </Key>
+    <Property Name="BranchID" Type="int" Nullable="false" />
+    <Property Name="Code" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="BranchName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Address" Type="nvarchar" MaxLength="250" />
+    <Property Name="AccountNo" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="OpeningBalance" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="TotalAmount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="BankID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CardTypes">
+    <Key>
+      <PropertyRef Name="CardTypeID" />
+    </Key>
+    <Property Name="CardTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="550" Nullable="false" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="Sequence" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CardTypeSetups">
+    <Key>
+      <PropertyRef Name="CardTypeSetupID" />
+    </Key>
+    <Property Name="CardTypeSetupID" Type="int" Nullable="false" />
+    <Property Name="Code" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="BankID" Type="int" Nullable="false" />
+    <Property Name="CardTypeID" Type="int" Nullable="false" />
+    <Property Name="Percentage" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CashCollections">
+    <Key>
+      <PropertyRef Name="CashCollectionID" />
+    </Key>
+    <Property Name="CashCollectionID" Type="int" Nullable="false" />
+    <Property Name="PaymentType" Type="int" />
+    <Property Name="BankName" Type="varchar" MaxLength="250" />
+    <Property Name="BranchName" Type="varchar" MaxLength="250" />
+    <Property Name="EntryDate" Type="datetime" Nullable="false" />
+    <Property Name="Amount" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="AccountNo" Type="varchar" MaxLength="350" />
+    <Property Name="MBAccountNo" Type="varchar" MaxLength="350" />
+    <Property Name="BKashNo" Type="varchar" MaxLength="350" />
+    <Property Name="TransactionType" Type="int" />
+    <Property Name="CustomerID" Type="int" />
+    <Property Name="CompanyID" Type="int" />
+    <Property Name="CheckNo" Type="varchar" MaxLength="250" />
+    <Property Name="IssueDate" Type="datetime" />
+    <Property Name="AdjustAmt" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="ReceiptNo" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="BalanceDue" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="RemindDate" Type="date" />
+    <Property Name="RemindPeriod" Type="int" Nullable="false" />
+    <Property Name="RemindStatus" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Categorys">
+    <Key>
+      <PropertyRef Name="CategoryID" />
+    </Key>
+    <Property Name="CategoryID" Type="int" Nullable="false" />
+    <Property Name="Code" Type="varchar" MaxLength="150" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="CategoryType" Type="varchar" MaxLength="100" />
+    <Property Name="Age" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="BackColor" Type="varchar" MaxLength="50" />
+    <Property Name="ForeColor" Type="varchar" MaxLength="50" />
+    <Property Name="Inactive" Type="bit" Nullable="false" />
+    <Property Name="IsVat" Type="bit" Nullable="false" />
+    <Property Name="VAT" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="IsPayOut" Type="bit" Nullable="false" />
+    <Property Name="IsSeperateSale" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Colors">
+    <Key>
+      <PropertyRef Name="ColorID" />
+    </Key>
+    <Property Name="ColorID" Type="int" Nullable="false" />
+    <Property Name="Code" Type="varchar" MaxLength="250" />
+    <Property Name="Description" Type="varchar" MaxLength="250" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Companies">
+    <Key>
+      <PropertyRef Name="CompanyID" />
+    </Key>
+    <Property Name="CompanyID" Type="int" Nullable="false" />
+    <Property Name="Code" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="IsHO" Type="bit" />
+    <Property Name="HoId" Type="int" />
+  </EntityType>
+  <EntityType Name="CreditSaleProducts">
+    <Key>
+      <PropertyRef Name="CreditSaleProductsID" />
+    </Key>
+    <Property Name="CreditSaleProductsID" Type="int" Nullable="false" />
+    <Property Name="ProductID" Type="int" Nullable="false" />
+    <Property Name="UnitPrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Quantity" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="UTAmount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="CreditSalesID" Type="int" Nullable="false" />
+    <Property Name="MPRateTotal" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="MPRate" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="ColorInfoID" Type="int" Nullable="false" />
+    <Property Name="StockDetailID" Type="int" Nullable="false" />
+    <Property Name="InterestRate" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="TotalInterest" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="PRate" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="SRate" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="CompressorWarrenty" Type="varchar" MaxLength="250" />
+    <Property Name="PanelWarrenty" Type="varchar" MaxLength="250" />
+    <Property Name="MotorWarrenty" Type="varchar" MaxLength="250" />
+    <Property Name="SparePartsWarrenty" Type="varchar" MaxLength="250" />
+    <Property Name="ServiceWarrenty" Type="varchar" MaxLength="250" />
+    <Property Name="GSTPerc" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="CGSTPerc" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="SGSTPerc" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="IGSTPerc" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="GSTAmt" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="CGSTAmt" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="SGSTAmt" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="IGSTAmt" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="GodownID" Type="int" />
+  </EntityType>
+  <EntityType Name="CreditSales">
+    <Key>
+      <PropertyRef Name="CreditSalesID" />
+    </Key>
+    <Property Name="CreditSalesID" Type="int" Nullable="false" />
+    <Property Name="InvoiceNo" Type="varchar" MaxLength="150" />
+    <Property Name="CustomerID" Type="int" Nullable="false" />
+    <Property Name="TSalesAmt" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="NoOfInstallment" Type="int" Nullable="false" />
+    <Property Name="IntallmentPrinciple" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="IssueDate" Type="datetime" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="250" />
+    <Property Name="Remaining" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="InterestRate" Type="int" Nullable="false" />
+    <Property Name="SalesDate" Type="datetime" Nullable="false" />
+    <Property Name="DownPayment" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="WInterestAmt" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="FixedAmt" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="IsStatus" Type="int" />
+    <Property Name="UnExInstallment" Type="int" Nullable="false" />
+    <Property Name="Quantity" Type="int" Nullable="false" />
+    <Property Name="Discount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="NetAmount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="ISUnexpected" Type="bit" />
+    <Property Name="Remarks" Type="nvarchar(max)" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="SerialNo" Type="nvarchar(max)" />
+    <Property Name="FirstInterestRate" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="FirstTotalInterest" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="MergeTotalSales" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="BankTranID" Type="int" Nullable="false" />
+    <Property Name="CardPaidAmount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="CardTypeSetupID" Type="int" Nullable="false" />
+    <Property Name="DepositChargePercent" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="ISWeeekly" Type="int" Nullable="false" />
+    <Property Name="VATPercentage" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="VATAmount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="CreditSalesDetails">
+    <Key>
+      <PropertyRef Name="CSDetailsID" />
+    </Key>
+    <Property Name="CSDetailsID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MonthDate" Type="datetime" />
+    <Property Name="Balance" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="InstallmentAmt" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="PaymentDate" Type="datetime" />
+    <Property Name="CreditSalesID" Type="int" Nullable="false" />
+    <Property Name="PaymentStatus" Type="varchar" MaxLength="150" />
+    <Property Name="InterestAmount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ClosingBalance" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ScheduleNo" Type="int" />
+    <Property Name="Remarks" Type="nvarchar(max)" />
+    <Property Name="IsUnExpected" Type="int" Nullable="false" />
+    <Property Name="HireValue" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="NetValue" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="LastPayAdjustment" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="CardPaidAmount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="CardTypeSetupID" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="DepositChargePercent" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="BankTranID" Type="int" Nullable="false" />
+    <Property Name="RemindDateForInstallment" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Customers">
+    <Key>
+      <PropertyRef Name="CustomerID" />
+    </Key>
+    <Property Name="CustomerID" Type="int" Nullable="false" />
+    <Property Name="Code" Type="varchar" MaxLength="50" />
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="FName" Type="nvarchar(max)" />
+    <Property Name="CompanyName" Type="nvarchar(max)" />
+    <Property Name="ContactNo" Type="varchar" MaxLength="150" />
+    <Property Name="EmailID" Type="varchar" MaxLength="250" />
+    <Property Name="NID" Type="varchar" MaxLength="150" />
+    <Property Name="Address" Type="nvarchar(max)" />
+    <Property Name="PhotoPath" Type="varchar" MaxLength="150" />
+    <Property Name="TotalDue" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="RefName" Type="nvarchar(max)" />
+    <Property Name="RefContact" Type="varchar" MaxLength="150" />
+    <Property Name="RefFName" Type="nvarchar(max)" />
+    <Property Name="RefAddress" Type="nvarchar(max)" />
+    <Property Name="CustomerType" Type="int" Nullable="false" />
+    <Property Name="OpeningDue" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="CreditDue" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DamageProducts">
+    <Key>
+      <PropertyRef Name="DamageProID" />
+    </Key>
+    <Property Name="DamageProID" Type="int" Nullable="false" />
+    <Property Name="EntryDate" Type="datetime" Nullable="false" />
+    <Property Name="ProductID" Type="int" Nullable="false" />
+    <Property Name="Qty" Type="money" Nullable="false" />
+    <Property Name="UnitPrice" Type="money" Nullable="false" />
+    <Property Name="TotalPrice" Type="money" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="SDetailID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Designations">
+    <Key>
+      <PropertyRef Name="DesignationID" />
+    </Key>
+    <Property Name="DesignationID" Type="int" Nullable="false" />
+    <Property Name="Code" Type="varchar" MaxLength="150" />
+    <Property Name="Description" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Employees">
+    <Key>
+      <PropertyRef Name="EmployeeID" />
+    </Key>
+    <Property Name="EmployeeID" Type="int" Nullable="false" />
+    <Property Name="Code" Type="varchar" MaxLength="150" />
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="FName" Type="nvarchar(max)" />
+    <Property Name="MName" Type="nvarchar(max)" />
+    <Property Name="ContactNo" Type="varchar" MaxLength="150" />
+    <Property Name="EmailID" Type="varchar" MaxLength="150" />
+    <Property Name="NID" Type="varchar" MaxLength="150" />
+    <Property Name="BloodGroup" Type="varchar" MaxLength="50" />
+    <Property Name="JoiningDate" Type="datetime" />
+    <Property Name="PresentAdd" Type="nvarchar(max)" />
+    <Property Name="PermanentAdd" Type="nvarchar(max)" />
+    <Property Name="DesignationID" Type="int" Nullable="false" />
+    <Property Name="GrossSalary" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="PhotoPath" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="EmpSalaries">
+    <Key>
+      <PropertyRef Name="EmpSalaryID" />
+    </Key>
+    <Property Name="EmpSalaryID" Type="int" Nullable="false" />
+    <Property Name="SalaryMonth" Type="datetime" />
+    <Property Name="GrossSalary" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="RecAmt" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="RemainingAmt" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="EmployeeID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Expenditures">
+    <Key>
+      <PropertyRef Name="ExpenditureID" />
+    </Key>
+    <Property Name="ExpenditureID" Type="int" Nullable="false" />
+    <Property Name="EntryDate" Type="datetime" Nullable="false" />
+    <Property Name="Purpose" Type="nvarchar(max)" />
+    <Property Name="Amount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="ExpenseItemID" Type="int" Nullable="false" />
+    <Property Name="VoucherName" Type="varchar" MaxLength="250" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="Remarks" Type="varchar" MaxLength="450" />
+  </EntityType>
+  <EntityType Name="ExpenseItems">
+    <Key>
+      <PropertyRef Name="ExpenseItemID" />
+    </Key>
+    <Property Name="ExpenseItemID" Type="int" Nullable="false" />
+    <Property Name="Code" Type="varchar" MaxLength="150" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="Status" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Godowns">
+    <Key>
+      <PropertyRef Name="GodownID" />
+    </Key>
+    <Property Name="GodownID" Type="int" Nullable="false" />
+    <Property Name="GodownCode" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="GodownName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Address" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="MenuPermissions">
+    <Key>
+      <PropertyRef Name="MenuPermissionID" />
+    </Key>
+    <Property Name="MenuPermissionID" Type="int" Nullable="false" />
+    <Property Name="RoleID" Type="int" Nullable="false" />
+    <Property Name="MenuID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Menus">
+    <Key>
+      <PropertyRef Name="MenuID" />
+    </Key>
+    <Property Name="MenuID" Type="int" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="ParentID" Type="int" />
+    <Property Name="PageLink" Type="varchar" MaxLength="1000" />
+    <Property Name="MenuKey" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="MenuType" Type="int" Nullable="false" />
+    <Property Name="Status" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Models">
+    <Key>
+      <PropertyRef Name="ModelID" />
+    </Key>
+    <Property Name="ModelID" Type="int" Nullable="false" />
+    <Property Name="Code" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MonthlyStocks">
+    <Key>
+      <PropertyRef Name="MonthlyStockID" />
+    </Key>
+    <Property Name="MonthlyStockID" Type="int" Nullable="false" />
+    <Property Name="ProductID" Type="int" Nullable="false" />
+    <Property Name="Month" Type="datetime" Nullable="false" />
+    <Property Name="Opening" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Closing" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="POProductDetails">
+    <Key>
+      <PropertyRef Name="POPDID" />
+    </Key>
+    <Property Name="POPDID" Type="int" Nullable="false" />
+    <Property Name="ProductID" Type="int" Nullable="false" />
+    <Property Name="IMENo" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="POrderDetailID" Type="int" Nullable="false" />
+    <Property Name="ColorID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="POrderDetails">
+    <Key>
+      <PropertyRef Name="POrderDetailID" />
+    </Key>
+    <Property Name="POrderDetailID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductID" Type="int" Nullable="false" />
+    <Property Name="Quantity" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="UnitPrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="TAmount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="POrderID" Type="int" Nullable="false" />
+    <Property Name="PPDISPer" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="PPDISAmt" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="MRPRate" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="ColorID" Type="int" Nullable="false" />
+    <Property Name="StockHistory" Type="varchar" MaxLength="350" />
+    <Property Name="SalesRate" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="GSTPerc" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="CGSTPerc" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="SGSTPerc" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="IGSTPerc" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="GSTAmt" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="CGSTAmt" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="SGSTAmt" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="IGSTAmt" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="GodownID" Type="int" />
+  </EntityType>
+  <EntityType Name="POrders">
+    <Key>
+      <PropertyRef Name="POrderID" />
+    </Key>
+    <Property Name="POrderID" Type="int" Nullable="false" />
+    <Property Name="OrderDate" Type="datetime" Nullable="false" />
+    <Property Name="ChallanNo" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="SupplierID" Type="int" Nullable="false" />
+    <Property Name="GrandTotal" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="TDiscount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="TotalAmt" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="RecAmt" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="PaymentDue" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="TotalDue" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="PPDisAmt" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="NetDiscount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="TDPer" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="LaborCost" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="Adjustment" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="TransportCost" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PrevBalance">
+    <Key>
+      <PropertyRef Name="PevBalanceID" />
+    </Key>
+    <Property Name="PevBalanceID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+    <Property Name="Amount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Products">
+    <Key>
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="ProductID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="varchar" MaxLength="50" />
+    <Property Name="ProductName" Type="nvarchar(max)" />
+    <Property Name="PicturePath" Type="varchar" MaxLength="250" />
+    <Property Name="CategoryID" Type="int" Nullable="false" />
+    <Property Name="SalesRate" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="PurchaseRate" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="CompanyID" Type="int" Nullable="false" />
+    <Property Name="PackSize" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="WarningQty" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="ModelID" Type="int" Nullable="false" />
+    <Property Name="UnitType" Type="int" Nullable="false" />
+    <Property Name="ShortQty" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="PhotoPath" Type="varchar" MaxLength="250" />
+    <Property Name="BoxQty" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="ProductType" Type="int" Nullable="false" />
+    <Property Name="CompressorWarrenty" Type="varchar" MaxLength="250" />
+    <Property Name="PanelWarrenty" Type="varchar" MaxLength="250" />
+    <Property Name="MotorWarrenty" Type="varchar" MaxLength="250" />
+    <Property Name="SparePartsWarrenty" Type="varchar" MaxLength="250" />
+    <Property Name="ServiceWarrenty" Type="varchar" MaxLength="250" />
+    <Property Name="GSTPerc" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="CGSTPerc" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="SGSTPerc" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="IGSTPerc" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Tax" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="MaxQty" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="BarCode" Type="varchar" MaxLength="50" />
+    <Property Name="CostPrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="RetailPrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ReturnDetails">
+    <Key>
+      <PropertyRef Name="ReturnDetailsID" />
+    </Key>
+    <Property Name="ReturnDetailsID" Type="int" Nullable="false" />
+    <Property Name="ReturnID" Type="int" Nullable="false" />
+    <Property Name="ProductID" Type="int" Nullable="false" />
+    <Property Name="Quantity" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="UnitPrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="UTAmount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="SDetailID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Returns">
+    <Key>
+      <PropertyRef Name="ReturnID" />
+    </Key>
+    <Property Name="ReturnID" Type="int" Nullable="false" />
+    <Property Name="InvoiceNo" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="ReturnDate" Type="datetime" Nullable="false" />
+    <Property Name="GrandTotal" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="CustomerID" Type="int" />
+    <Property Name="SupplierID" Type="int" />
+    <Property Name="PaidAmount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="TDAmt" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Roles">
+    <Key>
+      <PropertyRef Name="RoleID" />
+    </Key>
+    <Property Name="RoleID" Type="int" Nullable="false" />
+    <Property Name="RoleName" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="ShareInvestmentHeads">
+    <Key>
+      <PropertyRef Name="SIHID" />
+    </Key>
+    <Property Name="SIHID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="ParentId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ShareInvestments">
+    <Key>
+      <PropertyRef Name="SIID" />
+    </Key>
+    <Property Name="SIID" Type="int" Nullable="false" />
+    <Property Name="EntryDate" Type="datetime" Nullable="false" />
+    <Property Name="Purpose" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="Amount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="SIHID" Type="int" Nullable="false" />
+    <Property Name="TransactionType" Type="int" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="SMSFormates">
+    <Key>
+      <PropertyRef Name="SMSFormateID" />
+    </Key>
+    <Property Name="SMSFormateID" Type="int" Nullable="false" />
+    <Property Name="Code" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="SMSDescription" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="SMSType" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SMSStatuses">
+    <Key>
+      <PropertyRef Name="SMSStatusID" />
+    </Key>
+    <Property Name="SMSStatusID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="SMSFormateID" Type="int" Nullable="false" />
+    <Property Name="SendingStatus" Type="int" Nullable="false" />
+    <Property Name="NoOfSMS" Type="int" Nullable="false" />
+    <Property Name="CustomerID" Type="int" />
+    <Property Name="ContactNo" Type="varchar" MaxLength="150" />
+    <Property Name="EntryDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="SMS" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="ResponseMsg" Type="varchar" MaxLength="350" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SOrderDetails">
+    <Key>
+      <PropertyRef Name="SOrderDetailID" />
+    </Key>
+    <Property Name="SOrderDetailID" Type="int" Nullable="false" />
+    <Property Name="ProductID" Type="int" Nullable="false" />
+    <Property Name="UnitPrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="PPDPercentage" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="PPDAmount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Quantity" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="UTAmount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="SOrderID" Type="int" Nullable="false" />
+    <Property Name="MPRateTotal" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="MPRate" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="ColorInfoID" Type="int" Nullable="false" />
+    <Property Name="PRate" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="PRateTotal" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="StockDetailID" Type="int" Nullable="false" />
+    <Property Name="IsFree" Type="int" Nullable="false" />
+    <Property Name="SRate" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="CompressorWarrenty" Type="varchar" MaxLength="250" />
+    <Property Name="PanelWarrenty" Type="varchar" MaxLength="250" />
+    <Property Name="MotorWarrenty" Type="varchar" MaxLength="250" />
+    <Property Name="SparePartsWarrenty" Type="varchar" MaxLength="250" />
+    <Property Name="ServiceWarrenty" Type="varchar" MaxLength="250" />
+    <Property Name="GSTPerc" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="CGSTPerc" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="SGSTPerc" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="IGSTPerc" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="GSTAmt" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="CGSTAmt" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="SGSTAmt" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="IGSTAmt" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="GodownID" Type="int" />
+  </EntityType>
+  <EntityType Name="SOrders">
+    <Key>
+      <PropertyRef Name="SOrderID" />
+    </Key>
+    <Property Name="SOrderID" Type="int" Nullable="false" />
+    <Property Name="InvoiceNo" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="InvoiceDate" Type="datetime" Nullable="false" />
+    <Property Name="SubTotal" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="VATPercentage" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="VATAmount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="GrandTotal" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="PPDiscountAmt" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="TDPercentage" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="TDAmount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="TotalAmount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="PaymentDue" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="RecAmount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="BackAmount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Remarks" Type="varchar" MaxLength="350" />
+    <Property Name="CustomerID" Type="int" Nullable="false" />
+    <Property Name="TotalDue" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="SerialNo" Type="nvarchar(max)" />
+    <Property Name="Adjustment" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="NetDiscount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="RemindDate" Type="datetime" />
+    <Property Name="RemindPeriod" Type="int" Nullable="false" />
+    <Property Name="RemindStatus" Type="int" Nullable="false" />
+    <Property Name="BankTranID" Type="int" Nullable="false" />
+    <Property Name="CardPaidAmount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="CardTypeSetupID" Type="int" Nullable="false" />
+    <Property Name="DepositChargePercent" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="StockDetails">
+    <Key>
+      <PropertyRef Name="SDetailID" />
+    </Key>
+    <Property Name="SDetailID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StockCode" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="ProductID" Type="int" Nullable="false" />
+    <Property Name="IMENO" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="StockID" Type="int" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="ColorID" Type="int" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="SalesRate" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="PRate" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="POrderDetailID" Type="int" />
+    <Property Name="Quantity" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="GodownID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Stocks">
+    <Key>
+      <PropertyRef Name="StockID" />
+    </Key>
+    <Property Name="StockID" Type="int" Nullable="false" />
+    <Property Name="StockCode" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="EntryDate" Type="datetime" Nullable="false" />
+    <Property Name="Quantity" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="ProductID" Type="int" Nullable="false" />
+    <Property Name="PMPrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="LPPrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="ColorID" Type="int" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="GodownID" Type="int" />
+  </EntityType>
+  <EntityType Name="Suppliers">
+    <Key>
+      <PropertyRef Name="SupplierID" />
+    </Key>
+    <Property Name="SupplierID" Type="int" Nullable="false" />
+    <Property Name="Code" Type="varchar" MaxLength="50" />
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="OwnerName" Type="nvarchar(max)" />
+    <Property Name="ContactNo" Type="varchar" MaxLength="150" />
+    <Property Name="Address" Type="nvarchar(max)" />
+    <Property Name="PhotoPath" Type="varchar" MaxLength="250" />
+    <Property Name="TotalDue" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="OpeningDue" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="SystemInformations">
+    <Key>
+      <PropertyRef Name="SystemInfoID" />
+    </Key>
+    <Property Name="SystemInfoID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="Address" Type="varchar" MaxLength="255" />
+    <Property Name="TelephoneNo" Type="varchar" MaxLength="255" />
+    <Property Name="EmailAddress" Type="varchar" MaxLength="255" />
+    <Property Name="WebAddress" Type="varchar" MaxLength="255" />
+    <Property Name="SystemStartDate" Type="datetime" />
+    <Property Name="ProductPhotoPath" Type="varchar" MaxLength="150" />
+    <Property Name="SupplierPhotoPath" Type="varchar" MaxLength="150" />
+    <Property Name="CustomerPhotoPath" Type="varchar" MaxLength="150" />
+    <Property Name="CustomerNIDPatht" Type="varchar" MaxLength="150" />
+    <Property Name="SupplierDocPath" Type="varchar" MaxLength="150" />
+    <Property Name="EmployeePhotoPath" Type="varchar" MaxLength="250" />
+    <Property Name="SMSServiceEnable" Type="int" Nullable="false" />
+    <Property Name="InsuranceContactNo" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="UserRoles">
+    <Key>
+      <PropertyRef Name="UserRoleID" />
+    </Key>
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="RoleID" Type="int" Nullable="false" />
+    <Property Name="UserRoleID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="UserPassword" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="ContactNo" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="EmailAddress" Type="varchar" MaxLength="100" />
+    <Property Name="UserType" Type="int" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="ISEditable" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'DEWSRM.dbo.vw_CustomerLedger' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vw_CustomerLedger">
+    <Key>
+      <PropertyRef Name="CustomerID" />
+      <PropertyRef Name="OpeningDue" />
+      <PropertyRef Name="SalesGrandTotal" />
+      <PropertyRef Name="TotalDiscount" />
+      <PropertyRef Name="RecAmount" />
+      <PropertyRef Name="AdjustInSales" />
+      <PropertyRef Name="BackAmount" />
+      <PropertyRef Name="CreditSalesDue" />
+      <PropertyRef Name="CashRecAmt" />
+      <PropertyRef Name="AdjustInCashRec" />
+      <PropertyRef Name="SystemDue" />
+      <PropertyRef Name="Remarks" />
+    </Key>
+    <Property Name="CustomerID" Type="int" Nullable="false" />
+    <Property Name="Code" Type="varchar" MaxLength="50" />
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="OpeningDue" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="SalesGrandTotal" Type="decimal" Precision="38" Scale="2" Nullable="false" />
+    <Property Name="TotalDiscount" Type="decimal" Precision="38" Scale="2" Nullable="false" />
+    <Property Name="RecAmount" Type="decimal" Precision="38" Scale="2" Nullable="false" />
+    <Property Name="AdjustInSales" Type="decimal" Precision="38" Scale="2" Nullable="false" />
+    <Property Name="BackAmount" Type="decimal" Precision="38" Scale="2" Nullable="false" />
+    <Property Name="CreditSalesDue" Type="decimal" Precision="38" Scale="2" Nullable="false" />
+    <Property Name="CashRecAmt" Type="decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="AdjustInCashRec" Type="decimal" Precision="38" Scale="2" Nullable="false" />
+    <Property Name="ActualDue" Type="decimal" Precision="38" Scale="0" />
+    <Property Name="SystemDue" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Diff" Type="decimal" Precision="38" Scale="0" />
+    <Property Name="Remarks" Type="varchar" MaxLength="6" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'DEWSRM.dbo.vw_StockCheck' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vw_StockCheck">
+    <Key>
+      <PropertyRef Name="StockID" />
+      <PropertyRef Name="ProductID" />
+      <PropertyRef Name="ColorID" />
+      <PropertyRef Name="Purchase" />
+      <PropertyRef Name="TotalSales" />
+      <PropertyRef Name="CreditSales" />
+      <PropertyRef Name="Salereturns" />
+      <PropertyRef Name="Purchasereturns" />
+      <PropertyRef Name="Remarks" />
+    </Key>
+    <Property Name="StockID" Type="int" Nullable="false" />
+    <Property Name="ProductID" Type="int" Nullable="false" />
+    <Property Name="ColorID" Type="int" Nullable="false" />
+    <Property Name="Code" Type="varchar" MaxLength="50" />
+    <Property Name="ProductName" Type="nvarchar(max)" />
+    <Property Name="ColorCode" Type="varchar" MaxLength="250" />
+    <Property Name="Purchase" Type="decimal" Precision="38" Scale="2" Nullable="false" />
+    <Property Name="TotalSales" Type="decimal" Precision="38" Scale="2" Nullable="false" />
+    <Property Name="CreditSales" Type="decimal" Precision="38" Scale="2" Nullable="false" />
+    <Property Name="Salereturns" Type="decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="Purchasereturns" Type="decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="SystemStock" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="StockShouldBe" Type="decimal" Precision="38" Scale="0" />
+    <Property Name="Remarks" Type="varchar" MaxLength="6" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'DEWSRM.dbo.vw_SupplierLedger' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vw_SupplierLedger">
+    <Key>
+      <PropertyRef Name="SupplierID" />
+      <PropertyRef Name="GrandTotal" />
+      <PropertyRef Name="TotalDiscount" />
+      <PropertyRef Name="PaidAmt" />
+      <PropertyRef Name="AdjustInCashDelivery" />
+      <PropertyRef Name="CashDelivery" />
+      <PropertyRef Name="SystemDue" />
+      <PropertyRef Name="Remarks" />
+    </Key>
+    <Property Name="SupplierID" Type="int" Nullable="false" />
+    <Property Name="Code" Type="varchar" MaxLength="50" />
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="GrandTotal" Type="decimal" Precision="38" Scale="2" Nullable="false" />
+    <Property Name="TotalDiscount" Type="decimal" Precision="38" Scale="2" Nullable="false" />
+    <Property Name="PaidAmt" Type="decimal" Precision="38" Scale="2" Nullable="false" />
+    <Property Name="AdjustInCashDelivery" Type="decimal" Precision="38" Scale="2" Nullable="false" />
+    <Property Name="CashDelivery" Type="decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="ActualDue" Type="decimal" Precision="38" Scale="0" />
+    <Property Name="SystemDue" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Diff" Type="decimal" Precision="38" Scale="0" />
+    <Property Name="Remarks" Type="varchar" MaxLength="6" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_BankTransaction_Banks">
+    <End Role="Banks" Type="Self.Banks" Multiplicity="1" />
+    <End Role="BankTransactions" Type="Self.BankTransactions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Banks">
+        <PropertyRef Name="BankID" />
+      </Principal>
+      <Dependent Role="BankTransactions">
+        <PropertyRef Name="BankID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Branches_Branches">
+    <End Role="Branches" Type="Self.Branches" Multiplicity="1" />
+    <End Role="Branches1" Type="Self.Branches" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Branches">
+        <PropertyRef Name="BranchID" />
+      </Principal>
+      <Dependent Role="Branches1">
+        <PropertyRef Name="BranchID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CardTypeSetups_Banks">
+    <End Role="Banks" Type="Self.Banks" Multiplicity="1" />
+    <End Role="CardTypeSetups" Type="Self.CardTypeSetups" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Banks">
+        <PropertyRef Name="BankID" />
+      </Principal>
+      <Dependent Role="CardTypeSetups">
+        <PropertyRef Name="BankID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CardTypeSetups_CardTypes">
+    <End Role="CardTypes" Type="Self.CardTypes" Multiplicity="1" />
+    <End Role="CardTypeSetups" Type="Self.CardTypeSetups" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CardTypes">
+        <PropertyRef Name="CardTypeID" />
+      </Principal>
+      <Dependent Role="CardTypeSetups">
+        <PropertyRef Name="CardTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CashCollections_Customers">
+    <End Role="Customers" Type="Self.Customers" Multiplicity="0..1" />
+    <End Role="CashCollections" Type="Self.CashCollections" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customers">
+        <PropertyRef Name="CustomerID" />
+      </Principal>
+      <Dependent Role="CashCollections">
+        <PropertyRef Name="CustomerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CashCollections_Suppliers">
+    <End Role="Suppliers" Type="Self.Suppliers" Multiplicity="0..1" />
+    <End Role="CashCollections" Type="Self.CashCollections" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Suppliers">
+        <PropertyRef Name="SupplierID" />
+      </Principal>
+      <Dependent Role="CashCollections">
+        <PropertyRef Name="CompanyID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Colors_Colors">
+    <End Role="Colors" Type="Self.Colors" Multiplicity="1" />
+    <End Role="Colors1" Type="Self.Colors" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Colors">
+        <PropertyRef Name="ColorID" />
+      </Principal>
+      <Dependent Role="Colors1">
+        <PropertyRef Name="ColorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CreditSaleProducts_Colors">
+    <End Role="Colors" Type="Self.Colors" Multiplicity="1" />
+    <End Role="CreditSaleProducts" Type="Self.CreditSaleProducts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Colors">
+        <PropertyRef Name="ColorID" />
+      </Principal>
+      <Dependent Role="CreditSaleProducts">
+        <PropertyRef Name="ColorInfoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CreditSaleProducts_CreditSaleProducts">
+    <End Role="CreditSaleProducts" Type="Self.CreditSaleProducts" Multiplicity="1" />
+    <End Role="CreditSaleProducts1" Type="Self.CreditSaleProducts" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="CreditSaleProducts">
+        <PropertyRef Name="CreditSaleProductsID" />
+      </Principal>
+      <Dependent Role="CreditSaleProducts1">
+        <PropertyRef Name="CreditSaleProductsID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CreditSaleProducts_CreditSales">
+    <End Role="CreditSales" Type="Self.CreditSales" Multiplicity="1" />
+    <End Role="CreditSaleProducts" Type="Self.CreditSaleProducts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CreditSales">
+        <PropertyRef Name="CreditSalesID" />
+      </Principal>
+      <Dependent Role="CreditSaleProducts">
+        <PropertyRef Name="CreditSalesID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CreditSaleProducts_Godowns">
+    <End Role="Godowns" Type="Self.Godowns" Multiplicity="0..1" />
+    <End Role="CreditSaleProducts" Type="Self.CreditSaleProducts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Godowns">
+        <PropertyRef Name="GodownID" />
+      </Principal>
+      <Dependent Role="CreditSaleProducts">
+        <PropertyRef Name="GodownID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CreditSaleProducts_Products">
+    <End Role="Products" Type="Self.Products" Multiplicity="1" />
+    <End Role="CreditSaleProducts" Type="Self.CreditSaleProducts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="CreditSaleProducts">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CreditSaleProducts_StockDetails">
+    <End Role="StockDetails" Type="Self.StockDetails" Multiplicity="1" />
+    <End Role="CreditSaleProducts" Type="Self.CreditSaleProducts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StockDetails">
+        <PropertyRef Name="SDetailID" />
+      </Principal>
+      <Dependent Role="CreditSaleProducts">
+        <PropertyRef Name="StockDetailID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CreditSales_Customers">
+    <End Role="Customers" Type="Self.Customers" Multiplicity="1" />
+    <End Role="CreditSales" Type="Self.CreditSales" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customers">
+        <PropertyRef Name="CustomerID" />
+      </Principal>
+      <Dependent Role="CreditSales">
+        <PropertyRef Name="CustomerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CreditSalesDetails_CreditSales">
+    <End Role="CreditSales" Type="Self.CreditSales" Multiplicity="1" />
+    <End Role="CreditSalesDetails" Type="Self.CreditSalesDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CreditSales">
+        <PropertyRef Name="CreditSalesID" />
+      </Principal>
+      <Dependent Role="CreditSalesDetails">
+        <PropertyRef Name="CreditSalesID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DamageProducts_Products">
+    <End Role="Products" Type="Self.Products" Multiplicity="1" />
+    <End Role="DamageProducts" Type="Self.DamageProducts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="DamageProducts">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DamageProducts_StockDetails">
+    <End Role="StockDetails" Type="Self.StockDetails" Multiplicity="1" />
+    <End Role="DamageProducts" Type="Self.DamageProducts" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="StockDetails">
+        <PropertyRef Name="SDetailID" />
+      </Principal>
+      <Dependent Role="DamageProducts">
+        <PropertyRef Name="DamageProID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Employees_Designations">
+    <End Role="Designations" Type="Self.Designations" Multiplicity="1" />
+    <End Role="Employees" Type="Self.Employees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Designations">
+        <PropertyRef Name="DesignationID" />
+      </Principal>
+      <Dependent Role="Employees">
+        <PropertyRef Name="DesignationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmpSalaries_Employees">
+    <End Role="Employees" Type="Self.Employees" Multiplicity="1" />
+    <End Role="EmpSalaries" Type="Self.EmpSalaries" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="EmpSalaries">
+        <PropertyRef Name="EmployeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Expenditures_ExpenseItems">
+    <End Role="ExpenseItems" Type="Self.ExpenseItems" Multiplicity="1" />
+    <End Role="Expenditures" Type="Self.Expenditures" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ExpenseItems">
+        <PropertyRef Name="ExpenseItemID" />
+      </Principal>
+      <Dependent Role="Expenditures">
+        <PropertyRef Name="ExpenseItemID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MenuPermissions_Menus">
+    <End Role="Menus" Type="Self.Menus" Multiplicity="1" />
+    <End Role="MenuPermissions" Type="Self.MenuPermissions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Menus">
+        <PropertyRef Name="MenuID" />
+      </Principal>
+      <Dependent Role="MenuPermissions">
+        <PropertyRef Name="MenuID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MenuPermissions_Roles">
+    <End Role="Roles" Type="Self.Roles" Multiplicity="1" />
+    <End Role="MenuPermissions" Type="Self.MenuPermissions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="RoleID" />
+      </Principal>
+      <Dependent Role="MenuPermissions">
+        <PropertyRef Name="RoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MonthlyStocks_Products">
+    <End Role="Products" Type="Self.Products" Multiplicity="1" />
+    <End Role="MonthlyStocks" Type="Self.MonthlyStocks" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="MonthlyStocks">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_POProductDetails_Colors">
+    <End Role="Colors" Type="Self.Colors" Multiplicity="1" />
+    <End Role="POProductDetails" Type="Self.POProductDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Colors">
+        <PropertyRef Name="ColorID" />
+      </Principal>
+      <Dependent Role="POProductDetails">
+        <PropertyRef Name="ColorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_POProductDetails_POrderDetails">
+    <End Role="POrderDetails" Type="Self.POrderDetails" Multiplicity="1" />
+    <End Role="POProductDetails" Type="Self.POProductDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="POrderDetails">
+        <PropertyRef Name="POrderDetailID" />
+      </Principal>
+      <Dependent Role="POProductDetails">
+        <PropertyRef Name="POrderDetailID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_POProductDetails_Products">
+    <End Role="Products" Type="Self.Products" Multiplicity="1" />
+    <End Role="POProductDetails" Type="Self.POProductDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="POProductDetails">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_POrderDetails_ColorInfos">
+    <End Role="Colors" Type="Self.Colors" Multiplicity="1" />
+    <End Role="POrderDetails" Type="Self.POrderDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Colors">
+        <PropertyRef Name="ColorID" />
+      </Principal>
+      <Dependent Role="POrderDetails">
+        <PropertyRef Name="ColorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_POrderDetails_Godowns">
+    <End Role="Godowns" Type="Self.Godowns" Multiplicity="0..1" />
+    <End Role="POrderDetails" Type="Self.POrderDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Godowns">
+        <PropertyRef Name="GodownID" />
+      </Principal>
+      <Dependent Role="POrderDetails">
+        <PropertyRef Name="GodownID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_POrderDetails_POrders">
+    <End Role="POrders" Type="Self.POrders" Multiplicity="1" />
+    <End Role="POrderDetails" Type="Self.POrderDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="POrders">
+        <PropertyRef Name="POrderID" />
+      </Principal>
+      <Dependent Role="POrderDetails">
+        <PropertyRef Name="POrderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_POrderDetails_Products">
+    <End Role="Products" Type="Self.Products" Multiplicity="1" />
+    <End Role="POrderDetails" Type="Self.POrderDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="POrderDetails">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_POrders_Suppliers">
+    <End Role="Suppliers" Type="Self.Suppliers" Multiplicity="1" />
+    <End Role="POrders" Type="Self.POrders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Suppliers">
+        <PropertyRef Name="SupplierID" />
+      </Principal>
+      <Dependent Role="POrders">
+        <PropertyRef Name="SupplierID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_POrders_Users">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="POrders" Type="Self.POrders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="POrders">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Products_Categorys">
+    <End Role="Categorys" Type="Self.Categorys" Multiplicity="1" />
+    <End Role="Products" Type="Self.Products" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categorys">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="Products">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Products_Companies">
+    <End Role="Companies" Type="Self.Companies" Multiplicity="1" />
+    <End Role="Products" Type="Self.Products" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Companies">
+        <PropertyRef Name="CompanyID" />
+      </Principal>
+      <Dependent Role="Products">
+        <PropertyRef Name="CompanyID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReturnDetails_Products">
+    <End Role="Products" Type="Self.Products" Multiplicity="1" />
+    <End Role="ReturnDetails" Type="Self.ReturnDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="ReturnDetails">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReturnDetails_Returns">
+    <End Role="Returns" Type="Self.Returns" Multiplicity="1" />
+    <End Role="ReturnDetails" Type="Self.ReturnDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Returns">
+        <PropertyRef Name="ReturnID" />
+      </Principal>
+      <Dependent Role="ReturnDetails">
+        <PropertyRef Name="ReturnID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Returns_Customers">
+    <End Role="Customers" Type="Self.Customers" Multiplicity="0..1" />
+    <End Role="Returns" Type="Self.Returns" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customers">
+        <PropertyRef Name="CustomerID" />
+      </Principal>
+      <Dependent Role="Returns">
+        <PropertyRef Name="CustomerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Returns_Suppliers">
+    <End Role="Suppliers" Type="Self.Suppliers" Multiplicity="0..1" />
+    <End Role="Returns" Type="Self.Returns" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Suppliers">
+        <PropertyRef Name="SupplierID" />
+      </Principal>
+      <Dependent Role="Returns">
+        <PropertyRef Name="SupplierID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Returns_Users">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="Returns" Type="Self.Returns" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="Returns">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ShareInvestment_ShareInvestmentHeads">
+    <End Role="ShareInvestmentHeads" Type="Self.ShareInvestmentHeads" Multiplicity="1" />
+    <End Role="ShareInvestments" Type="Self.ShareInvestments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ShareInvestmentHeads">
+        <PropertyRef Name="SIHID" />
+      </Principal>
+      <Dependent Role="ShareInvestments">
+        <PropertyRef Name="SIHID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SMSStatuses_SMSFormates">
+    <End Role="SMSFormates" Type="Self.SMSFormates" Multiplicity="1" />
+    <End Role="SMSStatuses" Type="Self.SMSStatuses" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SMSFormates">
+        <PropertyRef Name="SMSFormateID" />
+      </Principal>
+      <Dependent Role="SMSStatuses">
+        <PropertyRef Name="SMSFormateID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SMSStatuses_Users">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="SMSStatuses" Type="Self.SMSStatuses" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="SMSStatuses">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SOrderDetails_Godowns">
+    <End Role="Godowns" Type="Self.Godowns" Multiplicity="0..1" />
+    <End Role="SOrderDetails" Type="Self.SOrderDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Godowns">
+        <PropertyRef Name="GodownID" />
+      </Principal>
+      <Dependent Role="SOrderDetails">
+        <PropertyRef Name="GodownID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SOrderDetails_Products">
+    <End Role="Products" Type="Self.Products" Multiplicity="1" />
+    <End Role="SOrderDetails" Type="Self.SOrderDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="SOrderDetails">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SOrderDetails_SOrders">
+    <End Role="SOrders" Type="Self.SOrders" Multiplicity="1" />
+    <End Role="SOrderDetails" Type="Self.SOrderDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SOrders">
+        <PropertyRef Name="SOrderID" />
+      </Principal>
+      <Dependent Role="SOrderDetails">
+        <PropertyRef Name="SOrderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SOrderDetails_StockDetails">
+    <End Role="StockDetails" Type="Self.StockDetails" Multiplicity="1" />
+    <End Role="SOrderDetails" Type="Self.SOrderDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StockDetails">
+        <PropertyRef Name="SDetailID" />
+      </Principal>
+      <Dependent Role="SOrderDetails">
+        <PropertyRef Name="StockDetailID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SOrders_Customers">
+    <End Role="Customers" Type="Self.Customers" Multiplicity="1" />
+    <End Role="SOrders" Type="Self.SOrders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customers">
+        <PropertyRef Name="CustomerID" />
+      </Principal>
+      <Dependent Role="SOrders">
+        <PropertyRef Name="CustomerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SOrders_Users">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="SOrders" Type="Self.SOrders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="SOrders">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StockDetails_POrderDetails">
+    <End Role="POrderDetails" Type="Self.POrderDetails" Multiplicity="0..1" />
+    <End Role="StockDetails" Type="Self.StockDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="POrderDetails">
+        <PropertyRef Name="POrderDetailID" />
+      </Principal>
+      <Dependent Role="StockDetails">
+        <PropertyRef Name="POrderDetailID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StockDetails_Products">
+    <End Role="Products" Type="Self.Products" Multiplicity="1" />
+    <End Role="StockDetails" Type="Self.StockDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="StockDetails">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StockDetails_Stocks">
+    <End Role="Stocks" Type="Self.Stocks" Multiplicity="0..1" />
+    <End Role="StockDetails" Type="Self.StockDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stocks">
+        <PropertyRef Name="StockID" />
+      </Principal>
+      <Dependent Role="StockDetails">
+        <PropertyRef Name="StockID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Stocks_ColorInfos">
+    <End Role="Colors" Type="Self.Colors" Multiplicity="1" />
+    <End Role="Stocks" Type="Self.Stocks" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Colors">
+        <PropertyRef Name="ColorID" />
+      </Principal>
+      <Dependent Role="Stocks">
+        <PropertyRef Name="ColorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Stocks_Godowns">
+    <End Role="Godowns" Type="Self.Godowns" Multiplicity="0..1" />
+    <End Role="Stocks" Type="Self.Stocks" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Godowns">
+        <PropertyRef Name="GodownID" />
+      </Principal>
+      <Dependent Role="Stocks">
+        <PropertyRef Name="GodownID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Stocks_Products">
+    <End Role="Products" Type="Self.Products" Multiplicity="1" />
+    <End Role="Stocks" Type="Self.Stocks" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="Stocks">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserRoles_Roles">
+    <End Role="Roles" Type="Self.Roles" Multiplicity="1" />
+    <End Role="UserRoles" Type="Self.UserRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="RoleID" />
+      </Principal>
+      <Dependent Role="UserRoles">
+        <PropertyRef Name="RoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserRoles_Users">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="UserRoles" Type="Self.UserRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="UserRoles">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DEWSRMModelStoreContainer">
+    <EntitySet Name="Banks" EntityType="Self.Banks" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BankTransactions" EntityType="Self.BankTransactions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Branches" EntityType="Self.Branches" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CardTypes" EntityType="Self.CardTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CardTypeSetups" EntityType="Self.CardTypeSetups" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CashCollections" EntityType="Self.CashCollections" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Categorys" EntityType="Self.Categorys" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Colors" EntityType="Self.Colors" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Companies" EntityType="Self.Companies" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CreditSaleProducts" EntityType="Self.CreditSaleProducts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CreditSales" EntityType="Self.CreditSales" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CreditSalesDetails" EntityType="Self.CreditSalesDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Customers" EntityType="Self.Customers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DamageProducts" EntityType="Self.DamageProducts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Designations" EntityType="Self.Designations" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Employees" EntityType="Self.Employees" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EmpSalaries" EntityType="Self.EmpSalaries" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Expenditures" EntityType="Self.Expenditures" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ExpenseItems" EntityType="Self.ExpenseItems" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Godowns" EntityType="Self.Godowns" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MenuPermissions" EntityType="Self.MenuPermissions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Menus" EntityType="Self.Menus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Models" EntityType="Self.Models" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MonthlyStocks" EntityType="Self.MonthlyStocks" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="POProductDetails" EntityType="Self.POProductDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="POrderDetails" EntityType="Self.POrderDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="POrders" EntityType="Self.POrders" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PrevBalance" EntityType="Self.PrevBalance" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Products" EntityType="Self.Products" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ReturnDetails" EntityType="Self.ReturnDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Returns" EntityType="Self.Returns" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Roles" EntityType="Self.Roles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ShareInvestmentHeads" EntityType="Self.ShareInvestmentHeads" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ShareInvestments" EntityType="Self.ShareInvestments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SMSFormates" EntityType="Self.SMSFormates" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SMSStatuses" EntityType="Self.SMSStatuses" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SOrderDetails" EntityType="Self.SOrderDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SOrders" EntityType="Self.SOrders" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StockDetails" EntityType="Self.StockDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Stocks" EntityType="Self.Stocks" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Suppliers" EntityType="Self.Suppliers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SystemInformations" EntityType="Self.SystemInformations" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserRoles" EntityType="Self.UserRoles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="vw_CustomerLedger" EntityType="Self.vw_CustomerLedger" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [vw_CustomerLedger].[CustomerID] AS [CustomerID], 
+    [vw_CustomerLedger].[Code] AS [Code], 
+    [vw_CustomerLedger].[Name] AS [Name], 
+    [vw_CustomerLedger].[OpeningDue] AS [OpeningDue], 
+    [vw_CustomerLedger].[SalesGrandTotal] AS [SalesGrandTotal], 
+    [vw_CustomerLedger].[TotalDiscount] AS [TotalDiscount], 
+    [vw_CustomerLedger].[RecAmount] AS [RecAmount], 
+    [vw_CustomerLedger].[AdjustInSales] AS [AdjustInSales], 
+    [vw_CustomerLedger].[BackAmount] AS [BackAmount], 
+    [vw_CustomerLedger].[CreditSalesDue] AS [CreditSalesDue], 
+    [vw_CustomerLedger].[CashRecAmt] AS [CashRecAmt], 
+    [vw_CustomerLedger].[AdjustInCashRec] AS [AdjustInCashRec], 
+    [vw_CustomerLedger].[ActualDue] AS [ActualDue], 
+    [vw_CustomerLedger].[SystemDue] AS [SystemDue], 
+    [vw_CustomerLedger].[Diff] AS [Diff], 
+    [vw_CustomerLedger].[Remarks] AS [Remarks]
+    FROM [dbo].[vw_CustomerLedger] AS [vw_CustomerLedger]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vw_StockCheck" EntityType="Self.vw_StockCheck" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [vw_StockCheck].[StockID] AS [StockID], 
+    [vw_StockCheck].[ProductID] AS [ProductID], 
+    [vw_StockCheck].[ColorID] AS [ColorID], 
+    [vw_StockCheck].[Code] AS [Code], 
+    [vw_StockCheck].[ProductName] AS [ProductName], 
+    [vw_StockCheck].[ColorCode] AS [ColorCode], 
+    [vw_StockCheck].[Purchase] AS [Purchase], 
+    [vw_StockCheck].[TotalSales] AS [TotalSales], 
+    [vw_StockCheck].[CreditSales] AS [CreditSales], 
+    [vw_StockCheck].[Salereturns] AS [Salereturns], 
+    [vw_StockCheck].[Purchasereturns] AS [Purchasereturns], 
+    [vw_StockCheck].[SystemStock] AS [SystemStock], 
+    [vw_StockCheck].[StockShouldBe] AS [StockShouldBe], 
+    [vw_StockCheck].[Remarks] AS [Remarks]
+    FROM [dbo].[vw_StockCheck] AS [vw_StockCheck]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vw_SupplierLedger" EntityType="Self.vw_SupplierLedger" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [vw_SupplierLedger].[SupplierID] AS [SupplierID], 
+    [vw_SupplierLedger].[Code] AS [Code], 
+    [vw_SupplierLedger].[Name] AS [Name], 
+    [vw_SupplierLedger].[GrandTotal] AS [GrandTotal], 
+    [vw_SupplierLedger].[TotalDiscount] AS [TotalDiscount], 
+    [vw_SupplierLedger].[PaidAmt] AS [PaidAmt], 
+    [vw_SupplierLedger].[AdjustInCashDelivery] AS [AdjustInCashDelivery], 
+    [vw_SupplierLedger].[CashDelivery] AS [CashDelivery], 
+    [vw_SupplierLedger].[ActualDue] AS [ActualDue], 
+    [vw_SupplierLedger].[SystemDue] AS [SystemDue], 
+    [vw_SupplierLedger].[Diff] AS [Diff], 
+    [vw_SupplierLedger].[Remarks] AS [Remarks]
+    FROM [dbo].[vw_SupplierLedger] AS [vw_SupplierLedger]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_BankTransaction_Banks" Association="Self.FK_BankTransaction_Banks">
+      <End Role="Banks" EntitySet="Banks" />
+      <End Role="BankTransactions" EntitySet="BankTransactions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Branches_Branches" Association="Self.FK_Branches_Branches">
+      <End Role="Branches" EntitySet="Branches" />
+      <End Role="Branches1" EntitySet="Branches" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CardTypeSetups_Banks" Association="Self.FK_CardTypeSetups_Banks">
+      <End Role="Banks" EntitySet="Banks" />
+      <End Role="CardTypeSetups" EntitySet="CardTypeSetups" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CardTypeSetups_CardTypes" Association="Self.FK_CardTypeSetups_CardTypes">
+      <End Role="CardTypes" EntitySet="CardTypes" />
+      <End Role="CardTypeSetups" EntitySet="CardTypeSetups" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CashCollections_Customers" Association="Self.FK_CashCollections_Customers">
+      <End Role="Customers" EntitySet="Customers" />
+      <End Role="CashCollections" EntitySet="CashCollections" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CashCollections_Suppliers" Association="Self.FK_CashCollections_Suppliers">
+      <End Role="Suppliers" EntitySet="Suppliers" />
+      <End Role="CashCollections" EntitySet="CashCollections" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Colors_Colors" Association="Self.FK_Colors_Colors">
+      <End Role="Colors" EntitySet="Colors" />
+      <End Role="Colors1" EntitySet="Colors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CreditSaleProducts_Colors" Association="Self.FK_CreditSaleProducts_Colors">
+      <End Role="Colors" EntitySet="Colors" />
+      <End Role="CreditSaleProducts" EntitySet="CreditSaleProducts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CreditSaleProducts_CreditSaleProducts" Association="Self.FK_CreditSaleProducts_CreditSaleProducts">
+      <End Role="CreditSaleProducts" EntitySet="CreditSaleProducts" />
+      <End Role="CreditSaleProducts1" EntitySet="CreditSaleProducts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CreditSaleProducts_CreditSales" Association="Self.FK_CreditSaleProducts_CreditSales">
+      <End Role="CreditSales" EntitySet="CreditSales" />
+      <End Role="CreditSaleProducts" EntitySet="CreditSaleProducts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CreditSaleProducts_Godowns" Association="Self.FK_CreditSaleProducts_Godowns">
+      <End Role="Godowns" EntitySet="Godowns" />
+      <End Role="CreditSaleProducts" EntitySet="CreditSaleProducts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CreditSaleProducts_Products" Association="Self.FK_CreditSaleProducts_Products">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="CreditSaleProducts" EntitySet="CreditSaleProducts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CreditSaleProducts_StockDetails" Association="Self.FK_CreditSaleProducts_StockDetails">
+      <End Role="StockDetails" EntitySet="StockDetails" />
+      <End Role="CreditSaleProducts" EntitySet="CreditSaleProducts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CreditSales_Customers" Association="Self.FK_CreditSales_Customers">
+      <End Role="Customers" EntitySet="Customers" />
+      <End Role="CreditSales" EntitySet="CreditSales" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CreditSalesDetails_CreditSales" Association="Self.FK_CreditSalesDetails_CreditSales">
+      <End Role="CreditSales" EntitySet="CreditSales" />
+      <End Role="CreditSalesDetails" EntitySet="CreditSalesDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DamageProducts_Products" Association="Self.FK_DamageProducts_Products">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="DamageProducts" EntitySet="DamageProducts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DamageProducts_StockDetails" Association="Self.FK_DamageProducts_StockDetails">
+      <End Role="StockDetails" EntitySet="StockDetails" />
+      <End Role="DamageProducts" EntitySet="DamageProducts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Employees_Designations" Association="Self.FK_Employees_Designations">
+      <End Role="Designations" EntitySet="Designations" />
+      <End Role="Employees" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmpSalaries_Employees" Association="Self.FK_EmpSalaries_Employees">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="EmpSalaries" EntitySet="EmpSalaries" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Expenditures_ExpenseItems" Association="Self.FK_Expenditures_ExpenseItems">
+      <End Role="ExpenseItems" EntitySet="ExpenseItems" />
+      <End Role="Expenditures" EntitySet="Expenditures" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MenuPermissions_Menus" Association="Self.FK_MenuPermissions_Menus">
+      <End Role="Menus" EntitySet="Menus" />
+      <End Role="MenuPermissions" EntitySet="MenuPermissions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MenuPermissions_Roles" Association="Self.FK_MenuPermissions_Roles">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="MenuPermissions" EntitySet="MenuPermissions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MonthlyStocks_Products" Association="Self.FK_MonthlyStocks_Products">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="MonthlyStocks" EntitySet="MonthlyStocks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_POProductDetails_Colors" Association="Self.FK_POProductDetails_Colors">
+      <End Role="Colors" EntitySet="Colors" />
+      <End Role="POProductDetails" EntitySet="POProductDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_POProductDetails_POrderDetails" Association="Self.FK_POProductDetails_POrderDetails">
+      <End Role="POrderDetails" EntitySet="POrderDetails" />
+      <End Role="POProductDetails" EntitySet="POProductDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_POProductDetails_Products" Association="Self.FK_POProductDetails_Products">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="POProductDetails" EntitySet="POProductDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_POrderDetails_ColorInfos" Association="Self.FK_POrderDetails_ColorInfos">
+      <End Role="Colors" EntitySet="Colors" />
+      <End Role="POrderDetails" EntitySet="POrderDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_POrderDetails_Godowns" Association="Self.FK_POrderDetails_Godowns">
+      <End Role="Godowns" EntitySet="Godowns" />
+      <End Role="POrderDetails" EntitySet="POrderDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_POrderDetails_POrders" Association="Self.FK_POrderDetails_POrders">
+      <End Role="POrders" EntitySet="POrders" />
+      <End Role="POrderDetails" EntitySet="POrderDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_POrderDetails_Products" Association="Self.FK_POrderDetails_Products">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="POrderDetails" EntitySet="POrderDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_POrders_Suppliers" Association="Self.FK_POrders_Suppliers">
+      <End Role="Suppliers" EntitySet="Suppliers" />
+      <End Role="POrders" EntitySet="POrders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_POrders_Users" Association="Self.FK_POrders_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="POrders" EntitySet="POrders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Products_Categorys" Association="Self.FK_Products_Categorys">
+      <End Role="Categorys" EntitySet="Categorys" />
+      <End Role="Products" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Products_Companies" Association="Self.FK_Products_Companies">
+      <End Role="Companies" EntitySet="Companies" />
+      <End Role="Products" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReturnDetails_Products" Association="Self.FK_ReturnDetails_Products">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="ReturnDetails" EntitySet="ReturnDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReturnDetails_Returns" Association="Self.FK_ReturnDetails_Returns">
+      <End Role="Returns" EntitySet="Returns" />
+      <End Role="ReturnDetails" EntitySet="ReturnDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Returns_Customers" Association="Self.FK_Returns_Customers">
+      <End Role="Customers" EntitySet="Customers" />
+      <End Role="Returns" EntitySet="Returns" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Returns_Suppliers" Association="Self.FK_Returns_Suppliers">
+      <End Role="Suppliers" EntitySet="Suppliers" />
+      <End Role="Returns" EntitySet="Returns" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Returns_Users" Association="Self.FK_Returns_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Returns" EntitySet="Returns" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ShareInvestment_ShareInvestmentHeads" Association="Self.FK_ShareInvestment_ShareInvestmentHeads">
+      <End Role="ShareInvestmentHeads" EntitySet="ShareInvestmentHeads" />
+      <End Role="ShareInvestments" EntitySet="ShareInvestments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SMSStatuses_SMSFormates" Association="Self.FK_SMSStatuses_SMSFormates">
+      <End Role="SMSFormates" EntitySet="SMSFormates" />
+      <End Role="SMSStatuses" EntitySet="SMSStatuses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SMSStatuses_Users" Association="Self.FK_SMSStatuses_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="SMSStatuses" EntitySet="SMSStatuses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SOrderDetails_Godowns" Association="Self.FK_SOrderDetails_Godowns">
+      <End Role="Godowns" EntitySet="Godowns" />
+      <End Role="SOrderDetails" EntitySet="SOrderDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SOrderDetails_Products" Association="Self.FK_SOrderDetails_Products">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="SOrderDetails" EntitySet="SOrderDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SOrderDetails_SOrders" Association="Self.FK_SOrderDetails_SOrders">
+      <End Role="SOrders" EntitySet="SOrders" />
+      <End Role="SOrderDetails" EntitySet="SOrderDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SOrderDetails_StockDetails" Association="Self.FK_SOrderDetails_StockDetails">
+      <End Role="StockDetails" EntitySet="StockDetails" />
+      <End Role="SOrderDetails" EntitySet="SOrderDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SOrders_Customers" Association="Self.FK_SOrders_Customers">
+      <End Role="Customers" EntitySet="Customers" />
+      <End Role="SOrders" EntitySet="SOrders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SOrders_Users" Association="Self.FK_SOrders_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="SOrders" EntitySet="SOrders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StockDetails_POrderDetails" Association="Self.FK_StockDetails_POrderDetails">
+      <End Role="POrderDetails" EntitySet="POrderDetails" />
+      <End Role="StockDetails" EntitySet="StockDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StockDetails_Products" Association="Self.FK_StockDetails_Products">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="StockDetails" EntitySet="StockDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StockDetails_Stocks" Association="Self.FK_StockDetails_Stocks">
+      <End Role="Stocks" EntitySet="Stocks" />
+      <End Role="StockDetails" EntitySet="StockDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Stocks_ColorInfos" Association="Self.FK_Stocks_ColorInfos">
+      <End Role="Colors" EntitySet="Colors" />
+      <End Role="Stocks" EntitySet="Stocks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Stocks_Godowns" Association="Self.FK_Stocks_Godowns">
+      <End Role="Godowns" EntitySet="Godowns" />
+      <End Role="Stocks" EntitySet="Stocks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Stocks_Products" Association="Self.FK_Stocks_Products">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="Stocks" EntitySet="Stocks" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserRoles_Roles" Association="Self.FK_UserRoles_Roles">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="UserRoles" EntitySet="UserRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserRoles_Users" Association="Self.FK_UserRoles_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="UserRoles" EntitySet="UserRoles" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
