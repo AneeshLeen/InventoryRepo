@@ -12,6 +12,10 @@ using INVENTORY.DA;
 
 namespace INVENTORY.DA
 {
+
+    /// <summary>
+    /// First Commit - 26th Feb 2020
+    /// </summary>
     public class PrintInvoice
     {
         #region Print Invoice
