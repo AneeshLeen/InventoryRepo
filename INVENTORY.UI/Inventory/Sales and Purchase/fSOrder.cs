@@ -1823,7 +1823,7 @@ namespace INVENTORY.UI
         {
             DataTable dtbranches = new DataTable();
             SqlConnection connection = new SqlConnection("Data Source=DESKTOP-A62FJAE\\SQL;Initial Catalog=DEWSRM;Persist Security Info=True;Integrated Security=true");
-            SqlCommand command = new SqlCommand("SELECT * FROM[dbo].[Categorys]  cat WHERE cat.CategoryID NOT IN(SELECT CategoryID FROM[dbo].[Products]) and cat.inactive = 'true'", connection);
+            SqlCommand command = new SqlCommand("SELECT * FROM[dbo].[Categorys]  cat WHERE cat.CategoryID NOT IN(SELECT CategoryID FROM[dbo].[Products]) and cat.inactive = 'false'", connection);
             SqlDataAdapter adp = new SqlDataAdapter(command);
             adp.Fill(dtbranches);
             return dtbranches;
@@ -1833,15 +1833,11 @@ namespace INVENTORY.UI
         {
             Branchlist = ReadAllCategories();
         }
-
         //
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-
             LoadDatatable();
-
             int top = 5;
             int left = 1;
             int count = 1;
@@ -1849,42 +1845,45 @@ namespace INVENTORY.UI
             foreach (DataRow row in Branchlist.Rows)
             {
 
-                    Button btn = new Button();
-                    btn.Left = left;
-                    btn.Top = top;
-                    btn.Size = new Size(80, 63);
-                    btn.Font = new Font(Font.FontFamily, 9);
-                    btn.Text = row["Description"].ToString();
-                    btn.Tag = row["vat"].ToString();
-                    btn.BackColor = System.Drawing.Color.Cyan ;
-                    pnlbtndyan.Controls.Add(btn);
-                    top += btn.Height + 2;
-                    btn.Click += new System.EventHandler(this.btn_Click);
-                    count++;
+                Button btn = new Button();
+                btn.Left = left;
+                btn.Top = top;
+                btn.Size = new Size(80, 63);
+                btn.Font = new Font(Font.FontFamily, 9);
+                btn.Text = row["Description"].ToString();
+                btn.Tag = row["vat"].ToString();
+                btn.BackColor = System.Drawing.Color.FromName(row["backcolor"].ToString());
+                btn.ForeColor = System.Drawing.Color.FromName(row["forecolor"].ToString());
+                pnlbtndyan.Controls.Add(btn);
+                top += btn.Height + 2;
+                btn.Click += new System.EventHandler(this.btn_Click);
+                count++;
                 if (count == 8)
                 {
                     count = 1;
                     top = 5;
                     left += 81;
                 }
-               
-            }
 
+            }
 
         }
 
         decimal taxper = 0;
         private void btn_Click(object sender, EventArgs e)
         {
+            if (txtamt.Text == String.Empty)
+            {
+                MessageBox.Show("Invalid Selection");
+                return;
+            }
             taxper = 0;
             if (Convert.ToDecimal( ((Button) sender).Tag) >0)
             {
                 taxper += Convert.ToDecimal(txtamt.Text) * Convert.ToDecimal(((Button)sender).Tag) / 100;
                
-            }
-           
-           
-            this.dgProducts.Rows.Add(dgProducts.Rows.Count + 1, ((sender) as Button).Text, multiple, Convert.ToDecimal(txtamt.Text),  Convert.ToDecimal(txtamt.Text) * multiple + Convert.ToDecimal( taxper), taxper);
+            }      
+            this.dgProducts.Rows.Add(dgProducts.Rows.Count + 1, ((sender) as Button).Text, multiple, Convert.ToDecimal(txtamt.Text),  Convert.ToDecimal(txtamt.Text) + Convert.ToDecimal( taxper) * multiple, taxper * multiple);
             txtamt.Text = "";
             multiple = 1;
         }
@@ -1952,7 +1951,7 @@ namespace INVENTORY.UI
         decimal multiple = 1;
         private void btnx_Click(object sender, EventArgs e)
         {
-            multiple =Convert.ToDecimal( txtamt.Text);
+            multiple = Convert.ToDecimal(txtamt.Text);
             txtamt.Text = "";
         }
 
@@ -2005,9 +2004,28 @@ namespace INVENTORY.UI
             frmpop.ShowDialog();
         }
 
-        private void button16_Click(object sender, EventArgs e)
+        void showmultipaymentpop()
         {
-            showpaymentpop(lblbilltotal.Text);
+            frmmultipayment frmmultipay = new frmmultipayment();
+            if (Convert.ToDecimal(lblbilltotal.Text)>0 && Convert.ToDecimal(txtamt.Text)>0)
+            {
+                frmmultipay.lblbillamt.Text = lblbilltotal.Text;
+                frmmultipay.lblpaidamt.Text = txtamt.Text;
+                frmmultipay.lbldueamt.Text = Convert.ToString(Convert.ToDecimal(lblbilltotal.Text) - Convert.ToDecimal(txtamt.Text));
+                frmmultipay.dgProducts.Rows.Add("CASH", txtamt.Text);
+            }
+            frmmultipay.ShowDialog();
+        }
+
+        private void btncash_Click(object sender, EventArgs e)
+        {
+            if (Convert.ToDecimal(lblbilltotal.Text) <= Convert.ToDecimal(txtamt.Text))
+            { showpaymentpop(txtamt.Text); }
+            else
+            {
+                showmultipaymentpop();
+            }
+           
 
         }
 
@@ -2067,24 +2085,55 @@ namespace INVENTORY.UI
 
                 }
 
-                this.dgProducts.Rows.Add(dgProducts.Rows.Count + 1, dr[2].ToString(), multiple, dr[29].ToString(), (Convert.ToDecimal(dr[29].ToString()) + taxper) * multiple, taxper);
+                this.dgProducts.Rows.Add(dgProducts.Rows.Count + 1, dr[2].ToString(), multiple, dr[29].ToString(), (Convert.ToDecimal(dr[29].ToString()) + taxper) * multiple, taxper* multiple);
                 multiple = 1;
             }
         }
 
         private void btn10_Click(object sender, EventArgs e)
         {
-            showpaymentpop("10");
+            
+            txtamt.Text = "10";
+
+            if (Convert.ToDecimal(lblbilltotal.Text) <= Convert.ToDecimal(txtamt.Text))
+            { showpaymentpop(txtamt.Text); }
+            else
+            {
+                showmultipaymentpop();
+            }
         }
 
         private void btn20_Click(object sender, EventArgs e)
         {
-            showpaymentpop("20");
+            txtamt.Text="20";
+            if (Convert.ToDecimal(lblbilltotal.Text) <= Convert.ToDecimal(txtamt.Text))
+            { showpaymentpop(txtamt.Text); }
+            else
+            {
+                showmultipaymentpop();
+            }
         }
 
         private void btn50_Click(object sender, EventArgs e)
+        {           
+            txtamt.Text = "50";
+            if (Convert.ToDecimal(lblbilltotal.Text) <= Convert.ToDecimal(txtamt.Text))
+            { showpaymentpop(txtamt.Text); }
+            else
+            {
+                showmultipaymentpop();
+            }
+        }
+
+        private void button25_Click(object sender, EventArgs e)
         {
-            showpaymentpop("50");
+            showmultipaymentpop();
+        }
+
+        private void btnlastreciept_Click(object sender, EventArgs e)
+        {
+            frmlastbill frmlastbil = new frmlastbill();
+            frmlastbil.ShowDialog();
         }
     }
 }

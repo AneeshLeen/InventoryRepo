@@ -153,7 +153,7 @@
             this.AcceptButton = this.btnLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.SlateGray;
+            this.BackColor = System.Drawing.Color.CadetBlue;
             this.CancelButton = this.btnCLose;
             this.ClientSize = new System.Drawing.Size(1199, 540);
             this.Controls.Add(this.pictureBox2);

@@ -25,7 +25,7 @@ namespace INVENTORY.UI
         {
             DataTable dtbranches = new DataTable();
             SqlConnection connection = new SqlConnection("Data Source=DESKTOP-A62FJAE\\SQL;Initial Catalog=DEWSRM;Persist Security Info=True;Integrated Security=true");
-            SqlCommand command = new SqlCommand("SELECT * FROM[dbo].[Categorys]  cat WHERE cat.CategoryID  IN(SELECT CategoryID FROM[dbo].[Products]) and cat.inactive = 'true'", connection);
+            SqlCommand command = new SqlCommand("SELECT * FROM[dbo].[Categorys]  cat WHERE cat.CategoryID  IN(SELECT CategoryID FROM[dbo].[Products]) and cat.inactive = 'false'", connection);
             SqlDataAdapter adp = new SqlDataAdapter(command);
             adp.Fill(dtbranches);
             return dtbranches;
@@ -70,7 +70,8 @@ namespace INVENTORY.UI
                 btn.Font = new Font(Font.FontFamily, 9);
                 btn.Text = row["Description"].ToString();
                 btn.Tag = row["categoryid"].ToString();
-                btn.BackColor = System.Drawing.Color.Cyan;
+                btn.BackColor = System.Drawing.Color.FromName(row["backcolor"].ToString());
+                btn.ForeColor = System.Drawing.Color.FromName(row["forecolor"].ToString());
                 pnlbtndyan.Controls.Add(btn);
                 top += btn.Height + 2;
                 btn.Click += new System.EventHandler(this.btn_Click);
@@ -88,11 +89,12 @@ namespace INVENTORY.UI
         {
 
             pnlbasedcat.Controls.Clear();
-            loadallbasedcat(((sender) as Button).Tag.ToString());
+            Button  btncolor = (sender) as Button;
+            loadallbasedcat(btncolor.Tag.ToString());
             int top = 5;
             int left = 1;
             int count = 1;
-
+            
             foreach (DataRow row in Branchlistbasedcat.Rows)
             {
 
@@ -103,7 +105,8 @@ namespace INVENTORY.UI
                 btnbased.Font = new Font(Font.FontFamily, 9);
                 btnbased.Text = row["Productname"].ToString();
                 btnbased.Tag = row["productid"].ToString();
-                btnbased.BackColor = System.Drawing.Color.Cyan;
+                btnbased.BackColor = System.Drawing.Color.FromName (btncolor.BackColor.ToString());
+                btnbased.ForeColor = System.Drawing.Color.FromName(btncolor.ForeColor.ToString());
                 pnlbasedcat.Controls.Add(btnbased);
                 top += btnbased.Height + 2;
                 btnbased.Click += new System.EventHandler(this.btnbased_Click);

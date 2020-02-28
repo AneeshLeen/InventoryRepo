@@ -72,7 +72,8 @@
             // 
             // btnNew
             // 
-            this.btnNew.Font = new System.Drawing.Font("Palatino Linotype", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNew.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNew.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.btnNew.Image = ((System.Drawing.Image)(resources.GetObject("btnNew.Image")));
             this.btnNew.Location = new System.Drawing.Point(5, 8);
             this.btnNew.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -87,8 +88,10 @@
             // 
             // btnClose
             // 
+            this.btnClose.BackColor = System.Drawing.Color.PaleVioletRed;
             this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnClose.Font = new System.Drawing.Font("Palatino Linotype", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.Location = new System.Drawing.Point(302, 8);
             this.btnClose.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -97,12 +100,13 @@
             this.btnClose.TabIndex = 3;
             this.btnClose.Text = "&Close";
             this.btnClose.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnEdit
             // 
-            this.btnEdit.Font = new System.Drawing.Font("Palatino Linotype", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
             this.btnEdit.Location = new System.Drawing.Point(104, 8);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -117,7 +121,8 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Font = new System.Drawing.Font("Palatino Linotype", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
             this.btnDelete.Location = new System.Drawing.Point(202, 8);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -154,8 +159,7 @@
             this.clnCode,
             this.clnName,
             this.clnTaxPercentage,
-            this.clnCategoryType
-            });
+            this.clnCategoryType});
             this.gridView1.GridControl = this.grdCategorys;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsFind.AlwaysVisible = true;
@@ -215,24 +219,22 @@
             this.clnCategoryType.Visible = true;
             this.clnCategoryType.VisibleIndex = 3;
             this.clnCategoryType.Width = 123;
-
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Arial", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label1.Location = new System.Drawing.Point(294, 9);
+            this.label1.Location = new System.Drawing.Point(30, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(143, 41);
+            this.label1.Size = new System.Drawing.Size(231, 54);
             this.label1.TabIndex = 17;
-            this.label1.Text = "Category";
+            this.label1.Text = "Department";
             // 
             // fCategorys
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.SlateGray;
+            this.BackColor = System.Drawing.Color.CadetBlue;
             this.CancelButton = this.btnClose;
             this.ClientSize = new System.Drawing.Size(1279, 564);
             this.Controls.Add(this.label1);
@@ -255,7 +257,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.grdCategorys)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

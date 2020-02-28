@@ -251,14 +251,13 @@ namespace INVENTORY.UI
 
         private void cmbbackcolor_SelectedIndexChanged(object sender, EventArgs e)
         {
-            System.Drawing.Color c = System.Drawing.Color.FromName(cmbbackcolor.Text);
-            btncolorprev.BackColor = c;
+            btncolorprev.BackColor = System.Drawing.Color.FromName(cmbbackcolor.Text);
         }
 
         private void cmbforecolor_SelectedIndexChanged(object sender, EventArgs e)
         {
-            System.Drawing.Color c = System.Drawing.Color.FromName(cmbforecolor.Text);
-            btncolorprev.ForeColor = c;
+           
+            btncolorprev.ForeColor = System.Drawing.Color.FromName(cmbforecolor.Text);
         }
 
         private void chkIsVat_CheckedChanged(object sender, EventArgs e)

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fSOrder));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -188,7 +188,7 @@
             this.btndot = new System.Windows.Forms.Button();
             this.btn0 = new System.Windows.Forms.Button();
             this.btn10 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
+            this.btncash = new System.Windows.Forms.Button();
             this.btn00 = new System.Windows.Forms.Button();
             this.btn20 = new System.Windows.Forms.Button();
             this.btn50 = new System.Windows.Forms.Button();
@@ -198,7 +198,7 @@
             this.btnquickmenu = new System.Windows.Forms.Button();
             this.button24 = new System.Windows.Forms.Button();
             this.button25 = new System.Windows.Forms.Button();
-            this.button26 = new System.Windows.Forms.Button();
+            this.btnlastreciept = new System.Windows.Forms.Button();
             this.button27 = new System.Windows.Forms.Button();
             this.btnclear = new System.Windows.Forms.Button();
             this.button29 = new System.Windows.Forms.Button();
@@ -1873,19 +1873,19 @@
             this.Column2,
             this.Column3,
             this.Column4});
-            this.dgProducts.Location = new System.Drawing.Point(116, 272);
+            this.dgProducts.Location = new System.Drawing.Point(116, 47);
             this.dgProducts.Margin = new System.Windows.Forms.Padding(4);
             this.dgProducts.Name = "dgProducts";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.SlateGray;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgProducts.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.SlateGray;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgProducts.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgProducts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgProducts.Size = new System.Drawing.Size(706, 257);
+            this.dgProducts.Size = new System.Drawing.Size(706, 482);
             this.dgProducts.TabIndex = 5;
             this.dgProducts.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dgProducts_RowsAdded);
             // 
@@ -1901,21 +1901,20 @@
             this.clnName.HeaderText = "DESCRIPTION";
             this.clnName.Name = "clnName";
             this.clnName.ReadOnly = true;
-            this.clnName.Width = 170;
+            this.clnName.Width = 250;
             // 
             // clnQTY
             // 
             this.clnQTY.HeaderText = "QTY";
             this.clnQTY.Name = "clnQTY";
             this.clnQTY.ReadOnly = true;
-            this.clnQTY.Width = 120;
+            this.clnQTY.Width = 80;
             // 
             // clnUnitPrice
             // 
             this.clnUnitPrice.HeaderText = "PRICE";
             this.clnUnitPrice.Name = "clnUnitPrice";
             this.clnUnitPrice.ReadOnly = true;
-            this.clnUnitPrice.Width = 120;
             // 
             // clnTotal
             // 
@@ -2167,7 +2166,7 @@
             // 
             this.label56.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label56.ForeColor = System.Drawing.Color.Green;
-            this.label56.Location = new System.Drawing.Point(12, 511);
+            this.label56.Location = new System.Drawing.Point(20, 511);
             this.label56.Name = "label56";
             this.label56.Size = new System.Drawing.Size(702, 32);
             this.label56.TabIndex = 232;
@@ -2178,7 +2177,7 @@
             // 
             this.label57.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label57.ForeColor = System.Drawing.Color.Green;
-            this.label57.Location = new System.Drawing.Point(12, 584);
+            this.label57.Location = new System.Drawing.Point(19, 584);
             this.label57.Name = "label57";
             this.label57.Size = new System.Drawing.Size(703, 35);
             this.label57.TabIndex = 238;
@@ -2350,16 +2349,16 @@
             this.btn10.UseVisualStyleBackColor = false;
             this.btn10.Click += new System.EventHandler(this.btn10_Click);
             // 
-            // button16
+            // btncash
             // 
-            this.button16.BackColor = System.Drawing.Color.Magenta;
-            this.button16.Location = new System.Drawing.Point(1168, 316);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(161, 60);
-            this.button16.TabIndex = 257;
-            this.button16.Text = "CASH";
-            this.button16.UseVisualStyleBackColor = false;
-            this.button16.Click += new System.EventHandler(this.button16_Click);
+            this.btncash.BackColor = System.Drawing.Color.Magenta;
+            this.btncash.Location = new System.Drawing.Point(1168, 316);
+            this.btncash.Name = "btncash";
+            this.btncash.Size = new System.Drawing.Size(161, 60);
+            this.btncash.TabIndex = 257;
+            this.btncash.Text = "CASH";
+            this.btncash.UseVisualStyleBackColor = false;
+            this.btncash.Click += new System.EventHandler(this.btncash_Click);
             // 
             // btn00
             // 
@@ -2458,16 +2457,18 @@
             this.button25.TabIndex = 266;
             this.button25.Text = "MULTI PAYMENT";
             this.button25.UseVisualStyleBackColor = false;
+            this.button25.Click += new System.EventHandler(this.button25_Click);
             // 
-            // button26
+            // btnlastreciept
             // 
-            this.button26.BackColor = System.Drawing.Color.Magenta;
-            this.button26.Location = new System.Drawing.Point(1249, 562);
-            this.button26.Name = "button26";
-            this.button26.Size = new System.Drawing.Size(80, 60);
-            this.button26.TabIndex = 267;
-            this.button26.Text = "LAST RECEIPT";
-            this.button26.UseVisualStyleBackColor = false;
+            this.btnlastreciept.BackColor = System.Drawing.Color.Magenta;
+            this.btnlastreciept.Location = new System.Drawing.Point(1249, 562);
+            this.btnlastreciept.Name = "btnlastreciept";
+            this.btnlastreciept.Size = new System.Drawing.Size(80, 60);
+            this.btnlastreciept.TabIndex = 267;
+            this.btnlastreciept.Text = "LAST RECEIPT";
+            this.btnlastreciept.UseVisualStyleBackColor = false;
+            this.btnlastreciept.Click += new System.EventHandler(this.btnlastreciept_Click);
             // 
             // button27
             // 
@@ -2733,7 +2734,7 @@
             this.Controls.Add(this.button29);
             this.Controls.Add(this.btnclear);
             this.Controls.Add(this.button27);
-            this.Controls.Add(this.button26);
+            this.Controls.Add(this.btnlastreciept);
             this.Controls.Add(this.button25);
             this.Controls.Add(this.button24);
             this.Controls.Add(this.btnquickmenu);
@@ -2743,7 +2744,7 @@
             this.Controls.Add(this.btn50);
             this.Controls.Add(this.btn20);
             this.Controls.Add(this.btn10);
-            this.Controls.Add(this.button16);
+            this.Controls.Add(this.btncash);
             this.Controls.Add(this.btn00);
             this.Controls.Add(this.btnx);
             this.Controls.Add(this.btndot);
@@ -3068,7 +3069,7 @@
         private System.Windows.Forms.Button btndot;
         private System.Windows.Forms.Button btn0;
         private System.Windows.Forms.Button btn10;
-        private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.Button btncash;
         private System.Windows.Forms.Button btn00;
         private System.Windows.Forms.Button btn20;
         private System.Windows.Forms.Button btn50;
@@ -3078,7 +3079,7 @@
         private System.Windows.Forms.Button btnquickmenu;
         private System.Windows.Forms.Button button24;
         private System.Windows.Forms.Button button25;
-        private System.Windows.Forms.Button button26;
+        private System.Windows.Forms.Button btnlastreciept;
         private System.Windows.Forms.Button button27;
         private System.Windows.Forms.Button btnclear;
         private System.Windows.Forms.Button button29;

@@ -120,14 +120,14 @@
             // 
             // btnClose
             // 
-            this.btnClose.BackColor = System.Drawing.Color.LightCyan;
+            this.btnClose.BackColor = System.Drawing.Color.PaleVioletRed;
             this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnClose.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Bold);
+            this.btnClose.ForeColor = System.Drawing.Color.White;
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnClose.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnClose.Location = new System.Drawing.Point(310, 378);
+            this.btnClose.Location = new System.Drawing.Point(326, 378);
             this.btnClose.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(112, 38);
@@ -138,9 +138,9 @@
             // 
             // btnSave
             // 
-            this.btnSave.BackColor = System.Drawing.Color.LightCyan;
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSave.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btnSave.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Bold);
+            this.btnSave.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSave.ImeMode = System.Windows.Forms.ImeMode.NoControl;
@@ -157,9 +157,11 @@
             // chkInactive
             // 
             this.chkInactive.AutoSize = true;
+            this.chkInactive.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkInactive.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.chkInactive.Location = new System.Drawing.Point(444, 225);
             this.chkInactive.Name = "chkInactive";
-            this.chkInactive.Size = new System.Drawing.Size(81, 23);
+            this.chkInactive.Size = new System.Drawing.Size(88, 26);
             this.chkInactive.TabIndex = 8;
             this.chkInactive.Text = "Inactive";
             this.chkInactive.UseVisualStyleBackColor = true;
@@ -177,6 +179,7 @@
             // chkIsVat
             // 
             this.chkIsVat.AutoSize = true;
+            this.chkIsVat.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.chkIsVat.Location = new System.Drawing.Point(444, 254);
             this.chkIsVat.Name = "chkIsVat";
             this.chkIsVat.Size = new System.Drawing.Size(181, 23);
@@ -188,6 +191,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label3.Location = new System.Drawing.Point(440, 286);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(31, 19);
@@ -205,6 +209,7 @@
             // chkSeperateSale
             // 
             this.chkSeperateSale.AutoSize = true;
+            this.chkSeperateSale.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.chkSeperateSale.Location = new System.Drawing.Point(444, 356);
             this.chkSeperateSale.Name = "chkSeperateSale";
             this.chkSeperateSale.Size = new System.Drawing.Size(182, 23);
@@ -215,6 +220,7 @@
             // chkPayout
             // 
             this.chkPayout.AutoSize = true;
+            this.chkPayout.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.chkPayout.Location = new System.Drawing.Point(444, 327);
             this.chkPayout.Name = "chkPayout";
             this.chkPayout.Size = new System.Drawing.Size(83, 23);
@@ -293,7 +299,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.SlateGray;
+            this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(987, 579);
             this.Controls.Add(this.btncolorprev);
             this.Controls.Add(this.cmbforecolor);
