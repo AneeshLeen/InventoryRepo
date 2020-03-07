@@ -155,11 +155,6 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnClose = new System.Windows.Forms.Button();
-            this.btnMISRpt = new System.Windows.Forms.Button();
-            this.btnRemove = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pnlbtndyan = new System.Windows.Forms.Panel();
             this.button38 = new System.Windows.Forms.Button();
@@ -216,9 +211,20 @@
             this.btnvoidall = new System.Windows.Forms.Button();
             this.btnoptions = new System.Windows.Forms.Button();
             this.btnpricechck = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.btnMISRpt = new System.Windows.Forms.Button();
+            this.btnRemove = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnlogout = new System.Windows.Forms.Button();
             this.ctlGodown = new INVENTORY.UI.ctlCustomControl();
             this.ctlCustomer = new INVENTORY.UI.ctlCustomControl();
             this.ctlProduct = new INVENTORY.UI.ctlCustomControl();
+            this.strsales = new System.Windows.Forms.StatusStrip();
+            this.ToolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lblUser = new System.Windows.Forms.ToolStripStatusLabel();
+            this.ToolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.ToolStripStatusLabel4 = new System.Windows.Forms.ToolStripStatusLabel();
             ((System.ComponentModel.ISupportInitialize)(this.numPrevDue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numRemindPeriodTemp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPRate)).BeginInit();
@@ -258,6 +264,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numTDP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTotalDis)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgProducts)).BeginInit();
+            this.strsales.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -290,7 +297,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label12.Location = new System.Drawing.Point(397, 7);
+            this.label12.Location = new System.Drawing.Point(399, 7);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(84, 19);
@@ -364,7 +371,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(193, 8);
+            this.label1.Location = new System.Drawing.Point(197, 8);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 19);
@@ -547,7 +554,7 @@
             // txtBarcode
             // 
             this.txtBarcode.Font = new System.Drawing.Font("Palatino Linotype", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBarcode.Location = new System.Drawing.Point(92, 5);
+            this.txtBarcode.Location = new System.Drawing.Point(96, 5);
             this.txtBarcode.Margin = new System.Windows.Forms.Padding(4);
             this.txtBarcode.Name = "txtBarcode";
             this.txtBarcode.Size = new System.Drawing.Size(103, 22);
@@ -559,7 +566,7 @@
             this.lblBarcode.AutoSize = true;
             this.lblBarcode.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBarcode.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblBarcode.Location = new System.Drawing.Point(-5, 4);
+            this.lblBarcode.Location = new System.Drawing.Point(-1, 6);
             this.lblBarcode.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblBarcode.Name = "lblBarcode";
             this.lblBarcode.Size = new System.Drawing.Size(94, 19);
@@ -1887,6 +1894,7 @@
             this.dgProducts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgProducts.Size = new System.Drawing.Size(706, 482);
             this.dgProducts.TabIndex = 5;
+            this.dgProducts.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgProducts_CellContentClick);
             this.dgProducts.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dgProducts_RowsAdded);
             // 
             // clnSN
@@ -1975,78 +1983,6 @@
             this.Column4.Name = "Column4";
             this.Column4.Visible = false;
             this.Column4.Width = 80;
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
-            this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdd.Location = new System.Drawing.Point(521, 222);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(83, 42);
-            this.btnAdd.TabIndex = 15;
-            this.btnAdd.Text = "&Add Item";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // btnClose
-            // 
-            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnClose.Font = new System.Drawing.Font("Palatino Linotype", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
-            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(720, 580);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(93, 35);
-            this.btnClose.TabIndex = 1;
-            this.btnClose.Text = "Close";
-            this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // btnMISRpt
-            // 
-            this.btnMISRpt.BackColor = System.Drawing.Color.Turquoise;
-            this.btnMISRpt.Image = ((System.Drawing.Image)(resources.GetObject("btnMISRpt.Image")));
-            this.btnMISRpt.Location = new System.Drawing.Point(116, 70);
-            this.btnMISRpt.Name = "btnMISRpt";
-            this.btnMISRpt.Size = new System.Drawing.Size(117, 109);
-            this.btnMISRpt.TabIndex = 195;
-            this.btnMISRpt.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnMISRpt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnMISRpt.UseCompatibleTextRendering = true;
-            this.btnMISRpt.UseVisualStyleBackColor = false;
-            // 
-            // btnRemove
-            // 
-            this.btnRemove.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemove.Image = ((System.Drawing.Image)(resources.GetObject("btnRemove.Image")));
-            this.btnRemove.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRemove.Location = new System.Drawing.Point(651, 230);
-            this.btnRemove.Margin = new System.Windows.Forms.Padding(4);
-            this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(112, 34);
-            this.btnRemove.TabIndex = 9;
-            this.btnRemove.Text = "&Delete";
-            this.btnRemove.UseVisualStyleBackColor = true;
-            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
-            // 
-            // btnSave
-            // 
-            this.btnSave.Font = new System.Drawing.Font("Palatino Linotype", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
-            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(719, 537);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(93, 35);
-            this.btnSave.TabIndex = 0;
-            this.btnSave.Text = "&Save";
-            this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // button1
             // 
@@ -2196,7 +2132,7 @@
             // 
             // btn7
             // 
-            this.btn7.BackColor = System.Drawing.Color.Magenta;
+            this.btn7.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btn7.Location = new System.Drawing.Point(1087, 73);
             this.btn7.Name = "btn7";
             this.btn7.Size = new System.Drawing.Size(80, 60);
@@ -2207,7 +2143,7 @@
             // 
             // btn8
             // 
-            this.btn8.BackColor = System.Drawing.Color.Magenta;
+            this.btn8.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btn8.Location = new System.Drawing.Point(1168, 73);
             this.btn8.Name = "btn8";
             this.btn8.Size = new System.Drawing.Size(80, 60);
@@ -2218,7 +2154,7 @@
             // 
             // btn9
             // 
-            this.btn9.BackColor = System.Drawing.Color.Magenta;
+            this.btn9.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btn9.Location = new System.Drawing.Point(1249, 73);
             this.btn9.Name = "btn9";
             this.btn9.Size = new System.Drawing.Size(80, 60);
@@ -2241,7 +2177,7 @@
             // 
             // btn6
             // 
-            this.btn6.BackColor = System.Drawing.Color.Magenta;
+            this.btn6.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btn6.Location = new System.Drawing.Point(1249, 134);
             this.btn6.Name = "btn6";
             this.btn6.Size = new System.Drawing.Size(80, 60);
@@ -2252,7 +2188,7 @@
             // 
             // btn5
             // 
-            this.btn5.BackColor = System.Drawing.Color.Magenta;
+            this.btn5.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btn5.Location = new System.Drawing.Point(1168, 134);
             this.btn5.Name = "btn5";
             this.btn5.Size = new System.Drawing.Size(80, 60);
@@ -2263,7 +2199,7 @@
             // 
             // btn4
             // 
-            this.btn4.BackColor = System.Drawing.Color.Magenta;
+            this.btn4.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btn4.Location = new System.Drawing.Point(1087, 134);
             this.btn4.Name = "btn4";
             this.btn4.Size = new System.Drawing.Size(80, 60);
@@ -2274,7 +2210,7 @@
             // 
             // btn3
             // 
-            this.btn3.BackColor = System.Drawing.Color.Magenta;
+            this.btn3.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btn3.Location = new System.Drawing.Point(1249, 194);
             this.btn3.Name = "btn3";
             this.btn3.Size = new System.Drawing.Size(80, 60);
@@ -2285,7 +2221,7 @@
             // 
             // btn2
             // 
-            this.btn2.BackColor = System.Drawing.Color.Magenta;
+            this.btn2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btn2.Location = new System.Drawing.Point(1168, 194);
             this.btn2.Name = "btn2";
             this.btn2.Size = new System.Drawing.Size(80, 60);
@@ -2296,7 +2232,7 @@
             // 
             // btn1
             // 
-            this.btn1.BackColor = System.Drawing.Color.Magenta;
+            this.btn1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btn1.Location = new System.Drawing.Point(1087, 194);
             this.btn1.Name = "btn1";
             this.btn1.Size = new System.Drawing.Size(80, 60);
@@ -2307,7 +2243,7 @@
             // 
             // btnx
             // 
-            this.btnx.BackColor = System.Drawing.Color.Magenta;
+            this.btnx.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btnx.Location = new System.Drawing.Point(1249, 255);
             this.btnx.Name = "btnx";
             this.btnx.Size = new System.Drawing.Size(80, 60);
@@ -2318,7 +2254,7 @@
             // 
             // btndot
             // 
-            this.btndot.BackColor = System.Drawing.Color.Magenta;
+            this.btndot.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btndot.Location = new System.Drawing.Point(1168, 255);
             this.btndot.Name = "btndot";
             this.btndot.Size = new System.Drawing.Size(80, 60);
@@ -2329,7 +2265,7 @@
             // 
             // btn0
             // 
-            this.btn0.BackColor = System.Drawing.Color.Magenta;
+            this.btn0.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btn0.Location = new System.Drawing.Point(1087, 255);
             this.btn0.Name = "btn0";
             this.btn0.Size = new System.Drawing.Size(80, 60);
@@ -2340,7 +2276,7 @@
             // 
             // btn10
             // 
-            this.btn10.BackColor = System.Drawing.Color.Magenta;
+            this.btn10.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btn10.Location = new System.Drawing.Point(1087, 378);
             this.btn10.Name = "btn10";
             this.btn10.Size = new System.Drawing.Size(80, 60);
@@ -2351,7 +2287,7 @@
             // 
             // btncash
             // 
-            this.btncash.BackColor = System.Drawing.Color.Magenta;
+            this.btncash.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btncash.Location = new System.Drawing.Point(1168, 316);
             this.btncash.Name = "btncash";
             this.btncash.Size = new System.Drawing.Size(161, 60);
@@ -2362,7 +2298,7 @@
             // 
             // btn00
             // 
-            this.btn00.BackColor = System.Drawing.Color.Magenta;
+            this.btn00.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btn00.Location = new System.Drawing.Point(1087, 316);
             this.btn00.Name = "btn00";
             this.btn00.Size = new System.Drawing.Size(80, 60);
@@ -2373,7 +2309,7 @@
             // 
             // btn20
             // 
-            this.btn20.BackColor = System.Drawing.Color.Magenta;
+            this.btn20.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btn20.Location = new System.Drawing.Point(1168, 378);
             this.btn20.Name = "btn20";
             this.btn20.Size = new System.Drawing.Size(80, 60);
@@ -2384,7 +2320,7 @@
             // 
             // btn50
             // 
-            this.btn50.BackColor = System.Drawing.Color.Magenta;
+            this.btn50.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btn50.Location = new System.Drawing.Point(1249, 378);
             this.btn50.Name = "btn50";
             this.btn50.Size = new System.Drawing.Size(80, 60);
@@ -2395,7 +2331,7 @@
             // 
             // button20
             // 
-            this.button20.BackColor = System.Drawing.Color.Magenta;
+            this.button20.BackColor = System.Drawing.Color.WhiteSmoke;
             this.button20.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button20.Location = new System.Drawing.Point(1088, 441);
             this.button20.Name = "button20";
@@ -2406,7 +2342,7 @@
             // 
             // button21
             // 
-            this.button21.BackColor = System.Drawing.Color.Magenta;
+            this.button21.BackColor = System.Drawing.Color.WhiteSmoke;
             this.button21.Location = new System.Drawing.Point(1168, 440);
             this.button21.Name = "button21";
             this.button21.Size = new System.Drawing.Size(161, 60);
@@ -2416,7 +2352,7 @@
             // 
             // btnPayOut
             // 
-            this.btnPayOut.BackColor = System.Drawing.Color.Magenta;
+            this.btnPayOut.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btnPayOut.Location = new System.Drawing.Point(1088, 501);
             this.btnPayOut.Name = "btnPayOut";
             this.btnPayOut.Size = new System.Drawing.Size(124, 60);
@@ -2427,7 +2363,7 @@
             // 
             // btnquickmenu
             // 
-            this.btnquickmenu.BackColor = System.Drawing.Color.Magenta;
+            this.btnquickmenu.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btnquickmenu.Location = new System.Drawing.Point(1213, 501);
             this.btnquickmenu.Name = "btnquickmenu";
             this.btnquickmenu.Size = new System.Drawing.Size(116, 60);
@@ -2438,7 +2374,7 @@
             // 
             // button24
             // 
-            this.button24.BackColor = System.Drawing.Color.Magenta;
+            this.button24.BackColor = System.Drawing.Color.WhiteSmoke;
             this.button24.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button24.Location = new System.Drawing.Point(1088, 562);
             this.button24.Name = "button24";
@@ -2449,7 +2385,7 @@
             // 
             // button25
             // 
-            this.button25.BackColor = System.Drawing.Color.Magenta;
+            this.button25.BackColor = System.Drawing.Color.WhiteSmoke;
             this.button25.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button25.Location = new System.Drawing.Point(1169, 562);
             this.button25.Name = "button25";
@@ -2461,7 +2397,7 @@
             // 
             // btnlastreciept
             // 
-            this.btnlastreciept.BackColor = System.Drawing.Color.Magenta;
+            this.btnlastreciept.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btnlastreciept.Location = new System.Drawing.Point(1249, 562);
             this.btnlastreciept.Name = "btnlastreciept";
             this.btnlastreciept.Size = new System.Drawing.Size(80, 60);
@@ -2472,7 +2408,7 @@
             // 
             // button27
             // 
-            this.button27.BackColor = System.Drawing.Color.Magenta;
+            this.button27.BackColor = System.Drawing.Color.WhiteSmoke;
             this.button27.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button27.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button27.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -2485,7 +2421,7 @@
             // 
             // btnclear
             // 
-            this.btnclear.BackColor = System.Drawing.Color.Magenta;
+            this.btnclear.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btnclear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnclear.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnclear.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -2499,7 +2435,7 @@
             // 
             // button29
             // 
-            this.button29.BackColor = System.Drawing.Color.Magenta;
+            this.button29.BackColor = System.Drawing.Color.WhiteSmoke;
             this.button29.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button29.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button29.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -2613,7 +2549,7 @@
             this.btnvoidqty.Location = new System.Drawing.Point(4, 47);
             this.btnvoidqty.Margin = new System.Windows.Forms.Padding(4);
             this.btnvoidqty.Name = "btnvoidqty";
-            this.btnvoidqty.Size = new System.Drawing.Size(106, 35);
+            this.btnvoidqty.Size = new System.Drawing.Size(106, 49);
             this.btnvoidqty.TabIndex = 280;
             this.btnvoidqty.Text = "Void Qty";
             this.btnvoidqty.UseVisualStyleBackColor = true;
@@ -2623,10 +2559,10 @@
             // 
             this.btnvoiditem.Font = new System.Drawing.Font("Palatino Linotype", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnvoiditem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnvoiditem.Location = new System.Drawing.Point(4, 85);
+            this.btnvoiditem.Location = new System.Drawing.Point(4, 98);
             this.btnvoiditem.Margin = new System.Windows.Forms.Padding(4);
             this.btnvoiditem.Name = "btnvoiditem";
-            this.btnvoiditem.Size = new System.Drawing.Size(106, 35);
+            this.btnvoiditem.Size = new System.Drawing.Size(106, 49);
             this.btnvoiditem.TabIndex = 281;
             this.btnvoiditem.Text = "Void Item";
             this.btnvoiditem.UseVisualStyleBackColor = true;
@@ -2636,10 +2572,10 @@
             // 
             this.btnvoidall.Font = new System.Drawing.Font("Palatino Linotype", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnvoidall.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnvoidall.Location = new System.Drawing.Point(4, 123);
+            this.btnvoidall.Location = new System.Drawing.Point(4, 149);
             this.btnvoidall.Margin = new System.Windows.Forms.Padding(4);
             this.btnvoidall.Name = "btnvoidall";
-            this.btnvoidall.Size = new System.Drawing.Size(107, 35);
+            this.btnvoidall.Size = new System.Drawing.Size(106, 49);
             this.btnvoidall.TabIndex = 282;
             this.btnvoidall.Text = "Void All";
             this.btnvoidall.UseVisualStyleBackColor = true;
@@ -2649,10 +2585,10 @@
             // 
             this.btnoptions.Font = new System.Drawing.Font("Palatino Linotype", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnoptions.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnoptions.Location = new System.Drawing.Point(4, 161);
+            this.btnoptions.Location = new System.Drawing.Point(4, 199);
             this.btnoptions.Margin = new System.Windows.Forms.Padding(4);
             this.btnoptions.Name = "btnoptions";
-            this.btnoptions.Size = new System.Drawing.Size(107, 35);
+            this.btnoptions.Size = new System.Drawing.Size(106, 49);
             this.btnoptions.TabIndex = 283;
             this.btnoptions.Text = "Options";
             this.btnoptions.UseVisualStyleBackColor = true;
@@ -2662,7 +2598,7 @@
             // 
             this.btnpricechck.Font = new System.Drawing.Font("Palatino Linotype", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnpricechck.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnpricechck.Location = new System.Drawing.Point(4, 202);
+            this.btnpricechck.Location = new System.Drawing.Point(4, 250);
             this.btnpricechck.Margin = new System.Windows.Forms.Padding(4);
             this.btnpricechck.Name = "btnpricechck";
             this.btnpricechck.Size = new System.Drawing.Size(107, 58);
@@ -2670,6 +2606,89 @@
             this.btnpricechck.Text = "Price Check";
             this.btnpricechck.UseVisualStyleBackColor = true;
             this.btnpricechck.Click += new System.EventHandler(this.btnpricechck_Click);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
+            this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdd.Location = new System.Drawing.Point(521, 222);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(83, 42);
+            this.btnAdd.TabIndex = 15;
+            this.btnAdd.Text = "&Add Item";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnClose.Font = new System.Drawing.Font("Palatino Linotype", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
+            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClose.Location = new System.Drawing.Point(723, 580);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(93, 35);
+            this.btnClose.TabIndex = 1;
+            this.btnClose.Text = "Close";
+            this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // btnMISRpt
+            // 
+            this.btnMISRpt.BackColor = System.Drawing.Color.Turquoise;
+            this.btnMISRpt.Image = ((System.Drawing.Image)(resources.GetObject("btnMISRpt.Image")));
+            this.btnMISRpt.Location = new System.Drawing.Point(116, 70);
+            this.btnMISRpt.Name = "btnMISRpt";
+            this.btnMISRpt.Size = new System.Drawing.Size(117, 109);
+            this.btnMISRpt.TabIndex = 195;
+            this.btnMISRpt.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnMISRpt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnMISRpt.UseCompatibleTextRendering = true;
+            this.btnMISRpt.UseVisualStyleBackColor = false;
+            // 
+            // btnRemove
+            // 
+            this.btnRemove.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemove.Image = ((System.Drawing.Image)(resources.GetObject("btnRemove.Image")));
+            this.btnRemove.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRemove.Location = new System.Drawing.Point(651, 230);
+            this.btnRemove.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(112, 34);
+            this.btnRemove.TabIndex = 9;
+            this.btnRemove.Text = "&Delete";
+            this.btnRemove.UseVisualStyleBackColor = true;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Font = new System.Drawing.Font("Palatino Linotype", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
+            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSave.Location = new System.Drawing.Point(723, 537);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(93, 35);
+            this.btnSave.TabIndex = 0;
+            this.btnSave.Text = "&Save";
+            this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnlogout
+            // 
+            this.btnlogout.Font = new System.Drawing.Font("Palatino Linotype", 13F, System.Drawing.FontStyle.Bold);
+            this.btnlogout.Location = new System.Drawing.Point(4, 309);
+            this.btnlogout.Name = "btnlogout";
+            this.btnlogout.Size = new System.Drawing.Size(107, 58);
+            this.btnlogout.TabIndex = 285;
+            this.btnlogout.Text = "Logout";
+            this.btnlogout.UseVisualStyleBackColor = true;
+            this.btnlogout.Click += new System.EventHandler(this.btnlogout_Click);
             // 
             // ctlGodown
             // 
@@ -2708,6 +2727,49 @@
             this.ctlProduct.TabIndex = 2;
             this.ctlProduct.SelectedItemChanged += new INVENTORY.UI.SelectionChangedEvent(this.ctlProduct_SelectedItemChanged);
             // 
+            // strsales
+            // 
+            this.strsales.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripStatusLabel1,
+            this.lblUser,
+            this.ToolStripStatusLabel3,
+            this.ToolStripStatusLabel4});
+            this.strsales.Location = new System.Drawing.Point(0, 676);
+            this.strsales.Name = "strsales";
+            this.strsales.Size = new System.Drawing.Size(1370, 22);
+            this.strsales.TabIndex = 286;
+            this.strsales.Text = "StatusStrip1";
+            this.strsales.Visible = false;
+            // 
+            // ToolStripStatusLabel1
+            // 
+            this.ToolStripStatusLabel1.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1";
+            this.ToolStripStatusLabel1.Size = new System.Drawing.Size(86, 17);
+            this.ToolStripStatusLabel1.Text = "Logged in As :";
+            // 
+            // lblUser
+            // 
+            this.lblUser.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUser.Image = ((System.Drawing.Image)(resources.GetObject("lblUser.Image")));
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(145, 17);
+            this.lblUser.Text = "ToolStripStatusLabel2";
+            // 
+            // ToolStripStatusLabel3
+            // 
+            this.ToolStripStatusLabel3.Name = "ToolStripStatusLabel3";
+            this.ToolStripStatusLabel3.Size = new System.Drawing.Size(979, 17);
+            this.ToolStripStatusLabel3.Spring = true;
+            // 
+            // ToolStripStatusLabel4
+            // 
+            this.ToolStripStatusLabel4.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ToolStripStatusLabel4.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripStatusLabel4.Image")));
+            this.ToolStripStatusLabel4.Name = "ToolStripStatusLabel4";
+            this.ToolStripStatusLabel4.Size = new System.Drawing.Size(145, 17);
+            this.ToolStripStatusLabel4.Text = "ToolStripStatusLabel4";
+            // 
             // fSOrder
             // 
             this.AcceptButton = this.btnAdd;
@@ -2715,7 +2777,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.CancelButton = this.btnClose;
-            this.ClientSize = new System.Drawing.Size(1370, 674);
+            this.ClientSize = new System.Drawing.Size(1370, 698);
+            this.Controls.Add(this.strsales);
+            this.Controls.Add(this.btnlogout);
             this.Controls.Add(this.btnpricechck);
             this.Controls.Add(this.btnoptions);
             this.Controls.Add(this.btnvoidall);
@@ -2871,7 +2935,7 @@
             this.Name = "fSOrder";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "polokhan100@gmail.com";
+            this.Text = "........@gmail.com";
             this.Load += new System.EventHandler(this.fOrder_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numPrevDue)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numRemindPeriodTemp)).EndInit();
@@ -2914,6 +2978,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.numTDP)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numTotalDis)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgProducts)).EndInit();
+            this.strsales.ResumeLayout(false);
+            this.strsales.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2947,7 +3013,6 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.DataGridView dgProducts;
         private System.Windows.Forms.NumericUpDown numPrevDue;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label2;
@@ -3110,5 +3175,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.Button btnlogout;
+        internal System.Windows.Forms.DataGridView dgProducts;
+        internal System.Windows.Forms.StatusStrip strsales;
+        internal System.Windows.Forms.ToolStripStatusLabel ToolStripStatusLabel1;
+        internal System.Windows.Forms.ToolStripStatusLabel lblUser;
+        internal System.Windows.Forms.ToolStripStatusLabel ToolStripStatusLabel3;
+        internal System.Windows.Forms.ToolStripStatusLabel ToolStripStatusLabel4;
     }
 }

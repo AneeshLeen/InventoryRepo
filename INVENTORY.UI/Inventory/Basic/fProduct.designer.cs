@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fProduct));
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.ctlModel = new INVENTORY.UI.ctlCustomControl();
             this.lblSize = new System.Windows.Forms.Label();
             this.btnModel = new System.Windows.Forms.Button();
             this.cboUnitType = new System.Windows.Forms.ComboBox();
@@ -75,8 +74,6 @@
             this.lblWarenty = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.lblProduct = new System.Windows.Forms.Label();
-            this.ctlCategory = new INVENTORY.UI.ctlCustomControl();
-            this.ctlBrand = new INVENTORY.UI.ctlCustomControl();
             this.lblCompany = new System.Windows.Forms.Label();
             this.lblCategory = new System.Windows.Forms.Label();
             this.txtCode = new System.Windows.Forms.TextBox();
@@ -92,6 +89,11 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.txtBarcode = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.txtstock = new System.Windows.Forms.TextBox();
+            this.ctlModel = new INVENTORY.UI.ctlCustomControl();
+            this.ctlCategory = new INVENTORY.UI.ctlCustomControl();
+            this.ctlBrand = new INVENTORY.UI.ctlCustomControl();
             this.groupBox3.SuspendLayout();
             this.txtNID.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -130,19 +132,6 @@
             this.groupBox3.Size = new System.Drawing.Size(106, 60);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
-            // 
-            // ctlModel
-            // 
-            this.ctlModel.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ctlModel.IDList = null;
-            this.ctlModel.Location = new System.Drawing.Point(46, 14);
-            this.ctlModel.Margin = new System.Windows.Forms.Padding(4);
-            this.ctlModel.Name = "ctlModel";
-            this.ctlModel.ObjectName = "Model";
-            this.ctlModel.Size = new System.Drawing.Size(213, 36);
-            this.ctlModel.TabIndex = 3;
-            this.ctlModel.Visible = false;
-            this.ctlModel.SelectedItemChanged += new INVENTORY.UI.SelectionChangedEvent(this.ctlModel_SelectedItemChanged);
             // 
             // lblSize
             // 
@@ -716,30 +705,6 @@
             this.lblProduct.TabIndex = 1;
             this.lblProduct.Text = "Item Name";
             // 
-            // ctlCategory
-            // 
-            this.ctlCategory.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ctlCategory.IDList = null;
-            this.ctlCategory.Location = new System.Drawing.Point(127, 130);
-            this.ctlCategory.Margin = new System.Windows.Forms.Padding(4);
-            this.ctlCategory.Name = "ctlCategory";
-            this.ctlCategory.ObjectName = "Category";
-            this.ctlCategory.Size = new System.Drawing.Size(249, 36);
-            this.ctlCategory.TabIndex = 2;
-            this.ctlCategory.SelectedItemChanged += new INVENTORY.UI.SelectionChangedEvent(this.ctlCategory_SelectedItemChanged);
-            // 
-            // ctlBrand
-            // 
-            this.ctlBrand.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ctlBrand.IDList = null;
-            this.ctlBrand.Location = new System.Drawing.Point(127, 89);
-            this.ctlBrand.Margin = new System.Windows.Forms.Padding(4);
-            this.ctlBrand.Name = "ctlBrand";
-            this.ctlBrand.ObjectName = "BCompany";
-            this.ctlBrand.Size = new System.Drawing.Size(249, 36);
-            this.ctlBrand.TabIndex = 1;
-            this.ctlBrand.SelectedItemChanged += new INVENTORY.UI.SelectionChangedEvent(this.ctlBrand_SelectedItemChanged);
-            // 
             // lblCompany
             // 
             this.lblCompany.AutoSize = true;
@@ -757,12 +722,12 @@
             this.lblCategory.AutoSize = true;
             this.lblCategory.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCategory.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.lblCategory.Location = new System.Drawing.Point(55, 130);
+            this.lblCategory.Location = new System.Drawing.Point(41, 136);
             this.lblCategory.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCategory.Name = "lblCategory";
-            this.lblCategory.Size = new System.Drawing.Size(68, 19);
+            this.lblCategory.Size = new System.Drawing.Size(88, 19);
             this.lblCategory.TabIndex = 26;
-            this.lblCategory.Text = "Category";
+            this.lblCategory.Text = "Department";
             // 
             // txtCode
             // 
@@ -836,7 +801,7 @@
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(31, 19);
             this.label11.TabIndex = 212;
-            this.label11.Text = "Tax";
+            this.label11.Text = "Vat";
             // 
             // label23
             // 
@@ -915,6 +880,64 @@
             this.txtBarcode.Size = new System.Drawing.Size(114, 29);
             this.txtBarcode.TabIndex = 5;
             // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label17.Location = new System.Drawing.Point(73, 491);
+            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(45, 19);
+            this.label17.TabIndex = 220;
+            this.label17.Text = "Stock";
+            // 
+            // txtstock
+            // 
+            this.txtstock.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtstock.Location = new System.Drawing.Point(131, 488);
+            this.txtstock.Margin = new System.Windows.Forms.Padding(4);
+            this.txtstock.Name = "txtstock";
+            this.txtstock.Size = new System.Drawing.Size(114, 29);
+            this.txtstock.TabIndex = 219;
+            // 
+            // ctlModel
+            // 
+            this.ctlModel.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ctlModel.IDList = null;
+            this.ctlModel.Location = new System.Drawing.Point(46, 14);
+            this.ctlModel.Margin = new System.Windows.Forms.Padding(4);
+            this.ctlModel.Name = "ctlModel";
+            this.ctlModel.ObjectName = "Model";
+            this.ctlModel.Size = new System.Drawing.Size(213, 36);
+            this.ctlModel.TabIndex = 3;
+            this.ctlModel.Visible = false;
+            this.ctlModel.SelectedItemChanged += new INVENTORY.UI.SelectionChangedEvent(this.ctlModel_SelectedItemChanged);
+            // 
+            // ctlCategory
+            // 
+            this.ctlCategory.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ctlCategory.IDList = null;
+            this.ctlCategory.Location = new System.Drawing.Point(127, 130);
+            this.ctlCategory.Margin = new System.Windows.Forms.Padding(4);
+            this.ctlCategory.Name = "ctlCategory";
+            this.ctlCategory.ObjectName = "Category";
+            this.ctlCategory.Size = new System.Drawing.Size(249, 36);
+            this.ctlCategory.TabIndex = 2;
+            this.ctlCategory.SelectedItemChanged += new INVENTORY.UI.SelectionChangedEvent(this.ctlCategory_SelectedItemChanged);
+            // 
+            // ctlBrand
+            // 
+            this.ctlBrand.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ctlBrand.IDList = null;
+            this.ctlBrand.Location = new System.Drawing.Point(127, 89);
+            this.ctlBrand.Margin = new System.Windows.Forms.Padding(4);
+            this.ctlBrand.Name = "ctlBrand";
+            this.ctlBrand.ObjectName = "BCompany";
+            this.ctlBrand.Size = new System.Drawing.Size(249, 36);
+            this.ctlBrand.TabIndex = 1;
+            this.ctlBrand.SelectedItemChanged += new INVENTORY.UI.SelectionChangedEvent(this.ctlBrand_SelectedItemChanged);
+            // 
             // fProduct
             // 
             this.AcceptButton = this.btnSave;
@@ -923,6 +946,8 @@
             this.BackColor = System.Drawing.Color.SlateGray;
             this.CancelButton = this.btnClose;
             this.ClientSize = new System.Drawing.Size(1064, 602);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.txtstock);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.txtBarcode);
             this.Controls.Add(this.numRetailPrice);
@@ -1062,5 +1087,7 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox txtBarcode;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox txtstock;
     }
 }

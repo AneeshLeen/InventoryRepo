@@ -74,24 +74,42 @@ namespace INVENTORY.UI
 
                             if (myServer.Trim().ToUpper() == appMyServer.Trim().ToUpper())
                             {
+                                
 
-                                frmBranchMaster frmbranchbaster = new frmBranchMaster();
-                                //oFMainForm.lblUser.Text = txtLoginID.Text;
-                                Global.CurrentUser = oUser;                              
+                                if (oUser.UserType == (int)EnumUserType.Administrator)
+                                {
+                                    frmBranchMaster frmbranchbaster = new frmBranchMaster();
+                                    //oFMainForm.lblUser.Text = txtLoginID.Text;
 
-                                //FNewMainForm oFMainForm = new FNewMainForm();
-                                ////FMainForm oFMainForm = new FMainForm();
-                                //oFMainForm.lblUser.Text = txtLoginID.Text;
-                                //Global.CurrentUser = oUser;
-                                //oFMainForm.ShowDialog();
+                                    Global.CurrentUser = oUser;
+                                    //FNewMainForm oFMainForm = new FNewMainForm();
+                                    ////FMainForm oFMainForm = new FMainForm();
+                                    //oFMainForm.lblUser.Text = txtLoginID.Text;
+                                    //Global.CurrentUser = oUser;
+                                    //oFMainForm.ShowDialog();
 
+
+                                    frmbranchbaster.ShowDialog();
+                                    frmbranchbaster.Close();
+                                }
+                                else
+                                {
+                                    //
+                                    Global.CurrentUser = oUser;
+                                    fSOrder fssale = new fSOrder();
+                                    fssale.FormBorderStyle = FormBorderStyle.FixedSingle;
+                                    fssale.strsales.Visible = true;
+                                    fssale.Show();                                   
+                                   
+                                   
+
+                                }
+                                //
                                 this.Close();
                                 this.Hide();
                                 DialogResult = DialogResult.OK;
                                 this.Close();
 
-                                frmbranchbaster.ShowDialog();
-                                frmbranchbaster.Close();
                             }
                             else
                             {

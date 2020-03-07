@@ -66,6 +66,7 @@
             this.btnsptchk.Tag = "btnSave";
             this.btnsptchk.Text = "Spot Check";
             this.btnsptchk.UseVisualStyleBackColor = true;
+            this.btnsptchk.Click += new System.EventHandler(this.btnsptchk_Click);
             // 
             // btnpdq
             // 
@@ -198,6 +199,7 @@
             this.btnshiftend.Tag = "btnSave";
             this.btnshiftend.Text = "Shift End";
             this.btnshiftend.UseVisualStyleBackColor = true;
+            this.btnshiftend.Click += new System.EventHandler(this.btnshiftend_Click);
             // 
             // btnperfoma
             // 
@@ -294,6 +296,7 @@
             this.btnrefundall.Tag = "btnSave";
             this.btnrefundall.Text = "Refund All";
             this.btnrefundall.UseVisualStyleBackColor = true;
+            this.btnrefundall.Click += new System.EventHandler(this.btnrefundall_Click);
             // 
             // btncustapp
             // 

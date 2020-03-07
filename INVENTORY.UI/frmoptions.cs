@@ -21,5 +21,23 @@ namespace INVENTORY.UI
         {
             this.Close();
         }
+
+        private void btnrefundall_Click(object sender, EventArgs e)
+        {
+            frmrefund frmrefun = new frmrefund();
+            frmrefun.ShowDialog();
+        }
+
+        private void btnshiftend_Click(object sender, EventArgs e)
+        {
+            frmshiftend frmshiftE = new frmshiftend();
+            frmshiftE.ShowDialog();
+        }
+
+        private void btnsptchk_Click(object sender, EventArgs e)
+        {
+            frmshiftend frmshiftE = new frmshiftend();
+            frmshiftE.ShowDialog();
+        }
     }
 }

@@ -140,6 +140,8 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.branchMasterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.labelPrintToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.StatusStrip1.SuspendLayout();
@@ -286,7 +288,9 @@
             // 
             this.employeeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.designationToolStripMenuItem,
-            this.employeeToolStripMenuItem1});
+            this.employeeToolStripMenuItem1,
+            this.branchMasterToolStripMenuItem,
+            this.labelPrintToolStripMenuItem});
             this.employeeToolStripMenuItem.Name = "employeeToolStripMenuItem";
             this.employeeToolStripMenuItem.Size = new System.Drawing.Size(85, 23);
             this.employeeToolStripMenuItem.Tag = "2";
@@ -296,14 +300,14 @@
             // designationToolStripMenuItem
             // 
             this.designationToolStripMenuItem.Name = "designationToolStripMenuItem";
-            this.designationToolStripMenuItem.Size = new System.Drawing.Size(158, 24);
+            this.designationToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.designationToolStripMenuItem.Text = "&Designation";
             this.designationToolStripMenuItem.Click += new System.EventHandler(this.designationToolStripMenuItem_Click);
             // 
             // employeeToolStripMenuItem1
             // 
             this.employeeToolStripMenuItem1.Name = "employeeToolStripMenuItem1";
-            this.employeeToolStripMenuItem1.Size = new System.Drawing.Size(158, 24);
+            this.employeeToolStripMenuItem1.Size = new System.Drawing.Size(180, 24);
             this.employeeToolStripMenuItem1.Text = "&Employee";
             this.employeeToolStripMenuItem1.Click += new System.EventHandler(this.employeeToolStripMenuItem1_Click);
             // 
@@ -1424,6 +1428,20 @@
             this.pictureBox1.TabIndex = 181;
             this.pictureBox1.TabStop = false;
             // 
+            // branchMasterToolStripMenuItem
+            // 
+            this.branchMasterToolStripMenuItem.Name = "branchMasterToolStripMenuItem";
+            this.branchMasterToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.branchMasterToolStripMenuItem.Text = "Branch Master";
+            this.branchMasterToolStripMenuItem.Click += new System.EventHandler(this.branchMasterToolStripMenuItem_Click);
+            // 
+            // labelPrintToolStripMenuItem
+            // 
+            this.labelPrintToolStripMenuItem.Name = "labelPrintToolStripMenuItem";
+            this.labelPrintToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.labelPrintToolStripMenuItem.Text = "Label Print";
+            this.labelPrintToolStripMenuItem.Click += new System.EventHandler(this.labelPrintToolStripMenuItem_Click);
+            // 
             // FNewMainForm2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -1579,5 +1597,7 @@
         private System.Windows.Forms.ToolStripMenuItem dashboard2ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dashboard3ToolStripMenuItem;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripMenuItem branchMasterToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem labelPrintToolStripMenuItem;
     }
 }

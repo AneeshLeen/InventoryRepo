@@ -1845,6 +1845,8 @@ namespace INVENTORY.UI
         {
             this.Hide();
             FNewMainForm frm = new FNewMainForm();
+            frm.lblUser.Text = Global.CurrentUser.UserName.ToString();
+            frm.ToolStripStatusLabel3.Text = this.ToolStripStatusLabel3.Text;
             frm.ShowDialog();
         }
 
@@ -1852,6 +1854,8 @@ namespace INVENTORY.UI
         {
             this.Hide();
             FNewMainForm2 frm = new FNewMainForm2();
+            frm.lblUser.Text = Global.CurrentUser.UserName.ToString();
+            frm.ToolStripStatusLabel3.Text = this.ToolStripStatusLabel3.Text;
             frm.ShowDialog();
         }
 
@@ -1860,8 +1864,22 @@ namespace INVENTORY.UI
 
             this.Hide();
             FNewMainForm3 frm = new FNewMainForm3();
+            frm.lblUser.Text = Global.CurrentUser.UserName.ToString();
+            frm.ToolStripStatusLabel3.Text = this.ToolStripStatusLabel3.Text;
             frm.ShowDialog();
         }
 
+        private void branchMasterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBranchMaster frmbranchbaster = new frmBranchMaster();
+
+            frmbranchbaster.ShowDialog();
+        }
+
+        private void labelPrintToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmlabelprint frmlabelprnt = new frmlabelprint();
+            frmlabelprnt.ShowDialog();
+        }
     }
 }

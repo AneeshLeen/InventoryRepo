@@ -32,11 +32,21 @@ namespace INVENTORY.UI
         private decimal _PrvCusDue = 0;
         private decimal _PreviousFlatDicount = 0;
 
+
+        frmpromo frmprmo;
+
         public fSOrder()
         {
             db = new DEWSRMEntities();
             InitializeComponent();
+            frmprmo = new frmpromo();
+            User oUser = db.Users.FirstOrDefault(o => o.UserName == Global.CurrentUser.UserName);
+            if (oUser.UserType != (int)EnumUserType.Administrator)
+            {
+                frmprmo.Show();
+            }
 
+            RefreshPromo();
         }
         public void ShowDlg(SOrder oOrder)
         {
@@ -1819,24 +1829,48 @@ namespace INVENTORY.UI
 
         //Aneesh
         public DataTable Branchlist = new DataTable();
+        public DataTable payoutlist = new DataTable();
         internal DataTable ReadAllCategories()
         {
+            //using (DEWSRMEntities db = new DEWSRMEntities())
+            //{
             DataTable dtbranches = new DataTable();
             SqlConnection connection = new SqlConnection("Data Source=DESKTOP-A62FJAE\\SQL;Initial Catalog=DEWSRM;Persist Security Info=True;Integrated Security=true");
-            SqlCommand command = new SqlCommand("SELECT * FROM[dbo].[Categorys]  cat WHERE cat.CategoryID NOT IN(SELECT CategoryID FROM[dbo].[Products]) and cat.inactive = 'false'", connection);
-            SqlDataAdapter adp = new SqlDataAdapter(command);
-            adp.Fill(dtbranches);
-            return dtbranches;
+            SqlCommand command = new SqlCommand("SELECT * FROM[dbo].[Categorys]  cat WHERE cat.CategoryID NOT IN(SELECT CategoryID FROM[dbo].[Products]) and cat.inactive = 'false' and ispayout='false'", connection);
+                SqlDataAdapter adp = new SqlDataAdapter(command);
+                adp.Fill(dtbranches);
+                return dtbranches;
+           //}
         }
 
         private void LoadDatatable()
         {
             Branchlist = ReadAllCategories();
         }
+
+        internal DataTable ReadAllpayouts()
+        {
+            //using (DEWSRMEntities db = new DEWSRMEntities())
+            //{
+                DataTable dtpayouts = new DataTable();
+                SqlConnection connection = new SqlConnection("Data Source=DESKTOP-A62FJAE\\SQL;Initial Catalog=DEWSRM;Persist Security Info=True;Integrated Security=true");
+                SqlCommand command = new SqlCommand("SELECT * FROM[dbo].[Categorys]  cat WHERE cat.CategoryID NOT IN(SELECT CategoryID FROM[dbo].[Products]) and cat.inactive = 'false' and ispayout='true'", connection);
+                SqlDataAdapter adp = new SqlDataAdapter(command);
+                adp.Fill(dtpayouts);
+                return dtpayouts;
+           // }
+        }
+
+        private void LoadpayoutDatatable()
+        {
+            payoutlist = ReadAllpayouts();
+        }
+
         //
 
         private void button1_Click(object sender, EventArgs e)
         {
+            pnlbtndyan.Controls.Clear();
             LoadDatatable();
             int top = 5;
             int left = 1;
@@ -1882,10 +1916,13 @@ namespace INVENTORY.UI
             {
                 taxper += Convert.ToDecimal(txtamt.Text) * Convert.ToDecimal(((Button)sender).Tag) / 100;
                
-            }      
-            this.dgProducts.Rows.Add(dgProducts.Rows.Count + 1, ((sender) as Button).Text, multiple, Convert.ToDecimal(txtamt.Text),  Convert.ToDecimal(txtamt.Text) + Convert.ToDecimal( taxper) * multiple, taxper * multiple);
+            }
+             this.dgProducts.Rows.Add(dgProducts.Rows.Count + 1, ((sender) as Button).Text, multiple, Convert.ToDecimal(txtamt.Text),  Convert.ToDecimal(txtamt.Text) + Convert.ToDecimal( taxper) * multiple, taxper * multiple);
+            frmprmo.dgProductspromo.Rows.Add(((sender) as Button).Text, multiple, Convert.ToDecimal(txtamt.Text), Convert.ToDecimal(txtamt.Text) + Convert.ToDecimal(taxper) * multiple, taxper * multiple);
+            
             txtamt.Text = "";
             multiple = 1;
+            RefreshPromo();
         }
 
         private void btn7_Click(object sender, EventArgs e)
@@ -1957,10 +1994,60 @@ namespace INVENTORY.UI
 
         private void btnPayOut_Click(object sender, EventArgs e)
         {
-            this.dgProducts.Rows.Add(dgProducts.Rows.Count + 1, ((sender) as Button).Text, 1, Convert.ToDecimal(txtamt.Text) * -1, Convert.ToDecimal(txtamt.Text) * -1);
+            if (btnPayOut.Text == "PAYOUT")
+            {
+
+                pnlbtndyan.Controls.Clear();
+                LoadpayoutDatatable();
+                int top = 5;
+                int left = 1;
+                int count = 1;
+
+                foreach (DataRow row in payoutlist.Rows)
+                {
+
+                    Button btnpayouts = new Button();
+                    btnpayouts.Left = left;
+                    btnpayouts.Top = top;
+                    btnpayouts.Size = new Size(80, 63);
+                    btnpayouts.Font = new Font(Font.FontFamily, 9);
+                    btnpayouts.Text = row["Description"].ToString();
+                    btnpayouts.Tag = row["vat"].ToString();
+                    btnpayouts.BackColor = System.Drawing.Color.FromName(row["backcolor"].ToString());
+                    btnpayouts.ForeColor = System.Drawing.Color.FromName(row["forecolor"].ToString());
+                    pnlbtndyan.Controls.Add(btnpayouts);
+                    top += btnpayouts.Height + 2;
+                    btnpayouts.Click += Btnpayouts_Click;
+                    count++;
+                    if (count == 8)
+                    {
+                        count = 1;
+                        top = 5;
+                        left += 81;
+                    }
+
+                }
+                btnPayOut.Text = "DEPARTMENT";
+            }
+            else
+            {
+                button1_Click(sender, e);
+                btnPayOut.Text = "PAYOUT";
+
+            }
         }
 
-       
+        private void Btnpayouts_Click(object sender, EventArgs e)
+        {
+            if (txtamt.Text != string.Empty)
+            {
+                this.dgProducts.Rows.Add(dgProducts.Rows.Count + 1, ((sender) as Button).Text, 1, Convert.ToDecimal(txtamt.Text) * -1, Convert.ToDecimal(txtamt.Text) * -1);
+                frmprmo.dgProductspromo.Rows.Add( ((sender) as Button).Text, 1, Convert.ToDecimal(txtamt.Text) * -1, Convert.ToDecimal(txtamt.Text) * -1);
+                
+                txtamt.Text = "";
+            }
+            RefreshPromo();
+        }
 
         private void btn00_Click(object sender, EventArgs e)
         {
@@ -1993,6 +2080,8 @@ namespace INVENTORY.UI
         private void dgProducts_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
         {
             calculatesum();
+            if(dgProducts.CurrentRow !=null)
+            frmprmo.dgProductspromo.Rows[dgProducts.CurrentRow.Index].Cells[0].Selected = true;
         }
 
         void showpaymentpop( string amt)
@@ -2023,6 +2112,7 @@ namespace INVENTORY.UI
             { showpaymentpop(txtamt.Text); }
             else
             {
+
                 showmultipaymentpop();
             }
            
@@ -2031,20 +2121,46 @@ namespace INVENTORY.UI
 
         private void btnvoiditem_Click(object sender, EventArgs e)
         {
+            frmprmo.dgProductspromo.Rows[dgProducts.CurrentRow.Index].Selected = true;
+            frmprmo.dgProductspromo.Rows[dgProducts.CurrentRow.Index].Cells[0].Selected = true;
+
             foreach (DataGridViewCell oneCell in dgProducts.SelectedCells)
             {
                 if (oneCell.Selected)
                 {
                     dgProducts.Rows.RemoveAt(oneCell.RowIndex);
+                    frmprmo.dgProductspromo.Rows.RemoveAt(frmprmo.dgProductspromo.CurrentRow.Index);
                     calculatesum();
                 }
+            }
+
+            RefreshPromo();
+        }
+
+        void RefreshPromo()
+        {
+            dgProducts.Refresh();
+            if (dgProducts.Rows.Count > 0)
+            {
+                frmprmo.grppromo.Visible = true;
+                frmprmo.pctboxpromo.Location = new Point(703, 27);
+                frmprmo.pctboxpromo.Size = new Size(723, 676);
+            }
+            else
+            {
+                frmprmo.grppromo.Visible = false;
+                frmprmo.pctboxpromo.Location = new Point(30, 27);
+                frmprmo.pctboxpromo.Size = new Size(1100,676);
             }
         }
 
         private void btnvoidall_Click(object sender, EventArgs e)
         {
             dgProducts.Rows.Clear();
+            frmprmo.dgProductspromo.Rows.Clear();
             calculatesum();
+
+            RefreshPromo();
         }
 
         private void btnpricechck_Click(object sender, EventArgs e)
@@ -2061,12 +2177,20 @@ namespace INVENTORY.UI
 
         private void btnvoidqty_Click(object sender, EventArgs e)
         {
-            if (Convert.ToInt32(dgProducts.CurrentRow.Cells["clnQTY"].Value) >= 1)
-            {
-                dgProducts.CurrentRow.Cells["clnQTY"].Value = Convert.ToInt32(dgProducts.CurrentRow.Cells["clnQTY"].Value) - 1;
-                dgProducts.CurrentRow.Cells["clnTotal"].Value = Convert.ToDecimal(dgProducts.CurrentRow.Cells["clnUnitPrice"].Value) * Convert.ToDecimal(dgProducts.CurrentRow.Cells["clnQTY"].Value);
-                calculatesum();
-            }
+            if (dgProducts.Rows.Count > 0)
+                if (Convert.ToInt32(dgProducts.CurrentRow.Cells["clnQTY"].Value) > 1)
+                {
+                    frmprmo.dgProductspromo.Rows[dgProducts.CurrentRow.Index].Selected = true;
+                    frmprmo.dgProductspromo.Rows[dgProducts.CurrentRow.Index].Cells[0].Selected = true;
+                   
+                    dgProducts.CurrentRow.Cells["clnQTY"].Value = Convert.ToInt32(dgProducts.CurrentRow.Cells["clnQTY"].Value) - 1;
+                    dgProducts.CurrentRow.Cells["clnTotal"].Value = Convert.ToDecimal(dgProducts.CurrentRow.Cells["clnUnitPrice"].Value) * Convert.ToDecimal(dgProducts.CurrentRow.Cells["clnQTY"].Value);
+
+                    frmprmo.dgProductspromo.CurrentRow.Cells["clnQTY"].Value = Convert.ToInt32(frmprmo.dgProductspromo.CurrentRow.Cells["clnQTY"].Value) - 1;
+                    frmprmo.dgProductspromo.CurrentRow.Cells["clnTotal"].Value = Convert.ToDecimal(frmprmo.dgProductspromo.CurrentRow.Cells["clnUnitPrice"].Value) * Convert.ToDecimal(dgProducts.CurrentRow.Cells["clnQTY"].Value);
+
+                    calculatesum();
+                }
         }
 
         private void btnquickmenu_Click(object sender, EventArgs e)
@@ -2086,6 +2210,7 @@ namespace INVENTORY.UI
                 }
 
                 this.dgProducts.Rows.Add(dgProducts.Rows.Count + 1, dr[2].ToString(), multiple, dr[29].ToString(), (Convert.ToDecimal(dr[29].ToString()) + taxper) * multiple, taxper* multiple);
+                frmprmo.dgProductspromo.Rows.Add(dr[2].ToString(), multiple, dr[29].ToString(), (Convert.ToDecimal(dr[29].ToString()) + taxper) * multiple, taxper * multiple);
                 multiple = 1;
             }
         }
@@ -2135,5 +2260,22 @@ namespace INVENTORY.UI
             frmlastbill frmlastbil = new frmlastbill();
             frmlastbil.ShowDialog();
         }
+
+        private void btnlogout_Click(object sender, EventArgs e)
+        {
+            //DataBaseBackup();
+            this.Hide();
+            fLogIn frm = new fLogIn();
+            frm.ShowDialog();
+            frm.txtLoginID.Focus();
+        }
+
+        private void dgProducts_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            frmprmo.dgProductspromo.Rows[dgProducts.CurrentRow.Index].Selected = true;
+            frmprmo.dgProductspromo.Rows[dgProducts.CurrentRow.Index].Cells[0].Selected = true;
+        }
+
+       
     }
 }

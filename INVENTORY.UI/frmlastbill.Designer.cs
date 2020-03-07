@@ -32,14 +32,14 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmlastbill));
             this.dgProducts = new System.Windows.Forms.DataGridView();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.clnpay = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clnamount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clnSN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clnQTY = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clnUnitPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clnTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.clnpay = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clnamount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lbldate = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lblchange = new System.Windows.Forms.Label();
@@ -83,6 +83,40 @@
             this.dgProducts.Size = new System.Drawing.Size(321, 257);
             this.dgProducts.TabIndex = 6;
             // 
+            // clnSN
+            // 
+            this.clnSN.HeaderText = "SN";
+            this.clnSN.Name = "clnSN";
+            this.clnSN.ReadOnly = true;
+            this.clnSN.Width = 45;
+            // 
+            // clnName
+            // 
+            this.clnName.HeaderText = "DESCRIPTION";
+            this.clnName.Name = "clnName";
+            this.clnName.ReadOnly = true;
+            // 
+            // clnQTY
+            // 
+            this.clnQTY.HeaderText = "QTY";
+            this.clnQTY.Name = "clnQTY";
+            this.clnQTY.ReadOnly = true;
+            this.clnQTY.Width = 50;
+            // 
+            // clnUnitPrice
+            // 
+            this.clnUnitPrice.HeaderText = "PRICE";
+            this.clnUnitPrice.Name = "clnUnitPrice";
+            this.clnUnitPrice.ReadOnly = true;
+            this.clnUnitPrice.Width = 70;
+            // 
+            // clnTotal
+            // 
+            this.clnTotal.HeaderText = "AMOUNT";
+            this.clnTotal.Name = "clnTotal";
+            this.clnTotal.ReadOnly = true;
+            this.clnTotal.Width = 80;
+            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
@@ -118,40 +152,6 @@
             this.clnamount.HeaderText = "Amount";
             this.clnamount.Name = "clnamount";
             this.clnamount.ReadOnly = true;
-            // 
-            // clnSN
-            // 
-            this.clnSN.HeaderText = "SN";
-            this.clnSN.Name = "clnSN";
-            this.clnSN.ReadOnly = true;
-            this.clnSN.Width = 45;
-            // 
-            // clnName
-            // 
-            this.clnName.HeaderText = "DESCRIPTION";
-            this.clnName.Name = "clnName";
-            this.clnName.ReadOnly = true;
-            // 
-            // clnQTY
-            // 
-            this.clnQTY.HeaderText = "QTY";
-            this.clnQTY.Name = "clnQTY";
-            this.clnQTY.ReadOnly = true;
-            this.clnQTY.Width = 50;
-            // 
-            // clnUnitPrice
-            // 
-            this.clnUnitPrice.HeaderText = "PRICE";
-            this.clnUnitPrice.Name = "clnUnitPrice";
-            this.clnUnitPrice.ReadOnly = true;
-            this.clnUnitPrice.Width = 70;
-            // 
-            // clnTotal
-            // 
-            this.clnTotal.HeaderText = "AMOUNT";
-            this.clnTotal.Name = "clnTotal";
-            this.clnTotal.ReadOnly = true;
-            this.clnTotal.Width = 80;
             // 
             // lbldate
             // 
@@ -288,6 +288,8 @@
             // 
             // button2
             // 
+            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button2.Font = new System.Drawing.Font("Palatino Linotype", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.TopLeft;

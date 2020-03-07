@@ -175,6 +175,12 @@
     <Compile Include="frmBranchMaster.designer.cs">
       <DependentUpon>frmBranchMaster.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmlabelprint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmlabelprint.Designer.cs">
+      <DependentUpon>frmlabelprint.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmlastbill.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -205,11 +211,29 @@
     <Compile Include="frmpricechk.designer.cs">
       <DependentUpon>frmpricechk.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmpromo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmpromo.Designer.cs">
+      <DependentUpon>frmpromo.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmquickmenu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmquickmenu.Designer.cs">
       <DependentUpon>frmquickmenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmrefund.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmrefund.Designer.cs">
+      <DependentUpon>frmrefund.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmshiftend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmshiftend.Designer.cs">
+      <DependentUpon>frmshiftend.cs</DependentUpon>
     </Compile>
     <Compile Include="Inventory\Account\fCardTpyeSetups.cs">
       <SubType>Form</SubType>
@@ -959,6 +983,9 @@
     <EmbeddedResource Include="frmBranchMaster.resx">
       <DependentUpon>frmBranchMaster.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmlabelprint.resx">
+      <DependentUpon>frmlabelprint.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmlastbill.resx">
       <DependentUpon>frmlastbill.cs</DependentUpon>
     </EmbeddedResource>
@@ -974,8 +1001,17 @@
     <EmbeddedResource Include="frmpricechk.resx">
       <DependentUpon>frmpricechk.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmpromo.resx">
+      <DependentUpon>frmpromo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmquickmenu.resx">
       <DependentUpon>frmquickmenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmrefund.resx">
+      <DependentUpon>frmrefund.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmshiftend.resx">
+      <DependentUpon>frmshiftend.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inventory\Account\fCardTpyeSetups.resx">
       <DependentUpon>fCardTpyeSetups.cs</DependentUpon>

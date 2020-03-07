@@ -110,7 +110,8 @@ namespace INVENTORY.UI
                 {
                     if (!bFormNameOpen)
                     {
-                         oFMainForm = new FNewMainForm();
+                     
+                        oFMainForm = new FNewMainForm();
                         this.BranchName = tvBranches.SelectedNode.Text;
                         this.BranchId = Convert.ToInt64(tvBranches.SelectedNode.Tag);
                         this.DialogResult = System.Windows.Forms.DialogResult.OK;
@@ -128,6 +129,8 @@ namespace INVENTORY.UI
                         oFMainForm.ShowDialog();
                         //this.Close();
                         //this.Hide();
+                    
+
                     }
                     else
                     {
