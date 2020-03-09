@@ -95,6 +95,7 @@ namespace INVENTORY.UI
                                 else
                                 {
                                     //
+                                    
                                     Global.CurrentUser = oUser;
                                     fSOrder fssale = new fSOrder();
                                     fssale.FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -107,6 +108,7 @@ namespace INVENTORY.UI
                                 //
                                 this.Close();
                                 this.Hide();
+                                this.Dispose();
                                 DialogResult = DialogResult.OK;
                                 this.Close();
 
@@ -128,8 +130,17 @@ namespace INVENTORY.UI
 
         private void btnCLose_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+           
         }
 
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnclose_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

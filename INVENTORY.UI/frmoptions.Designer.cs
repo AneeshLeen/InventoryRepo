@@ -260,6 +260,7 @@
             this.btndiscount.Tag = "btnSave";
             this.btndiscount.Text = "Discount";
             this.btndiscount.UseVisualStyleBackColor = true;
+            this.btndiscount.Click += new System.EventHandler(this.btndiscount_Click);
             // 
             // btnwastage
             // 

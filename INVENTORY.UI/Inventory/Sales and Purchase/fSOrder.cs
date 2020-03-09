@@ -1254,6 +1254,8 @@ namespace INVENTORY.UI
 
         private void btnClose_Click(object sender, EventArgs e)
         {
+            this.Dispose();
+            frmprmo.Close();
 
         }
         private void CalculatePaymentAmount()
@@ -1370,7 +1372,38 @@ namespace INVENTORY.UI
         }
         private void fOrder_Load(object sender, EventArgs e)
         {
-            button1_Click(sender, e);
+            pnlbtndyan.Controls.Clear();
+            LoadDatatable();
+            int top = 5;
+            int left = 1;
+            int count = 0;
+            Decimal line = Convert.ToDecimal(Branchlist.Rows.Count) / 3;
+
+            foreach (DataRow row in Branchlist.Rows)
+            {
+
+
+                Button btn = new Button();
+                btn.Left = left;
+                btn.Top = top;
+                btn.Size = new Size(80, 63);
+                btn.Font = new Font(Font.FontFamily, 9, FontStyle.Bold);
+                btn.Text = row["Description"].ToString();
+                btn.Tag = row["vat"].ToString();
+                btn.BackColor = System.Drawing.Color.FromName(row["backcolor"].ToString());
+                btn.ForeColor = System.Drawing.Color.FromName(row["forecolor"].ToString());
+                pnlbtndyan.Controls.Add(btn);
+                top += btn.Height + 2;
+                btn.Click += new System.EventHandler(this.btn_Click);
+                count++;
+                if (count == Decimal.Ceiling(line))
+                {
+                    count = 0;
+                    top = 5;
+                    left += 81;
+                }
+
+            }
         }
 
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
@@ -1868,40 +1901,7 @@ namespace INVENTORY.UI
 
         //
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            pnlbtndyan.Controls.Clear();
-            LoadDatatable();
-            int top = 5;
-            int left = 1;
-            int count = 1;
-
-            foreach (DataRow row in Branchlist.Rows)
-            {
-
-                Button btn = new Button();
-                btn.Left = left;
-                btn.Top = top;
-                btn.Size = new Size(80, 63);
-                btn.Font = new Font(Font.FontFamily, 9);
-                btn.Text = row["Description"].ToString();
-                btn.Tag = row["vat"].ToString();
-                btn.BackColor = System.Drawing.Color.FromName(row["backcolor"].ToString());
-                btn.ForeColor = System.Drawing.Color.FromName(row["forecolor"].ToString());
-                pnlbtndyan.Controls.Add(btn);
-                top += btn.Height + 2;
-                btn.Click += new System.EventHandler(this.btn_Click);
-                count++;
-                if (count == 8)
-                {
-                    count = 1;
-                    top = 5;
-                    left += 81;
-                }
-
-            }
-
-        }
+       
 
         decimal taxper = 0;
         private void btn_Click(object sender, EventArgs e)
@@ -2031,7 +2031,7 @@ namespace INVENTORY.UI
             }
             else
             {
-                button1_Click(sender, e);
+                fOrder_Load(sender, e);
                 btnPayOut.Text = "PAYOUT";
 
             }
@@ -2096,12 +2096,15 @@ namespace INVENTORY.UI
         void showmultipaymentpop()
         {
             frmmultipayment frmmultipay = new frmmultipayment();
-            if (Convert.ToDecimal(lblbilltotal.Text)>0 && Convert.ToDecimal(txtamt.Text)>0)
+            if (txtamt.Text != "")
             {
-                frmmultipay.lblbillamt.Text = lblbilltotal.Text;
-                frmmultipay.lblpaidamt.Text = txtamt.Text;
-                frmmultipay.lbldueamt.Text = Convert.ToString(Convert.ToDecimal(lblbilltotal.Text) - Convert.ToDecimal(txtamt.Text));
-                frmmultipay.dgProducts.Rows.Add("CASH", txtamt.Text);
+                if (Convert.ToDecimal(lblbilltotal.Text) > 0 && Convert.ToDecimal(txtamt.Text) > 0)
+                {
+                    frmmultipay.lblbillamt.Text = lblbilltotal.Text;
+                    frmmultipay.lblpaidamt.Text = txtamt.Text;
+                    frmmultipay.lbldueamt.Text = Convert.ToString(Convert.ToDecimal(lblbilltotal.Text) - Convert.ToDecimal(txtamt.Text));
+                    frmmultipay.dgProducts.Rows.Add("CASH", txtamt.Text);
+                }
             }
             frmmultipay.ShowDialog();
         }
@@ -2172,7 +2175,7 @@ namespace INVENTORY.UI
         private void btnoptions_Click(object sender, EventArgs e)
         {
             frmoptions frmopt = new frmoptions();
-            frmopt.ShowDialog();
+            frmopt.Show();
         }
 
         private void btnvoidqty_Click(object sender, EventArgs e)
@@ -2264,7 +2267,8 @@ namespace INVENTORY.UI
         private void btnlogout_Click(object sender, EventArgs e)
         {
             //DataBaseBackup();
-            this.Hide();
+            this.Dispose();
+            frmprmo.Close();
             fLogIn frm = new fLogIn();
             frm.ShowDialog();
             frm.txtLoginID.Focus();
@@ -2276,6 +2280,22 @@ namespace INVENTORY.UI
             frmprmo.dgProductspromo.Rows[dgProducts.CurrentRow.Index].Cells[0].Selected = true;
         }
 
-       
+        private void fSOrder_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            frmprmo.Close();
+        }
+        int dynamiclocatonY = 81;
+        private void btnmovedwn_Click(object sender, EventArgs e)
+        {
+            dynamiclocatonY+= - 5;
+            pnlbtndyan.Location = new Point(827, dynamiclocatonY );
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            dynamiclocatonY += +5;
+            pnlbtndyan.Location = new Point(827, dynamiclocatonY );
+
+        }
     }
 }

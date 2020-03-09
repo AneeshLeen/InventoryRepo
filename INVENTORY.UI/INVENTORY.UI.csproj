@@ -175,6 +175,12 @@
     <Compile Include="frmBranchMaster.designer.cs">
       <DependentUpon>frmBranchMaster.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmdisc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmdisc.Designer.cs">
+      <DependentUpon>frmdisc.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmlabelprint.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -982,6 +988,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmBranchMaster.resx">
       <DependentUpon>frmBranchMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmdisc.resx">
+      <DependentUpon>frmdisc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmlabelprint.resx">
       <DependentUpon>frmlabelprint.cs</DependentUpon>
