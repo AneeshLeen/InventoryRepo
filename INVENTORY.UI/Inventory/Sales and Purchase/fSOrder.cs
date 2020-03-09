@@ -3,6 +3,7 @@ using Microsoft.Reporting.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -31,7 +32,8 @@ namespace INVENTORY.UI
         private decimal _prevOrderdue = 0;
         private decimal _PrvCusDue = 0;
         private decimal _PreviousFlatDicount = 0;
-
+        decimal taxper = 0;
+        bool AllowNegativestock = true;
 
         frmpromo frmprmo;
 
@@ -227,30 +229,34 @@ namespace INVENTORY.UI
         private void RefreshObject()
         {
 
+            if (txtInvoice.Text == string.Empty)
+            {
+                txtInvoice.Text = GenerateInvoiceNo();
+            }
             _Order.InvoiceNo = txtInvoice.Text;
             _Order.InvoiceDate = dtpDate.Value;
-            _Order.GrandTotal = numGrandTotal.Value;
+            _Order.SubTotal = _Order.GrandTotal = _Order.SOrderDetails.Sum(p => p.SRate + p.CGSTAmt);
             _Order.Adjustment = numAdjustAmt.Value;
-            _Order.TotalAmount = numTotal.Value;//numUTotal.Value;
-            _Order.RecAmount = numPaidAmt.Value;
-            _Order.PaymentDue = numTotalDueAmt.Value;
-            _Order.TDPercentage = numTDP.Value;//Discount % of Total Dis. Amt.
-            _Order.TDAmount = numTotalDis.Value;
-            _Order.NetDiscount = numNetDiscount.Value;//Net Discount AMount [TDA+PPDISAmt]
+            _Order.TotalAmount = _Order.SOrderDetails.Sum(p => p.SRate);//numUTotal.Value;
+            //_Order.RecAmount = numPaidAmt.Value;
+            //_Order.PaymentDue = numTotalDueAmt.Value;
+            //_Order.TDPercentage = numTDP.Value;//Discount % of Total Dis. Amt.
+            //_Order.TDAmount = numTotalDis.Value;
+            //_Order.NetDiscount = numNetDiscount.Value;//Net Discount AMount [TDA+PPDISAmt]
 
-            _Order.VATAmount = numVatAmount.Value;
-            _Order.VATPercentage = numVatPercent.Value;
+            _Order.VATAmount = _Order.SOrderDetails.Sum(p => p.CGSTAmt);
+            _Order.VATPercentage = _Order.SOrderDetails.Sum(p => p.CGSTPerc);
 
             _Order.Remarks = "";//txtRemarks.Text;
             _Order.CustomerID = ctlCustomer.SelectedID;
-            _Order.TotalDue = (numTotalDueAmt.Value + _PrvCusDue);//numTotalDueAmt.Value + (numPrevDue.Value - _prevOrderdue); //  change from Motiur
+            // _Order.TotalDue = (numTotalDueAmt.Value + _PrvCusDue);//numTotalDueAmt.Value + (numPrevDue.Value - _prevOrderdue); //  change from Motiur
             _Order.Status = (int)EnumSalesType.Sales;
 
             //_Order.CreatedBy = Global.CurrentUser.UserID;
-            _Order.RemindPeriod = Convert.ToInt32(numRemindPeriodTemp.Value);
-            _Order.RemindStatus =(int) cboRemindType.SelectedValue;
-            if (_Order.PaymentDue > 0 && _Order.RemindPeriod>0 )
-                _Order.RemindDate = dtpRemindDate.Value;
+            //_Order.RemindPeriod = Convert.ToInt32(numRemindPeriodTemp.Value);
+            //_Order.RemindStatus = (int)cboRemindType.SelectedValue;
+            //if (_Order.PaymentDue > 0 && _Order.RemindPeriod > 0)
+            //    _Order.RemindDate = dtpRemindDate.Value;
 
 
         }
@@ -415,6 +421,174 @@ namespace INVENTORY.UI
             RefreshGrid();
             RefreshControl();
 
+        }
+
+
+        private void RefrehSODetailsAndStockObjectNew()
+        {
+            CreateOrderObject();
+
+            _Order.GrandTotal = (decimal)(numGrandTotal.Value + numUTotal.Value);
+
+            #region Stock
+            decimal SoldQuanity = multiple;
+            if (_stock != null)
+            {
+                _stock.Quantity = numStock.Value;
+                var item = (db.StockDetails.Where(o => o.ProductID == _oProduct.ProductID)).FirstOrDefault();
+                // var StockDetails = db.StockDetails.Where(i => i.ProductID == _oProduct.ProductID && i.ColorID == _StockDetail.ColorID && i.Status == (int)EnumStockDetailStatus.Stock && i.GodownID == ctlGodown.SelectedID);
+                //foreach (var item in StockDetails)
+                //{
+                _OrderDetail = new SOrderDetail();
+                _OrderDetail.ProductID = _oProduct.ProductID;
+                _OrderDetail.StockDetailID = item.SDetailID;
+                _OrderDetail.Quantity = multiple;
+                _OrderDetail.UnitPrice = item.SalesRate;
+                _OrderDetail.SRate = item.SalesRate;
+                //_OrderDetail.PPDPercentage = numDPerc.Value;
+                //_OrderDetail.PPDAmount = numPPDISAmt.Value;
+                _OrderDetail.UTAmount = (_OrderDetail.UnitPrice - _OrderDetail.PPDAmount) * multiple;
+                if (_OrderDetail.PPDPercentage > 0)
+                    _OrderDetail.MPRateTotal = ((_OrderDetail.UnitPrice * _OrderDetail.PPDPercentage) / 100) * multiple;
+                else
+                    _OrderDetail.MPRateTotal = _OrderDetail.UnitPrice * multiple;
+
+                _OrderDetail.MPRate = _OrderDetail.UnitPrice - ((_OrderDetail.UnitPrice * _OrderDetail.PPDPercentage) / 100); //StockDetails PRate
+                _OrderDetail.PRate = (decimal)item.PRate;
+                _OrderDetail.PRateTotal = _OrderDetail.PRate * multiple;
+
+                _OrderDetail.CGSTPerc = _oProduct.Tax;
+                _OrderDetail.CGSTAmt = _OrderDetail.SRate * _oProduct.Tax / 100;
+
+                //_OrderDetail.CompressorWarrenty = txtCompressor.Text;
+                //_OrderDetail.MotorWarrenty = txtMotor.Text;
+                //_OrderDetail.PanelWarrenty = txtPanel.Text;
+                //_OrderDetail.ServiceWarrenty = txtService.Text;
+                _OrderDetail.SparePartsWarrenty = txtSpareparts.Text;
+                _OrderDetail.GodownID = ctlGodown.SelectedID;
+                //_OrderDetail.GSTPerc = numGSTPerc.Value;
+                //_OrderDetail.CGSTPerc = numCGSTPerc.Value;
+                //_OrderDetail.SGSTPerc = numSGSTPerc.Value;
+                //_OrderDetail.IGSTPerc = numIGSTPerc.Value;
+                //_OrderDetail.GSTAmt = numGSTAmt.Value;
+                //_OrderDetail.CGSTAmt = numCGSTAmt.Value;
+                //_OrderDetail.SGSTAmt = numSGSTAmt.Value;
+                //_OrderDetail.IGSTAmt = numIGSTAmt.Value;
+
+                _OrderDetail.TypeID = (int)EnumSalesItemType.Product;
+
+                if (chKFreeQty.Checked)
+                    _OrderDetail.IsFree = 1;
+                else
+                    _OrderDetail.IsFree = 0;
+
+                if (item.Quantity == SoldQuanity)
+                {
+                    item.Quantity -= SoldQuanity;
+                    item.Status = (int)EnumStockDetailStatus.Sold;
+                    _Order.SOrderDetails.Add(_OrderDetail);
+                    //   break;
+                }
+                else if (item.Quantity > SoldQuanity)
+                {
+                    item.Quantity -= SoldQuanity;
+                    _Order.SOrderDetails.Add(_OrderDetail);
+                    //  break;
+                }
+                else if (item.Quantity < SoldQuanity)
+                {
+                    item.Quantity = 0m;
+                    item.Status = (int)EnumStockDetailStatus.Sold;
+                    _Order.SOrderDetails.Add(_OrderDetail);
+                }
+
+                //}
+            }
+            else
+            {
+                _StockDetail.Status = (int)EnumStockDetailStatus.Sold;
+            }
+            #endregion
+
+            if (_oProduct.ProductType == (int)EnumProductType.NoBarCode)
+            {
+                //numNetDiscount.Value += numPPDISAmt.Value * numQTY.Value;
+                //numGrandTotal.Value = (decimal)(numGrandTotal.Value + (numUnitPrice.Value * numQTY.Value));
+                //numTempNetTotalAmt.Value = numTempNetTotalAmt.Value + numUTotal.Value;
+            }
+
+            RefreshGridNew();
+            RefreshControl();
+            txtamt.Text = "";
+            multiple = 1;
+        }
+
+        private void RefreshGridNew()
+        {
+            try
+            {
+                int count = 0;
+                int nSLNo = 1;
+                dgProducts.Rows.Clear();
+                List<SOrderDetail> nobarcodeSOrderDetailList = new List<SOrderDetail>();
+                _OrderDetails = _Order.SOrderDetails.ToList();
+
+                if (_OrderDetails.Count > 0)
+                {
+                    foreach (SOrderDetail oPODItem in _OrderDetails)
+                    {
+                        dgProducts.Rows.Add();
+                        if (oPODItem.TypeID == (int)EnumSalesItemType.Product)
+                        {
+                            Product oProduct = db.Products.FirstOrDefault(o => o.ProductID == oPODItem.ProductID);
+                            if (oProduct != null)
+                            {
+                                dgProducts.Rows[count].Cells[1].Value = oProduct.ProductName;
+                                //_StockDetail = db.StockDetails.FirstOrDefault(x => x.SDetailID == oPODItem.StockDetailID);
+                                //INVENTORY.DA.Color oColor = _ColorList.FirstOrDefault(c => c.ColorID == _StockDetail.ColorID);
+                            }
+                        }
+                        else
+                        {
+                            Category oCategory = _CategoryList.FirstOrDefault(c => c.CategoryID == oPODItem.ProductID);
+                            dgProducts.Rows[count].Cells[1].Value = oCategory.Description;
+                        }
+
+
+
+                        dgProducts.Rows[count].Cells[0].Value = nSLNo.ToString();
+
+                        //dgProducts.Rows[count].Cells[2].Value = oColor.Description;//_StockDetail.Stock.Color.Description;
+                        //dgProducts.Rows[count].Cells[3].Value = oCategory.Description;//_StockDetail.Stock.Color.Description;
+                        //dgProducts.Rows[count].Cells[2].Value = _StockDetail.IMENO;
+                        dgProducts.Rows[count].Cells[2].Value = oPODItem.Quantity.ToString();
+                        dgProducts.Rows[count].Cells[3].Value = oPODItem.SRate.ToString();
+                        dgProducts.Rows[count].Cells[4].Value = (oPODItem.SRate * oPODItem.Quantity).ToString();
+                        dgProducts.Rows[count].Cells[5].Value = oPODItem.CGSTAmt.ToString();
+                        //Aneesh
+                        //lblbillqty.Text = oPODItem.Quantity.ToString();
+                        //
+                        //dgProducts.Rows[count].Cells[5].Value = oPODItem.UnitPrice.ToString();
+
+                        //dgProducts.Rows[count].Cells[6].Value = oPODItem.PPDPercentage.ToString();
+                        //dgProducts.Rows[count].Cells[7].Value = oPODItem.PPDAmount.ToString();
+                        //dgProducts.Rows[count].Cells[8].Value = oPODItem.CGSTAmt.ToString();
+                        //dgProducts.Rows[count].Cells[9].Value = oPODItem.SGSTAmt.ToString();
+                        //dgProducts.Rows[count].Cells[10].Value = oPODItem.IGSTAmt.ToString();
+                        //dgProducts.Rows[count].Cells[11].Value = oPODItem.CGSTAmt.ToString();
+                        //dgProducts.Rows[count].Cells[12].Value = (oPODItem.UTAmount).ToString();
+
+                        dgProducts.Rows[count].Tag = oPODItem;
+                        count++;
+                        nSLNo++;
+                    }
+                    calculatesum();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -1091,18 +1265,23 @@ namespace INVENTORY.UI
 
         bool IsSaveOrderValid(SOrder sorder)
         {
-            if (sorder.GrandTotal == sorder.SOrderDetails.Sum(i => (i.UnitPrice * i.Quantity)) && sorder.SOrderDetails.Sum(i => (i.UnitPrice - i.PPDAmount) * i.Quantity) == sorder.SOrderDetails.Sum(i => i.UTAmount))
-            {
+            //if (sorder.GrandTotal == sorder.SOrderDetails.Sum(i => (i.UnitPrice * i.Quantity)) && sorder.SOrderDetails.Sum(i => (i.UnitPrice - i.PPDAmount) * i.Quantity) == sorder.SOrderDetails.Sum(i => i.UTAmount))
+            //{
                 return true;
-            }
+            //}
 
-            return false;
+            //return false;
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
             try
             {
                 bool isNew = false, IsValid = false;
+                if (ctlCustomer.SelectedID == 0)
+                {
+                    MessageBox.Show("Select customer to continue.", "Save Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
                 if (MessageBox.Show("Do you want to save the information?", "Save Information", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     if (_Order.SOrderID <= 0) //New
@@ -1202,7 +1381,7 @@ namespace INVENTORY.UI
                                     _Order.CardPaidAmount = CardPaidAmt;
                                     _Order.CardTypeSetupID = CardTypeSetupID;
                                     FCreditSale bankdepo = new FCreditSale();
-                                    BankTranID = bankdepo.BankDeposit(CardTypeSetupID, CardPaidAmt, _Order.InvoiceNo,dtpDate.Value, out percentage);
+                                    BankTranID = bankdepo.BankDeposit(CardTypeSetupID, CardPaidAmt, _Order.InvoiceNo, dtpDate.Value, out percentage);
                                     _Order.DepositChargePercent = percentage;
                                     _Order.BankTranID = BankTranID;
                                 }
@@ -1389,7 +1568,7 @@ namespace INVENTORY.UI
                 btn.Size = new Size(80, 63);
                 btn.Font = new Font(Font.FontFamily, 9, FontStyle.Bold);
                 btn.Text = row["Description"].ToString();
-                btn.Tag = row["vat"].ToString();
+                btn.Tag = row;
                 btn.BackColor = System.Drawing.Color.FromName(row["backcolor"].ToString());
                 btn.ForeColor = System.Drawing.Color.FromName(row["forecolor"].ToString());
                 pnlbtndyan.Controls.Add(btn);
@@ -1867,13 +2046,15 @@ namespace INVENTORY.UI
         {
             //using (DEWSRMEntities db = new DEWSRMEntities())
             //{
+            string SQLServer = ConfigurationManager.AppSettings["SqlServer"];
+
             DataTable dtbranches = new DataTable();
-            SqlConnection connection = new SqlConnection("Data Source=DESKTOP-A62FJAE\\SQL;Initial Catalog=DEWSRM;Persist Security Info=True;Integrated Security=true");
+            SqlConnection connection = new SqlConnection(@"Data Source=" + SQLServer + ";Initial Catalog=DEWSRM;Persist Security Info=True;Integrated Security=true");
             SqlCommand command = new SqlCommand("SELECT * FROM[dbo].[Categorys]  cat WHERE cat.CategoryID NOT IN(SELECT CategoryID FROM[dbo].[Products]) and cat.inactive = 'false' and ispayout='false'", connection);
-                SqlDataAdapter adp = new SqlDataAdapter(command);
-                adp.Fill(dtbranches);
-                return dtbranches;
-           //}
+            SqlDataAdapter adp = new SqlDataAdapter(command);
+            adp.Fill(dtbranches);
+            return dtbranches;
+            //}
         }
 
         private void LoadDatatable()
@@ -1885,13 +2066,14 @@ namespace INVENTORY.UI
         {
             //using (DEWSRMEntities db = new DEWSRMEntities())
             //{
-                DataTable dtpayouts = new DataTable();
-                SqlConnection connection = new SqlConnection("Data Source=DESKTOP-A62FJAE\\SQL;Initial Catalog=DEWSRM;Persist Security Info=True;Integrated Security=true");
-                SqlCommand command = new SqlCommand("SELECT * FROM[dbo].[Categorys]  cat WHERE cat.CategoryID NOT IN(SELECT CategoryID FROM[dbo].[Products]) and cat.inactive = 'false' and ispayout='true'", connection);
-                SqlDataAdapter adp = new SqlDataAdapter(command);
-                adp.Fill(dtpayouts);
-                return dtpayouts;
-           // }
+            string SQLServer = ConfigurationManager.AppSettings["SqlServer"];
+            DataTable dtpayouts = new DataTable();
+            SqlConnection connection = new SqlConnection(@"Data Source=" + SQLServer + ";Initial Catalog=DEWSRM;Persist Security Info=True;Integrated Security=true");
+            SqlCommand command = new SqlCommand("SELECT * FROM[dbo].[Categorys]  cat WHERE cat.CategoryID NOT IN(SELECT CategoryID FROM[dbo].[Products]) and cat.inactive = 'false' and ispayout='true'", connection);
+            SqlDataAdapter adp = new SqlDataAdapter(command);
+            adp.Fill(dtpayouts);
+            return dtpayouts;
+            // }
         }
 
         private void LoadpayoutDatatable()
@@ -1903,7 +2085,6 @@ namespace INVENTORY.UI
 
        
 
-        decimal taxper = 0;
         private void btn_Click(object sender, EventArgs e)
         {
             if (txtamt.Text == String.Empty)
@@ -1911,20 +2092,62 @@ namespace INVENTORY.UI
                 MessageBox.Show("Invalid Selection");
                 return;
             }
-            taxper = 0;
-            if (Convert.ToDecimal( ((Button) sender).Tag) >0)
-            {
-                taxper += Convert.ToDecimal(txtamt.Text) * Convert.ToDecimal(((Button)sender).Tag) / 100;
-               
-            }
-             this.dgProducts.Rows.Add(dgProducts.Rows.Count + 1, ((sender) as Button).Text, multiple, Convert.ToDecimal(txtamt.Text),  Convert.ToDecimal(txtamt.Text) + Convert.ToDecimal( taxper) * multiple, taxper * multiple);
-            frmprmo.dgProductspromo.Rows.Add(((sender) as Button).Text, multiple, Convert.ToDecimal(txtamt.Text), Convert.ToDecimal(txtamt.Text) + Convert.ToDecimal(taxper) * multiple, taxper * multiple);
-            
+
+            DataRow row = ((Button)sender).Tag as DataRow;
+            //taxper = 0;
+            //if (Convert.ToDecimal( ((Button) sender).Tag) >0)
+            //{
+            //    taxper += Convert.ToDecimal(txtamt.Text) * Convert.ToDecimal(((Button)sender).Tag) / 100;
+
+            //}
+            // this.dgProducts.Rows.Add(dgProducts.Rows.Count + 1, ((sender) as Button).Text, multiple, Convert.ToDecimal(txtamt.Text),  Convert.ToDecimal(txtamt.Text) + Convert.ToDecimal( taxper) * multiple, taxper * multiple);
+            //frmprmo.dgProductspromo.Rows.Add(((sender) as Button).Text, multiple, Convert.ToDecimal(txtamt.Text), Convert.ToDecimal(txtamt.Text) + Convert.ToDecimal(taxper) * multiple, taxper * multiple);
+
+            //txtamt.Text = "";
+            //multiple = 1;
+            CreateOrderObject();
+
+
+            _OrderDetail = new SOrderDetail();
+            _OrderDetail.ProductID = Convert.ToInt32(row["CategoryID"]);
+            _OrderDetail.StockDetailID = 0;
+            _OrderDetail.Quantity = multiple;
+            _OrderDetail.UnitPrice = Convert.ToDecimal(txtamt.Text);
+            _OrderDetail.SRate = Convert.ToDecimal(txtamt.Text);
+            //_OrderDetail.PPDPercentage = numDPerc.Value;
+            //_OrderDetail.PPDAmount = numPPDISAmt.Value;
+            _OrderDetail.UTAmount = (_OrderDetail.UnitPrice - _OrderDetail.PPDAmount) * multiple;
+            if (_OrderDetail.PPDPercentage > 0)
+                _OrderDetail.MPRateTotal = ((_OrderDetail.UnitPrice * _OrderDetail.PPDPercentage) / 100) * multiple;
+            else
+                _OrderDetail.MPRateTotal = _OrderDetail.UnitPrice * multiple;
+
+            _OrderDetail.MPRate = _OrderDetail.UnitPrice - ((_OrderDetail.UnitPrice * _OrderDetail.PPDPercentage) / 100); //StockDetails PRate
+            _OrderDetail.PRate = _OrderDetail.SRate;
+            _OrderDetail.PRateTotal = _OrderDetail.PRate * multiple;
+
+            _OrderDetail.CGSTPerc = Convert.ToDecimal(row["VAT"]);
+            _OrderDetail.CGSTAmt = _OrderDetail.SRate * Convert.ToDecimal(row["VAT"]) / 100;
+            _OrderDetail.TypeID = (int)EnumSalesItemType.Category;
+            _Order.SOrderDetails.Add(_OrderDetail);
+
+
+            RefreshGridNew();
+            RefreshControl();
             txtamt.Text = "";
             multiple = 1;
             RefreshPromo();
         }
+        private void CreateOrderObject()
+        {
+            if (_Order == null)
+            {
+                _Order = new SOrder();
 
+                _Order.CustomerID = ctlCustomer.SelectedID;
+                _Order.SOrderDetails = new List<SOrderDetail>();
+            }
+        }
         private void btn7_Click(object sender, EventArgs e)
         {
             txtamt.Text += btn7.Text;
@@ -2056,15 +2279,14 @@ namespace INVENTORY.UI
 
         void calculatesum()
         {
-            int qtysum = 0;
+            decimal qtysum = 0;
             decimal amtsum = 0;
             decimal taxsum = 0;
 
             for (int i = 0; i < dgProducts.Rows.Count; ++i)
-
             {
 
-                qtysum += Convert.ToInt32(dgProducts.Rows[i].Cells[2].Value);
+                qtysum += Convert.ToDecimal(dgProducts.Rows[i].Cells[2].Value);
 
                 amtsum += Convert.ToDecimal(dgProducts.Rows[i].Cells[4].Value);
 
@@ -2079,9 +2301,9 @@ namespace INVENTORY.UI
 
         private void dgProducts_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
         {
-            calculatesum();
-            if(dgProducts.CurrentRow !=null)
-            frmprmo.dgProductspromo.Rows[dgProducts.CurrentRow.Index].Cells[0].Selected = true;
+            //calculatesum();
+            //if(dgProducts.CurrentRow !=null)
+            //frmprmo.dgProductspromo.Rows[dgProducts.CurrentRow.Index].Cells[0].Selected = true;
         }
 
         void showpaymentpop( string amt)
@@ -2124,17 +2346,19 @@ namespace INVENTORY.UI
 
         private void btnvoiditem_Click(object sender, EventArgs e)
         {
-            frmprmo.dgProductspromo.Rows[dgProducts.CurrentRow.Index].Selected = true;
-            frmprmo.dgProductspromo.Rows[dgProducts.CurrentRow.Index].Cells[0].Selected = true;
-
-            foreach (DataGridViewCell oneCell in dgProducts.SelectedCells)
+            foreach (DataGridViewRow oneCell in dgProducts.SelectedRows)
             {
-                if (oneCell.Selected)
+                SOrderDetail oPODItem = oneCell.Tag as SOrderDetail;
+
+                if (oPODItem.TypeID == (int)EnumSalesItemType.Product)
                 {
-                    dgProducts.Rows.RemoveAt(oneCell.RowIndex);
-                    frmprmo.dgProductspromo.Rows.RemoveAt(frmprmo.dgProductspromo.CurrentRow.Index);
-                    calculatesum();
+                    _StockDetail = db.StockDetails.FirstOrDefault(x => x.SDetailID == oPODItem.StockDetailID);
+                    _StockDetail.Quantity = _StockDetail.Quantity + oPODItem.Quantity;
+                    _StockDetail.Status = (int)EnumStockDetailStatus.Stock;
                 }
+                _Order.SOrderDetails.Remove(oPODItem);
+                dgProducts.Rows.Remove(oneCell);
+                calculatesum();
             }
 
             RefreshPromo();
@@ -2159,8 +2383,18 @@ namespace INVENTORY.UI
 
         private void btnvoidall_Click(object sender, EventArgs e)
         {
+            foreach (SOrderDetail oPODItem in _Order.SOrderDetails)
+            {
+                if (oPODItem.TypeID == (int)EnumSalesItemType.Product)
+                {
+                    _StockDetail = db.StockDetails.FirstOrDefault(x => x.SDetailID == oPODItem.StockDetailID);
+                    _StockDetail.Quantity = _StockDetail.Quantity + oPODItem.Quantity;
+                    _StockDetail.Status = (int)EnumStockDetailStatus.Stock;
+                }
+            }
             dgProducts.Rows.Clear();
-            frmprmo.dgProductspromo.Rows.Clear();
+            _Order.SOrderDetails.Clear();
+            
             calculatesum();
 
             RefreshPromo();
@@ -2181,16 +2415,19 @@ namespace INVENTORY.UI
         private void btnvoidqty_Click(object sender, EventArgs e)
         {
             if (dgProducts.Rows.Count > 0)
-                if (Convert.ToInt32(dgProducts.CurrentRow.Cells["clnQTY"].Value) > 1)
+                if (Convert.ToInt32(dgProducts.CurrentRow.Cells["clnQTY"].Value) >= 1)
                 {
-                    frmprmo.dgProductspromo.Rows[dgProducts.CurrentRow.Index].Selected = true;
-                    frmprmo.dgProductspromo.Rows[dgProducts.CurrentRow.Index].Cells[0].Selected = true;
-                   
                     dgProducts.CurrentRow.Cells["clnQTY"].Value = Convert.ToInt32(dgProducts.CurrentRow.Cells["clnQTY"].Value) - 1;
                     dgProducts.CurrentRow.Cells["clnTotal"].Value = Convert.ToDecimal(dgProducts.CurrentRow.Cells["clnUnitPrice"].Value) * Convert.ToDecimal(dgProducts.CurrentRow.Cells["clnQTY"].Value);
 
-                    frmprmo.dgProductspromo.CurrentRow.Cells["clnQTY"].Value = Convert.ToInt32(frmprmo.dgProductspromo.CurrentRow.Cells["clnQTY"].Value) - 1;
-                    frmprmo.dgProductspromo.CurrentRow.Cells["clnTotal"].Value = Convert.ToDecimal(frmprmo.dgProductspromo.CurrentRow.Cells["clnUnitPrice"].Value) * Convert.ToDecimal(dgProducts.CurrentRow.Cells["clnQTY"].Value);
+                    SOrderDetail oPODItem = dgProducts.CurrentRow.Tag as SOrderDetail;
+
+                    if (oPODItem.TypeID == (int)EnumSalesItemType.Product)
+                    {
+                        _StockDetail = db.StockDetails.FirstOrDefault(x => x.SDetailID == oPODItem.StockDetailID);
+                        _StockDetail.Quantity = _StockDetail.Quantity + 1;
+                        _StockDetail.Status = (int)EnumStockDetailStatus.Stock;
+                    }
 
                     calculatesum();
                 }
@@ -2206,14 +2443,30 @@ namespace INVENTORY.UI
                 DataRow dr = frmqui.Branchlistbasedcat.AsEnumerable()
                .SingleOrDefault(r => r.Field<int>("productid") == Convert.ToInt32(frmqui.Tag));
 
-                if (Convert.ToDecimal(dr[25]) > 0)
+                //if (Convert.ToDecimal(dr[25]) > 0)
+                //{
+                //    taxper += Convert.ToDecimal(dr[29].ToString()) * Convert.ToDecimal(dr[25]) / 100;
+
+                //}
+
+                //this.dgProducts.Rows.Add(dgProducts.Rows.Count + 1, dr[2].ToString(), multiple, dr[29].ToString(), (Convert.ToDecimal(dr[29].ToString()) + taxper) * multiple, taxper* multiple);
+                //frmprmo.dgProductspromo.Rows.Add(dr[2].ToString(), multiple, dr[29].ToString(), (Convert.ToDecimal(dr[29].ToString()) + taxper) * multiple, taxper * multiple);
+
+                int productid = Convert.ToInt32(dr["productid"]);
+
+                _StockDetail = (StockDetail)(db.StockDetails.FirstOrDefault(o => o.ProductID == productid));
+
+                if (_StockDetail != null)
                 {
-                    taxper += Convert.ToDecimal(dr[29].ToString()) * Convert.ToDecimal(dr[25]) / 100;
-
+                    //decimal AvailableQuantity = (db.StockDetails.Where(o => o.ProductID == productid && o.Quantity > 0).Sum(o => o.Quantity));
+                    decimal AvailableQuantity = _StockDetail.Quantity;
+                    AddProductToGrid(_StockDetail, AvailableQuantity);
                 }
-
-                this.dgProducts.Rows.Add(dgProducts.Rows.Count + 1, dr[2].ToString(), multiple, dr[29].ToString(), (Convert.ToDecimal(dr[29].ToString()) + taxper) * multiple, taxper* multiple);
-                frmprmo.dgProductspromo.Rows.Add(dr[2].ToString(), multiple, dr[29].ToString(), (Convert.ToDecimal(dr[29].ToString()) + taxper) * multiple, taxper * multiple);
+                else
+                {
+                    MessageBox.Show("Stock not available. Available stock", "Sales Order", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
                 multiple = 1;
             }
         }
@@ -2296,6 +2549,56 @@ namespace INVENTORY.UI
             dynamiclocatonY += +5;
             pnlbtndyan.Location = new Point(827, dynamiclocatonY );
 
+        }
+
+        private void btnBarcode_Click(object sender, EventArgs e)
+        {
+            if (ctlProduct.SelectedID == 0)
+            {
+                try
+                {
+                    if (txtamt.Text != string.Empty)
+                    {
+                        _StockDetail = (StockDetail)(db.StockDetails.FirstOrDefault(o => o.IMENO == txtamt.Text.Trim()));
+                        //decimal AvailableQuantity = (db.StockDetails.Where(o => Convert.ToString(o.IMENO) == txtamt.Text.Trim() && o.Quantity > 0).Sum(o => o.Quantity));
+                        decimal AvailableQuantity = _StockDetail.Quantity;
+                        AddProductToGrid(_StockDetail, AvailableQuantity);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Barcode");
+                }
+            }
+        }
+
+        private void AddProductToGrid(StockDetail _StockDetail, decimal AvailableQuantity)
+        {
+
+            if (_StockDetail != null && _StockDetail.Status == (int)EnumStockDetailStatus.Stock || AllowNegativestock)
+            {
+                if (AvailableQuantity >= multiple || AllowNegativestock)
+                {
+                    _oProduct = _StockDetail.Product;
+                    _stock = _StockDetail.Stock;
+                    RefrehSODetailsAndStockObjectNew();
+                }
+                else
+                {
+                    MessageBox.Show("Stock not available. Available stock is " + _StockDetail.Quantity, "Sales Order", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+            }
+            else if (_StockDetail != null)
+            {
+                MessageBox.Show("Stock not available. Available stock", "Sales Order", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            else
+            {
+                MessageBox.Show("Item not found", "Sales Order", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
         }
     }
 }

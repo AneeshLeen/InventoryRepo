@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -23,8 +24,9 @@ namespace INVENTORY.UI
 
         internal DataTable ReadAllCategories()
         {
+          string  SQLServer = ConfigurationManager.AppSettings["SqlServer"];
             DataTable dtbranches = new DataTable();
-            SqlConnection connection = new SqlConnection("Data Source=DESKTOP-A62FJAE\\SQL;Initial Catalog=DEWSRM;Persist Security Info=True;Integrated Security=true");
+            SqlConnection connection = new SqlConnection(@"Data Source=" + SQLServer + ";Initial Catalog=DEWSRM;Persist Security Info=True;Integrated Security=true");
             SqlCommand command = new SqlCommand("SELECT * FROM[dbo].[Categorys]  cat WHERE cat.CategoryID  IN(SELECT CategoryID FROM[dbo].[Products]) and cat.inactive = 'false'", connection);
             SqlDataAdapter adp = new SqlDataAdapter(command);
             adp.Fill(dtbranches);
@@ -33,8 +35,9 @@ namespace INVENTORY.UI
 
         internal DataTable Readallbasedcat( string tag)
         {
+            string SQLServer = ConfigurationManager.AppSettings["SqlServer"];
             DataTable dtbranchesbased = new DataTable();
-            SqlConnection connection = new SqlConnection("Data Source=DESKTOP-A62FJAE\\SQL;Initial Catalog=DEWSRM;Persist Security Info=True;Integrated Security=true");
+            SqlConnection connection = new SqlConnection(@"Data Source=" + SQLServer + ";Initial Catalog=DEWSRM;Persist Security Info=True;Integrated Security=true");
             SqlCommand command = new SqlCommand(" select* from[dbo].[Products] where CategoryID = '"+tag+"'", connection);
             SqlDataAdapter adp = new SqlDataAdapter(command);
             adp.Fill(dtbranchesbased);

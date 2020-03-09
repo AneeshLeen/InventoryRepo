@@ -44,6 +44,7 @@ namespace INVENTORY.DA
         public decimal SGSTAmt { get; set; }
         public decimal IGSTAmt { get; set; }
         public Nullable<int> GodownID { get; set; }
+        public int TypeID { get; set; }
     
         public virtual Product Product { get; set; }
         public virtual SOrder SOrder { get; set; }

@@ -199,10 +199,17 @@ namespace INVENTORY.DA
         Liability = 4
     }
 
+
     public enum EnumTax
     {
         Zero = 0,
         Five = 5,
         Thirteen = 13
+    }
+
+    public enum EnumSalesItemType
+    {
+        Product = 1,
+        Category = 2,
     }
 }

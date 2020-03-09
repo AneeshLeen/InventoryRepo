@@ -627,6 +627,7 @@
     <Property Name="IGSTAmt" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
     <Property Name="GodownID" Type="Int32" />
     <NavigationProperty Name="Godown" Relationship="DEWSRMModel.FK_SOrderDetails_Godowns" FromRole="SOrderDetail" ToRole="Godown" />
+    <Property Name="TypeID" Type="Int32" Nullable="false" />
   </EntityType>
   <EntityType Name="SOrder">
     <Key>

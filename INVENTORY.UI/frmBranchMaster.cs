@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -27,8 +28,10 @@ namespace INVENTORY.UI
 
         internal DataTable ReadAllbranches()
         {
+            string SQLServer = ConfigurationManager.AppSettings["SqlServer"];
+
             DataTable dtbranches = new DataTable();
-            SqlConnection connection = new SqlConnection("Data Source=DESKTOP-A62FJAE\\SQL;Initial Catalog=INVENTORY;Persist Security Info=True;Integrated Security=true");             
+            SqlConnection connection = new SqlConnection(@"Data Source=" + SQLServer + ";Initial Catalog=INVENTORY;Persist Security Info=True;Integrated Security=true");
             SqlCommand command = new SqlCommand("select * from branchmaster", connection);
             SqlDataAdapter adp = new SqlDataAdapter(command);
             adp.Fill(dtbranches);

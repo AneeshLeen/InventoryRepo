@@ -548,6 +548,7 @@
     <EntitySetMapping Name="SOrderDetails">
       <EntityTypeMapping TypeName="DEWSRMModel.SOrderDetail">
         <MappingFragment StoreEntitySet="SOrderDetails">
+          <ScalarProperty Name="TypeID" ColumnName="TypeID" />
           <ScalarProperty Name="GodownID" ColumnName="GodownID" />
           <ScalarProperty Name="IGSTAmt" ColumnName="IGSTAmt" />
           <ScalarProperty Name="SGSTAmt" ColumnName="SGSTAmt" />

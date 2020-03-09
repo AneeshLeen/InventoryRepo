@@ -606,6 +606,7 @@
     <Property Name="SGSTAmt" Type="decimal" Precision="18" Scale="2" Nullable="false" />
     <Property Name="IGSTAmt" Type="decimal" Precision="18" Scale="2" Nullable="false" />
     <Property Name="GodownID" Type="int" />
+    <Property Name="TypeID" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="SOrders">
     <Key>
@@ -1346,18 +1347,6 @@ warning 6002: The table/view 'DEWSRM.dbo.vw_SupplierLedger' does not have a prim
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_SOrderDetails_Products">
-    <End Role="Products" Type="Self.Products" Multiplicity="1" />
-    <End Role="SOrderDetails" Type="Self.SOrderDetails" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Products">
-        <PropertyRef Name="ProductID" />
-      </Principal>
-      <Dependent Role="SOrderDetails">
-        <PropertyRef Name="ProductID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_SOrderDetails_SOrders">
     <End Role="SOrders" Type="Self.SOrders" Multiplicity="1" />
     <End Role="SOrderDetails" Type="Self.SOrderDetails" Multiplicity="*" />
@@ -1367,18 +1356,6 @@ warning 6002: The table/view 'DEWSRM.dbo.vw_SupplierLedger' does not have a prim
       </Principal>
       <Dependent Role="SOrderDetails">
         <PropertyRef Name="SOrderID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_SOrderDetails_StockDetails">
-    <End Role="StockDetails" Type="Self.StockDetails" Multiplicity="1" />
-    <End Role="SOrderDetails" Type="Self.SOrderDetails" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="StockDetails">
-        <PropertyRef Name="SDetailID" />
-      </Principal>
-      <Dependent Role="SOrderDetails">
-        <PropertyRef Name="StockDetailID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -1773,16 +1750,8 @@ warning 6002: The table/view 'DEWSRM.dbo.vw_SupplierLedger' does not have a prim
       <End Role="Godowns" EntitySet="Godowns" />
       <End Role="SOrderDetails" EntitySet="SOrderDetails" />
     </AssociationSet>
-    <AssociationSet Name="FK_SOrderDetails_Products" Association="Self.FK_SOrderDetails_Products">
-      <End Role="Products" EntitySet="Products" />
-      <End Role="SOrderDetails" EntitySet="SOrderDetails" />
-    </AssociationSet>
     <AssociationSet Name="FK_SOrderDetails_SOrders" Association="Self.FK_SOrderDetails_SOrders">
       <End Role="SOrders" EntitySet="SOrders" />
-      <End Role="SOrderDetails" EntitySet="SOrderDetails" />
-    </AssociationSet>
-    <AssociationSet Name="FK_SOrderDetails_StockDetails" Association="Self.FK_SOrderDetails_StockDetails">
-      <End Role="StockDetails" EntitySet="StockDetails" />
       <End Role="SOrderDetails" EntitySet="SOrderDetails" />
     </AssociationSet>
     <AssociationSet Name="FK_SOrders_Customers" Association="Self.FK_SOrders_Customers">
