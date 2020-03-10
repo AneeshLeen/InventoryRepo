@@ -1388,3 +1388,9 @@ C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.frmshifte
 C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.frmlabelprint.resources
 C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.frmpromo.resources
 C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.frmdisc.resources
+C:\CodeBase\InventoryRepo\InventoryRepo\INVENTORY.UI\bin\Debug\INVENTORY.UI.exe.config
+C:\CodeBase\InventoryRepo\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.exe
+C:\CodeBase\InventoryRepo\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.pdb
+C:\CodeBase\InventoryRepo\INVENTORY.UI\bin\Debug\INVENTORY.UI.exe.config
+C:\CodeBase\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.exe
+C:\CodeBase\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.pdb
