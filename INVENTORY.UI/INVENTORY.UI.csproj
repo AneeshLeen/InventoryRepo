@@ -65,6 +65,10 @@
     <Reference Include="Jil">
       <HintPath>F:\SOFTWARE\rhmcsrm\INVENTORY.UI\Library\Jil.dll</HintPath>
     </Reference>
+    <Reference Include="KeepAutomation.Barcode.Windows, Version=6.5.0.103, Culture=neutral, PublicKeyToken=328a3e27e1d51b95, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Users\Admin\Downloads\KA.Barcode.for.NETSuite\KA.Barcode.for.NETSuite\DLL\Net40\KeepAutomation.Barcode.Windows.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="Sigil">

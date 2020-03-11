@@ -66,3 +66,4 @@ C:\DevelopmentSource\InventoryRepo\INVENTORY.DA\obj\Debug\INVENTORY.DA.csprojAss
 C:\DevelopmentSource\InventoryRepo\INVENTORY.DA\obj\Debug\INVENTORY.DA.csproj.CopyComplete
 C:\DevelopmentSource\InventoryRepo\INVENTORY.DA\obj\Debug\INVENTORY.DA.dll
 C:\DevelopmentSource\InventoryRepo\INVENTORY.DA\obj\Debug\INVENTORY.DA.pdb
+C:\DevelopmentSource\InventoryRepo\INVENTORY.DA\bin\Debug\KeepAutomation.Barcode.Windows.dll

@@ -7,7 +7,7 @@ using System.Configuration;
 namespace INVENTORY.DA
 {
     public class CryptorEngine
-    {
+    {//anesh
         /// <summary>
         /// Encrypt a string using dual encryption method. Return a encrypted cipher Text
         /// </summary>

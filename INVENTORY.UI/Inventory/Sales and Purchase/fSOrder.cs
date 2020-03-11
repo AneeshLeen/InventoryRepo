@@ -1,4 +1,5 @@
 ﻿using INVENTORY.DA;
+using KeepAutomation.Barcode.Bean;
 using Microsoft.Reporting.WinForms;
 using System;
 using System.Collections.Generic;
@@ -7,6 +8,7 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -913,6 +915,8 @@ namespace INVENTORY.UI
             }
         }
 
+
+
         public void GenerateSOInvoice(SOrder oOrder)
         {
             try
@@ -1141,6 +1145,9 @@ namespace INVENTORY.UI
                 MessageBox.Show("Cannot generate invoice due to " + Ex.Message);
             }
         }
+
+
+
         public void MoneyReceipt(SOrder SOrder)
         {
             var oCustomer = db.Customers.FirstOrDefault(i => i.CustomerID == SOrder.CustomerID);
@@ -2233,7 +2240,7 @@ namespace INVENTORY.UI
                     btnpayouts.Left = left;
                     btnpayouts.Top = top;
                     btnpayouts.Size = new Size(80, 63);
-                    btnpayouts.Font = new Font(Font.FontFamily, 9);
+                    btnpayouts.Font = new Font(Font.FontFamily, 9, FontStyle.Bold);
                     btnpayouts.Text = row["Description"].ToString();
                     btnpayouts.Tag = row["vat"].ToString();
                     btnpayouts.BackColor = System.Drawing.Color.FromName(row["backcolor"].ToString());
@@ -2599,6 +2606,63 @@ namespace INVENTORY.UI
                 MessageBox.Show("Item not found", "Sales Order", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
+        }
+
+        private void btnenter_Click(object sender, EventArgs e)
+        {
+            PrintSettings obj = new PrintSettings();
+            //obj.BillType = "RECIEPT";
+            //obj.BillNo = lbl_bill_no1.Text;
+            //obj.BillDt = lbl_bill_date.Text;
+            //obj.tran_type = comboBox1.Text;
+            //obj.bill_amt = txt_bill_amt.Text;
+            //obj.Discount = txt_discount.Text;
+            //obj.NetAmount = txt_net_amt.Text;
+            //obj.reciept_amount = txt_reci_amt.Text;
+            //DataTable dt1_print = new DataTable();
+            //dt1_print.Columns.Add(new DataColumn("SLNo", typeof(string)));
+            //dt1_print.Columns.Add(new DataColumn("Item_Name", typeof(string)));
+            //dt1_print.Columns.Add(new DataColumn("Quantity", typeof(string)));
+            //dt1_print.Columns.Add(new DataColumn("Amount", typeof(string)));
+            //dt1_print.Columns.Add(new DataColumn("Total", typeof(string)));
+            //DataRow newrow = dt1_print.NewRow();
+            ////obj.count = dgrid_kot_entry.RowCount;
+            //for (int i = 0; i < dgrid_kot_entry.RowCount - 1; i++)
+            //{
+                //DataRow dr = dt1_print.NewRow();
+                //dr["SLNo"] = dgrid_kot_entry.Rows[i].Cells[0].Value;
+                //dr["Item_Name"] = dgrid_kot_entry.Rows[i].Cells[2].Value;
+                //dr["Quantity"] = dgrid_kot_entry.Rows[i].Cells[3].Value;
+                //dr["Amount"] = dgrid_kot_entry.Rows[i].Cells[4].Value;
+                //dr["Total"] = dgrid_kot_entry.Rows[i].Cells[5].Value;
+                //dt1_print.Rows.Add(dr);
+           // }
+            //obj.dt_print = dt1_print;
+            obj.PrintHeader();
+            obj.PrintDetails();
+            obj.PrintFooter();
+            obj.SkipLine(3);
+            obj.Close();
+
+            using (StreamWriter sw = new StreamWriter("bill.txt", true))
+            {
+                BarCode code128 = new BarCode();
+                code128.Symbology = KeepAutomation.Barcode.Symbology.Code128Auto;
+                code128.CodeToEncode = "128128128";
+                code128.generateBarcodeToByteArray();
+                //System.IO.FileStream.OpenWrite("bill.txt");
+                //File.WriteAllBytes("bill.txt", code128.generateBarcodeToByteArray());
+               // sw.
+               // sw.Flush();
+            }
+           
+
+            obj.Close();
+
+          
+
+            obj = null;
+
         }
     }
 }

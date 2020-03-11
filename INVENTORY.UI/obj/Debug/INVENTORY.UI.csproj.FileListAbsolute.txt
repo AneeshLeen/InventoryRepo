@@ -1388,3 +1388,4 @@ C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.frmshifte
 C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.frmlabelprint.resources
 C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.frmpromo.resources
 C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.frmdisc.resources
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\KeepAutomation.Barcode.Windows.dll
