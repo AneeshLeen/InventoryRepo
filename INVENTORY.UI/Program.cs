@@ -17,7 +17,7 @@ namespace INVENTORY.UI
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FSplash());
-            //test 10.03.2020--binshad dsdf
+            //test 11.03.2020--binshad
         }
     }
 }
