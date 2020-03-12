@@ -17,6 +17,7 @@ namespace INVENTORY.UI
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FSplash());
+
         }
     }
 }
