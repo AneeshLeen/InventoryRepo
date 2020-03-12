@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fSOrder));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -53,8 +53,6 @@
             this.numPRate = new System.Windows.Forms.NumericUpDown();
             this.chKFreeQty = new System.Windows.Forms.CheckBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.txtBarcode = new System.Windows.Forms.TextBox();
-            this.lblBarcode = new System.Windows.Forms.Label();
             this.numPWTAmt = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
@@ -288,7 +286,7 @@
             this.label3.BackColor = System.Drawing.Color.LightSeaGreen;
             this.label3.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.LemonChiffon;
-            this.label3.Location = new System.Drawing.Point(574, 8);
+            this.label3.Location = new System.Drawing.Point(14, 11);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(72, 20);
@@ -301,7 +299,7 @@
             this.label12.BackColor = System.Drawing.Color.LightSeaGreen;
             this.label12.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.LemonChiffon;
-            this.label12.Location = new System.Drawing.Point(404, 9);
+            this.label12.Location = new System.Drawing.Point(604, 12);
             this.label12.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(77, 20);
@@ -364,7 +362,7 @@
             this.dtpDate.CustomFormat = "dd MMM yyyy";
             this.dtpDate.Font = new System.Drawing.Font("Palatino Linotype", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDate.Location = new System.Drawing.Point(656, 7);
+            this.dtpDate.Location = new System.Drawing.Point(96, 10);
             this.dtpDate.Margin = new System.Windows.Forms.Padding(5);
             this.dtpDate.Name = "dtpDate";
             this.dtpDate.Size = new System.Drawing.Size(107, 22);
@@ -376,7 +374,7 @@
             this.label1.BackColor = System.Drawing.Color.LightSeaGreen;
             this.label1.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.LemonChiffon;
-            this.label1.Location = new System.Drawing.Point(200, 6);
+            this.label1.Location = new System.Drawing.Point(218, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 25);
@@ -386,10 +384,10 @@
             // txtInvoice
             // 
             this.txtInvoice.Font = new System.Drawing.Font("Palatino Linotype", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtInvoice.Location = new System.Drawing.Point(485, 7);
+            this.txtInvoice.Location = new System.Drawing.Point(685, 10);
             this.txtInvoice.Margin = new System.Windows.Forms.Padding(5);
             this.txtInvoice.Name = "txtInvoice";
-            this.txtInvoice.Size = new System.Drawing.Size(85, 22);
+            this.txtInvoice.Size = new System.Drawing.Size(136, 22);
             this.txtInvoice.TabIndex = 0;
             this.txtInvoice.TextChanged += new System.EventHandler(this.txtInvoice_TextChanged);
             // 
@@ -558,29 +556,6 @@
             this.label9.TabIndex = 28;
             this.label9.Text = "P.Rate";
             this.label9.Visible = false;
-            // 
-            // txtBarcode
-            // 
-            this.txtBarcode.Font = new System.Drawing.Font("Palatino Linotype", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBarcode.Location = new System.Drawing.Point(96, 8);
-            this.txtBarcode.Margin = new System.Windows.Forms.Padding(5);
-            this.txtBarcode.Name = "txtBarcode";
-            this.txtBarcode.Size = new System.Drawing.Size(103, 22);
-            this.txtBarcode.TabIndex = 0;
-            this.txtBarcode.TextChanged += new System.EventHandler(this.txtBarcode_TextChanged);
-            // 
-            // lblBarcode
-            // 
-            this.lblBarcode.AutoSize = true;
-            this.lblBarcode.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.lblBarcode.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBarcode.ForeColor = System.Drawing.Color.LemonChiffon;
-            this.lblBarcode.Location = new System.Drawing.Point(2, 9);
-            this.lblBarcode.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.lblBarcode.Name = "lblBarcode";
-            this.lblBarcode.Size = new System.Drawing.Size(93, 20);
-            this.lblBarcode.TabIndex = 16;
-            this.lblBarcode.Text = "Scan Barcode";
             // 
             // numPWTAmt
             // 
@@ -1890,14 +1865,14 @@
             // 
             this.dgProducts.AllowUserToAddRows = false;
             this.dgProducts.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.Menu;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgProducts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Menu;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgProducts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgProducts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.clnSN,
@@ -1916,14 +1891,14 @@
             this.dgProducts.Location = new System.Drawing.Point(117, 52);
             this.dgProducts.Margin = new System.Windows.Forms.Padding(5);
             this.dgProducts.Name = "dgProducts";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.SlateGray;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.Info;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgProducts.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.SlateGray;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgProducts.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgProducts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgProducts.Size = new System.Drawing.Size(706, 484);
             this.dgProducts.TabIndex = 5;
@@ -1939,8 +1914,8 @@
             // 
             // clnName
             // 
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Maroon;
-            this.clnName.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Maroon;
+            this.clnName.DefaultCellStyle = dataGridViewCellStyle2;
             this.clnName.HeaderText = "DESCRIPTION";
             this.clnName.Name = "clnName";
             this.clnName.ReadOnly = true;
@@ -2839,9 +2814,9 @@
             this.lblUser,
             this.ToolStripStatusLabel3,
             this.ToolStripStatusLabel4});
-            this.strsales.Location = new System.Drawing.Point(0, 751);
+            this.strsales.Location = new System.Drawing.Point(0, 670);
             this.strsales.Name = "strsales";
-            this.strsales.Size = new System.Drawing.Size(1370, 25);
+            this.strsales.Size = new System.Drawing.Size(1370, 22);
             this.strsales.TabIndex = 286;
             this.strsales.Text = "StatusStrip1";
             this.strsales.Visible = false;
@@ -2850,7 +2825,7 @@
             // 
             this.ToolStripStatusLabel1.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1";
-            this.ToolStripStatusLabel1.Size = new System.Drawing.Size(86, 20);
+            this.ToolStripStatusLabel1.Size = new System.Drawing.Size(86, 17);
             this.ToolStripStatusLabel1.Text = "Logged in As :";
             // 
             // lblUser
@@ -2858,13 +2833,13 @@
             this.lblUser.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUser.Image = ((System.Drawing.Image)(resources.GetObject("lblUser.Image")));
             this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(145, 20);
+            this.lblUser.Size = new System.Drawing.Size(145, 17);
             this.lblUser.Text = "ToolStripStatusLabel2";
             // 
             // ToolStripStatusLabel3
             // 
             this.ToolStripStatusLabel3.Name = "ToolStripStatusLabel3";
-            this.ToolStripStatusLabel3.Size = new System.Drawing.Size(979, 20);
+            this.ToolStripStatusLabel3.Size = new System.Drawing.Size(979, 17);
             this.ToolStripStatusLabel3.Spring = true;
             // 
             // ToolStripStatusLabel4
@@ -2872,7 +2847,7 @@
             this.ToolStripStatusLabel4.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ToolStripStatusLabel4.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripStatusLabel4.Image")));
             this.ToolStripStatusLabel4.Name = "ToolStripStatusLabel4";
-            this.ToolStripStatusLabel4.Size = new System.Drawing.Size(145, 20);
+            this.ToolStripStatusLabel4.Size = new System.Drawing.Size(145, 17);
             this.ToolStripStatusLabel4.Text = "ToolStripStatusLabel4";
             // 
             // ctlGodown
@@ -2892,11 +2867,11 @@
             this.ctlCustomer.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ctlCustomer.Font = new System.Drawing.Font("Palatino Linotype", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ctlCustomer.IDList = null;
-            this.ctlCustomer.Location = new System.Drawing.Point(266, 3);
+            this.ctlCustomer.Location = new System.Drawing.Point(284, 3);
             this.ctlCustomer.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.ctlCustomer.Name = "ctlCustomer";
             this.ctlCustomer.ObjectName = "Customer";
-            this.ctlCustomer.Size = new System.Drawing.Size(131, 40);
+            this.ctlCustomer.Size = new System.Drawing.Size(310, 40);
             this.ctlCustomer.TabIndex = 2;
             this.ctlCustomer.SelectedItemChanged += new INVENTORY.UI.SelectionChangedEvent(this.ctlCustomer_SelectedItemChanged);
             // 
@@ -2977,7 +2952,6 @@
             this.Controls.Add(this.label57);
             this.Controls.Add(this.btnmovedwn);
             this.Controls.Add(this.btnmoveup);
-            this.Controls.Add(this.lblBarcode);
             this.Controls.Add(this.label38);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label31);
@@ -3017,7 +2991,6 @@
             this.Controls.Add(this.label26);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.txtBarcode);
             this.Controls.Add(this.label25);
             this.Controls.Add(this.label40);
             this.Controls.Add(this.label37);
@@ -3185,8 +3158,6 @@
         private System.Windows.Forms.NumericUpDown numVatPercent;
         private System.Windows.Forms.NumericUpDown numVatAmount;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox txtBarcode;
-        private System.Windows.Forms.Label lblBarcode;
         private System.Windows.Forms.CheckBox chKFreeQty;
         private System.Windows.Forms.DateTimePicker dtpWDate;
         private System.Windows.Forms.Label label20;

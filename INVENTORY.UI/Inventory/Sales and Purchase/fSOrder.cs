@@ -435,16 +435,46 @@ namespace INVENTORY.UI
             if (_stock != null)
             {
                 _stock.Quantity = numStock.Value;
-                var item = (db.StockDetails.Where(o => o.ProductID == _oProduct.ProductID)).FirstOrDefault();
+
+
                 // var StockDetails = db.StockDetails.Where(i => i.ProductID == _oProduct.ProductID && i.ColorID == _StockDetail.ColorID && i.Status == (int)EnumStockDetailStatus.Stock && i.GodownID == ctlGodown.SelectedID);
                 //foreach (var item in StockDetails)
                 //{
                 _OrderDetail = new SOrderDetail();
                 _OrderDetail.ProductID = _oProduct.ProductID;
-                _OrderDetail.StockDetailID = item.SDetailID;
                 _OrderDetail.Quantity = multiple;
-                _OrderDetail.UnitPrice = item.SalesRate;
-                _OrderDetail.SRate = item.SalesRate;
+
+                if (_oProduct.StockDetails != null && _oProduct.StockDetails.Count > 0)
+                {
+                    var item = (db.StockDetails.Where(o => o.ProductID == _oProduct.ProductID)).FirstOrDefault();
+                    _OrderDetail.StockDetailID = item.SDetailID;
+                    _OrderDetail.UnitPrice = item.SalesRate;
+                    _OrderDetail.SRate = item.SalesRate;
+                    _OrderDetail.PRate = (decimal)item.PRate;
+
+                    if (item.Quantity == SoldQuanity)
+                    {
+                        item.Quantity -= SoldQuanity;
+                        item.Status = (int)EnumStockDetailStatus.Sold;
+                    }
+                    else if (item.Quantity > SoldQuanity)
+                    {
+                        item.Quantity -= SoldQuanity;
+                    }
+                    else if (item.Quantity < SoldQuanity)
+                    {
+                        item.Quantity = 0m;
+                        item.Status = (int)EnumStockDetailStatus.Sold;
+                    }
+                }
+                else
+                {
+                    _OrderDetail.StockDetailID = 0;
+                    _OrderDetail.UnitPrice = _oProduct.SalesRate;
+                    _OrderDetail.SRate = _oProduct.SalesRate;
+                    _OrderDetail.PRate = _oProduct.SalesRate;
+                }
+
                 //_OrderDetail.PPDPercentage = numDPerc.Value;
                 //_OrderDetail.PPDAmount = numPPDISAmt.Value;
                 _OrderDetail.UTAmount = (_OrderDetail.UnitPrice - _OrderDetail.PPDAmount) * multiple;
@@ -454,7 +484,7 @@ namespace INVENTORY.UI
                     _OrderDetail.MPRateTotal = _OrderDetail.UnitPrice * multiple;
 
                 _OrderDetail.MPRate = _OrderDetail.UnitPrice - ((_OrderDetail.UnitPrice * _OrderDetail.PPDPercentage) / 100); //StockDetails PRate
-                _OrderDetail.PRate = (decimal)item.PRate;
+
                 _OrderDetail.PRateTotal = _OrderDetail.PRate * multiple;
 
                 _OrderDetail.CGSTPerc = _oProduct.Tax;
@@ -482,29 +512,9 @@ namespace INVENTORY.UI
                 else
                     _OrderDetail.IsFree = 0;
 
-                if (item.Quantity == SoldQuanity)
-                {
-                    item.Quantity -= SoldQuanity;
-                    item.Status = (int)EnumStockDetailStatus.Sold;
-                    _Order.SOrderDetails.Add(_OrderDetail);
-                    //   break;
-                }
-                else if (item.Quantity > SoldQuanity)
-                {
-                    item.Quantity -= SoldQuanity;
-                    _Order.SOrderDetails.Add(_OrderDetail);
-                    //  break;
-                }
-                else if (item.Quantity < SoldQuanity)
-                {
-                    item.Quantity = 0m;
-                    item.Status = (int)EnumStockDetailStatus.Sold;
-                    _Order.SOrderDetails.Add(_OrderDetail);
-                }
-
-                //}
+                _Order.SOrderDetails.Add(_OrderDetail);
             }
-            else
+            else if (_StockDetail != null)
             {
                 _StockDetail.Status = (int)EnumStockDetailStatus.Sold;
             }
@@ -839,7 +849,6 @@ namespace INVENTORY.UI
             //numNetDiscount.Value = 0;
             ctlProduct.SelectedID = 0;
             chKFreeQty.Checked = false;
-            txtBarcode.Text = "";
 
             //numVatPercent.Value = 0;
             txtCompressor.Text = string.Empty;
@@ -1519,7 +1528,6 @@ namespace INVENTORY.UI
                         }
                         numPRate.Value = (decimal)_StockDetail.PRate;
                         numUnitPrice.Value = _StockDetail.SalesRate;
-                        txtBarcode.Text = _StockDetail.IMENO;
                         txtCompressor.Text = _oProduct.CompressorWarrenty;
                         txtMotor.Text = _oProduct.MotorWarrenty;
                         txtSpareparts.Text = _oProduct.SparePartsWarrenty;
@@ -1829,45 +1837,45 @@ namespace INVENTORY.UI
 
         private void txtBarcode_TextChanged(object sender, EventArgs e)
         {
-         if (ctlProduct.SelectedID == 0)
-            {
-                try
-                {
-                    if (txtBarcode.Text != string.Empty)
-                    {
-                        _StockDetail = (StockDetail)(db.StockDetails.FirstOrDefault(o => o.IMENO == txtBarcode.Text.Trim() && o.Status == (int)EnumStockDetailStatus.Stock));
-                        if (_StockDetail != null)
-                        {
-                            _oProduct = _StockDetail.Product;
-                            _stock = _StockDetail.Stock;
+         //if (ctlProduct.SelectedID == 0)
+         //   {
+         //       try
+         //       {
+         //           if (txtBarcode.Text != string.Empty)
+         //           {
+         //               _StockDetail = (StockDetail)(db.StockDetails.FirstOrDefault(o => o.IMENO == txtBarcode.Text.Trim() && o.Status == (int)EnumStockDetailStatus.Stock));
+         //               if (_StockDetail != null)
+         //               {
+         //                   _oProduct = _StockDetail.Product;
+         //                   _stock = _StockDetail.Stock;
 
-                            if (_oProduct != null)
-                            {
-                                if (_oProduct.ProductType == (int)EnumProductType.SerialNo || _oProduct.ProductType == (int)EnumProductType.BarCode)
-                                {
-                                    numQTY.Value = 1;
-                                    numQTY.Enabled = false;
-                                }
-                                else //for nobarcode
-                                {
-                                    numQTY.Enabled = true;
-                                    numQTY.Value = 0;
-                                    numStock.Value = _stock.Quantity;
+         //                   if (_oProduct != null)
+         //                   {
+         //                       if (_oProduct.ProductType == (int)EnumProductType.SerialNo || _oProduct.ProductType == (int)EnumProductType.BarCode)
+         //                       {
+         //                           numQTY.Value = 1;
+         //                           numQTY.Enabled = false;
+         //                       }
+         //                       else //for nobarcode
+         //                       {
+         //                           numQTY.Enabled = true;
+         //                           numQTY.Value = 0;
+         //                           numStock.Value = _stock.Quantity;
 
-                                }
-                                numPRate.Value = (decimal)_StockDetail.PRate;
-                                numUnitPrice.Value = _StockDetail.SalesRate;
-                                txtBarcode.Text = _StockDetail.IMENO;
-                                numUnitPrice.Focus();
-                            }
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, "Barcode");
-                }
-            }
+         //                       }
+         //                       numPRate.Value = (decimal)_StockDetail.PRate;
+         //                       numUnitPrice.Value = _StockDetail.SalesRate;
+         //                       txtBarcode.Text = _StockDetail.IMENO;
+         //                       numUnitPrice.Focus();
+         //                   }
+         //               }
+         //           }
+         //       }
+         //       catch (Exception ex)
+         //       {
+         //           MessageBox.Show(ex.Message, "Barcode");
+         //       }
+         //   }
         }
 
         private void txtInvoice_TextChanged(object sender, EventArgs e)
@@ -2353,8 +2361,11 @@ namespace INVENTORY.UI
                 if (oPODItem.TypeID == (int)EnumSalesItemType.Product)
                 {
                     _StockDetail = db.StockDetails.FirstOrDefault(x => x.SDetailID == oPODItem.StockDetailID);
-                    _StockDetail.Quantity = _StockDetail.Quantity + oPODItem.Quantity;
-                    _StockDetail.Status = (int)EnumStockDetailStatus.Stock;
+                    if (_StockDetail != null)
+                    {
+                        _StockDetail.Quantity = _StockDetail.Quantity + oPODItem.Quantity;
+                        _StockDetail.Status = (int)EnumStockDetailStatus.Stock;
+                    }
                 }
                 _Order.SOrderDetails.Remove(oPODItem);
                 dgProducts.Rows.Remove(oneCell);
@@ -2388,8 +2399,11 @@ namespace INVENTORY.UI
                 if (oPODItem.TypeID == (int)EnumSalesItemType.Product)
                 {
                     _StockDetail = db.StockDetails.FirstOrDefault(x => x.SDetailID == oPODItem.StockDetailID);
-                    _StockDetail.Quantity = _StockDetail.Quantity + oPODItem.Quantity;
-                    _StockDetail.Status = (int)EnumStockDetailStatus.Stock;
+                    if (_StockDetail != null)
+                    {
+                        _StockDetail.Quantity = _StockDetail.Quantity + oPODItem.Quantity;
+                        _StockDetail.Status = (int)EnumStockDetailStatus.Stock;
+                    }
                 }
             }
             dgProducts.Rows.Clear();
@@ -2425,8 +2439,11 @@ namespace INVENTORY.UI
                     if (oPODItem.TypeID == (int)EnumSalesItemType.Product)
                     {
                         _StockDetail = db.StockDetails.FirstOrDefault(x => x.SDetailID == oPODItem.StockDetailID);
-                        _StockDetail.Quantity = _StockDetail.Quantity + 1;
-                        _StockDetail.Status = (int)EnumStockDetailStatus.Stock;
+                        if (_StockDetail != null)
+                        {
+                            _StockDetail.Quantity = _StockDetail.Quantity + 1;
+                            _StockDetail.Status = (int)EnumStockDetailStatus.Stock;
+                        }
                     }
 
                     calculatesum();
@@ -2455,18 +2472,11 @@ namespace INVENTORY.UI
                 int productid = Convert.ToInt32(dr["productid"]);
 
                 _StockDetail = (StockDetail)(db.StockDetails.FirstOrDefault(o => o.ProductID == productid));
-
-                if (_StockDetail != null)
+                if(_StockDetail==null)
                 {
-                    //decimal AvailableQuantity = (db.StockDetails.Where(o => o.ProductID == productid && o.Quantity > 0).Sum(o => o.Quantity));
-                    decimal AvailableQuantity = _StockDetail.Quantity;
-                    AddProductToGrid(_StockDetail, AvailableQuantity);
+                    _oProduct = (Product)(db.Products.FirstOrDefault(o => o.ProductID == productid));
                 }
-                else
-                {
-                    MessageBox.Show("Stock not available. Available stock", "Sales Order", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return;
-                }
+                AddProductToGrid();
                 multiple = 1;
             }
         }
@@ -2560,9 +2570,11 @@ namespace INVENTORY.UI
                     if (txtamt.Text != string.Empty)
                     {
                         _StockDetail = (StockDetail)(db.StockDetails.FirstOrDefault(o => o.IMENO == txtamt.Text.Trim()));
-                        //decimal AvailableQuantity = (db.StockDetails.Where(o => Convert.ToString(o.IMENO) == txtamt.Text.Trim() && o.Quantity > 0).Sum(o => o.Quantity));
-                        decimal AvailableQuantity = _StockDetail.Quantity;
-                        AddProductToGrid(_StockDetail, AvailableQuantity);
+                        if (_StockDetail == null)
+                        {
+                            _oProduct = (Product)(db.Products.FirstOrDefault(o => o.BarCode == txtamt.Text.Trim()));
+                        }
+                        AddProductToGrid();
                     }
                 }
                 catch (Exception ex)
@@ -2572,33 +2584,44 @@ namespace INVENTORY.UI
             }
         }
 
-        private void AddProductToGrid(StockDetail _StockDetail, decimal AvailableQuantity)
+        private void AddProductToGrid()
         {
-
-            if (_StockDetail != null && _StockDetail.Status == (int)EnumStockDetailStatus.Stock || AllowNegativestock)
+            if (_StockDetail != null)
             {
-                if (AvailableQuantity >= multiple || AllowNegativestock)
+                decimal AvailableQuantity = (db.StockDetails.Where(o => o.IMENO == txtamt.Text.Trim()).Sum(o => o.Quantity));
+                if (_StockDetail != null && _StockDetail.Status == (int)EnumStockDetailStatus.Stock || AllowNegativestock)
                 {
-                    _oProduct = _StockDetail.Product;
-                    _stock = _StockDetail.Stock;
-                    RefrehSODetailsAndStockObjectNew();
+                    if (AvailableQuantity >= multiple || AllowNegativestock)
+                    {
+                        _oProduct = _StockDetail.Product;
+                        _stock = _StockDetail.Stock;
+                        RefrehSODetailsAndStockObjectNew();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Stock not available. Available stock is " + _StockDetail.Quantity, "Sales Order", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
+                    }
+                }
+                else if (_StockDetail != null)
+                {
+                    MessageBox.Show("Stock not available. Available stock", "Sales Order", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
                 }
                 else
                 {
-                    MessageBox.Show("Stock not available. Available stock is " + _StockDetail.Quantity, "Sales Order", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Item not found", "Sales Order", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
             }
-            else if (_StockDetail != null)
-            {
-                MessageBox.Show("Stock not available. Available stock", "Sales Order", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
+
             else
             {
-                MessageBox.Show("Item not found", "Sales Order", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
+                _stock = new Stock();
+                txtamt.Text = "";
+                RefrehSODetailsAndStockObjectNew();
             }
         }
+           
     }
 }
