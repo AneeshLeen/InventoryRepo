@@ -100,10 +100,9 @@ namespace INVENTORY.UI
                                     fSOrder fssale = new fSOrder();
                                     fssale.FormBorderStyle = FormBorderStyle.FixedSingle;
                                     fssale.strsales.Visible = true;
+                                    fssale.LoadDefaultData(new SOrder());
                                     fssale.Show();                                   
                                    
-                                   
-
                                 }
                                 //
                                 this.Close();

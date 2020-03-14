@@ -30,8 +30,6 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgProducts = new System.Windows.Forms.DataGridView();
-            this.clnpay = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clnamount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btndoll1 = new System.Windows.Forms.Button();
             this.btncash = new System.Windows.Forms.Button();
             this.lblbillamt = new System.Windows.Forms.Label();
@@ -64,6 +62,9 @@
             this.btn3 = new System.Windows.Forms.Button();
             this.btn2 = new System.Windows.Forms.Button();
             this.btn1 = new System.Windows.Forms.Button();
+            this.clnpay = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clnamount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TypeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgProducts)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,7 +75,8 @@
             this.dgProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgProducts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.clnpay,
-            this.clnamount});
+            this.clnamount,
+            this.TypeID});
             this.dgProducts.Location = new System.Drawing.Point(2, 34);
             this.dgProducts.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.dgProducts.Name = "dgProducts";
@@ -90,19 +92,6 @@
             this.dgProducts.Size = new System.Drawing.Size(320, 257);
             this.dgProducts.TabIndex = 6;
             // 
-            // clnpay
-            // 
-            this.clnpay.HeaderText = "Payment Method";
-            this.clnpay.Name = "clnpay";
-            this.clnpay.ReadOnly = true;
-            this.clnpay.Width = 170;
-            // 
-            // clnamount
-            // 
-            this.clnamount.HeaderText = "Amount";
-            this.clnamount.Name = "clnamount";
-            this.clnamount.ReadOnly = true;
-            // 
             // btndoll1
             // 
             this.btndoll1.BackColor = System.Drawing.Color.Magenta;
@@ -113,6 +102,7 @@
             this.btndoll1.TabIndex = 244;
             this.btndoll1.Text = "$ 1";
             this.btndoll1.UseVisualStyleBackColor = false;
+            this.btndoll1.Click += new System.EventHandler(this.btndoll1_Click);
             // 
             // btncash
             // 
@@ -124,6 +114,7 @@
             this.btncash.TabIndex = 245;
             this.btncash.Text = "CASH";
             this.btncash.UseVisualStyleBackColor = false;
+            this.btncash.Click += new System.EventHandler(this.btncash_Click);
             // 
             // lblbillamt
             // 
@@ -206,6 +197,7 @@
             this.btnclear.TabIndex = 281;
             this.btnclear.Text = "Clear";
             this.btnclear.UseVisualStyleBackColor = false;
+            this.btnclear.Click += new System.EventHandler(this.btnclear_Click);
             // 
             // btncard
             // 
@@ -217,6 +209,7 @@
             this.btncard.TabIndex = 283;
             this.btncard.Text = "CARD";
             this.btncard.UseVisualStyleBackColor = false;
+            this.btncard.Click += new System.EventHandler(this.btncard_Click);
             // 
             // btndoll2
             // 
@@ -228,6 +221,7 @@
             this.btndoll2.TabIndex = 282;
             this.btndoll2.Text = "$ 2";
             this.btndoll2.UseVisualStyleBackColor = false;
+            this.btndoll2.Click += new System.EventHandler(this.btndoll1_Click);
             // 
             // btnchque
             // 
@@ -239,6 +233,7 @@
             this.btnchque.TabIndex = 285;
             this.btnchque.Text = "CHEQUE";
             this.btnchque.UseVisualStyleBackColor = false;
+            this.btnchque.Click += new System.EventHandler(this.btnchque_Click);
             // 
             // btndoll10
             // 
@@ -250,6 +245,7 @@
             this.btndoll10.TabIndex = 284;
             this.btndoll10.Text = "$ 10";
             this.btndoll10.UseVisualStyleBackColor = false;
+            this.btndoll10.Click += new System.EventHandler(this.btndoll1_Click);
             // 
             // btnvoucher
             // 
@@ -261,6 +257,7 @@
             this.btnvoucher.TabIndex = 287;
             this.btnvoucher.Text = "VOUCHER";
             this.btnvoucher.UseVisualStyleBackColor = false;
+            this.btnvoucher.Click += new System.EventHandler(this.btnvoucher_Click);
             // 
             // btndoll20
             // 
@@ -272,6 +269,7 @@
             this.btndoll20.TabIndex = 286;
             this.btndoll20.Text = "$ 20";
             this.btndoll20.UseVisualStyleBackColor = false;
+            this.btndoll20.Click += new System.EventHandler(this.btndoll1_Click);
             // 
             // btnaccount
             // 
@@ -283,6 +281,7 @@
             this.btnaccount.TabIndex = 289;
             this.btnaccount.Text = "ACCOUNT";
             this.btnaccount.UseVisualStyleBackColor = false;
+            this.btnaccount.Click += new System.EventHandler(this.btnaccount_Click);
             // 
             // btndoll50
             // 
@@ -294,6 +293,7 @@
             this.btndoll50.TabIndex = 288;
             this.btndoll50.Text = "$ 50";
             this.btndoll50.UseVisualStyleBackColor = false;
+            this.btndoll50.Click += new System.EventHandler(this.btndoll1_Click);
             // 
             // btnexit
             // 
@@ -317,6 +317,7 @@
             this.btndoll100.TabIndex = 290;
             this.btndoll100.Text = "$ 100";
             this.btndoll100.UseVisualStyleBackColor = false;
+            this.btndoll100.Click += new System.EventHandler(this.btndoll1_Click);
             // 
             // btn7
             // 
@@ -328,6 +329,7 @@
             this.btn7.TabIndex = 292;
             this.btn7.Text = "7";
             this.btn7.UseVisualStyleBackColor = false;
+            this.btn7.Click += new System.EventHandler(this.btn1_Click);
             // 
             // btn8
             // 
@@ -339,6 +341,7 @@
             this.btn8.TabIndex = 293;
             this.btn8.Text = "8";
             this.btn8.UseVisualStyleBackColor = false;
+            this.btn8.Click += new System.EventHandler(this.btn1_Click);
             // 
             // btn9
             // 
@@ -350,6 +353,7 @@
             this.btn9.TabIndex = 294;
             this.btn9.Text = "9";
             this.btn9.UseVisualStyleBackColor = false;
+            this.btn9.Click += new System.EventHandler(this.btn1_Click);
             // 
             // btn00
             // 
@@ -361,6 +365,7 @@
             this.btn00.TabIndex = 295;
             this.btn00.Text = "00";
             this.btn00.UseVisualStyleBackColor = false;
+            this.btn00.Click += new System.EventHandler(this.btn1_Click);
             // 
             // btn0
             // 
@@ -372,6 +377,7 @@
             this.btn0.TabIndex = 299;
             this.btn0.Text = "0";
             this.btn0.UseVisualStyleBackColor = false;
+            this.btn0.Click += new System.EventHandler(this.btn1_Click);
             // 
             // btn6
             // 
@@ -383,6 +389,7 @@
             this.btn6.TabIndex = 298;
             this.btn6.Text = "6";
             this.btn6.UseVisualStyleBackColor = false;
+            this.btn6.Click += new System.EventHandler(this.btn1_Click);
             // 
             // btn5
             // 
@@ -394,6 +401,7 @@
             this.btn5.TabIndex = 297;
             this.btn5.Text = "5";
             this.btn5.UseVisualStyleBackColor = false;
+            this.btn5.Click += new System.EventHandler(this.btn1_Click);
             // 
             // btn4
             // 
@@ -405,6 +413,7 @@
             this.btn4.TabIndex = 296;
             this.btn4.Text = "4";
             this.btn4.UseVisualStyleBackColor = false;
+            this.btn4.Click += new System.EventHandler(this.btn1_Click);
             // 
             // btndot
             // 
@@ -416,6 +425,7 @@
             this.btndot.TabIndex = 303;
             this.btndot.Text = ".";
             this.btndot.UseVisualStyleBackColor = false;
+            this.btndot.Click += new System.EventHandler(this.btn1_Click);
             // 
             // btn3
             // 
@@ -427,6 +437,7 @@
             this.btn3.TabIndex = 302;
             this.btn3.Text = "3";
             this.btn3.UseVisualStyleBackColor = false;
+            this.btn3.Click += new System.EventHandler(this.btn1_Click);
             // 
             // btn2
             // 
@@ -438,6 +449,7 @@
             this.btn2.TabIndex = 301;
             this.btn2.Text = "2";
             this.btn2.UseVisualStyleBackColor = false;
+            this.btn2.Click += new System.EventHandler(this.btn1_Click);
             // 
             // btn1
             // 
@@ -449,6 +461,29 @@
             this.btn1.TabIndex = 300;
             this.btn1.Text = "1";
             this.btn1.UseVisualStyleBackColor = false;
+            this.btn1.Click += new System.EventHandler(this.btn1_Click);
+            // 
+            // clnpay
+            // 
+            this.clnpay.DataPropertyName = "Type";
+            this.clnpay.HeaderText = "Payment Method";
+            this.clnpay.Name = "clnpay";
+            this.clnpay.ReadOnly = true;
+            this.clnpay.Width = 170;
+            // 
+            // clnamount
+            // 
+            this.clnamount.DataPropertyName = "Amt";
+            this.clnamount.HeaderText = "Amount";
+            this.clnamount.Name = "clnamount";
+            this.clnamount.ReadOnly = true;
+            // 
+            // TypeID
+            // 
+            this.TypeID.DataPropertyName = "TypeID";
+            this.TypeID.HeaderText = "TypeID";
+            this.TypeID.Name = "TypeID";
+            this.TypeID.Visible = false;
             // 
             // frmmultipayment
             // 
@@ -499,8 +534,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.DataGridViewTextBoxColumn clnpay;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clnamount;
         private System.Windows.Forms.Button btndoll1;
         private System.Windows.Forms.Button btncash;
         private System.Windows.Forms.Label label55;
@@ -534,5 +567,8 @@
         internal System.Windows.Forms.Label lblbillamt;
         internal System.Windows.Forms.Label lblpaidamt;
         internal System.Windows.Forms.Label lbldueamt;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clnpay;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clnamount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TypeID;
     }
 }

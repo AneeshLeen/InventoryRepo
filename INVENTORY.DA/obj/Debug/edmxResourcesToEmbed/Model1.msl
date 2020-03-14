@@ -585,6 +585,8 @@
     <EntitySetMapping Name="SOrders">
       <EntityTypeMapping TypeName="DEWSRMModel.SOrder">
         <MappingFragment StoreEntitySet="SOrders">
+          <ScalarProperty Name="CardTypeID" ColumnName="CardTypeID" />
+          <ScalarProperty Name="CashPaidAmount" ColumnName="CashPaidAmount" />
           <ScalarProperty Name="SOrderID" ColumnName="SOrderID" />
           <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
           <ScalarProperty Name="InvoiceDate" ColumnName="InvoiceDate" />
