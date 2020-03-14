@@ -66,4 +66,18 @@ C:\DevelopmentSource\InventoryRepo\INVENTORY.DA\obj\Debug\INVENTORY.DA.csprojAss
 C:\DevelopmentSource\InventoryRepo\INVENTORY.DA\obj\Debug\INVENTORY.DA.csproj.CopyComplete
 C:\DevelopmentSource\InventoryRepo\INVENTORY.DA\obj\Debug\INVENTORY.DA.dll
 C:\DevelopmentSource\InventoryRepo\INVENTORY.DA\obj\Debug\INVENTORY.DA.pdb
+<<<<<<< HEAD
 C:\DevelopmentSource\InventoryRepo\INVENTORY.DA\bin\Debug\KeepAutomation.Barcode.Windows.dll
+=======
+C:\CodeBase\InventoryRepo\INVENTORY.DA\bin\Debug\INVENTORY.DA.dll.config
+C:\CodeBase\InventoryRepo\INVENTORY.DA\bin\Debug\INVENTORY.DA.dll
+C:\CodeBase\InventoryRepo\INVENTORY.DA\bin\Debug\INVENTORY.DA.pdb
+C:\CodeBase\InventoryRepo\INVENTORY.DA\bin\Debug\EntityFramework.dll
+C:\CodeBase\InventoryRepo\INVENTORY.DA\bin\Debug\EntityFramework.SqlServer.dll
+C:\CodeBase\InventoryRepo\INVENTORY.DA\bin\Debug\SpellNumber.dll
+C:\CodeBase\InventoryRepo\INVENTORY.DA\bin\Debug\EntityFramework.xml
+C:\CodeBase\InventoryRepo\INVENTORY.DA\bin\Debug\EntityFramework.SqlServer.xml
+C:\CodeBase\InventoryRepo\INVENTORY.DA\obj\Debug\INVENTORY.DA.dll
+C:\CodeBase\InventoryRepo\INVENTORY.DA\obj\Debug\INVENTORY.DA.pdb
+C:\CodeBase\InventoryRepo\INVENTORY.DA\obj\Debug\INVENTORY.DA.csprojResolveAssemblyReference.cache
+>>>>>>> 1ba56e8591599fe57847770dec3dfbdc3e039c86

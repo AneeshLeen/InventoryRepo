@@ -47,28 +47,15 @@ namespace INVENTORY.DA
 
             PrintLine();
 
-            //rdr.WriteLine("Bill NO   : " + BillNo);
-            //rdr.WriteLine("Bill Date : " + BillDt);
-            //PrintLine();
-            //rdr.WriteLine(Bold_On + Width_On + BillType + Width_Off + Bold_Off);
-            //PrintLine();
+           
         }
 
         public void PrintDetails()
         {
             rdr.WriteLine("Decription                                      Amt($)");
-            //rdr.WriteLine(Bold_On + Width_On + BillType + Width_Off + Bold_Off);
-            //int i;
+            
             PrintLine();
-            //for (i = 0; i < count - 1; i++)
-            //{
-            //    rdr.Write("{0,10}", GetFormatedText(dt_print.Rows[i][0].ToString(), 10) + "|");
-            //    rdr.Write("{0,16}", GetFormatedText(dt_print.Rows[i][1].ToString(), 10) + "|");
-            //    rdr.Write("{0,16}", GetFormatedText(dt_print.Rows[i][2].ToString(), 10) + "|");
-            //    rdr.Write("{0,16}", GetFormatedText(dt_print.Rows[i][3].ToString(), 10) + "|");
-            //    rdr.Write("{0,16}", GetFormatedText(dt_print.Rows[i][4].ToString(), 10) + "|");
-            //    rdr.WriteLine("");
-            //}
+           
         }
 
         private string GetFormatedText(string Cont, int Length)
