@@ -1,0 +1,15 @@
+
+alter table [dbo].[SOrders] add  [CashPaidAmount] decimal(18,2)
+update [dbo].[SOrders]  set [CashPaidAmount]=0
+alter table [dbo].[SOrders] alter column  [CashPaidAmount] decimal(18,2) not null
+
+alter table [dbo].[SOrders] add  [CardTypeID] int
+
+insert into [dbo].[CardTypes]
+select 1,'Card',1,1
+insert into [dbo].[CardTypes]
+select 2,'Cheque',2,2
+insert into [dbo].[CardTypes]
+select 3,'Voucher',3,3
+insert into [dbo].[CardTypes]
+select 4,'Account',4,4
