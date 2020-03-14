@@ -87,8 +87,8 @@ namespace INVENTORY.DA
     public enum EnumCustomerType
     {
         Retail = 1,
-        Dealer = 2
-        //Credit=3
+        Dealer = 2,
+        Default=3
     }
     public enum EnumOffer
     { 

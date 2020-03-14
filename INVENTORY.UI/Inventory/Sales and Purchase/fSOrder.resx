@@ -254,19 +254,6 @@
         r5LaArR5RIzFHlpRhcIvEMe76E+mh7UAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="btnSave.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAB3RJ
-        TUUH4woTBwwbd4ezOQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAFRSURBVEhL
-        7ZbNKkVRGIZXkVJ+MmHAFZiZGfhJjJhShgaSG0CZKrkUXABjmSrcAwOFlCnxPKe1s632cvY5uzPz1lN7
-        fd+7vrd12p21Q9QC3MMnfDXEGXcwDy2NwgucwkbkEDRvl2o59Oh1T1E7A2c6OyyBhiEXUbNgbQL24STD
-        HujR655Cw2DN2WEtLvpcRBUBk3AJNxkuQE8a4Cxrzv4zYBxmYCWDPT1dB0zBe3yuwp4en7s+wSCMZbDX
-        +ARP8bkKe41P4G9dfi3LLEOjExzBQRv0dBzgu30NVa9mFXrdU6htQFP9B7RV7YBpeIDXDPb0pKodsAr2
-        dmEnwZo9Pak6DuhvrX50BYvQs4A32IKeBTzCOvQswP+fAagVUFyZXnOpcgHKWi7g15VZXPpe1Om/5TFo
-        3CzVCqzZ05P2zuEZRqAlPzH81PgANzXBGbcwF0II35m20XLS7opFAAAAAElFTkSuQmCC
-</value>
-  </data>
   <metadata name="strsales.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
