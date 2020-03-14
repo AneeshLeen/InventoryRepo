@@ -74,12 +74,19 @@ namespace INVENTORY.UI
                 _PreviousFlatDicount = _Order.TDAmount;
                 ctlCustomer.Enabled = false;
             }
+            LoadDefaultCutomer();
 
             //RefreshWarrantyType();
             RefreshRemindType();
-            RefreshValue();
-            RefreshGrid();
+
+            if (sOrder.SOrderID > 0)
+            {
+                RefreshValue();
+                RefreshGrid();
+            }
             PopulateBankCombo();
+            txtamt.Select();
+            txtamt.Focus();
         }
         public void ShowDlg(SOrder oOrder)
         {
@@ -173,7 +180,7 @@ namespace INVENTORY.UI
         }
         private void RefreshValue()
         {
-
+            
             txtInvoice.Text = _Order.InvoiceNo != null ? _Order.InvoiceNo : "";
             dtpDate.Value = _Order.InvoiceDate != DateTime.MinValue ? _Order.InvoiceDate : DateTime.Now;
 
@@ -435,117 +442,75 @@ namespace INVENTORY.UI
         {
             CreateOrderObject();
 
-            _Order.GrandTotal = (decimal)(numGrandTotal.Value + numUTotal.Value);
-
-            #region Stock
-            decimal SoldQuanity = multiple;
-            if (_stock != null)
+            if (_Order.SOrderDetails.AsEnumerable().Any(p => p.ProductID == _oProduct.ProductID && p.TypeID == (int)EnumSalesItemType.Product))
             {
-                _stock.Quantity = numStock.Value;
-
-                if (_Order.SOrderDetails.AsEnumerable().Any(p => p.ProductID == _oProduct.ProductID && p.TypeID== (int)EnumSalesItemType.Product))
-                {
-                    _OrderDetail = _Order.SOrderDetails.FirstOrDefault(p => p.ProductID == _oProduct.ProductID && p.TypeID == (int)EnumSalesItemType.Product);
-                    multiple = multiple + _OrderDetail.Quantity;
-
-                }
-                else
-                {
-
-                    _OrderDetail = new SOrderDetail();
-                }
-                // var StockDetails = db.StockDetails.Where(i => i.ProductID == _oProduct.ProductID && i.ColorID == _StockDetail.ColorID && i.Status == (int)EnumStockDetailStatus.Stock && i.GodownID == ctlGodown.SelectedID);
-                //foreach (var item in StockDetails)
-                //{
-                _OrderDetail.ProductID = _oProduct.ProductID;
-                _OrderDetail.Quantity = multiple;
-
-                if (_oProduct.StockDetails != null && _oProduct.StockDetails.Count > 0)
-                {
-                    var item = (db.StockDetails.Where(o => o.ProductID == _oProduct.ProductID)).FirstOrDefault();
-                    _OrderDetail.StockDetailID = item.SDetailID;
-                    _OrderDetail.UnitPrice = item.SalesRate;
-                    _OrderDetail.SRate = item.SalesRate;
-                    _OrderDetail.PRate = (decimal)item.PRate;
-
-                    if (item.Quantity == SoldQuanity)
-                    {
-                        item.Quantity -= SoldQuanity;
-                        item.Status = (int)EnumStockDetailStatus.Sold;
-                    }
-                    else if (item.Quantity > SoldQuanity)
-                    {
-                        item.Quantity -= SoldQuanity;
-                    }
-                    else if (item.Quantity < SoldQuanity)
-                    {
-                        item.Quantity = 0m;
-                        item.Status = (int)EnumStockDetailStatus.Sold;
-                    }
-                }
-                else
-                {
-                    _OrderDetail.StockDetailID = 0;
-                    _OrderDetail.UnitPrice = _oProduct.SalesRate;
-                    _OrderDetail.SRate = _oProduct.SalesRate;
-                    _OrderDetail.PRate = _oProduct.SalesRate;
-                }
-
-                //_OrderDetail.PPDPercentage = numDPerc.Value;
-                //_OrderDetail.PPDAmount = numPPDISAmt.Value;
-                _OrderDetail.UTAmount = (_OrderDetail.UnitPrice - _OrderDetail.PPDAmount) * multiple;
-                if (_OrderDetail.PPDPercentage > 0)
-                    _OrderDetail.MPRateTotal = ((_OrderDetail.UnitPrice * _OrderDetail.PPDPercentage) / 100) * multiple;
-                else
-                    _OrderDetail.MPRateTotal = _OrderDetail.UnitPrice * multiple;
-
-                _OrderDetail.MPRate = _OrderDetail.UnitPrice - ((_OrderDetail.UnitPrice * _OrderDetail.PPDPercentage) / 100); //StockDetails PRate
-
-                _OrderDetail.PRateTotal = _OrderDetail.PRate * multiple;
-
-                _OrderDetail.CGSTPerc = _oProduct.Tax;
-                _OrderDetail.CGSTAmt = _OrderDetail.SRate * _oProduct.Tax / 100;
-
-                //_OrderDetail.CompressorWarrenty = txtCompressor.Text;
-                //_OrderDetail.MotorWarrenty = txtMotor.Text;
-                //_OrderDetail.PanelWarrenty = txtPanel.Text;
-                //_OrderDetail.ServiceWarrenty = txtService.Text;
-                _OrderDetail.SparePartsWarrenty = txtSpareparts.Text;
-                _OrderDetail.GodownID = ctlGodown.SelectedID;
-                //_OrderDetail.GSTPerc = numGSTPerc.Value;
-                //_OrderDetail.CGSTPerc = numCGSTPerc.Value;
-                //_OrderDetail.SGSTPerc = numSGSTPerc.Value;
-                //_OrderDetail.IGSTPerc = numIGSTPerc.Value;
-                //_OrderDetail.GSTAmt = numGSTAmt.Value;
-                //_OrderDetail.CGSTAmt = numCGSTAmt.Value;
-                //_OrderDetail.SGSTAmt = numSGSTAmt.Value;
-                //_OrderDetail.IGSTAmt = numIGSTAmt.Value;
-
-                _OrderDetail.TypeID = (int)EnumSalesItemType.Product;
-
-                if (chKFreeQty.Checked)
-                    _OrderDetail.IsFree = 1;
-                else
-                    _OrderDetail.IsFree = 0;
-
-                if (!_Order.SOrderDetails.AsEnumerable().Any(p => p.ProductID == _oProduct.ProductID && p.TypeID == (int)EnumSalesItemType.Product))
-                {
-                    _Order.SOrderDetails.Add(_OrderDetail);
-                }
+                _OrderDetail = _Order.SOrderDetails.FirstOrDefault(p => p.ProductID == _oProduct.ProductID && p.TypeID == (int)EnumSalesItemType.Product);
+                multiple = multiple + _OrderDetail.Quantity;
 
             }
-            else if (_StockDetail != null)
+            else
             {
-                _StockDetail.Status = (int)EnumStockDetailStatus.Sold;
+                _OrderDetail = new SOrderDetail();
             }
-            #endregion
 
-            if (_oProduct.ProductType == (int)EnumProductType.NoBarCode)
+            _OrderDetail.ProductID = _oProduct.ProductID;
+            _OrderDetail.Quantity = multiple;
+
+            if (_StockDetail!=null)
             {
-                //numNetDiscount.Value += numPPDISAmt.Value * numQTY.Value;
-                //numGrandTotal.Value = (decimal)(numGrandTotal.Value + (numUnitPrice.Value * numQTY.Value));
-                //numTempNetTotalAmt.Value = numTempNetTotalAmt.Value + numUTotal.Value;
+                _OrderDetail.StockDetailID = _StockDetail.SDetailID;
             }
+            else
+            {
+                _OrderDetail.StockDetailID = 0;
+            }
+
+            _OrderDetail.UnitPrice = _oProduct.SalesRate;
+            _OrderDetail.SRate = _oProduct.SalesRate;
+            _OrderDetail.PRate = _oProduct.SalesRate;
+
+            //_OrderDetail.PPDPercentage = numDPerc.Value;
+            //_OrderDetail.PPDAmount = numPPDISAmt.Value;
+            _OrderDetail.UTAmount = (_OrderDetail.UnitPrice - _OrderDetail.PPDAmount) * multiple;
+            if (_OrderDetail.PPDPercentage > 0)
+                _OrderDetail.MPRateTotal = ((_OrderDetail.UnitPrice * _OrderDetail.PPDPercentage) / 100) * multiple;
+            else
+                _OrderDetail.MPRateTotal = _OrderDetail.UnitPrice * multiple;
+
+            _OrderDetail.MPRate = _OrderDetail.UnitPrice - ((_OrderDetail.UnitPrice * _OrderDetail.PPDPercentage) / 100); //StockDetails PRate
+
+            _OrderDetail.PRateTotal = _OrderDetail.PRate * multiple;
+
+            _OrderDetail.CGSTPerc = _oProduct.Tax;
+            _OrderDetail.CGSTAmt = Convert.ToDecimal(String.Format("{0:0.00}", _OrderDetail.SRate * _oProduct.Tax / 100));
+
+            //_OrderDetail.CompressorWarrenty = txtCompressor.Text;
+            //_OrderDetail.MotorWarrenty = txtMotor.Text;
+            //_OrderDetail.PanelWarrenty = txtPanel.Text;
+            //_OrderDetail.ServiceWarrenty = txtService.Text;
+            _OrderDetail.SparePartsWarrenty = txtSpareparts.Text;
+            _OrderDetail.GodownID = ctlGodown.SelectedID;
+            //_OrderDetail.GSTPerc = numGSTPerc.Value;
+            //_OrderDetail.CGSTPerc = numCGSTPerc.Value;
+            //_OrderDetail.SGSTPerc = numSGSTPerc.Value;
+            //_OrderDetail.IGSTPerc = numIGSTPerc.Value;
+            //_OrderDetail.GSTAmt = numGSTAmt.Value;
+            //_OrderDetail.CGSTAmt = numCGSTAmt.Value;
+            //_OrderDetail.SGSTAmt = numSGSTAmt.Value;
+            //_OrderDetail.IGSTAmt = numIGSTAmt.Value;
+
+            _OrderDetail.TypeID = (int)EnumSalesItemType.Product;
+
+            if (chKFreeQty.Checked)
+                _OrderDetail.IsFree = 1;
+            else
+                _OrderDetail.IsFree = 0;
+
+            if (!_Order.SOrderDetails.AsEnumerable().Any(p => p.ProductID == _oProduct.ProductID && p.TypeID == (int)EnumSalesItemType.Product))
+            {
+                _Order.SOrderDetails.Add(_OrderDetail);
+            }
+
 
             RefreshGridNew();
             RefreshControl();
@@ -1311,158 +1276,153 @@ namespace INVENTORY.UI
             try
             {
                 bool isNew = false, IsValid = false;
-                if (ctlCustomer.SelectedID == 0)
+
+
+                if (_Order.SOrderID <= 0) //New
                 {
-                    MessageBox.Show("Select customer to continue.", "Save Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return;
-                }
-                if (MessageBox.Show("Do you want to save the information?", "Save Information", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-                    if (_Order.SOrderID <= 0) //New
+                    RefreshObject();
+
+                    #region Save Order validation Check
+
+                    if (numAdjustAmt.Value > (numTotal.Value - numPaidAmt.Value))
                     {
-                        RefreshObject();
-
-                        #region Save Order validation Check
-
-                        if (_Order != null)
-                        {
-                            if (_Order.SOrderDetails.Count == 0)
-                            {
-                                MessageBox.Show("Please add at least one item for this order.", "Save Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                return;
-                            }
-                        }
-
-                        if (numAdjustAmt.Value > (numTotal.Value - numPaidAmt.Value))
-                        {
-                            MessageBox.Show("Adjustment Amount is not greater than Current Due.", "Save Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            return;
-                        }
-
-
-                        #endregion
-
-                        IsValid = IsSaveOrderValid(_Order);
-                        if (IsValid)
-                        {
-                            _Order.CreatedBy = Global.CurrentUser.UserID;
-                            _Order.CreateDate = DateTime.Now;
-                            _Order.SOrderID = db.SOrders.Count() > 0 ? db.SOrders.Max(obj => obj.SOrderID) + 1 : 1;
-
-                            int detailid = db.SOrderDetails.Count() > 0 ? db.SOrderDetails.Max(obj => obj.SOrderDetailID) + 1 : 1;
-                            foreach (SOrderDetail item in _Order.SOrderDetails)
-                            {
-                                item.SOrderDetailID = detailid;
-                                detailid++;
-                            }
-                            db.SOrders.Add(_Order);
-                            isNew = true;
-                        }
-
+                        MessageBox.Show("Adjustment Amount is not greater than Current Due.", "Save Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
                     }
-                    else //Update
+
+
+                    #endregion
+
+                    IsValid = IsSaveOrderValid(_Order);
+                    if (IsValid)
                     {
-                        if (_PreviousFlatDicount > 0 && numTotalDis.Value == 0)
-                        {
-                            if (MessageBox.Show("Do you want to add flat discount.", "Save Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
-                            {
-                                return;
-                            }
-                        }
+                        _Order.CreatedBy = Global.CurrentUser.UserID;
+                        _Order.CreateDate = DateTime.Now;
+                        _Order.SOrderID = db.SOrders.Count() > 0 ? db.SOrders.Max(obj => obj.SOrderID) + 1 : 1;
 
                         int detailid = db.SOrderDetails.Count() > 0 ? db.SOrderDetails.Max(obj => obj.SOrderDetailID) + 1 : 1;
                         foreach (SOrderDetail item in _Order.SOrderDetails)
                         {
-
-                            if (item.SOrderDetailID <= 0)
-                            {
-                                item.SOrderDetailID = detailid;
-                                detailid++;
-                            }
+                            item.SOrderDetailID = detailid;
+                            detailid++;
                         }
-                        RefreshObject();
-                        IsValid = IsSaveOrderValid(_Order);
-                        _Order.ModifiedDate = (DateTime)DateTime.Today;
-                        _Order.ModifiedBy = (int)Global.CurrentUser.UserID;
-
-                        #region Bank Transactions and Bank Update
-                        if (_Order.BankTranID != 0)
-                        {
-                            FCreditSales bankdepo = new FCreditSales();
-                            bankdepo.ReturnBankDepositTransaction(_Order.BankTranID);
-                        }
-                        #endregion 
-
-                    }
-                    if (IsValid)
-                    {
-                        using (var Transaction = db.Database.BeginTransaction())
-                        {
-                            try
-                            {
-                                //if (numCardPaidAmt.Value > 0 && (int)cmbBank.SelectedValue == 0)
-                                //{
-                                //    MessageBox.Show("Please select card.", "Save Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                //    return;
-                                //}
-                                //if (cmbCardType.SelectedValue != null && numCardPaidAmt.Value > 0)
-                                //{
-                                //    int CardTypeSetupID = (int)cmbCardType.SelectedValue;
-                                //    int BankTranID = 0;
-                                //    decimal percentage = 0;
-                                //    decimal CardPaidAmt = numCardPaidAmt.Value;
-
-                                //    _Order.CardPaidAmount = CardPaidAmt;
-                                //    _Order.CardTypeSetupID = CardTypeSetupID;
-                                //    FCreditSale bankdepo = new FCreditSale();
-                                //    BankTranID = bankdepo.BankDeposit(CardTypeSetupID, CardPaidAmt, _Order.InvoiceNo, dtpDate.Value, out percentage);
-                                //    _Order.DepositChargePercent = percentage;
-                                //    _Order.BankTranID = BankTranID;
-                                //}
-
-                                _oCustomer = (Customer)(db.Customers.FirstOrDefault(o => o.CustomerID == _Order.CustomerID));
-                                _oCustomer.TotalDue = (_Order.TotalAmount - (_Order.CashPaidAmount + _Order.CardPaidAmount)) + _prevOrderdue;
-
-                                db.SaveChanges();
-                                Transaction.Commit();
-                            }
-                            catch (Exception ex)
-                            {
-                                Transaction.Rollback();
-                                MessageBox.Show("Transaction Failed." + Environment.NewLine + ex.Message, "Save Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                return;
-                            }
-                        }
-                        MessageBox.Show("Data saved successfully.", "Save Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                        GenerateSOInvoice(_Order);
-                        MoneyReceipt(_Order);
-
-
-                    }
-                    else
-                    {
-                        MessageBox.Show("Order Failed. Please try again.", "Save Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        db.SOrders.Add(_Order);
+                        isNew = true;
                     }
 
-                    if (ItemChanged != null)
-                    {
-                        ItemChanged();
-                    }
-
-                    if (!isNew)
-                    {
-                        this.Close();
-                    }
-
-
-                    _Order = new SOrder();
-                    RefreshValue();
                 }
+                else //Update
+                {
+                    if (_PreviousFlatDicount > 0 && numTotalDis.Value == 0)
+                    {
+                        if (MessageBox.Show("Do you want to add flat discount.", "Save Information", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                        {
+                            return;
+                        }
+                    }
+
+                    int detailid = db.SOrderDetails.Count() > 0 ? db.SOrderDetails.Max(obj => obj.SOrderDetailID) + 1 : 1;
+                    foreach (SOrderDetail item in _Order.SOrderDetails)
+                    {
+
+                        if (item.SOrderDetailID <= 0)
+                        {
+                            item.SOrderDetailID = detailid;
+                            detailid++;
+                        }
+                    }
+                    RefreshObject();
+                    IsValid = IsSaveOrderValid(_Order);
+                    _Order.ModifiedDate = (DateTime)DateTime.Today;
+                    _Order.ModifiedBy = (int)Global.CurrentUser.UserID;
+
+                    #region Bank Transactions and Bank Update
+                    if (_Order.BankTranID != 0)
+                    {
+                        FCreditSales bankdepo = new FCreditSales();
+                        bankdepo.ReturnBankDepositTransaction(_Order.BankTranID);
+                    }
+                    #endregion
+
+                }
+                if (IsValid)
+                {
+                    using (var Transaction = db.Database.BeginTransaction())
+                    {
+                        try
+                        {
+                            //if (numCardPaidAmt.Value > 0 && (int)cmbBank.SelectedValue == 0)
+                            //{
+                            //    MessageBox.Show("Please select card.", "Save Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            //    return;
+                            //}
+                            //if (cmbCardType.SelectedValue != null && numCardPaidAmt.Value > 0)
+                            //{
+                            //    int CardTypeSetupID = (int)cmbCardType.SelectedValue;
+                            //    int BankTranID = 0;
+                            //    decimal percentage = 0;
+                            //    decimal CardPaidAmt = numCardPaidAmt.Value;
+
+                            //    _Order.CardPaidAmount = CardPaidAmt;
+                            //    _Order.CardTypeSetupID = CardTypeSetupID;
+                            //    FCreditSale bankdepo = new FCreditSale();
+                            //    BankTranID = bankdepo.BankDeposit(CardTypeSetupID, CardPaidAmt, _Order.InvoiceNo, dtpDate.Value, out percentage);
+                            //    _Order.DepositChargePercent = percentage;
+                            //    _Order.BankTranID = BankTranID;
+                            //}
+
+                            _oCustomer = (Customer)(db.Customers.FirstOrDefault(o => o.CustomerID == _Order.CustomerID));
+                            _oCustomer.TotalDue = (_Order.TotalAmount - (_Order.CashPaidAmount + _Order.CardPaidAmount)) + _prevOrderdue;
+
+                            db.SaveChanges();
+                            Transaction.Commit();
+                        }
+                        catch (Exception ex)
+                        {
+                            Transaction.Rollback();
+                            MessageBox.Show("Transaction Failed." + Environment.NewLine + ex.Message, "Save Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            return;
+                        }
+                    }
+                    MessageBox.Show("Data saved successfully.", "Save Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    GenerateSOInvoice(_Order);
+                    MoneyReceipt(_Order);
+
+
+                }
+                else
+                {
+                    MessageBox.Show("Order Failed. Please try again.", "Save Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+                if (ItemChanged != null)
+                {
+                    ItemChanged();
+                }
+
+                if (!isNew)
+                {
+                    this.Close();
+                }
+
+
+                _Order = new SOrder();
+                RefreshValue();
+
+                LoadDefaultCutomer();
             }
             catch (Exception EX)
             {
                 MessageBox.Show(EX.Message);
+            }
+        }
+
+        private void LoadDefaultCutomer()
+        {
+            if (db.Customers.Any(o => o.CustomerType == (int)EnumCustomerType.Default))
+            {
+                ctlCustomer.SelectedID = (db.Customers.FirstOrDefault(o => o.CustomerType == (int)EnumCustomerType.Default).CustomerID);
             }
         }
 
@@ -2175,7 +2135,11 @@ namespace INVENTORY.UI
             _OrderDetail.CGSTAmt = _OrderDetail.SRate * Convert.ToDecimal(row["VAT"]) / 100;
             _OrderDetail.TypeID = (int)EnumSalesItemType.Category;
 
-            if (!_Order.SOrderDetails.AsEnumerable().Any(p => p.ProductID == Convert.ToInt32(row["CategoryID"]) && p.TypeID == (int)EnumSalesItemType.Category))
+            if (!IsPayout && !_Order.SOrderDetails.AsEnumerable().Any(p => p.ProductID == Convert.ToInt32(row["CategoryID"]) && p.TypeID == (int)EnumSalesItemType.Category))
+            {
+                _Order.SOrderDetails.Add(_OrderDetail);
+            }
+            else if(IsPayout)
             {
                 _Order.SOrderDetails.Add(_OrderDetail);
             }
@@ -2261,8 +2225,18 @@ namespace INVENTORY.UI
         decimal multiple = 1;
         private void btnx_Click(object sender, EventArgs e)
         {
-            multiple = Convert.ToDecimal(txtamt.Text);
-            ClearDefaultTextBox();
+            decimal result;
+            if (Decimal.TryParse(txtamt.Text, out result) == true && Convert.ToDecimal(txtamt.Text) > 0)
+            {
+                multiple = Convert.ToDecimal(txtamt.Text);
+                ClearDefaultTextBox();
+            }
+
+            else if (txtamt.Text != string.Empty)
+            {
+                MessageBox.Show("Invalid selection", "Sales Order");
+                return;
+            }
         }
 
         private void btnPayOut_Click(object sender, EventArgs e)
@@ -2346,9 +2320,9 @@ namespace INVENTORY.UI
                 taxsum += Convert.ToDecimal(dgProducts.Rows[i].Cells[5].Value);
             }
 
-            lblbillqty.Text = qtysum.ToString();
-            lbltax.Text = Convert.ToDecimal(taxsum).ToString("0.##");
-            lblbilltotal.Text = Convert.ToDecimal(amtsum).ToString("0.##");
+            lblbillqty.Text = String.Format("{0:0.00}", qtysum);
+            lbltax.Text = String.Format("{0:0.00}", Convert.ToDecimal(taxsum));
+            lblbilltotal.Text = String.Format("{0:0.00}", Convert.ToDecimal(amtsum));
 
         }
 
@@ -2361,11 +2335,7 @@ namespace INVENTORY.UI
 
         void showpaymentpop(string amt)
         {
-            if (ctlCustomer.SelectedID == 0)
-            {
-                MessageBox.Show("Select customer to continue.", "Save Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
+            
             frmpaypop frmpop = new frmpaypop();
             frmpop.lblbilltotal.Text = lblbilltotal.Text;
             frmpop.lblpayment.Text = amt;
@@ -2381,14 +2351,11 @@ namespace INVENTORY.UI
 
         void showmultipaymentpop()
         {
-            if (ctlCustomer.SelectedID == 0)
-            {
-                MessageBox.Show("Select customer to continue.", "Save Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
+           
             frmmultipayment frmmultipay = new frmmultipayment();
-            
-            if (txtamt.Text != "")
+
+            decimal result;
+            if (Decimal.TryParse(txtamt.Text, out result) == true && Convert.ToDecimal(txtamt.Text) > 0)
             {
                 if (Convert.ToDecimal(lblbilltotal.Text) > 0 && Convert.ToDecimal(txtamt.Text) > 0)
                 {
@@ -2414,11 +2381,18 @@ namespace INVENTORY.UI
         private void ClearDefaultTextBox()
         {
             txtamt.Text = "";
+            txtamt.Focus();
         }
 
         private void btncash_Click(object sender, EventArgs e)
         {
-            if (txtamt.Text == String.Empty)
+            if (_Order.SOrderDetails.Count == 0)
+            {
+                MessageBox.Show("Please add at least one item for this order.", "Save Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            decimal result;
+            if (Decimal.TryParse(txtamt.Text,out result)==false)
             {
                 MessageBox.Show("Enter Cash Amount");
                 return;
@@ -2456,6 +2430,7 @@ namespace INVENTORY.UI
             }
 
             RefreshPromo();
+            txtamt.Focus();
         }
 
         void RefreshPromo()
@@ -2495,6 +2470,8 @@ namespace INVENTORY.UI
             calculatesum();
 
             RefreshPromo();
+
+            txtamt.Focus();
         }
 
         private void btnpricechck_Click(object sender, EventArgs e)
@@ -2531,6 +2508,7 @@ namespace INVENTORY.UI
 
                     calculatesum();
                 }
+            txtamt.Focus();
         }
 
         private void btnquickmenu_Click(object sender, EventArgs e)
@@ -2554,11 +2532,7 @@ namespace INVENTORY.UI
 
                 int productid = Convert.ToInt32(dr["productid"]);
 
-                _StockDetail = (StockDetail)(db.StockDetails.FirstOrDefault(o => o.ProductID == productid));
-                if(_StockDetail==null)
-                {
-                    _oProduct = (Product)(db.Products.FirstOrDefault(o => o.ProductID == productid));
-                }
+                _oProduct = (Product)(db.Products.FirstOrDefault(o => o.ProductID == productid));
                 AddProductToGrid();
                 multiple = 1;
             }
@@ -2652,12 +2626,14 @@ namespace INVENTORY.UI
                 {
                     if (txtamt.Text != string.Empty)
                     {
-                        _StockDetail = (StockDetail)(db.StockDetails.FirstOrDefault(o => o.IMENO == txtamt.Text.Trim()));
-                        if (_StockDetail == null)
+                        if (db.Products.Any(o => o.BarCode == txtamt.Text.Trim()))
                         {
                             _oProduct = (Product)(db.Products.FirstOrDefault(o => o.BarCode == txtamt.Text.Trim()));
+                            if (_oProduct != null)
+                            {
+                                AddProductToGrid();
+                            }
                         }
-                        AddProductToGrid();
                     }
                 }
                 catch (Exception ex)
@@ -2667,44 +2643,60 @@ namespace INVENTORY.UI
             }
         }
 
-        private void AddProductToGrid()
+        private StockDetail UpdateStockDetails()
         {
+
+            _StockDetail = (StockDetail)(db.StockDetails.FirstOrDefault(o => o.ProductID == _oProduct.ProductID && o.Status == (int)EnumStockDetailStatus.Stock && o.Quantity > 0));
+
             if (_StockDetail != null)
             {
-                decimal AvailableQuantity = (db.StockDetails.Where(o => o.IMENO == txtamt.Text.Trim()).Sum(o => o.Quantity));
-                if (_StockDetail != null && _StockDetail.Status == (int)EnumStockDetailStatus.Stock || AllowNegativestock)
+                _stock = _StockDetail.Stock;
+
+                decimal AvailableQuantity = (db.StockDetails.Where(o => o.ProductID == _oProduct.ProductID && o.Status == (int)EnumStockDetailStatus.Stock).Sum(o => o.Quantity));
+
+                if (AvailableQuantity >= multiple || AllowNegativestock)
                 {
-                    if (AvailableQuantity >= multiple || AllowNegativestock)
+                    if (_StockDetail.Quantity == multiple)
                     {
-                        _oProduct = _StockDetail.Product;
-                        _stock = _StockDetail.Stock;
-                        RefrehSODetailsAndStockObjectNew();
+                        _StockDetail.Quantity -= multiple;
+                        _StockDetail.Status = (int)EnumStockDetailStatus.Sold;
                     }
-                    else
+                    else if (_StockDetail.Quantity > multiple)
                     {
-                        MessageBox.Show("Stock not available. Available stock is " + _StockDetail.Quantity, "Sales Order", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        return;
+                        _StockDetail.Quantity -= multiple;
                     }
+                    else if (_StockDetail.Quantity < multiple)
+                    {
+                        _StockDetail.Quantity = 0m;
+                        _StockDetail.Status = (int)EnumStockDetailStatus.Sold;
+                    }
+                    _stock.Quantity -= multiple;
                 }
+
                 else if (_StockDetail != null)
                 {
                     MessageBox.Show("Stock not available. Available stock", "Sales Order", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return;
+                    return null;
                 }
                 else
                 {
                     MessageBox.Show("Item not found", "Sales Order", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return;
+                    return null;
                 }
+                return _StockDetail;
             }
-
-            else
+            else if (!AllowNegativestock)
             {
-                _stock = new Stock();
-                ClearDefaultTextBox();
-                RefrehSODetailsAndStockObjectNew();
+                MessageBox.Show("Stock not available. Available stock is " + _StockDetail.Quantity, "Sales Order", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return null;
             }
+            return null;
         }
-           
+
+        private void AddProductToGrid()
+        {
+            UpdateStockDetails();
+            RefrehSODetailsAndStockObjectNew();
+        }
     }
 }

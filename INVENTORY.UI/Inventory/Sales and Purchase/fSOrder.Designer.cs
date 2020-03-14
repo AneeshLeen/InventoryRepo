@@ -33,18 +33,15 @@ namespace INVENTORY.UI
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fSOrder));
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label3 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.btnCustomer = new System.Windows.Forms.Button();
             this.numPrevDue = new System.Windows.Forms.NumericUpDown();
             this.label25 = new System.Windows.Forms.Label();
             this.dtpDate = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.txtInvoice = new System.Windows.Forms.TextBox();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.numRemindPeriodTemp = new System.Windows.Forms.NumericUpDown();
             this.dtpRemindDate = new System.Windows.Forms.DateTimePicker();
@@ -60,15 +57,9 @@ namespace INVENTORY.UI
             this.label4 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.numGrandTotal = new System.Windows.Forms.NumericUpDown();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label47 = new System.Windows.Forms.Label();
-            this.groupBox15 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.groupBox11 = new System.Windows.Forms.GroupBox();
-            this.groupBox13 = new System.Windows.Forms.GroupBox();
-            this.groupBox14 = new System.Windows.Forms.GroupBox();
             this.numGSTAmt = new System.Windows.Forms.NumericUpDown();
             this.label8 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -127,7 +118,6 @@ namespace INVENTORY.UI
             this.label21 = new System.Windows.Forms.Label();
             this.numPaidAmt = new System.Windows.Forms.NumericUpDown();
             this.label22 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label38 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -145,19 +135,6 @@ namespace INVENTORY.UI
             this.numTDP = new System.Windows.Forms.NumericUpDown();
             this.numTotalDis = new System.Windows.Forms.NumericUpDown();
             this.dgProducts = new System.Windows.Forms.DataGridView();
-            this.clnSN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clnQTY = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clnUnitPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clnTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Color = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clnChasis = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clnDP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clnDIS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnmoveup = new System.Windows.Forms.Button();
             this.pnlbtndyan = new System.Windows.Forms.Panel();
             this.btnmovedwn = new System.Windows.Forms.Button();
@@ -218,7 +195,6 @@ namespace INVENTORY.UI
             this.btnClose = new System.Windows.Forms.Button();
             this.btnMISRpt = new System.Windows.Forms.Button();
             this.btnRemove = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
             this.btnlogout = new System.Windows.Forms.Button();
             this.strsales = new System.Windows.Forms.StatusStrip();
             this.ToolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
@@ -228,13 +204,34 @@ namespace INVENTORY.UI
             this.ctlGodown = new INVENTORY.UI.ctlCustomControl();
             this.ctlCustomer = new INVENTORY.UI.ctlCustomControl();
             this.ctlProduct = new INVENTORY.UI.ctlCustomControl();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.groupBox14 = new System.Windows.Forms.GroupBox();
+            this.groupBox13 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.groupBox15 = new System.Windows.Forms.GroupBox();
+            this.btnCustomer = new System.Windows.Forms.Button();
+            this.clnSN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clnQTY = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clnUnitPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clnTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Color = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clnChasis = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clnDP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clnDIS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.numPrevDue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numRemindPeriodTemp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPRate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPWTAmt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numGrandTotal)).BeginInit();
-            this.groupBox9.SuspendLayout();
-            this.groupBox13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numGSTAmt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPPDISAmt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numDPerc)).BeginInit();
@@ -268,20 +265,9 @@ namespace INVENTORY.UI
             ((System.ComponentModel.ISupportInitialize)(this.numTotalDis)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgProducts)).BeginInit();
             this.strsales.SuspendLayout();
+            this.groupBox13.SuspendLayout();
+            this.groupBox9.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.Color.SlateGray;
-            this.groupBox1.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(782, 206);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(5);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox1.Size = new System.Drawing.Size(10, 11);
-            this.groupBox1.TabIndex = 3;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Visible = false;
             // 
             // label3
             // 
@@ -308,19 +294,6 @@ namespace INVENTORY.UI
             this.label12.Size = new System.Drawing.Size(77, 20);
             this.label12.TabIndex = 2;
             this.label12.Text = "Invoice No.";
-            // 
-            // btnCustomer
-            // 
-            this.btnCustomer.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCustomer.Location = new System.Drawing.Point(781, 215);
-            this.btnCustomer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnCustomer.Name = "btnCustomer";
-            this.btnCustomer.Size = new System.Drawing.Size(10, 11);
-            this.btnCustomer.TabIndex = 11;
-            this.btnCustomer.Text = "&New Customer";
-            this.btnCustomer.UseVisualStyleBackColor = true;
-            this.btnCustomer.Visible = false;
-            this.btnCustomer.Click += new System.EventHandler(this.btnCustomer_Click);
             // 
             // numPrevDue
             // 
@@ -393,19 +366,6 @@ namespace INVENTORY.UI
             this.txtInvoice.Size = new System.Drawing.Size(136, 22);
             this.txtInvoice.TabIndex = 0;
             this.txtInvoice.TextChanged += new System.EventHandler(this.txtInvoice_TextChanged);
-            // 
-            // groupBox7
-            // 
-            this.groupBox7.BackColor = System.Drawing.Color.SlateGray;
-            this.groupBox7.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox7.Location = new System.Drawing.Point(774, 215);
-            this.groupBox7.Margin = new System.Windows.Forms.Padding(5);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox7.Size = new System.Drawing.Size(10, 11);
-            this.groupBox7.TabIndex = 181;
-            this.groupBox7.TabStop = false;
-            this.groupBox7.Visible = false;
             // 
             // groupBox6
             // 
@@ -633,19 +593,6 @@ namespace INVENTORY.UI
             this.numGrandTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numGrandTotal.ValueChanged += new System.EventHandler(this.numGrandTotal_ValueChanged);
             // 
-            // groupBox2
-            // 
-            this.groupBox2.BackColor = System.Drawing.Color.SlateGray;
-            this.groupBox2.Location = new System.Drawing.Point(786, 55);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(5);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox2.Size = new System.Drawing.Size(10, 41);
-            this.groupBox2.TabIndex = 0;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Visible = false;
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
-            // 
             // label16
             // 
             this.label16.AutoSize = true;
@@ -669,19 +616,6 @@ namespace INVENTORY.UI
             this.label47.TabIndex = 228;
             this.label47.Text = "WareHouse";
             // 
-            // groupBox15
-            // 
-            this.groupBox15.BackColor = System.Drawing.Color.SlateGray;
-            this.groupBox15.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox15.Location = new System.Drawing.Point(789, 225);
-            this.groupBox15.Margin = new System.Windows.Forms.Padding(5);
-            this.groupBox15.Name = "groupBox15";
-            this.groupBox15.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox15.Size = new System.Drawing.Size(10, 11);
-            this.groupBox15.TabIndex = 208;
-            this.groupBox15.TabStop = false;
-            this.groupBox15.Visible = false;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -693,58 +627,6 @@ namespace INVENTORY.UI
             this.label6.Size = new System.Drawing.Size(39, 19);
             this.label6.TabIndex = 3;
             this.label6.Text = "Item";
-            // 
-            // groupBox9
-            // 
-            this.groupBox9.BackColor = System.Drawing.Color.SlateGray;
-            this.groupBox9.Controls.Add(this.groupBox11);
-            this.groupBox9.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox9.Location = new System.Drawing.Point(783, 201);
-            this.groupBox9.Margin = new System.Windows.Forms.Padding(5);
-            this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox9.Size = new System.Drawing.Size(10, 11);
-            this.groupBox9.TabIndex = 183;
-            this.groupBox9.TabStop = false;
-            this.groupBox9.Visible = false;
-            // 
-            // groupBox11
-            // 
-            this.groupBox11.Location = new System.Drawing.Point(8, 5);
-            this.groupBox11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox11.Size = new System.Drawing.Size(35, 72);
-            this.groupBox11.TabIndex = 180;
-            this.groupBox11.TabStop = false;
-            this.groupBox11.Visible = false;
-            // 
-            // groupBox13
-            // 
-            this.groupBox13.BackColor = System.Drawing.Color.SlateGray;
-            this.groupBox13.Controls.Add(this.groupBox14);
-            this.groupBox13.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox13.Location = new System.Drawing.Point(773, 155);
-            this.groupBox13.Margin = new System.Windows.Forms.Padding(5);
-            this.groupBox13.Name = "groupBox13";
-            this.groupBox13.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox13.Size = new System.Drawing.Size(10, 11);
-            this.groupBox13.TabIndex = 204;
-            this.groupBox13.TabStop = false;
-            this.groupBox13.Visible = false;
-            // 
-            // groupBox14
-            // 
-            this.groupBox14.BackColor = System.Drawing.Color.SlateGray;
-            this.groupBox14.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox14.Location = new System.Drawing.Point(6, 31);
-            this.groupBox14.Margin = new System.Windows.Forms.Padding(5);
-            this.groupBox14.Name = "groupBox14";
-            this.groupBox14.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox14.Size = new System.Drawing.Size(53, 11);
-            this.groupBox14.TabIndex = 207;
-            this.groupBox14.TabStop = false;
-            this.groupBox14.Visible = false;
             // 
             // numGSTAmt
             // 
@@ -1603,18 +1485,6 @@ namespace INVENTORY.UI
             this.label22.TabIndex = 33;
             this.label22.Text = "Total Paid";
             // 
-            // groupBox3
-            // 
-            this.groupBox3.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(751, 202);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(5);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox3.Size = new System.Drawing.Size(53, 22);
-            this.groupBox3.TabIndex = 1;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Visible = false;
-            // 
             // label38
             // 
             this.label38.AutoSize = true;
@@ -1902,100 +1772,12 @@ namespace INVENTORY.UI
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgProducts.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgProducts.RowHeadersVisible = false;
             this.dgProducts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgProducts.Size = new System.Drawing.Size(706, 484);
+            this.dgProducts.Size = new System.Drawing.Size(709, 484);
             this.dgProducts.TabIndex = 5;
             this.dgProducts.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgProducts_CellContentClick);
             this.dgProducts.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dgProducts_RowsAdded);
-            // 
-            // clnSN
-            // 
-            this.clnSN.HeaderText = "SN";
-            this.clnSN.Name = "clnSN";
-            this.clnSN.ReadOnly = true;
-            this.clnSN.Width = 45;
-            // 
-            // clnName
-            // 
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Maroon;
-            this.clnName.DefaultCellStyle = dataGridViewCellStyle2;
-            this.clnName.HeaderText = "DESCRIPTION";
-            this.clnName.Name = "clnName";
-            this.clnName.ReadOnly = true;
-            this.clnName.Width = 250;
-            // 
-            // clnQTY
-            // 
-            this.clnQTY.HeaderText = "QTY";
-            this.clnQTY.Name = "clnQTY";
-            this.clnQTY.ReadOnly = true;
-            this.clnQTY.Width = 80;
-            // 
-            // clnUnitPrice
-            // 
-            this.clnUnitPrice.HeaderText = "PRICE";
-            this.clnUnitPrice.Name = "clnUnitPrice";
-            this.clnUnitPrice.ReadOnly = true;
-            // 
-            // clnTotal
-            // 
-            this.clnTotal.HeaderText = "AMOUNT";
-            this.clnTotal.Name = "clnTotal";
-            this.clnTotal.ReadOnly = true;
-            this.clnTotal.Width = 110;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "HST";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 80;
-            // 
-            // Color
-            // 
-            this.Color.HeaderText = "Color";
-            this.Color.Name = "Color";
-            this.Color.Visible = false;
-            // 
-            // clnChasis
-            // 
-            this.clnChasis.HeaderText = "Category";
-            this.clnChasis.Name = "clnChasis";
-            this.clnChasis.Visible = false;
-            this.clnChasis.Width = 130;
-            // 
-            // clnDP
-            // 
-            this.clnDP.HeaderText = "Dis(%)";
-            this.clnDP.Name = "clnDP";
-            this.clnDP.Visible = false;
-            this.clnDP.Width = 80;
-            // 
-            // clnDIS
-            // 
-            this.clnDIS.HeaderText = "Discount";
-            this.clnDIS.Name = "clnDIS";
-            this.clnDIS.Visible = false;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "SGST";
-            this.Column2.Name = "Column2";
-            this.Column2.Visible = false;
-            this.Column2.Width = 80;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "IGST";
-            this.Column3.Name = "Column3";
-            this.Column3.Visible = false;
-            this.Column3.Width = 80;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "GST";
-            this.Column4.Name = "Column4";
-            this.Column4.Visible = false;
-            this.Column4.Width = 80;
             // 
             // btnmoveup
             // 
@@ -2779,23 +2561,6 @@ namespace INVENTORY.UI
             this.btnRemove.UseVisualStyleBackColor = true;
             this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
-            // btnSave
-            // 
-            this.btnSave.BackColor = System.Drawing.Color.SeaGreen;
-            this.btnSave.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
-            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(723, 546);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(5);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(93, 39);
-            this.btnSave.TabIndex = 0;
-            this.btnSave.Text = "&Save";
-            this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSave.UseVisualStyleBackColor = false;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
             // btnlogout
             // 
             this.btnlogout.BackColor = System.Drawing.Color.LightSeaGreen;
@@ -2889,6 +2654,225 @@ namespace INVENTORY.UI
             this.ctlProduct.Size = new System.Drawing.Size(135, 39);
             this.ctlProduct.TabIndex = 2;
             this.ctlProduct.SelectedItemChanged += new INVENTORY.UI.SelectionChangedEvent(this.ctlProduct_SelectedItemChanged);
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.BackColor = System.Drawing.Color.SlateGray;
+            this.groupBox7.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox7.Location = new System.Drawing.Point(774, 215);
+            this.groupBox7.Margin = new System.Windows.Forms.Padding(5);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Padding = new System.Windows.Forms.Padding(5);
+            this.groupBox7.Size = new System.Drawing.Size(10, 11);
+            this.groupBox7.TabIndex = 181;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Visible = false;
+            // 
+            // groupBox14
+            // 
+            this.groupBox14.BackColor = System.Drawing.Color.SlateGray;
+            this.groupBox14.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox14.Location = new System.Drawing.Point(6, 31);
+            this.groupBox14.Margin = new System.Windows.Forms.Padding(5);
+            this.groupBox14.Name = "groupBox14";
+            this.groupBox14.Padding = new System.Windows.Forms.Padding(5);
+            this.groupBox14.Size = new System.Drawing.Size(53, 11);
+            this.groupBox14.TabIndex = 207;
+            this.groupBox14.TabStop = false;
+            this.groupBox14.Visible = false;
+            // 
+            // groupBox13
+            // 
+            this.groupBox13.BackColor = System.Drawing.Color.SlateGray;
+            this.groupBox13.Controls.Add(this.groupBox14);
+            this.groupBox13.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox13.Location = new System.Drawing.Point(773, 155);
+            this.groupBox13.Margin = new System.Windows.Forms.Padding(5);
+            this.groupBox13.Name = "groupBox13";
+            this.groupBox13.Padding = new System.Windows.Forms.Padding(5);
+            this.groupBox13.Size = new System.Drawing.Size(10, 11);
+            this.groupBox13.TabIndex = 204;
+            this.groupBox13.TabStop = false;
+            this.groupBox13.Visible = false;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.Color.SlateGray;
+            this.groupBox2.Location = new System.Drawing.Point(786, 55);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(5);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(5);
+            this.groupBox2.Size = new System.Drawing.Size(10, 41);
+            this.groupBox2.TabIndex = 0;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Visible = false;
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Location = new System.Drawing.Point(751, 202);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(5);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(5);
+            this.groupBox3.Size = new System.Drawing.Size(53, 22);
+            this.groupBox3.TabIndex = 1;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Visible = false;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.SlateGray;
+            this.groupBox1.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(782, 206);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(5);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(5);
+            this.groupBox1.Size = new System.Drawing.Size(10, 11);
+            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Visible = false;
+            // 
+            // groupBox11
+            // 
+            this.groupBox11.Location = new System.Drawing.Point(8, 5);
+            this.groupBox11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox11.Size = new System.Drawing.Size(35, 72);
+            this.groupBox11.TabIndex = 180;
+            this.groupBox11.TabStop = false;
+            this.groupBox11.Visible = false;
+            // 
+            // groupBox9
+            // 
+            this.groupBox9.BackColor = System.Drawing.Color.SlateGray;
+            this.groupBox9.Controls.Add(this.groupBox11);
+            this.groupBox9.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox9.Location = new System.Drawing.Point(783, 201);
+            this.groupBox9.Margin = new System.Windows.Forms.Padding(5);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Padding = new System.Windows.Forms.Padding(5);
+            this.groupBox9.Size = new System.Drawing.Size(10, 11);
+            this.groupBox9.TabIndex = 183;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Visible = false;
+            // 
+            // groupBox15
+            // 
+            this.groupBox15.BackColor = System.Drawing.Color.SlateGray;
+            this.groupBox15.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox15.Location = new System.Drawing.Point(789, 225);
+            this.groupBox15.Margin = new System.Windows.Forms.Padding(5);
+            this.groupBox15.Name = "groupBox15";
+            this.groupBox15.Padding = new System.Windows.Forms.Padding(5);
+            this.groupBox15.Size = new System.Drawing.Size(10, 11);
+            this.groupBox15.TabIndex = 208;
+            this.groupBox15.TabStop = false;
+            this.groupBox15.Visible = false;
+            // 
+            // btnCustomer
+            // 
+            this.btnCustomer.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCustomer.Location = new System.Drawing.Point(781, 215);
+            this.btnCustomer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnCustomer.Name = "btnCustomer";
+            this.btnCustomer.Size = new System.Drawing.Size(10, 11);
+            this.btnCustomer.TabIndex = 11;
+            this.btnCustomer.Text = "&New Customer";
+            this.btnCustomer.UseVisualStyleBackColor = true;
+            this.btnCustomer.Visible = false;
+            this.btnCustomer.Click += new System.EventHandler(this.btnCustomer_Click);
+            // 
+            // clnSN
+            // 
+            this.clnSN.HeaderText = "SN";
+            this.clnSN.Name = "clnSN";
+            this.clnSN.ReadOnly = true;
+            this.clnSN.Width = 45;
+            // 
+            // clnName
+            // 
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Maroon;
+            this.clnName.DefaultCellStyle = dataGridViewCellStyle2;
+            this.clnName.HeaderText = "DESCRIPTION";
+            this.clnName.Name = "clnName";
+            this.clnName.ReadOnly = true;
+            this.clnName.Width = 300;
+            // 
+            // clnQTY
+            // 
+            this.clnQTY.HeaderText = "QTY";
+            this.clnQTY.Name = "clnQTY";
+            this.clnQTY.ReadOnly = true;
+            this.clnQTY.Width = 80;
+            // 
+            // clnUnitPrice
+            // 
+            this.clnUnitPrice.HeaderText = "PRICE";
+            this.clnUnitPrice.Name = "clnUnitPrice";
+            this.clnUnitPrice.ReadOnly = true;
+            // 
+            // clnTotal
+            // 
+            this.clnTotal.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.clnTotal.HeaderText = "AMOUNT";
+            this.clnTotal.Name = "clnTotal";
+            this.clnTotal.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "HST";
+            this.Column1.Name = "Column1";
+            this.Column1.Visible = false;
+            this.Column1.Width = 80;
+            // 
+            // Color
+            // 
+            this.Color.HeaderText = "Color";
+            this.Color.Name = "Color";
+            this.Color.Visible = false;
+            // 
+            // clnChasis
+            // 
+            this.clnChasis.HeaderText = "Category";
+            this.clnChasis.Name = "clnChasis";
+            this.clnChasis.Visible = false;
+            this.clnChasis.Width = 130;
+            // 
+            // clnDP
+            // 
+            this.clnDP.HeaderText = "Dis(%)";
+            this.clnDP.Name = "clnDP";
+            this.clnDP.Visible = false;
+            this.clnDP.Width = 80;
+            // 
+            // clnDIS
+            // 
+            this.clnDIS.HeaderText = "Discount";
+            this.clnDIS.Name = "clnDIS";
+            this.clnDIS.Visible = false;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "SGST";
+            this.Column2.Name = "Column2";
+            this.Column2.Visible = false;
+            this.Column2.Width = 80;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "IGST";
+            this.Column3.Name = "Column3";
+            this.Column3.Visible = false;
+            this.Column3.Width = 80;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "GST";
+            this.Column4.Name = "Column4";
+            this.Column4.Visible = false;
+            this.Column4.Width = 80;
             // 
             // fSOrder
             // 
@@ -3036,7 +3020,6 @@ namespace INVENTORY.UI
             this.Controls.Add(this.numSGSTAmt);
             this.Controls.Add(this.numTDP);
             this.Controls.Add(this.ctlProduct);
-            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.numSGSTPerc);
             this.Controls.Add(this.numVatAmount);
             this.Controls.Add(this.numCGSTPerc);
@@ -3060,8 +3043,6 @@ namespace INVENTORY.UI
             ((System.ComponentModel.ISupportInitialize)(this.numPRate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPWTAmt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numGrandTotal)).EndInit();
-            this.groupBox9.ResumeLayout(false);
-            this.groupBox13.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numGSTAmt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPPDISAmt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numDPerc)).EndInit();
@@ -3098,6 +3079,8 @@ namespace INVENTORY.UI
             ((System.ComponentModel.ISupportInitialize)(this.dgProducts)).EndInit();
             this.strsales.ResumeLayout(false);
             this.strsales.PerformLayout();
+            this.groupBox13.ResumeLayout(false);
+            this.groupBox9.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -3106,9 +3089,6 @@ namespace INVENTORY.UI
 
 
         #endregion
-
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DateTimePicker dtpDate;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
@@ -3129,10 +3109,8 @@ namespace INVENTORY.UI
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.NumericUpDown numGrandTotal;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.NumericUpDown numPrevDue;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label2;
@@ -3145,7 +3123,6 @@ namespace INVENTORY.UI
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.NumericUpDown numPRate;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button btnCustomer;
         private System.Windows.Forms.NumericUpDown numPWTAmt;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.NumericUpDown numNetDiscount;
@@ -3176,7 +3153,6 @@ namespace INVENTORY.UI
         private System.Windows.Forms.ComboBox cboRemindType;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.GroupBox groupBox11;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.NumericUpDown numCardPaidAmt;
         private System.Windows.Forms.ComboBox cmbCardType;
@@ -3198,13 +3174,8 @@ namespace INVENTORY.UI
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.TextBox txtPanel;
         private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.GroupBox groupBox9;
         private System.Windows.Forms.GroupBox groupBox10;
-        private System.Windows.Forms.GroupBox groupBox15;
-        private System.Windows.Forms.GroupBox groupBox14;
-        private System.Windows.Forms.GroupBox groupBox13;
         private System.Windows.Forms.Button btnMISRpt;
         private System.Windows.Forms.NumericUpDown numIGSTPerc;
         private System.Windows.Forms.NumericUpDown numGSTPerc;
@@ -3300,5 +3271,15 @@ namespace INVENTORY.UI
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.GroupBox groupBox14;
+        private System.Windows.Forms.GroupBox groupBox13;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox11;
+        private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.GroupBox groupBox15;
+        private System.Windows.Forms.Button btnCustomer;
     }
 }

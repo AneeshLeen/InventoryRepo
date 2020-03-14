@@ -19,7 +19,7 @@ namespace INVENTORY.UI
 
         DirectoryInfo di;
         List<FileInfo> images = new List<FileInfo>();
-        string dirpath = @"C:\DevelopmentSource\InventoryRepo\PromoImages"; // set your image directory path
+       
         int timeTemp = 0;
         DataGridView dtpromogrid;
         BackgroundWorker backgroundWorker = new BackgroundWorker
@@ -30,9 +30,6 @@ namespace INVENTORY.UI
         public frmpromo( )
         {
             InitializeComponent();
-            
-
-
         }
         public void ChangePicture()//to change pics
         {
@@ -49,8 +46,8 @@ namespace INVENTORY.UI
         }
         private void frmpromo_Load(object sender, EventArgs e)
         {
-            
-            di = new DirectoryInfo(dirpath);
+
+            di = new DirectoryInfo(Application.StartupPath+ "\\PromoImages");
 
             GetImagesOfType("*.jpg");//will add .jpg files to list - add other file types below
                                      //GetImagesOfType("*.png"); 

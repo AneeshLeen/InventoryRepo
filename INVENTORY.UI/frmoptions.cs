@@ -15,6 +15,7 @@ namespace INVENTORY.UI
         public frmoptions()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void btnClose_Click(object sender, EventArgs e)

@@ -17,6 +17,7 @@ namespace INVENTORY.UI
         public frmquickmenu()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         public DataTable Branchlist = new DataTable();
