@@ -649,6 +649,8 @@
           <Property Name="CardPaidAmount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="CardTypeSetupID" Type="int" Nullable="false" />
           <Property Name="DepositChargePercent" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="CashPaidAmount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="CardTypeID" Type="int" />
         </EntityType>
         <EntityType Name="StockDetails">
           <Key>
@@ -2472,6 +2474,8 @@ warning 6002: The table/view 'DEWSRM.dbo.vw_SupplierLedger' does not have a prim
           <NavigationProperty Name="Customer" Relationship="Self.FK_SOrders_Customers" FromRole="SOrders" ToRole="Customers" />
           <NavigationProperty Name="SOrderDetails" Relationship="Self.FK_SOrderDetails_SOrders" FromRole="SOrders" ToRole="SOrderDetails" />
           <NavigationProperty Name="User" Relationship="Self.FK_SOrders_Users" FromRole="SOrders" ToRole="Users" />
+          <Property Name="CashPaidAmount" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="CardTypeID" Type="Int32" />
         </EntityType>
         <EntityType Name="StockDetail">
           <Key>
@@ -4276,6 +4280,8 @@ warning 6002: The table/view 'DEWSRM.dbo.vw_SupplierLedger' does not have a prim
           <EntitySetMapping Name="SOrders">
             <EntityTypeMapping TypeName="DEWSRMModel.SOrder">
               <MappingFragment StoreEntitySet="SOrders">
+                <ScalarProperty Name="CardTypeID" ColumnName="CardTypeID" />
+                <ScalarProperty Name="CashPaidAmount" ColumnName="CashPaidAmount" />
                 <ScalarProperty Name="SOrderID" ColumnName="SOrderID" />
                 <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
                 <ScalarProperty Name="InvoiceDate" ColumnName="InvoiceDate" />

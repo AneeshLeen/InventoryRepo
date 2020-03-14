@@ -52,6 +52,8 @@ namespace INVENTORY.DA
         public decimal CardPaidAmount { get; set; }
         public int CardTypeSetupID { get; set; }
         public decimal DepositChargePercent { get; set; }
+        public decimal CashPaidAmount { get; set; }
+        public Nullable<int> CardTypeID { get; set; }
     
         public virtual Customer Customer { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

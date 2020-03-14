@@ -1,4 +1,7 @@
-﻿namespace INVENTORY.UI
+﻿using System;
+using INVENTORY.DA;
+
+namespace INVENTORY.UI
 {
     partial class fSOrder
     {
@@ -3133,6 +3136,8 @@
             this.PerformLayout();
 
         }
+
+
 
         #endregion
 

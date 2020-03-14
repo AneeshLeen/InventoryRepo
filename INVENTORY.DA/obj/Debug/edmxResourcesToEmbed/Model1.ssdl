@@ -644,6 +644,8 @@
     <Property Name="CardPaidAmount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
     <Property Name="CardTypeSetupID" Type="int" Nullable="false" />
     <Property Name="DepositChargePercent" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="CashPaidAmount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="CardTypeID" Type="int" />
   </EntityType>
   <EntityType Name="StockDetails">
     <Key>

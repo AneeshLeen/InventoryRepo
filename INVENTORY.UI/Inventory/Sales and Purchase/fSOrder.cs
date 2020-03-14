@@ -52,9 +52,11 @@ namespace INVENTORY.UI
 
             RefreshPromo();
         }
-        public void ShowDlg(SOrder oOrder)
+
+
+        internal void LoadDefaultData(SOrder sOrder)
         {
-            _Order = db.SOrders.FirstOrDefault(o => o.SOrderID == oOrder.SOrderID);
+            _Order = db.SOrders.FirstOrDefault(o => o.SOrderID == sOrder.SOrderID);
             _ColorList = db.Colors.ToList();
             _CategoryList = db.Categorys.ToList();
             ctlGodown.SelectedID = 1;
@@ -80,7 +82,13 @@ namespace INVENTORY.UI
             RefreshValue();
             RefreshGrid();
             PopulateBankCombo();
+        }
+        public void ShowDlg(SOrder oOrder)
+        {
+            LoadDefaultData(oOrder);
+
             this.ShowDialog();
+
         }
 
         //private void RefreshWarrantyType()
@@ -253,7 +261,6 @@ namespace INVENTORY.UI
             _Order.CustomerID = ctlCustomer.SelectedID;
             // _Order.TotalDue = (numTotalDueAmt.Value + _PrvCusDue);//numTotalDueAmt.Value + (numPrevDue.Value - _prevOrderdue); //  change from Motiur
             _Order.Status = (int)EnumSalesType.Sales;
-
             //_Order.CreatedBy = Global.CurrentUser.UserID;
             //_Order.RemindPeriod = Convert.ToInt32(numRemindPeriodTemp.Value);
             //_Order.RemindStatus = (int)cboRemindType.SelectedValue;
@@ -438,11 +445,20 @@ namespace INVENTORY.UI
             {
                 _stock.Quantity = numStock.Value;
 
+                if (_Order.SOrderDetails.AsEnumerable().Any(p => p.ProductID == _oProduct.ProductID && p.TypeID== (int)EnumSalesItemType.Product))
+                {
+                    _OrderDetail = _Order.SOrderDetails.FirstOrDefault(p => p.ProductID == _oProduct.ProductID && p.TypeID == (int)EnumSalesItemType.Product);
+                    multiple = multiple + _OrderDetail.Quantity;
 
+                }
+                else
+                {
+
+                    _OrderDetail = new SOrderDetail();
+                }
                 // var StockDetails = db.StockDetails.Where(i => i.ProductID == _oProduct.ProductID && i.ColorID == _StockDetail.ColorID && i.Status == (int)EnumStockDetailStatus.Stock && i.GodownID == ctlGodown.SelectedID);
                 //foreach (var item in StockDetails)
                 //{
-                _OrderDetail = new SOrderDetail();
                 _OrderDetail.ProductID = _oProduct.ProductID;
                 _OrderDetail.Quantity = multiple;
 
@@ -514,7 +530,11 @@ namespace INVENTORY.UI
                 else
                     _OrderDetail.IsFree = 0;
 
-                _Order.SOrderDetails.Add(_OrderDetail);
+                if (!_Order.SOrderDetails.AsEnumerable().Any(p => p.ProductID == _oProduct.ProductID && p.TypeID == (int)EnumSalesItemType.Product))
+                {
+                    _Order.SOrderDetails.Add(_OrderDetail);
+                }
+
             }
             else if (_StockDetail != null)
             {
@@ -531,7 +551,7 @@ namespace INVENTORY.UI
 
             RefreshGridNew();
             RefreshControl();
-            txtamt.Text = "";
+            ClearDefaultTextBox();
             multiple = 1;
         }
 
@@ -1290,6 +1310,11 @@ namespace INVENTORY.UI
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
+            SaveSales();
+        }
+
+        private void SaveSales()
+        {
             try
             {
                 bool isNew = false, IsValid = false;
@@ -1382,27 +1407,28 @@ namespace INVENTORY.UI
                         {
                             try
                             {
-                                if (numCardPaidAmt.Value > 0 && (int)cmbBank.SelectedValue == 0)
-                                {
-                                    MessageBox.Show("Please select card.", "Save Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                    return;
-                                }
-                                if (cmbCardType.SelectedValue != null && numCardPaidAmt.Value > 0)
-                                {
-                                    int CardTypeSetupID = (int)cmbCardType.SelectedValue;
-                                    int BankTranID = 0;
-                                    decimal percentage = 0;
-                                    decimal CardPaidAmt = numCardPaidAmt.Value;
+                                //if (numCardPaidAmt.Value > 0 && (int)cmbBank.SelectedValue == 0)
+                                //{
+                                //    MessageBox.Show("Please select card.", "Save Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                //    return;
+                                //}
+                                //if (cmbCardType.SelectedValue != null && numCardPaidAmt.Value > 0)
+                                //{
+                                //    int CardTypeSetupID = (int)cmbCardType.SelectedValue;
+                                //    int BankTranID = 0;
+                                //    decimal percentage = 0;
+                                //    decimal CardPaidAmt = numCardPaidAmt.Value;
 
-                                    _Order.CardPaidAmount = CardPaidAmt;
-                                    _Order.CardTypeSetupID = CardTypeSetupID;
-                                    FCreditSale bankdepo = new FCreditSale();
-                                    BankTranID = bankdepo.BankDeposit(CardTypeSetupID, CardPaidAmt, _Order.InvoiceNo, dtpDate.Value, out percentage);
-                                    _Order.DepositChargePercent = percentage;
-                                    _Order.BankTranID = BankTranID;
-                                }
+                                //    _Order.CardPaidAmount = CardPaidAmt;
+                                //    _Order.CardTypeSetupID = CardTypeSetupID;
+                                //    FCreditSale bankdepo = new FCreditSale();
+                                //    BankTranID = bankdepo.BankDeposit(CardTypeSetupID, CardPaidAmt, _Order.InvoiceNo, dtpDate.Value, out percentage);
+                                //    _Order.DepositChargePercent = percentage;
+                                //    _Order.BankTranID = BankTranID;
+                                //}
+
                                 _oCustomer = (Customer)(db.Customers.FirstOrDefault(o => o.CustomerID == _Order.CustomerID));
-                                _oCustomer.TotalDue = _oCustomer.TotalDue + (numTotalDueAmt.Value - _prevOrderdue);
+                                _oCustomer.TotalDue = (_Order.TotalAmount - (_Order.CashPaidAmount + _Order.CardPaidAmount)) + _prevOrderdue;
 
                                 db.SaveChanges();
                                 Transaction.Commit();
@@ -2102,36 +2128,47 @@ namespace INVENTORY.UI
 
         private void btn_Click(object sender, EventArgs e)
         {
+            DataRow row = ((Button)sender).Tag as DataRow;
+            AddCategoryToGrid(row,false);
+        }
+
+        private void AddCategoryToGrid(DataRow row,bool IsPayout)
+        {
+           
             if (txtamt.Text == String.Empty)
             {
                 MessageBox.Show("Invalid Selection");
                 return;
             }
 
-            DataRow row = ((Button)sender).Tag as DataRow;
-            //taxper = 0;
-            //if (Convert.ToDecimal( ((Button) sender).Tag) >0)
-            //{
-            //    taxper += Convert.ToDecimal(txtamt.Text) * Convert.ToDecimal(((Button)sender).Tag) / 100;
+            decimal NegativeAmount = 1;
+            if (IsPayout)
+            {
+                NegativeAmount = -1;
+            }
 
-            //}
-            // this.dgProducts.Rows.Add(dgProducts.Rows.Count + 1, ((sender) as Button).Text, multiple, Convert.ToDecimal(txtamt.Text),  Convert.ToDecimal(txtamt.Text) + Convert.ToDecimal( taxper) * multiple, taxper * multiple);
-            //frmprmo.dgProductspromo.Rows.Add(((sender) as Button).Text, multiple, Convert.ToDecimal(txtamt.Text), Convert.ToDecimal(txtamt.Text) + Convert.ToDecimal(taxper) * multiple, taxper * multiple);
-
-            //txtamt.Text = "";
-            //multiple = 1;
             CreateOrderObject();
+            decimal amount = Convert.ToDecimal(txtamt.Text);
+            if (!IsPayout && _Order.SOrderDetails.AsEnumerable().Any(p => p.ProductID == Convert.ToInt32(row["CategoryID"]) && p.TypeID == (int)EnumSalesItemType.Category))
+            {
+                _OrderDetail = _Order.SOrderDetails.FirstOrDefault(p => p.ProductID == Convert.ToInt32(row["CategoryID"]) && p.TypeID == (int)EnumSalesItemType.Category);
+                multiple = multiple + _OrderDetail.Quantity;
+                amount = _OrderDetail.SRate;
 
+            }
+            else
+            {
+                _OrderDetail = new SOrderDetail();
+            }
 
-            _OrderDetail = new SOrderDetail();
             _OrderDetail.ProductID = Convert.ToInt32(row["CategoryID"]);
             _OrderDetail.StockDetailID = 0;
             _OrderDetail.Quantity = multiple;
-            _OrderDetail.UnitPrice = Convert.ToDecimal(txtamt.Text);
-            _OrderDetail.SRate = Convert.ToDecimal(txtamt.Text);
+            _OrderDetail.UnitPrice = amount * NegativeAmount;
+            _OrderDetail.SRate = amount * NegativeAmount;
             //_OrderDetail.PPDPercentage = numDPerc.Value;
             //_OrderDetail.PPDAmount = numPPDISAmt.Value;
-            _OrderDetail.UTAmount = (_OrderDetail.UnitPrice - _OrderDetail.PPDAmount) * multiple;
+            _OrderDetail.UTAmount = _OrderDetail.UnitPrice * multiple;
             if (_OrderDetail.PPDPercentage > 0)
                 _OrderDetail.MPRateTotal = ((_OrderDetail.UnitPrice * _OrderDetail.PPDPercentage) / 100) * multiple;
             else
@@ -2139,20 +2176,25 @@ namespace INVENTORY.UI
 
             _OrderDetail.MPRate = _OrderDetail.UnitPrice - ((_OrderDetail.UnitPrice * _OrderDetail.PPDPercentage) / 100); //StockDetails PRate
             _OrderDetail.PRate = _OrderDetail.SRate;
-            _OrderDetail.PRateTotal = _OrderDetail.PRate * multiple;
+            _OrderDetail.PRateTotal = _OrderDetail.PRate * multiple ;
 
             _OrderDetail.CGSTPerc = Convert.ToDecimal(row["VAT"]);
             _OrderDetail.CGSTAmt = _OrderDetail.SRate * Convert.ToDecimal(row["VAT"]) / 100;
             _OrderDetail.TypeID = (int)EnumSalesItemType.Category;
-            _Order.SOrderDetails.Add(_OrderDetail);
+
+            if (!_Order.SOrderDetails.AsEnumerable().Any(p => p.ProductID == Convert.ToInt32(row["CategoryID"]) && p.TypeID == (int)EnumSalesItemType.Category))
+            {
+                _Order.SOrderDetails.Add(_OrderDetail);
+            }
 
 
             RefreshGridNew();
             RefreshControl();
-            txtamt.Text = "";
+            ClearDefaultTextBox();
             multiple = 1;
             RefreshPromo();
         }
+
         private void CreateOrderObject()
         {
             if (_Order == null)
@@ -2170,7 +2212,7 @@ namespace INVENTORY.UI
 
         private void btnclear_Click(object sender, EventArgs e)
         {
-            txtamt.Text = "";
+            ClearDefaultTextBox();
         }
 
         private void btn8_Click(object sender, EventArgs e)
@@ -2227,7 +2269,7 @@ namespace INVENTORY.UI
         private void btnx_Click(object sender, EventArgs e)
         {
             multiple = Convert.ToDecimal(txtamt.Text);
-            txtamt.Text = "";
+            ClearDefaultTextBox();
         }
 
         private void btnPayOut_Click(object sender, EventArgs e)
@@ -2250,7 +2292,7 @@ namespace INVENTORY.UI
                     btnpayouts.Size = new Size(80, 63);
                     btnpayouts.Font = new Font(Font.FontFamily, 9, FontStyle.Bold);
                     btnpayouts.Text = row["Description"].ToString();
-                    btnpayouts.Tag = row["vat"].ToString();
+                    btnpayouts.Tag = row;
                     btnpayouts.BackColor = System.Drawing.Color.FromName(row["backcolor"].ToString());
                     btnpayouts.ForeColor = System.Drawing.Color.FromName(row["forecolor"].ToString());
                     pnlbtndyan.Controls.Add(btnpayouts);
@@ -2277,14 +2319,17 @@ namespace INVENTORY.UI
 
         private void Btnpayouts_Click(object sender, EventArgs e)
         {
-            if (txtamt.Text != string.Empty)
-            {
-                this.dgProducts.Rows.Add(dgProducts.Rows.Count + 1, ((sender) as Button).Text, 1, Convert.ToDecimal(txtamt.Text) * -1, Convert.ToDecimal(txtamt.Text) * -1);
-                frmprmo.dgProductspromo.Rows.Add( ((sender) as Button).Text, 1, Convert.ToDecimal(txtamt.Text) * -1, Convert.ToDecimal(txtamt.Text) * -1);
-                
-                txtamt.Text = "";
-            }
-            RefreshPromo();
+            //if (txtamt.Text != string.Empty)
+            //{
+            //    this.dgProducts.Rows.Add(dgProducts.Rows.Count + 1, ((sender) as Button).Text, 1, Convert.ToDecimal(txtamt.Text) * -1, Convert.ToDecimal(txtamt.Text) * -1);
+            //    frmprmo.dgProductspromo.Rows.Add(((sender) as Button).Text, 1, Convert.ToDecimal(txtamt.Text) * -1, Convert.ToDecimal(txtamt.Text) * -1);
+
+            //    txtamt.Text = "";
+            //}
+            //RefreshPromo();
+
+            DataRow row = ((Button)sender).Tag as DataRow;
+            AddCategoryToGrid(row, true);
         }
 
         private void btn00_Click(object sender, EventArgs e)
@@ -2321,33 +2366,71 @@ namespace INVENTORY.UI
             //frmprmo.dgProductspromo.Rows[dgProducts.CurrentRow.Index].Cells[0].Selected = true;
         }
 
-        void showpaymentpop( string amt)
+        void showpaymentpop(string amt)
         {
+            if (ctlCustomer.SelectedID == 0)
+            {
+                MessageBox.Show("Select customer to continue.", "Save Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
             frmpaypop frmpop = new frmpaypop();
             frmpop.lblbilltotal.Text = lblbilltotal.Text;
             frmpop.lblpayment.Text = amt;
             frmpop.lblbalance.Text = Convert.ToString(Math.Abs(Convert.ToDecimal(lblbilltotal.Text) - Convert.ToDecimal(amt)));
-            frmpop.ShowDialog();
+
+            if (frmpop.ShowDialog() == DialogResult.OK)
+            {
+                _Order.CashPaidAmount = Convert.ToDecimal(frmpop.lblbilltotal.Text);
+                SaveSales();
+            }
+            ClearDefaultTextBox();
         }
 
         void showmultipaymentpop()
         {
+            if (ctlCustomer.SelectedID == 0)
+            {
+                MessageBox.Show("Select customer to continue.", "Save Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
             frmmultipayment frmmultipay = new frmmultipayment();
+            
             if (txtamt.Text != "")
             {
                 if (Convert.ToDecimal(lblbilltotal.Text) > 0 && Convert.ToDecimal(txtamt.Text) > 0)
                 {
-                    frmmultipay.lblbillamt.Text = lblbilltotal.Text;
-                    frmmultipay.lblpaidamt.Text = txtamt.Text;
-                    frmmultipay.lbldueamt.Text = Convert.ToString(Convert.ToDecimal(lblbilltotal.Text) - Convert.ToDecimal(txtamt.Text));
-                    frmmultipay.dgProducts.Rows.Add("CASH", txtamt.Text);
+                    frmmultipay.CashAmount = Convert.ToDecimal(txtamt.Text);
+                    frmmultipay.BillAmount = Convert.ToDecimal(lblbilltotal.Text);
                 }
             }
-            frmmultipay.ShowDialog();
+            if (frmmultipay.ShowDialog() == DialogResult.OK)
+            {
+                if (frmmultipay.DtPaymentTable.AsEnumerable().Any(p => Convert.ToInt32(p["TypeID"]) != 0))
+                {
+                    DataRow drrow = frmmultipay.DtPaymentTable.AsEnumerable().FirstOrDefault(p => Convert.ToInt32(p["TypeID"]) != 0);
+                    _Order.CardPaidAmount = frmmultipay.DtPaymentTable.AsEnumerable().Where(p => Convert.ToInt32(p["TypeID"]) != 0).Sum(p => Convert.ToDecimal(p["Amt"]));
+                    _Order.CardTypeID = Convert.ToInt32(drrow["TypeID"]);
+                }
+                _Order.CashPaidAmount = frmmultipay.DtPaymentTable.AsEnumerable().Where(p => Convert.ToInt32(p["TypeID"]) == 0).Sum(p => Convert.ToDecimal(p["Amt"]));
+                SaveSales();
+            }
+
+            ClearDefaultTextBox();
+        }
+
+        private void ClearDefaultTextBox()
+        {
+            txtamt.Text = "";
         }
 
         private void btncash_Click(object sender, EventArgs e)
         {
+            if (txtamt.Text == String.Empty)
+            {
+                MessageBox.Show("Enter Cash Amount");
+                return;
+            }
+
             if (Convert.ToDecimal(lblbilltotal.Text) <= Convert.ToDecimal(txtamt.Text))
             { showpaymentpop(txtamt.Text); }
             else
@@ -2395,7 +2478,7 @@ namespace INVENTORY.UI
             {
                 frmprmo.grppromo.Visible = false;
                 frmprmo.pctboxpromo.Location = new Point(30, 27);
-                frmprmo.pctboxpromo.Size = new Size(1100,676);
+                frmprmo.pctboxpromo.Size = new Size(1100, 676);
             }
         }
 
@@ -2546,8 +2629,8 @@ namespace INVENTORY.UI
 
         private void dgProducts_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            frmprmo.dgProductspromo.Rows[dgProducts.CurrentRow.Index].Selected = true;
-            frmprmo.dgProductspromo.Rows[dgProducts.CurrentRow.Index].Cells[0].Selected = true;
+            //frmprmo.dgProductspromo.Rows[dgProducts.CurrentRow.Index].Selected = true;
+            //frmprmo.dgProductspromo.Rows[dgProducts.CurrentRow.Index].Cells[0].Selected = true;
         }
 
         private void fSOrder_FormClosing(object sender, FormClosingEventArgs e)
@@ -2625,7 +2708,7 @@ namespace INVENTORY.UI
             else
             {
                 _stock = new Stock();
-                txtamt.Text = "";
+                ClearDefaultTextBox();
                 RefrehSODetailsAndStockObjectNew();
             }
         }
