@@ -180,7 +180,7 @@ namespace INVENTORY.UI
         }
         private void RefreshValue()
         {
-            
+
             txtInvoice.Text = _Order.InvoiceNo != null ? _Order.InvoiceNo : "";
             dtpDate.Value = _Order.InvoiceDate != DateTime.MinValue ? _Order.InvoiceDate : DateTime.Now;
 
@@ -230,7 +230,7 @@ namespace INVENTORY.UI
 
 
             //Aneesh
-            lblbilldisc.Text = numNetDiscount.Value.ToString();           
+            lblbilldisc.Text = numNetDiscount.Value.ToString();
             lbltax.Text = numVatPercent.Value.ToString();
             lblbilltotal.Text = numTotal.Value.ToString();
 
@@ -456,7 +456,7 @@ namespace INVENTORY.UI
             _OrderDetail.ProductID = _oProduct.ProductID;
             _OrderDetail.Quantity = multiple;
 
-            if (_StockDetail!=null)
+            if (_StockDetail != null)
             {
                 _OrderDetail.StockDetailID = _StockDetail.SDetailID;
             }
@@ -721,7 +721,7 @@ namespace INVENTORY.UI
                         {
                             nobarcodeSOrderDetailList.Add(oPODItem);
                             //Aneesh
-                            lblbillqty.Text =Convert.ToString(  Convert.ToDecimal(lblbillqty.Text.TrimEnd()) + Convert.ToDecimal(oPODItem.Quantity));
+                            lblbillqty.Text = Convert.ToString(Convert.ToDecimal(lblbillqty.Text.TrimEnd()) + Convert.ToDecimal(oPODItem.Quantity));
                             //
                         }
 
@@ -746,7 +746,7 @@ namespace INVENTORY.UI
                                               PPDPercentage = g.FirstOrDefault().PPDPercentage,
                                               UTAmount = g.Sum(i => i.UTAmount),
                                               StockDetailID = g.FirstOrDefault().StockDetailID,
-                                              CGSTAmt=g.FirstOrDefault().CGSTAmt,
+                                              CGSTAmt = g.FirstOrDefault().CGSTAmt,
                                               SGSTAmt = g.FirstOrDefault().SGSTAmt,
                                               IGSTAmt = g.FirstOrDefault().IGSTAmt,
                                               GSTAmt = g.FirstOrDefault().GSTAmt,
@@ -994,12 +994,12 @@ namespace INVENTORY.UI
                                           PPDAmount = g.FirstOrDefault().PPDAmount,
                                           PPDPercentage = g.FirstOrDefault().PPDPercentage,
                                           UTAmount = g.Sum(i => i.UTAmount),
-                                          
-                                          CGSTAmt=g.Sum(i=>i.CGSTAmt),
+
+                                          CGSTAmt = g.Sum(i => i.CGSTAmt),
                                           SGSTAmt = g.Sum(i => i.SGSTAmt),
                                           IGSTAmt = g.Sum(i => i.IGSTAmt),
                                           GSTAmt = g.Sum(i => i.GSTAmt),
-                                         
+
                                       };
 
 
@@ -1261,7 +1261,7 @@ namespace INVENTORY.UI
         {
             //if (sorder.GrandTotal == sorder.SOrderDetails.Sum(i => (i.UnitPrice * i.Quantity)) && sorder.SOrderDetails.Sum(i => (i.UnitPrice - i.PPDAmount) * i.Quantity) == sorder.SOrderDetails.Sum(i => i.UTAmount))
             //{
-                return true;
+            return true;
             //}
 
             //return false;
@@ -1821,49 +1821,6 @@ namespace INVENTORY.UI
             }
         }
 
-        private void txtBarcode_TextChanged(object sender, EventArgs e)
-        {
-         //if (ctlProduct.SelectedID == 0)
-         //   {
-         //       try
-         //       {
-         //           if (txtBarcode.Text != string.Empty)
-         //           {
-         //               _StockDetail = (StockDetail)(db.StockDetails.FirstOrDefault(o => o.IMENO == txtBarcode.Text.Trim() && o.Status == (int)EnumStockDetailStatus.Stock));
-         //               if (_StockDetail != null)
-         //               {
-         //                   _oProduct = _StockDetail.Product;
-         //                   _stock = _StockDetail.Stock;
-
-         //                   if (_oProduct != null)
-         //                   {
-         //                       if (_oProduct.ProductType == (int)EnumProductType.SerialNo || _oProduct.ProductType == (int)EnumProductType.BarCode)
-         //                       {
-         //                           numQTY.Value = 1;
-         //                           numQTY.Enabled = false;
-         //                       }
-         //                       else //for nobarcode
-         //                       {
-         //                           numQTY.Enabled = true;
-         //                           numQTY.Value = 0;
-         //                           numStock.Value = _stock.Quantity;
-
-         //                       }
-         //                       numPRate.Value = (decimal)_StockDetail.PRate;
-         //                       numUnitPrice.Value = _StockDetail.SalesRate;
-         //                       txtBarcode.Text = _StockDetail.IMENO;
-         //                       numUnitPrice.Focus();
-         //                   }
-         //               }
-         //           }
-         //       }
-         //       catch (Exception ex)
-         //       {
-         //           MessageBox.Show(ex.Message, "Barcode");
-         //       }
-         //   }
-        }
-
         private void txtInvoice_TextChanged(object sender, EventArgs e)
         {
 
@@ -1978,11 +1935,11 @@ namespace INVENTORY.UI
 
         private void numUTotal_ValueChanged(object sender, EventArgs e)
         {
-            numGSTAmt.Value = (numGSTPerc.Value / 100) * numUTotal.Value ;
+            numGSTAmt.Value = (numGSTPerc.Value / 100) * numUTotal.Value;
             numCGSTAmt.Value = numGSTAmt.Value * (numCGSTPerc.Value / 100);
             numSGSTAmt.Value = numGSTAmt.Value * (numSGSTPerc.Value / 100);
             numIGSTAmt.Value = numGSTAmt.Value * (numIGSTPerc.Value / 100);
-        
+
 
 
         }
@@ -2077,17 +2034,17 @@ namespace INVENTORY.UI
 
         //
 
-       
+
 
         private void btn_Click(object sender, EventArgs e)
         {
             DataRow row = ((Button)sender).Tag as DataRow;
-            AddCategoryToGrid(row,false);
+            AddCategoryToGrid(row, false);
         }
 
-        private void AddCategoryToGrid(DataRow row,bool IsPayout)
+        private void AddCategoryToGrid(DataRow row, bool IsPayout)
         {
-           
+
             if (txtamt.Text == String.Empty)
             {
                 MessageBox.Show("Invalid Selection");
@@ -2129,7 +2086,7 @@ namespace INVENTORY.UI
 
             _OrderDetail.MPRate = _OrderDetail.UnitPrice - ((_OrderDetail.UnitPrice * _OrderDetail.PPDPercentage) / 100); //StockDetails PRate
             _OrderDetail.PRate = _OrderDetail.SRate;
-            _OrderDetail.PRateTotal = _OrderDetail.PRate * multiple ;
+            _OrderDetail.PRateTotal = _OrderDetail.PRate * multiple;
 
             _OrderDetail.CGSTPerc = Convert.ToDecimal(row["VAT"]);
             _OrderDetail.CGSTAmt = _OrderDetail.SRate * Convert.ToDecimal(row["VAT"]) / 100;
@@ -2139,7 +2096,7 @@ namespace INVENTORY.UI
             {
                 _Order.SOrderDetails.Add(_OrderDetail);
             }
-            else if(IsPayout)
+            else if (IsPayout)
             {
                 _Order.SOrderDetails.Add(_OrderDetail);
             }
@@ -2335,7 +2292,7 @@ namespace INVENTORY.UI
 
         void showpaymentpop(string amt)
         {
-            
+
             frmpaypop frmpop = new frmpaypop();
             frmpop.lblbilltotal.Text = lblbilltotal.Text;
             frmpop.lblpayment.Text = amt;
@@ -2351,7 +2308,7 @@ namespace INVENTORY.UI
 
         void showmultipaymentpop()
         {
-           
+
             frmmultipayment frmmultipay = new frmmultipayment();
 
             decimal result;
@@ -2392,7 +2349,7 @@ namespace INVENTORY.UI
                 return;
             }
             decimal result;
-            if (Decimal.TryParse(txtamt.Text,out result)==false)
+            if (Decimal.TryParse(txtamt.Text, out result) == false)
             {
                 MessageBox.Show("Enter Cash Amount");
                 return;
@@ -2405,7 +2362,7 @@ namespace INVENTORY.UI
 
                 showmultipaymentpop();
             }
-           
+
 
         }
 
@@ -2466,7 +2423,7 @@ namespace INVENTORY.UI
             }
             dgProducts.Rows.Clear();
             _Order.SOrderDetails.Clear();
-            
+
             calculatesum();
 
             RefreshPromo();
@@ -2540,7 +2497,7 @@ namespace INVENTORY.UI
 
         private void btn10_Click(object sender, EventArgs e)
         {
-            
+
             txtamt.Text = "10";
 
             if (Convert.ToDecimal(lblbilltotal.Text) <= Convert.ToDecimal(txtamt.Text))
@@ -2553,7 +2510,7 @@ namespace INVENTORY.UI
 
         private void btn20_Click(object sender, EventArgs e)
         {
-            txtamt.Text="20";
+            txtamt.Text = "20";
             if (Convert.ToDecimal(lblbilltotal.Text) <= Convert.ToDecimal(txtamt.Text))
             { showpaymentpop(txtamt.Text); }
             else
@@ -2563,7 +2520,7 @@ namespace INVENTORY.UI
         }
 
         private void btn50_Click(object sender, EventArgs e)
-        {           
+        {
             txtamt.Text = "50";
             if (Convert.ToDecimal(lblbilltotal.Text) <= Convert.ToDecimal(txtamt.Text))
             { showpaymentpop(txtamt.Text); }
@@ -2607,43 +2564,41 @@ namespace INVENTORY.UI
         int dynamiclocatonY = 81;
         private void btnmovedwn_Click(object sender, EventArgs e)
         {
-            dynamiclocatonY+= - 5;
-            pnlbtndyan.Location = new Point(827, dynamiclocatonY );
+            dynamiclocatonY += -5;
+            pnlbtndyan.Location = new Point(827, dynamiclocatonY);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             dynamiclocatonY += +5;
-            pnlbtndyan.Location = new Point(827, dynamiclocatonY );
+            pnlbtndyan.Location = new Point(827, dynamiclocatonY);
 
         }
 
         private void btnBarcode_Click(object sender, EventArgs e)
         {
-            if (ctlProduct.SelectedID == 0)
+            try
             {
-                try
+                if (txtamt.Text != string.Empty)
                 {
-                    if (txtamt.Text != string.Empty)
+                    if (db.Products.Any(o => o.BarCode == txtamt.Text.Trim()))
                     {
-                        if (db.Products.Any(o => o.BarCode == txtamt.Text.Trim()))
+                        _oProduct = (Product)(db.Products.FirstOrDefault(o => o.BarCode == txtamt.Text.Trim()));
+                        if (_oProduct != null)
                         {
-                            _oProduct = (Product)(db.Products.FirstOrDefault(o => o.BarCode == txtamt.Text.Trim()));
-                            if (_oProduct != null)
-                            {
-                                AddProductToGrid();
-                            }
+                            AddProductToGrid();
                         }
                     }
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, "Barcode");
-                }
+            }
+
+            catch (Exception ex)
+            {                MessageBox.Show(ex.Message, "Barcode");
             }
         }
 
-        private StockDetail UpdateStockDetails()
+
+        private StockDetail UpdateStockDetails()
         {
 
             _StockDetail = (StockDetail)(db.StockDetails.FirstOrDefault(o => o.ProductID == _oProduct.ProductID && o.Status == (int)EnumStockDetailStatus.Stock && o.Quantity > 0));
@@ -2697,6 +2652,40 @@ namespace INVENTORY.UI
         {
             UpdateStockDetails();
             RefrehSODetailsAndStockObjectNew();
+        }
+
+        private void txtamt_Validated(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtamt_Validating(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void txtamt_TextChanged(object sender, EventArgs e)
+        {
+            if (txtamt.Text.Trim() == string.Empty)
+            {
+                txtamt.Tag = txtamt.Text;
+                return;
+            }
+            else
+            {
+                if (txtamt.Text.Length <= 3)
+                {
+                    txtamt.Tag = txtamt.Text;
+                }
+            }
+            if (txtamt.Text.Length > 3)
+            {
+                if (Convert.ToString(txtamt.Tag) == string.Empty || !txtamt.Text.Contains(txtamt.Tag.ToString()))
+                {
+                    btnBarcode_Click(sender, e);
+                }
+            }
+            txtamt.Tag = txtamt.Text;
         }
     }
 }

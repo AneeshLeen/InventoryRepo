@@ -33,8 +33,8 @@ namespace INVENTORY.UI
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fSOrder));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fSOrder));
             this.label3 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.numPrevDue = new System.Windows.Forms.NumericUpDown();
@@ -135,6 +135,19 @@ namespace INVENTORY.UI
             this.numTDP = new System.Windows.Forms.NumericUpDown();
             this.numTotalDis = new System.Windows.Forms.NumericUpDown();
             this.dgProducts = new System.Windows.Forms.DataGridView();
+            this.clnSN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clnQTY = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clnUnitPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clnTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Color = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clnChasis = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clnDP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clnDIS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnmoveup = new System.Windows.Forms.Button();
             this.pnlbtndyan = new System.Windows.Forms.Panel();
             this.btnmovedwn = new System.Windows.Forms.Button();
@@ -201,9 +214,6 @@ namespace INVENTORY.UI
             this.lblUser = new System.Windows.Forms.ToolStripStatusLabel();
             this.ToolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.ToolStripStatusLabel4 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.ctlGodown = new INVENTORY.UI.ctlCustomControl();
-            this.ctlCustomer = new INVENTORY.UI.ctlCustomControl();
-            this.ctlProduct = new INVENTORY.UI.ctlCustomControl();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
@@ -214,19 +224,9 @@ namespace INVENTORY.UI
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.groupBox15 = new System.Windows.Forms.GroupBox();
             this.btnCustomer = new System.Windows.Forms.Button();
-            this.clnSN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clnQTY = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clnUnitPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clnTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Color = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clnChasis = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clnDP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clnDIS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ctlGodown = new INVENTORY.UI.ctlCustomControl();
+            this.ctlCustomer = new INVENTORY.UI.ctlCustomControl();
+            this.ctlProduct = new INVENTORY.UI.ctlCustomControl();
             ((System.ComponentModel.ISupportInitialize)(this.numPrevDue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numRemindPeriodTemp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPRate)).BeginInit();
@@ -1779,6 +1779,96 @@ namespace INVENTORY.UI
             this.dgProducts.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgProducts_CellContentClick);
             this.dgProducts.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dgProducts_RowsAdded);
             // 
+            // clnSN
+            // 
+            this.clnSN.HeaderText = "SN";
+            this.clnSN.Name = "clnSN";
+            this.clnSN.ReadOnly = true;
+            this.clnSN.Width = 45;
+            // 
+            // clnName
+            // 
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Maroon;
+            this.clnName.DefaultCellStyle = dataGridViewCellStyle2;
+            this.clnName.HeaderText = "DESCRIPTION";
+            this.clnName.Name = "clnName";
+            this.clnName.ReadOnly = true;
+            this.clnName.Width = 300;
+            // 
+            // clnQTY
+            // 
+            this.clnQTY.HeaderText = "QTY";
+            this.clnQTY.Name = "clnQTY";
+            this.clnQTY.ReadOnly = true;
+            this.clnQTY.Width = 80;
+            // 
+            // clnUnitPrice
+            // 
+            this.clnUnitPrice.HeaderText = "PRICE";
+            this.clnUnitPrice.Name = "clnUnitPrice";
+            this.clnUnitPrice.ReadOnly = true;
+            // 
+            // clnTotal
+            // 
+            this.clnTotal.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.clnTotal.HeaderText = "AMOUNT";
+            this.clnTotal.Name = "clnTotal";
+            this.clnTotal.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "HST";
+            this.Column1.Name = "Column1";
+            this.Column1.Visible = false;
+            this.Column1.Width = 80;
+            // 
+            // Color
+            // 
+            this.Color.HeaderText = "Color";
+            this.Color.Name = "Color";
+            this.Color.Visible = false;
+            // 
+            // clnChasis
+            // 
+            this.clnChasis.HeaderText = "Category";
+            this.clnChasis.Name = "clnChasis";
+            this.clnChasis.Visible = false;
+            this.clnChasis.Width = 130;
+            // 
+            // clnDP
+            // 
+            this.clnDP.HeaderText = "Dis(%)";
+            this.clnDP.Name = "clnDP";
+            this.clnDP.Visible = false;
+            this.clnDP.Width = 80;
+            // 
+            // clnDIS
+            // 
+            this.clnDIS.HeaderText = "Discount";
+            this.clnDIS.Name = "clnDIS";
+            this.clnDIS.Visible = false;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "SGST";
+            this.Column2.Name = "Column2";
+            this.Column2.Visible = false;
+            this.Column2.Width = 80;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "IGST";
+            this.Column3.Name = "Column3";
+            this.Column3.Visible = false;
+            this.Column3.Width = 80;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "GST";
+            this.Column4.Name = "Column4";
+            this.Column4.Visible = false;
+            this.Column4.Width = 80;
+            // 
             // btnmoveup
             // 
             this.btnmoveup.BackColor = System.Drawing.Color.Maroon;
@@ -1934,6 +2024,9 @@ namespace INVENTORY.UI
             this.txtamt.Size = new System.Drawing.Size(241, 39);
             this.txtamt.TabIndex = 242;
             this.txtamt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtamt.TextChanged += new System.EventHandler(this.txtamt_TextChanged);
+            this.txtamt.Validating += new System.ComponentModel.CancelEventHandler(this.txtamt_Validating);
+            this.txtamt.Validated += new System.EventHandler(this.txtamt_Validated);
             // 
             // btn7
             // 
@@ -2618,43 +2711,6 @@ namespace INVENTORY.UI
             this.ToolStripStatusLabel4.Size = new System.Drawing.Size(145, 17);
             this.ToolStripStatusLabel4.Text = "ToolStripStatusLabel4";
             // 
-            // ctlGodown
-            // 
-            this.ctlGodown.Font = new System.Drawing.Font("Palatino Linotype", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ctlGodown.IDList = null;
-            this.ctlGodown.Location = new System.Drawing.Point(298, 95);
-            this.ctlGodown.Margin = new System.Windows.Forms.Padding(5);
-            this.ctlGodown.Name = "ctlGodown";
-            this.ctlGodown.ObjectName = "Godown";
-            this.ctlGodown.Size = new System.Drawing.Size(134, 40);
-            this.ctlGodown.TabIndex = 1;
-            this.ctlGodown.SelectedItemChanged += new INVENTORY.UI.SelectionChangedEvent(this.ctlGodown_SelectedItemChanged);
-            // 
-            // ctlCustomer
-            // 
-            this.ctlCustomer.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ctlCustomer.Font = new System.Drawing.Font("Palatino Linotype", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ctlCustomer.IDList = null;
-            this.ctlCustomer.Location = new System.Drawing.Point(284, 3);
-            this.ctlCustomer.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.ctlCustomer.Name = "ctlCustomer";
-            this.ctlCustomer.ObjectName = "Customer";
-            this.ctlCustomer.Size = new System.Drawing.Size(310, 40);
-            this.ctlCustomer.TabIndex = 2;
-            this.ctlCustomer.SelectedItemChanged += new INVENTORY.UI.SelectionChangedEvent(this.ctlCustomer_SelectedItemChanged);
-            // 
-            // ctlProduct
-            // 
-            this.ctlProduct.Font = new System.Drawing.Font("Palatino Linotype", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ctlProduct.IDList = null;
-            this.ctlProduct.Location = new System.Drawing.Point(297, 132);
-            this.ctlProduct.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.ctlProduct.Name = "ctlProduct";
-            this.ctlProduct.ObjectName = "StockDetail";
-            this.ctlProduct.Size = new System.Drawing.Size(135, 39);
-            this.ctlProduct.TabIndex = 2;
-            this.ctlProduct.SelectedItemChanged += new INVENTORY.UI.SelectionChangedEvent(this.ctlProduct_SelectedItemChanged);
-            // 
             // groupBox7
             // 
             this.groupBox7.BackColor = System.Drawing.Color.SlateGray;
@@ -2784,95 +2840,42 @@ namespace INVENTORY.UI
             this.btnCustomer.Visible = false;
             this.btnCustomer.Click += new System.EventHandler(this.btnCustomer_Click);
             // 
-            // clnSN
+            // ctlGodown
             // 
-            this.clnSN.HeaderText = "SN";
-            this.clnSN.Name = "clnSN";
-            this.clnSN.ReadOnly = true;
-            this.clnSN.Width = 45;
+            this.ctlGodown.Font = new System.Drawing.Font("Palatino Linotype", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ctlGodown.IDList = null;
+            this.ctlGodown.Location = new System.Drawing.Point(298, 95);
+            this.ctlGodown.Margin = new System.Windows.Forms.Padding(5);
+            this.ctlGodown.Name = "ctlGodown";
+            this.ctlGodown.ObjectName = "Godown";
+            this.ctlGodown.Size = new System.Drawing.Size(134, 40);
+            this.ctlGodown.TabIndex = 1;
+            this.ctlGodown.SelectedItemChanged += new INVENTORY.UI.SelectionChangedEvent(this.ctlGodown_SelectedItemChanged);
             // 
-            // clnName
+            // ctlCustomer
             // 
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Maroon;
-            this.clnName.DefaultCellStyle = dataGridViewCellStyle2;
-            this.clnName.HeaderText = "DESCRIPTION";
-            this.clnName.Name = "clnName";
-            this.clnName.ReadOnly = true;
-            this.clnName.Width = 300;
+            this.ctlCustomer.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ctlCustomer.Font = new System.Drawing.Font("Palatino Linotype", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ctlCustomer.IDList = null;
+            this.ctlCustomer.Location = new System.Drawing.Point(284, 3);
+            this.ctlCustomer.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.ctlCustomer.Name = "ctlCustomer";
+            this.ctlCustomer.ObjectName = "Customer";
+            this.ctlCustomer.Size = new System.Drawing.Size(310, 40);
+            this.ctlCustomer.TabIndex = 2;
+            this.ctlCustomer.SelectedItemChanged += new INVENTORY.UI.SelectionChangedEvent(this.ctlCustomer_SelectedItemChanged);
             // 
-            // clnQTY
+            // ctlProduct
             // 
-            this.clnQTY.HeaderText = "QTY";
-            this.clnQTY.Name = "clnQTY";
-            this.clnQTY.ReadOnly = true;
-            this.clnQTY.Width = 80;
-            // 
-            // clnUnitPrice
-            // 
-            this.clnUnitPrice.HeaderText = "PRICE";
-            this.clnUnitPrice.Name = "clnUnitPrice";
-            this.clnUnitPrice.ReadOnly = true;
-            // 
-            // clnTotal
-            // 
-            this.clnTotal.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.clnTotal.HeaderText = "AMOUNT";
-            this.clnTotal.Name = "clnTotal";
-            this.clnTotal.ReadOnly = true;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "HST";
-            this.Column1.Name = "Column1";
-            this.Column1.Visible = false;
-            this.Column1.Width = 80;
-            // 
-            // Color
-            // 
-            this.Color.HeaderText = "Color";
-            this.Color.Name = "Color";
-            this.Color.Visible = false;
-            // 
-            // clnChasis
-            // 
-            this.clnChasis.HeaderText = "Category";
-            this.clnChasis.Name = "clnChasis";
-            this.clnChasis.Visible = false;
-            this.clnChasis.Width = 130;
-            // 
-            // clnDP
-            // 
-            this.clnDP.HeaderText = "Dis(%)";
-            this.clnDP.Name = "clnDP";
-            this.clnDP.Visible = false;
-            this.clnDP.Width = 80;
-            // 
-            // clnDIS
-            // 
-            this.clnDIS.HeaderText = "Discount";
-            this.clnDIS.Name = "clnDIS";
-            this.clnDIS.Visible = false;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "SGST";
-            this.Column2.Name = "Column2";
-            this.Column2.Visible = false;
-            this.Column2.Width = 80;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "IGST";
-            this.Column3.Name = "Column3";
-            this.Column3.Visible = false;
-            this.Column3.Width = 80;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "GST";
-            this.Column4.Name = "Column4";
-            this.Column4.Visible = false;
-            this.Column4.Width = 80;
+            this.ctlProduct.Font = new System.Drawing.Font("Palatino Linotype", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ctlProduct.IDList = null;
+            this.ctlProduct.Location = new System.Drawing.Point(297, 132);
+            this.ctlProduct.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.ctlProduct.Name = "ctlProduct";
+            this.ctlProduct.ObjectName = "StockDetail";
+            this.ctlProduct.Size = new System.Drawing.Size(135, 39);
+            this.ctlProduct.TabIndex = 2;
+            this.ctlProduct.SelectedItemChanged += new INVENTORY.UI.SelectionChangedEvent(this.ctlProduct_SelectedItemChanged);
             // 
             // fSOrder
             // 
