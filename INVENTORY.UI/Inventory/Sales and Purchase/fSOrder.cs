@@ -2593,12 +2593,14 @@ namespace INVENTORY.UI
             }
 
             catch (Exception ex)
-            {                MessageBox.Show(ex.Message, "Barcode");
+            {
+                MessageBox.Show(ex.Message, "Barcode");
             }
         }
 
 
-        private StockDetail UpdateStockDetails()
+
+        private StockDetail UpdateStockDetails()
         {
 
             _StockDetail = (StockDetail)(db.StockDetails.FirstOrDefault(o => o.ProductID == _oProduct.ProductID && o.Status == (int)EnumStockDetailStatus.Stock && o.Quantity > 0));

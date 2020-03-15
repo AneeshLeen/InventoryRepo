@@ -1,4 +1,5 @@
-﻿using System;
+﻿using INVENTORY.UI.BL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,12 @@ namespace INVENTORY.UI
 {
     public partial class frmoptions : Form
     {
+        public DiscountOptions ObjDiscountOptions { get; set; }
+
         public frmoptions()
         {
             InitializeComponent();
+            ObjBillOptions = new DiscountOptions();
             this.StartPosition = FormStartPosition.CenterScreen;
         }
 
@@ -49,6 +53,7 @@ namespace INVENTORY.UI
             this.Hide();
             frmdisc fmdisc = new frmdisc();
             fmdisc.ShowDialog();
+            ObjDiscountOptions = fmdisc.ObjDiscountOptions;
         }
     }
 }
