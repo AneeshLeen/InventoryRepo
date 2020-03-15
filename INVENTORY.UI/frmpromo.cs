@@ -10,12 +10,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
 using System.Runtime.InteropServices;
+using INVENTORY.DA;
+using INVENTORY.UI.BL;
 
 namespace INVENTORY.UI
 {
     public partial class frmpromo : Form
     {
-       
+        public PromoData objPromoData { get; set; }
 
         DirectoryInfo di;
         List<FileInfo> images = new List<FileInfo>();
@@ -30,6 +32,25 @@ namespace INVENTORY.UI
         public frmpromo( )
         {
             InitializeComponent();
+            objPromoData = new PromoData();
+        }
+        internal void UpdatePromoData(SalesItemCollectionBO objSaleList)
+        {
+            dgProductspromo.DataSource = objSaleList;
+
+            lblbilltotal.Text = String.Format("{0:0.00}", objPromoData.BillTotal);
+
+            lblbilldisc.Text = String.Format("{0:0.00}", objPromoData.BillDiscount);
+            lblbillqty.Text = objPromoData.NoofItems.ToString();
+            lblhst.Text = String.Format("{0:0.00}", objPromoData.HST);
+
+            lblNetTotal.Text = String.Format("{0:0.00}", objPromoData.NetTotal);
+            lblrefundqty.Text = String.Format("{0:0.00}", objPromoData.Refund);
+            lblsavings.Text = String.Format("{0:0.00}", objPromoData.Savings);
+
+            lblPayment.Text = String.Format("{0:0.00}", objPromoData.Payments);
+            lblBalance.Text = String.Format("{0:0.00}", objPromoData.Balance);
+
         }
         public void ChangePicture()//to change pics
         {
@@ -94,5 +115,6 @@ namespace INVENTORY.UI
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
         }
+       
     }
 }

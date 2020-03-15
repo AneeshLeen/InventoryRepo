@@ -92,6 +92,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BL\DiscountOptions.cs" />
+    <Compile Include="BL\SalesItemBO.cs" />
     <Compile Include="Control\fBankControl.cs">
       <SubType>Form</SubType>
     </Compile>

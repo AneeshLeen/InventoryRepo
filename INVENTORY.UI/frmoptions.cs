@@ -18,7 +18,7 @@ namespace INVENTORY.UI
         public frmoptions()
         {
             InitializeComponent();
-            ObjBillOptions = new DiscountOptions();
+            ObjDiscountOptions = new DiscountOptions();
             this.StartPosition = FormStartPosition.CenterScreen;
         }
 

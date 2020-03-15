@@ -1,4 +1,5 @@
 ﻿using INVENTORY.DA;
+using INVENTORY.UI.BL;
 using Microsoft.Reporting.WinForms;
 using System;
 using System.Collections.Generic;
@@ -22,6 +23,8 @@ namespace INVENTORY.UI
         Product _oProduct = null;
         List<SOrderDetail> _OrderDetails = new List<SOrderDetail>();
         List<INVENTORY.DA.Color> _ColorList = new List<DA.Color>();
+
+        SalesItemCollectionBO objPromoSaleList = null;
         List<Category> _CategoryList = new List<Category>();
         SOrderDetail _OrderDetail = null;
         SOrder _Order = null;
@@ -525,11 +528,15 @@ namespace INVENTORY.UI
                 int count = 0;
                 int nSLNo = 1;
                 dgProducts.Rows.Clear();
+
+                objPromoSaleList = new SalesItemCollectionBO();
+
                 List<SOrderDetail> nobarcodeSOrderDetailList = new List<SOrderDetail>();
                 _OrderDetails = _Order.SOrderDetails.ToList();
 
                 if (_OrderDetails.Count > 0)
                 {
+                    string itemName = "";
                     foreach (SOrderDetail oPODItem in _OrderDetails)
                     {
                         dgProducts.Rows.Add();
@@ -538,7 +545,7 @@ namespace INVENTORY.UI
                             Product oProduct = db.Products.FirstOrDefault(o => o.ProductID == oPODItem.ProductID);
                             if (oProduct != null)
                             {
-                                dgProducts.Rows[count].Cells[1].Value = oProduct.ProductName;
+                                dgProducts.Rows[count].Cells[1].Value = itemName  = oProduct.ProductName;
                                 //_StockDetail = db.StockDetails.FirstOrDefault(x => x.SDetailID == oPODItem.StockDetailID);
                                 //INVENTORY.DA.Color oColor = _ColorList.FirstOrDefault(c => c.ColorID == _StockDetail.ColorID);
                             }
@@ -546,9 +553,18 @@ namespace INVENTORY.UI
                         else
                         {
                             Category oCategory = _CategoryList.FirstOrDefault(c => c.CategoryID == oPODItem.ProductID);
-                            dgProducts.Rows[count].Cells[1].Value = oCategory.Description;
+                            dgProducts.Rows[count].Cells[1].Value = itemName = oCategory.Description;
                         }
 
+                        objPromoSaleList.Add(new SalesItemBO()
+                        {
+                            ItemName = itemName,
+                            SLNO = nSLNo,
+                            Quantity = oPODItem.Quantity,
+                            Amount = oPODItem.SRate * oPODItem.Quantity,
+                            HST = oPODItem.CGSTAmt,
+                            SRate = oPODItem.SRate
+                        });
 
 
                         dgProducts.Rows[count].Cells[0].Value = nSLNo.ToString();
@@ -2279,7 +2295,7 @@ namespace INVENTORY.UI
 
             lblbillqty.Text = String.Format("{0:0.00}", qtysum);
             lbltax.Text = String.Format("{0:0.00}", Convert.ToDecimal(taxsum));
-            lblbilltotal.Text = String.Format("{0:0.00}", Convert.ToDecimal(amtsum));
+            lblbilltotal.Text = String.Format("{0:0.00}", Convert.ToDecimal(amtsum + taxsum));
 
         }
 
@@ -2297,7 +2313,7 @@ namespace INVENTORY.UI
             frmpop.lblbilltotal.Text = lblbilltotal.Text;
             frmpop.lblpayment.Text = amt;
             frmpop.lblbalance.Text = Convert.ToString(Math.Abs(Convert.ToDecimal(lblbilltotal.Text) - Convert.ToDecimal(amt)));
-
+            RefreshPromoPayment(Convert.ToDecimal(amt), Convert.ToDecimal(frmpop.lblbalance.Text));
             if (frmpop.ShowDialog() == DialogResult.OK)
             {
                 _Order.CashPaidAmount = Convert.ToDecimal(frmpop.lblbilltotal.Text);
@@ -2318,6 +2334,8 @@ namespace INVENTORY.UI
                 {
                     frmmultipay.CashAmount = Convert.ToDecimal(txtamt.Text);
                     frmmultipay.BillAmount = Convert.ToDecimal(lblbilltotal.Text);
+
+                    RefreshPromoPayment(frmmultipay.CashAmount, 0);
                 }
             }
             if (frmmultipay.ShowDialog() == DialogResult.OK)
@@ -2405,6 +2423,32 @@ namespace INVENTORY.UI
                 frmprmo.pctboxpromo.Location = new Point(30, 27);
                 frmprmo.pctboxpromo.Size = new Size(1100, 676);
             }
+            if (objPromoSaleList != null && objPromoSaleList.Count > 0)
+            {
+                frmprmo.objPromoData.BillTotal = objPromoSaleList.Sum(p => p.Amount+p.HST);
+
+                frmprmo.objPromoData.BillDiscount = Convert.ToDecimal( lblbilldisc.Text);
+                frmprmo.objPromoData.NoofItems = objPromoSaleList.Count;
+                frmprmo.objPromoData.HST = objPromoSaleList.Sum(p => p.HST);
+
+                frmprmo.objPromoData.NetTotal = objPromoSaleList.Sum(p => p.Amount + p.HST);
+                frmprmo.objPromoData.Refund = 0;
+                frmprmo.objPromoData.Savings = 0;
+
+
+            }
+            else
+            {
+                frmprmo.objPromoData = new PromoData();
+            }
+
+            frmprmo.UpdatePromoData(objPromoSaleList);
+        }
+        void RefreshPromoPayment(decimal Payments, decimal Balance)
+        {
+            frmprmo.objPromoData.Payments = Payments;
+            frmprmo.objPromoData.Balance = Balance;
+            frmprmo.UpdatePromoData(objPromoSaleList);
         }
 
         private void btnvoidall_Click(object sender, EventArgs e)
@@ -2466,6 +2510,7 @@ namespace INVENTORY.UI
                     calculatesum();
                 }
             txtamt.Focus();
+            RefreshPromo();
         }
 
         private void btnquickmenu_Click(object sender, EventArgs e)
@@ -2654,6 +2699,7 @@ namespace INVENTORY.UI
         {
             UpdateStockDetails();
             RefrehSODetailsAndStockObjectNew();
+            RefreshPromo();
         }
 
         private void txtamt_Validated(object sender, EventArgs e)
