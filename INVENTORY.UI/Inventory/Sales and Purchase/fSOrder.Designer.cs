@@ -1743,6 +1743,7 @@ namespace INVENTORY.UI
             // dgProducts
             // 
             this.dgProducts.AllowUserToAddRows = false;
+            this.dgProducts.AllowUserToDeleteRows = false;
             this.dgProducts.BackgroundColor = System.Drawing.Color.White;
 //<<<<<<< HEAD
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;

@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmdisc));
-            this.btn50 = new System.Windows.Forms.Button();
-            this.btn20 = new System.Windows.Forms.Button();
-            this.btn10 = new System.Windows.Forms.Button();
+            this.btnenter = new System.Windows.Forms.Button();
+            this.btndelete = new System.Windows.Forms.Button();
+            this.btnclear = new System.Windows.Forms.Button();
             this.btn00 = new System.Windows.Forms.Button();
             this.btn0 = new System.Windows.Forms.Button();
             this.btn3 = new System.Windows.Forms.Button();
@@ -45,55 +45,58 @@
             this.btn7 = new System.Windows.Forms.Button();
             this.btndot = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtdiscount = new System.Windows.Forms.TextBox();
             this.btnapply = new System.Windows.Forms.Button();
             this.btnclose = new System.Windows.Forms.Button();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
+            this.rdbLineDisPerc = new System.Windows.Forms.RadioButton();
+            this.rdbLineDisAmt = new System.Windows.Forms.RadioButton();
+            this.rdbNewPrice = new System.Windows.Forms.RadioButton();
+            this.rdbLineAmt = new System.Windows.Forms.RadioButton();
+            this.rdbBillDiscPerc = new System.Windows.Forms.RadioButton();
+            this.rdbBillDiscAmt = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
-            // btn50
+            // btnenter
             // 
-            this.btn50.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.btn50.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn50.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn50.Location = new System.Drawing.Point(540, 269);
-            this.btn50.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btn50.Name = "btn50";
-            this.btn50.Size = new System.Drawing.Size(80, 66);
-            this.btn50.TabIndex = 274;
-            this.btn50.Text = "ENTER";
-            this.btn50.UseVisualStyleBackColor = false;
+            this.btnenter.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btnenter.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnenter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnenter.Location = new System.Drawing.Point(540, 269);
+            this.btnenter.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnenter.Name = "btnenter";
+            this.btnenter.Size = new System.Drawing.Size(80, 66);
+            this.btnenter.TabIndex = 274;
+            this.btnenter.Text = "ENTER";
+            this.btnenter.UseVisualStyleBackColor = false;
+            this.btnenter.Click += new System.EventHandler(this.btnenter_Click);
             // 
-            // btn20
+            // btndelete
             // 
-            this.btn20.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.btn20.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn20.Location = new System.Drawing.Point(459, 269);
-            this.btn20.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btn20.Name = "btn20";
-            this.btn20.Size = new System.Drawing.Size(80, 66);
-            this.btn20.TabIndex = 273;
-            this.btn20.Text = "DEL";
-            this.btn20.UseVisualStyleBackColor = false;
+            this.btndelete.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btndelete.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btndelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btndelete.Location = new System.Drawing.Point(459, 269);
+            this.btndelete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btndelete.Name = "btndelete";
+            this.btndelete.Size = new System.Drawing.Size(80, 66);
+            this.btndelete.TabIndex = 273;
+            this.btndelete.Text = "DEL";
+            this.btndelete.UseVisualStyleBackColor = false;
+            this.btndelete.Click += new System.EventHandler(this.btndelete_Click);
             // 
-            // btn10
+            // btnclear
             // 
-            this.btn10.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.btn10.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn10.Location = new System.Drawing.Point(378, 269);
-            this.btn10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btn10.Name = "btn10";
-            this.btn10.Size = new System.Drawing.Size(80, 66);
-            this.btn10.TabIndex = 272;
-            this.btn10.Text = "C";
-            this.btn10.UseVisualStyleBackColor = false;
+            this.btnclear.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btnclear.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnclear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnclear.Location = new System.Drawing.Point(378, 269);
+            this.btnclear.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnclear.Name = "btnclear";
+            this.btnclear.Size = new System.Drawing.Size(80, 66);
+            this.btnclear.TabIndex = 272;
+            this.btnclear.Text = "C";
+            this.btnclear.UseVisualStyleBackColor = false;
+            this.btnclear.Click += new System.EventHandler(this.btnclear_Click);
             // 
             // btn00
             // 
@@ -107,6 +110,7 @@
             this.btn00.TabIndex = 271;
             this.btn00.Text = "00";
             this.btn00.UseVisualStyleBackColor = false;
+            this.btn00.Click += new System.EventHandler(this.btn1_Click);
             // 
             // btn0
             // 
@@ -120,6 +124,7 @@
             this.btn0.TabIndex = 270;
             this.btn0.Text = "0";
             this.btn0.UseVisualStyleBackColor = false;
+            this.btn0.Click += new System.EventHandler(this.btn1_Click);
             // 
             // btn3
             // 
@@ -133,6 +138,7 @@
             this.btn3.TabIndex = 269;
             this.btn3.Text = "3";
             this.btn3.UseVisualStyleBackColor = false;
+            this.btn3.Click += new System.EventHandler(this.btn1_Click);
             // 
             // btn2
             // 
@@ -146,6 +152,7 @@
             this.btn2.TabIndex = 268;
             this.btn2.Text = "2";
             this.btn2.UseVisualStyleBackColor = false;
+            this.btn2.Click += new System.EventHandler(this.btn1_Click);
             // 
             // btn1
             // 
@@ -159,6 +166,7 @@
             this.btn1.TabIndex = 267;
             this.btn1.Text = "1";
             this.btn1.UseVisualStyleBackColor = false;
+            this.btn1.Click += new System.EventHandler(this.btn1_Click);
             // 
             // btn6
             // 
@@ -172,6 +180,7 @@
             this.btn6.TabIndex = 266;
             this.btn6.Text = "6";
             this.btn6.UseVisualStyleBackColor = false;
+            this.btn6.Click += new System.EventHandler(this.btn1_Click);
             // 
             // btn5
             // 
@@ -185,6 +194,7 @@
             this.btn5.TabIndex = 265;
             this.btn5.Text = "5";
             this.btn5.UseVisualStyleBackColor = false;
+            this.btn5.Click += new System.EventHandler(this.btn1_Click);
             // 
             // btn4
             // 
@@ -198,6 +208,7 @@
             this.btn4.TabIndex = 264;
             this.btn4.Text = "4";
             this.btn4.UseVisualStyleBackColor = false;
+            this.btn4.Click += new System.EventHandler(this.btn1_Click);
             // 
             // btn9
             // 
@@ -211,6 +222,7 @@
             this.btn9.TabIndex = 263;
             this.btn9.Text = "9";
             this.btn9.UseVisualStyleBackColor = false;
+            this.btn9.Click += new System.EventHandler(this.btn1_Click);
             // 
             // btn8
             // 
@@ -224,6 +236,7 @@
             this.btn8.TabIndex = 262;
             this.btn8.Text = "8";
             this.btn8.UseVisualStyleBackColor = false;
+            this.btn8.Click += new System.EventHandler(this.btn1_Click);
             // 
             // btn7
             // 
@@ -237,6 +250,7 @@
             this.btn7.TabIndex = 261;
             this.btn7.Text = "7";
             this.btn7.UseVisualStyleBackColor = false;
+            this.btn7.Click += new System.EventHandler(this.btn1_Click);
             // 
             // btndot
             // 
@@ -250,6 +264,7 @@
             this.btndot.TabIndex = 275;
             this.btndot.Text = ".";
             this.btndot.UseVisualStyleBackColor = false;
+            this.btndot.Click += new System.EventHandler(this.btn1_Click);
             // 
             // textBox1
             // 
@@ -259,12 +274,12 @@
             this.textBox1.Size = new System.Drawing.Size(371, 247);
             this.textBox1.TabIndex = 276;
             // 
-            // textBox2
+            // txtdiscount
             // 
-            this.textBox2.Location = new System.Drawing.Point(378, 338);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(242, 20);
-            this.textBox2.TabIndex = 277;
+            this.txtdiscount.Location = new System.Drawing.Point(378, 338);
+            this.txtdiscount.Name = "txtdiscount";
+            this.txtdiscount.Size = new System.Drawing.Size(242, 20);
+            this.txtdiscount.TabIndex = 277;
             // 
             // btnapply
             // 
@@ -276,6 +291,7 @@
             this.btnapply.Size = new System.Drawing.Size(80, 60);
             this.btnapply.TabIndex = 279;
             this.btnapply.UseVisualStyleBackColor = false;
+            this.btnapply.Click += new System.EventHandler(this.btnapply_Click);
             // 
             // btnclose
             // 
@@ -289,97 +305,97 @@
             this.btnclose.UseVisualStyleBackColor = false;
             this.btnclose.Click += new System.EventHandler(this.btnclose_Click);
             // 
-            // radioButton1
+            // rdbLineDisPerc
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(22, 264);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(126, 20);
-            this.radioButton1.TabIndex = 280;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Line Discount %";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rdbLineDisPerc.AutoSize = true;
+            this.rdbLineDisPerc.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbLineDisPerc.Location = new System.Drawing.Point(22, 264);
+            this.rdbLineDisPerc.Name = "rdbLineDisPerc";
+            this.rdbLineDisPerc.Size = new System.Drawing.Size(126, 20);
+            this.rdbLineDisPerc.TabIndex = 280;
+            this.rdbLineDisPerc.TabStop = true;
+            this.rdbLineDisPerc.Text = "Line Discount %";
+            this.rdbLineDisPerc.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rdbLineDisAmt
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(22, 291);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(140, 20);
-            this.radioButton2.TabIndex = 281;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Line Discount(Val)";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rdbLineDisAmt.AutoSize = true;
+            this.rdbLineDisAmt.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbLineDisAmt.Location = new System.Drawing.Point(22, 291);
+            this.rdbLineDisAmt.Name = "rdbLineDisAmt";
+            this.rdbLineDisAmt.Size = new System.Drawing.Size(140, 20);
+            this.rdbLineDisAmt.TabIndex = 281;
+            this.rdbLineDisAmt.TabStop = true;
+            this.rdbLineDisAmt.Text = "Line Discount(Val)";
+            this.rdbLineDisAmt.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // rdbNewPrice
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton3.Location = new System.Drawing.Point(22, 317);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(91, 20);
-            this.radioButton3.TabIndex = 282;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "New Price";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.rdbNewPrice.AutoSize = true;
+            this.rdbNewPrice.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbNewPrice.Location = new System.Drawing.Point(22, 317);
+            this.rdbNewPrice.Name = "rdbNewPrice";
+            this.rdbNewPrice.Size = new System.Drawing.Size(91, 20);
+            this.rdbNewPrice.TabIndex = 282;
+            this.rdbNewPrice.TabStop = true;
+            this.rdbNewPrice.Text = "New Price";
+            this.rdbNewPrice.UseVisualStyleBackColor = true;
             // 
-            // radioButton4
+            // rdbLineAmt
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton4.Location = new System.Drawing.Point(22, 340);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(107, 20);
-            this.radioButton4.TabIndex = 283;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Line Amount";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.rdbLineAmt.AutoSize = true;
+            this.rdbLineAmt.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbLineAmt.Location = new System.Drawing.Point(22, 340);
+            this.rdbLineAmt.Name = "rdbLineAmt";
+            this.rdbLineAmt.Size = new System.Drawing.Size(107, 20);
+            this.rdbLineAmt.TabIndex = 283;
+            this.rdbLineAmt.TabStop = true;
+            this.rdbLineAmt.Text = "Line Amount";
+            this.rdbLineAmt.UseVisualStyleBackColor = true;
             // 
-            // radioButton5
+            // rdbBillDiscPerc
             // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton5.Location = new System.Drawing.Point(22, 363);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(114, 20);
-            this.radioButton5.TabIndex = 284;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "Bill Amount %";
-            this.radioButton5.UseVisualStyleBackColor = true;
+            this.rdbBillDiscPerc.AutoSize = true;
+            this.rdbBillDiscPerc.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbBillDiscPerc.Location = new System.Drawing.Point(22, 363);
+            this.rdbBillDiscPerc.Name = "rdbBillDiscPerc";
+            this.rdbBillDiscPerc.Size = new System.Drawing.Size(114, 20);
+            this.rdbBillDiscPerc.TabIndex = 284;
+            this.rdbBillDiscPerc.TabStop = true;
+            this.rdbBillDiscPerc.Text = "Bill Amount %";
+            this.rdbBillDiscPerc.UseVisualStyleBackColor = true;
             // 
-            // radioButton6
+            // rdbBillDiscAmt
             // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton6.Location = new System.Drawing.Point(22, 386);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(131, 20);
-            this.radioButton6.TabIndex = 285;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "Bill AMount (Val)";
-            this.radioButton6.UseVisualStyleBackColor = true;
+            this.rdbBillDiscAmt.AutoSize = true;
+            this.rdbBillDiscAmt.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbBillDiscAmt.Location = new System.Drawing.Point(22, 386);
+            this.rdbBillDiscAmt.Name = "rdbBillDiscAmt";
+            this.rdbBillDiscAmt.Size = new System.Drawing.Size(132, 20);
+            this.rdbBillDiscAmt.TabIndex = 285;
+            this.rdbBillDiscAmt.TabStop = true;
+            this.rdbBillDiscAmt.Text = "Bill Amount (Val)";
+            this.rdbBillDiscAmt.UseVisualStyleBackColor = true;
             // 
             // frmdisc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(627, 434);
-            this.Controls.Add(this.radioButton6);
-            this.Controls.Add(this.radioButton5);
-            this.Controls.Add(this.radioButton4);
-            this.Controls.Add(this.radioButton3);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.rdbBillDiscAmt);
+            this.Controls.Add(this.rdbBillDiscPerc);
+            this.Controls.Add(this.rdbLineAmt);
+            this.Controls.Add(this.rdbNewPrice);
+            this.Controls.Add(this.rdbLineDisAmt);
+            this.Controls.Add(this.rdbLineDisPerc);
             this.Controls.Add(this.btnapply);
             this.Controls.Add(this.btnclose);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtdiscount);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btndot);
-            this.Controls.Add(this.btn50);
-            this.Controls.Add(this.btn20);
-            this.Controls.Add(this.btn10);
+            this.Controls.Add(this.btnenter);
+            this.Controls.Add(this.btndelete);
+            this.Controls.Add(this.btnclear);
             this.Controls.Add(this.btn00);
             this.Controls.Add(this.btn0);
             this.Controls.Add(this.btn3);
@@ -402,9 +418,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btn50;
-        private System.Windows.Forms.Button btn20;
-        private System.Windows.Forms.Button btn10;
+        private System.Windows.Forms.Button btnenter;
+        private System.Windows.Forms.Button btndelete;
+        private System.Windows.Forms.Button btnclear;
         private System.Windows.Forms.Button btn00;
         private System.Windows.Forms.Button btn0;
         private System.Windows.Forms.Button btn3;
@@ -418,14 +434,14 @@
         private System.Windows.Forms.Button btn7;
         private System.Windows.Forms.Button btndot;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtdiscount;
         private System.Windows.Forms.Button btnapply;
         private System.Windows.Forms.Button btnclose;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton6;
+        private System.Windows.Forms.RadioButton rdbLineDisPerc;
+        private System.Windows.Forms.RadioButton rdbLineDisAmt;
+        private System.Windows.Forms.RadioButton rdbNewPrice;
+        private System.Windows.Forms.RadioButton rdbLineAmt;
+        private System.Windows.Forms.RadioButton rdbBillDiscPerc;
+        private System.Windows.Forms.RadioButton rdbBillDiscAmt;
     }
 }
