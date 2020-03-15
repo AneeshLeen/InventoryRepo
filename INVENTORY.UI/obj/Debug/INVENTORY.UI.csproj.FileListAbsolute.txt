@@ -1,1120 +1,4 @@
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\bin\Debug\DevExpress.XtraBars.v15.2.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\bin\Debug\EntityFramework.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\bin\Debug\EntityFramework.SqlServer.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\bin\Debug\Jil.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\bin\Debug\Sigil.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\bin\Debug\SpellNumber.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\bin\Debug\DevExpress.XtraBars.v15.2.xml
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\bin\Debug\EntityFramework.xml
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\bin\Debug\EntityFramework.SqlServer.xml
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\bin\Debug\de\DevExpress.XtraBars.v15.2.resources.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\bin\Debug\es\DevExpress.XtraBars.v15.2.resources.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\bin\Debug\ja\DevExpress.XtraBars.v15.2.resources.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\bin\Debug\ru\DevExpress.XtraBars.v15.2.resources.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.csprojResolveAssemblyReference.cache
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.csproj.GenerateResource.Cache
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\RdlCompile.cache
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\RdlCompile.compiled
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\bin\Debug\INVENTORY.UI.exe.config
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\bin\Debug\INVENTORY.UI.exe
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\bin\Debug\INVENTORY.UI.pdb
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\bin\Debug\INVENTORY.DA.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\bin\Debug\INVENTORY.DA.pdb
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.Properties.Resources.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.exe.licenses
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.exe
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.pdb
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fBankControl.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fColorControl.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fCustomerControl.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fInvestmentControl.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fItemControl.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fMultipleSelectControl.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fNewProductControl.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fStockDetailControl.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fProductControl.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.ctlCustomControl.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fBackUpDB.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.FNewMainForm3.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.FNewMainForm2.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fCardTpyeSetups.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fCardTypeSetup.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fCashCollection.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fCashCollections.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fBank.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fBanks.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fBankTransaction.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fBankTransactions.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fCashDelivery.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fCashDeliverys.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fColorInfo.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fColorInfos.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fCompanies.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fCompany.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.FCreditSale.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.FCreditSales.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fEmployeeSalaries.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fEmployeeSalary.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fEncryptor.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fExpenditure.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fExpenditureAndIncome.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fExpenditureAndIncomes.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fExpenditures.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fExpenseItem.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fExpenseItems.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fInvestment.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fInvestmentHead.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fInvestmentHeads.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fInvestments.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fModel.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fModels.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fPReturn.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fPReturns.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fSOrderRetailSale.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fStocks.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fReturn.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fReturns.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fDailyCashStatment.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fDefaultingCustomer.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fSupplierDueRpt.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fSendSMS.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fSMSFormate.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fSMSFormates.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fSMSStatus.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fUserRole.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fBalanceSheet.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fCollectionRpt.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fCustomerDueReport.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fCustomerDueRpt.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fCustomerWiseReturnDetails.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fCustomerWseBenefit.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fDailyCreditSales.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fDailyLedger.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fPPurchaseDetails.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fProfitAndLoss.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fPSalesDetails.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fPWSalesRpt.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fStockVSSalesSummary.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fSummaryReport.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fDailyCollection.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fDamageProduct.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fDamageProducts.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fDesignation.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fDesignations.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fEmployee.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fEmployees.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.FNewMainForm.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fSOrder.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fPurchaseOrder.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fProduct.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fCustomer.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fCategory.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fCategorys.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fProducts.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fCustomers.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fLogIn.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fSOrders.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fPurchaseOrders.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fReportViewer.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.FSplash.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fBenefitRpt.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fCustomerWiseSales.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fMISRpt.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fMonthlyBenefitShow.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fMonthlyCreditSales.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fStockRpt.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fSuppliers.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fSupplier.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fSystemInformation.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fUser.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fUsers.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fDailyPurchaseRpt.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fExpenditureReport.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fDailySaleReport.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fPurchaseMonthly.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fPurchaseYearly.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fSupplierWisePurchase.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fTrialBalance.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fUpComingSchedule.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fYearlyBenefitShow.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fYearlySaleReport.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.UI\obj\Debug\INVENTORY.UI.fOrderMonthlyReport.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\bin\Debug\INVENTORY.UI.exe.config
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\bin\Debug\INVENTORY.UI.exe
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\bin\Debug\INVENTORY.UI.pdb
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\bin\Debug\DevExpress.XtraBars.v15.2.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\bin\Debug\EntityFramework.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\bin\Debug\EntityFramework.SqlServer.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\bin\Debug\INVENTORY.DA.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\bin\Debug\SpellNumber.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\bin\Debug\INVENTORY.DA.pdb
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\bin\Debug\DevExpress.XtraBars.v15.2.xml
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\bin\Debug\EntityFramework.xml
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\bin\Debug\EntityFramework.SqlServer.xml
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\bin\Debug\de\DevExpress.XtraBars.v15.2.resources.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\bin\Debug\es\DevExpress.XtraBars.v15.2.resources.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\bin\Debug\ja\DevExpress.XtraBars.v15.2.resources.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\bin\Debug\ru\DevExpress.XtraBars.v15.2.resources.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.csprojResolveAssemblyReference.cache
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fBankControl.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fColorControl.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCustomerControl.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fInvestmentControl.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fItemControl.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fMultipleSelectControl.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fNewProductControl.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fStockDetailControl.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fProductControl.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.ctlCustomControl.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fBackUpDB.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.FNewMainForm3.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.FNewMainForm2.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCardTpyeSetups.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCardTypeSetup.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCashCollection.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCashCollections.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fBank.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fBanks.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fBankTransaction.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fBankTransactions.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCashDelivery.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCashDeliverys.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fColorInfo.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fColorInfos.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCompanies.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCompany.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.FCreditSale.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.FCreditSales.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fEmployeeSalaries.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fEmployeeSalary.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fEncryptor.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fExpenditure.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fExpenditureAndIncome.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fExpenditureAndIncomes.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fExpenditures.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fExpenseItem.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fExpenseItems.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fInvestment.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fInvestmentHead.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fInvestmentHeads.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fInvestments.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fModel.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fModels.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fPReturn.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fPReturns.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSOrderRetailSale.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fStocks.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fReturn.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fReturns.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fDailyCashStatment.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fDefaultingCustomer.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSupplierDueRpt.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSendSMS.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSMSFormate.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSMSFormates.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSMSStatus.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fUserRole.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fBalanceSheet.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCollectionRpt.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCustomerDueReport.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCustomerDueRpt.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCustomerWiseReturnDetails.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCustomerWseBenefit.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fDailyCreditSales.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fDailyLedger.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fPPurchaseDetails.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fProfitAndLoss.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fPSalesDetails.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fPWSalesRpt.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fStockVSSalesSummary.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSummaryReport.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fDailyCollection.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fDamageProduct.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fDamageProducts.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fDesignation.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fDesignations.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fEmployee.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fEmployees.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.FNewMainForm.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSOrder.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fPurchaseOrder.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fProduct.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCustomer.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCategory.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCategorys.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fProducts.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCustomers.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fLogIn.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSOrders.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fPurchaseOrders.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fReportViewer.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.FSplash.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fBenefitRpt.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCustomerWiseSales.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fMISRpt.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fMonthlyBenefitShow.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fMonthlyCreditSales.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fStockRpt.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSuppliers.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSupplier.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSystemInformation.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fUser.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fUsers.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.Properties.Resources.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fDailyPurchaseRpt.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fExpenditureReport.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fDailySaleReport.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fPurchaseMonthly.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fPurchaseYearly.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSupplierWisePurchase.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fTrialBalance.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fUpComingSchedule.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fYearlyBenefitShow.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fYearlySaleReport.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fOrderMonthlyReport.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.csproj.GenerateResource.Cache
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.exe.licenses
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\RdlCompile.cache
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\RdlCompile.compiled
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.exe
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.pdb
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\bin\Debug\INVENTORY.UI.exe.config
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.exe
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.pdb
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\bin\Debug\INVENTORY.UI.exe
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\bin\Debug\INVENTORY.UI.pdb
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\bin\Debug\DevExpress.XtraBars.v15.2.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\bin\Debug\EntityFramework.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\bin\Debug\EntityFramework.SqlServer.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\bin\Debug\INVENTORY.DA.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\bin\Debug\SpellNumber.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\bin\Debug\INVENTORY.DA.pdb
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\bin\Debug\DevExpress.XtraBars.v15.2.xml
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\bin\Debug\EntityFramework.xml
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\bin\Debug\EntityFramework.SqlServer.xml
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\bin\Debug\de\DevExpress.XtraBars.v15.2.resources.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\bin\Debug\es\DevExpress.XtraBars.v15.2.resources.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\bin\Debug\ja\DevExpress.XtraBars.v15.2.resources.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\bin\Debug\ru\DevExpress.XtraBars.v15.2.resources.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.csprojResolveAssemblyReference.cache
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fBankControl.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fColorControl.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCustomerControl.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fInvestmentControl.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fItemControl.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fMultipleSelectControl.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fNewProductControl.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fStockDetailControl.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fProductControl.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.ctlCustomControl.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fBackUpDB.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.FNewMainForm3.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.FNewMainForm2.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCardTpyeSetups.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCardTypeSetup.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCashCollection.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCashCollections.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fBank.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fBanks.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fBankTransaction.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fBankTransactions.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCashDelivery.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCashDeliverys.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fColorInfo.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fColorInfos.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCompanies.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCompany.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.FCreditSale.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.FCreditSales.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fEmployeeSalaries.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fEmployeeSalary.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fEncryptor.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fExpenditure.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fExpenditureAndIncome.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fExpenditureAndIncomes.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fExpenditures.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fExpenseItem.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fExpenseItems.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fInvestment.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fInvestmentHead.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fInvestmentHeads.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fInvestments.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fModel.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fModels.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fPReturn.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fPReturns.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSOrderRetailSale.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fStocks.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fReturn.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fReturns.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fDailyCashStatment.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fDefaultingCustomer.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSupplierDueRpt.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSendSMS.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSMSFormate.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSMSFormates.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSMSStatus.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fUserRole.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fBalanceSheet.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCollectionRpt.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCustomerDueReport.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCustomerDueRpt.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCustomerWiseReturnDetails.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCustomerWseBenefit.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fDailyCreditSales.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fDailyLedger.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fPPurchaseDetails.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fProfitAndLoss.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fPSalesDetails.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fPWSalesRpt.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fStockVSSalesSummary.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSummaryReport.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fDailyCollection.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fDamageProduct.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fDamageProducts.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fDesignation.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fDesignations.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fEmployee.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fEmployees.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.FNewMainForm.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSOrder.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fPurchaseOrder.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fProduct.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCustomer.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCategory.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCategorys.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fProducts.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCustomers.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fLogIn.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSOrders.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fPurchaseOrders.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fReportViewer.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.FSplash.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fBenefitRpt.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCustomerWiseSales.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fMISRpt.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fMonthlyBenefitShow.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fMonthlyCreditSales.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fStockRpt.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSuppliers.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSupplier.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSystemInformation.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fUser.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fUsers.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.Properties.Resources.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fDailyPurchaseRpt.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fExpenditureReport.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fDailySaleReport.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fPurchaseMonthly.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fPurchaseYearly.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSupplierWisePurchase.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fTrialBalance.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fUpComingSchedule.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fYearlyBenefitShow.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fYearlySaleReport.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fOrderMonthlyReport.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.csproj.GenerateResource.Cache
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.exe.licenses
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\RdlCompile.cache
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop23112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\RdlCompile.compiled
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\bin\Debug\INVENTORY.UI.exe.config
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.exe
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.pdb
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\bin\Debug\INVENTORY.UI.exe
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\bin\Debug\INVENTORY.UI.pdb
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\bin\Debug\DevExpress.XtraBars.v15.2.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\bin\Debug\EntityFramework.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\bin\Debug\EntityFramework.SqlServer.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\bin\Debug\INVENTORY.DA.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\bin\Debug\SpellNumber.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\bin\Debug\INVENTORY.DA.pdb
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\bin\Debug\DevExpress.XtraBars.v15.2.xml
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\bin\Debug\EntityFramework.xml
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\bin\Debug\EntityFramework.SqlServer.xml
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\bin\Debug\de\DevExpress.XtraBars.v15.2.resources.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\bin\Debug\es\DevExpress.XtraBars.v15.2.resources.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\bin\Debug\ja\DevExpress.XtraBars.v15.2.resources.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\bin\Debug\ru\DevExpress.XtraBars.v15.2.resources.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.csprojResolveAssemblyReference.cache
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fBankControl.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fColorControl.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCustomerControl.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fInvestmentControl.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fItemControl.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fMultipleSelectControl.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fNewProductControl.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fStockDetailControl.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fProductControl.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.ctlCustomControl.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fBackUpDB.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.FNewMainForm3.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.FNewMainForm2.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCardTpyeSetups.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCardTypeSetup.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCashCollection.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCashCollections.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fBank.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fBanks.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fBankTransaction.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fBankTransactions.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCashDelivery.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCashDeliverys.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fColorInfo.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fColorInfos.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCompanies.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCompany.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.FCreditSale.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.FCreditSales.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fEmployeeSalaries.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fEmployeeSalary.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fEncryptor.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fExpenditure.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fExpenditureAndIncome.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fExpenditureAndIncomes.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fExpenditures.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fExpenseItem.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fExpenseItems.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fInvestment.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fInvestmentHead.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fInvestmentHeads.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fInvestments.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fModel.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fModels.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fPReturn.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fPReturns.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSOrderRetailSale.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fStocks.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fReturn.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fReturns.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fDailyCashStatment.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fDefaultingCustomer.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSupplierDueRpt.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSendSMS.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSMSFormate.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSMSFormates.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSMSStatus.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fUserRole.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fBalanceSheet.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCollectionRpt.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCustomerDueReport.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCustomerDueRpt.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCustomerWiseReturnDetails.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCustomerWseBenefit.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fDailyCreditSales.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fDailyLedger.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fPPurchaseDetails.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fProfitAndLoss.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fPSalesDetails.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fPWSalesRpt.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fStockVSSalesSummary.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSummaryReport.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fDailyCollection.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fDamageProduct.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fDamageProducts.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fDesignation.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fDesignations.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fEmployee.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fEmployees.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.FNewMainForm.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSOrder.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fPurchaseOrder.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fProduct.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCustomer.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCategory.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCategorys.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fProducts.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCustomers.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fLogIn.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSOrders.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fPurchaseOrders.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fReportViewer.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.FSplash.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fBenefitRpt.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCustomerWiseSales.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fMISRpt.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fMonthlyBenefitShow.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fMonthlyCreditSales.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fStockRpt.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSuppliers.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSupplier.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSystemInformation.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fUser.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fUsers.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.Properties.Resources.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fDailyPurchaseRpt.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fExpenditureReport.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fDailySaleReport.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fPurchaseMonthly.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fPurchaseYearly.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSupplierWisePurchase.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fTrialBalance.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fUpComingSchedule.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fYearlyBenefitShow.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fYearlySaleReport.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fOrderMonthlyReport.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.csproj.GenerateResource.Cache
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.exe.licenses
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\RdlCompile.cache
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\RdlCompile.compiled
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fGodown.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fGodowns.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\bin\Debug\INVENTORY.UI.exe.config
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.exe
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.pdb
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\bin\Debug\INVENTORY.UI.exe
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\bin\Debug\INVENTORY.UI.pdb
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\bin\Debug\DevExpress.XtraBars.v15.2.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\bin\Debug\EntityFramework.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\bin\Debug\EntityFramework.SqlServer.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\bin\Debug\INVENTORY.DA.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\bin\Debug\SpellNumber.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\bin\Debug\INVENTORY.DA.pdb
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\bin\Debug\DevExpress.XtraBars.v15.2.xml
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\bin\Debug\EntityFramework.xml
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\bin\Debug\EntityFramework.SqlServer.xml
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\bin\Debug\de\DevExpress.XtraBars.v15.2.resources.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\bin\Debug\es\DevExpress.XtraBars.v15.2.resources.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\bin\Debug\ja\DevExpress.XtraBars.v15.2.resources.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\bin\Debug\ru\DevExpress.XtraBars.v15.2.resources.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.csprojResolveAssemblyReference.cache
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fBankControl.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fColorControl.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCustomerControl.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fInvestmentControl.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fItemControl.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fMultipleSelectControl.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fNewProductControl.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fStockDetailControl.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fProductControl.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.ctlCustomControl.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fBackUpDB.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.FNewMainForm3.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.FNewMainForm2.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCardTpyeSetups.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCardTypeSetup.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCashCollection.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCashCollections.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fBank.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fBanks.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fBankTransaction.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fBankTransactions.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCashDelivery.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCashDeliverys.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fColorInfo.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fColorInfos.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCompanies.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCompany.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fGodown.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fGodowns.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.FCreditSale.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.FCreditSales.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fEmployeeSalaries.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fEmployeeSalary.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fEncryptor.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fExpenditure.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fExpenditureAndIncome.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fExpenditureAndIncomes.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fExpenditures.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fExpenseItem.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fExpenseItems.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fInvestment.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fInvestmentHead.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fInvestmentHeads.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fInvestments.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fModel.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fModels.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fPReturn.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fPReturns.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSOrderRetailSale.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fStocks.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fReturn.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fReturns.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fDailyCashStatment.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fDefaultingCustomer.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSupplierDueRpt.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSendSMS.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSMSFormate.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSMSFormates.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSMSStatus.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fUserRole.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fBalanceSheet.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCollectionRpt.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCustomerDueReport.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCustomerDueRpt.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCustomerWiseReturnDetails.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCustomerWseBenefit.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fDailyCreditSales.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fDailyLedger.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fPPurchaseDetails.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fProfitAndLoss.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fPSalesDetails.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fPWSalesRpt.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fStockVSSalesSummary.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSummaryReport.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fDailyCollection.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fDamageProduct.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fDamageProducts.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fDesignation.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fDesignations.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fEmployee.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fEmployees.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.FNewMainForm.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSOrder.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fPurchaseOrder.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fProduct.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCustomer.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCategory.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCategorys.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fProducts.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCustomers.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fLogIn.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSOrders.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fPurchaseOrders.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fReportViewer.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.FSplash.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fBenefitRpt.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCustomerWiseSales.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fMISRpt.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fMonthlyBenefitShow.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fMonthlyCreditSales.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fStockRpt.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSuppliers.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSupplier.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSystemInformation.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fUser.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fUsers.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.Properties.Resources.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fDailyPurchaseRpt.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fExpenditureReport.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fDailySaleReport.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fPurchaseMonthly.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fPurchaseYearly.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSupplierWisePurchase.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fTrialBalance.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fUpComingSchedule.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fYearlyBenefitShow.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fYearlySaleReport.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fOrderMonthlyReport.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.csproj.GenerateResource.Cache
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.exe.licenses
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\RdlCompile.cache
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.UI\obj\Debug\RdlCompile.compiled
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\bin\Debug\INVENTORY.UI.exe.config
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.exe
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.pdb
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\bin\Debug\INVENTORY.UI.exe
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\bin\Debug\INVENTORY.UI.pdb
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\bin\Debug\DevExpress.XtraBars.v15.2.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\bin\Debug\EntityFramework.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\bin\Debug\EntityFramework.SqlServer.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\bin\Debug\INVENTORY.DA.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\bin\Debug\SpellNumber.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\bin\Debug\INVENTORY.DA.pdb
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\bin\Debug\DevExpress.XtraBars.v15.2.xml
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\bin\Debug\EntityFramework.xml
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\bin\Debug\EntityFramework.SqlServer.xml
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\bin\Debug\de\DevExpress.XtraBars.v15.2.resources.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\bin\Debug\es\DevExpress.XtraBars.v15.2.resources.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\bin\Debug\ja\DevExpress.XtraBars.v15.2.resources.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\bin\Debug\ru\DevExpress.XtraBars.v15.2.resources.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.csprojResolveAssemblyReference.cache
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fBankControl.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fColorControl.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCustomerControl.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fInvestmentControl.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fItemControl.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fMultipleSelectControl.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fNewProductControl.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fStockDetailControl.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fProductControl.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.ctlCustomControl.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fBackUpDB.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.FNewMainForm3.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.FNewMainForm2.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCardTpyeSetups.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCardTypeSetup.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCashCollection.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCashCollections.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fBank.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fBanks.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fBankTransaction.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fBankTransactions.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCashDelivery.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCashDeliverys.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fColorInfo.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fColorInfos.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCompanies.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCompany.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fGodown.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fGodowns.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.FCreditSale.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.FCreditSales.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fEmployeeSalaries.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fEmployeeSalary.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fEncryptor.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fExpenditure.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fExpenditureAndIncome.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fExpenditureAndIncomes.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fExpenditures.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fExpenseItem.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fExpenseItems.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fInvestment.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fInvestmentHead.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fInvestmentHeads.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fInvestments.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fModel.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fModels.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fPReturn.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fPReturns.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSOrderRetailSale.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fStocks.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fReturn.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fReturns.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fDailyCashStatment.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fDefaultingCustomer.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSupplierDueRpt.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSendSMS.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSMSFormate.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSMSFormates.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSMSStatus.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fUserRole.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fBalanceSheet.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCollectionRpt.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCustomerDueReport.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCustomerDueRpt.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCustomerWiseReturnDetails.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCustomerWseBenefit.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fDailyCreditSales.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fDailyLedger.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fPPurchaseDetails.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fProfitAndLoss.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fPSalesDetails.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fPWSalesRpt.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fStockVSSalesSummary.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSummaryReport.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fDailyCollection.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fDamageProduct.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fDamageProducts.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fDesignation.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fDesignations.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fEmployee.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fEmployees.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.FNewMainForm.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSOrder.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fPurchaseOrder.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fProduct.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCustomer.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCategory.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCategorys.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fProducts.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCustomers.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fLogIn.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSOrders.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fPurchaseOrders.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fReportViewer.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.FSplash.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fBenefitRpt.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCustomerWiseSales.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fMISRpt.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fMonthlyBenefitShow.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fMonthlyCreditSales.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fStockRpt.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSuppliers.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSupplier.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSystemInformation.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fUser.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fUsers.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.Properties.Resources.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fDailyPurchaseRpt.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fExpenditureReport.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fDailySaleReport.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fPurchaseMonthly.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fPurchaseYearly.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSupplierWisePurchase.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fTrialBalance.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fUpComingSchedule.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fYearlyBenefitShow.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fYearlySaleReport.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fOrderMonthlyReport.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.csproj.GenerateResource.Cache
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.exe.licenses
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\RdlCompile.cache
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\RdlCompile.compiled
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\bin\Debug\aa\INVENTORY.UI.resources.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\bin\Debug\af\INVENTORY.UI.resources.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fGodown.aa.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fGodown.af.resources
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\aa\INVENTORY.UI.resources.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.UI\obj\Debug\af\INVENTORY.UI.resources.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop09122019\Main_Files\Software\INVENTORY.UI\bin\Debug\INVENTORY.UI.exe.config
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop09122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.exe
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop09122019\Main_Files\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.pdb
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\INVENTORY.UI.exe.config
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\INVENTORY.UI.exe
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\INVENTORY.UI.pdb
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\aa\INVENTORY.UI.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\af\INVENTORY.UI.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\DevExpress.Charts.v15.2.Core.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\DevExpress.Data.v15.2.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\DevExpress.Printing.v15.2.Core.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\DevExpress.Sparkline.v15.2.Core.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\DevExpress.Utils.v15.2.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\DevExpress.XtraBars.v15.2.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\DevExpress.XtraCharts.v15.2.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\DevExpress.XtraCharts.v15.2.UI.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\DevExpress.XtraCharts.v15.2.Wizard.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\DevExpress.XtraEditors.v15.2.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\DevExpress.XtraGrid.v15.2.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\DevExpress.XtraLayout.v15.2.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\DevExpress.XtraPrinting.v15.2.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\EntityFramework.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\EntityFramework.SqlServer.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\INVENTORY.DA.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\SpellNumber.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\DevExpress.Utils.v15.2.UI.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\DevExpress.XtraTreeList.v15.2.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\DevExpress.XtraVerticalGrid.v15.2.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\DevExpress.XtraNavBar.v15.2.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\DevExpress.RichEdit.v15.2.Core.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\Microsoft.SqlServer.Types.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\DevExpress.XtraRichEdit.v15.2.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\DevExpress.Office.v15.2.Core.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\DevExpress.Pdf.v15.2.Core.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\DevExpress.Pdf.v15.2.Drawing.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\INVENTORY.DA.pdb
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\INVENTORY.DA.dll.config
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\DevExpress.Data.v15.2.xml
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\DevExpress.Printing.v15.2.Core.xml
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\DevExpress.Sparkline.v15.2.Core.xml
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\DevExpress.Utils.v15.2.xml
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\DevExpress.XtraBars.v15.2.xml
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\DevExpress.XtraCharts.v15.2.xml
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\DevExpress.XtraCharts.v15.2.UI.xml
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\DevExpress.XtraCharts.v15.2.Wizard.xml
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\DevExpress.XtraEditors.v15.2.xml
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\DevExpress.XtraGrid.v15.2.xml
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\DevExpress.XtraLayout.v15.2.xml
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\DevExpress.XtraPrinting.v15.2.xml
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\EntityFramework.xml
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\EntityFramework.SqlServer.xml
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\DevExpress.Utils.v15.2.UI.xml
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\DevExpress.XtraTreeList.v15.2.xml
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\DevExpress.XtraVerticalGrid.v15.2.xml
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\DevExpress.XtraNavBar.v15.2.xml
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\DevExpress.RichEdit.v15.2.Core.xml
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\DevExpress.XtraRichEdit.v15.2.xml
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\DevExpress.Office.v15.2.Core.xml
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\DevExpress.Pdf.v15.2.Core.xml
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\DevExpress.Pdf.v15.2.Drawing.xml
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\de\DevExpress.Data.v15.2.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\es\DevExpress.Data.v15.2.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\ja\DevExpress.Data.v15.2.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\ru\DevExpress.Data.v15.2.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\de\DevExpress.Printing.v15.2.Core.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\es\DevExpress.Printing.v15.2.Core.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\ja\DevExpress.Printing.v15.2.Core.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\ru\DevExpress.Printing.v15.2.Core.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\de\DevExpress.Sparkline.v15.2.Core.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\es\DevExpress.Sparkline.v15.2.Core.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\ja\DevExpress.Sparkline.v15.2.Core.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\ru\DevExpress.Sparkline.v15.2.Core.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\de\DevExpress.Utils.v15.2.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\es\DevExpress.Utils.v15.2.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\ja\DevExpress.Utils.v15.2.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\ru\DevExpress.Utils.v15.2.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\de\DevExpress.XtraBars.v15.2.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\es\DevExpress.XtraBars.v15.2.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\ja\DevExpress.XtraBars.v15.2.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\ru\DevExpress.XtraBars.v15.2.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\de\DevExpress.XtraCharts.v15.2.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\es\DevExpress.XtraCharts.v15.2.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\ja\DevExpress.XtraCharts.v15.2.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\ru\DevExpress.XtraCharts.v15.2.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\de\DevExpress.XtraCharts.v15.2.Wizard.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\es\DevExpress.XtraCharts.v15.2.Wizard.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\ja\DevExpress.XtraCharts.v15.2.Wizard.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\ru\DevExpress.XtraCharts.v15.2.Wizard.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\de\DevExpress.XtraEditors.v15.2.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\es\DevExpress.XtraEditors.v15.2.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\ja\DevExpress.XtraEditors.v15.2.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\ru\DevExpress.XtraEditors.v15.2.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\de\DevExpress.XtraGrid.v15.2.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\es\DevExpress.XtraGrid.v15.2.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\ja\DevExpress.XtraGrid.v15.2.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\ru\DevExpress.XtraGrid.v15.2.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\de\DevExpress.XtraLayout.v15.2.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\es\DevExpress.XtraLayout.v15.2.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\ja\DevExpress.XtraLayout.v15.2.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\ru\DevExpress.XtraLayout.v15.2.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\de\DevExpress.XtraPrinting.v15.2.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\es\DevExpress.XtraPrinting.v15.2.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\ja\DevExpress.XtraPrinting.v15.2.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\ru\DevExpress.XtraPrinting.v15.2.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\de\DevExpress.Utils.v15.2.UI.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\es\DevExpress.Utils.v15.2.UI.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\ja\DevExpress.Utils.v15.2.UI.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\ru\DevExpress.Utils.v15.2.UI.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\de\DevExpress.XtraTreeList.v15.2.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\es\DevExpress.XtraTreeList.v15.2.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\ja\DevExpress.XtraTreeList.v15.2.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\ru\DevExpress.XtraTreeList.v15.2.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\de\DevExpress.XtraVerticalGrid.v15.2.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\es\DevExpress.XtraVerticalGrid.v15.2.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\ja\DevExpress.XtraVerticalGrid.v15.2.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\ru\DevExpress.XtraVerticalGrid.v15.2.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\de\DevExpress.XtraNavBar.v15.2.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\es\DevExpress.XtraNavBar.v15.2.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\ja\DevExpress.XtraNavBar.v15.2.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\ru\DevExpress.XtraNavBar.v15.2.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\de\DevExpress.RichEdit.v15.2.Core.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\es\DevExpress.RichEdit.v15.2.Core.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\ja\DevExpress.RichEdit.v15.2.Core.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\ru\DevExpress.RichEdit.v15.2.Core.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\de\DevExpress.XtraRichEdit.v15.2.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\es\DevExpress.XtraRichEdit.v15.2.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\ja\DevExpress.XtraRichEdit.v15.2.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\ru\DevExpress.XtraRichEdit.v15.2.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\de\DevExpress.Office.v15.2.Core.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\es\DevExpress.Office.v15.2.Core.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\ja\DevExpress.Office.v15.2.Core.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\ru\DevExpress.Office.v15.2.Core.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\de\DevExpress.Pdf.v15.2.Core.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\es\DevExpress.Pdf.v15.2.Core.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\ja\DevExpress.Pdf.v15.2.Core.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\bin\Debug\ru\DevExpress.Pdf.v15.2.Core.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.csprojAssemblyReference.cache
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fBankControl.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fColorControl.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCustomerControl.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fInvestmentControl.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fItemControl.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fMultipleSelectControl.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fNewProductControl.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fStockDetailControl.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fProductControl.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.ctlCustomControl.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fBackUpDB.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.FNewMainForm3.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.FNewMainForm2.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.frmBranchMaster.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCardTpyeSetups.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCardTypeSetup.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCashCollection.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCashCollections.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fBank.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fBanks.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fBankTransaction.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fBankTransactions.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCashDelivery.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCashDeliverys.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fColorInfo.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fColorInfos.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCompanies.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCompany.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fGodown.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fGodowns.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.FCreditSale.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.FCreditSales.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fEmployeeSalaries.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fEmployeeSalary.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fEncryptor.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fExpenditure.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fExpenditureAndIncome.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fExpenditureAndIncomes.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fExpenditures.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fExpenseItem.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fExpenseItems.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fInvestment.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fInvestmentHead.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fInvestmentHeads.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fInvestments.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fModel.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fModels.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fPReturn.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fPReturns.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSOrderRetailSale.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSOrders.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fStocks.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fReturn.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fReturns.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fDailyCashStatment.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fDefaultingCustomer.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSupplierDueRpt.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSendSMS.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSMSFormate.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSMSFormates.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSMSStatus.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fUserRole.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fBalanceSheet.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCollectionRpt.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCustomerDueReport.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCustomerDueRpt.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCustomerWiseReturnDetails.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCustomerWseBenefit.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fDailyCreditSales.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fDailyLedger.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fPPurchaseDetails.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fProfitAndLoss.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fPSalesDetails.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fPWSalesRpt.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fStockVSSalesSummary.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSummaryReport.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fDailyCollection.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fDamageProduct.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fDamageProducts.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fDesignation.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fDesignations.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fEmployee.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fEmployees.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.FNewMainForm.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSOrder.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fPurchaseOrder.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fProduct.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCustomer.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCategory.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCategorys.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fProducts.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCustomers.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fLogIn.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fPurchaseOrders.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fReportViewer.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.FSplash.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fBenefitRpt.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCustomerWiseSales.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fMISRpt.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fMonthlyBenefitShow.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fMonthlyCreditSales.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fStockRpt.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSuppliers.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSupplier.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSystemInformation.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fUser.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fUsers.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.Properties.Resources.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fDailyPurchaseRpt.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fExpenditureReport.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fDailySaleReport.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fPurchaseMonthly.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fPurchaseYearly.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fSupplierWisePurchase.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fTrialBalance.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fUpComingSchedule.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fYearlyBenefitShow.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fYearlySaleReport.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fOrderMonthlyReport.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fGodown.aa.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.fGodown.af.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.csproj.GenerateResource.cache
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.exe.licenses
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\aa\INVENTORY.UI.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\af\INVENTORY.UI.resources.dll
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.csproj.CopyComplete
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.exe
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.pdb
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.frmpaypop.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.frmpricechk.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.frmoptions.resources
-F:\POS_c#\Software\INVENTORY.UI\obj\Debug\INVENTORY.UI.frmquickmenu.resources
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.csprojAssemblyReference.cache
 C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.fBankControl.resources
 C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.fColorControl.resources
 C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCustomerControl.resources
@@ -1249,4 +133,142 @@ C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.fGodown.a
 C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.fGodown.af.resources
 C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.csproj.GenerateResource.cache
 C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.exe.licenses
-C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.csprojAssemblyReference.cache
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\INVENTORY.UI.exe.config
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\INVENTORY.UI.exe
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\INVENTORY.UI.pdb
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\aa\INVENTORY.UI.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\af\INVENTORY.UI.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\DevExpress.Charts.v15.2.Core.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\DevExpress.Data.v15.2.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\DevExpress.Printing.v15.2.Core.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\DevExpress.Sparkline.v15.2.Core.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\DevExpress.Utils.v15.2.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\DevExpress.XtraBars.v15.2.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\DevExpress.XtraCharts.v15.2.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\DevExpress.XtraCharts.v15.2.UI.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\DevExpress.XtraCharts.v15.2.Wizard.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\DevExpress.XtraEditors.v15.2.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\DevExpress.XtraGrid.v15.2.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\DevExpress.XtraLayout.v15.2.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\DevExpress.XtraPrinting.v15.2.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\EntityFramework.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\EntityFramework.SqlServer.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\INVENTORY.DA.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\KeepAutomation.Barcode.Windows.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\SpellNumber.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\DevExpress.Utils.v15.2.UI.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\DevExpress.XtraTreeList.v15.2.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\DevExpress.XtraVerticalGrid.v15.2.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\DevExpress.XtraNavBar.v15.2.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\DevExpress.RichEdit.v15.2.Core.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\DevExpress.XtraRichEdit.v15.2.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\DevExpress.Office.v15.2.Core.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\DevExpress.Pdf.v15.2.Core.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\DevExpress.Pdf.v15.2.Drawing.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\INVENTORY.DA.pdb
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\INVENTORY.DA.dll.config
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\DevExpress.Data.v15.2.xml
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\DevExpress.Printing.v15.2.Core.xml
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\DevExpress.Sparkline.v15.2.Core.xml
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\DevExpress.Utils.v15.2.xml
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\DevExpress.XtraBars.v15.2.xml
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\DevExpress.XtraCharts.v15.2.xml
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\DevExpress.XtraCharts.v15.2.UI.xml
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\DevExpress.XtraCharts.v15.2.Wizard.xml
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\DevExpress.XtraEditors.v15.2.xml
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\DevExpress.XtraGrid.v15.2.xml
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\DevExpress.XtraLayout.v15.2.xml
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\DevExpress.XtraPrinting.v15.2.xml
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\EntityFramework.xml
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\EntityFramework.SqlServer.xml
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\DevExpress.Utils.v15.2.UI.xml
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\DevExpress.XtraTreeList.v15.2.xml
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\DevExpress.XtraVerticalGrid.v15.2.xml
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\DevExpress.XtraNavBar.v15.2.xml
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\DevExpress.RichEdit.v15.2.Core.xml
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\DevExpress.XtraRichEdit.v15.2.xml
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\DevExpress.Office.v15.2.Core.xml
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\DevExpress.Pdf.v15.2.Core.xml
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\DevExpress.Pdf.v15.2.Drawing.xml
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\de\DevExpress.Data.v15.2.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\es\DevExpress.Data.v15.2.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\ja\DevExpress.Data.v15.2.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\ru\DevExpress.Data.v15.2.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\de\DevExpress.Printing.v15.2.Core.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\es\DevExpress.Printing.v15.2.Core.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\ja\DevExpress.Printing.v15.2.Core.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\ru\DevExpress.Printing.v15.2.Core.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\de\DevExpress.Sparkline.v15.2.Core.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\es\DevExpress.Sparkline.v15.2.Core.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\ja\DevExpress.Sparkline.v15.2.Core.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\ru\DevExpress.Sparkline.v15.2.Core.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\de\DevExpress.Utils.v15.2.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\es\DevExpress.Utils.v15.2.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\ja\DevExpress.Utils.v15.2.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\ru\DevExpress.Utils.v15.2.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\de\DevExpress.XtraBars.v15.2.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\es\DevExpress.XtraBars.v15.2.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\ja\DevExpress.XtraBars.v15.2.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\ru\DevExpress.XtraBars.v15.2.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\de\DevExpress.XtraCharts.v15.2.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\es\DevExpress.XtraCharts.v15.2.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\ja\DevExpress.XtraCharts.v15.2.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\ru\DevExpress.XtraCharts.v15.2.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\de\DevExpress.XtraCharts.v15.2.Wizard.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\es\DevExpress.XtraCharts.v15.2.Wizard.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\ja\DevExpress.XtraCharts.v15.2.Wizard.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\ru\DevExpress.XtraCharts.v15.2.Wizard.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\de\DevExpress.XtraEditors.v15.2.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\es\DevExpress.XtraEditors.v15.2.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\ja\DevExpress.XtraEditors.v15.2.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\ru\DevExpress.XtraEditors.v15.2.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\de\DevExpress.XtraGrid.v15.2.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\es\DevExpress.XtraGrid.v15.2.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\ja\DevExpress.XtraGrid.v15.2.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\ru\DevExpress.XtraGrid.v15.2.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\de\DevExpress.XtraLayout.v15.2.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\es\DevExpress.XtraLayout.v15.2.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\ja\DevExpress.XtraLayout.v15.2.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\ru\DevExpress.XtraLayout.v15.2.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\de\DevExpress.XtraPrinting.v15.2.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\es\DevExpress.XtraPrinting.v15.2.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\ja\DevExpress.XtraPrinting.v15.2.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\ru\DevExpress.XtraPrinting.v15.2.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\de\DevExpress.Utils.v15.2.UI.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\es\DevExpress.Utils.v15.2.UI.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\ja\DevExpress.Utils.v15.2.UI.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\ru\DevExpress.Utils.v15.2.UI.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\de\DevExpress.XtraTreeList.v15.2.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\es\DevExpress.XtraTreeList.v15.2.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\ja\DevExpress.XtraTreeList.v15.2.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\ru\DevExpress.XtraTreeList.v15.2.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\de\DevExpress.XtraVerticalGrid.v15.2.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\es\DevExpress.XtraVerticalGrid.v15.2.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\ja\DevExpress.XtraVerticalGrid.v15.2.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\ru\DevExpress.XtraVerticalGrid.v15.2.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\de\DevExpress.XtraNavBar.v15.2.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\es\DevExpress.XtraNavBar.v15.2.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\ja\DevExpress.XtraNavBar.v15.2.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\ru\DevExpress.XtraNavBar.v15.2.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\de\DevExpress.RichEdit.v15.2.Core.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\es\DevExpress.RichEdit.v15.2.Core.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\ja\DevExpress.RichEdit.v15.2.Core.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\ru\DevExpress.RichEdit.v15.2.Core.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\de\DevExpress.XtraRichEdit.v15.2.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\es\DevExpress.XtraRichEdit.v15.2.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\ja\DevExpress.XtraRichEdit.v15.2.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\ru\DevExpress.XtraRichEdit.v15.2.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\de\DevExpress.Office.v15.2.Core.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\es\DevExpress.Office.v15.2.Core.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\ja\DevExpress.Office.v15.2.Core.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\ru\DevExpress.Office.v15.2.Core.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\de\DevExpress.Pdf.v15.2.Core.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\es\DevExpress.Pdf.v15.2.Core.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\ja\DevExpress.Pdf.v15.2.Core.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\bin\Debug\ru\DevExpress.Pdf.v15.2.Core.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\aa\INVENTORY.UI.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\af\INVENTORY.UI.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.csproj.CopyComplete
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.exe
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.pdb

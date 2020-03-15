@@ -1,64 +1,9 @@
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.DA\bin\Debug\INVENTORY.DA.dll.config
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.DA\bin\Debug\INVENTORY.DA.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.DA\bin\Debug\INVENTORY.DA.pdb
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.DA\bin\Debug\EntityFramework.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.DA\bin\Debug\EntityFramework.SqlServer.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.DA\bin\Debug\SpellNumber.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.DA\bin\Debug\EntityFramework.xml
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.DA\bin\Debug\EntityFramework.SqlServer.xml
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.DA\obj\Debug\INVENTORY.DA.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.DA\obj\Debug\INVENTORY.DA.pdb
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop21112019-pc-backup\Main_Files\Software\AliyaLibrary.DA\obj\Debug\INVENTORY.DA.csprojResolveAssemblyReference.cache
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.DA\bin\Debug\INVENTORY.DA.dll.config
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.DA\bin\Debug\INVENTORY.DA.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.DA\bin\Debug\INVENTORY.DA.pdb
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.DA\bin\Debug\EntityFramework.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.DA\bin\Debug\EntityFramework.SqlServer.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.DA\bin\Debug\SpellNumber.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.DA\bin\Debug\EntityFramework.xml
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.DA\bin\Debug\EntityFramework.SqlServer.xml
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.DA\obj\Debug\INVENTORY.DA.csprojResolveAssemblyReference.cache
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.DA\obj\Debug\INVENTORY.DA.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop27112019-new\Main_Files\Software\INVENTORY.DA\obj\Debug\INVENTORY.DA.pdb
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.DA\obj\Debug\INVENTORY.DA.csprojResolveAssemblyReference.cache
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.DA\obj\Debug\INVENTORY.DA.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.DA\bin\Debug\INVENTORY.DA.dll.config
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.DA\bin\Debug\INVENTORY.DA.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.DA\bin\Debug\INVENTORY.DA.pdb
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.DA\bin\Debug\EntityFramework.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.DA\bin\Debug\EntityFramework.SqlServer.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.DA\bin\Debug\SpellNumber.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.DA\bin\Debug\EntityFramework.xml
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.DA\bin\Debug\EntityFramework.SqlServer.xml
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop03122019\Main_Files\Software\INVENTORY.DA\obj\Debug\INVENTORY.DA.pdb
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.DA\bin\Debug\INVENTORY.DA.dll.config
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.DA\bin\Debug\INVENTORY.DA.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.DA\bin\Debug\INVENTORY.DA.pdb
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.DA\bin\Debug\EntityFramework.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.DA\bin\Debug\EntityFramework.SqlServer.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.DA\bin\Debug\SpellNumber.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.DA\bin\Debug\EntityFramework.xml
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.DA\bin\Debug\EntityFramework.SqlServer.xml
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.DA\obj\Debug\INVENTORY.DA.csprojResolveAssemblyReference.cache
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.DA\obj\Debug\INVENTORY.DA.dll
-G:\New folde\New folder\New folder\CODE\Common\Desktop\Electronics-desktop04122019\Main_Files\Software\INVENTORY.DA\obj\Debug\INVENTORY.DA.pdb
-F:\POS_c#\Software\INVENTORY.DA\bin\Debug\INVENTORY.DA.dll.config
-F:\POS_c#\Software\INVENTORY.DA\bin\Debug\INVENTORY.DA.dll
-F:\POS_c#\Software\INVENTORY.DA\bin\Debug\INVENTORY.DA.pdb
-F:\POS_c#\Software\INVENTORY.DA\bin\Debug\EntityFramework.dll
-F:\POS_c#\Software\INVENTORY.DA\bin\Debug\EntityFramework.SqlServer.dll
-F:\POS_c#\Software\INVENTORY.DA\bin\Debug\SpellNumber.dll
-F:\POS_c#\Software\INVENTORY.DA\bin\Debug\EntityFramework.xml
-F:\POS_c#\Software\INVENTORY.DA\bin\Debug\EntityFramework.SqlServer.xml
-F:\POS_c#\Software\INVENTORY.DA\obj\Debug\INVENTORY.DA.csproj.CopyComplete
-F:\POS_c#\Software\INVENTORY.DA\obj\Debug\INVENTORY.DA.dll
-F:\POS_c#\Software\INVENTORY.DA\obj\Debug\INVENTORY.DA.pdb
-F:\POS_c#\Software\INVENTORY.DA\obj\Debug\INVENTORY.DA.csprojAssemblyReference.cache
 C:\DevelopmentSource\InventoryRepo\INVENTORY.DA\bin\Debug\INVENTORY.DA.dll.config
 C:\DevelopmentSource\InventoryRepo\INVENTORY.DA\bin\Debug\INVENTORY.DA.dll
 C:\DevelopmentSource\InventoryRepo\INVENTORY.DA\bin\Debug\INVENTORY.DA.pdb
 C:\DevelopmentSource\InventoryRepo\INVENTORY.DA\bin\Debug\EntityFramework.dll
 C:\DevelopmentSource\InventoryRepo\INVENTORY.DA\bin\Debug\EntityFramework.SqlServer.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.DA\bin\Debug\KeepAutomation.Barcode.Windows.dll
 C:\DevelopmentSource\InventoryRepo\INVENTORY.DA\bin\Debug\SpellNumber.dll
 C:\DevelopmentSource\InventoryRepo\INVENTORY.DA\bin\Debug\EntityFramework.xml
 C:\DevelopmentSource\InventoryRepo\INVENTORY.DA\bin\Debug\EntityFramework.SqlServer.xml
@@ -66,18 +11,3 @@ C:\DevelopmentSource\InventoryRepo\INVENTORY.DA\obj\Debug\INVENTORY.DA.csprojAss
 C:\DevelopmentSource\InventoryRepo\INVENTORY.DA\obj\Debug\INVENTORY.DA.csproj.CopyComplete
 C:\DevelopmentSource\InventoryRepo\INVENTORY.DA\obj\Debug\INVENTORY.DA.dll
 C:\DevelopmentSource\InventoryRepo\INVENTORY.DA\obj\Debug\INVENTORY.DA.pdb
-<<<<<<< HEAD
-C:\DevelopmentSource\InventoryRepo\INVENTORY.DA\bin\Debug\KeepAutomation.Barcode.Windows.dll
-=======
-C:\CodeBase\InventoryRepo\INVENTORY.DA\bin\Debug\INVENTORY.DA.dll.config
-C:\CodeBase\InventoryRepo\INVENTORY.DA\bin\Debug\INVENTORY.DA.dll
-C:\CodeBase\InventoryRepo\INVENTORY.DA\bin\Debug\INVENTORY.DA.pdb
-C:\CodeBase\InventoryRepo\INVENTORY.DA\bin\Debug\EntityFramework.dll
-C:\CodeBase\InventoryRepo\INVENTORY.DA\bin\Debug\EntityFramework.SqlServer.dll
-C:\CodeBase\InventoryRepo\INVENTORY.DA\bin\Debug\SpellNumber.dll
-C:\CodeBase\InventoryRepo\INVENTORY.DA\bin\Debug\EntityFramework.xml
-C:\CodeBase\InventoryRepo\INVENTORY.DA\bin\Debug\EntityFramework.SqlServer.xml
-C:\CodeBase\InventoryRepo\INVENTORY.DA\obj\Debug\INVENTORY.DA.dll
-C:\CodeBase\InventoryRepo\INVENTORY.DA\obj\Debug\INVENTORY.DA.pdb
-C:\CodeBase\InventoryRepo\INVENTORY.DA\obj\Debug\INVENTORY.DA.csprojResolveAssemblyReference.cache
->>>>>>> 1ba56e8591599fe57847770dec3dfbdc3e039c86
