@@ -45,7 +45,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(3, 24);
+            this.label1.Location = new System.Drawing.Point(3, 34);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(153, 25);
             this.label1.TabIndex = 0;
@@ -54,8 +54,9 @@
             // txtsearch
             // 
             this.txtsearch.Location = new System.Drawing.Point(162, 29);
+            this.txtsearch.Multiline = true;
             this.txtsearch.Name = "txtsearch";
-            this.txtsearch.Size = new System.Drawing.Size(217, 20);
+            this.txtsearch.Size = new System.Drawing.Size(217, 33);
             this.txtsearch.TabIndex = 1;
             this.txtsearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtsearch_KeyDown);
             this.txtsearch.Validated += new System.EventHandler(this.textBox1_Validated);
@@ -102,10 +103,10 @@
             // lblname1
             // 
             this.lblname1.AutoSize = true;
-            this.lblname1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblname1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
             this.lblname1.Location = new System.Drawing.Point(95, 82);
             this.lblname1.Name = "lblname1";
-            this.lblname1.Size = new System.Drawing.Size(0, 20);
+            this.lblname1.Size = new System.Drawing.Size(0, 31);
             this.lblname1.TabIndex = 6;
             // 
             // lblprice1

@@ -32,8 +32,14 @@ namespace INVENTORY.UI
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pctboxpromo = new System.Windows.Forms.PictureBox();
             this.dgProductspromo = new System.Windows.Forms.DataGridView();
+            this.clnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clnQTY = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clnUnitPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clnTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clVAT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblbilltotal = new System.Windows.Forms.Label();
             this.label52 = new System.Windows.Forms.Label();
             this.lblsavings = new System.Windows.Forms.Label();
@@ -53,11 +59,6 @@ namespace INVENTORY.UI
             this.lblBalance = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.grppromo = new System.Windows.Forms.GroupBox();
-            this.clnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clnQTY = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clnUnitPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clnTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clVAT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pctboxpromo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgProductspromo)).BeginInit();
             this.grppromo.SuspendLayout();
@@ -65,10 +66,10 @@ namespace INVENTORY.UI
             // 
             // pctboxpromo
             // 
-            this.pctboxpromo.Location = new System.Drawing.Point(648, 27);
+            this.pctboxpromo.Location = new System.Drawing.Point(638, 23);
             this.pctboxpromo.Margin = new System.Windows.Forms.Padding(4);
             this.pctboxpromo.Name = "pctboxpromo";
-            this.pctboxpromo.Size = new System.Drawing.Size(778, 676);
+            this.pctboxpromo.Size = new System.Drawing.Size(632, 694);
             this.pctboxpromo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctboxpromo.TabIndex = 0;
             this.pctboxpromo.TabStop = false;
@@ -78,6 +79,14 @@ namespace INVENTORY.UI
             this.dgProductspromo.AllowUserToAddRows = false;
             this.dgProductspromo.AllowUserToDeleteRows = false;
             this.dgProductspromo.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgProductspromo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgProductspromo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgProductspromo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.clnName,
@@ -89,18 +98,56 @@ namespace INVENTORY.UI
             this.dgProductspromo.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.dgProductspromo.MultiSelect = false;
             this.dgProductspromo.Name = "dgProductspromo";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.SlateGray;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgProductspromo.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SlateGray;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgProductspromo.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgProductspromo.RowHeadersVisible = false;
             this.dgProductspromo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgProductspromo.Size = new System.Drawing.Size(610, 418);
             this.dgProductspromo.TabIndex = 6;
+            // 
+            // clnName
+            // 
+            this.clnName.DataPropertyName = "ItemName";
+            this.clnName.HeaderText = "DESCRIPTION";
+            this.clnName.Name = "clnName";
+            this.clnName.ReadOnly = true;
+            this.clnName.Width = 300;
+            // 
+            // clnQTY
+            // 
+            this.clnQTY.DataPropertyName = "Quantity";
+            this.clnQTY.HeaderText = "QTY";
+            this.clnQTY.Name = "clnQTY";
+            this.clnQTY.ReadOnly = true;
+            this.clnQTY.Width = 80;
+            // 
+            // clnUnitPrice
+            // 
+            this.clnUnitPrice.DataPropertyName = "SRate";
+            this.clnUnitPrice.HeaderText = "PRICE";
+            this.clnUnitPrice.Name = "clnUnitPrice";
+            this.clnUnitPrice.ReadOnly = true;
+            // 
+            // clnTotal
+            // 
+            this.clnTotal.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.clnTotal.DataPropertyName = "Amount";
+            this.clnTotal.HeaderText = "AMOUNT";
+            this.clnTotal.Name = "clnTotal";
+            this.clnTotal.ReadOnly = true;
+            // 
+            // clVAT
+            // 
+            this.clVAT.DataPropertyName = "HST";
+            this.clVAT.HeaderText = "VAT";
+            this.clVAT.Name = "clVAT";
+            this.clVAT.Visible = false;
             // 
             // lblbilltotal
             // 
@@ -256,7 +303,7 @@ namespace INVENTORY.UI
             // 
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(25, 542);
+            this.label4.Location = new System.Drawing.Point(25, 544);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(95, 24);
@@ -332,53 +379,15 @@ namespace INVENTORY.UI
             this.grppromo.Controls.Add(this.lblrefundqty);
             this.grppromo.Location = new System.Drawing.Point(12, 12);
             this.grppromo.Name = "grppromo";
-            this.grppromo.Size = new System.Drawing.Size(629, 706);
+            this.grppromo.Size = new System.Drawing.Size(621, 706);
             this.grppromo.TabIndex = 295;
             this.grppromo.TabStop = false;
-            // 
-            // clnName
-            // 
-            this.clnName.DataPropertyName = "ItemName";
-            this.clnName.HeaderText = "DESCRIPTION";
-            this.clnName.Name = "clnName";
-            this.clnName.ReadOnly = true;
-            this.clnName.Width = 300;
-            // 
-            // clnQTY
-            // 
-            this.clnQTY.DataPropertyName = "Quantity";
-            this.clnQTY.HeaderText = "QTY";
-            this.clnQTY.Name = "clnQTY";
-            this.clnQTY.ReadOnly = true;
-            this.clnQTY.Width = 80;
-            // 
-            // clnUnitPrice
-            // 
-            this.clnUnitPrice.DataPropertyName = "SRate";
-            this.clnUnitPrice.HeaderText = "PRICE";
-            this.clnUnitPrice.Name = "clnUnitPrice";
-            this.clnUnitPrice.ReadOnly = true;
-            // 
-            // clnTotal
-            // 
-            this.clnTotal.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.clnTotal.DataPropertyName = "Amount";
-            this.clnTotal.HeaderText = "AMOUNT";
-            this.clnTotal.Name = "clnTotal";
-            this.clnTotal.ReadOnly = true;
-            // 
-            // clVAT
-            // 
-            this.clVAT.DataPropertyName = "HST";
-            this.clVAT.HeaderText = "VAT";
-            this.clVAT.Name = "clVAT";
-            this.clVAT.Visible = false;
             // 
             // frmpromo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1556, 730);
+            this.ClientSize = new System.Drawing.Size(1286, 730);
             this.Controls.Add(this.grppromo);
             this.Controls.Add(this.pctboxpromo);
             this.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Bold);
@@ -387,6 +396,7 @@ namespace INVENTORY.UI
             this.Name = "frmpromo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.frmpromo_Load);
+            this.Shown += new System.EventHandler(this.frmpromo_Shown);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frmpromo_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.pctboxpromo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgProductspromo)).EndInit();

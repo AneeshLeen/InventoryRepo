@@ -71,6 +71,9 @@
     </Reference>
     <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="OnBarcode.Barcode.WinForms">
+      <HintPath>..\..\..\Users\Admin\Downloads\OnBarcode.BarcodeGenerator.DotnetSuite\dll\Net40\OnBarcode.Barcode.WinForms.dll</HintPath>
+    </Reference>
     <Reference Include="Sigil">
       <HintPath>F:\SOFTWARE\rhmcsrm\INVENTORY.UI\Library\Sigil.dll</HintPath>
     </Reference>

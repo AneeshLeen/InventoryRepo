@@ -115,6 +115,11 @@ namespace INVENTORY.UI
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
         }
-       
+
+        private void frmpromo_Shown(object sender, EventArgs e)
+        {
+            this.Location = Screen.AllScreens[1].Bounds.Location;
+            this.WindowState = FormWindowState.Maximized;
+        }
     }
 }

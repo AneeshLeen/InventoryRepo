@@ -1,6 +1,8 @@
 using INVENTORY.DA;
 using INVENTORY.UI.BL;
+using KeepAutomation.Barcode.Bean;
 using Microsoft.Reporting.WinForms;
+using OnBarcode.Barcode;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,6 +10,8 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Drawing.Printing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -2414,14 +2418,14 @@ namespace INVENTORY.UI
             if (dgProducts.Rows.Count > 0)
             {
                 frmprmo.grppromo.Visible = true;
-                frmprmo.pctboxpromo.Location = new Point(703, 27);
-                frmprmo.pctboxpromo.Size = new Size(723, 676);
+                frmprmo.pctboxpromo.Location = new Point(638, 23);
+                frmprmo.pctboxpromo.Size = new Size(632, 694);
             }
             else
             {
                 frmprmo.grppromo.Visible = false;
                 frmprmo.pctboxpromo.Location = new Point(30, 27);
-                frmprmo.pctboxpromo.Size = new Size(1100, 676);
+                frmprmo.pctboxpromo.Size = new Size(1200, 676);
             }
             if (objPromoSaleList != null && objPromoSaleList.Count > 0)
             {
@@ -2734,6 +2738,157 @@ namespace INVENTORY.UI
                 //}
             }
             txtamt.Tag = txtamt.Text;
+        }
+
+        private void button29_Click(object sender, EventArgs e)
+        {
+            PrintDocument pdPrint = new PrintDocument();
+            pdPrint.PrintPage += new PrintPageEventHandler(pdPrint_PrintPage);
+
+
+            try
+            {
+
+                if (pdPrint.PrinterSettings.IsValid)
+                {
+
+                    pdPrint.Print();
+
+                }
+                else
+                    MessageBox.Show("Printer is not available.", "Program06", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+            }
+            catch
+            {
+                MessageBox.Show("Failed to open StatusAPI.", "Program06", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+
+        }
+        private void pdPrint_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            float x, y, lineOffset;
+
+            // Instantiate font objects used in printing.
+            Font printFont = new Font("Microsoft Sans Serif", (float)10, FontStyle.Regular, GraphicsUnit.Point); // Substituted to FontA Font
+
+            e.Graphics.PageUnit = GraphicsUnit.Point;
+
+            // Draw the bitmap
+            x = 79;
+            y = 0;
+            // e.Graphics.DrawImage(pbImage.Image, x, y, pbImage.Image.Width - 13, pbImage.Image.Height - 10);
+
+            // Print the receipt text
+            lineOffset = printFont.GetHeight(e.Graphics) - (float)3.5;
+            x = 10;
+            y = 24 + lineOffset;
+
+
+            //Header
+            e.Graphics.DrawString("SPRINGFORD VARIETY & FOOD STORE", printFont, Brushes.Black, x, y);
+            y += lineOffset;
+            e.Graphics.DrawString("3 West Street North", printFont, Brushes.Black, x, y);
+            y += lineOffset;
+            e.Graphics.DrawString("Springford,ON", printFont, Brushes.Black, x, y);
+            y += lineOffset;
+            e.Graphics.DrawString("HST#781501283RT0001", printFont, Brushes.Black, x, y);
+            //
+
+
+            //Details                                      
+            y = y + (lineOffset * (float)2.5);
+
+            e.Graphics.DrawString("Decription                                         Amt($)", printFont, Brushes.Black, x, y);
+
+            lineOffset = printFont.GetHeight(e.Graphics) - 3;
+            e.Graphics.DrawString("___________________________________", printFont, Brushes.Black, x, y);
+            y += lineOffset;
+            for (int i = 0; i < 2; i++)
+            {
+                e.Graphics.DrawString("123xxstreet,xxxcity,xxxxstate", printFont, Brushes.Black, x, y);
+                y += lineOffset;
+            }
+            e.Graphics.DrawString("___________________________________", printFont, Brushes.Black, x, y);
+            y += lineOffset;
+            //
+
+            y += (lineOffset * (float)2.3);
+            e.Graphics.DrawString("Net Total :               0", printFont, Brushes.Black, x, y);
+            y += lineOffset;
+
+            e.Graphics.DrawString("Bill Total :               0", printFont, Brushes.Black, x, y);
+            y += lineOffset;
+
+            e.Graphics.DrawString("HST :               0", printFont, Brushes.Black, x, y);
+            y += lineOffset;
+
+            e.Graphics.DrawString("CARD :               0", printFont, Brushes.Black, x, y);
+            y += lineOffset;
+
+            e.Graphics.DrawString("Change :               0", printFont, Brushes.Black, x, y);
+            y += lineOffset;
+
+            e.Graphics.DrawString("___________________________________", printFont, Brushes.Black, x, y);
+            y += lineOffset;
+
+            e.Graphics.DrawString("Total Savings :               0", printFont, Brushes.Black, x, y);
+            y += lineOffset;
+            e.Graphics.DrawString("___________________________________", printFont, Brushes.Black, x, y);
+            y += lineOffset;
+
+
+            printFont = new Font("Microsoft Sans Serif", 12, FontStyle.Regular, GraphicsUnit.Point);
+            e.Graphics.DrawString("HST Summary  ", printFont, Brushes.Black, x, y);
+            y += lineOffset;
+            e.Graphics.DrawString("Rate                   HST", printFont, Brushes.Black, x, y);
+            y += lineOffset;
+
+            e.Graphics.DrawString("___________________________________", printFont, Brushes.Black, x, y);
+            y += lineOffset;
+            printFont = new Font("Microsoft Sans Serif", 10, FontStyle.Regular, GraphicsUnit.Point);
+
+            lineOffset = printFont.GetHeight(e.Graphics) - 3;
+            e.Graphics.DrawString("___________________________________", printFont, Brushes.Black, x, y);
+            y += lineOffset;
+            e.Graphics.DrawString("Till                        DateTime", printFont, Brushes.Black, x, y);
+            y += lineOffset;
+            e.Graphics.DrawString("No of Items  :", printFont, Brushes.Black, x, y);
+
+
+            y += lineOffset;
+            e.Graphics.DrawString("Thanks for Shopping with us", printFont, Brushes.Black, x - 1, y);
+
+            y += lineOffset;
+            e.Graphics.DrawString("Please Visit Again", printFont, Brushes.Black, x, y);
+            y += lineOffset;
+            e.Graphics.DrawString("Opening hours ", printFont, Brushes.Black, x, y - 2);
+
+            y += lineOffset;
+            e.Graphics.DrawString("7 Days week 7 AM TO 9 PM", printFont, Brushes.Black, x, y - 2);
+            y += lineOffset;
+            // Indicate that no more data to print, and the Print Document can now send the print data to the spooler.         
+
+
+            e.Graphics.DrawImage(CreateBarcode().drawBarcode(), x, y);
+
+            e.HasMorePages = false;
+        }
+        private static Linear CreateBarcode()
+        {
+            Linear barcode = new Linear();// create a barcode
+            barcode.Type = BarcodeType.CODE93;// select barcode type
+            barcode.Data = "0123456";// set barcode data
+            //barcode.X = 1.0F;// set x
+            //barcode.Y = 60.0F;// set y
+            barcode.Resolution = 96;// set resolution
+            barcode.Rotate = Rotate.Rotate0;// set rotation
+            barcode.BarcodeWidth = 350;
+            barcode.BarcodeHeight = 45;
+            barcode.AutoResize = true;
+
+
+            return barcode;
         }
     }
 }

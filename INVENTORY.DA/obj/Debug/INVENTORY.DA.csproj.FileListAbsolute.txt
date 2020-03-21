@@ -4,10 +4,11 @@ C:\DevelopmentSource\InventoryRepo\INVENTORY.DA\bin\Debug\INVENTORY.DA.pdb
 C:\DevelopmentSource\InventoryRepo\INVENTORY.DA\bin\Debug\EntityFramework.dll
 C:\DevelopmentSource\InventoryRepo\INVENTORY.DA\bin\Debug\EntityFramework.SqlServer.dll
 C:\DevelopmentSource\InventoryRepo\INVENTORY.DA\bin\Debug\KeepAutomation.Barcode.Windows.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.DA\bin\Debug\OnBarcode.Barcode.WinForms.dll
 C:\DevelopmentSource\InventoryRepo\INVENTORY.DA\bin\Debug\SpellNumber.dll
 C:\DevelopmentSource\InventoryRepo\INVENTORY.DA\bin\Debug\EntityFramework.xml
 C:\DevelopmentSource\InventoryRepo\INVENTORY.DA\bin\Debug\EntityFramework.SqlServer.xml
-C:\DevelopmentSource\InventoryRepo\INVENTORY.DA\obj\Debug\INVENTORY.DA.csprojAssemblyReference.cache
 C:\DevelopmentSource\InventoryRepo\INVENTORY.DA\obj\Debug\INVENTORY.DA.csproj.CopyComplete
 C:\DevelopmentSource\InventoryRepo\INVENTORY.DA\obj\Debug\INVENTORY.DA.dll
 C:\DevelopmentSource\InventoryRepo\INVENTORY.DA\obj\Debug\INVENTORY.DA.pdb
+C:\DevelopmentSource\InventoryRepo\INVENTORY.DA\obj\Debug\INVENTORY.DA.csprojAssemblyReference.cache

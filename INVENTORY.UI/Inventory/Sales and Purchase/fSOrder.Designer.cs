@@ -227,6 +227,7 @@ namespace INVENTORY.UI
             this.ctlGodown = new INVENTORY.UI.ctlCustomControl();
             this.ctlCustomer = new INVENTORY.UI.ctlCustomControl();
             this.ctlProduct = new INVENTORY.UI.ctlCustomControl();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             ((System.ComponentModel.ISupportInitialize)(this.numPrevDue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numRemindPeriodTemp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPRate)).BeginInit();
@@ -2423,6 +2424,7 @@ namespace INVENTORY.UI
             this.button29.TabIndex = 270;
             this.button29.Text = "Enter";
             this.button29.UseVisualStyleBackColor = false;
+            this.button29.Click += new System.EventHandler(this.button29_Click);
             // 
             // lbltax
             // 
@@ -3285,5 +3287,6 @@ namespace INVENTORY.UI
         private System.Windows.Forms.GroupBox groupBox9;
         private System.Windows.Forms.GroupBox groupBox15;
         private System.Windows.Forms.Button btnCustomer;
+        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }

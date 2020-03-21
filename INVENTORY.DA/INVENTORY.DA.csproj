@@ -62,6 +62,9 @@
     <Reference Include="KeepAutomation.Barcode.Windows">
       <HintPath>..\..\..\Users\Admin\Downloads\KA.Barcode.for.NETSuite\KA.Barcode.for.NETSuite\DLL\Net40\KeepAutomation.Barcode.Windows.dll</HintPath>
     </Reference>
+    <Reference Include="OnBarcode.Barcode.WinForms">
+      <HintPath>..\..\..\Users\Admin\Downloads\OnBarcode.BarcodeGenerator.DotnetSuite\dll\Net40\OnBarcode.Barcode.WinForms.dll</HintPath>
+    </Reference>
     <Reference Include="SpellNumber">
       <HintPath>..\packages\SpellNumber.dll</HintPath>
     </Reference>
@@ -186,7 +189,6 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="PrintInvoice.cs" />
-    <Compile Include="PrintSettings.cs" />
     <Compile Include="Product.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
