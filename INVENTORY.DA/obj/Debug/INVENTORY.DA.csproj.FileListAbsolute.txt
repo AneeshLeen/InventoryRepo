@@ -20,6 +20,5 @@ C:\CodeBase\InventoryRepo\INVENTORY.DA\bin\Debug\EntityFramework.SqlServer.dll
 C:\CodeBase\InventoryRepo\INVENTORY.DA\bin\Debug\SpellNumber.dll
 C:\CodeBase\InventoryRepo\INVENTORY.DA\bin\Debug\EntityFramework.xml
 C:\CodeBase\InventoryRepo\INVENTORY.DA\bin\Debug\EntityFramework.SqlServer.xml
-C:\CodeBase\InventoryRepo\INVENTORY.DA\obj\Debug\INVENTORY.DA.csprojResolveAssemblyReference.cache
 C:\CodeBase\InventoryRepo\INVENTORY.DA\obj\Debug\INVENTORY.DA.dll
 C:\CodeBase\InventoryRepo\INVENTORY.DA\obj\Debug\INVENTORY.DA.pdb

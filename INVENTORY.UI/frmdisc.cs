@@ -24,6 +24,27 @@ namespace INVENTORY.UI
         private void btnclose_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK;
+            decimal result;
+            if (Decimal.TryParse(txtdiscount.Text, out result) == true && Convert.ToDecimal(txtdiscount.Text) > 0)
+            {
+                
+                if (this.rdbLineDisPerc.Checked)
+                {
+                    ObjDiscountOptions.LineDiscountPerc = Convert.ToDecimal(txtdiscount.Text);
+                }
+                else if (this.rdbLineDisAmt.Checked)
+                {
+                    ObjDiscountOptions.LineDiscountAmt = Convert.ToDecimal(txtdiscount.Text);
+                }
+                else if (this.rdbBillDiscPerc.Checked)
+                {
+                    ObjDiscountOptions.BillPerc = Convert.ToDecimal(txtdiscount.Text);
+                }
+                else if (this.rdbBillDiscAmt.Checked)
+                {
+                    ObjDiscountOptions.BillAmt = Convert.ToDecimal(txtdiscount.Text);
+                }
+            }
         }
 
         private void btn1_Click(object sender, EventArgs e)

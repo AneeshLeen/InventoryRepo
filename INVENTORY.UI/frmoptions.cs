@@ -18,7 +18,6 @@ namespace INVENTORY.UI
         public frmoptions()
         {
             InitializeComponent();
-            ObjDiscountOptions = new DiscountOptions();
             this.StartPosition = FormStartPosition.CenterScreen;
         }
 
@@ -32,6 +31,7 @@ namespace INVENTORY.UI
             this.Hide();
             frmrefund frmrefun = new frmrefund();
             frmrefun.ShowDialog();
+            this.DialogResult = DialogResult.OK;
         }
 
         private void btnshiftend_Click(object sender, EventArgs e)
@@ -39,6 +39,7 @@ namespace INVENTORY.UI
             this.Hide();
             frmshiftend frmshiftE = new frmshiftend();
             frmshiftE.ShowDialog();
+            this.DialogResult = DialogResult.OK;
         }
 
         private void btnsptchk_Click(object sender, EventArgs e)
@@ -46,6 +47,8 @@ namespace INVENTORY.UI
             this.Hide();
             frmshiftend frmshiftE = new frmshiftend();
             frmshiftE.ShowDialog();
+            this.DialogResult = DialogResult.OK;
+
         }
 
         private void btndiscount_Click(object sender, EventArgs e)
@@ -54,6 +57,7 @@ namespace INVENTORY.UI
             frmdisc fmdisc = new frmdisc();
             fmdisc.ShowDialog();
             ObjDiscountOptions = fmdisc.ObjDiscountOptions;
+            this.DialogResult = DialogResult.OK;
         }
     }
 }
