@@ -32,5 +32,6 @@ namespace INVENTORY.UI.BL
         public decimal Savings { get; set; }
         public decimal Payments { get; set; }
         public decimal Balance { get; set; }
+        public decimal CashBack { get; set; }
     }
 }

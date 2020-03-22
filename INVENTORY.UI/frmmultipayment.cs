@@ -135,7 +135,11 @@ namespace INVENTORY.UI
                         DtPaymentTable.Rows.Add(TypeName, txtclear.Text, 1);
                     }
                 }
-            }
+                if (DtPaymentTable.AsEnumerable().Sum(p => Convert.ToDecimal(p["Amt"])) >= this.BillAmount)
+                {
+                    this.DialogResult = DialogResult.OK;
+                }
+                }
             txtclear.Text = string.Empty;
         }
 

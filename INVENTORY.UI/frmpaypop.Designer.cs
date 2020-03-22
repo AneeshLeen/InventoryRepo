@@ -83,13 +83,14 @@
             // 
             this.btnSave.Font = new System.Drawing.Font("Palatino Linotype", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(143, 214);
+            this.btnSave.Location = new System.Drawing.Point(104, 131);
             this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(93, 35);
             this.btnSave.TabIndex = 242;
             this.btnSave.Text = "&OK";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Visible = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // label3
@@ -118,7 +119,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateGray;
-            this.ClientSize = new System.Drawing.Size(396, 262);
+            this.ClientSize = new System.Drawing.Size(396, 218);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblbalance);
             this.Controls.Add(this.btnSave);

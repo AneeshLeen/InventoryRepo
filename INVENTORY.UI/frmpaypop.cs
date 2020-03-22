@@ -16,10 +16,11 @@ namespace INVENTORY.UI
         {
             InitializeComponent();
         }
-
+        
         private void btnSave_Click(object sender, EventArgs e)
         {
-            this.DialogResult=DialogResult.OK;
+            //this.DialogResult=DialogResult.OK;
+            //this.Close();
         }
     }
 }
