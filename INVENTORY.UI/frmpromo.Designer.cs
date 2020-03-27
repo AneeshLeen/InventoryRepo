@@ -32,14 +32,8 @@ namespace INVENTORY.UI
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pctboxpromo = new System.Windows.Forms.PictureBox();
             this.dgProductspromo = new System.Windows.Forms.DataGridView();
-            this.clnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clnQTY = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clnUnitPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clnTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clVAT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblbilltotal = new System.Windows.Forms.Label();
             this.label52 = new System.Windows.Forms.Label();
             this.lblsavings = new System.Windows.Forms.Label();
@@ -59,6 +53,14 @@ namespace INVENTORY.UI
             this.lblBalance = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.grppromo = new System.Windows.Forms.GroupBox();
+            this.lblcashback = new System.Windows.Forms.Label();
+            this.label59 = new System.Windows.Forms.Label();
+            this.SLNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clnQTY = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clnUnitPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clnTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clVAT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pctboxpromo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgProductspromo)).BeginInit();
             this.grppromo.SuspendLayout();
@@ -79,16 +81,9 @@ namespace INVENTORY.UI
             this.dgProductspromo.AllowUserToAddRows = false;
             this.dgProductspromo.AllowUserToDeleteRows = false;
             this.dgProductspromo.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgProductspromo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgProductspromo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgProductspromo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.SLNO,
             this.clnName,
             this.clnQTY,
             this.clnUnitPrice,
@@ -98,56 +93,18 @@ namespace INVENTORY.UI
             this.dgProductspromo.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.dgProductspromo.MultiSelect = false;
             this.dgProductspromo.Name = "dgProductspromo";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SlateGray;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgProductspromo.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.SlateGray;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgProductspromo.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgProductspromo.RowHeadersVisible = false;
             this.dgProductspromo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgProductspromo.Size = new System.Drawing.Size(610, 418);
             this.dgProductspromo.TabIndex = 6;
-            // 
-            // clnName
-            // 
-            this.clnName.DataPropertyName = "ItemName";
-            this.clnName.HeaderText = "DESCRIPTION";
-            this.clnName.Name = "clnName";
-            this.clnName.ReadOnly = true;
-            this.clnName.Width = 300;
-            // 
-            // clnQTY
-            // 
-            this.clnQTY.DataPropertyName = "Quantity";
-            this.clnQTY.HeaderText = "QTY";
-            this.clnQTY.Name = "clnQTY";
-            this.clnQTY.ReadOnly = true;
-            this.clnQTY.Width = 80;
-            // 
-            // clnUnitPrice
-            // 
-            this.clnUnitPrice.DataPropertyName = "SRate";
-            this.clnUnitPrice.HeaderText = "PRICE";
-            this.clnUnitPrice.Name = "clnUnitPrice";
-            this.clnUnitPrice.ReadOnly = true;
-            // 
-            // clnTotal
-            // 
-            this.clnTotal.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.clnTotal.DataPropertyName = "Amount";
-            this.clnTotal.HeaderText = "AMOUNT";
-            this.clnTotal.Name = "clnTotal";
-            this.clnTotal.ReadOnly = true;
-            // 
-            // clVAT
-            // 
-            this.clVAT.DataPropertyName = "HST";
-            this.clVAT.HeaderText = "VAT";
-            this.clVAT.Name = "clVAT";
-            this.clVAT.Visible = false;
             // 
             // lblbilltotal
             // 
@@ -358,6 +315,8 @@ namespace INVENTORY.UI
             // 
             // grppromo
             // 
+            this.grppromo.Controls.Add(this.lblcashback);
+            this.grppromo.Controls.Add(this.label59);
             this.grppromo.Controls.Add(this.dgProductspromo);
             this.grppromo.Controls.Add(this.lblBalance);
             this.grppromo.Controls.Add(this.label52);
@@ -382,6 +341,71 @@ namespace INVENTORY.UI
             this.grppromo.Size = new System.Drawing.Size(621, 706);
             this.grppromo.TabIndex = 295;
             this.grppromo.TabStop = false;
+            // 
+            // lblcashback
+            // 
+            this.lblcashback.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblcashback.ForeColor = System.Drawing.Color.Black;
+            this.lblcashback.Location = new System.Drawing.Point(527, 570);
+            this.lblcashback.Name = "lblcashback";
+            this.lblcashback.Size = new System.Drawing.Size(80, 22);
+            this.lblcashback.TabIndex = 296;
+            this.lblcashback.Text = "0.00\r\n\r\n";
+            this.lblcashback.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label59
+            // 
+            this.label59.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label59.ForeColor = System.Drawing.Color.Black;
+            this.label59.Location = new System.Drawing.Point(378, 570);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(113, 20);
+            this.label59.TabIndex = 295;
+            this.label59.Text = "Cashback   :";
+            // 
+            // SLNO
+            // 
+            this.SLNO.HeaderText = "SLNO";
+            this.SLNO.Name = "SLNO";
+            this.SLNO.Visible = false;
+            // 
+            // clnName
+            // 
+            this.clnName.DataPropertyName = "ItemName";
+            this.clnName.HeaderText = "DESCRIPTION";
+            this.clnName.Name = "clnName";
+            this.clnName.ReadOnly = true;
+            this.clnName.Width = 300;
+            // 
+            // clnQTY
+            // 
+            this.clnQTY.DataPropertyName = "Quantity";
+            this.clnQTY.HeaderText = "QTY";
+            this.clnQTY.Name = "clnQTY";
+            this.clnQTY.ReadOnly = true;
+            this.clnQTY.Width = 80;
+            // 
+            // clnUnitPrice
+            // 
+            this.clnUnitPrice.DataPropertyName = "SRate";
+            this.clnUnitPrice.HeaderText = "PRICE";
+            this.clnUnitPrice.Name = "clnUnitPrice";
+            this.clnUnitPrice.ReadOnly = true;
+            // 
+            // clnTotal
+            // 
+            this.clnTotal.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.clnTotal.DataPropertyName = "Amount";
+            this.clnTotal.HeaderText = "AMOUNT";
+            this.clnTotal.Name = "clnTotal";
+            this.clnTotal.ReadOnly = true;
+            // 
+            // clVAT
+            // 
+            this.clVAT.DataPropertyName = "HST";
+            this.clVAT.HeaderText = "VAT";
+            this.clVAT.Name = "clVAT";
+            this.clVAT.Visible = false;
             // 
             // frmpromo
             // 
@@ -427,11 +451,13 @@ namespace INVENTORY.UI
         internal System.Windows.Forms.DataGridView dgProductspromo;
         internal System.Windows.Forms.GroupBox grppromo;
         internal System.Windows.Forms.PictureBox pctboxpromo;
+        private System.Windows.Forms.Label lblcashback;
+        private System.Windows.Forms.Label label59;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SLNO;
         private System.Windows.Forms.DataGridViewTextBoxColumn clnName;
         private System.Windows.Forms.DataGridViewTextBoxColumn clnQTY;
         private System.Windows.Forms.DataGridViewTextBoxColumn clnUnitPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn clnTotal;
         private System.Windows.Forms.DataGridViewTextBoxColumn clVAT;
-        
     }
 }

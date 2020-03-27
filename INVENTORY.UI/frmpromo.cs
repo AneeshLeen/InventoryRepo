@@ -32,12 +32,12 @@ namespace INVENTORY.UI
         public frmpromo( )
         {
             InitializeComponent();
+            dgProductspromo.AutoGenerateColumns = false;
             objPromoData = new PromoData();
         }
         internal void UpdatePromoData(SalesItemCollectionBO objSaleList)
         {
             dgProductspromo.DataSource = objSaleList;
-
             lblbilltotal.Text = String.Format("{0:0.00}", objPromoData.BillTotal);
 
             lblbilldisc.Text = String.Format("{0:0.00}", objPromoData.BillDiscount);
@@ -50,6 +50,7 @@ namespace INVENTORY.UI
 
             lblPayment.Text = String.Format("{0:0.00}", objPromoData.Payments);
             lblBalance.Text = String.Format("{0:0.00}", objPromoData.Balance);
+            lblcashback.Text = String.Format("{0:0.00}", objPromoData.CashBack);
 
         }
         public void ChangePicture()//to change pics

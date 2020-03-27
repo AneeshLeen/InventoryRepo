@@ -34,6 +34,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmrefund));
             this.dgProducts = new System.Windows.Forms.DataGridView();
+            this.clnitmno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clnQTY = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clnUnitPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clnTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clnrefundqty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clnrefundamt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblBarcode = new System.Windows.Forms.Label();
             this.txtorderrefno = new System.Windows.Forms.TextBox();
             this.btn5 = new System.Windows.Forms.Button();
@@ -43,12 +49,6 @@
             this.lblbilltotal = new System.Windows.Forms.Label();
             this.label52 = new System.Windows.Forms.Label();
             this.chkrefund = new System.Windows.Forms.CheckBox();
-            this.clnitmno = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clnQTY = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clnUnitPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clnTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clnrefundqty = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clnrefundamt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgProducts)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,8 +94,45 @@
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgProducts.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgProducts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgProducts.Size = new System.Drawing.Size(656, 382);
+            this.dgProducts.Size = new System.Drawing.Size(655, 382);
             this.dgProducts.TabIndex = 6;
+            // 
+            // clnitmno
+            // 
+            this.clnitmno.HeaderText = "Item Name";
+            this.clnitmno.Name = "clnitmno";
+            this.clnitmno.ReadOnly = true;
+            // 
+            // clnQTY
+            // 
+            this.clnQTY.HeaderText = "QTY";
+            this.clnQTY.Name = "clnQTY";
+            this.clnQTY.ReadOnly = true;
+            this.clnQTY.Width = 80;
+            // 
+            // clnUnitPrice
+            // 
+            this.clnUnitPrice.HeaderText = "Unit Price";
+            this.clnUnitPrice.Name = "clnUnitPrice";
+            this.clnUnitPrice.ReadOnly = true;
+            // 
+            // clnTotal
+            // 
+            this.clnTotal.HeaderText = "Amount";
+            this.clnTotal.Name = "clnTotal";
+            this.clnTotal.ReadOnly = true;
+            this.clnTotal.Width = 110;
+            // 
+            // clnrefundqty
+            // 
+            this.clnrefundqty.HeaderText = "Refund Qty";
+            this.clnrefundqty.Name = "clnrefundqty";
+            // 
+            // clnrefundamt
+            // 
+            this.clnrefundamt.HeaderText = "Refund Amount";
+            this.clnrefundamt.Name = "clnrefundamt";
+            this.clnrefundamt.Width = 120;
             // 
             // lblBarcode
             // 
@@ -196,48 +233,11 @@
             this.chkrefund.Text = "Refund All";
             this.chkrefund.UseVisualStyleBackColor = true;
             // 
-            // clnitmno
-            // 
-            this.clnitmno.HeaderText = "Item Name";
-            this.clnitmno.Name = "clnitmno";
-            this.clnitmno.ReadOnly = true;
-            // 
-            // clnQTY
-            // 
-            this.clnQTY.HeaderText = "QTY";
-            this.clnQTY.Name = "clnQTY";
-            this.clnQTY.ReadOnly = true;
-            this.clnQTY.Width = 80;
-            // 
-            // clnUnitPrice
-            // 
-            this.clnUnitPrice.HeaderText = "Unit Price";
-            this.clnUnitPrice.Name = "clnUnitPrice";
-            this.clnUnitPrice.ReadOnly = true;
-            // 
-            // clnTotal
-            // 
-            this.clnTotal.HeaderText = "Amount";
-            this.clnTotal.Name = "clnTotal";
-            this.clnTotal.ReadOnly = true;
-            this.clnTotal.Width = 110;
-            // 
-            // clnrefundqty
-            // 
-            this.clnrefundqty.HeaderText = "Refund Qty";
-            this.clnrefundqty.Name = "clnrefundqty";
-            // 
-            // clnrefundamt
-            // 
-            this.clnrefundamt.HeaderText = "Refund Amount";
-            this.clnrefundamt.Name = "clnrefundamt";
-            this.clnrefundamt.Width = 120;
-            // 
             // frmrefund
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(661, 570);
+            this.ClientSize = new System.Drawing.Size(657, 570);
             this.Controls.Add(this.chkrefund);
             this.Controls.Add(this.lblbilltotal);
             this.Controls.Add(this.label52);

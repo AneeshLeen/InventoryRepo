@@ -31,7 +31,7 @@ namespace INVENTORY.UI
             string SQLServer = ConfigurationManager.AppSettings["SqlServer"];
 
             DataTable dtbranches = new DataTable();
-            SqlConnection connection = new SqlConnection(@"Data Source=" + SQLServer + ";Initial Catalog=INVENTORY;Persist Security Info=True;Integrated Security=true");
+            SqlConnection connection = new SqlConnection(@"Data Source=" + SQLServer + ";Initial Catalog=DEWSRMTEST;Persist Security Info=True;Integrated Security=true");
             SqlCommand command = new SqlCommand("select * from branchmaster", connection);
             SqlDataAdapter adp = new SqlDataAdapter(command);
             adp.Fill(dtbranches);
@@ -123,7 +123,7 @@ namespace INVENTORY.UI
 
                         //FMainForm oFMainForm = new FMainForm();    
                         oFMainForm.lblUser.Text = Global.CurrentUser.UserName.ToString();
-                        oFMainForm.ToolStripStatusLabel3.Text = tvBranches.SelectedNode.Text;
+                        oFMainForm.tsplbranch.Text = tvBranches.SelectedNode.Text;
 
                         this.Close();
                         this.Hide();
@@ -137,7 +137,7 @@ namespace INVENTORY.UI
                     }
                     else
                     {
-                        oFMainForm.ToolStripStatusLabel3.Text = tvBranches.SelectedNode.Text;
+                        oFMainForm.tsplbranch.Text = tvBranches.SelectedNode.Text;
                         this.Close();
                         this.Hide();
                     }

@@ -69,8 +69,8 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\Users\Admin\Downloads\KA.Barcode.for.NETSuite\KA.Barcode.for.NETSuite\DLL\Net40\KeepAutomation.Barcode.Windows.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
-    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="OnBarcode.Barcode.WinForms">
       <HintPath>..\..\..\Users\Admin\Downloads\OnBarcode.BarcodeGenerator.DotnetSuite\dll\Net40\OnBarcode.Barcode.WinForms.dll</HintPath>
     </Reference>
@@ -1072,12 +1072,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Inventory\Basic\fCompany.resx">
       <DependentUpon>fCompany.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Inventory\Basic\fGodown.aa.resx">
-      <DependentUpon>fGodown.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Inventory\Basic\fGodown.af.resx">
-      <DependentUpon>fGodown.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inventory\Basic\fGodown.resx">
       <DependentUpon>fGodown.cs</DependentUpon>

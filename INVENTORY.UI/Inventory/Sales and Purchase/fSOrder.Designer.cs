@@ -31,9 +31,9 @@ namespace INVENTORY.UI
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fSOrder));
             this.label3 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -205,7 +205,6 @@ namespace INVENTORY.UI
             this.btnoptions = new System.Windows.Forms.Button();
             this.btnpricechck = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.btnClose = new System.Windows.Forms.Button();
             this.btnMISRpt = new System.Windows.Forms.Button();
             this.btnRemove = new System.Windows.Forms.Button();
             this.btnlogout = new System.Windows.Forms.Button();
@@ -224,10 +223,10 @@ namespace INVENTORY.UI
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.groupBox15 = new System.Windows.Forms.GroupBox();
             this.btnCustomer = new System.Windows.Forms.Button();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.ctlGodown = new INVENTORY.UI.ctlCustomControl();
             this.ctlCustomer = new INVENTORY.UI.ctlCustomControl();
             this.ctlProduct = new INVENTORY.UI.ctlCustomControl();
-            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             ((System.ComponentModel.ISupportInitialize)(this.numPrevDue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numRemindPeriodTemp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPRate)).BeginInit();
@@ -1740,14 +1739,14 @@ namespace INVENTORY.UI
             this.dgProducts.AllowUserToAddRows = false;
             this.dgProducts.AllowUserToDeleteRows = false;
             this.dgProducts.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Menu;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgProducts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.Menu;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgProducts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgProducts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.clnSN,
@@ -1766,14 +1765,14 @@ namespace INVENTORY.UI
             this.dgProducts.Location = new System.Drawing.Point(117, 52);
             this.dgProducts.Margin = new System.Windows.Forms.Padding(5);
             this.dgProducts.Name = "dgProducts";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.SlateGray;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Info;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgProducts.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.SlateGray;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgProducts.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgProducts.RowHeadersVisible = false;
             this.dgProducts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgProducts.Size = new System.Drawing.Size(709, 484);
@@ -1790,8 +1789,8 @@ namespace INVENTORY.UI
             // 
             // clnName
             // 
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Maroon;
-            this.clnName.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Maroon;
+            this.clnName.DefaultCellStyle = dataGridViewCellStyle5;
             this.clnName.HeaderText = "DESCRIPTION";
             this.clnName.Name = "clnName";
             this.clnName.ReadOnly = true;
@@ -1947,7 +1946,7 @@ namespace INVENTORY.UI
             // 
             this.lblbilltotal.Font = new System.Drawing.Font("Arial Narrow", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblbilltotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblbilltotal.Location = new System.Drawing.Point(380, 638);
+            this.lblbilltotal.Location = new System.Drawing.Point(466, 638);
             this.lblbilltotal.Name = "lblbilltotal";
             this.lblbilltotal.Size = new System.Drawing.Size(355, 51);
             this.lblbilltotal.TabIndex = 237;
@@ -1998,9 +1997,9 @@ namespace INVENTORY.UI
             // 
             this.label56.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label56.ForeColor = System.Drawing.Color.Green;
-            this.label56.Location = new System.Drawing.Point(21, 520);
+            this.label56.Location = new System.Drawing.Point(16, 520);
             this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(702, 35);
+            this.label56.Size = new System.Drawing.Size(810, 35);
             this.label56.TabIndex = 232;
             this.label56.Text = "______________________________________________________________________.\r\n";
             this.label56.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2011,7 +2010,7 @@ namespace INVENTORY.UI
             this.label57.ForeColor = System.Drawing.Color.Green;
             this.label57.Location = new System.Drawing.Point(19, 601);
             this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(703, 39);
+            this.label57.Size = new System.Drawing.Size(807, 39);
             this.label57.TabIndex = 238;
             this.label57.Text = "______________________________________________________________________.\r\n";
             this.label57.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -2463,7 +2462,7 @@ namespace INVENTORY.UI
             // 
             this.label51.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label51.ForeColor = System.Drawing.Color.Black;
-            this.label51.Location = new System.Drawing.Point(539, 557);
+            this.label51.Location = new System.Drawing.Point(635, 556);
             this.label51.Name = "label51";
             this.label51.Size = new System.Drawing.Size(102, 20);
             this.label51.TabIndex = 274;
@@ -2473,7 +2472,7 @@ namespace INVENTORY.UI
             // 
             this.label58.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label58.ForeColor = System.Drawing.Color.Black;
-            this.label58.Location = new System.Drawing.Point(539, 582);
+            this.label58.Location = new System.Drawing.Point(635, 581);
             this.label58.Name = "label58";
             this.label58.Size = new System.Drawing.Size(109, 20);
             this.label58.TabIndex = 275;
@@ -2483,7 +2482,7 @@ namespace INVENTORY.UI
             // 
             this.label59.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label59.ForeColor = System.Drawing.Color.Black;
-            this.label59.Location = new System.Drawing.Point(539, 605);
+            this.label59.Location = new System.Drawing.Point(635, 604);
             this.label59.Name = "label59";
             this.label59.Size = new System.Drawing.Size(113, 20);
             this.label59.TabIndex = 276;
@@ -2493,7 +2492,7 @@ namespace INVENTORY.UI
             // 
             this.lblrefundqty.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblrefundqty.ForeColor = System.Drawing.Color.Black;
-            this.lblrefundqty.Location = new System.Drawing.Point(638, 557);
+            this.lblrefundqty.Location = new System.Drawing.Point(734, 556);
             this.lblrefundqty.Name = "lblrefundqty";
             this.lblrefundqty.Size = new System.Drawing.Size(80, 22);
             this.lblrefundqty.TabIndex = 277;
@@ -2504,7 +2503,7 @@ namespace INVENTORY.UI
             // 
             this.lblsavings.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblsavings.ForeColor = System.Drawing.Color.Black;
-            this.lblsavings.Location = new System.Drawing.Point(639, 580);
+            this.lblsavings.Location = new System.Drawing.Point(735, 579);
             this.lblsavings.Name = "lblsavings";
             this.lblsavings.Size = new System.Drawing.Size(80, 22);
             this.lblsavings.TabIndex = 278;
@@ -2515,7 +2514,7 @@ namespace INVENTORY.UI
             // 
             this.lblcashback.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblcashback.ForeColor = System.Drawing.Color.Black;
-            this.lblcashback.Location = new System.Drawing.Point(639, 604);
+            this.lblcashback.Location = new System.Drawing.Point(735, 603);
             this.lblcashback.Name = "lblcashback";
             this.lblcashback.Size = new System.Drawing.Size(80, 22);
             this.lblcashback.TabIndex = 279;
@@ -2610,24 +2609,6 @@ namespace INVENTORY.UI
             this.btnAdd.Text = "&Add Item";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // btnClose
-            // 
-            this.btnClose.BackColor = System.Drawing.Color.DarkRed;
-            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnClose.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
-            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(723, 592);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(5);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(93, 39);
-            this.btnClose.TabIndex = 1;
-            this.btnClose.Text = "Close";
-            this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnMISRpt
             // 
@@ -2886,7 +2867,6 @@ namespace INVENTORY.UI
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.CancelButton = this.btnClose;
             this.ClientSize = new System.Drawing.Size(1370, 692);
             this.Controls.Add(this.strsales);
             this.Controls.Add(this.btnlogout);
@@ -3018,7 +2998,6 @@ namespace INVENTORY.UI
             this.Controls.Add(this.numUTotal);
             this.Controls.Add(this.numTotalDueAmt);
             this.Controls.Add(this.numIGSTAmt);
-            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.numCGSTAmt);
             this.Controls.Add(this.numTotalDis);
             this.Controls.Add(this.numQTY);
@@ -3116,7 +3095,6 @@ namespace INVENTORY.UI
         private System.Windows.Forms.NumericUpDown numGrandTotal;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.NumericUpDown numPrevDue;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label2;

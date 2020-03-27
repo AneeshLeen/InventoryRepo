@@ -53,6 +53,7 @@
             // 
             // txtsearch
             // 
+            this.txtsearch.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold);
             this.txtsearch.Location = new System.Drawing.Point(162, 29);
             this.txtsearch.Multiline = true;
             this.txtsearch.Name = "txtsearch";

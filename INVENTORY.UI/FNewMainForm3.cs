@@ -1846,7 +1846,7 @@ namespace INVENTORY.UI
             this.Hide();
             FNewMainForm frm = new FNewMainForm();
             frm.lblUser.Text = Global.CurrentUser.UserName.ToString();
-            frm.ToolStripStatusLabel3.Text = this.ToolStripStatusLabel3.Text;
+            frm.tsplbranch.Text = this.ToolStripStatusLabel3.Text;
             frm.ShowDialog();
         }
 

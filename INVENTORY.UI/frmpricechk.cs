@@ -29,7 +29,7 @@ namespace INVENTORY.UI
                 lbltax1.Text = "0 %";
                 lblrate.Text = "0.00";
                 //string sql = "SELECT code,ProductName, (select case when Tax = 0 then 0 else 1 end from products where barcode='" + txtsearch.Text.TrimStart(new Char[] { '0' })+"')  [Type], RetailPrice  FROM products WHERE barcode = '" + txtsearch.Text.TrimStart(new Char[] { '0' }) + "'";
-                string sql = "SELECT code,ProductName, (select case when Tax = 0 then 0 else 1 end from products where barcode='" + txtsearch.Text + "')  [Type], RetailPrice  FROM products WHERE barcode = '" + txtsearch.Text + "'";
+                string sql = "SELECT code,ProductName, (select case when Tax = 0 then 0 else 1 end from products where barcode='" + txtsearch.Text.TrimEnd() + "')  [Type], RetailPrice  FROM products WHERE barcode = '" + txtsearch.Text.TrimEnd() + "'";
                 Load_DTGPricechk(sql, txtsearch);
                 txtsearch.Text = "";
 
@@ -42,7 +42,7 @@ namespace INVENTORY.UI
             {
                 DataTable dt = new DataTable();     
                 string SQLServer = ConfigurationManager.AppSettings["SqlServer"];
-                SqlConnection connection = new SqlConnection(@"Data Source=" + SQLServer + ";Initial Catalog=DEWSRM;Persist Security Info=True;Integrated Security=true");
+                SqlConnection connection = new SqlConnection(@"Data Source=" + SQLServer + ";Initial Catalog=DEWSRMTEST;Persist Security Info=True;Integrated Security=true");
                 SqlCommand command = new SqlCommand(sql, connection);
                 SqlDataAdapter adp = new SqlDataAdapter(command);
                 adp.Fill(dt); ;

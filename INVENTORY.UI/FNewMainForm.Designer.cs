@@ -130,7 +130,7 @@
             this.StatusStrip1 = new System.Windows.Forms.StatusStrip();
             this.ToolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblUser = new System.Windows.Forms.ToolStripStatusLabel();
-            this.ToolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tsplbranch = new System.Windows.Forms.ToolStripStatusLabel();
             this.ToolStripStatusLabel4 = new System.Windows.Forms.ToolStripStatusLabel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnRefesh = new System.Windows.Forms.Button();
@@ -1113,7 +1113,7 @@
             this.StatusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ToolStripStatusLabel1,
             this.lblUser,
-            this.ToolStripStatusLabel3,
+            this.tsplbranch,
             this.ToolStripStatusLabel4});
             this.StatusStrip1.Location = new System.Drawing.Point(0, 711);
             this.StatusStrip1.Name = "StatusStrip1";
@@ -1137,11 +1137,11 @@
             this.lblUser.Size = new System.Drawing.Size(145, 17);
             this.lblUser.Text = "ToolStripStatusLabel2";
             // 
-            // ToolStripStatusLabel3
+            // tsplbranch
             // 
-            this.ToolStripStatusLabel3.Name = "ToolStripStatusLabel3";
-            this.ToolStripStatusLabel3.Size = new System.Drawing.Size(913, 17);
-            this.ToolStripStatusLabel3.Spring = true;
+            this.tsplbranch.Name = "tsplbranch";
+            this.tsplbranch.Size = new System.Drawing.Size(913, 17);
+            this.tsplbranch.Spring = true;
             // 
             // ToolStripStatusLabel4
             // 
@@ -2661,7 +2661,7 @@
         internal System.Windows.Forms.StatusStrip StatusStrip1;
         internal System.Windows.Forms.ToolStripStatusLabel ToolStripStatusLabel1;
         internal System.Windows.Forms.ToolStripStatusLabel lblUser;
-        internal System.Windows.Forms.ToolStripStatusLabel ToolStripStatusLabel3;
+        internal System.Windows.Forms.ToolStripStatusLabel tsplbranch;
         internal System.Windows.Forms.ToolStripStatusLabel ToolStripStatusLabel4;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.ToolStripMenuItem employeeToolStripMenuItem;

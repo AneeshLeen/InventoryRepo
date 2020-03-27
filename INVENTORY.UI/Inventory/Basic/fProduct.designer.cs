@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fProduct));
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.ctlModel = new INVENTORY.UI.ctlCustomControl();
             this.lblSize = new System.Windows.Forms.Label();
             this.btnModel = new System.Windows.Forms.Button();
             this.cboUnitType = new System.Windows.Forms.ComboBox();
@@ -91,9 +92,9 @@
             this.txtBarcode = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.txtstock = new System.Windows.Forms.TextBox();
-            this.ctlModel = new INVENTORY.UI.ctlCustomControl();
             this.ctlCategory = new INVENTORY.UI.ctlCustomControl();
             this.ctlBrand = new INVENTORY.UI.ctlCustomControl();
+            this.chkQuickMenu = new System.Windows.Forms.CheckBox();
             this.groupBox3.SuspendLayout();
             this.txtNID.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -132,6 +133,19 @@
             this.groupBox3.Size = new System.Drawing.Size(106, 60);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
+            // 
+            // ctlModel
+            // 
+            this.ctlModel.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ctlModel.IDList = null;
+            this.ctlModel.Location = new System.Drawing.Point(46, 14);
+            this.ctlModel.Margin = new System.Windows.Forms.Padding(4);
+            this.ctlModel.Name = "ctlModel";
+            this.ctlModel.ObjectName = "Model";
+            this.ctlModel.Size = new System.Drawing.Size(213, 36);
+            this.ctlModel.TabIndex = 3;
+            this.ctlModel.Visible = false;
+            this.ctlModel.SelectedItemChanged += new INVENTORY.UI.SelectionChangedEvent(this.ctlModel_SelectedItemChanged);
             // 
             // lblSize
             // 
@@ -901,19 +915,6 @@
             this.txtstock.Size = new System.Drawing.Size(114, 29);
             this.txtstock.TabIndex = 219;
             // 
-            // ctlModel
-            // 
-            this.ctlModel.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ctlModel.IDList = null;
-            this.ctlModel.Location = new System.Drawing.Point(46, 14);
-            this.ctlModel.Margin = new System.Windows.Forms.Padding(4);
-            this.ctlModel.Name = "ctlModel";
-            this.ctlModel.ObjectName = "Model";
-            this.ctlModel.Size = new System.Drawing.Size(213, 36);
-            this.ctlModel.TabIndex = 3;
-            this.ctlModel.Visible = false;
-            this.ctlModel.SelectedItemChanged += new INVENTORY.UI.SelectionChangedEvent(this.ctlModel_SelectedItemChanged);
-            // 
             // ctlCategory
             // 
             this.ctlCategory.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -938,6 +939,18 @@
             this.ctlBrand.TabIndex = 1;
             this.ctlBrand.SelectedItemChanged += new INVENTORY.UI.SelectionChangedEvent(this.ctlBrand_SelectedItemChanged);
             // 
+            // chkQuickMenu
+            // 
+            this.chkQuickMenu.AutoSize = true;
+            this.chkQuickMenu.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkQuickMenu.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.chkQuickMenu.Location = new System.Drawing.Point(306, 450);
+            this.chkQuickMenu.Name = "chkQuickMenu";
+            this.chkQuickMenu.Size = new System.Drawing.Size(118, 26);
+            this.chkQuickMenu.TabIndex = 221;
+            this.chkQuickMenu.Text = "QuickMenu";
+            this.chkQuickMenu.UseVisualStyleBackColor = true;
+            // 
             // fProduct
             // 
             this.AcceptButton = this.btnSave;
@@ -946,6 +959,7 @@
             this.BackColor = System.Drawing.Color.SlateGray;
             this.CancelButton = this.btnClose;
             this.ClientSize = new System.Drawing.Size(1064, 602);
+            this.Controls.Add(this.chkQuickMenu);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.txtstock);
             this.Controls.Add(this.label16);
@@ -1089,5 +1103,6 @@
         private System.Windows.Forms.TextBox txtBarcode;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox txtstock;
+        private System.Windows.Forms.CheckBox chkQuickMenu;
     }
 }
