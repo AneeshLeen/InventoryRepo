@@ -21,13 +21,12 @@ namespace INVENTORY.UI
             this.ObjDiscountOptions = new DiscountOptions();
         }
 
-        private void btnclose_Click(object sender, EventArgs e)
+        private void btnapply_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.OK;
             decimal result;
             if (Decimal.TryParse(txtdiscount.Text, out result) == true && Convert.ToDecimal(txtdiscount.Text) > 0)
             {
-                
+
                 if (this.rdbLineDisPerc.Checked)
                 {
                     ObjDiscountOptions.LineDiscountPerc = Convert.ToDecimal(txtdiscount.Text);
@@ -44,7 +43,24 @@ namespace INVENTORY.UI
                 {
                     ObjDiscountOptions.BillAmt = Convert.ToDecimal(txtdiscount.Text);
                 }
+                else
+                {
+                    MessageBox.Show("Select any one discount options!.");
+                    return;
+                }
+
+                this.DialogResult = DialogResult.OK;
+
             }
+            else
+            {
+                MessageBox.Show("Invalid entry!.");
+                return;
+            }
+        }
+        private void btnclose_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.Cancel;
         }
 
         private void btn1_Click(object sender, EventArgs e)
@@ -61,18 +77,8 @@ namespace INVENTORY.UI
 
         private void btndelete_Click(object sender, EventArgs e)
         {
-            if(txtdiscount.Text.Length>0)
-            txtdiscount.Text = txtdiscount.Text.Substring(0, txtdiscount.Text.Length - 1);
-        }
-
-        private void btnenter_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnapply_Click(object sender, EventArgs e)
-        {
-
+            if (txtdiscount.Text.Length > 0)
+                txtdiscount.Text = txtdiscount.Text.Substring(0, txtdiscount.Text.Length - 1);
         }
     }
 }

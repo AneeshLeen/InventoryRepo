@@ -262,9 +262,18 @@ namespace INVENTORY.UI
             }
             _Order.InvoiceNo = txtInvoice.Text;
             _Order.InvoiceDate = dtpDate.Value;
-            _Order.SubTotal = _Order.GrandTotal = _Order.SOrderDetails.Sum(p => p.SRate + p.CGSTAmt);
-            _Order.Adjustment = numAdjustAmt.Value;
-            _Order.TotalAmount = _Order.SOrderDetails.Sum(p => p.SRate);//numUTotal.Value;
+            _Order.SubTotal = _Order.GrandTotal = _Order.SOrderDetails.Sum(p => (p.SRate * p.Quantity) + p.CGSTAmt);
+            //_Order.Adjustment = numAdjustAmt.Value;
+            if (_Order.Adjustment > 0)
+            {
+                _Order.TotalAmount = _Order.SOrderDetails.Sum(p => ((p.SRate * p.Quantity) + p.CGSTAmt)) - _Order.Adjustment;
+            }
+            else
+            {
+                _Order.TotalAmount = _Order.SOrderDetails.Sum(p => (p.SRate * p.Quantity) - p.PPDAmount);//numUTotal.Value;
+
+                _Order.NetDiscount = _Order.SOrderDetails.Sum(p => p.PPDAmount);
+            }
             //_Order.RecAmount = numPaidAmt.Value;
             //_Order.PaymentDue = numTotalDueAmt.Value;
             //_Order.TDPercentage = numTDP.Value;//Discount % of Total Dis. Amt.
@@ -464,6 +473,10 @@ namespace INVENTORY.UI
             {
                 _OrderDetail = new SOrderDetail();
             }
+            if(_OrderDetail.SOrderDetailID==0)
+            {
+                _OrderDetail.SOrderDetailID = (_Order.SOrderDetails.Count + 1) * -1;
+            }
 
             _OrderDetail.ProductID = _oProduct.ProductID;
             _OrderDetail.Quantity = multiple;
@@ -481,7 +494,7 @@ namespace INVENTORY.UI
             _OrderDetail.SRate = _oProduct.RetailPrice;
 
             _OrderDetail.UTAmount = (_OrderDetail.UnitPrice - _OrderDetail.PPDAmount) * multiple;
-            
+
             _OrderDetail.MPRate = _OrderDetail.UnitPrice - ((_OrderDetail.UnitPrice * _OrderDetail.PPDPercentage) / 100); //StockDetails PRate
             _OrderDetail.MPRateTotal = _OrderDetail.MPRate * multiple;
 
@@ -489,7 +502,7 @@ namespace INVENTORY.UI
             _OrderDetail.PRateTotal = _OrderDetail.PRate * multiple;
 
             _OrderDetail.CGSTPerc = _oProduct.Tax;
-            _OrderDetail.CGSTAmt = Convert.ToDecimal(String.Format("{0:0.00}", _OrderDetail.SRate * _oProduct.Tax / 100));
+            _OrderDetail.CGSTAmt = Convert.ToDecimal(String.Format("{0:0.00}", (_OrderDetail.SRate * _OrderDetail.Quantity) * _oProduct.Tax / 100));
 
             _OrderDetail.SparePartsWarrenty = txtSpareparts.Text;
             _OrderDetail.GodownID = ctlGodown.SelectedID;
@@ -539,7 +552,7 @@ namespace INVENTORY.UI
                 objPromoSaleList = new SalesItemCollectionBO();
 
                 List<SOrderDetail> nobarcodeSOrderDetailList = new List<SOrderDetail>();
-                _OrderDetails = _Order.SOrderDetails.ToList();
+                _OrderDetails = _Order.SOrderDetails.OrderBy(x=>x.SOrderDetailID).ToList();
 
                 if (_OrderDetails.Count > 0)
                 {
@@ -1306,11 +1319,11 @@ namespace INVENTORY.UI
 
                     #region Save Order validation Check
 
-                    if (numAdjustAmt.Value > (numTotal.Value - numPaidAmt.Value))
-                    {
-                        MessageBox.Show("Adjustment Amount is not greater than Current Due.", "Save Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        return;
-                    }
+                    //if (numAdjustAmt.Value > (numTotal.Value - numPaidAmt.Value))
+                    //{
+                    //    MessageBox.Show("Adjustment Amount is not greater than Current Due.", "Save Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //    return;
+                    //}
 
 
                     #endregion
@@ -1442,14 +1455,36 @@ namespace INVENTORY.UI
         private void SetPrintData()
         {
             SalesPrintBO objSalesPrintBO = new SalesPrintBO();
-            objSalesPrintBO.BillTotal = _Order.GrandTotal;
+            if (_Order.Adjustment > 0)
+            {
+                objSalesPrintBO.BillTotal = _Order.SOrderDetails.Sum(p => (p.SRate * p.Quantity)) - _Order.Adjustment;
+                objSalesPrintBO.TotalSavings = _Order.Adjustment;
+            }
+            else
+            {
+                objSalesPrintBO.BillTotal = _Order.SOrderDetails.Sum(p => (p.SRate * p.Quantity) - p.PPDAmount);
+                objSalesPrintBO.TotalSavings = _Order.SOrderDetails.Sum(p => p.PPDAmount);
+            }
             objSalesPrintBO.NetAmount = _Order.TotalAmount;
             objSalesPrintBO.Card = _Order.CardPaidAmount;
             objSalesPrintBO.Date = _Order.CreateDate.Value;
             objSalesPrintBO.HST = _Order.VATAmount;
+            if (objSalesPrintBO.Card == 0)
+            {
+                decimal result;
+                if (Decimal.TryParse(txtamt.Text, out result) == true && Convert.ToDecimal(txtamt.Text) > 0)
+                {
+                    objSalesPrintBO.Cash = Convert.ToDecimal(txtamt.Text);
+                }
+                else
+                {
+                    objSalesPrintBO.Cash = _Order.CashPaidAmount;
+                }
+
+                objSalesPrintBO.Change = objSalesPrintBO.Cash - objSalesPrintBO.BillTotal;
+            }
             objSalesPrintBO.NoOfItems = _Order.SOrderDetails.Sum(p => p.Quantity);
-            objSalesPrintBO.TotalSavings = 0;
-            objSalesPrintBO.Change = 0;
+
             string Itemname = "";
             foreach (var objitem in _Order.SOrderDetails)
             {
@@ -1471,7 +1506,9 @@ namespace INVENTORY.UI
                 objSalesPrintBO.objHSTSummary.Add(new HSTSummary()
                 {
                     HST = objitem.CGSTPerc,
-                    Rate = objitem.CGSTAmt
+                    Rate = objitem.CGSTAmt,
+                    Net = objitem.SRate,
+                    Total = objitem.SRate + objitem.CGSTAmt
                 });
             }
 
@@ -1482,9 +1519,13 @@ namespace INVENTORY.UI
             {
                 ctlCustomer.SelectedID = (db.Customers.FirstOrDefault(o => o.CustomerType == (int)EnumCustomerType.Default).CustomerID);
             }
+            if (ctlCustomer.SelectedID == 0)
+            {
+                MessageBox.Show("No default customer configured.");
+            }
         }
 
-        
+
         private void CalculatePaymentAmount()
         {
             numPaidAmt.Value = numCashDownPayment.Value + numCardPaidAmt.Value;
@@ -2112,7 +2153,7 @@ namespace INVENTORY.UI
             }
 
             CreateOrderObject();
-            decimal amount = Convert.ToDecimal(txtamt.Text);
+            decimal amount = Convert.ToDecimal(String.Format("{0:0.00}", Convert.ToDecimal( txtamt.Text)));
             if (!IsPayout && _Order.SOrderDetails.AsEnumerable().Any(p => p.ProductID == Convert.ToInt32(row["CategoryID"]) && p.TypeID == (int)EnumSalesItemType.Category))
             {
                 _OrderDetail = _Order.SOrderDetails.FirstOrDefault(p => p.ProductID == Convert.ToInt32(row["CategoryID"]) && p.TypeID == (int)EnumSalesItemType.Category);
@@ -2124,7 +2165,10 @@ namespace INVENTORY.UI
             {
                 _OrderDetail = new SOrderDetail();
             }
-
+            if (_OrderDetail.SOrderDetailID == 0)
+            {
+                _OrderDetail.SOrderDetailID = (_Order.SOrderDetails.Count + 1) * -1;
+            }
             _OrderDetail.ProductID = Convert.ToInt32(row["CategoryID"]);
             _OrderDetail.StockDetailID = 0;
             _OrderDetail.Quantity = multiple;
@@ -2133,7 +2177,7 @@ namespace INVENTORY.UI
             //_OrderDetail.PPDPercentage = numDPerc.Value;
             //_OrderDetail.PPDAmount = numPPDISAmt.Value;
             _OrderDetail.UTAmount = _OrderDetail.UnitPrice * multiple;
-            
+
             _OrderDetail.MPRate = _OrderDetail.UnitPrice - ((_OrderDetail.UnitPrice * _OrderDetail.PPDPercentage) / 100); //StockDetails PRate
             _OrderDetail.MPRateTotal = _OrderDetail.MPRate * multiple;
 
@@ -2151,7 +2195,7 @@ namespace INVENTORY.UI
             else if (IsPayout)
             {
                 _Order.SOrderDetails.Add(_OrderDetail);
-            } 
+            }
             RefreshGridNew();
             RefreshControl();
             ClearDefaultTextBox();
@@ -2313,27 +2357,21 @@ namespace INVENTORY.UI
 
         void calculatesum()
         {
-            decimal qtysum = 0;
-            decimal amtsum = 0;
-            decimal taxsum = 0;
-
-            for (int i = 0; i < dgProducts.Rows.Count; ++i)
+            lblbillqty.Text = String.Format("{0:0.00}", _Order.SOrderDetails.Sum(p => p.Quantity));
+            lbltax.Text = String.Format("{0:0.00}", _Order.SOrderDetails.Sum(p => p.CGSTAmt));
+            lblbilltotal.Text = String.Format("{0:0.00}", _Order.SOrderDetails.Sum(p => p.UTAmount + p.CGSTAmt) - _Order.Adjustment);
+            if (_Order.Adjustment != 0)
             {
-
-                qtysum += Convert.ToDecimal(dgProducts.Rows[i].Cells[2].Value);
-
-                amtsum += Convert.ToDecimal(dgProducts.Rows[i].Cells[4].Value);
-
-                taxsum += Convert.ToDecimal(dgProducts.Rows[i].Cells[5].Value);
+                lblbilldisc.Text = String.Format("{0:0.00}", _Order.Adjustment);
+            }
+            else
+            {
+                lblbilldisc.Text = String.Format("{0:0.00}", _Order.SOrderDetails.Sum(p => p.PPDAmount * p.Quantity));
             }
 
-            lblbillqty.Text = String.Format("{0:0.00}", qtysum);
-            lbltax.Text = String.Format("{0:0.00}", Convert.ToDecimal(taxsum));
-            lblbilltotal.Text = String.Format("{0:0.00}", Convert.ToDecimal(amtsum + taxsum));
+            lblsavings.Text = lblbilldisc.Text;
 
             lblcashback.Text = String.Format("{0:0.00}", _Order.SOrderDetails.Where(p => p.ProductID == CashbackId && p.TypeID == (int)EnumSalesItemType.Category).Sum(p => p.SRate * p.Quantity));
-
-
         }
 
         private void dgProducts_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
@@ -2365,8 +2403,8 @@ namespace INVENTORY.UI
         }
 
         private void Bswrk_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
-        { 
-                frmpop.Close();
+        {
+            frmpop.Close();
         }
 
         private void Bswrk_DoWork(object sender, DoWorkEventArgs e)
@@ -2482,7 +2520,7 @@ namespace INVENTORY.UI
             }
             if (objPromoSaleList != null && objPromoSaleList.Count > 0)
             {
-                frmprmo.objPromoData.BillTotal = objPromoSaleList.Sum(p => p.Amount + p.HST);
+                frmprmo.objPromoData.BillTotal = Convert.ToDecimal(lblbilltotal.Text);
 
                 frmprmo.objPromoData.BillDiscount = Convert.ToDecimal(lblbilldisc.Text);
                 frmprmo.objPromoData.NoofItems = Convert.ToInt32(objPromoSaleList.Sum(p => p.Quantity));
@@ -2540,9 +2578,9 @@ namespace INVENTORY.UI
         private void btnoptions_Click(object sender, EventArgs e)
         {
             frmoptions frmopt = new frmoptions();
-            if(frmopt.ShowDialog()==DialogResult.OK)
+            if (frmopt.ShowDialog() == DialogResult.OK)
             {
-                if(frmopt.ObjDiscountOptions!=null)
+                if (frmopt.ObjDiscountOptions != null)
                 {
                     SetDiscount(frmopt.ObjDiscountOptions);
                 }
@@ -2553,32 +2591,92 @@ namespace INVENTORY.UI
         {
             if (objDiscountOptions.LineDiscountPerc > 0)
             {
-                //foreach (DataGridViewRow selectedRow in dgProducts.SelectedRows)
-                //{
-                //    SOrderDetail oPODItem = selectedRow.Tag as SOrderDetail;
-                //    oPODItem.PPDPercentage = objDiscountOptions.LineDiscountPerc;
-                //    oPODItem.PPDAmount = ((oPODItem.SRate * oPODItem.Quantity) * objDiscountOptions.LineDiscountPerc)/ 100;
+                foreach (DataGridViewRow selectedRow in dgProducts.SelectedRows)
+                {
+                    SOrderDetail oPODItem = selectedRow.Tag as SOrderDetail;
+                    oPODItem.PPDPercentage = objDiscountOptions.LineDiscountPerc;
+                    oPODItem.PPDAmount = ((oPODItem.SRate * oPODItem.Quantity) * objDiscountOptions.LineDiscountPerc) / 100;
 
-                //    oPODItem.UTAmount = (oPODItem.UnitPrice - oPODItem.PPDAmount) * oPODItem.Quantity;
+                    oPODItem.UTAmount = (oPODItem.UnitPrice - oPODItem.PPDAmount) * oPODItem.Quantity;
 
-                //    oPODItem.MPRate = oPODItem.UnitPrice - ((oPODItem.UnitPrice * oPODItem.PPDPercentage) / 100); //StockDetails PRate
-                //    oPODItem.MPRateTotal = oPODItem.MPRate * oPODItem.Quantity;
+                    oPODItem.MPRate = oPODItem.UnitPrice - oPODItem.PPDAmount;
 
-                //}
+                    oPODItem.MPRateTotal = oPODItem.MPRate * oPODItem.Quantity;
 
+                }
             }
             else if (objDiscountOptions.LineDiscountAmt > 0)
             {
+                foreach (DataGridViewRow selectedRow in dgProducts.SelectedRows)
+                {
+                    SOrderDetail oPODItem = selectedRow.Tag as SOrderDetail;
+                    oPODItem.PPDPercentage = 0;
+                    oPODItem.PPDAmount = objDiscountOptions.LineDiscountAmt;
 
+                    oPODItem.UTAmount = (oPODItem.UnitPrice - oPODItem.PPDAmount) * oPODItem.Quantity;
+
+                    oPODItem.MPRate = oPODItem.UnitPrice - oPODItem.PPDAmount;
+
+                    oPODItem.MPRateTotal = oPODItem.MPRate * oPODItem.Quantity;
+
+                }
             }
             else if (objDiscountOptions.BillPerc > 0)
             {
+                //reset old discount
+                foreach (DataGridViewRow selectedRow in dgProducts.Rows)
+                {
+                    SOrderDetail oPODItem = selectedRow.Tag as SOrderDetail;
+                    oPODItem.PPDPercentage = 0;
+                    oPODItem.PPDAmount = 0;
+
+                    oPODItem.UTAmount = oPODItem.UnitPrice * oPODItem.Quantity;
+
+                    oPODItem.MPRate = oPODItem.UnitPrice - oPODItem.PPDAmount; //StockDetails PRate
+                    oPODItem.MPRateTotal = oPODItem.MPRate * oPODItem.Quantity;
+                }
+
+                _Order.Adjustment = _Order.SOrderDetails.Sum(p => (p.SRate * p.Quantity) + p.CGSTAmt) * objDiscountOptions.BillPerc / 100;
 
             }
             else if (objDiscountOptions.BillAmt > 0)
             {
+                //reset old discount
+                foreach (DataGridViewRow selectedRow in dgProducts.Rows)
+                {
+                    SOrderDetail oPODItem = selectedRow.Tag as SOrderDetail;
+                    oPODItem.PPDPercentage = 0;
+                    oPODItem.PPDAmount = 0;
 
+                    oPODItem.UTAmount = oPODItem.UnitPrice * oPODItem.Quantity;
+
+                    oPODItem.MPRate = oPODItem.UnitPrice - oPODItem.PPDAmount; //StockDetails PRate
+                    oPODItem.MPRateTotal = oPODItem.MPRate * oPODItem.Quantity;
+                }
+
+                _Order.Adjustment = objDiscountOptions.BillAmt;
+
+                //foreach (DataGridViewRow selectedRow in dgProducts.SelectedRows)
+                //{
+                //    SOrderDetail oPODItem = selectedRow.Tag as SOrderDetail;
+                //    oPODItem.PPDPercentage = 0;
+                //    oPODItem.PPDAmount = objDiscountOptions.BillAmt;
+
+                //    oPODItem.UTAmount = (oPODItem.UnitPrice - oPODItem.PPDAmount) * oPODItem.Quantity;
+
+                //    if (oPODItem.PPDPercentage > 0)
+
+                //        oPODItem.MPRate = oPODItem.UnitPrice - ((oPODItem.UnitPrice * oPODItem.PPDPercentage) / 100); //StockDetails PRate
+                //    else
+                //    {
+                //        oPODItem.MPRate = oPODItem.UnitPrice - oPODItem.PPDAmount;
+                //    }
+
+                //    oPODItem.MPRateTotal = oPODItem.MPRate * oPODItem.Quantity;
+                //}
             }
+            calculatesum();
+            RefreshPromo();
         }
 
         private void btnvoidqty_Click(object sender, EventArgs e)
@@ -2964,13 +3062,13 @@ namespace INVENTORY.UI
             y += (lineOffset * (float)1.5); ;
             e.Graphics.DrawString("Please Visit Again", printFont, Brushes.Black, x, y);
             y += (lineOffset * (float)1.5); ;
-            e.Graphics.DrawString("Opening hours ", printFont, Brushes.Black, x, y );
+            e.Graphics.DrawString("Opening hours ", printFont, Brushes.Black, x, y);
 
             y += (lineOffset * (float)1.5);
-            e.Graphics.DrawString("7 Days week 7 AM TO 9 PM", printFont, Brushes.Black, x, y );
-            
-            
-            y += (lineOffset * (float)2.0); 
+            e.Graphics.DrawString("7 Days week 7 AM TO 9 PM", printFont, Brushes.Black, x, y);
+
+
+            y += (lineOffset * (float)2.0);
             // Indicate that no more data to print, and the Print Document can now send the print data to the spooler.         
 
 
@@ -2978,7 +3076,7 @@ namespace INVENTORY.UI
 
             e.HasMorePages = false;
         }
-        
+
         private static Linear CreateBarcode()
         {
             Linear barcode = new Linear();// create a barcode

@@ -55,9 +55,15 @@ namespace INVENTORY.UI
         {
             this.Hide();
             frmdisc fmdisc = new frmdisc();
-            fmdisc.ShowDialog();
-            ObjDiscountOptions = fmdisc.ObjDiscountOptions;
-            this.DialogResult = DialogResult.OK;
+            if (fmdisc.ShowDialog() == DialogResult.OK)
+            {
+                ObjDiscountOptions = fmdisc.ObjDiscountOptions;
+                this.DialogResult = DialogResult.OK;
+            }
+            else
+            {
+                this.DialogResult = DialogResult.Cancel;
+            }
         }
     }
 }

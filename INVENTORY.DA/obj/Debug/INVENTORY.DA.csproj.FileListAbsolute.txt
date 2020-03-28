@@ -22,3 +22,4 @@ C:\DevelopmentSource\InventoryRepo\INVENTORY.DA\obj\Debug\INVENTORY.DA.csprojAss
 C:\DevelopmentSource\InventoryRepo\INVENTORY.DA\obj\Debug\INVENTORY.DA.csproj.CopyComplete
 C:\DevelopmentSource\InventoryRepo\INVENTORY.DA\obj\Debug\INVENTORY.DA.dll
 C:\DevelopmentSource\InventoryRepo\INVENTORY.DA\obj\Debug\INVENTORY.DA.pdb
+C:\CodeBase\InventoryRepo\INVENTORY.DA\obj\Debug\INVENTORY.DA.csprojResolveAssemblyReference.cache

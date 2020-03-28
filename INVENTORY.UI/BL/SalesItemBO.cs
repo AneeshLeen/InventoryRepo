@@ -41,6 +41,7 @@ namespace INVENTORY.UI.BL
         public decimal BillTotal { get; set; }
         public decimal HST { get; set; }
         public decimal Card { get; set; }
+        public decimal Cash { get; set; }
         public decimal Change { get; set; }
         public decimal TotalSavings { get; set; }
         public decimal NoOfItems { get; set; }
@@ -62,5 +63,7 @@ namespace INVENTORY.UI.BL
     {
         public decimal Rate { get; set; }
         public decimal HST { get; set; }
+        public decimal Net { get; set; }
+        public decimal Total { get; set; }
     }
 }
