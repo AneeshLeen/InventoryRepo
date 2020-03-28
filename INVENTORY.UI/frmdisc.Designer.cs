@@ -68,7 +68,7 @@
             this.btnenter.TabIndex = 274;
             this.btnenter.Text = "ENTER";
             this.btnenter.UseVisualStyleBackColor = false;
-            this.btnenter.Click += new System.EventHandler(this.btnenter_Click);
+            this.btnenter.Click += new System.EventHandler(this.btnapply_Click);
             // 
             // btndelete
             // 
