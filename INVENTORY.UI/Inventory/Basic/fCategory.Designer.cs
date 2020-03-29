@@ -51,7 +51,10 @@
             this.cmbforecolor = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btncolorprev = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.numOrderNo = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numOrderNo)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox3
@@ -295,12 +298,37 @@
             this.btncolorprev.TabIndex = 22;
             this.btncolorprev.UseVisualStyleBackColor = true;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label7.Location = new System.Drawing.Point(76, 308);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(81, 22);
+            this.label7.TabIndex = 23;
+            this.label7.Text = "Order No";
+            // 
+            // numOrderNo
+            // 
+            this.numOrderNo.Location = new System.Drawing.Point(199, 304);
+            this.numOrderNo.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numOrderNo.Name = "numOrderNo";
+            this.numOrderNo.Size = new System.Drawing.Size(120, 25);
+            this.numOrderNo.TabIndex = 24;
+            // 
             // fCategory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(987, 564);
+            this.Controls.Add(this.numOrderNo);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.btncolorprev);
             this.Controls.Add(this.cmbforecolor);
             this.Controls.Add(this.label6);
@@ -335,6 +363,7 @@
             this.Text = "Category";
             this.Load += new System.EventHandler(this.fCategory_Load);
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numOrderNo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -364,5 +393,7 @@
         private System.Windows.Forms.ComboBox cmbforecolor;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btncolorprev;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.NumericUpDown numOrderNo;
     }
 }

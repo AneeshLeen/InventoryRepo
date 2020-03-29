@@ -96,13 +96,13 @@ namespace INVENTORY.UI
                                 {
                                     //
                                     
-                                    Global.CurrentUser = oUser;
+                                    Global.CurrentUser = oUser; 
                                     fSOrder fssale = new fSOrder();
                                     fssale.FormBorderStyle = FormBorderStyle.FixedSingle;
                                     fssale.strsales.Visible = true;
                                     fssale.LoadDefaultData(new SOrder());
-                                    fssale.Show();                                   
-                                   
+                                    fssale.Show();
+
                                 }
                                 //
                                 this.Close();

@@ -17,10 +17,6 @@ namespace INVENTORY.UI.BL
         public decimal Amount { get; set; }
         public decimal HST { get; set; }
     }
-    public class SalesItemCollectionBO : BindingList<SalesItemBO>
-    {
-
-    }
     public class PromoData
     {
         public decimal BillTotal { get; set; }
@@ -34,7 +30,6 @@ namespace INVENTORY.UI.BL
         public decimal Balance { get; set; }
         public decimal CashBack { get; set; }
     }
-
     public class SalesPrintBO
     {
         public decimal NetAmount { get; set; }
@@ -65,5 +60,16 @@ namespace INVENTORY.UI.BL
         public decimal HST { get; set; }
         public decimal Net { get; set; }
         public decimal Total { get; set; }
+    }
+
+    public class SalesReturnBO
+    {
+        public int SOrderDetailID { get; set; }
+        public string ItemName { get; set; }
+        public decimal Quantity { get; set; }
+        public decimal UnitPrice { get; set; }
+        public decimal Amount { get; set; }
+        public decimal RefundQty { get; set; }
+        public decimal RefundAmt { get; set; }
     }
 }

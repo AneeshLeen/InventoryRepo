@@ -34,12 +34,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmrefund));
             this.dgProducts = new System.Windows.Forms.DataGridView();
-            this.clnitmno = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clnQTY = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clnUnitPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clnTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clnrefundqty = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clnrefundamt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblBarcode = new System.Windows.Forms.Label();
             this.txtorderrefno = new System.Windows.Forms.TextBox();
             this.btn5 = new System.Windows.Forms.Button();
@@ -49,6 +43,13 @@
             this.lblbilltotal = new System.Windows.Forms.Label();
             this.label52 = new System.Windows.Forms.Label();
             this.chkrefund = new System.Windows.Forms.CheckBox();
+            this.clnitmno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clnQTY = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clnUnitPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clnTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clnrefundqty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clnrefundamt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SOrderDetailID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgProducts)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,7 +74,8 @@
             this.clnUnitPrice,
             this.clnTotal,
             this.clnrefundqty,
-            this.clnrefundamt});
+            this.clnrefundamt,
+            this.SOrderDetailID});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -93,53 +95,17 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgProducts.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgProducts.RowHeadersVisible = false;
             this.dgProducts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgProducts.Size = new System.Drawing.Size(655, 382);
             this.dgProducts.TabIndex = 6;
-            // 
-            // clnitmno
-            // 
-            this.clnitmno.HeaderText = "Item Name";
-            this.clnitmno.Name = "clnitmno";
-            this.clnitmno.ReadOnly = true;
-            // 
-            // clnQTY
-            // 
-            this.clnQTY.HeaderText = "QTY";
-            this.clnQTY.Name = "clnQTY";
-            this.clnQTY.ReadOnly = true;
-            this.clnQTY.Width = 80;
-            // 
-            // clnUnitPrice
-            // 
-            this.clnUnitPrice.HeaderText = "Unit Price";
-            this.clnUnitPrice.Name = "clnUnitPrice";
-            this.clnUnitPrice.ReadOnly = true;
-            // 
-            // clnTotal
-            // 
-            this.clnTotal.HeaderText = "Amount";
-            this.clnTotal.Name = "clnTotal";
-            this.clnTotal.ReadOnly = true;
-            this.clnTotal.Width = 110;
-            // 
-            // clnrefundqty
-            // 
-            this.clnrefundqty.HeaderText = "Refund Qty";
-            this.clnrefundqty.Name = "clnrefundqty";
-            // 
-            // clnrefundamt
-            // 
-            this.clnrefundamt.HeaderText = "Refund Amount";
-            this.clnrefundamt.Name = "clnrefundamt";
-            this.clnrefundamt.Width = 120;
             // 
             // lblBarcode
             // 
             this.lblBarcode.AutoSize = true;
             this.lblBarcode.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBarcode.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblBarcode.Location = new System.Drawing.Point(13, 19);
+            this.lblBarcode.Location = new System.Drawing.Point(13, 29);
             this.lblBarcode.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblBarcode.Name = "lblBarcode";
             this.lblBarcode.Size = new System.Drawing.Size(97, 19);
@@ -149,12 +115,13 @@
             // txtorderrefno
             // 
             this.txtorderrefno.Font = new System.Drawing.Font("Palatino Linotype", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtorderrefno.Location = new System.Drawing.Point(121, 13);
+            this.txtorderrefno.Location = new System.Drawing.Point(118, 28);
             this.txtorderrefno.Margin = new System.Windows.Forms.Padding(4);
-            this.txtorderrefno.Multiline = true;
             this.txtorderrefno.Name = "txtorderrefno";
-            this.txtorderrefno.Size = new System.Drawing.Size(183, 29);
+            this.txtorderrefno.Size = new System.Drawing.Size(183, 22);
             this.txtorderrefno.TabIndex = 17;
+            this.txtorderrefno.WordWrap = false;
+            this.txtorderrefno.Enter += new System.EventHandler(this.txtorderrefno_Enter);
             // 
             // btn5
             // 
@@ -233,6 +200,58 @@
             this.chkrefund.Text = "Refund All";
             this.chkrefund.UseVisualStyleBackColor = true;
             // 
+            // clnitmno
+            // 
+            this.clnitmno.DataPropertyName = "ItemName";
+            this.clnitmno.HeaderText = "Item Name";
+            this.clnitmno.Name = "clnitmno";
+            this.clnitmno.ReadOnly = true;
+            this.clnitmno.Width = 200;
+            // 
+            // clnQTY
+            // 
+            this.clnQTY.DataPropertyName = "Quantity";
+            this.clnQTY.HeaderText = "QTY";
+            this.clnQTY.Name = "clnQTY";
+            this.clnQTY.ReadOnly = true;
+            this.clnQTY.Width = 80;
+            // 
+            // clnUnitPrice
+            // 
+            this.clnUnitPrice.DataPropertyName = "UnitPrice";
+            this.clnUnitPrice.HeaderText = "Unit Price";
+            this.clnUnitPrice.Name = "clnUnitPrice";
+            this.clnUnitPrice.ReadOnly = true;
+            // 
+            // clnTotal
+            // 
+            this.clnTotal.DataPropertyName = "Amount";
+            this.clnTotal.HeaderText = "Amount";
+            this.clnTotal.Name = "clnTotal";
+            this.clnTotal.ReadOnly = true;
+            this.clnTotal.Width = 80;
+            // 
+            // clnrefundqty
+            // 
+            this.clnrefundqty.DataPropertyName = "RefundQty";
+            this.clnrefundqty.HeaderText = "Refund Qty";
+            this.clnrefundqty.Name = "clnrefundqty";
+            this.clnrefundqty.Width = 80;
+            // 
+            // clnrefundamt
+            // 
+            this.clnrefundamt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.clnrefundamt.DataPropertyName = "RefundAmt";
+            this.clnrefundamt.HeaderText = "Refund Amount";
+            this.clnrefundamt.Name = "clnrefundamt";
+            // 
+            // SOrderDetailID
+            // 
+            this.SOrderDetailID.DataPropertyName = "SOrderDetailID";
+            this.SOrderDetailID.HeaderText = "SOrderDetailID";
+            this.SOrderDetailID.Name = "SOrderDetailID";
+            this.SOrderDetailID.Visible = false;
+            // 
             // frmrefund
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -265,14 +284,15 @@
         private System.Windows.Forms.Button btn4;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label lblbilltotal;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.CheckBox chkrefund;
         private System.Windows.Forms.DataGridViewTextBoxColumn clnitmno;
         private System.Windows.Forms.DataGridViewTextBoxColumn clnQTY;
         private System.Windows.Forms.DataGridViewTextBoxColumn clnUnitPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn clnTotal;
         private System.Windows.Forms.DataGridViewTextBoxColumn clnrefundqty;
         private System.Windows.Forms.DataGridViewTextBoxColumn clnrefundamt;
-        private System.Windows.Forms.Label lblbilltotal;
-        private System.Windows.Forms.Label label52;
-        private System.Windows.Forms.CheckBox chkrefund;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SOrderDetailID;
     }
 }

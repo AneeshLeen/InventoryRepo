@@ -113,6 +113,7 @@
           <Property Name="VAT" Type="decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="IsPayOut" Type="bit" Nullable="false" />
           <Property Name="IsSeperateSale" Type="bit" Nullable="false" />
+          <Property Name="OrderNo" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Colors">
           <Key>
@@ -489,6 +490,7 @@
           <Property Name="BarCode" Type="varchar" MaxLength="50" />
           <Property Name="CostPrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="RetailPrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="Quickmenu" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="ReturnDetails">
           <Key>
@@ -1925,6 +1927,7 @@ warning 6002: The table/view 'DEWSRM.dbo.vw_SupplierLedger' does not have a prim
           <Property Name="VAT" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
           <Property Name="IsPayOut" Type="Boolean" Nullable="false" />
           <Property Name="IsSeperateSale" Type="Boolean" Nullable="false" />
+          <Property Name="OrderNo" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="Color">
           <Key>
@@ -2323,6 +2326,7 @@ warning 6002: The table/view 'DEWSRM.dbo.vw_SupplierLedger' does not have a prim
           <Property Name="BarCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="CostPrice" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
           <Property Name="RetailPrice" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="Quickmenu" Type="Boolean" Nullable="false" />
         </EntityType>
         <EntityType Name="ReturnDetail">
           <Key>
@@ -3797,6 +3801,7 @@ warning 6002: The table/view 'DEWSRM.dbo.vw_SupplierLedger' does not have a prim
           <EntitySetMapping Name="Categorys">
             <EntityTypeMapping TypeName="DEWSRMModel.Category">
               <MappingFragment StoreEntitySet="Categorys">
+                <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
                 <ScalarProperty Name="IsSeperateSale" ColumnName="IsSeperateSale" />
                 <ScalarProperty Name="IsPayOut" ColumnName="IsPayOut" />
                 <ScalarProperty Name="VAT" ColumnName="VAT" />
@@ -4141,6 +4146,7 @@ warning 6002: The table/view 'DEWSRM.dbo.vw_SupplierLedger' does not have a prim
           <EntitySetMapping Name="Products">
             <EntityTypeMapping TypeName="DEWSRMModel.Product">
               <MappingFragment StoreEntitySet="Products">
+                <ScalarProperty Name="Quickmenu" ColumnName="Quickmenu" />
                 <ScalarProperty Name="RetailPrice" ColumnName="RetailPrice" />
                 <ScalarProperty Name="CostPrice" ColumnName="CostPrice" />
                 <ScalarProperty Name="BarCode" ColumnName="BarCode" />

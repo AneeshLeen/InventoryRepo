@@ -29,7 +29,7 @@ namespace INVENTORY.UI
         List<SOrderDetail> _OrderDetails = new List<SOrderDetail>();
         List<INVENTORY.DA.Color> _ColorList = new List<DA.Color>();
 
-        SalesItemCollectionBO objPromoSaleList = null;
+        List<SalesItemBO> objPromoSaleList = null;
         List<Category> _CategoryList = new List<Category>();
         SOrderDetail _OrderDetail = null;
         SOrder _Order = null;
@@ -58,6 +58,14 @@ namespace INVENTORY.UI
             }
 
             RefreshPromo();
+            try
+            {
+              //  DevExpress.XtraGrid.GridControl grdCategorys = new DevExpress.XtraGrid.GridControl();
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
 
 
@@ -262,11 +270,11 @@ namespace INVENTORY.UI
             }
             _Order.InvoiceNo = txtInvoice.Text;
             _Order.InvoiceDate = dtpDate.Value;
-            _Order.SubTotal = _Order.GrandTotal = _Order.SOrderDetails.Sum(p => (p.SRate * p.Quantity) + p.CGSTAmt);
+            _Order.SubTotal = _Order.GrandTotal = _Order.SOrderDetails.Sum(p => (p.SRate * p.Quantity));
             //_Order.Adjustment = numAdjustAmt.Value;
             if (_Order.Adjustment > 0)
             {
-                _Order.TotalAmount = _Order.SOrderDetails.Sum(p => ((p.SRate * p.Quantity) + p.CGSTAmt)) - _Order.Adjustment;
+                _Order.TotalAmount = _Order.SOrderDetails.Sum(p => p.SRate * p.Quantity) - _Order.Adjustment;
             }
             else
             {
@@ -489,8 +497,16 @@ namespace INVENTORY.UI
             {
                 _OrderDetail.StockDetailID = 0;
             }
-
-            _OrderDetail.UnitPrice = _oProduct.RetailPrice;
+            decimal Tax = 0;
+            if (_oProduct.Tax > 0)
+            {
+                _OrderDetail.UnitPrice = Math.Round((_oProduct.RetailPrice * 100) / (100 + _oProduct.Tax),2);
+                Tax = Math.Round(_oProduct.RetailPrice - _OrderDetail.UnitPrice, 2);
+            }
+            else
+            {
+                _OrderDetail.UnitPrice = _oProduct.RetailPrice;
+            }
             _OrderDetail.SRate = _oProduct.RetailPrice;
 
             _OrderDetail.UTAmount = (_OrderDetail.UnitPrice - _OrderDetail.PPDAmount) * multiple;
@@ -502,7 +518,7 @@ namespace INVENTORY.UI
             _OrderDetail.PRateTotal = _OrderDetail.PRate * multiple;
 
             _OrderDetail.CGSTPerc = _oProduct.Tax;
-            _OrderDetail.CGSTAmt = Convert.ToDecimal(String.Format("{0:0.00}", (_OrderDetail.SRate * _OrderDetail.Quantity) * _oProduct.Tax / 100));
+            _OrderDetail.CGSTAmt = Convert.ToDecimal(String.Format("{0:0.00}", Tax));
 
             _OrderDetail.SparePartsWarrenty = txtSpareparts.Text;
             _OrderDetail.GodownID = ctlGodown.SelectedID;
@@ -549,7 +565,7 @@ namespace INVENTORY.UI
                 int nSLNo = 1;
                 dgProducts.Rows.Clear();
 
-                objPromoSaleList = new SalesItemCollectionBO();
+                objPromoSaleList = new List<SalesItemBO>();
 
                 List<SOrderDetail> nobarcodeSOrderDetailList = new List<SOrderDetail>();
                 _OrderDetails = _Order.SOrderDetails.OrderBy(x=>x.SOrderDetailID).ToList();
@@ -583,7 +599,7 @@ namespace INVENTORY.UI
                             Quantity = oPODItem.Quantity,
                             Amount = oPODItem.SRate * oPODItem.Quantity,
                             HST = oPODItem.CGSTAmt,
-                            SRate = oPODItem.SRate
+                            SRate = oPODItem.UTAmount
                         });
 
 
@@ -593,7 +609,7 @@ namespace INVENTORY.UI
                         //dgProducts.Rows[count].Cells[3].Value = oCategory.Description;//_StockDetail.Stock.Color.Description;
                         //dgProducts.Rows[count].Cells[2].Value = _StockDetail.IMENO;
                         dgProducts.Rows[count].Cells[2].Value = oPODItem.Quantity.ToString();
-                        dgProducts.Rows[count].Cells[3].Value = oPODItem.SRate.ToString();
+                        dgProducts.Rows[count].Cells[3].Value = oPODItem.UTAmount.ToString();
                         dgProducts.Rows[count].Cells[4].Value = (oPODItem.SRate * oPODItem.Quantity).ToString();
                         dgProducts.Rows[count].Cells[5].Value = oPODItem.CGSTAmt.ToString();
                         //Aneesh
@@ -1411,10 +1427,23 @@ namespace INVENTORY.UI
 
                             db.SaveChanges();
                             Transaction.Commit();
+
+                            foreach (SOrderDetail objSOrderDetail in _Order.SOrderDetails)
+                            {
+                                if (objSOrderDetail.TypeID == (int)EnumSalesItemType.Product)
+                                {
+                                    UpdateStock(objSOrderDetail.Quantity, objSOrderDetail.ProductID);
+                                }
+                            }
                         }
                         catch (Exception ex)
                         {
+
                             Transaction.Rollback();
+                            if(isNew)
+                            {
+                                _Order.SOrderID = 0;
+                            }
                             MessageBox.Show("Transaction Failed." + Environment.NewLine + ex.Message, "Save Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             return;
                         }
@@ -2095,7 +2124,7 @@ namespace INVENTORY.UI
 
             DataTable dtbranches = new DataTable();
             SqlConnection connection = new SqlConnection(@"Data Source=" + SQLServer + ";Initial Catalog=DEWSRMTEST;Persist Security Info=True;Integrated Security=true");
-            SqlCommand command = new SqlCommand("SELECT * FROM[dbo].[Categorys]  cat WHERE cat.CategoryID NOT IN(SELECT CategoryID FROM[dbo].[Products] where quickmanu!='false') and cat.inactive = 'false' and ispayout='false'", connection);
+            SqlCommand command = new SqlCommand("SELECT * FROM[dbo].[Categorys]  cat WHERE cat.CategoryID NOT IN(SELECT CategoryID FROM[dbo].[Products] where Quickmenu!='false') and cat.inactive = 'false' and ispayout='false'", connection);
             //SqlCommand command1 = new SqlCommand("SELECT * FROM[dbo].[Categorys]  cat WHERE cat.CategoryID NOT IN(SELECT CategoryID FROM[dbo].[Products]) and cat.inactive = 'false' and ispayout='false'", connection);
             SqlDataAdapter adp = new SqlDataAdapter(command);
             adp.Fill(dtbranches);
@@ -2103,6 +2132,18 @@ namespace INVENTORY.UI
             //}
         }
 
+        internal void UpdateStock(decimal Qty,int productid)
+        {
+            
+            string SQLServer = ConfigurationManager.AppSettings["SqlServer"];
+
+            DataTable dtbranches = new DataTable();
+            SqlConnection connection = new SqlConnection(@"Data Source=" + SQLServer + ";Initial Catalog=DEWSRMTEST;Persist Security Info=True;Integrated Security=true");
+            connection.Open();
+            SqlCommand command = new SqlCommand("update products set BoxQty=BoxQty -" + Qty + " where ProductID=" + productid + "", connection);
+            command.ExecuteNonQuery();
+
+        }
         private void LoadDatatable()
         {
             Branchlist = ReadAllCategories();
@@ -2172,7 +2213,15 @@ namespace INVENTORY.UI
             _OrderDetail.ProductID = Convert.ToInt32(row["CategoryID"]);
             _OrderDetail.StockDetailID = 0;
             _OrderDetail.Quantity = multiple;
-            _OrderDetail.UnitPrice = amount * NegativeAmount;
+            //decimal Tax = 0;
+            //if (_oProduct.Tax > 0)
+            //{
+            //    _OrderDetail.UnitPrice = Math.Round((amount * 100) / (100 + _oProduct.Tax));
+            //}
+            //else
+            //{
+                _OrderDetail.UnitPrice = amount * NegativeAmount;
+            //}
             _OrderDetail.SRate = amount * NegativeAmount;
             //_OrderDetail.PPDPercentage = numDPerc.Value;
             //_OrderDetail.PPDAmount = numPPDISAmt.Value;

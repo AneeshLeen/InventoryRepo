@@ -102,6 +102,7 @@
     <EntitySetMapping Name="Categorys">
       <EntityTypeMapping TypeName="DEWSRMModel.Category">
         <MappingFragment StoreEntitySet="Categorys">
+          <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
           <ScalarProperty Name="IsSeperateSale" ColumnName="IsSeperateSale" />
           <ScalarProperty Name="IsPayOut" ColumnName="IsPayOut" />
           <ScalarProperty Name="VAT" ColumnName="VAT" />
@@ -446,6 +447,7 @@
     <EntitySetMapping Name="Products">
       <EntityTypeMapping TypeName="DEWSRMModel.Product">
         <MappingFragment StoreEntitySet="Products">
+          <ScalarProperty Name="Quickmenu" ColumnName="Quickmenu" />
           <ScalarProperty Name="RetailPrice" ColumnName="RetailPrice" />
           <ScalarProperty Name="CostPrice" ColumnName="CostPrice" />
           <ScalarProperty Name="BarCode" ColumnName="BarCode" />

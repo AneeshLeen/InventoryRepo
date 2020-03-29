@@ -99,6 +99,8 @@ namespace INVENTORY.UI
             numCostPrice.Value = _Product.CostPrice;
             numRetailPrice.Value = _Product.RetailPrice;
 
+            chkQuickMenu.Checked = _Product.Quickmenu;
+
             if (!string.IsNullOrEmpty(_Product.CompressorWarrenty))
             {
                 numCompressor.Value = Convert.ToDecimal(_Product.CompressorWarrenty.Split(' ')[0]);
@@ -202,7 +204,7 @@ namespace INVENTORY.UI
             _Product.BarCode = txtBarcode.Text;
             _Product.CostPrice = numCostPrice.Value;
             _Product.RetailPrice = numRetailPrice.Value;
-
+            _Product.Quickmenu = chkQuickMenu.Checked;
             #region Product Picture
 
             if ((pbxEmpPic.ImageLocation != string.Empty) && (pbxEmpPic.ImageLocation != null))
