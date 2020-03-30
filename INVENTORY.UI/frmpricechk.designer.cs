@@ -148,7 +148,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateGray;
-            this.ClientSize = new System.Drawing.Size(409, 345);
+            this.ClientSize = new System.Drawing.Size(588, 345);
             this.Controls.Add(this.lblrate);
             this.Controls.Add(this.lblrate1);
             this.Controls.Add(this.lbltax1);

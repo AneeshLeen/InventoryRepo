@@ -104,7 +104,7 @@ namespace INVENTORY.UI
                                     fssale.Show();                                   
                                    
                                 }
-                                //
+
                                 this.Close();
                                 this.Hide();
                                 this.Dispose();
