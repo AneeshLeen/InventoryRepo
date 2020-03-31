@@ -58,6 +58,7 @@ namespace INVENTORY.DA
         public string BarCode { get; set; }
         public decimal CostPrice { get; set; }
         public decimal RetailPrice { get; set; }
+        public bool Quickmenu { get; set; }
     
         public virtual Category Category { get; set; }
         public virtual Company Company { get; set; }

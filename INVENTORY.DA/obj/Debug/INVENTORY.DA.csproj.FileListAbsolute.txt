@@ -6,6 +6,7 @@ C:\CodeBase\InventoryRepo\INVENTORY.DA\bin\Debug\EntityFramework.SqlServer.dll
 C:\CodeBase\InventoryRepo\INVENTORY.DA\bin\Debug\SpellNumber.dll
 C:\CodeBase\InventoryRepo\INVENTORY.DA\bin\Debug\EntityFramework.xml
 C:\CodeBase\InventoryRepo\INVENTORY.DA\bin\Debug\EntityFramework.SqlServer.xml
+C:\CodeBase\InventoryRepo\INVENTORY.DA\obj\Debug\INVENTORY.DA.csprojResolveAssemblyReference.cache
 C:\CodeBase\InventoryRepo\INVENTORY.DA\obj\Debug\INVENTORY.DA.dll
 C:\CodeBase\InventoryRepo\INVENTORY.DA\obj\Debug\INVENTORY.DA.pdb
 C:\DevelopmentSource\InventoryRepo\INVENTORY.DA\bin\Debug\INVENTORY.DA.dll.config
@@ -18,8 +19,7 @@ C:\DevelopmentSource\InventoryRepo\INVENTORY.DA\bin\Debug\OnBarcode.Barcode.WinF
 C:\DevelopmentSource\InventoryRepo\INVENTORY.DA\bin\Debug\SpellNumber.dll
 C:\DevelopmentSource\InventoryRepo\INVENTORY.DA\bin\Debug\EntityFramework.xml
 C:\DevelopmentSource\InventoryRepo\INVENTORY.DA\bin\Debug\EntityFramework.SqlServer.xml
-C:\DevelopmentSource\InventoryRepo\INVENTORY.DA\obj\Debug\INVENTORY.DA.csprojAssemblyReference.cache
 C:\DevelopmentSource\InventoryRepo\INVENTORY.DA\obj\Debug\INVENTORY.DA.csproj.CopyComplete
 C:\DevelopmentSource\InventoryRepo\INVENTORY.DA\obj\Debug\INVENTORY.DA.dll
 C:\DevelopmentSource\InventoryRepo\INVENTORY.DA\obj\Debug\INVENTORY.DA.pdb
-C:\CodeBase\InventoryRepo\INVENTORY.DA\obj\Debug\INVENTORY.DA.csprojResolveAssemblyReference.cache
+C:\DevelopmentSource\InventoryRepo\INVENTORY.DA\obj\Debug\INVENTORY.DA.csprojAssemblyReference.cache

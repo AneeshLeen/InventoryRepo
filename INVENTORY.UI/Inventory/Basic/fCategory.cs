@@ -88,6 +88,7 @@ namespace INVENTORY.UI
 
             chkPayout.Checked = _Category.IsPayOut;
             chkSeperateSale.Checked = _Category.IsSeperateSale;
+            numOrderNo.Value = _Category.OrderNo;
         }
 
         private void RefreshObject()
@@ -103,6 +104,7 @@ namespace INVENTORY.UI
             _Category.VAT = Convert.ToDecimal(cmbVat.SelectedValue);
             _Category.IsPayOut = chkPayout.Checked;
             _Category.IsSeperateSale = chkSeperateSale.Checked;
+            _Category.OrderNo =(int) numOrderNo.Value;
         }
 
         #region Events

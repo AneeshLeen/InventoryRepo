@@ -29,7 +29,7 @@ namespace INVENTORY.UI
         List<SOrderDetail> _OrderDetails = new List<SOrderDetail>();
         List<INVENTORY.DA.Color> _ColorList = new List<DA.Color>();
 
-        SalesItemCollectionBO objPromoSaleList = null;
+        List<SalesItemBO> objPromoSaleList = null;
         List<Category> _CategoryList = new List<Category>();
         SOrderDetail _OrderDetail = null;
         SOrder _Order = null;
@@ -54,10 +54,18 @@ namespace INVENTORY.UI
             User oUser = db.Users.FirstOrDefault(o => o.UserName == Global.CurrentUser.UserName);
             if (oUser.UserType != (int)EnumUserType.Administrator)
             {
-                frmprmo.Show();
+                //frmprmo.Show();
             }
 
             RefreshPromo();
+            try
+            {
+              //  DevExpress.XtraGrid.GridControl grdCategorys = new DevExpress.XtraGrid.GridControl();
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
 
 
@@ -262,11 +270,11 @@ namespace INVENTORY.UI
             }
             _Order.InvoiceNo = txtInvoice.Text;
             _Order.InvoiceDate = dtpDate.Value;
-            _Order.SubTotal = _Order.GrandTotal = _Order.SOrderDetails.Sum(p => (p.SRate * p.Quantity) + p.CGSTAmt);
+            _Order.SubTotal = _Order.GrandTotal = _Order.SOrderDetails.Sum(p => (p.SRate * p.Quantity));
             //_Order.Adjustment = numAdjustAmt.Value;
             if (_Order.Adjustment > 0)
             {
-                _Order.TotalAmount = _Order.SOrderDetails.Sum(p => ((p.SRate * p.Quantity) + p.CGSTAmt)) - _Order.Adjustment;
+                _Order.TotalAmount = _Order.SOrderDetails.Sum(p => p.SRate * p.Quantity) - _Order.Adjustment;
             }
             else
             {
@@ -489,8 +497,16 @@ namespace INVENTORY.UI
             {
                 _OrderDetail.StockDetailID = 0;
             }
-
-            _OrderDetail.UnitPrice = _oProduct.RetailPrice;
+            decimal Tax = 0;
+            if (_oProduct.Tax > 0)
+            {
+                _OrderDetail.UnitPrice = Math.Round((_oProduct.RetailPrice * 100) / (100 + _oProduct.Tax),2);
+                Tax = Math.Round(_oProduct.RetailPrice - _OrderDetail.UnitPrice, 2);
+            }
+            else
+            {
+                _OrderDetail.UnitPrice = _oProduct.RetailPrice;
+            }
             _OrderDetail.SRate = _oProduct.RetailPrice;
 
             _OrderDetail.UTAmount = (_OrderDetail.UnitPrice - _OrderDetail.PPDAmount) * multiple;
@@ -502,7 +518,7 @@ namespace INVENTORY.UI
             _OrderDetail.PRateTotal = _OrderDetail.PRate * multiple;
 
             _OrderDetail.CGSTPerc = _oProduct.Tax;
-            _OrderDetail.CGSTAmt = Convert.ToDecimal(String.Format("{0:0.00}", (_OrderDetail.SRate * _OrderDetail.Quantity) * _oProduct.Tax / 100));
+            _OrderDetail.CGSTAmt = Convert.ToDecimal(String.Format("{0:0.00}", Tax));
 
             _OrderDetail.SparePartsWarrenty = txtSpareparts.Text;
             _OrderDetail.GodownID = ctlGodown.SelectedID;
@@ -549,7 +565,7 @@ namespace INVENTORY.UI
                 int nSLNo = 1;
                 dgProducts.Rows.Clear();
 
-                objPromoSaleList = new SalesItemCollectionBO();
+                objPromoSaleList = new List<SalesItemBO>();
 
                 List<SOrderDetail> nobarcodeSOrderDetailList = new List<SOrderDetail>();
                 _OrderDetails = _Order.SOrderDetails.OrderBy(x=>x.SOrderDetailID).ToList();
@@ -583,7 +599,7 @@ namespace INVENTORY.UI
                             Quantity = oPODItem.Quantity,
                             Amount = oPODItem.SRate * oPODItem.Quantity,
                             HST = oPODItem.CGSTAmt,
-                            SRate = oPODItem.SRate
+                            SRate = oPODItem.UTAmount
                         });
 
 
@@ -593,7 +609,7 @@ namespace INVENTORY.UI
                         //dgProducts.Rows[count].Cells[3].Value = oCategory.Description;//_StockDetail.Stock.Color.Description;
                         //dgProducts.Rows[count].Cells[2].Value = _StockDetail.IMENO;
                         dgProducts.Rows[count].Cells[2].Value = oPODItem.Quantity.ToString();
-                        dgProducts.Rows[count].Cells[3].Value = oPODItem.SRate.ToString();
+                        dgProducts.Rows[count].Cells[3].Value = oPODItem.UTAmount.ToString();
                         dgProducts.Rows[count].Cells[4].Value = (oPODItem.SRate * oPODItem.Quantity).ToString();
                         dgProducts.Rows[count].Cells[5].Value = oPODItem.CGSTAmt.ToString();
                         //Aneesh
@@ -1411,25 +1427,61 @@ namespace INVENTORY.UI
 
                             db.SaveChanges();
                             Transaction.Commit();
+
+                            foreach (SOrderDetail objSOrderDetail in _Order.SOrderDetails)
+                            {
+                                if (objSOrderDetail.TypeID == (int)EnumSalesItemType.Product)
+                                {
+                                    UpdateStock(objSOrderDetail.Quantity, objSOrderDetail.ProductID);
+                                }
+                            }
                         }
                         catch (Exception ex)
                         {
+
                             Transaction.Rollback();
+                            if(isNew)
+                            {
+                                _Order.SOrderID = 0;
+                            }
                             MessageBox.Show("Transaction Failed." + Environment.NewLine + ex.Message, "Save Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             return;
                         }
                     }
                     MessageBox.Show("Data saved successfully.", "Save Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    GenerateSOInvoice(_Order);
-                    MoneyReceipt(_Order);
+                    //GenerateSOInvoice(_Order);
+                    //MoneyReceipt(_Order);
                     SetPrintData();
+                    //Print
+                    PrintDocument pdPrint = new PrintDocument();
+                    pdPrint.PrintPage += new PrintPageEventHandler(pdPrint_PrintPage);
+
+
+                    try
+                    {
+
+                        if (pdPrint.PrinterSettings.IsValid)
+                        {
+
+                            pdPrint.Print();
+
+                        }
+                        else
+                            MessageBox.Show("Printer is not available.", "Program06", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Failed to open StatusAPI.", "Program06", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
 
                 }
                 else
                 {
                     MessageBox.Show("Order Failed. Please try again.", "Save Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+                //end Print
 
                 if (ItemChanged != null)
                 {
@@ -1452,7 +1504,7 @@ namespace INVENTORY.UI
                 MessageBox.Show(EX.Message);
             }
         }
-        private void SetPrintData()
+        private SalesPrintBO SetPrintData()
         {
             SalesPrintBO objSalesPrintBO = new SalesPrintBO();
             if (_Order.Adjustment > 0)
@@ -1511,6 +1563,7 @@ namespace INVENTORY.UI
                     Total = objitem.SRate + objitem.CGSTAmt
                 });
             }
+            return objSalesPrintBO;
 
         }
         private void LoadDefaultCutomer()
@@ -2095,7 +2148,7 @@ namespace INVENTORY.UI
 
             DataTable dtbranches = new DataTable();
             SqlConnection connection = new SqlConnection(@"Data Source=" + SQLServer + ";Initial Catalog=DEWSRMTEST;Persist Security Info=True;Integrated Security=true");
-            SqlCommand command = new SqlCommand("SELECT * FROM[dbo].[Categorys]  cat WHERE cat.CategoryID NOT IN(SELECT CategoryID FROM[dbo].[Products] where quickmanu!='false') and cat.inactive = 'false' and ispayout='false'", connection);
+            SqlCommand command = new SqlCommand("SELECT * FROM[dbo].[Categorys]  cat WHERE cat.CategoryID NOT IN(SELECT CategoryID FROM[dbo].[Products] where Quickmenu!='false') and cat.inactive = 'false' and ispayout='false'", connection);
             //SqlCommand command1 = new SqlCommand("SELECT * FROM[dbo].[Categorys]  cat WHERE cat.CategoryID NOT IN(SELECT CategoryID FROM[dbo].[Products]) and cat.inactive = 'false' and ispayout='false'", connection);
             SqlDataAdapter adp = new SqlDataAdapter(command);
             adp.Fill(dtbranches);
@@ -2103,6 +2156,18 @@ namespace INVENTORY.UI
             //}
         }
 
+        internal void UpdateStock(decimal Qty,int productid)
+        {
+            
+            string SQLServer = ConfigurationManager.AppSettings["SqlServer"];
+
+            DataTable dtbranches = new DataTable();
+            SqlConnection connection = new SqlConnection(@"Data Source=" + SQLServer + ";Initial Catalog=DEWSRMTEST;Persist Security Info=True;Integrated Security=true");
+            connection.Open();
+            SqlCommand command = new SqlCommand("update products set BoxQty=BoxQty -" + Qty + " where ProductID=" + productid + "", connection);
+            command.ExecuteNonQuery();
+
+        }
         private void LoadDatatable()
         {
             Branchlist = ReadAllCategories();
@@ -2172,7 +2237,15 @@ namespace INVENTORY.UI
             _OrderDetail.ProductID = Convert.ToInt32(row["CategoryID"]);
             _OrderDetail.StockDetailID = 0;
             _OrderDetail.Quantity = multiple;
-            _OrderDetail.UnitPrice = amount * NegativeAmount;
+            //decimal Tax = 0;
+            //if (_oProduct.Tax > 0)
+            //{
+            //    _OrderDetail.UnitPrice = Math.Round((amount * 100) / (100 + _oProduct.Tax));
+            //}
+            //else
+            //{
+                _OrderDetail.UnitPrice = amount * NegativeAmount;
+            //}
             _OrderDetail.SRate = amount * NegativeAmount;
             //_OrderDetail.PPDPercentage = numDPerc.Value;
             //_OrderDetail.PPDAmount = numPPDISAmt.Value;
@@ -2966,6 +3039,7 @@ namespace INVENTORY.UI
         }
         private void pdPrint_PrintPage(object sender, PrintPageEventArgs e)
         {
+            //SetPrintData();
             float x, y, lineOffset;
 
             // Instantiate font objects used in printing.
@@ -2985,6 +3059,7 @@ namespace INVENTORY.UI
 
 
             //Header
+            printFont = new Font("Microsoft Sans Serif", 12, FontStyle.Regular, GraphicsUnit.Point);
             e.Graphics.DrawString("SPRINGFORD VARIETY & FOOD STORE", printFont, Brushes.Black, x, y);
             y += lineOffset;
             e.Graphics.DrawString("3 West Street North", printFont, Brushes.Black, x, y);
@@ -2993,95 +3068,105 @@ namespace INVENTORY.UI
             y += lineOffset;
             e.Graphics.DrawString("HST#781501283RT0001", printFont, Brushes.Black, x, y);
             //
-
-
+            
             //Details                                      
             y = y + (lineOffset * (float)1.5);
-
-            e.Graphics.DrawString("Decription                                         Amt($)", printFont, Brushes.Black, x, y);
-            y += (lineOffset * (float)0.5); ;
+            
+            e.Graphics.DrawString("Decription                                   Amt($)", printFont, Brushes.Black, x, y);
+            y += (lineOffset * (float)0.5);
             lineOffset = printFont.GetHeight(e.Graphics) - 3;
             e.Graphics.DrawString("___________________________________", printFont, Brushes.Black, x, y);
-            y += lineOffset;
-            for (int i = 0; i < 2; i++)
-            {
-                e.Graphics.DrawString("123xxstreet,xxxcity,xxxxstate", printFont, Brushes.Black, x, y);
-                y += (lineOffset * (float)1.5); ;
+            y += (lineOffset * (float)1.5);
+            printFont = new Font("Microsoft Sans Serif", 9, FontStyle.Regular, GraphicsUnit.Point);          
+           
+
+            for (int i = 0; i <= SetPrintData().objSalesPrintItems.Count()-1; i++)
+            {               
+                e.Graphics.DrawString(SetPrintData().objSalesPrintItems[i].ItemName.PadRight(27) + string.Format("{0:}", Convert.ToString( SetPrintData().objSalesPrintItems[i].Amount)).PadLeft(12), printFont, Brushes.Black, x, y);                
+                y += (lineOffset * (float)1.1); 
             }
+            printFont = new Font("Microsoft Sans Serif", 10, FontStyle.Regular, GraphicsUnit.Point);
             e.Graphics.DrawString("___________________________________", printFont, Brushes.Black, x, y);
-            y += (lineOffset * (float)1.5); ;
+            //y += (lineOffset * (float)1.5);
+            y += lineOffset;
             //
 
-            //y += (lineOffset * (float)2.3);
-            e.Graphics.DrawString("Net Total :               0", printFont, Brushes.Black, x, y);
+            //e.Graphics.DrawString("Net Total :               " + SetPrintData().NetAmount, printFont, Brushes.Black, x, y);
+            e.Graphics.DrawString("Net Total :".PadRight(50) + string.Format("{0:}", SetPrintData().NetAmount), printFont, Brushes.Black, x, y);
+            //graphics.DrawString("Total To Pay".PadRight(15) + "Rs " + string.Format("{0:}", total), f, new SolidBrush(Color.Black), startX, startY + offset);
             y += (lineOffset * (float)1.5); ;
 
-            e.Graphics.DrawString("Bill Total :               0", printFont, Brushes.Black, x, y);
-            y += (lineOffset * (float)1.5); ;
+            e.Graphics.DrawString("Bill Total :".PadRight(50) + string.Format("{0:}", SetPrintData().BillTotal), printFont, Brushes.Black, x, y);
+            y += (lineOffset * (float)1.5); 
 
-            e.Graphics.DrawString("HST :               0", printFont, Brushes.Black, x, y);
-            y += (lineOffset * (float)1.5); ;
+            e.Graphics.DrawString("HST :".PadRight(50) + string.Format("{0:}", SetPrintData().HST), printFont, Brushes.Black, x, y);
+            y += (lineOffset * (float)1.5); 
 
-            e.Graphics.DrawString("CARD :               0", printFont, Brushes.Black, x, y);
-            y += (lineOffset * (float)1.5); ;
+            e.Graphics.DrawString("CARD :".PadRight(50) + string.Format("{0:}", SetPrintData().Card), printFont, Brushes.Black, x, y);
+            y += (lineOffset * (float)1.5); 
 
-            e.Graphics.DrawString("Change :               0", printFont, Brushes.Black, x, y);
-            y += (lineOffset * (float)1.5); ;
+            e.Graphics.DrawString("Change :               " + SetPrintData().Change, printFont, Brushes.Black, x, y);
+            y += (lineOffset * (float)1.5); 
 
             e.Graphics.DrawString("___________________________________", printFont, Brushes.Black, x, y);
-            y += (lineOffset * (float)1.5); ;
+            y += (lineOffset * (float)1.5);
 
-            e.Graphics.DrawString("Total Savings :               0", printFont, Brushes.Black, x, y);
-            y += (lineOffset * (float)1.5); ;
+            e.Graphics.DrawString("Total Savings :               " + SetPrintData().TotalSavings, printFont, Brushes.Black, x, y);
+            //y += (lineOffset * (float)1.5); 
+            y += lineOffset;
             e.Graphics.DrawString("___________________________________", printFont, Brushes.Black, x, y);
-            y += (lineOffset * (float)1.5); ;
-
+            y += (lineOffset * (float)1.5); 
 
             printFont = new Font("Microsoft Sans Serif", 12, FontStyle.Regular, GraphicsUnit.Point);
 
             e.Graphics.DrawString("HST Summary  ", printFont, Brushes.Black, x, y);
-            y += (lineOffset * (float)1.5); ;
-            e.Graphics.DrawString("Rate                   HST", printFont, Brushes.Black, x, y);
-            y += (lineOffset * (float)1.5); ;
-
+            y += (lineOffset * (float)1.5); 
+            e.Graphics.DrawString("Rate         Net          HST       Total", printFont, Brushes.Black, x, y);
+            //y += (lineOffset * (float)1.5); ;
+            y += lineOffset;
+            printFont = new Font("Microsoft Sans Serif", 10, FontStyle.Regular, GraphicsUnit.Point);
             e.Graphics.DrawString("___________________________________", printFont, Brushes.Black, x, y);
-            y += (lineOffset * (float)1.5); ;
+            y += (lineOffset * (float)1.5);            
+            for (int i = 0; i <= SetPrintData().objHSTSummary.Count()-1; i++)
+            {                
+                e.Graphics.DrawString(SetPrintData().objHSTSummary[i].Rate + "       "  + SetPrintData().objHSTSummary[i].Net + "      " + SetPrintData().objHSTSummary[i].HST + "       " + SetPrintData().objHSTSummary[i].Total, printFont, Brushes.Black, x, y);
+                y += (lineOffset * (float)1.5); 
+            }                       
             printFont = new Font("Microsoft Sans Serif", 10, FontStyle.Regular, GraphicsUnit.Point);
 
             lineOffset = printFont.GetHeight(e.Graphics) - 3;
             e.Graphics.DrawString("___________________________________", printFont, Brushes.Black, x, y);
+            y += (lineOffset * (float)1.5);
+            //y += lineOffset;
+            e.Graphics.DrawString("Till                        " + SetPrintData().Date, printFont, Brushes.Black, x, y);
             y += (lineOffset * (float)1.5); ;
-            e.Graphics.DrawString("Till                        DateTime", printFont, Brushes.Black, x, y);
-            y += (lineOffset * (float)1.5); ;
-            e.Graphics.DrawString("No of Items  :", printFont, Brushes.Black, x, y);
-
-
-            y += (lineOffset * (float)1.5); ;
+            e.Graphics.DrawString("No of Items  :" + SetPrintData().NoOfItems, printFont, Brushes.Black, x, y);
+            y += (lineOffset * (float)1.5);
+            printFont = new Font("Microsoft Sans Serif", 12, FontStyle.Regular, GraphicsUnit.Point);
             e.Graphics.DrawString("Thanks for Shopping with us", printFont, Brushes.Black, x, y);
-
-            y += (lineOffset * (float)1.5); ;
+            y += (lineOffset * (float)1.5);           
             e.Graphics.DrawString("Please Visit Again", printFont, Brushes.Black, x, y);
-            y += (lineOffset * (float)1.5); ;
+            y += (lineOffset * (float)1.5); 
             e.Graphics.DrawString("Opening hours ", printFont, Brushes.Black, x, y);
-
             y += (lineOffset * (float)1.5);
             e.Graphics.DrawString("7 Days week 7 AM TO 9 PM", printFont, Brushes.Black, x, y);
 
+            printFont = new Font("Microsoft Sans Serif", 10, FontStyle.Regular, GraphicsUnit.Point);
 
             y += (lineOffset * (float)2.0);
             // Indicate that no more data to print, and the Print Document can now send the print data to the spooler.         
 
 
-            e.Graphics.DrawImage(CreateBarcode().drawBarcode(), x, y);
+            e.Graphics.DrawImage(CreateBarcode("123456789").drawBarcode(), x, y);
 
             e.HasMorePages = false;
         }
 
-        private static Linear CreateBarcode()
+        private static Linear CreateBarcode(string orderNo)
         {
             Linear barcode = new Linear();// create a barcode
             barcode.Type = BarcodeType.CODE128;// select barcode type
-            barcode.Data = "123456789";// set barcode data
+            barcode.Data = orderNo;// set barcode data
             barcode.X = 2.5F;// set x
             barcode.Y = 30.0F;// set y
             barcode.Resolution = 96;// set resolution
@@ -3089,10 +3174,12 @@ namespace INVENTORY.UI
             barcode.BarcodeWidth = 150;
             barcode.BarcodeHeight = 50;
             //barcode.AutoResize = true;
-
-
-
             return barcode;
+        }
+
+        private void btnclose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

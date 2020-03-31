@@ -96,13 +96,13 @@ namespace INVENTORY.UI
                                 {
                                     //
                                     
-                                    Global.CurrentUser = oUser;
+                                    Global.CurrentUser = oUser; 
                                     fSOrder fssale = new fSOrder();
                                     fssale.FormBorderStyle = FormBorderStyle.FixedSingle;
                                     fssale.strsales.Visible = true;
                                     fssale.LoadDefaultData(new SOrder());
-                                    fssale.Show();                                   
-                                   
+                                    fssale.Show();
+
                                 }
 
                                 this.Close();
@@ -129,7 +129,8 @@ namespace INVENTORY.UI
 
         private void btnCLose_Click(object sender, EventArgs e)
         {
-           
+            this.Close();
+            this.Dispose();
         }
 
         private void label2_Click(object sender, EventArgs e)

@@ -32,6 +32,7 @@ namespace INVENTORY.DA
         public decimal VAT { get; set; }
         public bool IsPayOut { get; set; }
         public bool IsSeperateSale { get; set; }
+        public int OrderNo { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Product> Products { get; set; }

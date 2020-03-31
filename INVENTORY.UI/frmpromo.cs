@@ -35,7 +35,7 @@ namespace INVENTORY.UI
             dgProductspromo.AutoGenerateColumns = false;
             objPromoData = new PromoData();
         }
-        internal void UpdatePromoData(SalesItemCollectionBO objSaleList)
+        internal void UpdatePromoData(List<SalesItemBO> objSaleList)
         {
             dgProductspromo.DataSource = objSaleList;
             lblbilltotal.Text = String.Format("{0:0.00}", objPromoData.BillTotal);
@@ -119,7 +119,10 @@ namespace INVENTORY.UI
 
         private void frmpromo_Shown(object sender, EventArgs e)
         {
-            this.Location = Screen.AllScreens[1].Bounds.Location;
+            if (Screen.AllScreens.Count() > 1)
+            {
+                this.Location = Screen.AllScreens[1].Bounds.Location;
+            }
             this.WindowState = FormWindowState.Maximized;
         }
     }

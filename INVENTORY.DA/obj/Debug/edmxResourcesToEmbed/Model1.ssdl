@@ -108,6 +108,7 @@
     <Property Name="VAT" Type="decimal" Precision="18" Scale="2" Nullable="false" />
     <Property Name="IsPayOut" Type="bit" Nullable="false" />
     <Property Name="IsSeperateSale" Type="bit" Nullable="false" />
+    <Property Name="OrderNo" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Colors">
     <Key>
@@ -484,6 +485,7 @@
     <Property Name="BarCode" Type="varchar" MaxLength="50" />
     <Property Name="CostPrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
     <Property Name="RetailPrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Quickmenu" Type="bit" Nullable="false" />
   </EntityType>
   <EntityType Name="ReturnDetails">
     <Key>
