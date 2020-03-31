@@ -845,7 +845,7 @@
     <Property Name="CreditSales" Type="Decimal" Precision="38" Scale="2" Nullable="false" />
     <Property Name="Salereturns" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
     <Property Name="Purchasereturns" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
-    <Property Name="SystemStock" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SystemStock" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
     <Property Name="StockShouldBe" Type="Decimal" Precision="38" Scale="0" />
     <Property Name="Remarks" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
   </EntityType>

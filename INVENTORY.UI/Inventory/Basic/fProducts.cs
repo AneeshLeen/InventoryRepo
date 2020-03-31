@@ -66,9 +66,14 @@ namespace INVENTORY.UI
                             dr["ProductID"] = grd.ProductID;
                             dr["Code"] = grd.Code;
                             dr["Name"] = grd.ProductName;
-                            dr["Category"] = oCat.Description;
-                            dr["Company"] = oCom.Description;
-                            dr["Size"] = oModel.Description;
+
+                            if (oCat != null)
+                                dr["Category"] = oCat.Description;
+                            if (oCom != null)
+                                dr["Company"] = oCom.Description;
+                            if (oModel != null)
+                                dr["Size"] = oModel.Description;
+
                             dt.Rows.Add(dr);
 
                         }

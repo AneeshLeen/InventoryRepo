@@ -1517,6 +1517,7 @@ namespace INVENTORY.UI
                 objSalesPrintBO.BillTotal = _Order.SOrderDetails.Sum(p => (p.SRate * p.Quantity) - p.PPDAmount);
                 objSalesPrintBO.TotalSavings = _Order.SOrderDetails.Sum(p => p.PPDAmount);
             }
+            objSalesPrintBO.OrderNo = _Order.SOrderID.ToString();
             objSalesPrintBO.NetAmount = _Order.TotalAmount;
             objSalesPrintBO.Card = _Order.CardPaidAmount;
             objSalesPrintBO.Date = _Order.CreateDate.Value;

@@ -752,7 +752,7 @@
           <Property Name="ISEditable" Type="int" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'DEWSRM.dbo.vw_CustomerLedger' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'DEWSRMTEST.dbo.vw_CustomerLedger' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="vw_CustomerLedger">
           <Key>
             <PropertyRef Name="CustomerID" />
@@ -786,7 +786,7 @@ warning 6002: The table/view 'DEWSRM.dbo.vw_CustomerLedger' does not have a prim
           <Property Name="Remarks" Type="varchar" MaxLength="6" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'DEWSRM.dbo.vw_StockCheck' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'DEWSRMTEST.dbo.vw_StockCheck' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="vw_StockCheck">
           <Key>
             <PropertyRef Name="StockID" />
@@ -797,6 +797,7 @@ warning 6002: The table/view 'DEWSRM.dbo.vw_StockCheck' does not have a primary 
             <PropertyRef Name="CreditSales" />
             <PropertyRef Name="Salereturns" />
             <PropertyRef Name="Purchasereturns" />
+            
             <PropertyRef Name="Remarks" />
           </Key>
           <Property Name="StockID" Type="int" Nullable="false" />
@@ -810,12 +811,12 @@ warning 6002: The table/view 'DEWSRM.dbo.vw_StockCheck' does not have a primary 
           <Property Name="CreditSales" Type="decimal" Precision="38" Scale="2" Nullable="false" />
           <Property Name="Salereturns" Type="decimal" Precision="38" Scale="0" Nullable="false" />
           <Property Name="Purchasereturns" Type="decimal" Precision="38" Scale="0" Nullable="false" />
-          <Property Name="SystemStock" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SystemStock" Type="decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="StockShouldBe" Type="decimal" Precision="38" Scale="0" />
           <Property Name="Remarks" Type="varchar" MaxLength="6" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'DEWSRM.dbo.vw_SupplierLedger' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'DEWSRMTEST.dbo.vw_SupplierLedger' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="vw_SupplierLedger">
           <Key>
             <PropertyRef Name="SupplierID" />
@@ -2653,7 +2654,7 @@ warning 6002: The table/view 'DEWSRM.dbo.vw_SupplierLedger' does not have a prim
           <Property Name="CreditSales" Type="Decimal" Precision="38" Scale="2" Nullable="false" />
           <Property Name="Salereturns" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
           <Property Name="Purchasereturns" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
-          <Property Name="SystemStock" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SystemStock" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="StockShouldBe" Type="Decimal" Precision="38" Scale="0" />
           <Property Name="Remarks" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
         </EntityType>

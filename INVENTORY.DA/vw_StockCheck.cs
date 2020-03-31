@@ -25,7 +25,7 @@ namespace INVENTORY.DA
         public decimal CreditSales { get; set; }
         public decimal Salereturns { get; set; }
         public decimal Purchasereturns { get; set; }
-        public Nullable<decimal> SystemStock { get; set; }
+        public decimal SystemStock { get; set; }
         public Nullable<decimal> StockShouldBe { get; set; }
         public string Remarks { get; set; }
     }
