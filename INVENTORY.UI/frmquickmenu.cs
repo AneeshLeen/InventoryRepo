@@ -28,7 +28,7 @@ namespace INVENTORY.UI
           string  SQLServer = ConfigurationManager.AppSettings["SqlServer"];
             DataTable dtbranches = new DataTable();
             SqlConnection connection = new SqlConnection(@"Data Source=" + SQLServer + ";Initial Catalog=DEWSRMTEST;Persist Security Info=True;Integrated Security=true");
-            SqlCommand command = new SqlCommand("SELECT * FROM[dbo].[Categorys]  cat WHERE cat.CategoryID  IN(SELECT CategoryID FROM[dbo].[Products]  where quickmanu ='true') and cat.inactive = 'false' and ispayout='false' ", connection);
+            SqlCommand command = new SqlCommand("SELECT * FROM[dbo].[Categorys]  cat WHERE cat.CategoryID  IN(SELECT CategoryID FROM[dbo].[Products]  where quickmenu ='true') and cat.inactive = 'false' and ispayout='false' ", connection);
             SqlDataAdapter adp = new SqlDataAdapter(command);
             adp.Fill(dtbranches);
             return dtbranches;
@@ -39,7 +39,7 @@ namespace INVENTORY.UI
             string SQLServer = ConfigurationManager.AppSettings["SqlServer"];
             DataTable dtbranchesbased = new DataTable();
             SqlConnection connection = new SqlConnection(@"Data Source=" + SQLServer + ";Initial Catalog=DEWSRMTEST;Persist Security Info=True;Integrated Security=true");
-            SqlCommand command = new SqlCommand(" select* from[dbo].[Products] where CategoryID = '"+tag+ "' and quickmanu ='true'", connection);
+            SqlCommand command = new SqlCommand(" select* from[dbo].[Products] where CategoryID = '"+tag+ "' and quickmenu ='true'", connection);
             SqlDataAdapter adp = new SqlDataAdapter(command);
             adp.Fill(dtbranchesbased);
             return dtbranchesbased;

@@ -597,9 +597,9 @@ namespace INVENTORY.UI
                             ItemName = itemName,
                             SLNO = nSLNo,
                             Quantity = oPODItem.Quantity,
-                            Amount = oPODItem.SRate * oPODItem.Quantity,
+                            Amount = oPODItem.UTAmount,
                             HST = oPODItem.CGSTAmt,
-                            SRate = oPODItem.UTAmount
+                            SRate = oPODItem.UnitPrice
                         });
 
 
@@ -609,8 +609,8 @@ namespace INVENTORY.UI
                         //dgProducts.Rows[count].Cells[3].Value = oCategory.Description;//_StockDetail.Stock.Color.Description;
                         //dgProducts.Rows[count].Cells[2].Value = _StockDetail.IMENO;
                         dgProducts.Rows[count].Cells[2].Value = oPODItem.Quantity.ToString();
-                        dgProducts.Rows[count].Cells[3].Value = oPODItem.UTAmount.ToString();
-                        dgProducts.Rows[count].Cells[4].Value = (oPODItem.SRate * oPODItem.Quantity).ToString();
+                        dgProducts.Rows[count].Cells[3].Value = oPODItem.UnitPrice.ToString();
+                        dgProducts.Rows[count].Cells[4].Value = oPODItem.UTAmount.ToString();
                         dgProducts.Rows[count].Cells[5].Value = oPODItem.CGSTAmt.ToString();
                         //Aneesh
                         //lblbillqty.Text = oPODItem.Quantity.ToString();
@@ -2220,9 +2220,9 @@ namespace INVENTORY.UI
 
             CreateOrderObject();
             decimal amount = Convert.ToDecimal(String.Format("{0:0.00}", Convert.ToDecimal( txtamt.Text)));
-            if (!IsPayout && _Order.SOrderDetails.AsEnumerable().Any(p => p.ProductID == Convert.ToInt32(row["CategoryID"]) && p.TypeID == (int)EnumSalesItemType.Category))
+            if (!IsPayout && _Order.SOrderDetails.AsEnumerable().Any(p => p.ProductID == Convert.ToInt32(row["CategoryID"]) && p.SRate == amount && p.TypeID == (int)EnumSalesItemType.Category))
             {
-                _OrderDetail = _Order.SOrderDetails.FirstOrDefault(p => p.ProductID == Convert.ToInt32(row["CategoryID"]) && p.TypeID == (int)EnumSalesItemType.Category);
+                _OrderDetail = _Order.SOrderDetails.FirstOrDefault(p => p.ProductID == Convert.ToInt32(row["CategoryID"]) && p.SRate == amount && p.TypeID == (int)EnumSalesItemType.Category);
                 multiple = multiple + _OrderDetail.Quantity;
                 amount = _OrderDetail.SRate;
 
@@ -2262,7 +2262,7 @@ namespace INVENTORY.UI
             _OrderDetail.CGSTAmt = _OrderDetail.SRate * Convert.ToDecimal(row["VAT"]) / 100;
             _OrderDetail.TypeID = (int)EnumSalesItemType.Category;
 
-            if (!IsPayout && !_Order.SOrderDetails.AsEnumerable().Any(p => p.ProductID == Convert.ToInt32(row["CategoryID"]) && p.TypeID == (int)EnumSalesItemType.Category))
+            if (!IsPayout && !_Order.SOrderDetails.AsEnumerable().Any(p => p.ProductID == Convert.ToInt32(row["CategoryID"]) && p.SRate == amount && p.TypeID == (int)EnumSalesItemType.Category))
             {
                 _Order.SOrderDetails.Add(_OrderDetail);
             }
@@ -2433,7 +2433,7 @@ namespace INVENTORY.UI
         {
             lblbillqty.Text = String.Format("{0:0.00}", _Order.SOrderDetails.Sum(p => p.Quantity));
             lbltax.Text = String.Format("{0:0.00}", _Order.SOrderDetails.Sum(p => p.CGSTAmt));
-            lblbilltotal.Text = String.Format("{0:0.00}", _Order.SOrderDetails.Sum(p => p.UTAmount + p.CGSTAmt) - _Order.Adjustment);
+            lblbilltotal.Text = String.Format("{0:0.00}", _Order.SOrderDetails.Sum(p => p.UTAmount) - _Order.Adjustment);
             if (_Order.Adjustment != 0)
             {
                 lblbilldisc.Text = String.Format("{0:0.00}", _Order.Adjustment);
@@ -2532,12 +2532,8 @@ namespace INVENTORY.UI
                 MessageBox.Show("Please add at least one item for this order.", "Save Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            decimal result;
-            if (Decimal.TryParse(txtamt.Text, out result) == false)
-            {
-                MessageBox.Show("Enter Cash Amount");
-                return;
-            }
+
+            txtamt.Text = lblbilltotal.Text;
 
             if (Convert.ToDecimal(lblbilltotal.Text) <= Convert.ToDecimal(txtamt.Text))
             { showpaymentpop(txtamt.Text); }
