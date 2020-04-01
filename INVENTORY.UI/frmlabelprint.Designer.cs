@@ -267,10 +267,10 @@
             // txtBarcode
             // 
             this.txtBarcode.Font = new System.Drawing.Font("Palatino Linotype", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBarcode.Location = new System.Drawing.Point(4, 40);
+            this.txtBarcode.Location = new System.Drawing.Point(3, 40);
             this.txtBarcode.Margin = new System.Windows.Forms.Padding(4);
             this.txtBarcode.Name = "txtBarcode";
-            this.txtBarcode.Size = new System.Drawing.Size(104, 22);
+            this.txtBarcode.Size = new System.Drawing.Size(106, 22);
             this.txtBarcode.TabIndex = 272;
             // 
             // label1
