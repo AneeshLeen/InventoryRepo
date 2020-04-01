@@ -257,6 +257,12 @@
     <Compile Include="frmpaypop.Designer.cs">
       <DependentUpon>frmpaypop.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmplu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmplu.Designer.cs">
+      <DependentUpon>frmplu.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmpricechk.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1053,6 +1059,9 @@
     <EmbeddedResource Include="frmpaypop.resx">
       <DependentUpon>frmpaypop.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmplu.resx">
+      <DependentUpon>frmplu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmpricechk.resx">
       <DependentUpon>frmpricechk.cs</DependentUpon>
     </EmbeddedResource>
@@ -1188,6 +1197,7 @@
     <EmbeddedResource Include="Inventory\Sales and Purchase\fReturns.resx">
       <DependentUpon>fReturns.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="RDLC\InstallmentCollection.rdlc" />
     <EmbeddedResource Include="RDLC\rptBankLedger.rdlc" />
     <EmbeddedResource Include="RDLC\rptColorWise.rdlc" />

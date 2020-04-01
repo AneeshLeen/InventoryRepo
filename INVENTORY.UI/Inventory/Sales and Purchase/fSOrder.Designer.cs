@@ -228,6 +228,7 @@ namespace INVENTORY.UI
             this.ctlCustomer = new INVENTORY.UI.ctlCustomControl();
             this.ctlProduct = new INVENTORY.UI.ctlCustomControl();
             this.btnclose = new System.Windows.Forms.Button();
+            this.btnplu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numPrevDue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numRemindPeriodTemp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPRate)).BeginInit();
@@ -2528,10 +2529,10 @@ namespace INVENTORY.UI
             this.btnvoidqty.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnvoidqty.ForeColor = System.Drawing.Color.LemonChiffon;
             this.btnvoidqty.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnvoidqty.Location = new System.Drawing.Point(5, 55);
+            this.btnvoidqty.Location = new System.Drawing.Point(5, 39);
             this.btnvoidqty.Margin = new System.Windows.Forms.Padding(5);
             this.btnvoidqty.Name = "btnvoidqty";
-            this.btnvoidqty.Size = new System.Drawing.Size(106, 69);
+            this.btnvoidqty.Size = new System.Drawing.Size(106, 59);
             this.btnvoidqty.TabIndex = 280;
             this.btnvoidqty.Text = "Void Qty";
             this.btnvoidqty.UseVisualStyleBackColor = false;
@@ -2543,10 +2544,10 @@ namespace INVENTORY.UI
             this.btnvoiditem.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnvoiditem.ForeColor = System.Drawing.Color.LemonChiffon;
             this.btnvoiditem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnvoiditem.Location = new System.Drawing.Point(5, 123);
+            this.btnvoiditem.Location = new System.Drawing.Point(5, 98);
             this.btnvoiditem.Margin = new System.Windows.Forms.Padding(5);
             this.btnvoiditem.Name = "btnvoiditem";
-            this.btnvoiditem.Size = new System.Drawing.Size(106, 69);
+            this.btnvoiditem.Size = new System.Drawing.Size(106, 59);
             this.btnvoiditem.TabIndex = 281;
             this.btnvoiditem.Text = "Void Item";
             this.btnvoiditem.UseVisualStyleBackColor = false;
@@ -2558,10 +2559,10 @@ namespace INVENTORY.UI
             this.btnvoidall.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnvoidall.ForeColor = System.Drawing.Color.LemonChiffon;
             this.btnvoidall.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnvoidall.Location = new System.Drawing.Point(5, 191);
+            this.btnvoidall.Location = new System.Drawing.Point(5, 156);
             this.btnvoidall.Margin = new System.Windows.Forms.Padding(5);
             this.btnvoidall.Name = "btnvoidall";
-            this.btnvoidall.Size = new System.Drawing.Size(106, 67);
+            this.btnvoidall.Size = new System.Drawing.Size(106, 59);
             this.btnvoidall.TabIndex = 282;
             this.btnvoidall.Text = "Void All";
             this.btnvoidall.UseVisualStyleBackColor = false;
@@ -2573,10 +2574,10 @@ namespace INVENTORY.UI
             this.btnoptions.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnoptions.ForeColor = System.Drawing.Color.LemonChiffon;
             this.btnoptions.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnoptions.Location = new System.Drawing.Point(5, 257);
+            this.btnoptions.Location = new System.Drawing.Point(5, 273);
             this.btnoptions.Margin = new System.Windows.Forms.Padding(5);
             this.btnoptions.Name = "btnoptions";
-            this.btnoptions.Size = new System.Drawing.Size(106, 66);
+            this.btnoptions.Size = new System.Drawing.Size(106, 59);
             this.btnoptions.TabIndex = 283;
             this.btnoptions.Text = "Options";
             this.btnoptions.UseVisualStyleBackColor = false;
@@ -2588,10 +2589,10 @@ namespace INVENTORY.UI
             this.btnpricechck.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnpricechck.ForeColor = System.Drawing.Color.LemonChiffon;
             this.btnpricechck.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnpricechck.Location = new System.Drawing.Point(5, 322);
+            this.btnpricechck.Location = new System.Drawing.Point(5, 332);
             this.btnpricechck.Margin = new System.Windows.Forms.Padding(5);
             this.btnpricechck.Name = "btnpricechck";
-            this.btnpricechck.Size = new System.Drawing.Size(107, 65);
+            this.btnpricechck.Size = new System.Drawing.Size(106, 59);
             this.btnpricechck.TabIndex = 284;
             this.btnpricechck.Text = "Price Check";
             this.btnpricechck.UseVisualStyleBackColor = false;
@@ -2644,10 +2645,10 @@ namespace INVENTORY.UI
             this.btnlogout.BackColor = System.Drawing.Color.LightSeaGreen;
             this.btnlogout.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnlogout.ForeColor = System.Drawing.Color.LemonChiffon;
-            this.btnlogout.Location = new System.Drawing.Point(5, 386);
+            this.btnlogout.Location = new System.Drawing.Point(5, 390);
             this.btnlogout.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnlogout.Name = "btnlogout";
-            this.btnlogout.Size = new System.Drawing.Size(107, 65);
+            this.btnlogout.Size = new System.Drawing.Size(106, 59);
             this.btnlogout.TabIndex = 285;
             this.btnlogout.Text = "Logout";
             this.btnlogout.UseVisualStyleBackColor = false;
@@ -2867,14 +2868,29 @@ namespace INVENTORY.UI
             this.btnclose.BackColor = System.Drawing.Color.LightSeaGreen;
             this.btnclose.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnclose.ForeColor = System.Drawing.Color.LemonChiffon;
-            this.btnclose.Location = new System.Drawing.Point(5, 451);
+            this.btnclose.Location = new System.Drawing.Point(5, 449);
             this.btnclose.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnclose.Name = "btnclose";
-            this.btnclose.Size = new System.Drawing.Size(107, 65);
+            this.btnclose.Size = new System.Drawing.Size(106, 59);
             this.btnclose.TabIndex = 287;
             this.btnclose.Text = "&Close";
             this.btnclose.UseVisualStyleBackColor = false;
             this.btnclose.Click += new System.EventHandler(this.btnclose_Click);
+            // 
+            // btnplu
+            // 
+            this.btnplu.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnplu.Font = new System.Drawing.Font("Arial Narrow", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnplu.ForeColor = System.Drawing.Color.LemonChiffon;
+            this.btnplu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnplu.Location = new System.Drawing.Point(5, 214);
+            this.btnplu.Margin = new System.Windows.Forms.Padding(5);
+            this.btnplu.Name = "btnplu";
+            this.btnplu.Size = new System.Drawing.Size(106, 59);
+            this.btnplu.TabIndex = 288;
+            this.btnplu.Text = "PLU";
+            this.btnplu.UseVisualStyleBackColor = false;
+            this.btnplu.Click += new System.EventHandler(this.btnplu_Click);
             // 
             // fSOrder
             // 
@@ -2883,8 +2899,8 @@ namespace INVENTORY.UI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(1370, 692);
+            this.Controls.Add(this.btnplu);
             this.Controls.Add(this.btnclose);
-            this.Controls.Add(this.strsales);
             this.Controls.Add(this.btnlogout);
             this.Controls.Add(this.btnpricechck);
             this.Controls.Add(this.btnoptions);
@@ -3027,6 +3043,7 @@ namespace INVENTORY.UI
             this.Controls.Add(this.numVatPercent);
             this.Controls.Add(this.label56);
             this.Controls.Add(this.pnlbtndyan);
+            this.Controls.Add(this.strsales);
             this.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -3283,5 +3300,6 @@ namespace INVENTORY.UI
         private System.Windows.Forms.Button btnCustomer;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.Button btnclose;
+        private System.Windows.Forms.Button btnplu;
     }
 }

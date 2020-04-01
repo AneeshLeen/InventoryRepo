@@ -21,5 +21,11 @@ namespace INVENTORY.UI
         {
             this.DialogResult = DialogResult.OK;
         }
+
+        private void btnsearch_Click(object sender, EventArgs e)
+        {
+            frmplu frplu = new frmplu();
+            frplu.ShowDialog();
+        }
     }
 }

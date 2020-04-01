@@ -2149,7 +2149,7 @@ namespace INVENTORY.UI
 
             DataTable dtbranches = new DataTable();
             SqlConnection connection = new SqlConnection(@"Data Source=" + SQLServer + ";Initial Catalog=DEWSRMTEST;Persist Security Info=True;Integrated Security=true");
-            SqlCommand command = new SqlCommand("SELECT * FROM[dbo].[Categorys]  cat WHERE cat.CategoryID NOT IN(SELECT CategoryID FROM[dbo].[Products] where Quickmenu!='false') and cat.inactive = 'false' and ispayout='false'", connection);
+            SqlCommand command = new SqlCommand("SELECT * FROM[dbo].[Categorys]  cat WHERE cat.CategoryID NOT IN(SELECT CategoryID FROM[dbo].[Products] where Quickmanu!='false') and cat.inactive = 'false' and ispayout='false'", connection);
             //SqlCommand command1 = new SqlCommand("SELECT * FROM[dbo].[Categorys]  cat WHERE cat.CategoryID NOT IN(SELECT CategoryID FROM[dbo].[Products]) and cat.inactive = 'false' and ispayout='false'", connection);
             SqlDataAdapter adp = new SqlDataAdapter(command);
             adp.Fill(dtbranches);
@@ -3154,7 +3154,7 @@ namespace INVENTORY.UI
             // Indicate that no more data to print, and the Print Document can now send the print data to the spooler.         
 
 
-            e.Graphics.DrawImage(CreateBarcode("123456789").drawBarcode(), x, y);
+            e.Graphics.DrawImage(CreateBarcode(SetPrintData().OrderNo).drawBarcode(), x, y);
 
             e.HasMorePages = false;
         }
@@ -3177,6 +3177,12 @@ namespace INVENTORY.UI
         private void btnclose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnplu_Click(object sender, EventArgs e)
+        {
+            frmplu frplu = new frmplu();           
+            frplu.ShowDialog();
         }
     }
 }

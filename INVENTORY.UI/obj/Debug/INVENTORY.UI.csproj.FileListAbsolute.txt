@@ -345,7 +345,6 @@ C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.fYearlyBe
 C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.fYearlySaleReport.resources
 C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.fOrderMonthlyReport.resources
 C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.csproj.GenerateResource.cache
-C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.exe.licenses
 C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.csproj.CopyComplete
 C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.exe
 C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.pdb
@@ -399,3 +398,5 @@ C:\CodeBase\InventoryRepo\INVENTORY.UI\bin\Debug\de\DevExpress.Pdf.v15.2.Core.re
 C:\CodeBase\InventoryRepo\INVENTORY.UI\bin\Debug\es\DevExpress.Pdf.v15.2.Core.resources.dll
 C:\CodeBase\InventoryRepo\INVENTORY.UI\bin\Debug\ja\DevExpress.Pdf.v15.2.Core.resources.dll
 C:\CodeBase\InventoryRepo\INVENTORY.UI\bin\Debug\ru\DevExpress.Pdf.v15.2.Core.resources.dll
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.exe.licenses
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.frmplu.resources
