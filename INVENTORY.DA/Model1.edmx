@@ -490,7 +490,8 @@
           <Property Name="BarCode" Type="varchar" MaxLength="50" />
           <Property Name="CostPrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="RetailPrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
-          <Property Name="Quickmenu" Type="bit" Nullable="false" />
+          <Property Name="quickmanu" Type="bit" />
+          <Property Name="labelprint" Type="bit" />
         </EntityType>
         <EntityType Name="ReturnDetails">
           <Key>
@@ -2327,7 +2328,8 @@ warning 6002: The table/view 'DEWSRMTEST.dbo.vw_SupplierLedger' does not have a 
           <Property Name="BarCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="CostPrice" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
           <Property Name="RetailPrice" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
-          <Property Name="Quickmenu" Type="Boolean" Nullable="false" />
+          <Property Name="quickmanu" Type="Boolean" />
+          <Property Name="labelprint" Type="Boolean" />
         </EntityType>
         <EntityType Name="ReturnDetail">
           <Key>
@@ -4147,7 +4149,8 @@ warning 6002: The table/view 'DEWSRMTEST.dbo.vw_SupplierLedger' does not have a 
           <EntitySetMapping Name="Products">
             <EntityTypeMapping TypeName="DEWSRMModel.Product">
               <MappingFragment StoreEntitySet="Products">
-                <ScalarProperty Name="Quickmenu" ColumnName="Quickmenu" />
+                <ScalarProperty Name="labelprint" ColumnName="labelprint" />
+                <ScalarProperty Name="quickmanu" ColumnName="quickmanu" />
                 <ScalarProperty Name="RetailPrice" ColumnName="RetailPrice" />
                 <ScalarProperty Name="CostPrice" ColumnName="CostPrice" />
                 <ScalarProperty Name="BarCode" ColumnName="BarCode" />

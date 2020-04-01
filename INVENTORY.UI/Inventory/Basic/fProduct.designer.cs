@@ -91,10 +91,11 @@
             this.label16 = new System.Windows.Forms.Label();
             this.txtBarcode = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.txtstock = new System.Windows.Forms.TextBox();
             this.ctlCategory = new INVENTORY.UI.ctlCustomControl();
             this.ctlBrand = new INVENTORY.UI.ctlCustomControl();
             this.chkQuickMenu = new System.Windows.Forms.CheckBox();
+            this.numstock = new System.Windows.Forms.NumericUpDown();
+            this.chklabelprint = new System.Windows.Forms.CheckBox();
             this.groupBox3.SuspendLayout();
             this.txtNID.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -113,6 +114,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numMaxQty)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numCostPrice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numRetailPrice)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numstock)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox3
@@ -906,15 +908,6 @@
             this.label17.TabIndex = 220;
             this.label17.Text = "Stock";
             // 
-            // txtstock
-            // 
-            this.txtstock.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtstock.Location = new System.Drawing.Point(131, 488);
-            this.txtstock.Margin = new System.Windows.Forms.Padding(4);
-            this.txtstock.Name = "txtstock";
-            this.txtstock.Size = new System.Drawing.Size(114, 29);
-            this.txtstock.TabIndex = 219;
-            // 
             // ctlCategory
             // 
             this.ctlCategory.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -951,6 +944,32 @@
             this.chkQuickMenu.Text = "QuickMenu";
             this.chkQuickMenu.UseVisualStyleBackColor = true;
             // 
+            // numstock
+            // 
+            this.numstock.Font = new System.Drawing.Font("Palatino Linotype", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numstock.Location = new System.Drawing.Point(131, 487);
+            this.numstock.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.numstock.Name = "numstock";
+            this.numstock.Size = new System.Drawing.Size(114, 31);
+            this.numstock.TabIndex = 222;
+            this.numstock.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // chklabelprint
+            // 
+            this.chklabelprint.AutoSize = true;
+            this.chklabelprint.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chklabelprint.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.chklabelprint.Location = new System.Drawing.Point(306, 482);
+            this.chklabelprint.Name = "chklabelprint";
+            this.chklabelprint.Size = new System.Drawing.Size(112, 26);
+            this.chklabelprint.TabIndex = 223;
+            this.chklabelprint.Text = "Label Print";
+            this.chklabelprint.UseVisualStyleBackColor = true;
+            // 
             // fProduct
             // 
             this.AcceptButton = this.btnSave;
@@ -959,9 +978,10 @@
             this.BackColor = System.Drawing.Color.SlateGray;
             this.CancelButton = this.btnClose;
             this.ClientSize = new System.Drawing.Size(1064, 602);
+            this.Controls.Add(this.chklabelprint);
+            this.Controls.Add(this.numstock);
             this.Controls.Add(this.chkQuickMenu);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.txtstock);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.txtBarcode);
             this.Controls.Add(this.numRetailPrice);
@@ -1031,6 +1051,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numMaxQty)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numCostPrice)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numRetailPrice)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numstock)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1102,7 +1123,8 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox txtBarcode;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox txtstock;
         private System.Windows.Forms.CheckBox chkQuickMenu;
+        private System.Windows.Forms.NumericUpDown numstock;
+        private System.Windows.Forms.CheckBox chklabelprint;
     }
 }

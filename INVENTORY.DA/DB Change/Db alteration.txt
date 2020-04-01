@@ -1,12 +1,9 @@
-alter table [dbo].[Categorys] add OrderNo int 
+alter table[dbo].[Products] add labelprint bit
 go
-update [dbo].[Categorys] set OrderNo=0
+alter table[dbo].[Products] drop column [Quickmenu]
 go
-alter table [dbo].[Categorys] alter column OrderNo int not null
+alter table[dbo].[Products] add branchid int
 go
-
-alter table [dbo].[Products] add Quickmenu bit 
+alter table[dbo].[SOrders] add branchid int
 go
-update [dbo].[Products] set Quickmenu=0
-go
-alter table [dbo].[Products] alter column Quickmenu bit not null
+alter table[dbo].[SOrderDetails] add branchid int

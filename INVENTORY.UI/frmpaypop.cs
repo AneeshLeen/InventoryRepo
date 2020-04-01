@@ -12,6 +12,7 @@ namespace INVENTORY.UI
 {
     public partial class frmpaypop : Form
     {
+        public bool IsCardPay { get; set; }
         public frmpaypop()
         {
             InitializeComponent();
