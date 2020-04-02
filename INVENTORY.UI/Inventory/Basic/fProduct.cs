@@ -98,44 +98,45 @@ namespace INVENTORY.UI
             txtBarcode.Text = _Product.BarCode;
             numCostPrice.Value = _Product.CostPrice;
             numRetailPrice.Value = _Product.RetailPrice;
+            numstock.Value = _Product.BoxQty;
+            chkQuickMenu.Checked = _Product.quickmanu == null ? false : _Product.quickmanu.Value;
+            chklabelprint.Checked = _Product.labelprint == null ? false : _Product.labelprint.Value;
 
-            chkQuickMenu.Checked = _Product.Quickmenu;
+            //if (!string.IsNullOrEmpty(_Product.CompressorWarrenty))
+            //{
+            //    numCompressor.Value = Convert.ToDecimal(_Product.CompressorWarrenty.Split(' ')[0]);
+            //    cboCompressor.SelectedValue = (int)((EnumWarrantyType)Enum.Parse(typeof(EnumWarrantyType), _Product.CompressorWarrenty.Split(' ')[1]));
+            //}
 
-            if (!string.IsNullOrEmpty(_Product.CompressorWarrenty))
-            {
-                numCompressor.Value = Convert.ToDecimal(_Product.CompressorWarrenty.Split(' ')[0]);
-                cboCompressor.SelectedValue = (int)((EnumWarrantyType)Enum.Parse(typeof(EnumWarrantyType), _Product.CompressorWarrenty.Split(' ')[1]));
-            }
+            //if (!string.IsNullOrEmpty(_Product.MotorWarrenty))
+            //{
+            //    numMotor.Value = Convert.ToDecimal(_Product.MotorWarrenty.Split(' ')[0]);
+            //    cboMotor.SelectedValue = (int)((EnumWarrantyType)Enum.Parse(typeof(EnumWarrantyType), _Product.MotorWarrenty.Split(' ')[1]));
+            //}
 
-            if (!string.IsNullOrEmpty(_Product.MotorWarrenty))
-            {
-                numMotor.Value = Convert.ToDecimal(_Product.MotorWarrenty.Split(' ')[0]);
-                cboMotor.SelectedValue = (int)((EnumWarrantyType)Enum.Parse(typeof(EnumWarrantyType), _Product.MotorWarrenty.Split(' ')[1]));
-            }
+            //if (!string.IsNullOrEmpty(_Product.PanelWarrenty))
+            //{
+            //    numPanel.Value = Convert.ToDecimal(_Product.PanelWarrenty.Split(' ')[0]);
+            //    cboPanel.SelectedValue = (int)((EnumWarrantyType)Enum.Parse(typeof(EnumWarrantyType), _Product.PanelWarrenty.Split(' ')[1]));
+            //}
 
-            if (!string.IsNullOrEmpty(_Product.PanelWarrenty))
-            {
-                numPanel.Value = Convert.ToDecimal(_Product.PanelWarrenty.Split(' ')[0]);
-                cboPanel.SelectedValue = (int)((EnumWarrantyType)Enum.Parse(typeof(EnumWarrantyType), _Product.PanelWarrenty.Split(' ')[1]));
-            }
+            //if (!string.IsNullOrEmpty(_Product.ServiceWarrenty))
+            //{
+            //    numService.Value = Convert.ToDecimal(_Product.ServiceWarrenty.Split(' ')[0]);
+            //    cboService.SelectedValue = (int)((EnumWarrantyType)Enum.Parse(typeof(EnumWarrantyType), _Product.ServiceWarrenty.Split(' ')[1]));
+            //}
 
-            if (!string.IsNullOrEmpty(_Product.ServiceWarrenty))
-            {
-                numService.Value = Convert.ToDecimal(_Product.ServiceWarrenty.Split(' ')[0]);
-                cboService.SelectedValue = (int)((EnumWarrantyType)Enum.Parse(typeof(EnumWarrantyType), _Product.ServiceWarrenty.Split(' ')[1]));
-            }
+            //if (!string.IsNullOrEmpty(_Product.SparePartsWarrenty))
+            //{
+            //    numSpareparts.Value = Convert.ToDecimal(_Product.SparePartsWarrenty.Split(' ')[0]);
+            //    cboSpareparts.SelectedValue = (int)((EnumWarrantyType)Enum.Parse(typeof(EnumWarrantyType), _Product.SparePartsWarrenty.Split(' ')[1]));
+            //}
+            //if (_Product.BoxQty != default(decimal))
+            //    numBQty.Value = (decimal)_Product.BoxQty;
+            //else
+            //    numBQty.Value = 0;
 
-            if (!string.IsNullOrEmpty(_Product.SparePartsWarrenty))
-            {
-                numSpareparts.Value = Convert.ToDecimal(_Product.SparePartsWarrenty.Split(' ')[0]);
-                cboSpareparts.SelectedValue = (int)((EnumWarrantyType)Enum.Parse(typeof(EnumWarrantyType), _Product.SparePartsWarrenty.Split(' ')[1]));
-            }
-            if (_Product.BoxQty != default(decimal))
-                numBQty.Value = (decimal)_Product.BoxQty;
-            else
-                numBQty.Value = 0;
-
-            if (_Product.PhotoPath != null)
+            if (_Product.PhotoPath != null && _SystemInformation != null)
             {
                 string path = _SystemInformation.ProductPhotoPath + "\\" + _Product.PhotoPath;
                 if (File.Exists(path))
@@ -185,7 +186,6 @@ namespace INVENTORY.UI
             //  _Product.PurchaseRate = 0;
             _Product.UnitType = (int)cboUnitType.SelectedValue;
             _Product.ShortQty = numMinQTY.Value;
-            _Product.BoxQty = numBQty.Value;
             _Product.ProductType = (int)cboProType.SelectedValue;
             _Product.CompressorWarrenty = numCompressor.Value > 0 ? numCompressor.Value + " " + ((EnumWarrantyType)cboCompressor.SelectedValue).ToString() : string.Empty;
             _Product.MotorWarrenty = numMotor.Value > 0 ? numMotor.Value + " " + ((EnumWarrantyType)cboMotor.SelectedValue).ToString() : string.Empty;
@@ -204,7 +204,18 @@ namespace INVENTORY.UI
             _Product.BarCode = txtBarcode.Text;
             _Product.CostPrice = numCostPrice.Value;
             _Product.RetailPrice = numRetailPrice.Value;
-            _Product.Quickmenu = chkQuickMenu.Checked;
+            _Product.quickmanu = chkQuickMenu.Checked;
+            _Product.BoxQty = numstock.Value;
+            _Product.labelprint = chklabelprint.Checked;
+
+            using (DEWSRMEntities db = new DEWSRMEntities())
+            {
+                Product _ProductTemp = db.Products.FirstOrDefault(p => p.ProductID == _Product.ProductID);
+                if (_ProductTemp != null && _ProductTemp.RetailPrice != _Product.RetailPrice)
+                {
+                    _Product.labelprint = false;
+                }
+            }
             #region Product Picture
 
             if ((pbxEmpPic.ImageLocation != string.Empty) && (pbxEmpPic.ImageLocation != null))

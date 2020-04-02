@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="button3.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnprint.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAABGdBTUEAALGPC/xhBQAAAMlQTFRF////
         kMr5YWFhQkJCGXbSQqX1JCQkUlJSKysrXlpWJCIg6PT+iMf5kcz8ibDPJzM/QaHuc7Dimc75d7XuCXHQ
@@ -146,7 +146,7 @@
         iIiIiIiIiPRrNP4DqIq7HOvMfmsAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="button1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnclose.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEAAAAAAAD/2wBDAAkGBxITEBUSEhIVFhUWGBkXFRgYFxcVGBUZFhgWGhcYFRgY
         HSggGBolGxUVITEiJSkrLi4uFx8zODMsNygtLiv/2wBDAQoKCg4NDhsQEBsuJR8hKystNS4tKystKzA1
@@ -346,7 +346,7 @@
   <metadata name="clnTotal.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="button4.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnadd.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEAAAAAAAD/2wBDAAkGBxAQEBUPEBAVExAQEBAVFxYWFQ8WFRARFRUWFhYWFRUY
         HSggGBonGxUVITEhJSkrLi4uFx8zODMsNygtLi3/2wBDAQoKCg4NDhoQEBotHR0lLS0tLS0tKy0tLSst
@@ -489,7 +489,7 @@
         AIAgP//Z
 </value>
   </data>
-  <data name="button5.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btncancel.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEAAAAAAAD/2wBDAAkGBxAQDw8NDw8QDw8QEBAPDxAPEBAVDxUNFRYXFhUVFRUY
         HSggGBolGxUVIjEhJikrLi4uFx8zODMsNygtLiv/2wBDAQoKCg4NDhoQEBotJR8mKy0tLS0tLS0tLS0t
@@ -584,7 +584,7 @@
         7REAzGIvYT9FpA6SRAP0AliIB//Z
 </value>
   </data>
-  <data name="button6.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btncleattext.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEAAAAAAAD/2wBDAAkGBxMQEhUQEhIVFhEXFRAWFhUWEBAQFhgWFxYWFhcYFhUY
         HSggGBonHRUVITEiJykrLi4uFx8zODMsNygtLiv/2wBDAQoKCg4NDhsQEBotJR4lLS0tLS8rLS0tLTUv
@@ -706,22 +706,7 @@
         hA7kIHchA7kIPe6CD0RhB7sBB7ZB6gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICD//Z
 </value>
   </data>
-  <metadata name="dataGridViewTextBoxColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="clnproductcode.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dataGridViewTextBoxColumn2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dataGridViewTextBoxColumn3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="dataGridViewTextBoxColumn4.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="button9.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnrefresh.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEAAAAAAAD/2wBDAAkGBxAQEBAPEBIQDw4PDQ8ODxAPEBAPEA8NFREWFhUSFRYY
         HiggGB4xHRUXITEiJSkrLi4uFx8zODUtNyguLiv/2wBDAQoKCg4NDhcQEBsuJSAmLi0tLS0vLS0tLSsu
@@ -833,7 +818,7 @@
         gICAgICAgIH/2Q==
 </value>
   </data>
-  <data name="button10.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnaddselect.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEAAAAAAAD/2wBDAAkGBxAQEBUPEBAVExAQEBAVFxYWFQ8WFRARFRUWFhYWFRUY
         HSggGBonGxUVITEhJSkrLi4uFx8zODMsNygtLi3/2wBDAQoKCg4NDhoQEBotHR0lLS0tLS0tKy0tLSst

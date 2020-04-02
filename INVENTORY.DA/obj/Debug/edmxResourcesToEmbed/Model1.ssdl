@@ -485,7 +485,8 @@
     <Property Name="BarCode" Type="varchar" MaxLength="50" />
     <Property Name="CostPrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
     <Property Name="RetailPrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
-    <Property Name="Quickmenu" Type="bit" Nullable="false" />
+    <Property Name="quickmanu" Type="bit" />
+    <Property Name="labelprint" Type="bit" />
   </EntityType>
   <EntityType Name="ReturnDetails">
     <Key>

@@ -553,6 +553,8 @@ namespace INVENTORY.UI
 
             RefreshGridNew();
             RefreshControl();
+            //txtamt.Select();
+            //txtamt.SelectAll();
             ClearDefaultTextBox();
             multiple = 1;
         }
@@ -1448,7 +1450,7 @@ namespace INVENTORY.UI
                             return;
                         }
                     }
-                    MessageBox.Show("Data saved successfully.", "Save Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //MessageBox.Show("Data saved successfully.", "Save Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     //GenerateSOInvoice(_Order);
                     //MoneyReceipt(_Order);
@@ -2149,7 +2151,7 @@ namespace INVENTORY.UI
 
             DataTable dtbranches = new DataTable();
             SqlConnection connection = new SqlConnection(@"Data Source=" + SQLServer + ";Initial Catalog=DEWSRMTEST;Persist Security Info=True;Integrated Security=true");
-            SqlCommand command = new SqlCommand("SELECT * FROM[dbo].[Categorys]  cat WHERE cat.CategoryID NOT IN(SELECT CategoryID FROM[dbo].[Products] where Quickmanu!='false') and cat.inactive = 'false' and ispayout='false'", connection);
+            SqlCommand command = new SqlCommand("SELECT * FROM[dbo].[Categorys]  cat WHERE cat.CategoryID NOT IN(SELECT CategoryID FROM[dbo].[Products] where quickmanu!='false') and cat.inactive = 'false' and ispayout='false'", connection);
             //SqlCommand command1 = new SqlCommand("SELECT * FROM[dbo].[Categorys]  cat WHERE cat.CategoryID NOT IN(SELECT CategoryID FROM[dbo].[Products]) and cat.inactive = 'false' and ispayout='false'", connection);
             SqlDataAdapter adp = new SqlDataAdapter(command);
             adp.Fill(dtbranches);
@@ -2272,6 +2274,8 @@ namespace INVENTORY.UI
             }
             RefreshGridNew();
             RefreshControl();
+            //txtamt.SelectAll();
+            //txtamt.Focus();
             ClearDefaultTextBox();
             multiple = 1;
             RefreshPromo();
@@ -2433,7 +2437,7 @@ namespace INVENTORY.UI
         {
             lblbillqty.Text = String.Format("{0:0.00}", _Order.SOrderDetails.Sum(p => p.Quantity));
             lbltax.Text = String.Format("{0:0.00}", _Order.SOrderDetails.Sum(p => p.CGSTAmt));
-            lblbilltotal.Text = String.Format("{0:0.00}", _Order.SOrderDetails.Sum(p => p.UTAmount) - _Order.Adjustment);
+            lblbilltotal.Text = String.Format("{0:0.00}", _Order.SOrderDetails.Sum(p => p.UTAmount + p.CGSTAmt) - _Order.Adjustment);
             if (_Order.Adjustment != 0)
             {
                 lblbilldisc.Text = String.Format("{0:0.00}", _Order.Adjustment);
@@ -2456,13 +2460,14 @@ namespace INVENTORY.UI
         }
         frmpaypop frmpop = null;
 
-        void showpaymentpop(string amt)
+        void showpaymentpop(string amt,bool IsCardPay)
         {
             if (Convert.ToDecimal(lblbilltotal.Text) > 0)
             {
                 frmpop = new frmpaypop();
                 frmpop.lblbilltotal.Text = lblbilltotal.Text;
                 frmpop.lblpayment.Text = amt;
+                frmpop.IsCardPay = IsCardPay;
                 frmpop.lblbalance.Text = Convert.ToString(Math.Abs(Convert.ToDecimal(lblbilltotal.Text) - Convert.ToDecimal(amt)));
                 RefreshPromoPayment(Convert.ToDecimal(amt), Convert.ToDecimal(frmpop.lblbalance.Text));
 
@@ -2481,10 +2486,18 @@ namespace INVENTORY.UI
             frmpop.Close();
         }
 
+
         private void Bswrk_DoWork(object sender, DoWorkEventArgs e)
         {
             Thread.Sleep(2000);
-            _Order.CashPaidAmount = Convert.ToDecimal(frmpop.lblbilltotal.Text);
+            if (frmpop.IsCardPay)
+            {
+                _Order.CardPaidAmount = Convert.ToDecimal(frmpop.lblbilltotal.Text);
+            }
+            else
+            {
+                _Order.CashPaidAmount = Convert.ToDecimal(frmpop.lblbilltotal.Text);
+            }
             SaveSales();
         }
 
@@ -2535,17 +2548,22 @@ namespace INVENTORY.UI
 
             txtamt.Text = lblbilltotal.Text;
 
-            if (Convert.ToDecimal(lblbilltotal.Text) <= Convert.ToDecimal(txtamt.Text))
-            { showpaymentpop(txtamt.Text); }
-            else
-            {
-
-                showmultipaymentpop();
-            }
-
-
+            showpaymentpop(txtamt.Text,false);
         }
 
+        private void btnCardpay_Click(object sender, EventArgs e)
+        {
+            if (_Order.SOrderDetails.Count == 0)
+            {
+                MessageBox.Show("Please add at least one item for this order.", "Save Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            txtamt.Text = lblbilltotal.Text;
+
+            showpaymentpop(txtamt.Text,true);
+
+        }
         private void btnvoiditem_Click(object sender, EventArgs e)
         {
             foreach (DataGridViewRow selectedRow in dgProducts.SelectedRows)
@@ -2807,7 +2825,7 @@ namespace INVENTORY.UI
             txtamt.Text = "10";
 
             if (Convert.ToDecimal(lblbilltotal.Text) <= Convert.ToDecimal(txtamt.Text))
-            { showpaymentpop(txtamt.Text); }
+            { showpaymentpop(txtamt.Text,false); }
             else
             {
                 showmultipaymentpop();
@@ -2818,7 +2836,7 @@ namespace INVENTORY.UI
         {
             txtamt.Text = "20";
             if (Convert.ToDecimal(lblbilltotal.Text) <= Convert.ToDecimal(txtamt.Text))
-            { showpaymentpop(txtamt.Text); }
+            { showpaymentpop(txtamt.Text,false); }
             else
             {
                 showmultipaymentpop();
@@ -2829,7 +2847,7 @@ namespace INVENTORY.UI
         {
             txtamt.Text = "50";
             if (Convert.ToDecimal(lblbilltotal.Text) <= Convert.ToDecimal(txtamt.Text))
-            { showpaymentpop(txtamt.Text); }
+            { showpaymentpop(txtamt.Text,false); }
             else
             {
                 showmultipaymentpop();
@@ -2967,21 +2985,16 @@ namespace INVENTORY.UI
             RefrehSODetailsAndStockObjectNew();
             RefreshPromo();
         }
-
-        private void txtamt_Validated(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtamt_Validating(object sender, CancelEventArgs e)
-        {
-
-        }
-
+ 
         private void txtamt_TextChanged(object sender, EventArgs e)
         {
             // txtamt.Text.TrimStart(new Char[] { '0' })
             //if (txtamt.Text.Trim() == string.Empty)
+            //if (txtamt.Text != string.Empty && txtamt.SelectedText == txtamt.Text)
+            //{
+            //    txtamt.Text = string.Empty;
+            //    return;
+            //}
             if (txtamt.Text.TrimStart(new Char[] { '0' }) == string.Empty)
             {
                 // txtamt.Tag = txtamt.Text;
@@ -3184,5 +3197,6 @@ namespace INVENTORY.UI
             frmplu frplu = new frmplu();           
             frplu.ShowDialog();
         }
+
     }
 }

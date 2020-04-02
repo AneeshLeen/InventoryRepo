@@ -447,7 +447,8 @@
     <EntitySetMapping Name="Products">
       <EntityTypeMapping TypeName="DEWSRMModel.Product">
         <MappingFragment StoreEntitySet="Products">
-          <ScalarProperty Name="Quickmenu" ColumnName="Quickmenu" />
+          <ScalarProperty Name="labelprint" ColumnName="labelprint" />
+          <ScalarProperty Name="quickmanu" ColumnName="quickmanu" />
           <ScalarProperty Name="RetailPrice" ColumnName="RetailPrice" />
           <ScalarProperty Name="CostPrice" ColumnName="CostPrice" />
           <ScalarProperty Name="BarCode" ColumnName="BarCode" />

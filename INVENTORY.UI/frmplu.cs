@@ -18,7 +18,7 @@ namespace INVENTORY.UI
         {
             InitializeComponent();
         }
-
+       internal DataGridViewRow selectedRow ;
         private void frmplu_Load(object sender, EventArgs e)
         {
             dgProducts.DataSource = ReadAllpayouts();
@@ -28,7 +28,7 @@ namespace INVENTORY.UI
             string SQLServer = ConfigurationManager.AppSettings["SqlServer"];
             DataTable dtpayouts = new DataTable();
             SqlConnection connection = new SqlConnection(@"Data Source=" + SQLServer + ";Initial Catalog=DEWSRMTEST;Persist Security Info=True;Integrated Security=true");
-            SqlCommand command = new SqlCommand("select BarCode,prd.code PLU,ProductName,CostPrice [Net Price],Tax[VatNote],0 [Brand],0 [Stock],cat.Description [Department],RetailPrice from [dbo].[Products] prd join [dbo].[Categorys] cat on prd.CategoryID=cat.Code", connection);
+            SqlCommand command = new SqlCommand("select BarCode,prd.code PLU,ProductName,CostPrice [Net Price],Tax[VatNote],0 [Brand],BoxQty [Stock],cat.Description [Department],RetailPrice from [dbo].[Products] prd join [dbo].[Categorys] cat on prd.CategoryID=cat.Code", connection);
             SqlDataAdapter adp = new SqlDataAdapter(command);
             adp.Fill(dtpayouts);
             return dtpayouts;            
@@ -53,6 +53,8 @@ namespace INVENTORY.UI
 
         private void btnok_Click(object sender, EventArgs e)
         {
+             selectedRow = dgProducts.Rows[dgProducts.CurrentCell.RowIndex];
+            this.DialogResult = DialogResult.OK;
             this.Close();
         }
 
