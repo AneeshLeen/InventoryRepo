@@ -1709,7 +1709,7 @@ namespace INVENTORY.UI
                 Button btn = new Button();
                 btn.Left = left;
                 btn.Top = top;
-                btn.Size = new Size(80, 63);
+                btn.Size = new Size(83, 63);
                 btn.Font = new Font(Font.FontFamily, 9, FontStyle.Bold);
                 btn.Text = row["Description"].ToString();
                 btn.Tag = row;
@@ -1723,7 +1723,7 @@ namespace INVENTORY.UI
                 {
                     count = 0;
                     top = 5;
-                    left += 81;
+                    left += 83;
                 }
 
             }
@@ -2151,7 +2151,7 @@ namespace INVENTORY.UI
 
             DataTable dtbranches = new DataTable();
             SqlConnection connection = new SqlConnection(@"Data Source=" + SQLServer + ";Initial Catalog=DEWSRMTEST;Persist Security Info=True;Integrated Security=true");
-            SqlCommand command = new SqlCommand("SELECT * FROM[dbo].[Categorys]  cat WHERE cat.CategoryID NOT IN(SELECT CategoryID FROM[dbo].[Products] where quickmanu!='false') and cat.inactive = 'false' and ispayout='false'", connection);
+            SqlCommand command = new SqlCommand("select * from ( SELECT * FROM[dbo].[Categorys]  cat WHERE cat.CategoryID NOT IN(SELECT CategoryID FROM[dbo].[Products] where quickmanu!='false') and cat.inactive = 'false' and ispayout='false' union all SELECT * FROM[dbo].[Categorys] where CategoryID in(139,101,104)) tt where  CategoryID not in(136,135,138) order by orderno", connection);
             //SqlCommand command1 = new SqlCommand("SELECT * FROM[dbo].[Categorys]  cat WHERE cat.CategoryID NOT IN(SELECT CategoryID FROM[dbo].[Products]) and cat.inactive = 'false' and ispayout='false'", connection);
             SqlDataAdapter adp = new SqlDataAdapter(command);
             adp.Fill(dtbranches);
@@ -3187,9 +3187,10 @@ namespace INVENTORY.UI
             return barcode;
         }
 
-        private void btnclose_Click(object sender, EventArgs e)
+        private void btnretrive_Click(object sender, EventArgs e)
         {
-            this.Close();
+            frmsuspendedbill frmsuspebill = new frmsuspendedbill();
+            frmsuspebill.ShowDialog();
         }
 
         private void btnplu_Click(object sender, EventArgs e)
@@ -3198,5 +3199,10 @@ namespace INVENTORY.UI
             frplu.ShowDialog();
         }
 
+        private void btncust_Click(object sender, EventArgs e)
+        {
+            frmcustomer frmcust = new frmcustomer();
+            frmcust.ShowDialog();
+        }
     }
 }

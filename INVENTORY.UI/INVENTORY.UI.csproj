@@ -221,6 +221,12 @@
     <Compile Include="frmBranchMaster.designer.cs">
       <DependentUpon>frmBranchMaster.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmcustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmcustomer.Designer.cs">
+      <DependentUpon>frmcustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmdisc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -292,6 +298,12 @@
     </Compile>
     <Compile Include="frmshiftend.Designer.cs">
       <DependentUpon>frmshiftend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmsuspendedbill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmsuspendedbill.Designer.cs">
+      <DependentUpon>frmsuspendedbill.cs</DependentUpon>
     </Compile>
     <Compile Include="Inventory\Account\fCardTpyeSetups.cs">
       <SubType>Form</SubType>
@@ -1041,6 +1053,9 @@
     <EmbeddedResource Include="frmBranchMaster.resx">
       <DependentUpon>frmBranchMaster.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmcustomer.resx">
+      <DependentUpon>frmcustomer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmdisc.resx">
       <DependentUpon>frmdisc.cs</DependentUpon>
     </EmbeddedResource>
@@ -1076,6 +1091,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmshiftend.resx">
       <DependentUpon>frmshiftend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmsuspendedbill.resx">
+      <DependentUpon>frmsuspendedbill.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inventory\Account\fCardTpyeSetups.resx">
       <DependentUpon>fCardTpyeSetups.cs</DependentUpon>
