@@ -279,6 +279,7 @@ C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.fBackUpDB
 C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.FNewMainForm3.resources
 C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.FNewMainForm2.resources
 C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.frmBranchMaster.resources
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.frmcustomer.resources
 C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.frmdisc.resources
 C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.frmlabelprint.resources
 C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.frmlastbill.resources
@@ -291,6 +292,7 @@ C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.frmpromo.
 C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.frmquickmenu.resources
 C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.frmrefund.resources
 C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.frmshiftend.resources
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.frmsuspendedbill.resources
 C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCardTpyeSetups.resources
 C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCardTypeSetup.resources
 C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.fCashCollection.resources
@@ -401,5 +403,3 @@ C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.exe.licen
 C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.csproj.CopyComplete
 C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.exe
 C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.pdb
-C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.frmcustomer.resources
-C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.frmsuspendedbill.resources
