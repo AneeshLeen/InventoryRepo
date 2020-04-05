@@ -11,6 +11,12 @@ namespace INVENTORY.DA
     {
         public static SystemInformation SystemInfo { get; set; }
         public static User CurrentUser { get; set; }
+        public static string BranchName { get; set; }
+        public static int BranchId { get; set; }
+        public static int ShiftId { get; set; }
+
+        public static int CashbackId = 132;
+        
         public static string NumWords(int Num)
         {
             #region Old Code

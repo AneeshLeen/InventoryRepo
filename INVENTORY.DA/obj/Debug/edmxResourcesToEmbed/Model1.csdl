@@ -520,6 +520,8 @@
     <Property Name="RetailPrice" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
     <Property Name="quickmanu" Type="Boolean" />
     <Property Name="labelprint" Type="Boolean" />
+    <Property Name="branchid" Type="Int32" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
   </EntityType>
   <EntityType Name="ReturnDetail">
     <Key>
@@ -631,6 +633,7 @@
     <Property Name="GodownID" Type="Int32" />
     <NavigationProperty Name="Godown" Relationship="DEWSRMModel.FK_SOrderDetails_Godowns" FromRole="SOrderDetail" ToRole="Godown" />
     <Property Name="TypeID" Type="Int32" Nullable="false" />
+    <Property Name="branchid" Type="Int32" />
   </EntityType>
   <EntityType Name="SOrder">
     <Key>
@@ -673,6 +676,9 @@
     <NavigationProperty Name="User" Relationship="Self.FK_SOrders_Users" FromRole="SOrders" ToRole="Users" />
     <Property Name="CashPaidAmount" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
     <Property Name="CardTypeID" Type="Int32" />
+    <Property Name="branchid" Type="Int32" />
+    <Property Name="ShiftEndStatus" Type="Boolean" Nullable="false" />
+    <Property Name="shiftid" Type="Int32" />
   </EntityType>
   <EntityType Name="StockDetail">
     <Key>
@@ -1722,6 +1728,8 @@
       <End Role="Godown" EntitySet="Godowns" />
       <End Role="Stock" EntitySet="Stocks" />
     </AssociationSet>
+    <EntitySet Name="SVoids" EntityType="DEWSRMModel.SVoid" />
+    <EntitySet Name="Shifts" EntityType="DEWSRMModel.Shift" />
   </EntityContainer>
   <EntityType Name="CreditSalesDetail">
     <Key>
@@ -1887,4 +1895,30 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <EntityType Name="SVoid">
+    <Key>
+      <PropertyRef Name="SVoidId" />
+    </Key>
+    <Property Name="SVoidId" Type="Int32" Nullable="false" />
+    <Property Name="ProductId" Type="Int32" Nullable="false" />
+    <Property Name="TypeId" Type="Int32" Nullable="false" />
+    <Property Name="Qty" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Amount" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="VoidTypeId" Type="Int32" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ShiftEndStatus" Type="Boolean" Nullable="false" />
+    <Property Name="branchid" Type="Int32" Nullable="false" />
+    <Property Name="shiftid" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Shift">
+    <Key>
+      <PropertyRef Name="ShiftId" />
+    </Key>
+    <Property Name="ShiftId" Type="Int32" Nullable="false" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="StartDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EndDate" Type="DateTime" Precision="3" />
+    <Property Name="branchid" Type="Int32" Nullable="false" />
+  </EntityType>
 </Schema>

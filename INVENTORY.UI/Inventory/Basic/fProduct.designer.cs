@@ -85,17 +85,16 @@
             this.cboTax = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
-            this.numCostPrice = new System.Windows.Forms.NumericUpDown();
-            this.numRetailPrice = new System.Windows.Forms.NumericUpDown();
             this.label12 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.txtBarcode = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
+            this.chkQuickMenu = new System.Windows.Forms.CheckBox();
+            this.numRetailPrice = new System.Windows.Forms.TextBox();
+            this.numCostPrice = new System.Windows.Forms.TextBox();
+            this.numstock = new System.Windows.Forms.TextBox();
             this.ctlCategory = new INVENTORY.UI.ctlCustomControl();
             this.ctlBrand = new INVENTORY.UI.ctlCustomControl();
-            this.chkQuickMenu = new System.Windows.Forms.CheckBox();
-            this.numstock = new System.Windows.Forms.NumericUpDown();
-            this.chklabelprint = new System.Windows.Forms.CheckBox();
             this.groupBox3.SuspendLayout();
             this.txtNID.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -112,9 +111,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbxEmpPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numMinQTY)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numMaxQty)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numCostPrice)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numRetailPrice)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numstock)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox3
@@ -674,7 +670,7 @@
             // numMinQTY
             // 
             this.numMinQTY.Font = new System.Drawing.Font("Palatino Linotype", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numMinQTY.Location = new System.Drawing.Point(131, 370);
+            this.numMinQTY.Location = new System.Drawing.Point(130, 370);
             this.numMinQTY.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -786,7 +782,7 @@
             // numMaxQty
             // 
             this.numMaxQty.Font = new System.Drawing.Font("Palatino Linotype", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numMaxQty.Location = new System.Drawing.Point(131, 412);
+            this.numMaxQty.Location = new System.Drawing.Point(130, 412);
             this.numMaxQty.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -802,11 +798,12 @@
             this.cboTax.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTax.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboTax.FormattingEnabled = true;
-            this.cboTax.Location = new System.Drawing.Point(131, 454);
+            this.cboTax.Location = new System.Drawing.Point(130, 454);
             this.cboTax.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cboTax.Name = "cboTax";
             this.cboTax.Size = new System.Drawing.Size(113, 26);
             this.cboTax.TabIndex = 10;
+            this.cboTax.SelectedValueChanged += new System.EventHandler(this.cboTax_SelectedValueChanged);
             // 
             // label11
             // 
@@ -829,40 +826,6 @@
             this.label23.Size = new System.Drawing.Size(85, 22);
             this.label23.TabIndex = 214;
             this.label23.Text = "Cost Price";
-            // 
-            // numCostPrice
-            // 
-            this.numCostPrice.BackColor = System.Drawing.SystemColors.Window;
-            this.numCostPrice.DecimalPlaces = 2;
-            this.numCostPrice.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numCostPrice.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.numCostPrice.Location = new System.Drawing.Point(131, 297);
-            this.numCostPrice.Maximum = new decimal(new int[] {
-            999999999,
-            0,
-            0,
-            0});
-            this.numCostPrice.Name = "numCostPrice";
-            this.numCostPrice.Size = new System.Drawing.Size(114, 25);
-            this.numCostPrice.TabIndex = 6;
-            this.numCostPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // numRetailPrice
-            // 
-            this.numRetailPrice.BackColor = System.Drawing.SystemColors.Window;
-            this.numRetailPrice.DecimalPlaces = 2;
-            this.numRetailPrice.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numRetailPrice.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.numRetailPrice.Location = new System.Drawing.Point(131, 334);
-            this.numRetailPrice.Maximum = new decimal(new int[] {
-            999999999,
-            0,
-            0,
-            0});
-            this.numRetailPrice.Name = "numRetailPrice";
-            this.numRetailPrice.Size = new System.Drawing.Size(114, 25);
-            this.numRetailPrice.TabIndex = 7;
-            this.numRetailPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label12
             // 
@@ -908,6 +871,50 @@
             this.label17.TabIndex = 220;
             this.label17.Text = "Stock";
             // 
+            // chkQuickMenu
+            // 
+            this.chkQuickMenu.AutoSize = true;
+            this.chkQuickMenu.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkQuickMenu.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.chkQuickMenu.Location = new System.Drawing.Point(306, 450);
+            this.chkQuickMenu.Name = "chkQuickMenu";
+            this.chkQuickMenu.Size = new System.Drawing.Size(118, 26);
+            this.chkQuickMenu.TabIndex = 221;
+            this.chkQuickMenu.Text = "QuickMenu";
+            this.chkQuickMenu.UseVisualStyleBackColor = true;
+            // 
+            // numRetailPrice
+            // 
+            this.numRetailPrice.Enabled = false;
+            this.numRetailPrice.Location = new System.Drawing.Point(129, 333);
+            this.numRetailPrice.Name = "numRetailPrice";
+            this.numRetailPrice.Size = new System.Drawing.Size(115, 25);
+            this.numRetailPrice.TabIndex = 223;
+            this.numRetailPrice.Tag = "";
+            this.numRetailPrice.Text = "0.00";
+            // 
+            // numCostPrice
+            // 
+            this.numCostPrice.Location = new System.Drawing.Point(129, 296);
+            this.numCostPrice.Name = "numCostPrice";
+            this.numCostPrice.Size = new System.Drawing.Size(115, 25);
+            this.numCostPrice.TabIndex = 224;
+            this.numCostPrice.Text = "0.00";
+            this.numCostPrice.TextChanged += new System.EventHandler(this.numCostPrice_TextChanged);
+            this.numCostPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numCostPrice_KeyPress);
+            this.numCostPrice.Leave += new System.EventHandler(this.numCostPrice_Leave);
+            this.numCostPrice.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.numCostPrice_PreviewKeyDown);
+            // 
+            // numstock
+            // 
+            this.numstock.Location = new System.Drawing.Point(130, 491);
+            this.numstock.Name = "numstock";
+            this.numstock.Size = new System.Drawing.Size(115, 25);
+            this.numstock.TabIndex = 225;
+            this.numstock.Text = "0";
+            this.numstock.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numstock_KeyPress);
+            this.numstock.Leave += new System.EventHandler(this.numstock_Leave);
+            // 
             // ctlCategory
             // 
             this.ctlCategory.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -932,44 +939,6 @@
             this.ctlBrand.TabIndex = 1;
             this.ctlBrand.SelectedItemChanged += new INVENTORY.UI.SelectionChangedEvent(this.ctlBrand_SelectedItemChanged);
             // 
-            // chkQuickMenu
-            // 
-            this.chkQuickMenu.AutoSize = true;
-            this.chkQuickMenu.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkQuickMenu.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.chkQuickMenu.Location = new System.Drawing.Point(306, 450);
-            this.chkQuickMenu.Name = "chkQuickMenu";
-            this.chkQuickMenu.Size = new System.Drawing.Size(118, 26);
-            this.chkQuickMenu.TabIndex = 221;
-            this.chkQuickMenu.Text = "QuickMenu";
-            this.chkQuickMenu.UseVisualStyleBackColor = true;
-            // 
-            // numstock
-            // 
-            this.numstock.Font = new System.Drawing.Font("Palatino Linotype", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numstock.Location = new System.Drawing.Point(131, 487);
-            this.numstock.Maximum = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            0});
-            this.numstock.Name = "numstock";
-            this.numstock.Size = new System.Drawing.Size(114, 31);
-            this.numstock.TabIndex = 222;
-            this.numstock.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // chklabelprint
-            // 
-            this.chklabelprint.AutoSize = true;
-            this.chklabelprint.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chklabelprint.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.chklabelprint.Location = new System.Drawing.Point(306, 482);
-            this.chklabelprint.Name = "chklabelprint";
-            this.chklabelprint.Size = new System.Drawing.Size(112, 26);
-            this.chklabelprint.TabIndex = 223;
-            this.chklabelprint.Text = "Label Print";
-            this.chklabelprint.UseVisualStyleBackColor = true;
-            // 
             // fProduct
             // 
             this.AcceptButton = this.btnSave;
@@ -978,15 +947,14 @@
             this.BackColor = System.Drawing.Color.SlateGray;
             this.CancelButton = this.btnClose;
             this.ClientSize = new System.Drawing.Size(1064, 602);
-            this.Controls.Add(this.chklabelprint);
             this.Controls.Add(this.numstock);
+            this.Controls.Add(this.numCostPrice);
+            this.Controls.Add(this.numRetailPrice);
             this.Controls.Add(this.chkQuickMenu);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.txtBarcode);
-            this.Controls.Add(this.numRetailPrice);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.numCostPrice);
             this.Controls.Add(this.label23);
             this.Controls.Add(this.cboTax);
             this.Controls.Add(this.label11);
@@ -1049,9 +1017,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbxEmpPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numMinQTY)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numMaxQty)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numCostPrice)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numRetailPrice)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numstock)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1117,14 +1082,13 @@
         private System.Windows.Forms.ComboBox cboTax;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.NumericUpDown numCostPrice;
-        private System.Windows.Forms.NumericUpDown numRetailPrice;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox txtBarcode;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.CheckBox chkQuickMenu;
-        private System.Windows.Forms.NumericUpDown numstock;
-        private System.Windows.Forms.CheckBox chklabelprint;
+        private System.Windows.Forms.TextBox numRetailPrice;
+        private System.Windows.Forms.TextBox numCostPrice;
+        private System.Windows.Forms.TextBox numstock;
     }
 }

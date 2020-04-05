@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using INVENTORY.DA;
 using System.IO;
+using System.Text.RegularExpressions;
 
 namespace INVENTORY.UI
 {
@@ -96,11 +97,10 @@ namespace INVENTORY.UI
             EnumTax enuumTax = (EnumTax)Convert.ToInt32(_Product.Tax);
             cboTax.SelectedValue = (int)enuumTax;
             txtBarcode.Text = _Product.BarCode;
-            numCostPrice.Value = _Product.CostPrice;
-            numRetailPrice.Value = _Product.RetailPrice;
-            numstock.Value = _Product.BoxQty;
-            chkQuickMenu.Checked = _Product.quickmanu == null ? false : _Product.quickmanu.Value;
-            chklabelprint.Checked = _Product.labelprint == null ? false : _Product.labelprint.Value;
+            numCostPrice.Text =Convert.ToString( _Product.CostPrice);
+            numRetailPrice.Text = Convert.ToString(_Product.RetailPrice);
+            numstock.Text = Convert.ToString(_Product.BoxQty);
+            chkQuickMenu.Checked = _Product.quickmanu == null ? false : _Product.quickmanu.Value; 
 
             //if (!string.IsNullOrEmpty(_Product.CompressorWarrenty))
             //{
@@ -202,11 +202,11 @@ namespace INVENTORY.UI
             _Product.Tax = (int)cboTax.SelectedValue;
 
             _Product.BarCode = txtBarcode.Text;
-            _Product.CostPrice = numCostPrice.Value;
-            _Product.RetailPrice = numRetailPrice.Value;
+            _Product.CostPrice =Convert.ToDecimal( numCostPrice.Text);
+            _Product.RetailPrice = Convert.ToDecimal(numRetailPrice.Text);
             _Product.quickmanu = chkQuickMenu.Checked;
-            _Product.BoxQty = numstock.Value;
-            _Product.labelprint = chklabelprint.Checked;
+            _Product.BoxQty = Convert.ToDecimal(numstock.Text); 
+             
 
             using (DEWSRMEntities db = new DEWSRMEntities())
             {
@@ -323,6 +323,7 @@ namespace INVENTORY.UI
                 {
                     if (_Product.ProductID <= 0)
                     {
+                        _Product.CreateDate = DateTime.Now;
                         _Product.ProductID = db.Products.Count() > 0 ? db.Products.Max(obj => obj.ProductID) + 1 : 1;
                         RefreshObject();
 
@@ -538,7 +539,58 @@ namespace INVENTORY.UI
 
         private void txtCode_TextChanged(object sender, EventArgs e)
         {
+            if (txtCode.Text.TrimStart(new Char[] { '0' }) == string.Empty)
+            {
+                txtCode.Tag = txtCode.Text.TrimStart(new Char[] { '0' });
+                return;
+            }
+            else
+            {
+                if (txtCode.Text.TrimStart(new Char[] { '0' }).Length <= 3)
+                {
+                    txtCode.Tag = txtCode.Text.TrimStart(new Char[] { '0' });
+                }
+            }
+            if (txtCode.Text.TrimStart(new Char[] { '0' }).Length > 3)
+            {
+                LoadBarcodeBasedData();
+            }
+            txtCode.Tag = txtCode.Text.TrimStart(new Char[] { '0' }); ;
+        }
 
+        private void LoadBarcodeBasedData()
+        {
+            try
+            {
+                //if (txtamt.Text != string.Empty)
+                if (txtCode.Text.TrimStart(new Char[] { '0' }) != string.Empty)
+                {
+                    string data = txtCode.Text.TrimStart(new Char[] { '0' });
+                    //if (db.Products.Any(o => o.BarCode == txtamt.Text.Trim()))
+                    using (DEWSRMEntities db = new DEWSRMEntities())
+                    {
+                        if (db.Products.Any(o => o.BarCode == data))
+                        {
+
+                            if (MessageBox.Show("Item already added.Do you wish load the item ?", "Product", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                            {
+                                //_oPreoduct = (Product)(db.Products.FirstOrDefault(o => o.BarCode == txtamt.Text.Trim()));
+                                _Product = (Product)(db.Products.FirstOrDefault(o => o.BarCode == data));
+                                //txtsearch.Text.TrimStart(new Char[] { '0' })
+                                if (_Product != null)
+                                {
+                                    RefreshValue();
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Barcode");
+            }
         }
 
         private void chkIsBangla_CheckedChanged(object sender, EventArgs e)
@@ -561,7 +613,95 @@ namespace INVENTORY.UI
             {
                 MessageBox.Show(ex.Message);
             }
+        }
 
+        
+        private void numCostPrice_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+
+        }
+
+      
+        private bool KeyEnteredIsValid(string key)
+        {
+            Regex regex;
+            regex = new Regex("[^0-9]+$"); //regex that matches disallowed text
+            return regex.IsMatch(key);
+        }
+
+        private void numCostPrice_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            TextBox txtbox = sender as TextBox;
+           
+                if (e.KeyChar == '\b') return;
+            if (e.KeyChar == '.')
+            {
+                if(!txtbox.Text.Contains("."))
+                {
+                    return;
+                }
+                else
+                {
+                    e.Handled = true;
+                }
+            }
+            e.Handled = KeyEnteredIsValid(e.KeyChar.ToString());
+        }
+
+        private void numstock_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = KeyEnteredIsValid(e.KeyChar.ToString());
+        }
+        private void numRetailPrice_TextChanged(object sender, EventArgs e)
+        {
+            CalcualateRetailPrice();
+        }
+
+        private void cboTax_SelectedValueChanged(object sender, EventArgs e)
+        {
+            CalcualateRetailPrice();
+        }
+
+        private void CalcualateRetailPrice()
+        {
+            if (Convert.ToDecimal(cboTax.SelectedValue) == 0)
+            {
+                numRetailPrice.Text= Convert.ToDecimal(numCostPrice.Text).ToString("#,0.00");
+            }
+            else if (Convert.ToDecimal(cboTax.SelectedValue) > 0)
+            {
+                numRetailPrice.Text = Convert.ToDecimal( Convert.ToDecimal(numCostPrice.Text) + ((Convert.ToDecimal(numCostPrice.Text) * Convert.ToDecimal(cboTax.SelectedValue)) / 100)).ToString("#,0.00");
+            }
+        }
+
+        private void numCostPrice_Leave(object sender, EventArgs e)
+        {
+            TextBox txtbox = sender as TextBox;
+            if (txtbox.Text.Length == 0)
+            {
+                txtbox.Text = "0.00";
+            }
+            txtbox.Text =Convert.ToDecimal( txtbox.Text).ToString("#,0.00");
+        }
+
+        private void numCostPrice_TextChanged(object sender, EventArgs e)
+        {
+            if (numCostPrice.Text.Length > 0)
+            {
+                CalcualateRetailPrice();
+            }
+            else
+            {
+                numRetailPrice.Text = numCostPrice.Text;
+            }
+        }
+         
+        private void numstock_Leave(object sender, EventArgs e)
+        {
+            if (numstock.Text.Length == 0)
+            {
+                numstock.Text = "0";
+            }
         }
     }
 }

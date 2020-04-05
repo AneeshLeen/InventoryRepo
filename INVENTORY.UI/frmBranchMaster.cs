@@ -95,7 +95,7 @@ namespace INVENTORY.UI
         //string value4 = (string)value2;
         private void btnapply_Click(object sender, EventArgs e)
         {
-           
+
             FormCollection fc = Application.OpenForms;
             bool bFormNameOpen = false;
             foreach (Form frm in fc)
@@ -108,41 +108,44 @@ namespace INVENTORY.UI
                 }
             }
 
-          
-                if (tvBranches.SelectedNode != null)
+
+            if (tvBranches.SelectedNode != null)
+            {
+                if (!bFormNameOpen)
                 {
-                    if (!bFormNameOpen)
-                    {
-                     
-                        oFMainForm = new FNewMainForm();
-                        this.BranchName = tvBranches.SelectedNode.Text;
-                        this.BranchId = Convert.ToInt64(tvBranches.SelectedNode.Tag);
-                        this.DialogResult = System.Windows.Forms.DialogResult.OK;
-                        this.Close();
+
+                    oFMainForm = new FNewMainForm();
+                    this.BranchName = tvBranches.SelectedNode.Text;
+                    this.BranchId = Convert.ToInt64(tvBranches.SelectedNode.Tag);
+                    this.DialogResult = System.Windows.Forms.DialogResult.OK;
+                    this.Close();
 
 
-                        //FMainForm oFMainForm = new FMainForm();    
-                        oFMainForm.lblUser.Text = Global.CurrentUser.UserName.ToString();
-                        oFMainForm.tsplbranch.Text = tvBranches.SelectedNode.Text;
+                    //FMainForm oFMainForm = new FMainForm();    
+                    oFMainForm.lblUser.Text = Global.CurrentUser.UserName.ToString();
+                    oFMainForm.tsplbranch.Text = tvBranches.SelectedNode.Text;
 
-                        this.Close();
-                        this.Hide();
-                        DialogResult = DialogResult.OK;
-                        this.Close();
-                        oFMainForm.ShowDialog();
-                        //this.Close();
-                        //this.Hide();
-                    
-
-                    }
-                    else
-                    {
-                        oFMainForm.tsplbranch.Text = tvBranches.SelectedNode.Text;
-                        this.Close();
-                        this.Hide();
-                    }
-
+                    this.Close();
+                    this.Hide();
                     DialogResult = DialogResult.OK;
+                    this.Close();
+                    oFMainForm.ShowDialog();
+                    //this.Close();
+                    //this.Hide();
+
+
+                }
+                else
+                {
+                    oFMainForm.tsplbranch.Text = tvBranches.SelectedNode.Text;
+                    this.Close();
+                    this.Hide();
+                }
+
+                Global.BranchId = Convert.ToInt32(tvBranches.SelectedNode.Tag);
+                Global.BranchName = tvBranches.SelectedNode.Text;
+
+                DialogResult = DialogResult.OK;
             }
 
         }

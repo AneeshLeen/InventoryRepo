@@ -447,6 +447,8 @@
     <EntitySetMapping Name="Products">
       <EntityTypeMapping TypeName="DEWSRMModel.Product">
         <MappingFragment StoreEntitySet="Products">
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="branchid" ColumnName="branchid" />
           <ScalarProperty Name="labelprint" ColumnName="labelprint" />
           <ScalarProperty Name="quickmanu" ColumnName="quickmanu" />
           <ScalarProperty Name="RetailPrice" ColumnName="RetailPrice" />
@@ -551,6 +553,7 @@
     <EntitySetMapping Name="SOrderDetails">
       <EntityTypeMapping TypeName="DEWSRMModel.SOrderDetail">
         <MappingFragment StoreEntitySet="SOrderDetails">
+          <ScalarProperty Name="branchid" ColumnName="branchid" />
           <ScalarProperty Name="TypeID" ColumnName="TypeID" />
           <ScalarProperty Name="GodownID" ColumnName="GodownID" />
           <ScalarProperty Name="IGSTAmt" ColumnName="IGSTAmt" />
@@ -588,6 +591,9 @@
     <EntitySetMapping Name="SOrders">
       <EntityTypeMapping TypeName="DEWSRMModel.SOrder">
         <MappingFragment StoreEntitySet="SOrders">
+          <ScalarProperty Name="shiftid" ColumnName="shiftid" />
+          <ScalarProperty Name="ShiftEndStatus" ColumnName="ShiftEndStatus" />
+          <ScalarProperty Name="branchid" ColumnName="branchid" />
           <ScalarProperty Name="CardTypeID" ColumnName="CardTypeID" />
           <ScalarProperty Name="CashPaidAmount" ColumnName="CashPaidAmount" />
           <ScalarProperty Name="SOrderID" ColumnName="SOrderID" />
@@ -849,6 +855,34 @@
           <ScalarProperty Name="GodownName" ColumnName="GodownName" />
           <ScalarProperty Name="GodownCode" ColumnName="GodownCode" />
           <ScalarProperty Name="GodownID" ColumnName="GodownID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SVoids">
+      <EntityTypeMapping TypeName="DEWSRMModel.SVoid">
+        <MappingFragment StoreEntitySet="SVoid">
+          <ScalarProperty Name="shiftid" ColumnName="shiftid" />
+          <ScalarProperty Name="branchid" ColumnName="branchid" />
+          <ScalarProperty Name="ShiftEndStatus" ColumnName="ShiftEndStatus" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="VoidTypeId" ColumnName="VoidTypeId" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="TypeId" ColumnName="TypeId" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="SVoidId" ColumnName="SVoidId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Shifts">
+      <EntityTypeMapping TypeName="DEWSRMModel.Shift">
+        <MappingFragment StoreEntitySet="Shift">
+          <ScalarProperty Name="branchid" ColumnName="branchid" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ShiftId" ColumnName="ShiftId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
