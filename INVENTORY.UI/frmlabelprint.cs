@@ -37,7 +37,7 @@ namespace INVENTORY.UI
 
                 txtproductcode.Text = frplu.selectedRow.Cells[1].Value.ToString();
                 txtproductname.Text = frplu.selectedRow.Cells[2].Value.ToString();
-                txtBarcode.Text= frplu.selectedRow.Cells[0].Value.ToString();
+                txtBarcode.Text = frplu.selectedRow.Cells[0].Value.ToString();
                 txtsalesprice.Text = frplu.selectedRow.Cells[8].Value.ToString();
                 txtnooflabels.Text = "1";
                 txtnooflabels.Focus();
@@ -116,7 +116,7 @@ namespace INVENTORY.UI
 
         private void btnrefresh_Click(object sender, EventArgs e)
         {
-           
+
             loadpending();
 
         }
@@ -136,9 +136,28 @@ namespace INVENTORY.UI
             {
                 if (DataTabletemp.Rows[i][0].ToString() == "True")
                 {
-                    this.dgProducts.Rows.Add(DataTabletemp.Rows[i][1].ToString(), DataTabletemp.Rows[i][2].ToString(), DataTabletemp.Rows[i][3].ToString(), DataTabletemp.Rows[i][4].ToString(),"1");
+                    this.dgProducts.Rows.Add(DataTabletemp.Rows[i][1].ToString(), DataTabletemp.Rows[i][2].ToString(), DataTabletemp.Rows[i][3].ToString(), DataTabletemp.Rows[i][4].ToString(), "1");
                 }
             }
+        }
+
+        private void btnselectall_Click(object sender, EventArgs e)
+        {
+            DataTable DataTabletemp = dgupdatproducts.DataSource as DataTable;
+            foreach (DataRow r in DataTabletemp.Rows)
+                r[0] = false;
+
+            dgupdatproducts.EndEdit();
+        }
+        
+
+        private void btnunselectall_Click(object sender, EventArgs e)
+        {
+            DataTable DataTabletemp = dgupdatproducts.DataSource as DataTable;
+            foreach (DataRow r in DataTabletemp.Rows)
+                r[0] = true;
+
+            dgupdatproducts.EndEdit();
         }
     }
 }

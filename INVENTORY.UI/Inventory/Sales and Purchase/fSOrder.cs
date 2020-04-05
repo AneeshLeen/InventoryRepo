@@ -2151,7 +2151,7 @@ namespace INVENTORY.UI
 
             DataTable dtbranches = new DataTable();
             SqlConnection connection = new SqlConnection(@"Data Source=" + SQLServer + ";Initial Catalog=DEWSRMTEST;Persist Security Info=True;Integrated Security=true");
-            SqlCommand command = new SqlCommand("select * from ( SELECT * FROM[dbo].[Categorys]  cat WHERE cat.CategoryID NOT IN(SELECT CategoryID FROM[dbo].[Products] where quickmanu!='false') and cat.inactive = 'false' and ispayout='false' union all SELECT * FROM[dbo].[Categorys] where CategoryID in(139,101,104)) tt where  CategoryID not in(136,135,138) order by orderno", connection);
+            SqlCommand command = new SqlCommand("select * from ( SELECT * FROM[dbo].[Categorys]  cat WHERE cat.CategoryID NOT IN(SELECT CategoryID FROM[dbo].[Products] where quickmanu!='false') and cat.inactive = 'false' and ispayout='false' union all SELECT * FROM[dbo].[Categorys] where CategoryID in(139,101,104)) tt where  CategoryID not in(136,135,138) order by [Description], orderno", connection);
             //SqlCommand command1 = new SqlCommand("SELECT * FROM[dbo].[Categorys]  cat WHERE cat.CategoryID NOT IN(SELECT CategoryID FROM[dbo].[Products]) and cat.inactive = 'false' and ispayout='false'", connection);
             SqlDataAdapter adp = new SqlDataAdapter(command);
             adp.Fill(dtbranches);
@@ -3080,34 +3080,38 @@ namespace INVENTORY.UI
 
 
             //Header
+            StringFormat format1 = new StringFormat(StringFormatFlags.NoClip);
+            //format1.LineAlignment = StringAlignment.Near;
+            format1.Alignment = StringAlignment.Center;
+           
             printFont = new Font("Microsoft Sans Serif", 10, FontStyle.Bold, GraphicsUnit.Point);
-            e.Graphics.DrawString("SPRINGFORD VARIETY & FOOD STORE", printFont, Brushes.Black, x, y);
+            e.Graphics.DrawString("SPRINGFORD VARIETY & FOOD STORE", printFont, Brushes.Black, x, y,format1);
             y += lineOffset;
-            e.Graphics.DrawString("3 West Street North", printFont, Brushes.Black, x, y);
+            e.Graphics.DrawString("3 West Street North", printFont, Brushes.Black, x, y,format1);
             y += lineOffset;
-            e.Graphics.DrawString("Springford,ON", printFont, Brushes.Black, x, y);
+            e.Graphics.DrawString("Springford,ON", printFont, Brushes.Black,x,y, format1);
             y += lineOffset;
-            e.Graphics.DrawString("HST#781501283RT0001", printFont, Brushes.Black, x, y);
+            e.Graphics.DrawString("HST#781501283RT0001", printFont, Brushes.Black, x, y, format1);
             //
             
             //Details                                      
             y = y + (lineOffset * (float)1.5);
             
-            e.Graphics.DrawString("Decription                                   Amt($)", printFont, Brushes.Black, x, y);
+            e.Graphics.DrawString("Decription                                        Amt($)", printFont, Brushes.Black, x, y);
             y += (lineOffset * (float)0.5);
             lineOffset = printFont.GetHeight(e.Graphics) - 3;
+            
             e.Graphics.DrawString("___________________________________", printFont, Brushes.Black, x, y);
             y += (lineOffset * (float)1.5);
-            printFont = new Font("Microsoft Sans Serif", 9, FontStyle.Regular, GraphicsUnit.Point);          
-           
 
+            printFont = new Font("Microsoft Sans Serif", 9, FontStyle.Regular, GraphicsUnit.Point);
             for (int i = 0; i <= SetPrintData().objSalesPrintItems.Count()-1; i++)
             {               
                 e.Graphics.DrawString(SetPrintData().objSalesPrintItems[i].ItemName.PadRight(27) + string.Format("{0:}", Convert.ToString( SetPrintData().objSalesPrintItems[i].Amount)).PadLeft(12), printFont, Brushes.Black, x, y);                
                 y += (lineOffset * (float)1.1); 
             }
             printFont = new Font("Microsoft Sans Serif", 10, FontStyle.Regular, GraphicsUnit.Point);
-            e.Graphics.DrawString("___________________________________", printFont, Brushes.Black, x, y);
+            e.Graphics.DrawString("______________________________________", printFont, Brushes.Black, x, y);
             //y += (lineOffset * (float)1.5);
             y += lineOffset;
             //
@@ -3129,13 +3133,13 @@ namespace INVENTORY.UI
             e.Graphics.DrawString("Change :               " + SetPrintData().Change, printFont, Brushes.Black, x, y);
             y += (lineOffset * (float)1.5); 
 
-            e.Graphics.DrawString("___________________________________", printFont, Brushes.Black, x, y);
+            e.Graphics.DrawString("______________________________________", printFont, Brushes.Black, x, y);
             y += (lineOffset * (float)1.5);
 
             e.Graphics.DrawString("Total Savings :               " + SetPrintData().TotalSavings, printFont, Brushes.Black, x, y);
             //y += (lineOffset * (float)1.5); 
             y += lineOffset;
-            e.Graphics.DrawString("___________________________________", printFont, Brushes.Black, x, y);
+            e.Graphics.DrawString("______________________________________", printFont, Brushes.Black, x, y);
             y += (lineOffset * (float)1.5); 
 
             printFont = new Font("Microsoft Sans Serif", 10, FontStyle.Bold, GraphicsUnit.Point);
@@ -3146,7 +3150,7 @@ namespace INVENTORY.UI
             //y += (lineOffset * (float)1.5); ;
             y += lineOffset;
             printFont = new Font("Microsoft Sans Serif", 10, FontStyle.Regular, GraphicsUnit.Point);
-            e.Graphics.DrawString("___________________________________", printFont, Brushes.Black, x, y);
+            e.Graphics.DrawString("______________________________________", printFont, Brushes.Black, x, y);
             y += (lineOffset * (float)1.5);            
             for (int i = 0; i <= SetPrintData().objHSTSummary.Count()-1; i++)
             {                
@@ -3156,7 +3160,7 @@ namespace INVENTORY.UI
             printFont = new Font("Microsoft Sans Serif", 10, FontStyle.Regular, GraphicsUnit.Point);
 
             lineOffset = printFont.GetHeight(e.Graphics) - 3;
-            e.Graphics.DrawString("___________________________________", printFont, Brushes.Black, x, y);
+            e.Graphics.DrawString("______________________________________", printFont, Brushes.Black, x, y);
             y += (lineOffset * (float)1.5);
             //y += lineOffset;
             e.Graphics.DrawString("Till                        " + SetPrintData().Date, printFont, Brushes.Black, x, y);
@@ -3177,8 +3181,9 @@ namespace INVENTORY.UI
             y += (lineOffset * (float)2.0);
             // Indicate that no more data to print, and the Print Document can now send the print data to the spooler.         
 
+            //float imagewidth = CreateBarcode(SetPrintData().OrderNo).drawBarcode().Width;
 
-            e.Graphics.DrawImage(CreateBarcode(SetPrintData().OrderNo).drawBarcode(), x, y);
+            e.Graphics.DrawImage(CreateBarcode(SetPrintData().OrderNo).drawBarcode(), CreateBarcode(SetPrintData().OrderNo).drawBarcode().Width/2,y);
 
             e.HasMorePages = false;
         }

@@ -332,6 +332,7 @@
             this.btnselectall.TabIndex = 282;
             this.btnselectall.Text = "Select All";
             this.btnselectall.UseVisualStyleBackColor = true;
+            this.btnselectall.Click += new System.EventHandler(this.btnselectall_Click);
             // 
             // btnunselectall
             // 
@@ -342,6 +343,7 @@
             this.btnunselectall.TabIndex = 283;
             this.btnunselectall.Text = "Unselect All";
             this.btnunselectall.UseVisualStyleBackColor = true;
+            this.btnunselectall.Click += new System.EventHandler(this.btnunselectall_Click);
             // 
             // btnrefresh
             // 
