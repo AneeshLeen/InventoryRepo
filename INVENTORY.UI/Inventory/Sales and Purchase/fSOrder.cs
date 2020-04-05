@@ -1479,7 +1479,7 @@ namespace INVENTORY.UI
                         {
 
                             Transaction.Rollback();
-                            if(isNew)
+                            if (isNew)
                             {
                                 _Order.SOrderID = 0;
                             }
@@ -1492,29 +1492,29 @@ namespace INVENTORY.UI
                     //GenerateSOInvoice(_Order);
                     //MoneyReceipt(_Order);
                     SetPrintData();
-                    //Print
+
+
                     PrintDocument pdPrint = new PrintDocument();
                     pdPrint.PrintPage += new PrintPageEventHandler(pdPrint_PrintPage);
 
-
+                    PrintDialog pd = new PrintDialog();
+                    pd.Document = pdPrint;
                     try
                     {
 
-                        if (pdPrint.PrinterSettings.IsValid)
-                        {
+                        PrintPreviewDialog pp = new PrintPreviewDialog();
+                        pp.Document = pdPrint;
+                        pp.ShowDialog();
 
-                            pdPrint.Print();
+                        pdPrint.Print();
 
-                        }
-                        else
-                            MessageBox.Show("Printer is not available.", "Program06", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
                     }
+
                     catch
                     {
                         MessageBox.Show("Failed to open StatusAPI.", "Program06", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
-
                 }
                 else
                 {
@@ -1746,7 +1746,7 @@ namespace INVENTORY.UI
                 Button btn = new Button();
                 btn.Left = left;
                 btn.Top = top;
-                btn.Size = new Size(80, 63);
+                btn.Size = new Size(83, 63);
                 btn.Font = new Font(Font.FontFamily, 9, FontStyle.Bold);
                 btn.Text = row["Description"].ToString();
                 btn.Tag = row;
@@ -1760,7 +1760,7 @@ namespace INVENTORY.UI
                 {
                     count = 0;
                     top = 5;
-                    left += 81;
+                    left += 83;
                 }
 
             }
@@ -2185,7 +2185,7 @@ namespace INVENTORY.UI
 
             DataTable dtbranches = new DataTable();
             SqlConnection connection = new SqlConnection(@"Data Source=" + SQLServer + ";Initial Catalog=DEWSRMTEST;Persist Security Info=True;Integrated Security=true");
-            SqlCommand command = new SqlCommand("SELECT * FROM[dbo].[Categorys]  cat WHERE cat.CategoryID NOT IN(SELECT CategoryID FROM[dbo].[Products] where quickmanu!='false') and cat.inactive = 'false' and ispayout='false'", connection);
+            SqlCommand command = new SqlCommand("select * from ( SELECT * FROM[dbo].[Categorys]  cat WHERE cat.CategoryID NOT IN(SELECT CategoryID FROM[dbo].[Products] where quickmanu!='false') and cat.inactive = 'false' and ispayout='false' union all SELECT * FROM[dbo].[Categorys] where CategoryID in(139,101,104)) tt where  CategoryID not in(136,135,138) order by orderno", connection);
             //SqlCommand command1 = new SqlCommand("SELECT * FROM[dbo].[Categorys]  cat WHERE cat.CategoryID NOT IN(SELECT CategoryID FROM[dbo].[Products]) and cat.inactive = 'false' and ispayout='false'", connection);
             SqlDataAdapter adp = new SqlDataAdapter(command);
             adp.Fill(dtbranches);
@@ -2999,9 +2999,6 @@ namespace INVENTORY.UI
                 MessageBox.Show(ex.Message, "Barcode");
             }
         }
-
-
-
         private StockDetail UpdateStockDetails()
         {
 
@@ -3100,18 +3097,32 @@ namespace INVENTORY.UI
             PrintDocument pdPrint = new PrintDocument();
             pdPrint.PrintPage += new PrintPageEventHandler(pdPrint_PrintPage);
 
-
+            PrintDialog pd = new PrintDialog();
+            pd.Document = pdPrint;
             try
             {
 
-                if (pdPrint.PrinterSettings.IsValid)
+                DialogResult result = pd.ShowDialog();
+                if (result == DialogResult.OK)
                 {
-
-                    pdPrint.Print();
-
+                    PrintPreviewDialog pp = new PrintPreviewDialog();
+                    pp.Document = pdPrint;
+                    result = pp.ShowDialog();
+                    if (result == DialogResult.OK)
+                    {
+                        pdPrint.Print();
+                    }
                 }
-                else
-                    MessageBox.Show("Printer is not available.", "Program06", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+
+                //if (pdPrint.PrinterSettings.IsValid)
+                //{
+
+                //    pdPrint.Print();
+
+                //}
+                //else
+                //    MessageBox.Show("Printer is not available.", "Program06", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
             }
             catch
@@ -3142,7 +3153,7 @@ namespace INVENTORY.UI
 
 
             //Header
-            printFont = new Font("Microsoft Sans Serif", 12, FontStyle.Regular, GraphicsUnit.Point);
+            printFont = new Font("Microsoft Sans Serif", 10, FontStyle.Bold, GraphicsUnit.Point);
             e.Graphics.DrawString("SPRINGFORD VARIETY & FOOD STORE", printFont, Brushes.Black, x, y);
             y += lineOffset;
             e.Graphics.DrawString("3 West Street North", printFont, Brushes.Black, x, y);
@@ -3200,7 +3211,7 @@ namespace INVENTORY.UI
             e.Graphics.DrawString("___________________________________", printFont, Brushes.Black, x, y);
             y += (lineOffset * (float)1.5); 
 
-            printFont = new Font("Microsoft Sans Serif", 12, FontStyle.Regular, GraphicsUnit.Point);
+            printFont = new Font("Microsoft Sans Serif", 10, FontStyle.Bold, GraphicsUnit.Point);
 
             e.Graphics.DrawString("HST Summary  ", printFont, Brushes.Black, x, y);
             y += (lineOffset * (float)1.5); 
@@ -3225,7 +3236,7 @@ namespace INVENTORY.UI
             y += (lineOffset * (float)1.5); ;
             e.Graphics.DrawString("No of Items  :" + objSalesPrintBO.NoOfItems, printFont, Brushes.Black, x, y);
             y += (lineOffset * (float)1.5);
-            printFont = new Font("Microsoft Sans Serif", 12, FontStyle.Regular, GraphicsUnit.Point);
+            printFont = new Font("Microsoft Sans Serif", 10, FontStyle.Bold, GraphicsUnit.Point);
             e.Graphics.DrawString("Thanks for Shopping with us", printFont, Brushes.Black, x, y);
             y += (lineOffset * (float)1.5);           
             e.Graphics.DrawString("Please Visit Again", printFont, Brushes.Black, x, y);
@@ -3244,7 +3255,6 @@ namespace INVENTORY.UI
 
             e.HasMorePages = false;
         }
-
         private static Linear CreateBarcode(string orderNo)
         {
             Linear barcode = new Linear();// create a barcode
@@ -3260,9 +3270,10 @@ namespace INVENTORY.UI
             return barcode;
         }
 
-        private void btnclose_Click(object sender, EventArgs e)
+        private void btnretrive_Click(object sender, EventArgs e)
         {
-            this.Close();
+            frmsuspendedbill frmsuspebill = new frmsuspendedbill();
+            frmsuspebill.ShowDialog();
         }
 
         private void btnplu_Click(object sender, EventArgs e)
@@ -3271,5 +3282,10 @@ namespace INVENTORY.UI
             frplu.ShowDialog();
         }
 
+        private void btncust_Click(object sender, EventArgs e)
+        {
+            frmcustomer frmcust = new frmcustomer();
+            frmcust.ShowDialog();
+        }
     }
 }
