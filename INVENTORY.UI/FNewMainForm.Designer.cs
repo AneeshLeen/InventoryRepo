@@ -185,34 +185,48 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txttotvoidsalelastmnth = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txttotvoidsalethismnth = new System.Windows.Forms.TextBox();
+            this.txttotacclastmnth = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txttotaccthismnth = new System.Windows.Forms.TextBox();
+            this.txttotcrdlastmnth = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txttotcrdthismnth = new System.Windows.Forms.TextBox();
+            this.txttotalcshlastmnth = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txttotalcshthismnth = new System.Windows.Forms.TextBox();
+            this.txtlastmonth = new System.Windows.Forms.TextBox();
             this.lblBarcode = new System.Windows.Forms.Label();
-            this.txtBarcode = new System.Windows.Forms.TextBox();
+            this.txtthismonth = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.lblday7 = new System.Windows.Forms.Label();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.txtday7 = new System.Windows.Forms.TextBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.lblday6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.lblday5 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.txtday6 = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
+            this.txtday5 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.lblday4 = new System.Windows.Forms.Label();
             this.textBox11 = new System.Windows.Forms.TextBox();
+            this.lblday3 = new System.Windows.Forms.Label();
             this.textBox12 = new System.Windows.Forms.TextBox();
+            this.txtday4 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.txtday3 = new System.Windows.Forms.TextBox();
             this.textBox13 = new System.Windows.Forms.TextBox();
+            this.lblday2 = new System.Windows.Forms.Label();
             this.textBox14 = new System.Windows.Forms.TextBox();
+            this.lblday1 = new System.Windows.Forms.Label();
+            this.txtday2 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.txtday1 = new System.Windows.Forms.TextBox();
             this.textBox15 = new System.Windows.Forms.TextBox();
             this.textBox16 = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -220,21 +234,6 @@
             this.textBox18 = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.textBox19 = new System.Windows.Forms.TextBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.textBox26 = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.textBox24 = new System.Windows.Forms.TextBox();
-            this.textBox25 = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.textBox22 = new System.Windows.Forms.TextBox();
-            this.textBox23 = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.textBox20 = new System.Windows.Forms.TextBox();
-            this.textBox21 = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.StatusStrip1.SuspendLayout();
@@ -262,7 +261,6 @@
             ((System.ComponentModel.ISupportInitialize)(lineSeriesView2)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -1772,7 +1770,7 @@
             xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
             this.crtTopProduct.Diagram = xyDiagram1;
             this.crtTopProduct.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
-            this.crtTopProduct.Location = new System.Drawing.Point(152, 532);
+            this.crtTopProduct.Location = new System.Drawing.Point(162, 532);
             this.crtTopProduct.Name = "crtTopProduct";
             series2.ArgumentDataMember = "ProductName";
             series2.ColorDataMember = "ProductName";
@@ -1803,7 +1801,7 @@
             secondaryAxisY1});
             this.crtDayWiseSales.Diagram = xyDiagram2;
             this.crtDayWiseSales.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
-            this.crtDayWiseSales.Location = new System.Drawing.Point(151, 301);
+            this.crtDayWiseSales.Location = new System.Drawing.Point(161, 288);
             this.crtDayWiseSales.Name = "crtDayWiseSales";
             series3.ArgumentDataMember = "InvoiceDate";
             series3.Name = "Amount";
@@ -1973,24 +1971,24 @@
             // 
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.textBox8);
+            this.groupBox2.Controls.Add(this.txttotvoidsalelastmnth);
             this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.textBox9);
-            this.groupBox2.Controls.Add(this.textBox6);
+            this.groupBox2.Controls.Add(this.txttotvoidsalethismnth);
+            this.groupBox2.Controls.Add(this.txttotacclastmnth);
             this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.textBox7);
-            this.groupBox2.Controls.Add(this.textBox4);
+            this.groupBox2.Controls.Add(this.txttotaccthismnth);
+            this.groupBox2.Controls.Add(this.txttotcrdlastmnth);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.textBox5);
-            this.groupBox2.Controls.Add(this.textBox2);
+            this.groupBox2.Controls.Add(this.txttotcrdthismnth);
+            this.groupBox2.Controls.Add(this.txttotalcshlastmnth);
             this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.textBox3);
-            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.txttotalcshthismnth);
+            this.groupBox2.Controls.Add(this.txtlastmonth);
             this.groupBox2.Controls.Add(this.lblBarcode);
-            this.groupBox2.Controls.Add(this.txtBarcode);
+            this.groupBox2.Controls.Add(this.txtthismonth);
             this.groupBox2.Location = new System.Drawing.Point(696, 184);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(578, 188);
+            this.groupBox2.Size = new System.Drawing.Size(578, 172);
             this.groupBox2.TabIndex = 208;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Monthly Sales Summery";
@@ -2019,74 +2017,74 @@
             this.label6.TabIndex = 32;
             this.label6.Text = "This Month";
             // 
-            // textBox8
+            // txttotvoidsalelastmnth
             // 
-            this.textBox8.Font = new System.Drawing.Font("Palatino Linotype", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(287, 126);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(106, 22);
-            this.textBox8.TabIndex = 31;
+            this.txttotvoidsalelastmnth.Font = new System.Drawing.Font("Palatino Linotype", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txttotvoidsalelastmnth.Location = new System.Drawing.Point(287, 136);
+            this.txttotvoidsalelastmnth.Margin = new System.Windows.Forms.Padding(4);
+            this.txttotvoidsalelastmnth.Name = "txttotvoidsalelastmnth";
+            this.txttotvoidsalelastmnth.Size = new System.Drawing.Size(106, 22);
+            this.txttotvoidsalelastmnth.TabIndex = 31;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label5.Location = new System.Drawing.Point(16, 131);
+            this.label5.Location = new System.Drawing.Point(16, 138);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(115, 19);
             this.label5.TabIndex = 30;
             this.label5.Text = "Total Void Sales";
             // 
-            // textBox9
+            // txttotvoidsalethismnth
             // 
-            this.textBox9.Font = new System.Drawing.Font("Palatino Linotype", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(178, 127);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(106, 22);
-            this.textBox9.TabIndex = 29;
+            this.txttotvoidsalethismnth.Font = new System.Drawing.Font("Palatino Linotype", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txttotvoidsalethismnth.Location = new System.Drawing.Point(178, 136);
+            this.txttotvoidsalethismnth.Margin = new System.Windows.Forms.Padding(4);
+            this.txttotvoidsalethismnth.Name = "txttotvoidsalethismnth";
+            this.txttotvoidsalethismnth.Size = new System.Drawing.Size(106, 22);
+            this.txttotvoidsalethismnth.TabIndex = 29;
             // 
-            // textBox6
+            // txttotacclastmnth
             // 
-            this.textBox6.Font = new System.Drawing.Font("Palatino Linotype", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(287, 106);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(106, 22);
-            this.textBox6.TabIndex = 28;
+            this.txttotacclastmnth.Font = new System.Drawing.Font("Palatino Linotype", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txttotacclastmnth.Location = new System.Drawing.Point(287, 113);
+            this.txttotacclastmnth.Margin = new System.Windows.Forms.Padding(4);
+            this.txttotacclastmnth.Name = "txttotacclastmnth";
+            this.txttotacclastmnth.Size = new System.Drawing.Size(106, 22);
+            this.txttotacclastmnth.TabIndex = 28;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label4.Location = new System.Drawing.Point(16, 110);
+            this.label4.Location = new System.Drawing.Point(16, 114);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(142, 19);
             this.label4.TabIndex = 27;
             this.label4.Text = "Total Accounts Sales";
             // 
-            // textBox7
+            // txttotaccthismnth
             // 
-            this.textBox7.Font = new System.Drawing.Font("Palatino Linotype", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(178, 107);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(106, 22);
-            this.textBox7.TabIndex = 26;
+            this.txttotaccthismnth.Font = new System.Drawing.Font("Palatino Linotype", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txttotaccthismnth.Location = new System.Drawing.Point(178, 113);
+            this.txttotaccthismnth.Margin = new System.Windows.Forms.Padding(4);
+            this.txttotaccthismnth.Name = "txttotaccthismnth";
+            this.txttotaccthismnth.Size = new System.Drawing.Size(106, 22);
+            this.txttotaccthismnth.TabIndex = 26;
             // 
-            // textBox4
+            // txttotcrdlastmnth
             // 
-            this.textBox4.Font = new System.Drawing.Font("Palatino Linotype", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(287, 85);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(106, 22);
-            this.textBox4.TabIndex = 25;
+            this.txttotcrdlastmnth.Font = new System.Drawing.Font("Palatino Linotype", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txttotcrdlastmnth.Location = new System.Drawing.Point(287, 90);
+            this.txttotcrdlastmnth.Margin = new System.Windows.Forms.Padding(4);
+            this.txttotcrdlastmnth.Name = "txttotcrdlastmnth";
+            this.txttotcrdlastmnth.Size = new System.Drawing.Size(106, 22);
+            this.txttotcrdlastmnth.TabIndex = 25;
             // 
             // label2
             // 
@@ -2100,23 +2098,23 @@
             this.label2.TabIndex = 24;
             this.label2.Text = "Total Card Sales";
             // 
-            // textBox5
+            // txttotcrdthismnth
             // 
-            this.textBox5.Font = new System.Drawing.Font("Palatino Linotype", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(178, 86);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(106, 22);
-            this.textBox5.TabIndex = 23;
+            this.txttotcrdthismnth.Font = new System.Drawing.Font("Palatino Linotype", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txttotcrdthismnth.Location = new System.Drawing.Point(178, 90);
+            this.txttotcrdthismnth.Margin = new System.Windows.Forms.Padding(4);
+            this.txttotcrdthismnth.Name = "txttotcrdthismnth";
+            this.txttotcrdthismnth.Size = new System.Drawing.Size(106, 22);
+            this.txttotcrdthismnth.TabIndex = 23;
             // 
-            // textBox2
+            // txttotalcshlastmnth
             // 
-            this.textBox2.Font = new System.Drawing.Font("Palatino Linotype", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(287, 64);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(106, 22);
-            this.textBox2.TabIndex = 22;
+            this.txttotalcshlastmnth.Font = new System.Drawing.Font("Palatino Linotype", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txttotalcshlastmnth.Location = new System.Drawing.Point(287, 67);
+            this.txttotalcshlastmnth.Margin = new System.Windows.Forms.Padding(4);
+            this.txttotalcshlastmnth.Name = "txttotalcshlastmnth";
+            this.txttotalcshlastmnth.Size = new System.Drawing.Size(106, 22);
+            this.txttotalcshlastmnth.TabIndex = 22;
             // 
             // label1
             // 
@@ -2130,23 +2128,23 @@
             this.label1.TabIndex = 21;
             this.label1.Text = "Total Cash Sales";
             // 
-            // textBox3
+            // txttotalcshthismnth
             // 
-            this.textBox3.Font = new System.Drawing.Font("Palatino Linotype", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(178, 65);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(106, 22);
-            this.textBox3.TabIndex = 20;
+            this.txttotalcshthismnth.Font = new System.Drawing.Font("Palatino Linotype", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txttotalcshthismnth.Location = new System.Drawing.Point(178, 67);
+            this.txttotalcshthismnth.Margin = new System.Windows.Forms.Padding(4);
+            this.txttotalcshthismnth.Name = "txttotalcshthismnth";
+            this.txttotalcshthismnth.Size = new System.Drawing.Size(106, 22);
+            this.txttotalcshthismnth.TabIndex = 20;
             // 
-            // textBox1
+            // txtlastmonth
             // 
-            this.textBox1.Font = new System.Drawing.Font("Palatino Linotype", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(287, 43);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(106, 22);
-            this.textBox1.TabIndex = 19;
+            this.txtlastmonth.Font = new System.Drawing.Font("Palatino Linotype", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtlastmonth.Location = new System.Drawing.Point(287, 43);
+            this.txtlastmonth.Margin = new System.Windows.Forms.Padding(4);
+            this.txtlastmonth.Name = "txtlastmonth";
+            this.txtlastmonth.Size = new System.Drawing.Size(106, 22);
+            this.txtlastmonth.TabIndex = 19;
             // 
             // lblBarcode
             // 
@@ -2160,29 +2158,43 @@
             this.lblBarcode.TabIndex = 18;
             this.lblBarcode.Text = "Month Sales";
             // 
-            // txtBarcode
+            // txtthismonth
             // 
-            this.txtBarcode.Font = new System.Drawing.Font("Palatino Linotype", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBarcode.Location = new System.Drawing.Point(178, 44);
-            this.txtBarcode.Margin = new System.Windows.Forms.Padding(4);
-            this.txtBarcode.Name = "txtBarcode";
-            this.txtBarcode.Size = new System.Drawing.Size(106, 22);
-            this.txtBarcode.TabIndex = 17;
+            this.txtthismonth.Font = new System.Drawing.Font("Palatino Linotype", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtthismonth.Location = new System.Drawing.Point(178, 44);
+            this.txtthismonth.Margin = new System.Windows.Forms.Padding(4);
+            this.txtthismonth.Name = "txtthismonth";
+            this.txtthismonth.Size = new System.Drawing.Size(106, 22);
+            this.txtthismonth.TabIndex = 17;
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.lblday7);
             this.groupBox3.Controls.Add(this.linkLabel2);
+            this.groupBox3.Controls.Add(this.txtday7);
             this.groupBox3.Controls.Add(this.linkLabel1);
+            this.groupBox3.Controls.Add(this.lblday6);
             this.groupBox3.Controls.Add(this.label8);
+            this.groupBox3.Controls.Add(this.lblday5);
             this.groupBox3.Controls.Add(this.label9);
+            this.groupBox3.Controls.Add(this.txtday6);
             this.groupBox3.Controls.Add(this.textBox10);
+            this.groupBox3.Controls.Add(this.txtday5);
             this.groupBox3.Controls.Add(this.label10);
+            this.groupBox3.Controls.Add(this.lblday4);
             this.groupBox3.Controls.Add(this.textBox11);
+            this.groupBox3.Controls.Add(this.lblday3);
             this.groupBox3.Controls.Add(this.textBox12);
+            this.groupBox3.Controls.Add(this.txtday4);
             this.groupBox3.Controls.Add(this.label11);
+            this.groupBox3.Controls.Add(this.txtday3);
             this.groupBox3.Controls.Add(this.textBox13);
+            this.groupBox3.Controls.Add(this.lblday2);
             this.groupBox3.Controls.Add(this.textBox14);
+            this.groupBox3.Controls.Add(this.lblday1);
+            this.groupBox3.Controls.Add(this.txtday2);
             this.groupBox3.Controls.Add(this.label12);
+            this.groupBox3.Controls.Add(this.txtday1);
             this.groupBox3.Controls.Add(this.textBox15);
             this.groupBox3.Controls.Add(this.textBox16);
             this.groupBox3.Controls.Add(this.label13);
@@ -2190,32 +2202,67 @@
             this.groupBox3.Controls.Add(this.textBox18);
             this.groupBox3.Controls.Add(this.label14);
             this.groupBox3.Controls.Add(this.textBox19);
-            this.groupBox3.Location = new System.Drawing.Point(696, 384);
+            this.groupBox3.Location = new System.Drawing.Point(696, 362);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(578, 182);
+            this.groupBox3.Size = new System.Drawing.Size(578, 301);
             this.groupBox3.TabIndex = 209;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Weekly Sales Summery";
             // 
+            // lblday7
+            // 
+            this.lblday7.AutoSize = true;
+            this.lblday7.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblday7.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblday7.Location = new System.Drawing.Point(441, 190);
+            this.lblday7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblday7.Name = "lblday7";
+            this.lblday7.Size = new System.Drawing.Size(40, 17);
+            this.lblday7.TabIndex = 64;
+            this.lblday7.Text = "Day 7";
+            // 
             // linkLabel2
             // 
             this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(397, 136);
+            this.linkLabel2.Location = new System.Drawing.Point(397, 146);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(100, 16);
             this.linkLabel2.TabIndex = 52;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "Last 7 days Sales";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
+            // 
+            // txtday7
+            // 
+            this.txtday7.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtday7.Location = new System.Drawing.Point(439, 210);
+            this.txtday7.Margin = new System.Windows.Forms.Padding(4);
+            this.txtday7.Name = "txtday7";
+            this.txtday7.Size = new System.Drawing.Size(70, 22);
+            this.txtday7.TabIndex = 63;
             // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(396, 117);
+            this.linkLabel1.Location = new System.Drawing.Point(396, 127);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(87, 16);
             this.linkLabel1.TabIndex = 51;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Today Hr Sales";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // lblday6
+            // 
+            this.lblday6.AutoSize = true;
+            this.lblday6.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblday6.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblday6.Location = new System.Drawing.Point(370, 190);
+            this.lblday6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblday6.Name = "lblday6";
+            this.lblday6.Size = new System.Drawing.Size(40, 17);
+            this.lblday6.TabIndex = 62;
+            this.lblday6.Text = "Day 6";
             // 
             // label8
             // 
@@ -2229,6 +2276,18 @@
             this.label8.TabIndex = 50;
             this.label8.Text = "Last Month";
             // 
+            // lblday5
+            // 
+            this.lblday5.AutoSize = true;
+            this.lblday5.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblday5.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblday5.Location = new System.Drawing.Point(297, 190);
+            this.lblday5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblday5.Name = "lblday5";
+            this.lblday5.Size = new System.Drawing.Size(40, 17);
+            this.lblday5.TabIndex = 61;
+            this.lblday5.Text = "Day 5";
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -2241,91 +2300,193 @@
             this.label9.TabIndex = 49;
             this.label9.Text = "This Week";
             // 
+            // txtday6
+            // 
+            this.txtday6.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtday6.Location = new System.Drawing.Point(368, 210);
+            this.txtday6.Margin = new System.Windows.Forms.Padding(4);
+            this.txtday6.Name = "txtday6";
+            this.txtday6.Size = new System.Drawing.Size(70, 22);
+            this.txtday6.TabIndex = 60;
+            // 
             // textBox10
             // 
             this.textBox10.Font = new System.Drawing.Font("Palatino Linotype", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.Location = new System.Drawing.Point(287, 133);
+            this.textBox10.Location = new System.Drawing.Point(287, 142);
             this.textBox10.Margin = new System.Windows.Forms.Padding(4);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(106, 22);
             this.textBox10.TabIndex = 48;
+            // 
+            // txtday5
+            // 
+            this.txtday5.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtday5.Location = new System.Drawing.Point(297, 210);
+            this.txtday5.Margin = new System.Windows.Forms.Padding(4);
+            this.txtday5.Name = "txtday5";
+            this.txtday5.Size = new System.Drawing.Size(70, 22);
+            this.txtday5.TabIndex = 59;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label10.Location = new System.Drawing.Point(16, 138);
+            this.label10.Location = new System.Drawing.Point(16, 147);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(115, 19);
             this.label10.TabIndex = 47;
             this.label10.Text = "Total Void Sales";
             // 
+            // lblday4
+            // 
+            this.lblday4.AutoSize = true;
+            this.lblday4.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblday4.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblday4.Location = new System.Drawing.Point(227, 190);
+            this.lblday4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblday4.Name = "lblday4";
+            this.lblday4.Size = new System.Drawing.Size(40, 17);
+            this.lblday4.TabIndex = 58;
+            this.lblday4.Text = "Day 4";
+            // 
             // textBox11
             // 
             this.textBox11.Font = new System.Drawing.Font("Palatino Linotype", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.Location = new System.Drawing.Point(178, 134);
+            this.textBox11.Location = new System.Drawing.Point(178, 143);
             this.textBox11.Margin = new System.Windows.Forms.Padding(4);
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(106, 22);
             this.textBox11.TabIndex = 46;
             // 
+            // lblday3
+            // 
+            this.lblday3.AutoSize = true;
+            this.lblday3.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblday3.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblday3.Location = new System.Drawing.Point(156, 190);
+            this.lblday3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblday3.Name = "lblday3";
+            this.lblday3.Size = new System.Drawing.Size(40, 17);
+            this.lblday3.TabIndex = 57;
+            this.lblday3.Text = "Day 3";
+            // 
             // textBox12
             // 
             this.textBox12.Font = new System.Drawing.Font("Palatino Linotype", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox12.Location = new System.Drawing.Point(287, 113);
+            this.textBox12.Location = new System.Drawing.Point(287, 119);
             this.textBox12.Margin = new System.Windows.Forms.Padding(4);
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(106, 22);
             this.textBox12.TabIndex = 45;
+            // 
+            // txtday4
+            // 
+            this.txtday4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtday4.Location = new System.Drawing.Point(226, 210);
+            this.txtday4.Margin = new System.Windows.Forms.Padding(4);
+            this.txtday4.Name = "txtday4";
+            this.txtday4.Size = new System.Drawing.Size(70, 22);
+            this.txtday4.TabIndex = 56;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label11.Location = new System.Drawing.Point(16, 117);
+            this.label11.Location = new System.Drawing.Point(16, 123);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(142, 19);
             this.label11.TabIndex = 44;
             this.label11.Text = "Total Accounts Sales";
             // 
+            // txtday3
+            // 
+            this.txtday3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtday3.Location = new System.Drawing.Point(155, 210);
+            this.txtday3.Margin = new System.Windows.Forms.Padding(4);
+            this.txtday3.Name = "txtday3";
+            this.txtday3.Size = new System.Drawing.Size(70, 22);
+            this.txtday3.TabIndex = 55;
+            // 
             // textBox13
             // 
             this.textBox13.Font = new System.Drawing.Font("Palatino Linotype", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox13.Location = new System.Drawing.Point(178, 114);
+            this.textBox13.Location = new System.Drawing.Point(178, 120);
             this.textBox13.Margin = new System.Windows.Forms.Padding(4);
             this.textBox13.Name = "textBox13";
             this.textBox13.Size = new System.Drawing.Size(106, 22);
             this.textBox13.TabIndex = 43;
             // 
+            // lblday2
+            // 
+            this.lblday2.AutoSize = true;
+            this.lblday2.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblday2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblday2.Location = new System.Drawing.Point(86, 190);
+            this.lblday2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblday2.Name = "lblday2";
+            this.lblday2.Size = new System.Drawing.Size(40, 17);
+            this.lblday2.TabIndex = 54;
+            this.lblday2.Text = "Day 2";
+            // 
             // textBox14
             // 
             this.textBox14.Font = new System.Drawing.Font("Palatino Linotype", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox14.Location = new System.Drawing.Point(287, 92);
+            this.textBox14.Location = new System.Drawing.Point(287, 96);
             this.textBox14.Margin = new System.Windows.Forms.Padding(4);
             this.textBox14.Name = "textBox14";
             this.textBox14.Size = new System.Drawing.Size(106, 22);
             this.textBox14.TabIndex = 42;
+            // 
+            // lblday1
+            // 
+            this.lblday1.AutoSize = true;
+            this.lblday1.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblday1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblday1.Location = new System.Drawing.Point(16, 189);
+            this.lblday1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblday1.Name = "lblday1";
+            this.lblday1.Size = new System.Drawing.Size(40, 17);
+            this.lblday1.TabIndex = 53;
+            this.lblday1.Text = "Day 1";
+            // 
+            // txtday2
+            // 
+            this.txtday2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtday2.Location = new System.Drawing.Point(84, 210);
+            this.txtday2.Margin = new System.Windows.Forms.Padding(4);
+            this.txtday2.Name = "txtday2";
+            this.txtday2.Size = new System.Drawing.Size(70, 22);
+            this.txtday2.TabIndex = 52;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label12.Location = new System.Drawing.Point(16, 97);
+            this.label12.Location = new System.Drawing.Point(16, 100);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(115, 19);
             this.label12.TabIndex = 41;
             this.label12.Text = "Total Card Sales";
             // 
+            // txtday1
+            // 
+            this.txtday1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtday1.Location = new System.Drawing.Point(13, 210);
+            this.txtday1.Margin = new System.Windows.Forms.Padding(4);
+            this.txtday1.Name = "txtday1";
+            this.txtday1.Size = new System.Drawing.Size(70, 22);
+            this.txtday1.TabIndex = 51;
+            // 
             // textBox15
             // 
             this.textBox15.Font = new System.Drawing.Font("Palatino Linotype", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox15.Location = new System.Drawing.Point(178, 93);
+            this.textBox15.Location = new System.Drawing.Point(178, 97);
             this.textBox15.Margin = new System.Windows.Forms.Padding(4);
             this.textBox15.Name = "textBox15";
             this.textBox15.Size = new System.Drawing.Size(106, 22);
@@ -2334,7 +2495,7 @@
             // textBox16
             // 
             this.textBox16.Font = new System.Drawing.Font("Palatino Linotype", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox16.Location = new System.Drawing.Point(287, 71);
+            this.textBox16.Location = new System.Drawing.Point(287, 73);
             this.textBox16.Margin = new System.Windows.Forms.Padding(4);
             this.textBox16.Name = "textBox16";
             this.textBox16.Size = new System.Drawing.Size(106, 22);
@@ -2345,7 +2506,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label13.Location = new System.Drawing.Point(17, 73);
+            this.label13.Location = new System.Drawing.Point(17, 78);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(116, 19);
@@ -2355,7 +2516,7 @@
             // textBox17
             // 
             this.textBox17.Font = new System.Drawing.Font("Palatino Linotype", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox17.Location = new System.Drawing.Point(178, 72);
+            this.textBox17.Location = new System.Drawing.Point(178, 74);
             this.textBox17.Margin = new System.Windows.Forms.Padding(4);
             this.textBox17.Name = "textBox17";
             this.textBox17.Size = new System.Drawing.Size(106, 22);
@@ -2391,183 +2552,12 @@
             this.textBox19.Size = new System.Drawing.Size(106, 22);
             this.textBox19.TabIndex = 34;
             // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.label21);
-            this.groupBox4.Controls.Add(this.textBox26);
-            this.groupBox4.Controls.Add(this.label19);
-            this.groupBox4.Controls.Add(this.label20);
-            this.groupBox4.Controls.Add(this.textBox24);
-            this.groupBox4.Controls.Add(this.textBox25);
-            this.groupBox4.Controls.Add(this.label17);
-            this.groupBox4.Controls.Add(this.label18);
-            this.groupBox4.Controls.Add(this.textBox22);
-            this.groupBox4.Controls.Add(this.textBox23);
-            this.groupBox4.Controls.Add(this.label15);
-            this.groupBox4.Controls.Add(this.label16);
-            this.groupBox4.Controls.Add(this.textBox20);
-            this.groupBox4.Controls.Add(this.textBox21);
-            this.groupBox4.Location = new System.Drawing.Point(696, 572);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(578, 89);
-            this.groupBox4.TabIndex = 210;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Last Week";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label21.Location = new System.Drawing.Point(419, 21);
-            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(48, 19);
-            this.label21.TabIndex = 64;
-            this.label21.Text = "Day 7";
-            // 
-            // textBox26
-            // 
-            this.textBox26.Font = new System.Drawing.Font("Palatino Linotype", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox26.Location = new System.Drawing.Point(418, 41);
-            this.textBox26.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox26.Name = "textBox26";
-            this.textBox26.Size = new System.Drawing.Size(70, 22);
-            this.textBox26.TabIndex = 63;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label19.Location = new System.Drawing.Point(349, 21);
-            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(48, 19);
-            this.label19.TabIndex = 62;
-            this.label19.Text = "Day 6";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label20.Location = new System.Drawing.Point(280, 21);
-            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(48, 19);
-            this.label20.TabIndex = 61;
-            this.label20.Text = "Day 5";
-            // 
-            // textBox24
-            // 
-            this.textBox24.Font = new System.Drawing.Font("Palatino Linotype", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox24.Location = new System.Drawing.Point(348, 41);
-            this.textBox24.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(70, 22);
-            this.textBox24.TabIndex = 60;
-            // 
-            // textBox25
-            // 
-            this.textBox25.Font = new System.Drawing.Font("Palatino Linotype", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox25.Location = new System.Drawing.Point(279, 41);
-            this.textBox25.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox25.Name = "textBox25";
-            this.textBox25.Size = new System.Drawing.Size(70, 22);
-            this.textBox25.TabIndex = 59;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label17.Location = new System.Drawing.Point(211, 21);
-            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(48, 19);
-            this.label17.TabIndex = 58;
-            this.label17.Text = "Day 4";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label18.Location = new System.Drawing.Point(142, 21);
-            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(48, 19);
-            this.label18.TabIndex = 57;
-            this.label18.Text = "Day 3";
-            // 
-            // textBox22
-            // 
-            this.textBox22.Font = new System.Drawing.Font("Palatino Linotype", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox22.Location = new System.Drawing.Point(210, 41);
-            this.textBox22.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(70, 22);
-            this.textBox22.TabIndex = 56;
-            // 
-            // textBox23
-            // 
-            this.textBox23.Font = new System.Drawing.Font("Palatino Linotype", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox23.Location = new System.Drawing.Point(141, 41);
-            this.textBox23.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(70, 22);
-            this.textBox23.TabIndex = 55;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label15.Location = new System.Drawing.Point(73, 21);
-            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(48, 19);
-            this.label15.TabIndex = 54;
-            this.label15.Text = "Day 2";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label16.Location = new System.Drawing.Point(4, 21);
-            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(48, 19);
-            this.label16.TabIndex = 53;
-            this.label16.Text = "Day 1";
-            // 
-            // textBox20
-            // 
-            this.textBox20.Font = new System.Drawing.Font("Palatino Linotype", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox20.Location = new System.Drawing.Point(72, 41);
-            this.textBox20.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(70, 22);
-            this.textBox20.TabIndex = 52;
-            // 
-            // textBox21
-            // 
-            this.textBox21.Font = new System.Drawing.Font("Palatino Linotype", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox21.Location = new System.Drawing.Point(3, 41);
-            this.textBox21.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(70, 22);
-            this.textBox21.TabIndex = 51;
-            // 
             // FNewMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PowderBlue;
             this.ClientSize = new System.Drawing.Size(1302, 733);
-            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnWareHouse);
@@ -2630,8 +2620,6 @@
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2781,21 +2769,21 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txttotvoidsalelastmnth;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txttotvoidsalethismnth;
+        private System.Windows.Forms.TextBox txttotacclastmnth;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txttotaccthismnth;
+        private System.Windows.Forms.TextBox txttotcrdlastmnth;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txttotcrdthismnth;
+        private System.Windows.Forms.TextBox txttotalcshlastmnth;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txttotalcshthismnth;
+        private System.Windows.Forms.TextBox txtlastmonth;
         private System.Windows.Forms.Label lblBarcode;
-        private System.Windows.Forms.TextBox txtBarcode;
+        private System.Windows.Forms.TextBox txtthismonth;
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label label8;
@@ -2815,20 +2803,19 @@
         private System.Windows.Forms.TextBox textBox18;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox textBox19;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox textBox26;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox textBox24;
-        private System.Windows.Forms.TextBox textBox25;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textBox22;
-        private System.Windows.Forms.TextBox textBox23;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox20;
-        private System.Windows.Forms.TextBox textBox21;
+        private System.Windows.Forms.Label lblday7;
+        private System.Windows.Forms.TextBox txtday7;
+        private System.Windows.Forms.Label lblday6;
+        private System.Windows.Forms.Label lblday5;
+        private System.Windows.Forms.TextBox txtday6;
+        private System.Windows.Forms.TextBox txtday5;
+        private System.Windows.Forms.Label lblday4;
+        private System.Windows.Forms.Label lblday3;
+        private System.Windows.Forms.TextBox txtday4;
+        private System.Windows.Forms.TextBox txtday3;
+        private System.Windows.Forms.Label lblday2;
+        private System.Windows.Forms.Label lblday1;
+        private System.Windows.Forms.TextBox txtday2;
+        private System.Windows.Forms.TextBox txtday1;
     }
 }

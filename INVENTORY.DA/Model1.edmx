@@ -492,6 +492,8 @@
           <Property Name="RetailPrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="quickmanu" Type="bit" />
           <Property Name="labelprint" Type="bit" />
+          <Property Name="branchid" Type="int" />
+          <Property Name="CreateDate" Type="datetime" Nullable="false" />
         </EntityType>
         <EntityType Name="ReturnDetails">
           <Key>
@@ -554,6 +556,16 @@
           <Property Name="ModifiedBy" Type="int" />
           <Property Name="ModifiedDate" Type="datetime" />
         </EntityType>
+        <EntityType Name="Shift">
+          <Key>
+            <PropertyRef Name="ShiftId" />
+          </Key>
+          <Property Name="ShiftId" Type="int" Nullable="false" />
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="StartDate" Type="datetime" Nullable="false" />
+          <Property Name="EndDate" Type="datetime" />
+          <Property Name="branchid" Type="int" Nullable="false" />
+        </EntityType>
         <EntityType Name="SMSFormates">
           <Key>
             <PropertyRef Name="SMSFormateID" />
@@ -615,6 +627,7 @@
           <Property Name="IGSTAmt" Type="decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="GodownID" Type="int" />
           <Property Name="TypeID" Type="int" Nullable="false" />
+          <Property Name="branchid" Type="int" />
         </EntityType>
         <EntityType Name="SOrders">
           <Key>
@@ -654,6 +667,9 @@
           <Property Name="DepositChargePercent" Type="decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="CashPaidAmount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="CardTypeID" Type="int" />
+          <Property Name="branchid" Type="int" />
+          <Property Name="ShiftEndStatus" Type="bit" Nullable="false" />
+          <Property Name="shiftid" Type="int" />
         </EntityType>
         <EntityType Name="StockDetails">
           <Key>
@@ -708,6 +724,22 @@
           <Property Name="TotalDue" Type="decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="OpeningDue" Type="decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="CreateDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="SVoid">
+          <Key>
+            <PropertyRef Name="SVoidId" />
+          </Key>
+          <Property Name="SVoidId" Type="int" Nullable="false" />
+          <Property Name="ProductId" Type="int" Nullable="false" />
+          <Property Name="TypeId" Type="int" Nullable="false" />
+          <Property Name="Qty" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="Amount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="VoidTypeId" Type="int" Nullable="false" />
+          <Property Name="CreatedBy" Type="int" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="ShiftEndStatus" Type="bit" Nullable="false" />
+          <Property Name="branchid" Type="int" Nullable="false" />
+          <Property Name="shiftid" Type="int" />
         </EntityType>
         <EntityType Name="SystemInformations">
           <Key>
@@ -1525,6 +1557,7 @@ warning 6002: The table/view 'DEWSRMTEST.dbo.vw_SupplierLedger' does not have a 
           <EntitySet Name="Roles" EntityType="Self.Roles" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ShareInvestmentHeads" EntityType="Self.ShareInvestmentHeads" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ShareInvestments" EntityType="Self.ShareInvestments" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Shift" EntityType="Self.Shift" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SMSFormates" EntityType="Self.SMSFormates" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SMSStatuses" EntityType="Self.SMSStatuses" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SOrderDetails" EntityType="Self.SOrderDetails" Schema="dbo" store:Type="Tables" />
@@ -1532,6 +1565,7 @@ warning 6002: The table/view 'DEWSRMTEST.dbo.vw_SupplierLedger' does not have a 
           <EntitySet Name="StockDetails" EntityType="Self.StockDetails" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Stocks" EntityType="Self.Stocks" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Suppliers" EntityType="Self.Suppliers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SVoid" EntityType="Self.SVoid" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SystemInformations" EntityType="Self.SystemInformations" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UserRoles" EntityType="Self.UserRoles" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
@@ -2330,6 +2364,8 @@ warning 6002: The table/view 'DEWSRMTEST.dbo.vw_SupplierLedger' does not have a 
           <Property Name="RetailPrice" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
           <Property Name="quickmanu" Type="Boolean" />
           <Property Name="labelprint" Type="Boolean" />
+          <Property Name="branchid" Type="Int32" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
         </EntityType>
         <EntityType Name="ReturnDetail">
           <Key>
@@ -2441,6 +2477,7 @@ warning 6002: The table/view 'DEWSRMTEST.dbo.vw_SupplierLedger' does not have a 
           <Property Name="GodownID" Type="Int32" />
           <NavigationProperty Name="Godown" Relationship="DEWSRMModel.FK_SOrderDetails_Godowns" FromRole="SOrderDetail" ToRole="Godown" />
           <Property Name="TypeID" Type="Int32" Nullable="false" />
+          <Property Name="branchid" Type="Int32" />
         </EntityType>
         <EntityType Name="SOrder">
           <Key>
@@ -2483,6 +2520,9 @@ warning 6002: The table/view 'DEWSRMTEST.dbo.vw_SupplierLedger' does not have a 
           <NavigationProperty Name="User" Relationship="Self.FK_SOrders_Users" FromRole="SOrders" ToRole="Users" />
           <Property Name="CashPaidAmount" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
           <Property Name="CardTypeID" Type="Int32" />
+          <Property Name="branchid" Type="Int32" />
+          <Property Name="ShiftEndStatus" Type="Boolean" Nullable="false" />
+          <Property Name="shiftid" Type="Int32" />
         </EntityType>
         <EntityType Name="StockDetail">
           <Key>
@@ -3532,6 +3572,8 @@ warning 6002: The table/view 'DEWSRMTEST.dbo.vw_SupplierLedger' does not have a 
             <End Role="Godown" EntitySet="Godowns" />
             <End Role="Stock" EntitySet="Stocks" />
           </AssociationSet>
+          <EntitySet Name="SVoids" EntityType="DEWSRMModel.SVoid" />
+          <EntitySet Name="Shifts" EntityType="DEWSRMModel.Shift" />
         </EntityContainer>
         <EntityType Name="CreditSalesDetail">
           <Key>
@@ -3697,6 +3739,32 @@ warning 6002: The table/view 'DEWSRMTEST.dbo.vw_SupplierLedger' does not have a 
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="SVoid">
+          <Key>
+            <PropertyRef Name="SVoidId" />
+          </Key>
+          <Property Name="SVoidId" Type="Int32" Nullable="false" />
+          <Property Name="ProductId" Type="Int32" Nullable="false" />
+          <Property Name="TypeId" Type="Int32" Nullable="false" />
+          <Property Name="Qty" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="Amount" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="VoidTypeId" Type="Int32" Nullable="false" />
+          <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ShiftEndStatus" Type="Boolean" Nullable="false" />
+          <Property Name="branchid" Type="Int32" Nullable="false" />
+          <Property Name="shiftid" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Shift">
+          <Key>
+            <PropertyRef Name="ShiftId" />
+          </Key>
+          <Property Name="ShiftId" Type="Int32" Nullable="false" />
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <Property Name="StartDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="EndDate" Type="DateTime" Precision="3" />
+          <Property Name="branchid" Type="Int32" Nullable="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -4149,6 +4217,8 @@ warning 6002: The table/view 'DEWSRMTEST.dbo.vw_SupplierLedger' does not have a 
           <EntitySetMapping Name="Products">
             <EntityTypeMapping TypeName="DEWSRMModel.Product">
               <MappingFragment StoreEntitySet="Products">
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="branchid" ColumnName="branchid" />
                 <ScalarProperty Name="labelprint" ColumnName="labelprint" />
                 <ScalarProperty Name="quickmanu" ColumnName="quickmanu" />
                 <ScalarProperty Name="RetailPrice" ColumnName="RetailPrice" />
@@ -4253,6 +4323,7 @@ warning 6002: The table/view 'DEWSRMTEST.dbo.vw_SupplierLedger' does not have a 
           <EntitySetMapping Name="SOrderDetails">
             <EntityTypeMapping TypeName="DEWSRMModel.SOrderDetail">
               <MappingFragment StoreEntitySet="SOrderDetails">
+                <ScalarProperty Name="branchid" ColumnName="branchid" />
                 <ScalarProperty Name="TypeID" ColumnName="TypeID" />
                 <ScalarProperty Name="GodownID" ColumnName="GodownID" />
                 <ScalarProperty Name="IGSTAmt" ColumnName="IGSTAmt" />
@@ -4290,6 +4361,9 @@ warning 6002: The table/view 'DEWSRMTEST.dbo.vw_SupplierLedger' does not have a 
           <EntitySetMapping Name="SOrders">
             <EntityTypeMapping TypeName="DEWSRMModel.SOrder">
               <MappingFragment StoreEntitySet="SOrders">
+                <ScalarProperty Name="shiftid" ColumnName="shiftid" />
+                <ScalarProperty Name="ShiftEndStatus" ColumnName="ShiftEndStatus" />
+                <ScalarProperty Name="branchid" ColumnName="branchid" />
                 <ScalarProperty Name="CardTypeID" ColumnName="CardTypeID" />
                 <ScalarProperty Name="CashPaidAmount" ColumnName="CashPaidAmount" />
                 <ScalarProperty Name="SOrderID" ColumnName="SOrderID" />
@@ -4551,6 +4625,34 @@ warning 6002: The table/view 'DEWSRMTEST.dbo.vw_SupplierLedger' does not have a 
                 <ScalarProperty Name="GodownName" ColumnName="GodownName" />
                 <ScalarProperty Name="GodownCode" ColumnName="GodownCode" />
                 <ScalarProperty Name="GodownID" ColumnName="GodownID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SVoids">
+            <EntityTypeMapping TypeName="DEWSRMModel.SVoid">
+              <MappingFragment StoreEntitySet="SVoid">
+                <ScalarProperty Name="shiftid" ColumnName="shiftid" />
+                <ScalarProperty Name="branchid" ColumnName="branchid" />
+                <ScalarProperty Name="ShiftEndStatus" ColumnName="ShiftEndStatus" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="VoidTypeId" ColumnName="VoidTypeId" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="Qty" ColumnName="Qty" />
+                <ScalarProperty Name="TypeId" ColumnName="TypeId" />
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+                <ScalarProperty Name="SVoidId" ColumnName="SVoidId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Shifts">
+            <EntityTypeMapping TypeName="DEWSRMModel.Shift">
+              <MappingFragment StoreEntitySet="Shift">
+                <ScalarProperty Name="branchid" ColumnName="branchid" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="ShiftId" ColumnName="ShiftId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

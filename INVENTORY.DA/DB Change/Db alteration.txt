@@ -1,9 +1,55 @@
-alter table[dbo].[Products] add labelprint bit
+alter table[dbo].[SOrders] add ShiftEndStatus bit
 go
-alter table[dbo].[Products] drop column [Quickmenu]
+update [dbo].[SOrders] set ShiftEndStatus=0
 go
-alter table[dbo].[Products] add branchid int
+alter table[dbo].[SOrders] alter column ShiftEndStatus bit not null
 go
-alter table[dbo].[SOrders] add branchid int
+alter table [dbo].[Products] add [CreateDate] datetime
 go
-alter table[dbo].[SOrderDetails] add branchid int
+update  [dbo].[Products] set [CreateDate]=GETDATE()
+go
+alter table [dbo].[Products] alter column [CreateDate] datetime not null
+go
+update [dbo].[Products] set BoxQty=convert(int,BoxQty)
+go
+GO
+
+CREATE TABLE [dbo].[SVoid](
+	[SVoidId] [int] NOT NULL,
+	[ProductId] [int] NOT NULL,
+	[TypeId] [int] NOT NULL,
+	[Qty] [decimal](18, 2) NOT NULL,
+	[Amount] [decimal](18, 2) NOT NULL,
+	[VoidTypeId] [int] NOT NULL,
+	[CreatedBy] [int] NOT NULL,
+	[CreatedDate] [datetime] NOT NULL,
+	[ShiftEndStatus] [bit] NOT NULL,
+	[branchid] [int] NOT NULL,
+ CONSTRAINT [PK_SVoid] PRIMARY KEY CLUSTERED 
+(
+	[SVoidId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Shift](
+	[ShiftId] [int] NOT NULL,
+	[UserId] [int] NOT NULL,
+	[StartDate] [datetime] NOT NULL,
+	[EndDate] [datetime] NULL,
+	[branchid] [int] NOT NULL,
+ CONSTRAINT [PK_Shift] PRIMARY KEY CLUSTERED 
+(
+	[ShiftId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+alter table [dbo].[SOrders] add shiftid int
+alter table [dbo].[SVoid] add shiftid int
+go

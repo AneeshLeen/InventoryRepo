@@ -60,6 +60,8 @@ namespace INVENTORY.DA
         public decimal RetailPrice { get; set; }
         public Nullable<bool> quickmanu { get; set; }
         public Nullable<bool> labelprint { get; set; }
+        public Nullable<int> branchid { get; set; }
+        public System.DateTime CreateDate { get; set; }
     
         public virtual Category Category { get; set; }
         public virtual Company Company { get; set; }

@@ -74,7 +74,8 @@ namespace INVENTORY.UI
 
                             if (myServer.Trim().ToUpper() == appMyServer.Trim().ToUpper())
                             {
-                                
+
+                                SaveShift(db, oUser.UserID);
 
                                 if (oUser.UserType == (int)EnumUserType.Administrator)
                                 {
@@ -125,6 +126,22 @@ namespace INVENTORY.UI
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void SaveShift(DEWSRMEntities db, int userID)
+        {
+            var ShiftDet = db.Shifts.Where(p => p.UserId == userID && p.EndDate.HasValue == false);
+            if(ShiftDet.Count()==0)
+            {
+                Shift objShift = new Shift();
+                objShift.ShiftId = db.Shifts.Count() > 0 ? db.Shifts.Max(obj => obj.ShiftId) + 1 : 1;
+                objShift.StartDate = DateTime.Now;
+                objShift.branchid = 0;
+                objShift.UserId = userID;
+                db.Shifts.Add(objShift);
+                db.SaveChanges();
+            }
+            Global.ShiftId = ShiftDet.FirstOrDefault().ShiftId;
         }
 
         private void btnCLose_Click(object sender, EventArgs e)

@@ -145,8 +145,7 @@ namespace INVENTORY.UI
         {
             DataTable DataTabletemp = dgupdatproducts.DataSource as DataTable;
             foreach (DataRow r in DataTabletemp.Rows)
-                r[0] = false;
-
+                r[0] = true;
             dgupdatproducts.EndEdit();
         }
         
@@ -155,8 +154,7 @@ namespace INVENTORY.UI
         {
             DataTable DataTabletemp = dgupdatproducts.DataSource as DataTable;
             foreach (DataRow r in DataTabletemp.Rows)
-                r[0] = true;
-
+                r[0] = false;
             dgupdatproducts.EndEdit();
         }
     }

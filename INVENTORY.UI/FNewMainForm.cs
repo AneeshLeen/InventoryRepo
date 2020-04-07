@@ -34,6 +34,8 @@ namespace INVENTORY.UI
         public FNewMainForm()
         {
             InitializeComponent();
+
+            SevendaysSale();
         }
 
         private void cToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1984,5 +1986,46 @@ namespace INVENTORY.UI
             frmlabelprint frmlabelprnt = new frmlabelprint();
             frmlabelprnt.ShowDialog();
         }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmlast7dayssale frmlast7daysale = new frmlast7dayssale();
+            frmlast7daysale.ShowDialog();
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmhourlysale frmhourlsale = new frmhourlysale();
+            frmhourlsale.ShowDialog();
+        }
+
+        void SevendaysSale()
+        {
+            DataSet ds = new DataSet();
+            string SQLServer = ConfigurationManager.AppSettings["SqlServer"];
+            SqlConnection connection = new SqlConnection(@"Data Source=" + SQLServer + ";Initial Catalog=DEWSRMTEST;Persist Security Info=True;Integrated Security=true");
+            SqlCommand command = new SqlCommand("select sum(grandtotal+ VATAmount) as total, datename(WEEKDAY, ( dateadd(DAY,0, datediff(day,0, CreateDate)))) as created from [dbo].[SOrders] where CreateDate BETWEEN GETDATE()-7 AND GETDATE() group by dateadd(DAY,0, datediff(day,0, CreateDate))", connection);
+            SqlDataAdapter adp = new SqlDataAdapter(command);
+            adp.Fill(ds);
+
+
+            lblday1.Text = ds.Tables[0].Rows[0].ItemArray[1].ToString();
+            txtday1.Text = ds.Tables[0].Rows[0].ItemArray[0].ToString();
+            lblday2.Text = ds.Tables[0].Rows[1].ItemArray[1].ToString();
+            txtday2.Text = ds.Tables[0].Rows[1].ItemArray[0].ToString();
+            lblday3.Text = ds.Tables[0].Rows[2].ItemArray[1].ToString();
+            txtday3.Text = ds.Tables[0].Rows[2].ItemArray[0].ToString();
+            lblday4.Text = ds.Tables[0].Rows[3].ItemArray[1].ToString();
+            txtday4.Text = ds.Tables[0].Rows[3].ItemArray[0].ToString();
+            lblday5.Text = ds.Tables[0].Rows[4].ItemArray[1].ToString();
+            txtday5.Text = ds.Tables[0].Rows[4].ItemArray[0].ToString();
+            lblday6.Text = ds.Tables[0].Rows[5].ItemArray[1].ToString();
+            txtday6.Text = ds.Tables[0].Rows[5].ItemArray[0].ToString();
+            //lblday7.Text = ds.Tables[0].Rows[6].ItemArray[1].ToString();
+            //txtday7.Text = ds.Tables[0].Rows[6].ItemArray[0].ToString();
+
+        }
+
+
     }
 }

@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="PaymentTypeId.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="clnitmno.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -127,7 +130,7 @@
     <value>True</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="button1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnexit.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEAAAAAAAD/2wBDAAkGBxITEBUSEhIVFhUWGBkXFRgYFxcVGBUZFhgWGhcYFRgY
         HSggGBolGxUVITEiJSkrLi4uFx8zODMsNygtLiv/2wBDAQoKCg4NDhsQEBsuJR8hKystNS4tKystKzA1
@@ -312,7 +315,7 @@
         BEHPa96Ej7UzKrAhdge3+McJ0pBgMf2Q89ZPmfowxctXteafqwwH/9k=
 </value>
   </data>
-  <data name="button2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnsave.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEAAAAAAAD/2wBDAAkGBxIQEBMSEhMWEBIXFhgVERUWFRUWGBIYFxcWGB4XFhUY
         HSggGhsnHRUVITEiJSkrLi4uFx8zODMtNygtLiv/2wBDAQoKCg4NDhoQEBstJh4mLS0tNzUrLS0tNS4t
@@ -380,7 +383,7 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAf/9k=
 </value>
   </data>
-  <data name="button3.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnprint.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAADJUExURf///5DK+WFhYUJCQhl20kKl9SQkJFJSUisrK15aViQiIOj0/ojH+ZHM/ImwzyczP0Gh

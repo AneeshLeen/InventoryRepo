@@ -72,5 +72,7 @@ namespace INVENTORY.DA
         public virtual DbSet<SMSFormate> SMSFormates { get; set; }
         public virtual DbSet<SMSStatus> SMSStatuses { get; set; }
         public virtual DbSet<Godown> Godowns { get; set; }
+        public virtual DbSet<SVoid> SVoids { get; set; }
+        public virtual DbSet<Shift> Shifts { get; set; }
     }
 }
