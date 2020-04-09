@@ -126,12 +126,10 @@ namespace INVENTORY.UI.BL
             e.Graphics.DrawString("___________________________________", printFont, Brushes.Black, x, y);
             y += (lineOffset * (float)1.5);
 
-            //<<<<<<< HEAD
             printFont = new Font("Microsoft Sans Serif", 9, FontStyle.Regular, GraphicsUnit.Point);
             // for (int i = 0; i <= SetPrintData().objSalesPrintItems.Count()-1; i++)
             //=======
             for (int i = 0; i <= objSalesPrintBO.objSalesPrintItems.Count() - 1; i++)
-            //>>>>>>> f132b99356ebf57b4e09098e73689df77a90e3fb
             {
                 e.Graphics.DrawString(objSalesPrintBO.objSalesPrintItems[i].ItemName.PadRight(27) + string.Format("{0:}", Convert.ToString(objSalesPrintBO.objSalesPrintItems[i].Amount)).PadLeft(12), printFont, Brushes.Black, x, y);
                 y += (lineOffset * (float)1.1);
