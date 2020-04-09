@@ -138,6 +138,7 @@
   <ItemGroup>
     <Compile Include="BL\DiscountOptions.cs" />
     <Compile Include="BL\SalesItemBO.cs" />
+    <Compile Include="BL\PrintBO.cs" />
     <Compile Include="Control\fBankControl.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1234,7 +1235,6 @@
     <EmbeddedResource Include="Inventory\Sales and Purchase\fReturns.resx">
       <DependentUpon>fReturns.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="RDLC\InstallmentCollection.rdlc" />
     <EmbeddedResource Include="RDLC\rptBankLedger.rdlc" />
     <EmbeddedResource Include="RDLC\rptColorWise.rdlc" />

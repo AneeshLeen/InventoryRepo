@@ -57,6 +57,8 @@ namespace INVENTORY.DA
         public Nullable<int> branchid { get; set; }
         public bool ShiftEndStatus { get; set; }
         public Nullable<int> shiftid { get; set; }
+        public string MachineName { get; set; }
+        public decimal GivenCash { get; set; }
     
         public virtual Customer Customer { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

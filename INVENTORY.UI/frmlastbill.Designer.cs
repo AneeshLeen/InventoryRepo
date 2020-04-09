@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmlastbill));
             this.dgProducts = new System.Windows.Forms.DataGridView();
             this.clnSN = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -37,7 +37,7 @@
             this.clnQTY = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clnUnitPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clnTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgpayment = new System.Windows.Forms.DataGridView();
             this.clnpay = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clnamount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lbldate = new System.Windows.Forms.Label();
@@ -52,9 +52,9 @@
             this.label6 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnprint = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgProducts)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgpayment)).BeginInit();
             this.SuspendLayout();
             // 
             // dgProducts
@@ -71,14 +71,15 @@
             this.dgProducts.Location = new System.Drawing.Point(13, 13);
             this.dgProducts.Margin = new System.Windows.Forms.Padding(4);
             this.dgProducts.Name = "dgProducts";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.SlateGray;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgProducts.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.SlateGray;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgProducts.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgProducts.RowHeadersVisible = false;
             this.dgProducts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgProducts.Size = new System.Drawing.Size(321, 257);
             this.dgProducts.TabIndex = 6;
@@ -88,16 +89,19 @@
             this.clnSN.HeaderText = "SN";
             this.clnSN.Name = "clnSN";
             this.clnSN.ReadOnly = true;
+            this.clnSN.Visible = false;
             this.clnSN.Width = 45;
             // 
             // clnName
             // 
+            this.clnName.DataPropertyName = "ItemName";
             this.clnName.HeaderText = "DESCRIPTION";
             this.clnName.Name = "clnName";
             this.clnName.ReadOnly = true;
             // 
             // clnQTY
             // 
+            this.clnQTY.DataPropertyName = "Quantity";
             this.clnQTY.HeaderText = "QTY";
             this.clnQTY.Name = "clnQTY";
             this.clnQTY.ReadOnly = true;
@@ -105,6 +109,7 @@
             // 
             // clnUnitPrice
             // 
+            this.clnUnitPrice.DataPropertyName = "SRate";
             this.clnUnitPrice.HeaderText = "PRICE";
             this.clnUnitPrice.Name = "clnUnitPrice";
             this.clnUnitPrice.ReadOnly = true;
@@ -112,36 +117,40 @@
             // 
             // clnTotal
             // 
+            this.clnTotal.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.clnTotal.DataPropertyName = "Amount";
             this.clnTotal.HeaderText = "AMOUNT";
             this.clnTotal.Name = "clnTotal";
             this.clnTotal.ReadOnly = true;
-            this.clnTotal.Width = 80;
             // 
-            // dataGridView1
+            // dgpayment
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgpayment.AllowUserToAddRows = false;
+            this.dgpayment.AllowUserToDeleteRows = false;
+            this.dgpayment.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dgpayment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgpayment.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.clnpay,
             this.clnamount});
-            this.dataGridView1.Location = new System.Drawing.Point(13, 300);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SlateGray;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(320, 143);
-            this.dataGridView1.TabIndex = 7;
+            this.dgpayment.Location = new System.Drawing.Point(13, 300);
+            this.dgpayment.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.dgpayment.Name = "dgpayment";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.SlateGray;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgpayment.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgpayment.RowHeadersVisible = false;
+            this.dgpayment.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgpayment.Size = new System.Drawing.Size(320, 143);
+            this.dgpayment.TabIndex = 7;
             // 
             // clnpay
             // 
+            this.clnpay.DataPropertyName = "TypeName";
             this.clnpay.HeaderText = "Payment Method";
             this.clnpay.Name = "clnpay";
             this.clnpay.ReadOnly = true;
@@ -149,6 +158,8 @@
             // 
             // clnamount
             // 
+            this.clnamount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.clnamount.DataPropertyName = "SysBal";
             this.clnamount.HeaderText = "Amount";
             this.clnamount.Name = "clnamount";
             this.clnamount.ReadOnly = true;
@@ -157,9 +168,9 @@
             // 
             this.lbldate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbldate.ForeColor = System.Drawing.Color.Black;
-            this.lbldate.Location = new System.Drawing.Point(180, 484);
+            this.lbldate.Location = new System.Drawing.Point(103, 484);
             this.lbldate.Name = "lbldate";
-            this.lbldate.Size = new System.Drawing.Size(135, 20);
+            this.lbldate.Size = new System.Drawing.Size(212, 20);
             this.lbldate.TabIndex = 285;
             this.lbldate.Text = "0";
             this.lbldate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -286,19 +297,20 @@
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnprint
             // 
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button2.Font = new System.Drawing.Font("Palatino Linotype", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button2.Location = new System.Drawing.Point(342, 13);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(103, 68);
-            this.button2.TabIndex = 292;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnprint.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnprint.BackgroundImage")));
+            this.btnprint.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnprint.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnprint.Font = new System.Drawing.Font("Palatino Linotype", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnprint.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnprint.Location = new System.Drawing.Point(342, 13);
+            this.btnprint.Margin = new System.Windows.Forms.Padding(4);
+            this.btnprint.Name = "btnprint";
+            this.btnprint.Size = new System.Drawing.Size(103, 68);
+            this.btnprint.TabIndex = 292;
+            this.btnprint.UseVisualStyleBackColor = true;
+            this.btnprint.Click += new System.EventHandler(this.btnprint_Click);
             // 
             // frmlastbill
             // 
@@ -306,7 +318,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(458, 568);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnprint);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lblcashier);
@@ -319,12 +331,12 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblbilltotal);
             this.Controls.Add(this.label55);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgpayment);
             this.Controls.Add(this.dgProducts);
             this.Name = "frmlastbill";
             this.Text = "frmlastbill";
             ((System.ComponentModel.ISupportInitialize)(this.dgProducts)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgpayment)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -332,14 +344,7 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgProducts;
-        internal System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clnpay;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clnamount;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clnSN;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clnName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clnQTY;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clnUnitPrice;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clnTotal;
+        internal System.Windows.Forms.DataGridView dgpayment;
         internal System.Windows.Forms.Label lbldate;
         private System.Windows.Forms.Label label4;
         internal System.Windows.Forms.Label lblchange;
@@ -352,6 +357,13 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnprint;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clnSN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clnName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clnQTY;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clnUnitPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clnTotal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clnpay;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clnamount;
     }
 }
