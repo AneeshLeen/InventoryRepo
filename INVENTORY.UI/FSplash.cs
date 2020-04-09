@@ -53,6 +53,7 @@ namespace INVENTORY.UI
                 frm.Show();
                 timer1.Enabled = false;
                 this.Hide();
+                //this.Dispose();
             }
 
         }

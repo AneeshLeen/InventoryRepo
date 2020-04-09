@@ -2009,18 +2009,18 @@ namespace INVENTORY.UI
             adp.Fill(ds);
 
 
-            lblday1.Text = ds.Tables[0].Rows[0].ItemArray[1].ToString();
-            txtday1.Text = ds.Tables[0].Rows[0].ItemArray[0].ToString();
-            lblday2.Text = ds.Tables[0].Rows[1].ItemArray[1].ToString();
-            txtday2.Text = ds.Tables[0].Rows[1].ItemArray[0].ToString();
-            lblday3.Text = ds.Tables[0].Rows[2].ItemArray[1].ToString();
-            txtday3.Text = ds.Tables[0].Rows[2].ItemArray[0].ToString();
-            lblday4.Text = ds.Tables[0].Rows[3].ItemArray[1].ToString();
-            txtday4.Text = ds.Tables[0].Rows[3].ItemArray[0].ToString();
-            lblday5.Text = ds.Tables[0].Rows[4].ItemArray[1].ToString();
-            txtday5.Text = ds.Tables[0].Rows[4].ItemArray[0].ToString();
-            lblday6.Text = ds.Tables[0].Rows[5].ItemArray[1].ToString();
-            txtday6.Text = ds.Tables[0].Rows[5].ItemArray[0].ToString();
+            //lblday1.Text = ds.Tables[0].Rows[0].ItemArray[1].ToString();
+            //txtday1.Text = ds.Tables[0].Rows[0].ItemArray[0].ToString();
+            //lblday2.Text = ds.Tables[0].Rows[1].ItemArray[1].ToString();
+            //txtday2.Text = ds.Tables[0].Rows[1].ItemArray[0].ToString();
+            //lblday3.Text = ds.Tables[0].Rows[2].ItemArray[1].ToString();
+            //txtday3.Text = ds.Tables[0].Rows[2].ItemArray[0].ToString();
+            //lblday4.Text = ds.Tables[0].Rows[3].ItemArray[1].ToString();
+            //txtday4.Text = ds.Tables[0].Rows[3].ItemArray[0].ToString();
+            //lblday5.Text = ds.Tables[0].Rows[4].ItemArray[1].ToString();
+            //txtday5.Text = ds.Tables[0].Rows[4].ItemArray[0].ToString();
+            //lblday6.Text = ds.Tables[0].Rows[5].ItemArray[1].ToString();
+            //txtday6.Text = ds.Tables[0].Rows[5].ItemArray[0].ToString();
             //lblday7.Text = ds.Tables[0].Rows[6].ItemArray[1].ToString();
             //txtday7.Text = ds.Tables[0].Rows[6].ItemArray[0].ToString();
 
