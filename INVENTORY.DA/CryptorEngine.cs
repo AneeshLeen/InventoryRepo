@@ -16,6 +16,7 @@ namespace INVENTORY.DA
         /// <returns></returns>
         public static string Encrypt(string toEncrypt, bool useHashing)
         {
+
             byte[] keyArray;
             byte[] toEncryptArray = UTF8Encoding.UTF8.GetBytes(toEncrypt);
 
