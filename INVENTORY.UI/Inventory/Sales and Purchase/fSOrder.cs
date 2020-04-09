@@ -42,7 +42,7 @@ namespace INVENTORY.UI
         private decimal _PreviousFlatDicount = 0;
         decimal taxper = 0;
         bool AllowNegativestock = true;
-        
+
         frmpromo frmprmo;
 
         public fSOrder()
@@ -54,13 +54,13 @@ namespace INVENTORY.UI
             User oUser = db.Users.FirstOrDefault(o => o.UserName == Global.CurrentUser.UserName);
             if (oUser.UserType != (int)EnumUserType.Administrator)
             {
-                //frmprmo.Show();
+                frmprmo.Show();
             }
 
             RefreshPromo();
             try
             {
-              //  DevExpress.XtraGrid.GridControl grdCategorys = new DevExpress.XtraGrid.GridControl();
+                //  DevExpress.XtraGrid.GridControl grdCategorys = new DevExpress.XtraGrid.GridControl();
             }
             catch (Exception ex)
             {
@@ -293,7 +293,7 @@ namespace INVENTORY.UI
 
             _Order.Remarks = "";//txtRemarks.Text;
             _Order.CustomerID = ctlCustomer.SelectedID;
-            
+
             // _Order.TotalDue = (numTotalDueAmt.Value + _PrvCusDue);//numTotalDueAmt.Value + (numPrevDue.Value - _prevOrderdue); //  change from Motiur
             _Order.Status = (int)EnumSalesType.Sales;
             //_Order.CreatedBy = Global.CurrentUser.UserID;
@@ -482,7 +482,7 @@ namespace INVENTORY.UI
             {
                 _OrderDetail = new SOrderDetail();
             }
-            if(_OrderDetail.SOrderDetailID==0)
+            if (_OrderDetail.SOrderDetailID == 0)
             {
                 _OrderDetail.SOrderDetailID = (_Order.SOrderDetails.Count + 1) * -1;
             }
@@ -525,7 +525,7 @@ namespace INVENTORY.UI
 
             _OrderDetail.SparePartsWarrenty = txtSpareparts.Text;
             _OrderDetail.GodownID = ctlGodown.SelectedID;
-            
+
             #region commented
             //_OrderDetail.CompressorWarrenty = txtCompressor.Text;
             //_OrderDetail.MotorWarrenty = txtMotor.Text;
@@ -568,7 +568,7 @@ namespace INVENTORY.UI
 
                 decimal Tax = 0;
                 if (_OrderDetail.CGSTPerc > 0)
-                { 
+                {
                     Tax = Math.Round((_OrderDetail.SRate - _OrderDetail.UnitPrice) * _OrderDetail.Quantity, 2);
                 }
 
@@ -604,7 +604,7 @@ namespace INVENTORY.UI
                 objPromoSaleList = new List<SalesItemBO>();
 
                 List<SOrderDetail> nobarcodeSOrderDetailList = new List<SOrderDetail>();
-                _OrderDetails = _Order.SOrderDetails.OrderBy(x=>x.SOrderDetailID).ToList();
+                _OrderDetails = _Order.SOrderDetails.OrderBy(x => x.SOrderDetailID).ToList();
 
                 if (_OrderDetails.Count > 0)
                 {
@@ -1496,9 +1496,9 @@ namespace INVENTORY.UI
                     //MoneyReceipt(_Order);
 
 
-                    PrintDocument pdPrint = new PrintDocument();
+                    pdPrint = new PrintDocument();
                     pdPrint.PrintPage += new PrintPageEventHandler(pdPrint_PrintPage);
-
+                   
                     PrintDialog pd = new PrintDialog();
                     pd.Document = pdPrint;
                     try
@@ -1506,7 +1506,7 @@ namespace INVENTORY.UI
 
                         PrintPreviewDialog pp = new PrintPreviewDialog();
                         pp.Document = pdPrint;
-                        pp.ShowDialog();
+                       // pp.ShowDialog();
 
                         pdPrint.Print();
 
@@ -1539,12 +1539,81 @@ namespace INVENTORY.UI
                 RefreshValue();
 
                 LoadDefaultCutomer();
+
+                RefreshPromo();
             }
             catch (Exception EX)
             {
                 MessageBox.Show(EX.Message);
             }
+<<<<<<< HEAD
         } 
+=======
+        }
+        private SalesPrintBO SetPrintData()
+        {
+            SalesPrintBO objSalesPrintBO = new SalesPrintBO();
+            if (_Order.Adjustment > 0)
+            {
+                objSalesPrintBO.BillTotal = _Order.SOrderDetails.Sum(p => (p.SRate * p.Quantity)) - _Order.Adjustment;
+                objSalesPrintBO.TotalSavings = _Order.Adjustment;
+            }
+            else
+            {
+                objSalesPrintBO.BillTotal = _Order.SOrderDetails.Sum(p => ((p.SRate * p.Quantity) + p.CGSTAmt) - p.PPDAmount);
+                objSalesPrintBO.TotalSavings = _Order.SOrderDetails.Sum(p => p.PPDAmount);
+            }
+            objSalesPrintBO.OrderNo = _Order.SOrderID.ToString();
+            objSalesPrintBO.NetAmount = _Order.TotalAmount;
+            objSalesPrintBO.Card = _Order.CardPaidAmount;
+            objSalesPrintBO.Date = _Order.CreateDate.Value;
+            objSalesPrintBO.HST = _Order.VATAmount;
+            if (objSalesPrintBO.Card == 0)
+            {
+                decimal result;
+                if (Decimal.TryParse(txtamt.Text, out result) == true && Convert.ToDecimal(txtamt.Text) > 0)
+                {
+                    objSalesPrintBO.Cash = Convert.ToDecimal(txtamt.Text);
+                }
+                else
+                {
+                    objSalesPrintBO.Cash = _Order.CashPaidAmount;
+                }
+
+                objSalesPrintBO.Change = objSalesPrintBO.Cash - objSalesPrintBO.BillTotal;
+            }
+            objSalesPrintBO.NoOfItems = _Order.SOrderDetails.Sum(p => p.Quantity);
+
+            string Itemname = "";
+            foreach (var objitem in _Order.SOrderDetails)
+            {
+                if (objitem.TypeID == (int)EnumSalesItemType.Product)
+                {
+                    Itemname = (db.Products.FirstOrDefault(o => o.ProductID == objitem.ProductID)).ProductName;
+                }
+                else
+                {
+                    Itemname = (db.Categorys.FirstOrDefault(o => o.CategoryID == objitem.ProductID)).Description;
+                }
+
+                objSalesPrintBO.objSalesPrintItems.Add(new SalesPrintItems()
+                {
+                    ItemName = Itemname,
+                    Amount = objitem.SRate - objitem.CGSTAmt
+                }
+                );
+                objSalesPrintBO.objHSTSummary.Add(new HSTSummary()
+                {
+                    HST = objitem.CGSTPerc,
+                    Rate = objitem.CGSTAmt,
+                    Net = objitem.SRate - objitem.CGSTAmt,
+                    Total = objitem.SRate
+                });
+            }
+            return objSalesPrintBO;
+
+        }
+>>>>>>> 8e4526e445f5bdf725218e622936deb17813ddc6
         private void LoadDefaultCutomer()
         {
             if (db.Customers.Any(o => o.CustomerType == (int)EnumCustomerType.Default))
@@ -2132,9 +2201,9 @@ namespace INVENTORY.UI
             //}
         }
 
-        internal void UpdateStock(decimal Qty,int productid)
+        internal void UpdateStock(decimal Qty, int productid)
         {
-            
+
             string SQLServer = ConfigurationManager.AppSettings["SqlServer"];
 
             DataTable dtbranches = new DataTable();
@@ -2194,7 +2263,7 @@ namespace INVENTORY.UI
             }
 
             CreateOrderObject();
-            decimal amount = Convert.ToDecimal(String.Format("{0:0.00}", Convert.ToDecimal( txtamt.Text)));
+            decimal amount = Convert.ToDecimal(String.Format("{0:0.00}", Convert.ToDecimal(txtamt.Text)));
             if (!IsPayout && _Order.SOrderDetails.AsEnumerable().Any(p => p.ProductID == Convert.ToInt32(row["CategoryID"]) && p.SRate == amount && p.TypeID == (int)EnumSalesItemType.Category))
             {
                 _OrderDetail = _Order.SOrderDetails.FirstOrDefault(p => p.ProductID == Convert.ToInt32(row["CategoryID"]) && p.SRate == amount && p.TypeID == (int)EnumSalesItemType.Category);
@@ -2220,7 +2289,7 @@ namespace INVENTORY.UI
             //}
             //else
             //{
-                _OrderDetail.UnitPrice = amount * NegativeAmount;
+            _OrderDetail.UnitPrice = amount * NegativeAmount;
             //}
             _OrderDetail.SRate = amount * NegativeAmount;
             //_OrderDetail.PPDPercentage = numDPerc.Value;
@@ -2438,7 +2507,7 @@ namespace INVENTORY.UI
         }
         frmpaypop frmpop = null;
 
-        void showpaymentpop(string amt,bool IsCardPay)
+        void showpaymentpop(string amt, bool IsCardPay)
         {
             if (Convert.ToDecimal(lblbilltotal.Text) != 0)
             {
@@ -2528,12 +2597,18 @@ namespace INVENTORY.UI
             {
                 txtamt.Text = lblbilltotal.Text;
 
+<<<<<<< HEAD
                 showpaymentpop(txtamt.Text, false);
             }
             else
             {
                 showpaymentpop(txtamt.Text, false);
             }
+=======
+            txtamt.Text = lblbilltotal.Text;
+
+            showpaymentpop(txtamt.Text, false);
+>>>>>>> 8e4526e445f5bdf725218e622936deb17813ddc6
         }
 
         private void btnCardpay_Click(object sender, EventArgs e)
@@ -2546,7 +2621,7 @@ namespace INVENTORY.UI
 
             txtamt.Text = lblbilltotal.Text;
 
-            showpaymentpop(txtamt.Text,true);
+            showpaymentpop(txtamt.Text, true);
 
         }
         private void btnvoiditem_Click(object sender, EventArgs e)
@@ -2646,7 +2721,7 @@ namespace INVENTORY.UI
         }
 
 
-        private void SaveVoidData(SOrderDetail oPODItem,decimal Qty,int VoidTypeId)
+        private void SaveVoidData(SOrderDetail oPODItem, decimal Qty, int VoidTypeId)
         {
             try
             {
@@ -2844,7 +2919,7 @@ namespace INVENTORY.UI
             txtamt.Text = "10";
 
             if (Convert.ToDecimal(lblbilltotal.Text) <= Convert.ToDecimal(txtamt.Text))
-            { showpaymentpop(txtamt.Text,false); }
+            { showpaymentpop(txtamt.Text, false); }
             else
             {
                 showmultipaymentpop();
@@ -2855,7 +2930,7 @@ namespace INVENTORY.UI
         {
             txtamt.Text = "20";
             if (Convert.ToDecimal(lblbilltotal.Text) <= Convert.ToDecimal(txtamt.Text))
-            { showpaymentpop(txtamt.Text,false); }
+            { showpaymentpop(txtamt.Text, false); }
             else
             {
                 showmultipaymentpop();
@@ -2866,7 +2941,7 @@ namespace INVENTORY.UI
         {
             txtamt.Text = "50";
             if (Convert.ToDecimal(lblbilltotal.Text) <= Convert.ToDecimal(txtamt.Text))
-            { showpaymentpop(txtamt.Text,false); }
+            { showpaymentpop(txtamt.Text, false); }
             else
             {
                 showmultipaymentpop();
@@ -2902,7 +2977,7 @@ namespace INVENTORY.UI
 
         private void fSOrder_FormClosing(object sender, FormClosingEventArgs e)
         {
-            frmprmo.Close();
+            Application.Exit();
         }
         int dynamiclocatonY = 81;
         private void btnmovedwn_Click(object sender, EventArgs e)
@@ -3001,7 +3076,7 @@ namespace INVENTORY.UI
             RefrehSODetailsAndStockObjectNew();
             RefreshPromo();
         }
- 
+
         private void txtamt_TextChanged(object sender, EventArgs e)
         {
             // txtamt.Text.TrimStart(new Char[] { '0' })
@@ -3037,10 +3112,13 @@ namespace INVENTORY.UI
             //txtamt.Tag = txtamt.Text;
             txtamt.Tag = txtamt.Text.TrimStart(new Char[] { '0' }); ;
         }
-
+        RectangleF rect;
+        Int32 height_value;
+        PrintDocument pdPrint ;
         private void button29_Click(object sender, EventArgs e)
         {
-            PrintDocument pdPrint = new PrintDocument();
+             pdPrint = new PrintDocument();
+           
             pdPrint.PrintPage += new PrintPageEventHandler(pdPrint_PrintPage);
 
             PrintDialog pd = new PrintDialog();
@@ -3077,11 +3155,242 @@ namespace INVENTORY.UI
             }
 
         }
+<<<<<<< HEAD
         
         private void pdPrint_PrintPage(object sender, PrintPageEventArgs e)
         { 
             PrintBO objPrintBO = new PrintBO();
             objPrintBO.SalesReceiptPrint(e, _Order,_Order.SOrderDetails.ToList(),db.Products.ToList(),db.Categorys.ToList());
+=======
+        //SizeF stringSize(string data, PrintPageEventArgs e , Font stringFont)
+        //{
+        //    string measureString = data;     
+        //    return e.Graphics.MeasureString(measureString, stringFont);
+        //}
+        private void pdPrint_PrintPage(object sender, PrintPageEventArgs e)
+        {
+
+            StringFormat format = new StringFormat();
+            format.Alignment = StringAlignment.Center;      // Horizontal Alignment 
+
+            StringFormat right = new StringFormat();
+            right.Alignment = StringAlignment.Far;
+
+            StringFormat left = new StringFormat();
+            left.Alignment = StringAlignment.Near;
+            SizeF stringSize = new SizeF();
+            // Measure string.
+            //SizeF stringSize = new SizeF();
+
+           
+
+            SalesPrintBO objSalesPrintBO =SetPrintData();
+            float x, y, lineOffset;           
+            Font printFont = new Font("Microsoft Sans Serif", (float)10, FontStyle.Regular, GraphicsUnit.Point); // Substituted to FontA Font
+
+            e.Graphics.PageUnit = GraphicsUnit.Point;
+            rect = new RectangleF(0, height_value, pdPrint.DefaultPageSettings.PrintableArea.Width - 70, pdPrint.DefaultPageSettings.PrintableArea.Height);
+
+            x = 79;
+            y = 0;
+          
+            lineOffset = printFont.GetHeight(e.Graphics) - (float)0.5;
+            x = 0;
+           
+            StringFormat format1 = new StringFormat(StringFormatFlags.NoClip);
+          
+            format1.Alignment = StringAlignment.Center;
+
+           
+            printFont = new Font("Microsoft Sans Serif", 9, FontStyle.Bold, GraphicsUnit.Point);
+            stringSize = e.Graphics.MeasureString("SPRINGFORD VARIETY & FOOD STORE", printFont);
+            e.Graphics.DrawString("SPRINGFORD VARIETY & FOOD STORE", printFont, Brushes.Black, rect, format);
+            y += lineOffset;
+            height_value = Convert.ToInt32(stringSize.Height) + height_value;
+            rect = new RectangleF(0, height_value, pdPrint.DefaultPageSettings.PrintableArea.Width-70, pdPrint.DefaultPageSettings.PrintableArea.Height);
+            stringSize = e.Graphics.MeasureString("3 West Street North", printFont);
+            e.Graphics.DrawString("3 West Street North", printFont, Brushes.Black, rect, format);
+            y += lineOffset;
+            height_value = Convert.ToInt32(stringSize.Height) + height_value;
+            rect = new RectangleF(0, height_value, pdPrint.DefaultPageSettings.PrintableArea.Width - 70, pdPrint.DefaultPageSettings.PrintableArea.Height);
+            stringSize = e.Graphics.MeasureString("Springford,ON", printFont);
+            e.Graphics.DrawString("Springford,ON", printFont, Brushes.Black, rect, format);
+            y += lineOffset;
+            height_value = Convert.ToInt32(stringSize.Height) + height_value;
+            rect = new RectangleF(0, height_value, pdPrint.DefaultPageSettings.PrintableArea.Width - 70, pdPrint.DefaultPageSettings.PrintableArea.Height);
+            stringSize = e.Graphics.MeasureString("HST#781501283RT0001", printFont);
+            e.Graphics.DrawString("HST#781501283RT0001", printFont, Brushes.Black, rect, format);
+            //
+            height_value = Convert.ToInt32(stringSize.Height) + height_value;
+            //Details                                      
+            y = y+ (height_value/3) + (lineOffset * (float).7);
+
+            printFont = new Font("Microsoft Sans Serif", 10, FontStyle.Regular, GraphicsUnit.Point);
+            e.Graphics.DrawString("Decription                                          Amt($)", printFont, Brushes.Black, x, y);
+            y += (lineOffset * (float)0.5);
+            //lineOffset = printFont.GetHeight(e.Graphics) - 3;
+            height_value = Convert.ToInt32(stringSize.Height) + height_value;
+            stringSize = e.Graphics.MeasureString("___________________________________", printFont);
+            e.Graphics.DrawString("___________________________________", printFont, Brushes.Black, x, y);
+            y += (lineOffset * (float)1.5);
+            height_value = Convert.ToInt32(stringSize.Height) + height_value;
+            //<<<<<<< HEAD
+            printFont = new Font("Microsoft Sans Serif", 9, FontStyle.Regular, GraphicsUnit.Point);
+           // for (int i = 0; i <= SetPrintData().objSalesPrintItems.Count()-1; i++)
+//=======
+            for (int i = 0; i <= objSalesPrintBO.objSalesPrintItems.Count()-1; i++)      //decimal.Round(yourValue, 2, MidpointRounding.AwayFromZero)
+                                                                                         //>>>>>>> f132b99356ebf57b4e09098e73689df77a90e3fb
+            {
+
+                height_value = Convert.ToInt32(stringSize.Height) + height_value;
+                rect = new RectangleF(0, height_value, pdPrint.DefaultPageSettings.PrintableArea.Width-120 , pdPrint.DefaultPageSettings.PrintableArea.Height);
+                stringSize = e.Graphics.MeasureString(objSalesPrintBO.objSalesPrintItems[i].ItemName + string.Format("{0:}", Convert.ToString(decimal.Round(objSalesPrintBO.objSalesPrintItems[i].Amount, 2, MidpointRounding.AwayFromZero))), printFont);
+
+                e.Graphics.DrawString(objSalesPrintBO.objSalesPrintItems[i].ItemName.PadRight(40) , printFont, Brushes.Black, rect, left);
+
+                rect = new RectangleF(0, height_value, pdPrint.DefaultPageSettings.PrintableArea.Width - 85, pdPrint.DefaultPageSettings.PrintableArea.Height);
+                e.Graphics.DrawString( Convert.ToString(decimal.Round(objSalesPrintBO.objSalesPrintItems[i].Amount, 2, MidpointRounding.AwayFromZero)).PadRight(20), printFont, Brushes.Black, rect, right);
+                
+                height_value = Convert.ToInt32(stringSize.Height) + height_value-10;
+                y += (lineOffset * (float)1.1); 
+            }
+            printFont = new Font("Microsoft Sans Serif", 10, FontStyle.Regular, GraphicsUnit.Point);
+            stringSize = e.Graphics.MeasureString("___________________________________", printFont);
+            e.Graphics.DrawString("______________________________________", printFont, Brushes.Black, x, y);
+            //y += (lineOffset * (float)1.5);
+            y += (lineOffset * (float)1.1);
+            //
+            height_value = Convert.ToInt32(stringSize.Height) + height_value;
+            //e.Graphics.DrawString("Net Total :               " + objSalesPrintBO.NetAmount, printFont, Brushes.Black, x, y);
+            stringSize = e.Graphics.MeasureString("Net Total :".PadRight(50), printFont);
+            e.Graphics.DrawString("Net Total :".PadRight(50) + string.Format("{0:}", decimal.Round(objSalesPrintBO.NetAmount, 2, MidpointRounding.AwayFromZero)), printFont, Brushes.Black, x, y);
+            //graphics.DrawString("Total To Pay".PadRight(15) + "Rs " + string.Format("{0:}", total), f, new SolidBrush(Color.Black), startX, startY + offset);
+            y += (lineOffset * (float)1.5); ;
+            height_value = Convert.ToInt32(stringSize.Height) + height_value;
+            stringSize = e.Graphics.MeasureString("Bill Total :".PadRight(50), printFont);
+            e.Graphics.DrawString("Bill Total :".PadRight(50) + string.Format("{0:}", decimal.Round(objSalesPrintBO.BillTotal, 2, MidpointRounding.AwayFromZero)), printFont, Brushes.Black, x, y);
+            y += (lineOffset * (float)1.5);
+            height_value = Convert.ToInt32(stringSize.Height) + height_value;
+            stringSize = e.Graphics.MeasureString("HST :".PadRight(50), printFont);
+            e.Graphics.DrawString("HST :".PadRight(50) + string.Format("{0:}", decimal.Round(objSalesPrintBO.HST, 2, MidpointRounding.AwayFromZero)), printFont, Brushes.Black, x, y);
+            y += (lineOffset * (float)1.5);
+            height_value = Convert.ToInt32(stringSize.Height) + height_value;
+            stringSize = e.Graphics.MeasureString("CARD :".PadRight(50), printFont);
+            e.Graphics.DrawString("CARD :".PadRight(50) + string.Format("{0:}", decimal.Round(objSalesPrintBO.Card, 2, MidpointRounding.AwayFromZero)), printFont, Brushes.Black, x, y);
+            y += (lineOffset * (float)1.5);
+
+            height_value = Convert.ToInt32(stringSize.Height) + height_value;
+            stringSize = e.Graphics.MeasureString("Change :               ", printFont);
+            e.Graphics.DrawString("Change :               " + decimal.Round(objSalesPrintBO.Change, 2, MidpointRounding.AwayFromZero), printFont, Brushes.Black, x, y);
+            y += (lineOffset * (float)1.5);
+            height_value = Convert.ToInt32(stringSize.Height) + height_value;
+            stringSize = e.Graphics.MeasureString("___________________________________", printFont);
+            e.Graphics.DrawString("______________________________________", printFont, Brushes.Black, x, y);
+            y += (lineOffset * (float)1.5);
+            height_value = Convert.ToInt32(stringSize.Height) + height_value;
+            stringSize = e.Graphics.MeasureString("Total Savings :               ", printFont);
+            e.Graphics.DrawString("Total Savings :               " + decimal.Round(objSalesPrintBO.TotalSavings, 2, MidpointRounding.AwayFromZero), printFont, Brushes.Black, x, y);
+            //y += (lineOffset * (float)1.5); 
+            y += lineOffset;
+            stringSize = e.Graphics.MeasureString("___________________________________", printFont);
+            e.Graphics.DrawString("______________________________________", printFont, Brushes.Black, x, y);
+            y += (lineOffset * (float)1.5);
+            height_value = Convert.ToInt32(stringSize.Height) + height_value;
+            printFont = new Font("Microsoft Sans Serif", 10, FontStyle.Bold, GraphicsUnit.Point);
+            stringSize = e.Graphics.MeasureString("HST Summary  ", printFont);
+            e.Graphics.DrawString("HST Summary  ", printFont, Brushes.Black, x, y);
+            y += (lineOffset * (float)1.5);
+            height_value = Convert.ToInt32(stringSize.Height) + height_value;
+            stringSize = e.Graphics.MeasureString("Rate         Net            HST       Total", printFont);
+            e.Graphics.DrawString("Rate         Net            HST       Total", printFont, Brushes.Black, x, y);
+            //y += (lineOffset * (float)1.5); ;
+            y += lineOffset;
+            printFont = new Font("Microsoft Sans Serif", 10, FontStyle.Regular, GraphicsUnit.Point);
+            stringSize = e.Graphics.MeasureString("___________________________________", printFont);
+            e.Graphics.DrawString("______________________________________", printFont, Brushes.Black, x, y);
+            y += (lineOffset * (float)1.5);
+            height_value = Convert.ToInt32(stringSize.Height) + height_value;
+            for (int i = 0; i <= objSalesPrintBO.objHSTSummary.Count()-1; i++)
+            {                
+                e.Graphics.DrawString(decimal.Round(objSalesPrintBO.objHSTSummary[i].Rate, 2, MidpointRounding.AwayFromZero) + "       "  + decimal.Round(objSalesPrintBO.objHSTSummary[i].Net, 2, MidpointRounding.AwayFromZero) + "      " + decimal.Round(objSalesPrintBO.objHSTSummary[i].HST, 2, MidpointRounding.AwayFromZero) + "       " + decimal.Round(objSalesPrintBO.objHSTSummary[i].Total, 2, MidpointRounding.AwayFromZero), printFont, Brushes.Black, x, y);
+                y += (lineOffset * (float)1.5);
+                height_value = Convert.ToInt32(stringSize.Height) + height_value;
+            }                       
+            printFont = new Font("Microsoft Sans Serif", 10, FontStyle.Regular, GraphicsUnit.Point);
+
+            lineOffset = printFont.GetHeight(e.Graphics) ;
+            stringSize = e.Graphics.MeasureString("___________________________________", printFont);
+            e.Graphics.DrawString("______________________________________", printFont, Brushes.Black, x, y);
+            y += (lineOffset * (float)1.5);
+            height_value = Convert.ToInt32(stringSize.Height) + height_value;
+            //y += lineOffset;
+            e.Graphics.DrawString("Till                        " + objSalesPrintBO.Date, printFont, Brushes.Black, x, y);
+            stringSize = e.Graphics.MeasureString("Till                        ", printFont);
+            y += (lineOffset * (float)1.5); ;
+            height_value = Convert.ToInt32(stringSize.Height) + height_value;
+            stringSize = e.Graphics.MeasureString("No of Items  :", printFont);
+            e.Graphics.DrawString("No of Items  :" + objSalesPrintBO.NoOfItems, printFont, Brushes.Black, x, y);
+            //y += (lineOffset * (float)1.5);
+            height_value = Convert.ToInt32(stringSize.Height) + height_value;
+
+            printFont = new Font("Microsoft Sans Serif", 10, FontStyle.Bold, GraphicsUnit.Point);
+
+            height_value = Convert.ToInt32(stringSize.Height) + height_value+60;
+
+            rect = new RectangleF(0, height_value, pdPrint.DefaultPageSettings.PrintableArea.Width - 70, pdPrint.DefaultPageSettings.PrintableArea.Height);
+            stringSize = e.Graphics.MeasureString("Thanks for Shopping with us", printFont);            
+            e.Graphics.DrawString("Thanks for Shopping with us", printFont, Brushes.Black, rect, format);
+            height_value = Convert.ToInt32(stringSize.Height) + height_value;
+            y += (lineOffset * (float)1.5);
+
+            rect = new RectangleF(0, height_value, pdPrint.DefaultPageSettings.PrintableArea.Width - 70, pdPrint.DefaultPageSettings.PrintableArea.Height);
+            stringSize = e.Graphics.MeasureString("Please Visit Again", printFont);
+            e.Graphics.DrawString("Please Visit Again", printFont, Brushes.Black, rect, format);
+            height_value = Convert.ToInt32(stringSize.Height) + height_value;
+            y += (lineOffset * (float)1.5);
+
+
+            rect = new RectangleF(0, height_value, pdPrint.DefaultPageSettings.PrintableArea.Width - 70, pdPrint.DefaultPageSettings.PrintableArea.Height);
+            stringSize = e.Graphics.MeasureString("Opening hours", printFont);
+            e.Graphics.DrawString("Opening hours ", printFont, Brushes.Black, rect, format);
+            height_value = Convert.ToInt32(stringSize.Height) + height_value;
+            y += (lineOffset * (float)1.5);
+
+            rect = new RectangleF(0, height_value, pdPrint.DefaultPageSettings.PrintableArea.Width - 70, pdPrint.DefaultPageSettings.PrintableArea.Height);
+            stringSize = e.Graphics.MeasureString("7 Days week 7 AM TO 9 PM", printFont);
+            e.Graphics.DrawString("7 Days week 7 AM TO 9 PM", printFont, Brushes.Black, rect, format);
+            height_value = Convert.ToInt32(stringSize.Height) + height_value;
+
+
+            printFont = new Font("Microsoft Sans Serif", 10, FontStyle.Regular, GraphicsUnit.Point);
+
+            y += (lineOffset * (float)2.0);
+            // Indicate that no more data to print, and the Print Document can now send the print data to the spooler.         
+
+            //float imagewidth = CreateBarcode(SetPrintData().OrderNo).drawBarcode().Width;
+
+//<<<<<<< HEAD
+            e.Graphics.DrawImage(CreateBarcode(SetPrintData().OrderNo).drawBarcode(), CreateBarcode(SetPrintData().OrderNo).drawBarcode().Width/3,y);
+//=======
+            //e.Graphics.DrawImage(CreateBarcode(objSalesPrintBO.OrderNo).drawBarcode(), x, y);
+//>>>>>>> f132b99356ebf57b4e09098e73689df77a90e3fb
+
+            e.HasMorePages = false;
+        }
+        private static Linear CreateBarcode(string orderNo)
+        {
+            Linear barcode = new Linear();// create a barcode
+            barcode.Type = BarcodeType.CODE128;// select barcode type
+            barcode.Data = orderNo;// set barcode data
+            barcode.X = 2.5F;// set x
+            barcode.Y = 30.0F;// set y
+            barcode.Resolution = 96;// set resolution
+            barcode.Rotate = Rotate.Rotate0;// set rotation
+            barcode.BarcodeWidth = 150;
+            barcode.BarcodeHeight = 50;
+            //barcode.AutoResize = true;
+            return barcode;
+>>>>>>> 8e4526e445f5bdf725218e622936deb17813ddc6
         }
        
 

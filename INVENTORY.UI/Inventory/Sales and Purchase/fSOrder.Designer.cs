@@ -31,9 +31,9 @@ namespace INVENTORY.UI
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fSOrder));
             this.label3 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -207,7 +207,9 @@ namespace INVENTORY.UI
             this.btnlogout = new System.Windows.Forms.Button();
             this.strsales = new System.Windows.Forms.StatusStrip();
             this.ToolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lblUser = new System.Windows.Forms.ToolStripStatusLabel();
             this.ToolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.ToolStripStatusLabel4 = new System.Windows.Forms.ToolStripStatusLabel();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
@@ -224,8 +226,6 @@ namespace INVENTORY.UI
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnMISRpt = new System.Windows.Forms.Button();
             this.btnRemove = new System.Windows.Forms.Button();
-            this.lblUser = new System.Windows.Forms.ToolStripStatusLabel();
-            this.ToolStripStatusLabel4 = new System.Windows.Forms.ToolStripStatusLabel();
             this.btncust = new System.Windows.Forms.Button();
             this.ctlGodown = new INVENTORY.UI.ctlCustomControl();
             this.ctlCustomer = new INVENTORY.UI.ctlCustomControl();
@@ -291,7 +291,7 @@ namespace INVENTORY.UI
             this.label12.BackColor = System.Drawing.Color.LightSeaGreen;
             this.label12.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.LemonChiffon;
-            this.label12.Location = new System.Drawing.Point(634, 12);
+            this.label12.Location = new System.Drawing.Point(560, 12);
             this.label12.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(77, 20);
@@ -363,7 +363,7 @@ namespace INVENTORY.UI
             // txtInvoice
             // 
             this.txtInvoice.Font = new System.Drawing.Font("Palatino Linotype", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtInvoice.Location = new System.Drawing.Point(718, 10);
+            this.txtInvoice.Location = new System.Drawing.Point(644, 10);
             this.txtInvoice.Margin = new System.Windows.Forms.Padding(5);
             this.txtInvoice.Name = "txtInvoice";
             this.txtInvoice.Size = new System.Drawing.Size(103, 22);
@@ -636,7 +636,7 @@ namespace INVENTORY.UI
             this.numGSTAmt.BackColor = System.Drawing.SystemColors.Window;
             this.numGSTAmt.DecimalPlaces = 2;
             this.numGSTAmt.Font = new System.Drawing.Font("Palatino Linotype", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numGSTAmt.Location = new System.Drawing.Point(687, 165);
+            this.numGSTAmt.Location = new System.Drawing.Point(621, 165);
             this.numGSTAmt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.numGSTAmt.Maximum = new decimal(new int[] {
             999999999,
@@ -723,7 +723,7 @@ namespace INVENTORY.UI
             this.label40.AutoSize = true;
             this.label40.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label40.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label40.Location = new System.Drawing.Point(615, 134);
+            this.label40.Location = new System.Drawing.Point(549, 134);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(66, 17);
             this.label40.TabIndex = 224;
@@ -752,7 +752,7 @@ namespace INVENTORY.UI
             this.label41.AutoSize = true;
             this.label41.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label41.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label41.Location = new System.Drawing.Point(613, 104);
+            this.label41.Location = new System.Drawing.Point(547, 104);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(69, 17);
             this.label41.TabIndex = 223;
@@ -782,7 +782,7 @@ namespace INVENTORY.UI
             this.label42.AutoSize = true;
             this.label42.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label42.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label42.Location = new System.Drawing.Point(613, 75);
+            this.label42.Location = new System.Drawing.Point(547, 75);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(69, 17);
             this.label42.TabIndex = 222;
@@ -844,7 +844,7 @@ namespace INVENTORY.UI
             this.groupBox4.Controls.Add(this.groupBox5);
             this.groupBox4.Controls.Add(this.groupBox6);
             this.groupBox4.Controls.Add(this.groupBox8);
-            this.groupBox4.Location = new System.Drawing.Point(806, 182);
+            this.groupBox4.Location = new System.Drawing.Point(729, 182);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(5);
@@ -1147,7 +1147,7 @@ namespace INVENTORY.UI
             this.label46.AutoSize = true;
             this.label46.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label46.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label46.Location = new System.Drawing.Point(617, 168);
+            this.label46.Location = new System.Drawing.Point(551, 168);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(31, 17);
             this.label46.TabIndex = 218;
@@ -1240,7 +1240,7 @@ namespace INVENTORY.UI
             this.numIGSTAmt.BackColor = System.Drawing.SystemColors.Window;
             this.numIGSTAmt.DecimalPlaces = 2;
             this.numIGSTAmt.Font = new System.Drawing.Font("Palatino Linotype", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numIGSTAmt.Location = new System.Drawing.Point(687, 134);
+            this.numIGSTAmt.Location = new System.Drawing.Point(621, 134);
             this.numIGSTAmt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.numIGSTAmt.Maximum = new decimal(new int[] {
             999999999,
@@ -1257,7 +1257,7 @@ namespace INVENTORY.UI
             this.numCGSTAmt.BackColor = System.Drawing.SystemColors.Window;
             this.numCGSTAmt.DecimalPlaces = 2;
             this.numCGSTAmt.Font = new System.Drawing.Font("Palatino Linotype", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numCGSTAmt.Location = new System.Drawing.Point(687, 71);
+            this.numCGSTAmt.Location = new System.Drawing.Point(621, 71);
             this.numCGSTAmt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.numCGSTAmt.Maximum = new decimal(new int[] {
             999999999,
@@ -1293,7 +1293,7 @@ namespace INVENTORY.UI
             this.numSGSTAmt.BackColor = System.Drawing.SystemColors.Window;
             this.numSGSTAmt.DecimalPlaces = 2;
             this.numSGSTAmt.Font = new System.Drawing.Font("Palatino Linotype", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numSGSTAmt.Location = new System.Drawing.Point(687, 102);
+            this.numSGSTAmt.Location = new System.Drawing.Point(621, 102);
             this.numSGSTAmt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.numSGSTAmt.Maximum = new decimal(new int[] {
             999999999,
@@ -1346,7 +1346,7 @@ namespace INVENTORY.UI
             // 
             this.numCardPaidAmt.DecimalPlaces = 2;
             this.numCardPaidAmt.Font = new System.Drawing.Font("Palatino Linotype", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numCardPaidAmt.Location = new System.Drawing.Point(645, 338);
+            this.numCardPaidAmt.Location = new System.Drawing.Point(579, 338);
             this.numCardPaidAmt.Margin = new System.Windows.Forms.Padding(5);
             this.numCardPaidAmt.Maximum = new decimal(new int[] {
             9999999,
@@ -1364,7 +1364,7 @@ namespace INVENTORY.UI
             this.cmbCardType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCardType.Font = new System.Drawing.Font("Palatino Linotype", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCardType.FormattingEnabled = true;
-            this.cmbCardType.Location = new System.Drawing.Point(645, 398);
+            this.cmbCardType.Location = new System.Drawing.Point(579, 398);
             this.cmbCardType.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.cmbCardType.Name = "cmbCardType";
             this.cmbCardType.Size = new System.Drawing.Size(117, 24);
@@ -1375,7 +1375,7 @@ namespace INVENTORY.UI
             this.cmbBank.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbBank.Font = new System.Drawing.Font("Palatino Linotype", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbBank.FormattingEnabled = true;
-            this.cmbBank.Location = new System.Drawing.Point(645, 368);
+            this.cmbBank.Location = new System.Drawing.Point(579, 368);
             this.cmbBank.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.cmbBank.Name = "cmbBank";
             this.cmbBank.Size = new System.Drawing.Size(117, 24);
@@ -1387,7 +1387,7 @@ namespace INVENTORY.UI
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label19.Location = new System.Drawing.Point(538, 339);
+            this.label19.Location = new System.Drawing.Point(472, 339);
             this.label19.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(97, 19);
@@ -1425,7 +1425,7 @@ namespace INVENTORY.UI
             this.numTotalDueAmt.Enabled = false;
             this.numTotalDueAmt.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numTotalDueAmt.ForeColor = System.Drawing.Color.Black;
-            this.numTotalDueAmt.Location = new System.Drawing.Point(641, 423);
+            this.numTotalDueAmt.Location = new System.Drawing.Point(575, 423);
             this.numTotalDueAmt.Margin = new System.Windows.Forms.Padding(5);
             this.numTotalDueAmt.Maximum = new decimal(new int[] {
             999999999,
@@ -1448,7 +1448,7 @@ namespace INVENTORY.UI
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label21.Location = new System.Drawing.Point(551, 423);
+            this.label21.Location = new System.Drawing.Point(485, 423);
             this.label21.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(90, 19);
@@ -1586,7 +1586,7 @@ namespace INVENTORY.UI
             // 
             this.numCashDownPayment.DecimalPlaces = 2;
             this.numCashDownPayment.Font = new System.Drawing.Font("Palatino Linotype", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numCashDownPayment.Location = new System.Drawing.Point(645, 309);
+            this.numCashDownPayment.Location = new System.Drawing.Point(579, 309);
             this.numCashDownPayment.Margin = new System.Windows.Forms.Padding(5);
             this.numCashDownPayment.Maximum = new decimal(new int[] {
             9999999,
@@ -1742,14 +1742,14 @@ namespace INVENTORY.UI
             this.dgProducts.AllowUserToAddRows = false;
             this.dgProducts.AllowUserToDeleteRows = false;
             this.dgProducts.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.Menu;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgProducts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Menu;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgProducts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgProducts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.clnSN,
@@ -1765,20 +1765,20 @@ namespace INVENTORY.UI
             this.Column2,
             this.Column3,
             this.Column4});
-            this.dgProducts.Location = new System.Drawing.Point(113, 39);
+            this.dgProducts.Location = new System.Drawing.Point(113, 36);
             this.dgProducts.Margin = new System.Windows.Forms.Padding(5);
             this.dgProducts.Name = "dgProducts";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.SlateGray;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.Info;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgProducts.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.SlateGray;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgProducts.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgProducts.RowHeadersVisible = false;
             this.dgProducts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgProducts.Size = new System.Drawing.Size(709, 500);
+            this.dgProducts.Size = new System.Drawing.Size(634, 503);
             this.dgProducts.TabIndex = 5;
             this.dgProducts.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgProducts_CellContentClick);
             this.dgProducts.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dgProducts_RowsAdded);
@@ -1792,8 +1792,8 @@ namespace INVENTORY.UI
             // 
             // clnName
             // 
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Maroon;
-            this.clnName.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Maroon;
+            this.clnName.DefaultCellStyle = dataGridViewCellStyle2;
             this.clnName.HeaderText = "DESCRIPTION";
             this.clnName.Name = "clnName";
             this.clnName.ReadOnly = true;
@@ -1880,7 +1880,7 @@ namespace INVENTORY.UI
             this.btnmoveup.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnmoveup.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnmoveup.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnmoveup.Location = new System.Drawing.Point(827, 40);
+            this.btnmoveup.Location = new System.Drawing.Point(750, 40);
             this.btnmoveup.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnmoveup.Name = "btnmoveup";
             this.btnmoveup.Size = new System.Drawing.Size(251, 39);
@@ -1893,7 +1893,7 @@ namespace INVENTORY.UI
             // 
             this.pnlbtndyan.AutoSize = true;
             this.pnlbtndyan.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.pnlbtndyan.Location = new System.Drawing.Point(827, 81);
+            this.pnlbtndyan.Location = new System.Drawing.Point(750, 81);
             this.pnlbtndyan.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pnlbtndyan.Name = "pnlbtndyan";
             this.pnlbtndyan.Size = new System.Drawing.Size(251, 569);
@@ -1906,7 +1906,7 @@ namespace INVENTORY.UI
             this.btnmovedwn.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnmovedwn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnmovedwn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnmovedwn.Location = new System.Drawing.Point(827, 652);
+            this.btnmovedwn.Location = new System.Drawing.Point(750, 652);
             this.btnmovedwn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnmovedwn.Name = "btnmovedwn";
             this.btnmovedwn.Size = new System.Drawing.Size(256, 39);
@@ -1949,7 +1949,7 @@ namespace INVENTORY.UI
             // 
             this.lblbilltotal.Font = new System.Drawing.Font("Arial Narrow", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblbilltotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblbilltotal.Location = new System.Drawing.Point(466, 638);
+            this.lblbilltotal.Location = new System.Drawing.Point(394, 638);
             this.lblbilltotal.Name = "lblbilltotal";
             this.lblbilltotal.Size = new System.Drawing.Size(355, 51);
             this.lblbilltotal.TabIndex = 237;
@@ -2002,7 +2002,7 @@ namespace INVENTORY.UI
             this.label56.ForeColor = System.Drawing.Color.Green;
             this.label56.Location = new System.Drawing.Point(16, 520);
             this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(814, 35);
+            this.label56.Size = new System.Drawing.Size(732, 35);
             this.label56.TabIndex = 232;
             this.label56.Text = "______________________________________________________________________.\r\n";
             this.label56.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2013,7 +2013,7 @@ namespace INVENTORY.UI
             this.label57.ForeColor = System.Drawing.Color.Green;
             this.label57.Location = new System.Drawing.Point(12, 601);
             this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(814, 39);
+            this.label57.Size = new System.Drawing.Size(732, 39);
             this.label57.TabIndex = 238;
             this.label57.Text = "______________________________________________________________________.\r\n";
             this.label57.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -2021,7 +2021,7 @@ namespace INVENTORY.UI
             // txtamt
             // 
             this.txtamt.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtamt.Location = new System.Drawing.Point(1088, 2);
+            this.txtamt.Location = new System.Drawing.Point(1004, 2);
             this.txtamt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtamt.Multiline = true;
             this.txtamt.Name = "txtamt";
@@ -2035,7 +2035,7 @@ namespace INVENTORY.UI
             this.btn7.BackColor = System.Drawing.Color.LightSeaGreen;
             this.btn7.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn7.ForeColor = System.Drawing.Color.LemonChiffon;
-            this.btn7.Location = new System.Drawing.Point(1087, 83);
+            this.btn7.Location = new System.Drawing.Point(1003, 83);
             this.btn7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn7.Name = "btn7";
             this.btn7.Size = new System.Drawing.Size(80, 66);
@@ -2049,7 +2049,7 @@ namespace INVENTORY.UI
             this.btn8.BackColor = System.Drawing.Color.LightSeaGreen;
             this.btn8.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn8.ForeColor = System.Drawing.Color.LemonChiffon;
-            this.btn8.Location = new System.Drawing.Point(1168, 83);
+            this.btn8.Location = new System.Drawing.Point(1084, 83);
             this.btn8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn8.Name = "btn8";
             this.btn8.Size = new System.Drawing.Size(80, 66);
@@ -2063,7 +2063,7 @@ namespace INVENTORY.UI
             this.btn9.BackColor = System.Drawing.Color.LightSeaGreen;
             this.btn9.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn9.ForeColor = System.Drawing.Color.LemonChiffon;
-            this.btn9.Location = new System.Drawing.Point(1249, 83);
+            this.btn9.Location = new System.Drawing.Point(1165, 83);
             this.btn9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn9.Name = "btn9";
             this.btn9.Size = new System.Drawing.Size(80, 66);
@@ -2079,7 +2079,7 @@ namespace INVENTORY.UI
             this.button5.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.button5.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button5.Location = new System.Drawing.Point(827, 1);
+            this.button5.Location = new System.Drawing.Point(750, 1);
             this.button5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(251, 39);
@@ -2092,7 +2092,7 @@ namespace INVENTORY.UI
             this.btn6.BackColor = System.Drawing.Color.LightSeaGreen;
             this.btn6.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn6.ForeColor = System.Drawing.Color.LemonChiffon;
-            this.btn6.Location = new System.Drawing.Point(1249, 151);
+            this.btn6.Location = new System.Drawing.Point(1165, 151);
             this.btn6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn6.Name = "btn6";
             this.btn6.Size = new System.Drawing.Size(80, 66);
@@ -2106,7 +2106,7 @@ namespace INVENTORY.UI
             this.btn5.BackColor = System.Drawing.Color.LightSeaGreen;
             this.btn5.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn5.ForeColor = System.Drawing.Color.LemonChiffon;
-            this.btn5.Location = new System.Drawing.Point(1168, 150);
+            this.btn5.Location = new System.Drawing.Point(1084, 150);
             this.btn5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn5.Name = "btn5";
             this.btn5.Size = new System.Drawing.Size(80, 66);
@@ -2120,7 +2120,7 @@ namespace INVENTORY.UI
             this.btn4.BackColor = System.Drawing.Color.LightSeaGreen;
             this.btn4.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn4.ForeColor = System.Drawing.Color.LemonChiffon;
-            this.btn4.Location = new System.Drawing.Point(1087, 150);
+            this.btn4.Location = new System.Drawing.Point(1003, 150);
             this.btn4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn4.Name = "btn4";
             this.btn4.Size = new System.Drawing.Size(80, 66);
@@ -2134,7 +2134,7 @@ namespace INVENTORY.UI
             this.btn3.BackColor = System.Drawing.Color.LightSeaGreen;
             this.btn3.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn3.ForeColor = System.Drawing.Color.LemonChiffon;
-            this.btn3.Location = new System.Drawing.Point(1249, 218);
+            this.btn3.Location = new System.Drawing.Point(1165, 218);
             this.btn3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn3.Name = "btn3";
             this.btn3.Size = new System.Drawing.Size(80, 66);
@@ -2148,7 +2148,7 @@ namespace INVENTORY.UI
             this.btn2.BackColor = System.Drawing.Color.LightSeaGreen;
             this.btn2.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn2.ForeColor = System.Drawing.Color.LemonChiffon;
-            this.btn2.Location = new System.Drawing.Point(1168, 218);
+            this.btn2.Location = new System.Drawing.Point(1084, 218);
             this.btn2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn2.Name = "btn2";
             this.btn2.Size = new System.Drawing.Size(80, 66);
@@ -2162,7 +2162,7 @@ namespace INVENTORY.UI
             this.btn1.BackColor = System.Drawing.Color.LightSeaGreen;
             this.btn1.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn1.ForeColor = System.Drawing.Color.LemonChiffon;
-            this.btn1.Location = new System.Drawing.Point(1087, 218);
+            this.btn1.Location = new System.Drawing.Point(1003, 218);
             this.btn1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn1.Name = "btn1";
             this.btn1.Size = new System.Drawing.Size(80, 66);
@@ -2176,7 +2176,7 @@ namespace INVENTORY.UI
             this.btnx.BackColor = System.Drawing.Color.LightSeaGreen;
             this.btnx.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnx.ForeColor = System.Drawing.Color.LemonChiffon;
-            this.btnx.Location = new System.Drawing.Point(1249, 286);
+            this.btnx.Location = new System.Drawing.Point(1165, 286);
             this.btnx.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnx.Name = "btnx";
             this.btnx.Size = new System.Drawing.Size(80, 66);
@@ -2190,7 +2190,7 @@ namespace INVENTORY.UI
             this.btndot.BackColor = System.Drawing.Color.LightSeaGreen;
             this.btndot.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btndot.ForeColor = System.Drawing.Color.LemonChiffon;
-            this.btndot.Location = new System.Drawing.Point(1168, 286);
+            this.btndot.Location = new System.Drawing.Point(1084, 286);
             this.btndot.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btndot.Name = "btndot";
             this.btndot.Size = new System.Drawing.Size(80, 66);
@@ -2204,7 +2204,7 @@ namespace INVENTORY.UI
             this.btn0.BackColor = System.Drawing.Color.LightSeaGreen;
             this.btn0.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn0.ForeColor = System.Drawing.Color.LemonChiffon;
-            this.btn0.Location = new System.Drawing.Point(1087, 286);
+            this.btn0.Location = new System.Drawing.Point(1003, 286);
             this.btn0.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn0.Name = "btn0";
             this.btn0.Size = new System.Drawing.Size(80, 66);
@@ -2218,7 +2218,7 @@ namespace INVENTORY.UI
             this.btn10.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btn10.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn10.Location = new System.Drawing.Point(1087, 421);
+            this.btn10.Location = new System.Drawing.Point(1003, 421);
             this.btn10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn10.Name = "btn10";
             this.btn10.Size = new System.Drawing.Size(80, 66);
@@ -2232,7 +2232,7 @@ namespace INVENTORY.UI
             this.btncash.BackColor = System.Drawing.Color.IndianRed;
             this.btncash.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncash.ForeColor = System.Drawing.SystemColors.Control;
-            this.btncash.Location = new System.Drawing.Point(1168, 353);
+            this.btncash.Location = new System.Drawing.Point(1084, 353);
             this.btncash.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btncash.Name = "btncash";
             this.btncash.Size = new System.Drawing.Size(161, 66);
@@ -2246,7 +2246,7 @@ namespace INVENTORY.UI
             this.btn00.BackColor = System.Drawing.Color.LightSeaGreen;
             this.btn00.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn00.ForeColor = System.Drawing.Color.LemonChiffon;
-            this.btn00.Location = new System.Drawing.Point(1087, 353);
+            this.btn00.Location = new System.Drawing.Point(1003, 353);
             this.btn00.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn00.Name = "btn00";
             this.btn00.Size = new System.Drawing.Size(80, 66);
@@ -2260,7 +2260,7 @@ namespace INVENTORY.UI
             this.btn20.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btn20.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn20.Location = new System.Drawing.Point(1168, 421);
+            this.btn20.Location = new System.Drawing.Point(1084, 421);
             this.btn20.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn20.Name = "btn20";
             this.btn20.Size = new System.Drawing.Size(80, 66);
@@ -2274,7 +2274,7 @@ namespace INVENTORY.UI
             this.btn50.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.btn50.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn50.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn50.Location = new System.Drawing.Point(1249, 421);
+            this.btn50.Location = new System.Drawing.Point(1165, 421);
             this.btn50.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn50.Name = "btn50";
             this.btn50.Size = new System.Drawing.Size(80, 66);
@@ -2288,7 +2288,7 @@ namespace INVENTORY.UI
             this.button20.BackColor = System.Drawing.Color.Tan;
             this.button20.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button20.Location = new System.Drawing.Point(1088, 490);
+            this.button20.Location = new System.Drawing.Point(1004, 490);
             this.button20.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button20.Name = "button20";
             this.button20.Size = new System.Drawing.Size(80, 66);
@@ -2301,7 +2301,7 @@ namespace INVENTORY.UI
             this.btnCardpay.BackColor = System.Drawing.Color.DarkKhaki;
             this.btnCardpay.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCardpay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnCardpay.Location = new System.Drawing.Point(1169, 489);
+            this.btnCardpay.Location = new System.Drawing.Point(1085, 489);
             this.btnCardpay.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCardpay.Name = "btnCardpay";
             this.btnCardpay.Size = new System.Drawing.Size(161, 66);
@@ -2315,7 +2315,7 @@ namespace INVENTORY.UI
             this.btnPayOut.BackColor = System.Drawing.Color.SteelBlue;
             this.btnPayOut.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPayOut.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnPayOut.Location = new System.Drawing.Point(1088, 557);
+            this.btnPayOut.Location = new System.Drawing.Point(1004, 557);
             this.btnPayOut.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnPayOut.Name = "btnPayOut";
             this.btnPayOut.Size = new System.Drawing.Size(123, 66);
@@ -2329,7 +2329,7 @@ namespace INVENTORY.UI
             this.btnquickmenu.BackColor = System.Drawing.Color.RosyBrown;
             this.btnquickmenu.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnquickmenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnquickmenu.Location = new System.Drawing.Point(1213, 557);
+            this.btnquickmenu.Location = new System.Drawing.Point(1129, 557);
             this.btnquickmenu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnquickmenu.Name = "btnquickmenu";
             this.btnquickmenu.Size = new System.Drawing.Size(117, 66);
@@ -2343,7 +2343,7 @@ namespace INVENTORY.UI
             this.button24.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button24.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button24.Location = new System.Drawing.Point(1088, 625);
+            this.button24.Location = new System.Drawing.Point(1004, 625);
             this.button24.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button24.Name = "button24";
             this.button24.Size = new System.Drawing.Size(80, 66);
@@ -2356,7 +2356,7 @@ namespace INVENTORY.UI
             this.button25.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button25.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button25.Location = new System.Drawing.Point(1169, 625);
+            this.button25.Location = new System.Drawing.Point(1085, 625);
             this.button25.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button25.Name = "button25";
             this.button25.Size = new System.Drawing.Size(80, 66);
@@ -2370,7 +2370,7 @@ namespace INVENTORY.UI
             this.btnlastreciept.BackColor = System.Drawing.Color.OliveDrab;
             this.btnlastreciept.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnlastreciept.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnlastreciept.Location = new System.Drawing.Point(1250, 625);
+            this.btnlastreciept.Location = new System.Drawing.Point(1166, 625);
             this.btnlastreciept.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnlastreciept.Name = "btnlastreciept";
             this.btnlastreciept.Size = new System.Drawing.Size(80, 66);
@@ -2386,7 +2386,7 @@ namespace INVENTORY.UI
             this.btnBarcode.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBarcode.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnBarcode.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnBarcode.Location = new System.Drawing.Point(1085, 42);
+            this.btnBarcode.Location = new System.Drawing.Point(1001, 42);
             this.btnBarcode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnBarcode.Name = "btnBarcode";
             this.btnBarcode.Size = new System.Drawing.Size(82, 39);
@@ -2402,7 +2402,7 @@ namespace INVENTORY.UI
             this.btnclear.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnclear.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnclear.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnclear.Location = new System.Drawing.Point(1166, 42);
+            this.btnclear.Location = new System.Drawing.Point(1082, 42);
             this.btnclear.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnclear.Name = "btnclear";
             this.btnclear.Size = new System.Drawing.Size(82, 39);
@@ -2418,7 +2418,7 @@ namespace INVENTORY.UI
             this.button29.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button29.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button29.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button29.Location = new System.Drawing.Point(1248, 42);
+            this.button29.Location = new System.Drawing.Point(1164, 42);
             this.button29.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button29.Name = "button29";
             this.button29.Size = new System.Drawing.Size(82, 39);
@@ -2464,7 +2464,7 @@ namespace INVENTORY.UI
             // 
             this.label51.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label51.ForeColor = System.Drawing.Color.Black;
-            this.label51.Location = new System.Drawing.Point(635, 556);
+            this.label51.Location = new System.Drawing.Point(561, 556);
             this.label51.Name = "label51";
             this.label51.Size = new System.Drawing.Size(102, 20);
             this.label51.TabIndex = 274;
@@ -2474,7 +2474,7 @@ namespace INVENTORY.UI
             // 
             this.label58.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label58.ForeColor = System.Drawing.Color.Black;
-            this.label58.Location = new System.Drawing.Point(635, 581);
+            this.label58.Location = new System.Drawing.Point(559, 581);
             this.label58.Name = "label58";
             this.label58.Size = new System.Drawing.Size(109, 20);
             this.label58.TabIndex = 275;
@@ -2484,7 +2484,7 @@ namespace INVENTORY.UI
             // 
             this.label59.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label59.ForeColor = System.Drawing.Color.Black;
-            this.label59.Location = new System.Drawing.Point(635, 604);
+            this.label59.Location = new System.Drawing.Point(559, 604);
             this.label59.Name = "label59";
             this.label59.Size = new System.Drawing.Size(113, 20);
             this.label59.TabIndex = 276;
@@ -2494,7 +2494,7 @@ namespace INVENTORY.UI
             // 
             this.lblrefundqty.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblrefundqty.ForeColor = System.Drawing.Color.Black;
-            this.lblrefundqty.Location = new System.Drawing.Point(734, 556);
+            this.lblrefundqty.Location = new System.Drawing.Point(658, 556);
             this.lblrefundqty.Name = "lblrefundqty";
             this.lblrefundqty.Size = new System.Drawing.Size(80, 22);
             this.lblrefundqty.TabIndex = 277;
@@ -2505,7 +2505,7 @@ namespace INVENTORY.UI
             // 
             this.lblsavings.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblsavings.ForeColor = System.Drawing.Color.Black;
-            this.lblsavings.Location = new System.Drawing.Point(735, 579);
+            this.lblsavings.Location = new System.Drawing.Point(659, 579);
             this.lblsavings.Name = "lblsavings";
             this.lblsavings.Size = new System.Drawing.Size(80, 22);
             this.lblsavings.TabIndex = 278;
@@ -2516,7 +2516,7 @@ namespace INVENTORY.UI
             // 
             this.lblcashback.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblcashback.ForeColor = System.Drawing.Color.Black;
-            this.lblcashback.Location = new System.Drawing.Point(735, 603);
+            this.lblcashback.Location = new System.Drawing.Point(659, 603);
             this.lblcashback.Name = "lblcashback";
             this.lblcashback.Size = new System.Drawing.Size(80, 22);
             this.lblcashback.TabIndex = 279;
@@ -2633,17 +2633,33 @@ namespace INVENTORY.UI
             this.ToolStripStatusLabel1.Size = new System.Drawing.Size(86, 17);
             this.ToolStripStatusLabel1.Text = "Logged in As :";
             // 
+            // lblUser
+            // 
+            this.lblUser.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUser.Image = ((System.Drawing.Image)(resources.GetObject("lblUser.Image")));
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(145, 17);
+            this.lblUser.Text = "ToolStripStatusLabel2";
+            // 
             // ToolStripStatusLabel3
             // 
             this.ToolStripStatusLabel3.Name = "ToolStripStatusLabel3";
             this.ToolStripStatusLabel3.Size = new System.Drawing.Size(979, 17);
             this.ToolStripStatusLabel3.Spring = true;
             // 
+            // ToolStripStatusLabel4
+            // 
+            this.ToolStripStatusLabel4.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ToolStripStatusLabel4.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripStatusLabel4.Image")));
+            this.ToolStripStatusLabel4.Name = "ToolStripStatusLabel4";
+            this.ToolStripStatusLabel4.Size = new System.Drawing.Size(145, 17);
+            this.ToolStripStatusLabel4.Text = "ToolStripStatusLabel4";
+            // 
             // groupBox7
             // 
             this.groupBox7.BackColor = System.Drawing.Color.SlateGray;
             this.groupBox7.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox7.Location = new System.Drawing.Point(774, 215);
+            this.groupBox7.Location = new System.Drawing.Point(708, 215);
             this.groupBox7.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Padding = new System.Windows.Forms.Padding(5);
@@ -2670,7 +2686,7 @@ namespace INVENTORY.UI
             this.groupBox13.BackColor = System.Drawing.Color.SlateGray;
             this.groupBox13.Controls.Add(this.groupBox14);
             this.groupBox13.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox13.Location = new System.Drawing.Point(773, 155);
+            this.groupBox13.Location = new System.Drawing.Point(707, 155);
             this.groupBox13.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox13.Name = "groupBox13";
             this.groupBox13.Padding = new System.Windows.Forms.Padding(5);
@@ -2682,7 +2698,7 @@ namespace INVENTORY.UI
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.SlateGray;
-            this.groupBox2.Location = new System.Drawing.Point(786, 55);
+            this.groupBox2.Location = new System.Drawing.Point(720, 55);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(5);
@@ -2695,7 +2711,7 @@ namespace INVENTORY.UI
             // groupBox3
             // 
             this.groupBox3.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(751, 202);
+            this.groupBox3.Location = new System.Drawing.Point(685, 202);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(5);
@@ -2708,7 +2724,7 @@ namespace INVENTORY.UI
             // 
             this.groupBox1.BackColor = System.Drawing.Color.SlateGray;
             this.groupBox1.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(782, 206);
+            this.groupBox1.Location = new System.Drawing.Point(716, 206);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(5);
@@ -2733,7 +2749,7 @@ namespace INVENTORY.UI
             this.groupBox9.BackColor = System.Drawing.Color.SlateGray;
             this.groupBox9.Controls.Add(this.groupBox11);
             this.groupBox9.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox9.Location = new System.Drawing.Point(783, 201);
+            this.groupBox9.Location = new System.Drawing.Point(717, 201);
             this.groupBox9.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Padding = new System.Windows.Forms.Padding(5);
@@ -2746,7 +2762,7 @@ namespace INVENTORY.UI
             // 
             this.groupBox15.BackColor = System.Drawing.Color.SlateGray;
             this.groupBox15.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox15.Location = new System.Drawing.Point(789, 225);
+            this.groupBox15.Location = new System.Drawing.Point(723, 225);
             this.groupBox15.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox15.Name = "groupBox15";
             this.groupBox15.Padding = new System.Windows.Forms.Padding(5);
@@ -2758,7 +2774,7 @@ namespace INVENTORY.UI
             // btnCustomer
             // 
             this.btnCustomer.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCustomer.Location = new System.Drawing.Point(781, 215);
+            this.btnCustomer.Location = new System.Drawing.Point(715, 215);
             this.btnCustomer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCustomer.Name = "btnCustomer";
             this.btnCustomer.Size = new System.Drawing.Size(10, 11);
@@ -2830,7 +2846,7 @@ namespace INVENTORY.UI
             this.btnRemove.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemove.Image = ((System.Drawing.Image)(resources.GetObject("btnRemove.Image")));
             this.btnRemove.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRemove.Location = new System.Drawing.Point(651, 255);
+            this.btnRemove.Location = new System.Drawing.Point(585, 255);
             this.btnRemove.Margin = new System.Windows.Forms.Padding(5);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(112, 38);
@@ -2838,22 +2854,6 @@ namespace INVENTORY.UI
             this.btnRemove.Text = "&Delete";
             this.btnRemove.UseVisualStyleBackColor = true;
             this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
-            // 
-            // lblUser
-            // 
-            this.lblUser.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUser.Image = ((System.Drawing.Image)(resources.GetObject("lblUser.Image")));
-            this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(145, 17);
-            this.lblUser.Text = "ToolStripStatusLabel2";
-            // 
-            // ToolStripStatusLabel4
-            // 
-            this.ToolStripStatusLabel4.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ToolStripStatusLabel4.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripStatusLabel4.Image")));
-            this.ToolStripStatusLabel4.Name = "ToolStripStatusLabel4";
-            this.ToolStripStatusLabel4.Size = new System.Drawing.Size(145, 17);
-            this.ToolStripStatusLabel4.Text = "ToolStripStatusLabel4";
             // 
             // btncust
             // 
@@ -2891,7 +2891,7 @@ namespace INVENTORY.UI
             this.ctlCustomer.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.ctlCustomer.Name = "ctlCustomer";
             this.ctlCustomer.ObjectName = "Customer";
-            this.ctlCustomer.Size = new System.Drawing.Size(277, 33);
+            this.ctlCustomer.Size = new System.Drawing.Size(204, 33);
             this.ctlCustomer.TabIndex = 2;
             this.ctlCustomer.SelectedItemChanged += new INVENTORY.UI.SelectionChangedEvent(this.ctlCustomer_SelectedItemChanged);
             // 
@@ -2913,7 +2913,7 @@ namespace INVENTORY.UI
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(1370, 718);
+            this.ClientSize = new System.Drawing.Size(1258, 718);
             this.Controls.Add(this.btncust);
             this.Controls.Add(this.btnplu);
             this.Controls.Add(this.btnretrive);

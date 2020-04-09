@@ -102,8 +102,9 @@ namespace INVENTORY.UI
                                     fssale.FormBorderStyle = FormBorderStyle.FixedSingle;
                                     fssale.strsales.Visible = true;
                                     fssale.LoadDefaultData(new SOrder());
+                                    fssale.WindowState = FormWindowState.Maximized;
                                     fssale.Show();
-
+                                   
                                 }
 
                                 this.Close();
@@ -146,8 +147,7 @@ namespace INVENTORY.UI
 
         private void btnCLose_Click(object sender, EventArgs e)
         {
-            this.Close();
-            this.Dispose();
+            Application.Exit();
         }
 
         private void label2_Click(object sender, EventArgs e)

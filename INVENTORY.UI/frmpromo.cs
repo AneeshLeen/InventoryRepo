@@ -119,10 +119,10 @@ namespace INVENTORY.UI
 
         private void frmpromo_Shown(object sender, EventArgs e)
         {
-            if (Screen.AllScreens.Count() > 1)
-            {
+            //if (Screen.AllScreens.Count() > 1)
+            //{
                 this.Location = Screen.AllScreens[1].Bounds.Location;
-            }
+            //}
             this.WindowState = FormWindowState.Maximized;
         }
     }

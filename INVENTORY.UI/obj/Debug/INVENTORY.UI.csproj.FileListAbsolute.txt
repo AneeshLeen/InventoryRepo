@@ -281,7 +281,9 @@ C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.FNewMainF
 C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.frmBranchMaster.resources
 C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.frmcustomer.resources
 C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.frmdisc.resources
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.frmhourlysale.resources
 C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.frmlabelprint.resources
+C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.frmlast7dayssale.resources
 C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.frmlastbill.resources
 C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.frmmultipayment.resources
 C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.frmoptions.resources
@@ -403,9 +405,12 @@ C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.exe.licen
 C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.csproj.CopyComplete
 C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.exe
 C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.pdb
+<<<<<<< HEAD
 C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.frmlast7dayssale.resources
 C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.frmhourlysale.resources
 C:\CodeBase\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.frmcustomer.resources
 C:\CodeBase\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.frmhourlysale.resources
 C:\CodeBase\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.frmlast7dayssale.resources
 C:\CodeBase\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.frmsuspendedbill.resources
+=======
+>>>>>>> 8e4526e445f5bdf725218e622936deb17813ddc6
