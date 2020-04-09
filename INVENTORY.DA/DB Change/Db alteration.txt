@@ -1,55 +1,8 @@
-alter table[dbo].[SOrders] add ShiftEndStatus bit
+alter table[dbo].[SOrders] add MachineName nvarchar(20)
 go
-update [dbo].[SOrders] set ShiftEndStatus=0
+alter table[dbo].[SOrders] add GivenCash decimal (18,0)
 go
-alter table[dbo].[SOrders] alter column ShiftEndStatus bit not null
+update [dbo].[SOrders] set GivenCash=0
 go
-alter table [dbo].[Products] add [CreateDate] datetime
-go
-update  [dbo].[Products] set [CreateDate]=GETDATE()
-go
-alter table [dbo].[Products] alter column [CreateDate] datetime not null
-go
-update [dbo].[Products] set BoxQty=convert(int,BoxQty)
-go
-GO
-
-CREATE TABLE [dbo].[SVoid](
-	[SVoidId] [int] NOT NULL,
-	[ProductId] [int] NOT NULL,
-	[TypeId] [int] NOT NULL,
-	[Qty] [decimal](18, 2) NOT NULL,
-	[Amount] [decimal](18, 2) NOT NULL,
-	[VoidTypeId] [int] NOT NULL,
-	[CreatedBy] [int] NOT NULL,
-	[CreatedDate] [datetime] NOT NULL,
-	[ShiftEndStatus] [bit] NOT NULL,
-	[branchid] [int] NOT NULL,
- CONSTRAINT [PK_SVoid] PRIMARY KEY CLUSTERED 
-(
-	[SVoidId] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
-) ON [PRIMARY]
-
-GO
-GO
-
-SET QUOTED_IDENTIFIER ON
-GO
-
-CREATE TABLE [dbo].[Shift](
-	[ShiftId] [int] NOT NULL,
-	[UserId] [int] NOT NULL,
-	[StartDate] [datetime] NOT NULL,
-	[EndDate] [datetime] NULL,
-	[branchid] [int] NOT NULL,
- CONSTRAINT [PK_Shift] PRIMARY KEY CLUSTERED 
-(
-	[ShiftId] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
-) ON [PRIMARY]
-
-GO
-alter table [dbo].[SOrders] add shiftid int
-alter table [dbo].[SVoid] add shiftid int
-go
+alter table[dbo].[SOrders] alter column GivenCash decimal (18,0) not null
+ 

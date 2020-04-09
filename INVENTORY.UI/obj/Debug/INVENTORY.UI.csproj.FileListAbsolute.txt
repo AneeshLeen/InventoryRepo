@@ -405,3 +405,7 @@ C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.exe
 C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.pdb
 C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.frmlast7dayssale.resources
 C:\DevelopmentSource\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.frmhourlysale.resources
+C:\CodeBase\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.frmcustomer.resources
+C:\CodeBase\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.frmhourlysale.resources
+C:\CodeBase\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.frmlast7dayssale.resources
+C:\CodeBase\InventoryRepo\INVENTORY.UI\obj\Debug\INVENTORY.UI.frmsuspendedbill.resources

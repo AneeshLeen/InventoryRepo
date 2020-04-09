@@ -54,6 +54,8 @@ namespace INVENTORY.UI.BL
     {
         public string ItemName { get; set; }
         public decimal Amount { get; set; }
+        public decimal Quantity { get; set; }
+        public decimal IndividualPrice { get; set; }
     }
     public class HSTSummary
     {
