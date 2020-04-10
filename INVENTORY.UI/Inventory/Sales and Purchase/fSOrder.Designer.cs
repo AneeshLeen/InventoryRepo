@@ -31,9 +31,9 @@ namespace INVENTORY.UI
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fSOrder));
             this.label3 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -368,7 +368,6 @@ namespace INVENTORY.UI
             this.txtInvoice.Name = "txtInvoice";
             this.txtInvoice.Size = new System.Drawing.Size(103, 22);
             this.txtInvoice.TabIndex = 0;
-            this.txtInvoice.TextChanged += new System.EventHandler(this.txtInvoice_TextChanged);
             // 
             // groupBox6
             // 
@@ -410,7 +409,6 @@ namespace INVENTORY.UI
             this.dtpRemindDate.Size = new System.Drawing.Size(43, 22);
             this.dtpRemindDate.TabIndex = 50;
             this.dtpRemindDate.ValueChanged += new System.EventHandler(this.dtpRemindDate_ValueChanged);
-            this.dtpRemindDate.Enter += new System.EventHandler(this.dtpRemindDate_Enter);
             // 
             // cboRemindType
             // 
@@ -509,7 +507,6 @@ namespace INVENTORY.UI
             this.chKFreeQty.Text = "Is Free Qty";
             this.chKFreeQty.UseVisualStyleBackColor = true;
             this.chKFreeQty.Visible = false;
-            this.chKFreeQty.CheckedChanged += new System.EventHandler(this.chKFreeQty_CheckedChanged);
             // 
             // label9
             // 
@@ -716,7 +713,6 @@ namespace INVENTORY.UI
             this.label15.Size = new System.Drawing.Size(76, 19);
             this.label15.TabIndex = 16;
             this.label15.Text = "Unit Total";
-            this.label15.Click += new System.EventHandler(this.label15_Click);
             // 
             // label40
             // 
@@ -757,7 +753,6 @@ namespace INVENTORY.UI
             this.label41.Size = new System.Drawing.Size(69, 17);
             this.label41.TabIndex = 223;
             this.label41.Text = "SGST Amt.";
-            this.label41.Click += new System.EventHandler(this.label41_Click);
             // 
             // numDPerc
             // 
@@ -1127,7 +1122,6 @@ namespace INVENTORY.UI
             this.numLaborAmt.TabIndex = 5;
             this.numLaborAmt.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numLaborAmt.Visible = false;
-            this.numLaborAmt.ValueChanged += new System.EventHandler(this.numLaborAmt_ValueChanged);
             // 
             // groupBox8
             // 
@@ -1211,7 +1205,6 @@ namespace INVENTORY.UI
             this.numGSTPerc.Size = new System.Drawing.Size(83, 22);
             this.numGSTPerc.TabIndex = 7;
             this.numGSTPerc.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.numGSTPerc.ValueChanged += new System.EventHandler(this.numGSTPerc_ValueChanged);
             this.numGSTPerc.Enter += new System.EventHandler(this.numGSTPerc_Enter);
             // 
             // numUTotal
@@ -1304,7 +1297,6 @@ namespace INVENTORY.UI
             this.numSGSTAmt.Size = new System.Drawing.Size(71, 22);
             this.numSGSTAmt.TabIndex = 12;
             this.numSGSTAmt.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.numSGSTAmt.ValueChanged += new System.EventHandler(this.numSGSTAmt_ValueChanged);
             // 
             // numSGSTPerc
             // 
@@ -1742,14 +1734,14 @@ namespace INVENTORY.UI
             this.dgProducts.AllowUserToAddRows = false;
             this.dgProducts.AllowUserToDeleteRows = false;
             this.dgProducts.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.Menu;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgProducts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Menu;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgProducts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgProducts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.clnSN,
@@ -1768,14 +1760,14 @@ namespace INVENTORY.UI
             this.dgProducts.Location = new System.Drawing.Point(113, 36);
             this.dgProducts.Margin = new System.Windows.Forms.Padding(5);
             this.dgProducts.Name = "dgProducts";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.SlateGray;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.Info;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgProducts.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.SlateGray;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgProducts.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgProducts.RowHeadersVisible = false;
             this.dgProducts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgProducts.Size = new System.Drawing.Size(634, 503);
@@ -1792,8 +1784,8 @@ namespace INVENTORY.UI
             // 
             // clnName
             // 
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Maroon;
-            this.clnName.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Maroon;
+            this.clnName.DefaultCellStyle = dataGridViewCellStyle2;
             this.clnName.HeaderText = "DESCRIPTION";
             this.clnName.Name = "clnName";
             this.clnName.ReadOnly = true;
@@ -2425,7 +2417,6 @@ namespace INVENTORY.UI
             this.button29.TabIndex = 270;
             this.button29.Text = "Enter";
             this.button29.UseVisualStyleBackColor = false;
-            this.button29.Click += new System.EventHandler(this.button29_Click);
             // 
             // lbltax
             // 
@@ -2706,7 +2697,6 @@ namespace INVENTORY.UI
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Visible = false;
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // groupBox3
             // 
@@ -2880,7 +2870,7 @@ namespace INVENTORY.UI
             this.ctlGodown.ObjectName = "Godown";
             this.ctlGodown.Size = new System.Drawing.Size(134, 40);
             this.ctlGodown.TabIndex = 1;
-            this.ctlGodown.SelectedItemChanged += new INVENTORY.UI.SelectionChangedEvent(this.ctlGodown_SelectedItemChanged);
+            this.ctlGodown.SelectedItemChanged += new INVENTORY.UI.SelectionChangedEvent(this.ctlGodown_SelectedItemChanged_1);
             // 
             // ctlCustomer
             // 

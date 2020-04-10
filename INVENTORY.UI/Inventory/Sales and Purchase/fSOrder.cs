@@ -1495,18 +1495,18 @@ namespace INVENTORY.UI
                     //GenerateSOInvoice(_Order);
                     //MoneyReceipt(_Order);
 
-
-                    pdPrint = new PrintDocument();
-                    pdPrint.PrintPage += new PrintPageEventHandler(pdPrint_PrintPage);
-                   
-                    PrintDialog pd = new PrintDialog();
-                    pd.Document = pdPrint;
                     try
                     {
+                        pdPrint = new PrintDocument();
+                        pdPrint.PrintPage += new PrintPageEventHandler(pdPrint_PrintPage);
 
-                        PrintPreviewDialog pp = new PrintPreviewDialog();
-                        pp.Document = pdPrint;
-                       // pp.ShowDialog();
+                        //PrintDialog pd = new PrintDialog();
+                       // pd.Document = pdPrint;
+
+
+                        //PrintPreviewDialog pp = new PrintPreviewDialog();
+                        //pp.Document = pdPrint;
+                        //pp.ShowDialog();
 
                         pdPrint.Print();
 
@@ -1581,14 +1581,7 @@ namespace INVENTORY.UI
 
         }
 
-        private void numDiscount_ValueChanged(object sender, EventArgs e)
-        {
-            //numTotal.Value = numQTY.Value * numSell.Value - numDiscount.Value;
-        }
-        private void numTQTY_ValueChanged(object sender, EventArgs e)
-        {
-            //numStock.Value = (_stock!=null?(decimal)_stock.Quantity:0) - numTQTY.Value;
-        }
+      
         private void ctlCustomer_SelectedItemChanged(object sender, EventArgs e)
         {
             try
@@ -1765,10 +1758,7 @@ namespace INVENTORY.UI
             }
 
         }
-        private void numLaborAmt_ValueChanged(object sender, EventArgs e)
-        {
-            //numTotal.Value = numTotal.Value + numLaborAmt.Value;
-        }
+       
 
         private void btnCustomer_Click(object sender, EventArgs e)
         {
@@ -1949,16 +1939,7 @@ namespace INVENTORY.UI
             }
         }
 
-        private void txtInvoice_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void chKFreeQty_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void numPPDISAmt_ValueChanged(object sender, EventArgs e)
         {
             try
@@ -2008,10 +1989,7 @@ namespace INVENTORY.UI
             numRemindPeriod.Value = days;
         }
 
-        private void dtpRemindDate_Enter(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void cboRemindType_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -2056,10 +2034,7 @@ namespace INVENTORY.UI
             }
         }
 
-        private void label15_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void numUTotal_ValueChanged(object sender, EventArgs e)
         {
@@ -2069,30 +2044,7 @@ namespace INVENTORY.UI
             numIGSTAmt.Value = numGSTAmt.Value * (numIGSTPerc.Value / 100);
         }
 
-        private void ctlGodown_SelectedItemChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label41_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void numSGSTAmt_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void numGSTPerc_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void numGSTPerc_Enter(object sender, EventArgs e)
         {
@@ -2366,7 +2318,8 @@ namespace INVENTORY.UI
                     btnpayouts.Left = left;
                     btnpayouts.Top = top;
                     btnpayouts.Size = new Size(80, 63);
-                    btnpayouts.Font = new Font(Font.FontFamily, 9);
+                    //btn.Font = new Font(Font.FontFamily, 9, FontStyle.Bold);
+                    btnpayouts.Font = new Font(Font.FontFamily, 9, FontStyle.Bold);
                     btnpayouts.Text = row["Description"].ToString();
                     btnpayouts.Tag = row;
                     btnpayouts.BackColor = System.Drawing.Color.FromName(row["backcolor"].ToString());
@@ -3042,46 +2995,7 @@ namespace INVENTORY.UI
         RectangleF rect;
         Int32 height_value;
         PrintDocument pdPrint ;
-        private void button29_Click(object sender, EventArgs e)
-        {
-             pdPrint = new PrintDocument();
-           
-            pdPrint.PrintPage += new PrintPageEventHandler(pdPrint_PrintPage);
-
-            PrintDialog pd = new PrintDialog();
-            pd.Document = pdPrint;
-            try
-            {
-
-                DialogResult result = pd.ShowDialog();
-                if (result == DialogResult.OK)
-                {
-                    PrintPreviewDialog pp = new PrintPreviewDialog();
-                    pp.Document = pdPrint;
-                    result = pp.ShowDialog();
-                    if (result == DialogResult.OK)
-                    {
-                        pdPrint.Print();
-                    }
-                }
-
-
-                //if (pdPrint.PrinterSettings.IsValid)
-                //{
-
-                //    pdPrint.Print();
-
-                //}
-                //else
-                //    MessageBox.Show("Printer is not available.", "Program06", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
-            }
-            catch
-            {
-                MessageBox.Show("Failed to open StatusAPI.", "Program06", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-
-        }
+       
         private void btnretrive_Click(object sender, EventArgs e)
         {
             frmsuspendedbill frmsuspebill = new frmsuspendedbill();
@@ -3103,7 +3017,14 @@ namespace INVENTORY.UI
         private void pdPrint_PrintPage(object sender, PrintPageEventArgs e)
         {
             PrintBO objPrintBO = new PrintBO();
-            objPrintBO.SalesReceiptPrint(e, _Order, _Order.SOrderDetails.ToList(), db.Products.ToList(), db.Categorys.ToList());
+            objPrintBO.SalesReceiptPrint(e, _Order, _Order.SOrderDetails.ToList(), db.Products.ToList(), db.Categorys.ToList(),pdPrint);
         }
+
+        private void ctlGodown_SelectedItemChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+       
     }
 }

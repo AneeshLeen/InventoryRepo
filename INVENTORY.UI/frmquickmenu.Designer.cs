@@ -71,7 +71,7 @@
             this.pnlbasedcat.AutoScroll = true;
             this.pnlbasedcat.Location = new System.Drawing.Point(265, 1);
             this.pnlbasedcat.Name = "pnlbasedcat";
-            this.pnlbasedcat.Size = new System.Drawing.Size(393, 583);
+            this.pnlbasedcat.Size = new System.Drawing.Size(523, 583);
             this.pnlbasedcat.TabIndex = 235;
             // 
             // frmquickmenu
@@ -79,13 +79,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
-            this.ClientSize = new System.Drawing.Size(800, 619);
+            this.ClientSize = new System.Drawing.Size(800, 587);
             this.Controls.Add(this.pnlbasedcat);
             this.Controls.Add(this.button38);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pnlbtndyan);
             this.Name = "frmquickmenu";
-            this.Text = "frmquickmenu";
+            this.Text = "QuickMenu";
             this.Load += new System.EventHandler(this.frmquickmenu_Load);
             this.ResumeLayout(false);
 

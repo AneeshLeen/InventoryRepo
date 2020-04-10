@@ -108,6 +108,11 @@ namespace INVENTORY.UI
         private void dgProducts_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
         }
+
+        private void btnprint_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

@@ -34,6 +34,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmshiftend));
             this.dgProducts = new System.Windows.Forms.DataGridView();
+            this.PaymentTypeId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clnitmno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clnQTY = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clnUnitPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblbilltotal = new System.Windows.Forms.Label();
             this.label52 = new System.Windows.Forms.Label();
             this.lblShiftStart = new System.Windows.Forms.Label();
@@ -43,10 +47,6 @@
             this.btnexit = new System.Windows.Forms.Button();
             this.btnsave = new System.Windows.Forms.Button();
             this.btnprint = new System.Windows.Forms.Button();
-            this.PaymentTypeId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clnitmno = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clnQTY = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clnUnitPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgProducts)).BeginInit();
             this.SuspendLayout();
             // 
@@ -95,6 +95,36 @@
             this.dgProducts.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dgProducts_CellBeginEdit);
             this.dgProducts.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgProducts_CellEndEdit);
             this.dgProducts.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgProducts_CellValueChanged);
+            // 
+            // PaymentTypeId
+            // 
+            this.PaymentTypeId.DataPropertyName = "TypeID";
+            this.PaymentTypeId.HeaderText = "PaymentTypeId";
+            this.PaymentTypeId.Name = "PaymentTypeId";
+            this.PaymentTypeId.Visible = false;
+            // 
+            // clnitmno
+            // 
+            this.clnitmno.DataPropertyName = "TypeName";
+            this.clnitmno.HeaderText = "Payment Method";
+            this.clnitmno.Name = "clnitmno";
+            this.clnitmno.ReadOnly = true;
+            this.clnitmno.Width = 180;
+            // 
+            // clnQTY
+            // 
+            this.clnQTY.DataPropertyName = "SysBal";
+            this.clnQTY.HeaderText = "System Balance";
+            this.clnQTY.Name = "clnQTY";
+            this.clnQTY.ReadOnly = true;
+            this.clnQTY.Width = 180;
+            // 
+            // clnUnitPrice
+            // 
+            this.clnUnitPrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.clnUnitPrice.DataPropertyName = "DrawerBal";
+            this.clnUnitPrice.HeaderText = "Drawer Balance";
+            this.clnUnitPrice.Name = "clnUnitPrice";
             // 
             // lblbilltotal
             // 
@@ -188,36 +218,7 @@
             this.btnprint.Size = new System.Drawing.Size(80, 60);
             this.btnprint.TabIndex = 263;
             this.btnprint.UseVisualStyleBackColor = false;
-            // 
-            // PaymentTypeId
-            // 
-            this.PaymentTypeId.DataPropertyName = "TypeID";
-            this.PaymentTypeId.HeaderText = "PaymentTypeId";
-            this.PaymentTypeId.Name = "PaymentTypeId";
-            this.PaymentTypeId.Visible = false;
-            // 
-            // clnitmno
-            // 
-            this.clnitmno.DataPropertyName = "TypeName";
-            this.clnitmno.HeaderText = "Payment Method";
-            this.clnitmno.Name = "clnitmno";
-            this.clnitmno.ReadOnly = true;
-            this.clnitmno.Width = 180;
-            // 
-            // clnQTY
-            // 
-            this.clnQTY.DataPropertyName = "SysBal";
-            this.clnQTY.HeaderText = "System Balance";
-            this.clnQTY.Name = "clnQTY";
-            this.clnQTY.ReadOnly = true;
-            this.clnQTY.Width = 180;
-            // 
-            // clnUnitPrice
-            // 
-            this.clnUnitPrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.clnUnitPrice.DataPropertyName = "DrawerBal";
-            this.clnUnitPrice.HeaderText = "Drawer Balance";
-            this.clnUnitPrice.Name = "clnUnitPrice";
+            this.btnprint.Click += new System.EventHandler(this.btnprint_Click);
             // 
             // frmshiftend
             // 

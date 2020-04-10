@@ -33,6 +33,7 @@ namespace INVENTORY.UI.BL
     public class SalesPrintBO
     {
         public string OrderNo { get; set; }
+        public string CounterName { get; set; }
         public decimal NetAmount { get; set; }
         public decimal BillTotal { get; set; }
         public decimal HST { get; set; }

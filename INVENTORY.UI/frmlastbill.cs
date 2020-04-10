@@ -97,13 +97,35 @@ namespace INVENTORY.UI
         private void PdPrint_PrintPage(object sender, PrintPageEventArgs e)
         {
             PrintBO objPrintBO = new PrintBO();
-            objPrintBO.SalesReceiptPrint(e, objSOrder, objSOrderDetail, objProductList, objCatagoryList);
+            objPrintBO.SalesReceiptPrint(e, objSOrder, objSOrderDetail, objProductList, objCatagoryList, pdPrint);
         }
-
+        PrintDocument pdPrint;
         private void btnprint_Click(object sender, EventArgs e)
         {
-            PrintDocument pdPrint = new PrintDocument();
-            pdPrint.PrintPage += PdPrint_PrintPage;
+             pdPrint = new PrintDocument();
+           // pdPrint.PrintPage += PdPrint_PrintPage;
+
+            pdPrint = new PrintDocument();
+            pdPrint.PrintPage += new PrintPageEventHandler(PdPrint_PrintPage);
+
+            PrintDialog pd = new PrintDialog();
+            pd.Document = pdPrint;
+            try
+            {
+
+                PrintPreviewDialog pp = new PrintPreviewDialog();
+                pp.Document = pdPrint;
+                // pp.ShowDialog();
+
+                pdPrint.Print();
+
+
+            }
+
+            catch
+            {
+                MessageBox.Show("Failed to open StatusAPI.", "Program06", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
     }
 }

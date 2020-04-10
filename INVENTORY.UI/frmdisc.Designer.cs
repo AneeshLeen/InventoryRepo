@@ -276,9 +276,11 @@
             // 
             // txtdiscount
             // 
+            this.txtdiscount.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtdiscount.Location = new System.Drawing.Point(378, 338);
+            this.txtdiscount.Multiline = true;
             this.txtdiscount.Name = "txtdiscount";
-            this.txtdiscount.Size = new System.Drawing.Size(242, 20);
+            this.txtdiscount.Size = new System.Drawing.Size(242, 34);
             this.txtdiscount.TabIndex = 277;
             // 
             // btnapply
@@ -286,7 +288,7 @@
             this.btnapply.BackColor = System.Drawing.Color.Magenta;
             this.btnapply.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnapply.BackgroundImage")));
             this.btnapply.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnapply.Location = new System.Drawing.Point(454, 364);
+            this.btnapply.Location = new System.Drawing.Point(454, 375);
             this.btnapply.Name = "btnapply";
             this.btnapply.Size = new System.Drawing.Size(80, 60);
             this.btnapply.TabIndex = 279;
@@ -298,7 +300,7 @@
             this.btnclose.BackColor = System.Drawing.Color.Magenta;
             this.btnclose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnclose.BackgroundImage")));
             this.btnclose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnclose.Location = new System.Drawing.Point(540, 364);
+            this.btnclose.Location = new System.Drawing.Point(540, 375);
             this.btnclose.Name = "btnclose";
             this.btnclose.Size = new System.Drawing.Size(80, 60);
             this.btnclose.TabIndex = 278;
